@@ -36,6 +36,8 @@ This repository has been created in honor of my father, Touraj Ghaffari. He foun
 
   a. Software that could be used to link data and information to tags, create zones, and a whole host of other actions.
   
-6. API
+6. [API](https://github.com/tourajghaffari/tigerfid/tree/master/api)
 
-  a. Versions include C# and Java.
+  a. [C\# ](https://github.com/tourajghaffari/tigerfid/tree/master/api/c-sharp)
+
+  b. [Java](https://github.com/tourajghaffari/tigerfid/tree/master/api/java)
