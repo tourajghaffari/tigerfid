@@ -1,4 +1,4 @@
-![TigeRFID](assets/tigerfid.jpg)
+![TigeRFID](_assets/tigerfid.jpg)
 # TigeRFID
 
 ## Introduction
