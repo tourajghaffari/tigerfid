@@ -22,3 +22,9 @@ _Note: Any help in cleaning up the files or directory structure is very much app
 ## Touraj Fact
 
 Touraj's favorite animal was the tiger - in particular, the [Caspian tiger](https://en.wikipedia.org/wiki/Caspian_tiger).
+
+## Thank You
+
+* [Fabiano Kovalski](https://www.linkedin.com/in/fabianogk)
+
+* [Vincent Mamo](https://www.linkedin.com/in/vincent-spinella-mamo-5262524)
