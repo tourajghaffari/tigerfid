@@ -1,0 +1,877 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+S1         CnK_TseriesSPDT_Toggle_040512       5939mil        620mil       5939mil        620mil       5939mil        720mil  T        270.00 SPDT           
+P20        POWER_JACK_SMALLHOLE_022110     8051.5mil        272mil       7959mil        390mil       7959mil        390mil  T        360.00 CON3           
+U2_CTL54   SOT25_030205       9302.75mil     1414.5mil       9284mil       1407mil       9359mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL53   SOT25_030205       8225.25mil     1414.5mil     8206.5mil       1407mil     8281.5mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL52   SOT25_030205       7147.75mil     1414.5mil       7129mil       1407mil       7204mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL51   SOT25_030205       6070.25mil     1414.5mil     6051.5mil       1407mil     6126.5mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL50   SOT25_030205       4992.75mil     1414.5mil       4974mil       1407mil       5049mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL49   SOT25_030205       3915.25mil     1414.5mil     3896.5mil       1407mil     3971.5mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL48   SOT25_030205       2837.75mil     1414.5mil       2819mil       1407mil       2894mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL47   SOT25_030205       1760.25mil     1414.5mil     1741.5mil       1407mil     1816.5mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL46   SOT25_030205        682.75mil     1414.5mil        664mil       1407mil        739mil       1472mil  T         90.00 74LVC1G66      
+U2_CTL45   SOT25_030205       9302.75mil     1914.5mil       9284mil       1907mil       9359mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL44   SOT25_030205       8225.25mil     1914.5mil     8206.5mil       1907mil     8281.5mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL43   SOT25_030205       7147.75mil     1914.5mil       7129mil       1907mil       7204mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL42   SOT25_030205       6070.25mil     1914.5mil     6051.5mil       1907mil     6126.5mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL41   SOT25_030205       4992.75mil     1914.5mil       4974mil       1907mil       5049mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL40   SOT25_030205       3915.25mil     1914.5mil     3896.5mil       1907mil     3971.5mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL39   SOT25_030205       2837.75mil     1914.5mil       2819mil       1907mil       2894mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL38   SOT25_030205       1760.25mil     1914.5mil     1741.5mil       1907mil     1816.5mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL37   SOT25_030205        682.75mil     1914.5mil        664mil       1907mil        739mil       1972mil  T         90.00 74LVC1G66      
+U2_CTL36   SOT25_030205       9302.75mil     2414.5mil       9284mil       2407mil       9359mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL35   SOT25_030205       8225.25mil     2414.5mil     8206.5mil       2407mil     8281.5mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL34   SOT25_030205       7147.75mil     2414.5mil       7129mil       2407mil       7204mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL33   SOT25_030205       6070.25mil     2414.5mil     6051.5mil       2407mil     6126.5mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL32   SOT25_030205       4992.75mil     2414.5mil       4974mil       2407mil       5049mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL31   SOT25_030205       3915.25mil     2414.5mil     3896.5mil       2407mil     3971.5mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL30   SOT25_030205       2837.75mil     2414.5mil       2819mil       2407mil       2894mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL29   SOT25_030205       1760.25mil     2414.5mil     1741.5mil       2407mil     1816.5mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL28   SOT25_030205        682.75mil     2414.5mil        664mil       2407mil        739mil       2472mil  T         90.00 74LVC1G66      
+U2_CTL27   SOT25_030205       9302.75mil     2914.5mil       9284mil       2907mil       9359mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL26   SOT25_030205       8225.25mil     2914.5mil     8206.5mil       2907mil     8281.5mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL25   SOT25_030205       7147.75mil     2914.5mil       7129mil       2907mil       7204mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL24   SOT25_030205       6070.25mil     2914.5mil     6051.5mil       2907mil     6126.5mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL23   SOT25_030205       4992.75mil     2914.5mil       4974mil       2907mil       5049mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL22   SOT25_030205       3915.25mil     2914.5mil     3896.5mil       2907mil     3971.5mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL21   SOT25_030205       2837.75mil     2914.5mil       2819mil       2907mil       2894mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL20   SOT25_030205       1760.25mil     2914.5mil     1741.5mil       2907mil     1816.5mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL19   SOT25_030205        682.75mil     2914.5mil        664mil       2907mil        739mil       2972mil  T         90.00 74LVC1G66      
+U2_CTL18   SOT25_030205       9302.75mil     3414.5mil       9284mil       3407mil       9359mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL17   SOT25_030205       8225.25mil     3414.5mil     8206.5mil       3407mil     8281.5mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL16   SOT25_030205       7147.75mil     3414.5mil       7129mil       3407mil       7204mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL15   SOT25_030205       6070.25mil     3414.5mil     6051.5mil       3407mil     6126.5mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL14   SOT25_030205       4992.75mil     3414.5mil       4974mil       3407mil       5049mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL13   SOT25_030205       3915.25mil     3414.5mil     3896.5mil       3407mil     3971.5mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL12   SOT25_030205       2837.75mil     3414.5mil       2819mil       3407mil       2894mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL11   SOT25_030205       1760.25mil     3414.5mil     1741.5mil       3407mil     1816.5mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL10   SOT25_030205        682.75mil     3414.5mil        664mil       3407mil        739mil       3472mil  T         90.00 74LVC1G66      
+U2_CTL9    SOT25_030205       9302.75mil     3914.5mil       9284mil       3907mil       9359mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL8    SOT25_030205       8225.25mil     3914.5mil     8206.5mil       3907mil     8281.5mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL7    SOT25_030205       7147.75mil     3914.5mil       7129mil       3907mil       7204mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL6    SOT25_030205       6070.25mil     3914.5mil     6051.5mil       3907mil     6126.5mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL5    SOT25_030205       4992.75mil     3914.5mil       4974mil       3907mil       5049mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL4    SOT25_030205       3915.25mil     3914.5mil     3896.5mil       3907mil     3971.5mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL3    SOT25_030205       2837.75mil     3914.5mil       2819mil       3907mil       2894mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL2    SOT25_030205       1760.25mil     3914.5mil     1741.5mil       3907mil     1816.5mil       3972mil  T         90.00 74LVC1G66      
+U2_CTL1    SOT25_030205        682.75mil     3914.5mil        664mil       3907mil        739mil       3972mil  T         90.00 74LVC1G66      
+S1_CTL54   SwitchDPDT_6_061412       9829mil       1342mil       9829mil       1342mil       9679mil       1442mil  T        360.00 SPST           
+S1_CTL53   SwitchDPDT_6_061412     8751.5mil       1342mil     8751.5mil       1342mil     8601.5mil       1442mil  T        360.00 SPST           
+S1_CTL52   SwitchDPDT_6_061412       7674mil       1342mil       7674mil       1342mil       7524mil       1442mil  T        360.00 SPST           
+S1_CTL51   SwitchDPDT_6_061412     6596.5mil       1342mil     6596.5mil       1342mil     6446.5mil       1442mil  T        360.00 SPST           
+S1_CTL50   SwitchDPDT_6_061412       5519mil       1342mil       5519mil       1342mil       5369mil       1442mil  T        360.00 SPST           
+S1_CTL49   SwitchDPDT_6_061412     4441.5mil       1342mil     4441.5mil       1342mil     4291.5mil       1442mil  T        360.00 SPST           
+S1_CTL48   SwitchDPDT_6_061412       3364mil       1342mil       3364mil       1342mil       3214mil       1442mil  T        360.00 SPST           
+S1_CTL47   SwitchDPDT_6_061412     2286.5mil       1342mil     2286.5mil       1342mil     2136.5mil       1442mil  T        360.00 SPST           
+S1_CTL46   SwitchDPDT_6_061412       1209mil       1342mil       1209mil       1342mil       1059mil       1442mil  T        360.00 SPST           
+S1_CTL45   SwitchDPDT_6_061412       9829mil       1842mil       9829mil       1842mil       9679mil       1942mil  T        360.00 SPST           
+S1_CTL44   SwitchDPDT_6_061412     8751.5mil       1842mil     8751.5mil       1842mil     8601.5mil       1942mil  T        360.00 SPST           
+S1_CTL43   SwitchDPDT_6_061412       7674mil       1842mil       7674mil       1842mil       7524mil       1942mil  T        360.00 SPST           
+S1_CTL42   SwitchDPDT_6_061412     6596.5mil       1842mil     6596.5mil       1842mil     6446.5mil       1942mil  T        360.00 SPST           
+S1_CTL41   SwitchDPDT_6_061412       5519mil       1842mil       5519mil       1842mil       5369mil       1942mil  T        360.00 SPST           
+S1_CTL40   SwitchDPDT_6_061412     4441.5mil       1842mil     4441.5mil       1842mil     4291.5mil       1942mil  T        360.00 SPST           
+S1_CTL39   SwitchDPDT_6_061412       3364mil       1842mil       3364mil       1842mil       3214mil       1942mil  T        360.00 SPST           
+S1_CTL38   SwitchDPDT_6_061412     2286.5mil       1842mil     2286.5mil       1842mil     2136.5mil       1942mil  T        360.00 SPST           
+S1_CTL37   SwitchDPDT_6_061412       1209mil       1842mil       1209mil       1842mil       1059mil       1942mil  T        360.00 SPST           
+S1_CTL36   SwitchDPDT_6_061412       9829mil       2342mil       9829mil       2342mil       9679mil       2442mil  T        360.00 SPST           
+S1_CTL35   SwitchDPDT_6_061412     8751.5mil       2342mil     8751.5mil       2342mil     8601.5mil       2442mil  T        360.00 SPST           
+S1_CTL34   SwitchDPDT_6_061412       7674mil       2342mil       7674mil       2342mil       7524mil       2442mil  T        360.00 SPST           
+S1_CTL33   SwitchDPDT_6_061412     6596.5mil       2342mil     6596.5mil       2342mil     6446.5mil       2442mil  T        360.00 SPST           
+S1_CTL32   SwitchDPDT_6_061412       5519mil       2342mil       5519mil       2342mil       5369mil       2442mil  T        360.00 SPST           
+S1_CTL31   SwitchDPDT_6_061412     4441.5mil       2342mil     4441.5mil       2342mil     4291.5mil       2442mil  T        360.00 SPST           
+S1_CTL30   SwitchDPDT_6_061412       3364mil       2342mil       3364mil       2342mil       3214mil       2442mil  T        360.00 SPST           
+S1_CTL29   SwitchDPDT_6_061412     2286.5mil       2342mil     2286.5mil       2342mil     2136.5mil       2442mil  T        360.00 SPST           
+S1_CTL28   SwitchDPDT_6_061412       1209mil       2342mil       1209mil       2342mil       1059mil       2442mil  T        360.00 SPST           
+S1_CTL27   SwitchDPDT_6_061412       9829mil       2842mil       9829mil       2842mil       9679mil       2942mil  T        360.00 SPST           
+S1_CTL26   SwitchDPDT_6_061412     8751.5mil       2842mil     8751.5mil       2842mil     8601.5mil       2942mil  T        360.00 SPST           
+S1_CTL25   SwitchDPDT_6_061412       7674mil       2842mil       7674mil       2842mil       7524mil       2942mil  T        360.00 SPST           
+S1_CTL24   SwitchDPDT_6_061412     6596.5mil       2842mil     6596.5mil       2842mil     6446.5mil       2942mil  T        360.00 SPST           
+S1_CTL23   SwitchDPDT_6_061412       5519mil       2842mil       5519mil       2842mil       5369mil       2942mil  T        360.00 SPST           
+S1_CTL22   SwitchDPDT_6_061412     4441.5mil       2842mil     4441.5mil       2842mil     4291.5mil       2942mil  T        360.00 SPST           
+S1_CTL21   SwitchDPDT_6_061412       3364mil       2842mil       3364mil       2842mil       3214mil       2942mil  T        360.00 SPST           
+S1_CTL20   SwitchDPDT_6_061412     2286.5mil       2842mil     2286.5mil       2842mil     2136.5mil       2942mil  T        360.00 SPST           
+S1_CTL19   SwitchDPDT_6_061412       1209mil       2842mil       1209mil       2842mil       1059mil       2942mil  T        360.00 SPST           
+S1_CTL18   SwitchDPDT_6_061412       9829mil       3342mil       9829mil       3342mil       9679mil       3442mil  T        360.00 SPST           
+S1_CTL17   SwitchDPDT_6_061412     8751.5mil       3342mil     8751.5mil       3342mil     8601.5mil       3442mil  T        360.00 SPST           
+S1_CTL16   SwitchDPDT_6_061412       7674mil       3342mil       7674mil       3342mil       7524mil       3442mil  T        360.00 SPST           
+S1_CTL15   SwitchDPDT_6_061412     6596.5mil       3342mil     6596.5mil       3342mil     6446.5mil       3442mil  T        360.00 SPST           
+S1_CTL14   SwitchDPDT_6_061412       5519mil       3342mil       5519mil       3342mil       5369mil       3442mil  T        360.00 SPST           
+S1_CTL13   SwitchDPDT_6_061412     4441.5mil       3342mil     4441.5mil       3342mil     4291.5mil       3442mil  T        360.00 SPST           
+S1_CTL12   SwitchDPDT_6_061412       3364mil       3342mil       3364mil       3342mil       3214mil       3442mil  T        360.00 SPST           
+S1_CTL11   SwitchDPDT_6_061412     2286.5mil       3342mil     2286.5mil       3342mil     2136.5mil       3442mil  T        360.00 SPST           
+S1_CTL10   SwitchDPDT_6_061412       1209mil       3342mil       1209mil       3342mil       1059mil       3442mil  T        360.00 SPST           
+S1_CTL9    SwitchDPDT_6_061412       9829mil       3842mil       9829mil       3842mil       9679mil       3942mil  T        360.00 SPST           
+S1_CTL8    SwitchDPDT_6_061412     8751.5mil       3842mil     8751.5mil       3842mil     8601.5mil       3942mil  T        360.00 SPST           
+S1_CTL7    SwitchDPDT_6_061412       7674mil       3842mil       7674mil       3842mil       7524mil       3942mil  T        360.00 SPST           
+S1_CTL6    SwitchDPDT_6_061412     6596.5mil       3842mil     6596.5mil       3842mil     6446.5mil       3942mil  T        360.00 SPST           
+S1_CTL5    SwitchDPDT_6_061412       5519mil       3842mil       5519mil       3842mil       5369mil       3942mil  T        360.00 SPST           
+S1_CTL4    SwitchDPDT_6_061412     4441.5mil       3842mil     4441.5mil       3842mil     4291.5mil       3942mil  T        360.00 SPST           
+S1_CTL3    SwitchDPDT_6_061412       3364mil       3842mil       3364mil       3842mil       3214mil       3942mil  T        360.00 SPST           
+S1_CTL2    SwitchDPDT_6_061412     2286.5mil       3842mil     2286.5mil       3842mil     2136.5mil       3942mil  T        360.00 SPST           
+S1_CTL1    SwitchDPDT_6_061412       1209mil       3842mil       1209mil       3842mil       1059mil       3942mil  T          0.00 SPST           
+P2_UUT54   1X2_HEADER_50MIL_081611     9268.5mil       5344mil     9268.5mil       5319mil     9268.5mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT54   1X4_HEADER_50mil_071411     9694.5mil       5300mil     9694.5mil       5375mil     9694.5mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT54   TestPoint52x32      9633.5mil       4835mil     9633.5mil       4835mil     9633.5mil       4835mil  T        270.00 POGOPIN        
+J1_UUT54   TestPoint52x32      9684.5mil       4891mil     9684.5mil       4891mil     9684.5mil       4891mil  T        270.00 POGOPIN        
+P2_UUT53   1X2_HEADER_50MIL_081611       8191mil       5344mil       8191mil       5319mil       8191mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT53   1X4_HEADER_50mil_071411       8617mil       5300mil       8617mil       5375mil       8617mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT53   TestPoint52x32        8556mil       4835mil       8556mil       4835mil       8556mil       4835mil  T        270.00 POGOPIN        
+J1_UUT53   TestPoint52x32        8607mil       4891mil       8607mil       4891mil       8607mil       4891mil  T        270.00 POGOPIN        
+P2_UUT52   1X2_HEADER_50MIL_081611     7113.5mil       5344mil     7113.5mil       5319mil     7113.5mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT52   1X4_HEADER_50mil_071411     7539.5mil       5300mil     7539.5mil       5375mil     7539.5mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT52   TestPoint52x32      7478.5mil       4835mil     7478.5mil       4835mil     7478.5mil       4835mil  T        270.00 POGOPIN        
+J1_UUT52   TestPoint52x32      7529.5mil       4891mil     7529.5mil       4891mil     7529.5mil       4891mil  T        270.00 POGOPIN        
+P2_UUT51   1X2_HEADER_50MIL_081611       6036mil       5344mil       6036mil       5319mil       6036mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT51   1X4_HEADER_50mil_071411       6462mil       5300mil       6462mil       5375mil       6462mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT51   TestPoint52x32        6401mil       4835mil       6401mil       4835mil       6401mil       4835mil  T        270.00 POGOPIN        
+J1_UUT51   TestPoint52x32        6452mil       4891mil       6452mil       4891mil       6452mil       4891mil  T        270.00 POGOPIN        
+P2_UUT50   1X2_HEADER_50MIL_081611     4958.5mil       5344mil     4958.5mil       5319mil     4958.5mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT50   1X4_HEADER_50mil_071411     5384.5mil       5300mil     5384.5mil       5375mil     5384.5mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT50   TestPoint52x32      5323.5mil       4835mil     5323.5mil       4835mil     5323.5mil       4835mil  T        270.00 POGOPIN        
+J1_UUT50   TestPoint52x32      5374.5mil       4891mil     5374.5mil       4891mil     5374.5mil       4891mil  T        270.00 POGOPIN        
+P2_UUT49   1X2_HEADER_50MIL_081611       3881mil       5344mil       3881mil       5319mil       3881mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT49   1X4_HEADER_50mil_071411       4307mil       5300mil       4307mil       5375mil       4307mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT49   TestPoint52x32        4246mil       4835mil       4246mil       4835mil       4246mil       4835mil  T        270.00 POGOPIN        
+J1_UUT49   TestPoint52x32        4297mil       4891mil       4297mil       4891mil       4297mil       4891mil  T        270.00 POGOPIN        
+P2_UUT48   1X2_HEADER_50MIL_081611     2803.5mil       5344mil     2803.5mil       5319mil     2803.5mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT48   1X4_HEADER_50mil_071411     3229.5mil       5300mil     3229.5mil       5375mil     3229.5mil       5375mil  T        270.00 1x4 50mil      
+J2_UUT48   TestPoint52x32     3168.59mil   4835.016mil    3168.59mil   4835.016mil    3168.59mil   4835.016mil  T        270.00 POGOPIN        
+J1_UUT48   TestPoint52x32      3219.5mil       4891mil     3219.5mil       4891mil     3219.5mil       4891mil  T        270.00 POGOPIN        
+P2_UUT47   1X2_HEADER_50MIL_081611       1726mil       5344mil       1726mil       5319mil       1726mil       5319mil  T         90.00 1x2 50mil      
+P1_UUT47   1X4_HEADER_50mil_071411       2152mil       5300mil       2152mil       5375mil       2152mil       5375mil  T        270.00 1x4 50mil      
+J1_UUT47   TestPoint52x32        2142mil       4891mil       2142mil       4891mil       2142mil       4891mil  T        270.00 POGOPIN        
+J1_UUT46   TestPoint52x32      1064.5mil       4891mil     1064.5mil       4891mil     1064.5mil       4891mil  T        270.00 POGOPIN        
+J2_UUT46   TestPoint52x32      1013.5mil       4835mil     1013.5mil       4835mil     1013.5mil       4835mil  T        270.00 POGOPIN        
+P1_UUT46   1X4_HEADER_50mil_071411     1074.5mil       5300mil     1074.5mil       5375mil     1074.5mil       5375mil  T        270.00 1x4 50mil      
+P2_UUT46   1X2_HEADER_50MIL_081611      648.5mil       5344mil      648.5mil       5319mil      648.5mil       5319mil  T         90.00 1x2 50mil      
+J1_UUT38   TestPoint52x32        2142mil       5880mil       2142mil       5880mil       2142mil       5880mil  T        270.00 POGOPIN        
+J2_UUT38   TestPoint52x32        2091mil       5824mil       2091mil       5824mil       2091mil       5824mil  T        270.00 POGOPIN        
+P1_UUT38   1X4_HEADER_50mil_071411       2152mil       6289mil       2152mil       6364mil       2152mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT38   1X2_HEADER_50MIL_081611       1726mil       6333mil       1726mil       6308mil       1726mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT39   TestPoint52x32      3219.5mil       5880mil     3219.5mil       5880mil     3219.5mil       5880mil  T        270.00 POGOPIN        
+J2_UUT39   TestPoint52x32      3168.5mil       5824mil     3168.5mil       5824mil     3168.5mil       5824mil  T        270.00 POGOPIN        
+P1_UUT39   1X4_HEADER_50mil_071411     3229.5mil       6289mil     3229.5mil       6364mil     3229.5mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT39   1X2_HEADER_50MIL_081611     2803.5mil       6333mil     2803.5mil       6308mil     2803.5mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT40   TestPoint52x32        4297mil       5880mil       4297mil       5880mil       4297mil       5880mil  T        270.00 POGOPIN        
+J2_UUT40   TestPoint52x32        4246mil       5824mil       4246mil       5824mil       4246mil       5824mil  T        270.00 POGOPIN        
+P1_UUT40   1X4_HEADER_50mil_071411       4307mil       6289mil       4307mil       6364mil       4307mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT40   1X2_HEADER_50MIL_081611       3881mil       6333mil       3881mil       6308mil       3881mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT41   TestPoint52x32      5374.5mil       5880mil     5374.5mil       5880mil     5374.5mil       5880mil  T        270.00 POGOPIN        
+J2_UUT41   TestPoint52x32      5323.5mil       5824mil     5323.5mil       5824mil     5323.5mil       5824mil  T        270.00 POGOPIN        
+P1_UUT41   1X4_HEADER_50mil_071411     5384.5mil       6289mil     5384.5mil       6364mil     5384.5mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT41   1X2_HEADER_50MIL_081611     4958.5mil       6333mil     4958.5mil       6308mil     4958.5mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT42   TestPoint52x32        6452mil       5880mil       6452mil       5880mil       6452mil       5880mil  T        270.00 POGOPIN        
+J2_UUT42   TestPoint52x32        6401mil       5824mil       6401mil       5824mil       6401mil       5824mil  T        270.00 POGOPIN        
+P1_UUT42   1X4_HEADER_50mil_071411       6462mil       6289mil       6462mil       6364mil       6462mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT42   1X2_HEADER_50MIL_081611       6036mil       6333mil       6036mil       6308mil       6036mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT43   TestPoint52x32      7529.5mil       5880mil     7529.5mil       5880mil     7529.5mil       5880mil  T        270.00 POGOPIN        
+J2_UUT43   TestPoint52x32      7478.5mil       5824mil     7478.5mil       5824mil     7478.5mil       5824mil  T        270.00 POGOPIN        
+P1_UUT43   1X4_HEADER_50mil_071411     7539.5mil       6289mil     7539.5mil       6364mil     7539.5mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT43   1X2_HEADER_50MIL_081611     7113.5mil       6333mil     7113.5mil       6308mil     7113.5mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT44   TestPoint52x32        8607mil       5880mil       8607mil       5880mil       8607mil       5880mil  T        270.00 POGOPIN        
+J2_UUT44   TestPoint52x32        8556mil       5824mil       8556mil       5824mil       8556mil       5824mil  T        270.00 POGOPIN        
+P1_UUT44   1X4_HEADER_50mil_071411       8617mil       6289mil       8617mil       6364mil       8617mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT44   1X2_HEADER_50MIL_081611       8191mil       6333mil       8191mil       6308mil       8191mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT45   TestPoint52x32      9684.5mil       5880mil     9684.5mil       5880mil     9684.5mil       5880mil  T        270.00 POGOPIN        
+J2_UUT45   TestPoint52x32      9633.5mil       5824mil     9633.5mil       5824mil     9633.5mil       5824mil  T        270.00 POGOPIN        
+P1_UUT45   1X4_HEADER_50mil_071411     9694.5mil       6289mil     9694.5mil       6364mil     9694.5mil       6364mil  T        270.00 1x4 50mil      
+P2_UUT45   1X2_HEADER_50MIL_081611     9268.5mil       6333mil     9268.5mil       6308mil     9268.5mil       6308mil  T         90.00 1x2 50mil      
+J1_UUT29   TestPoint52x32        2142mil       6869mil       2142mil       6869mil       2142mil       6869mil  T        270.00 POGOPIN        
+J2_UUT29   TestPoint52x32        2091mil       6813mil       2091mil       6813mil       2091mil       6813mil  T        270.00 POGOPIN        
+P1_UUT29   1X4_HEADER_50mil_071411       2152mil       7278mil       2152mil       7353mil       2152mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT29   1X2_HEADER_50MIL_081611       1726mil       7322mil       1726mil       7297mil       1726mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT30   TestPoint52x32      3219.5mil       6869mil     3219.5mil       6869mil     3219.5mil       6869mil  T        270.00 POGOPIN        
+J2_UUT30   TestPoint52x32      3168.5mil       6813mil     3168.5mil       6813mil     3168.5mil       6813mil  T        270.00 POGOPIN        
+P1_UUT30   1X4_HEADER_50mil_071411     3229.5mil       7278mil     3229.5mil       7353mil     3229.5mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT30   1X2_HEADER_50MIL_081611     2803.5mil       7322mil     2803.5mil       7297mil     2803.5mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT31   TestPoint52x32        4297mil       6869mil       4297mil       6869mil       4297mil       6869mil  T        270.00 POGOPIN        
+P1_UUT31   1X4_HEADER_50mil_071411       4307mil       7278mil       4307mil       7353mil       4307mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT31   1X2_HEADER_50MIL_081611       3881mil       7322mil       3881mil       7297mil       3881mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT32   TestPoint52x32      5374.5mil       6869mil     5374.5mil       6869mil     5374.5mil       6869mil  T        270.00 POGOPIN        
+J2_UUT32   TestPoint52x32      5323.5mil       6813mil     5323.5mil       6813mil     5323.5mil       6813mil  T        270.00 POGOPIN        
+P1_UUT32   1X4_HEADER_50mil_071411     5384.5mil       7278mil     5384.5mil       7353mil     5384.5mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT32   1X2_HEADER_50MIL_081611     4958.5mil       7322mil     4958.5mil       7297mil     4958.5mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT33   TestPoint52x32        6452mil       6869mil       6452mil       6869mil       6452mil       6869mil  T        270.00 POGOPIN        
+J2_UUT33   TestPoint52x32        6401mil       6813mil       6401mil       6813mil       6401mil       6813mil  T        270.00 POGOPIN        
+P1_UUT33   1X4_HEADER_50mil_071411       6462mil       7278mil       6462mil       7353mil       6462mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT33   1X2_HEADER_50MIL_081611       6036mil       7322mil       6036mil       7297mil       6036mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT34   TestPoint52x32      7529.5mil       6869mil     7529.5mil       6869mil     7529.5mil       6869mil  T        270.00 POGOPIN        
+J2_UUT34   TestPoint52x32      7478.5mil       6813mil     7478.5mil       6813mil     7478.5mil       6813mil  T        270.00 POGOPIN        
+P1_UUT34   1X4_HEADER_50mil_071411     7539.5mil       7278mil     7539.5mil       7353mil     7539.5mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT34   1X2_HEADER_50MIL_081611     7113.5mil       7322mil     7113.5mil       7297mil     7113.5mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT35   TestPoint52x32        8607mil       6869mil       8607mil       6869mil       8607mil       6869mil  T        270.00 POGOPIN        
+J2_UUT35   TestPoint52x32        8556mil       6813mil       8556mil       6813mil       8556mil       6813mil  T        270.00 POGOPIN        
+P1_UUT35   1X4_HEADER_50mil_071411       8617mil       7278mil       8617mil       7353mil       8617mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT35   1X2_HEADER_50MIL_081611       8191mil       7322mil       8191mil       7297mil       8191mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT36   TestPoint52x32      9684.5mil       6869mil     9684.5mil       6869mil     9684.5mil       6869mil  T        270.00 POGOPIN        
+J2_UUT36   TestPoint52x32      9633.5mil       6813mil     9633.5mil       6813mil     9633.5mil       6813mil  T        270.00 POGOPIN        
+P1_UUT36   1X4_HEADER_50mil_071411     9694.5mil       7278mil     9694.5mil       7353mil     9694.5mil       7353mil  T        270.00 1x4 50mil      
+P2_UUT36   1X2_HEADER_50MIL_081611     9268.5mil       7322mil     9268.5mil       7297mil     9268.5mil       7297mil  T         90.00 1x2 50mil      
+J1_UUT20   TestPoint52x32        2142mil       7858mil       2142mil       7858mil       2142mil       7858mil  T        270.00 POGOPIN        
+J2_UUT20   TestPoint52x32        2091mil       7802mil       2091mil       7802mil       2091mil       7802mil  T        270.00 POGOPIN        
+P1_UUT20   1X4_HEADER_50mil_071411       2152mil       8267mil       2152mil       8342mil       2152mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT20   1X2_HEADER_50MIL_081611       1726mil       8311mil       1726mil       8286mil       1726mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT21   TestPoint52x32      3219.5mil       7858mil     3219.5mil       7858mil     3219.5mil       7858mil  T        270.00 POGOPIN        
+J2_UUT21   TestPoint52x32      3168.5mil       7802mil     3168.5mil       7802mil     3168.5mil       7802mil  T        270.00 POGOPIN        
+P1_UUT21   1X4_HEADER_50mil_071411     3229.5mil       8267mil     3229.5mil       8342mil     3229.5mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT21   1X2_HEADER_50MIL_081611     2803.5mil       8311mil     2803.5mil       8286mil     2803.5mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT22   TestPoint52x32        4297mil       7858mil       4297mil       7858mil       4297mil       7858mil  T        270.00 POGOPIN        
+J2_UUT22   TestPoint52x32        4246mil       7802mil       4246mil       7802mil       4246mil       7802mil  T        270.00 POGOPIN        
+P1_UUT22   1X4_HEADER_50mil_071411       4307mil       8267mil       4307mil       8342mil       4307mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT22   1X2_HEADER_50MIL_081611       3881mil       8311mil       3881mil       8286mil       3881mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT23   TestPoint52x32      5374.5mil       7858mil     5374.5mil       7858mil     5374.5mil       7858mil  T        270.00 POGOPIN        
+J2_UUT23   TestPoint52x32      5323.5mil       7802mil     5323.5mil       7802mil     5323.5mil       7802mil  T        270.00 POGOPIN        
+P1_UUT23   1X4_HEADER_50mil_071411     5384.5mil       8267mil     5384.5mil       8342mil     5384.5mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT23   1X2_HEADER_50MIL_081611     4958.5mil       8311mil     4958.5mil       8286mil     4958.5mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT24   TestPoint52x32        6452mil       7858mil       6452mil       7858mil       6452mil       7858mil  T        270.00 POGOPIN        
+J2_UUT24   TestPoint52x32        6401mil       7802mil       6401mil       7802mil       6401mil       7802mil  T        270.00 POGOPIN        
+P1_UUT24   1X4_HEADER_50mil_071411       6462mil       8267mil       6462mil       8342mil       6462mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT24   1X2_HEADER_50MIL_081611       6036mil       8311mil       6036mil       8286mil       6036mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT25   TestPoint52x32      7529.5mil       7858mil     7529.5mil       7858mil     7529.5mil       7858mil  T        270.00 POGOPIN        
+J2_UUT25   TestPoint52x32      7478.5mil       7802mil     7478.5mil       7802mil     7478.5mil       7802mil  T        270.00 POGOPIN        
+P1_UUT25   1X4_HEADER_50mil_071411     7539.5mil       8267mil     7539.5mil       8342mil     7539.5mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT25   1X2_HEADER_50MIL_081611     7113.5mil       8311mil     7113.5mil       8286mil     7113.5mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT26   TestPoint52x32        8607mil       7858mil       8607mil       7858mil       8607mil       7858mil  T        270.00 POGOPIN        
+J2_UUT26   TestPoint52x32        8556mil       7802mil       8556mil       7802mil       8556mil       7802mil  T        270.00 POGOPIN        
+P1_UUT26   1X4_HEADER_50mil_071411       8617mil       8267mil       8617mil       8342mil       8617mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT26   1X2_HEADER_50MIL_081611       8191mil       8311mil       8191mil       8286mil       8191mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT27   TestPoint52x32      9684.5mil       7858mil     9684.5mil       7858mil     9684.5mil       7858mil  T        270.00 POGOPIN        
+J2_UUT27   TestPoint52x32      9633.5mil       7802mil     9633.5mil       7802mil     9633.5mil       7802mil  T        270.00 POGOPIN        
+P1_UUT27   1X4_HEADER_50mil_071411     9694.5mil       8267mil     9694.5mil       8342mil     9694.5mil       8342mil  T        270.00 1x4 50mil      
+P2_UUT27   1X2_HEADER_50MIL_081611     9268.5mil       8311mil     9268.5mil       8286mil     9268.5mil       8286mil  T         90.00 1x2 50mil      
+J1_UUT11   TestPoint52x32        2142mil       8847mil       2142mil       8847mil       2142mil       8847mil  T        270.00 POGOPIN        
+J2_UUT11   TestPoint52x32        2091mil       8791mil       2091mil       8791mil       2091mil       8791mil  T        270.00 POGOPIN        
+P1_UUT11   1X4_HEADER_50mil_071411       2152mil       9256mil       2152mil       9331mil       2152mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT11   1X2_HEADER_50MIL_081611       1726mil       9300mil       1726mil       9275mil       1726mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT12   TestPoint52x32      3219.5mil       8847mil     3219.5mil       8847mil     3219.5mil       8847mil  T        270.00 POGOPIN        
+J2_UUT12   TestPoint52x32      3168.5mil       8791mil     3168.5mil       8791mil     3168.5mil       8791mil  T        270.00 POGOPIN        
+P1_UUT12   1X4_HEADER_50mil_071411     3229.5mil       9256mil     3229.5mil       9331mil     3229.5mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT12   1X2_HEADER_50MIL_081611     2803.5mil       9300mil     2803.5mil       9275mil     2803.5mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT13   TestPoint52x32        4297mil       8847mil       4297mil       8847mil       4297mil       8847mil  T        270.00 POGOPIN        
+J2_UUT13   TestPoint52x32        4246mil       8791mil       4246mil       8791mil       4246mil       8791mil  T        270.00 POGOPIN        
+P1_UUT13   1X4_HEADER_50mil_071411       4307mil       9256mil       4307mil       9331mil       4307mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT13   1X2_HEADER_50MIL_081611       3881mil       9300mil       3881mil       9275mil       3881mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT14   TestPoint52x32      5374.5mil       8847mil     5374.5mil       8847mil     5374.5mil       8847mil  T        270.00 POGOPIN        
+J2_UUT14   TestPoint52x32      5323.5mil       8791mil     5323.5mil       8791mil     5323.5mil       8791mil  T        270.00 POGOPIN        
+P1_UUT14   1X4_HEADER_50mil_071411     5384.5mil       9256mil     5384.5mil       9331mil     5384.5mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT14   1X2_HEADER_50MIL_081611     4958.5mil       9300mil     4958.5mil       9275mil     4958.5mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT15   TestPoint52x32        6452mil       8847mil       6452mil       8847mil       6452mil       8847mil  T        270.00 POGOPIN        
+P1_UUT15   1X4_HEADER_50mil_071411       6462mil       9256mil       6462mil       9331mil       6462mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT15   1X2_HEADER_50MIL_081611       6036mil       9300mil       6036mil       9275mil       6036mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT16   TestPoint52x32      7529.5mil       8847mil     7529.5mil       8847mil     7529.5mil       8847mil  T        270.00 POGOPIN        
+J2_UUT16   TestPoint52x32      7478.5mil       8791mil     7478.5mil       8791mil     7478.5mil       8791mil  T        270.00 POGOPIN        
+P1_UUT16   1X4_HEADER_50mil_071411     7539.5mil       9256mil     7539.5mil       9331mil     7539.5mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT16   1X2_HEADER_50MIL_081611     7113.5mil       9300mil     7113.5mil       9275mil     7113.5mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT17   TestPoint52x32        8607mil       8847mil       8607mil       8847mil       8607mil       8847mil  T        270.00 POGOPIN        
+J2_UUT17   TestPoint52x32        8556mil       8791mil       8556mil       8791mil       8556mil       8791mil  T        270.00 POGOPIN        
+P1_UUT17   1X4_HEADER_50mil_071411       8617mil       9256mil       8617mil       9331mil       8617mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT17   1X2_HEADER_50MIL_081611       8191mil       9300mil       8191mil       9275mil       8191mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT18   TestPoint52x32      9684.5mil       8847mil     9684.5mil       8847mil     9684.5mil       8847mil  T        270.00 POGOPIN        
+J2_UUT18   TestPoint52x32      9633.5mil       8791mil     9633.5mil       8791mil     9633.5mil       8791mil  T        270.00 POGOPIN        
+P1_UUT18   1X4_HEADER_50mil_071411     9694.5mil       9256mil     9694.5mil       9331mil     9694.5mil       9331mil  T        270.00 1x4 50mil      
+P2_UUT18   1X2_HEADER_50MIL_081611     9268.5mil       9300mil     9268.5mil       9275mil     9268.5mil       9275mil  T         90.00 1x2 50mil      
+J1_UUT2    TestPoint52x32        2142mil       9836mil       2142mil       9836mil       2142mil       9836mil  T        270.00 POGOPIN        
+J2_UUT2    TestPoint52x32        2091mil       9780mil       2091mil       9780mil       2091mil       9780mil  T        270.00 POGOPIN        
+P1_UUT2    1X4_HEADER_50mil_071411       2152mil      10245mil       2152mil      10320mil       2152mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT2    1X2_HEADER_50MIL_081611       1726mil      10289mil       1726mil      10264mil       1726mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT3    TestPoint52x32      3219.5mil       9836mil     3219.5mil       9836mil     3219.5mil       9836mil  T        270.00 POGOPIN        
+J2_UUT3    TestPoint52x32      3168.5mil       9780mil     3168.5mil       9780mil     3168.5mil       9780mil  T        270.00 POGOPIN        
+P1_UUT3    1X4_HEADER_50mil_071411     3229.5mil      10245mil     3229.5mil      10320mil     3229.5mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT3    1X2_HEADER_50MIL_081611     2803.5mil      10289mil     2803.5mil      10264mil     2803.5mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT4    TestPoint52x32        4297mil       9836mil       4297mil       9836mil       4297mil       9836mil  T        270.00 POGOPIN        
+J2_UUT4    TestPoint52x32        4246mil       9780mil       4246mil       9780mil       4246mil       9780mil  T        270.00 POGOPIN        
+P1_UUT4    1X4_HEADER_50mil_071411       4307mil      10245mil       4307mil      10320mil       4307mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT4    1X2_HEADER_50MIL_081611       3881mil      10289mil       3881mil      10264mil       3881mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT5    TestPoint52x32      5374.5mil       9836mil     5374.5mil       9836mil     5374.5mil       9836mil  T        270.00 POGOPIN        
+J2_UUT5    TestPoint52x32      5323.5mil       9780mil     5323.5mil       9780mil     5323.5mil       9780mil  T        270.00 POGOPIN        
+P1_UUT5    1X4_HEADER_50mil_071411     5384.5mil      10245mil     5384.5mil      10320mil     5384.5mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT5    1X2_HEADER_50MIL_081611     4958.5mil      10289mil     4958.5mil      10264mil     4958.5mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT6    TestPoint52x32        6452mil       9836mil       6452mil       9836mil       6452mil       9836mil  T        270.00 POGOPIN        
+J2_UUT6    TestPoint52x32        6401mil       9780mil       6401mil       9780mil       6401mil       9780mil  T        270.00 POGOPIN        
+P1_UUT6    1X4_HEADER_50mil_071411       6462mil      10245mil       6462mil      10320mil       6462mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT6    1X2_HEADER_50MIL_081611       6036mil      10289mil       6036mil      10264mil       6036mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT7    TestPoint52x32      7529.5mil       9836mil     7529.5mil       9836mil     7529.5mil       9836mil  T        270.00 POGOPIN        
+J2_UUT7    TestPoint52x32      7478.5mil       9780mil     7478.5mil       9780mil     7478.5mil       9780mil  T        270.00 POGOPIN        
+P1_UUT7    1X4_HEADER_50mil_071411     7539.5mil      10245mil     7539.5mil      10320mil     7539.5mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT7    1X2_HEADER_50MIL_081611     7113.5mil      10289mil     7113.5mil      10264mil     7113.5mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT8    TestPoint52x32        8607mil       9836mil       8607mil       9836mil       8607mil       9836mil  T        270.00 POGOPIN        
+J2_UUT8    TestPoint52x32        8556mil       9780mil       8556mil       9780mil       8556mil       9780mil  T        270.00 POGOPIN        
+P1_UUT8    1X4_HEADER_50mil_071411       8617mil      10245mil       8617mil      10320mil       8617mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT8    1X2_HEADER_50MIL_081611       8191mil      10289mil       8191mil      10264mil       8191mil      10264mil  T         90.00 1x2 50mil      
+J1_UUT9    TestPoint52x32      9684.5mil       9836mil     9684.5mil       9836mil     9684.5mil       9836mil  T        270.00 POGOPIN        
+J2_UUT9    TestPoint52x32      9633.5mil       9780mil     9633.5mil       9780mil     9633.5mil       9780mil  T        270.00 POGOPIN        
+P1_UUT9    1X4_HEADER_50mil_071411     9694.5mil      10245mil     9694.5mil      10320mil     9694.5mil      10320mil  T        270.00 1x4 50mil      
+P2_UUT9    1X2_HEADER_50MIL_081611     9268.5mil      10289mil     9268.5mil      10264mil     9268.5mil      10264mil  T         90.00 1x2 50mil      
+P2_UUT1    1X2_HEADER_50MIL_081611      648.5mil      10289mil      648.5mil      10264mil      648.5mil      10264mil  T         90.00 1x2 50mil      
+P1_UUT1    1X4_HEADER_50mil_071411     1074.5mil      10245mil     1074.5mil      10320mil     1074.5mil      10320mil  T        270.00 1x4 50mil      
+J2_UUT1    TestPoint52x32      1013.5mil       9780mil     1013.5mil       9780mil     1013.5mil       9780mil  T        270.00 POGOPIN        
+J1_UUT1    TestPoint52x32      1064.5mil       9836mil     1064.5mil       9836mil     1064.5mil       9836mil  T        270.00 POGOPIN        
+P2_UUT10   1X2_HEADER_50MIL_081611      648.5mil       9300mil      648.5mil       9275mil      648.5mil       9275mil  T         90.00 1x2 50mil      
+P1_UUT10   1X4_HEADER_50mil_071411     1074.5mil       9256mil     1074.5mil       9331mil     1074.5mil       9331mil  T        270.00 1x4 50mil      
+J2_UUT10   TestPoint52x32      1013.5mil       8791mil     1013.5mil       8791mil     1013.5mil       8791mil  T        270.00 POGOPIN        
+J1_UUT10   TestPoint52x32      1064.5mil       8847mil     1064.5mil       8847mil     1064.5mil       8847mil  T        270.00 POGOPIN        
+P2_UUT19   1X2_HEADER_50MIL_081611      648.5mil       8311mil      648.5mil       8286mil      648.5mil       8286mil  T         90.00 1x2 50mil      
+P1_UUT19   1X4_HEADER_50mil_071411     1074.5mil       8267mil     1074.5mil       8342mil     1074.5mil       8342mil  T        270.00 1x4 50mil      
+J2_UUT19   TestPoint52x32      1013.5mil       7802mil     1013.5mil       7802mil     1013.5mil       7802mil  T        270.00 POGOPIN        
+J1_UUT19   TestPoint52x32      1064.5mil       7858mil     1064.5mil       7858mil     1064.5mil       7858mil  T        270.00 POGOPIN        
+P2_UUT28   1X2_HEADER_50MIL_081611      648.5mil       7322mil      648.5mil       7297mil      648.5mil       7297mil  T         90.00 1x2 50mil      
+P1_UUT28   1X4_HEADER_50mil_071411     1074.5mil       7278mil     1074.5mil       7353mil     1074.5mil       7353mil  T        270.00 1x4 50mil      
+J2_UUT28   TestPoint52x32      1013.5mil       6813mil     1013.5mil       6813mil     1013.5mil       6813mil  T        270.00 POGOPIN        
+J1_UUT28   TestPoint52x32      1064.5mil       6869mil     1064.5mil       6869mil     1064.5mil       6869mil  T        270.00 POGOPIN        
+P2_UUT37   1X2_HEADER_50MIL_081611      648.5mil       6333mil      648.5mil       6308mil      648.5mil       6308mil  T         90.00 1x2 50mil      
+P1_UUT37   1X4_HEADER_50mil_071411     1074.5mil       6289mil     1074.5mil       6364mil     1074.5mil       6364mil  T        270.00 1x4 50mil      
+J2_UUT37   TestPoint52x32        1012mil     5822.5mil       1012mil     5822.5mil       1012mil     5822.5mil  T        270.00 POGOPIN        
+J1_UUT37   TestPoint52x32        1063mil     5878.5mil       1063mil     5878.5mil       1063mil     5878.5mil  T        270.00 POGOPIN        
+C1_UUT1    0603_072205            579mil      10052mil        579mil      10052mil        579mil      10082mil  T        270.00 0.1uf          
+C1_UUT2    0603_072205         1656.5mil      10052mil     1656.5mil      10052mil     1656.5mil      10082mil  T        270.00 0.1uf          
+C1_UUT3    0603_072205           2734mil      10052mil       2734mil      10052mil       2734mil      10082mil  T        270.00 0.1uf          
+C1_UUT4    0603_072205         3811.5mil      10052mil     3811.5mil      10052mil     3811.5mil      10082mil  T        270.00 0.1uf          
+C1_UUT5    0603_072205           4889mil      10052mil       4889mil      10052mil       4889mil      10082mil  T        270.00 0.1uf          
+C1_UUT6    0603_072205         5966.5mil      10052mil     5966.5mil      10052mil     5966.5mil      10082mil  T        270.00 0.1uf          
+C1_UUT7    0603_072205           7044mil      10052mil       7044mil      10052mil       7044mil      10082mil  T        270.00 0.1uf          
+C1_UUT8    0603_072205         8121.5mil      10052mil     8121.5mil      10052mil     8121.5mil      10082mil  T        270.00 0.1uf          
+C1_UUT9    0603_072205           9199mil      10052mil       9199mil      10052mil       9199mil      10082mil  T        270.00 0.1uf          
+C1_UUT10   0603_072205            579mil       9063mil        579mil       9063mil        579mil       9093mil  T        270.00 0.1uf          
+C1_UUT11   0603_072205         1656.5mil       9063mil     1656.5mil       9063mil     1656.5mil       9093mil  T        270.00 0.1uf          
+C1_UUT12   0603_072205           2734mil       9063mil       2734mil       9063mil       2734mil       9093mil  T        270.00 0.1uf          
+C1_UUT13   0603_072205         3811.5mil       9063mil     3811.5mil       9063mil     3811.5mil       9093mil  T        270.00 0.1uf          
+C1_UUT14   0603_072205           4889mil       9063mil       4889mil       9063mil       4889mil       9093mil  T        270.00 0.1uf          
+C1_UUT15   0603_072205         5966.5mil       9063mil     5966.5mil       9063mil     5966.5mil       9093mil  T        270.00 0.1uf          
+C1_UUT16   0603_072205           7044mil       9063mil       7044mil       9063mil       7044mil       9093mil  T        270.00 0.1uf          
+C1_UUT17   0603_072205         8121.5mil       9063mil     8121.5mil       9063mil     8121.5mil       9093mil  T        270.00 0.1uf          
+C1_UUT18   0603_072205           9199mil       9063mil       9199mil       9063mil       9199mil       9093mil  T        270.00 0.1uf          
+C1_UUT19   0603_072205            579mil       8074mil        579mil       8074mil        579mil       8104mil  T        270.00 0.1uf          
+C1_UUT20   0603_072205         1656.5mil       8074mil     1656.5mil       8074mil     1656.5mil       8104mil  T        270.00 0.1uf          
+C1_UUT21   0603_072205           2734mil       8074mil       2734mil       8074mil       2734mil       8104mil  T        270.00 0.1uf          
+C1_UUT22   0603_072205         3811.5mil       8074mil     3811.5mil       8074mil     3811.5mil       8104mil  T        270.00 0.1uf          
+C1_UUT23   0603_072205           4889mil       8074mil       4889mil       8074mil       4889mil       8104mil  T        270.00 0.1uf          
+C1_UUT24   0603_072205         5966.5mil       8074mil     5966.5mil       8074mil     5966.5mil       8104mil  T        270.00 0.1uf          
+C1_UUT25   0603_072205           7044mil       8074mil       7044mil       8074mil       7044mil       8104mil  T        270.00 0.1uf          
+C1_UUT26   0603_072205         8121.5mil       8074mil     8121.5mil       8074mil     8121.5mil       8104mil  T        270.00 0.1uf          
+C1_UUT27   0603_072205           9199mil       8074mil       9199mil       8074mil       9199mil       8104mil  T        270.00 0.1uf          
+C1_UUT28   0603_072205            579mil       7085mil        579mil       7085mil        579mil       7115mil  T        270.00 0.1uf          
+C1_UUT29   0603_072205         1656.5mil       7085mil     1656.5mil       7085mil     1656.5mil       7115mil  T        270.00 0.1uf          
+C1_UUT30   0603_072205           2734mil       7085mil       2734mil       7085mil       2734mil       7115mil  T        270.00 0.1uf          
+C1_UUT31   0603_072205         3811.5mil       7085mil     3811.5mil       7085mil     3811.5mil       7115mil  T        270.00 0.1uf          
+C1_UUT32   0603_072205           4889mil       7085mil       4889mil       7085mil       4889mil       7115mil  T        270.00 0.1uf          
+C1_UUT33   0603_072205         5966.5mil       7085mil     5966.5mil       7085mil     5966.5mil       7115mil  T        270.00 0.1uf          
+C1_UUT34   0603_072205           7044mil       7085mil       7044mil       7085mil       7044mil       7115mil  T        270.00 0.1uf          
+C1_UUT35   0603_072205         8121.5mil       7085mil     8121.5mil       7085mil     8121.5mil       7115mil  T        270.00 0.1uf          
+C1_UUT36   0603_072205           9199mil       7085mil       9199mil       7085mil       9199mil       7115mil  T        270.00 0.1uf          
+C1_UUT37   0603_072205            579mil       6096mil        579mil       6096mil        579mil       6126mil  T        270.00 0.1uf          
+C1_UUT38   0603_072205         1656.5mil       6096mil     1656.5mil       6096mil     1656.5mil       6126mil  T        270.00 0.1uf          
+C1_UUT39   0603_072205           2734mil       6096mil       2734mil       6096mil       2734mil       6126mil  T        270.00 0.1uf          
+C1_UUT40   0603_072205         3811.5mil       6096mil     3811.5mil       6096mil     3811.5mil       6126mil  T        270.00 0.1uf          
+C1_UUT41   0603_072205           4889mil       6096mil       4889mil       6096mil       4889mil       6126mil  T        270.00 0.1uf          
+C1_UUT42   0603_072205         5966.5mil       6096mil     5966.5mil       6096mil     5966.5mil       6126mil  T        270.00 0.1uf          
+C1_UUT43   0603_072205           7044mil       6096mil       7044mil       6096mil       7044mil       6126mil  T        270.00 0.1uf          
+C1_UUT44   0603_072205         8121.5mil       6096mil     8121.5mil       6096mil     8121.5mil       6126mil  T        270.00 0.1uf          
+C1_UUT45   0603_072205           9199mil       6096mil       9199mil       6096mil       9199mil       6126mil  T        270.00 0.1uf          
+C1_UUT46   0603_072205            579mil       5107mil        579mil       5107mil        579mil       5137mil  T        270.00 0.1uf          
+C1_UUT47   0603_072205         1656.5mil       5107mil     1656.5mil       5107mil     1656.5mil       5137mil  T        270.00 0.1uf          
+C1_UUT48   0603_072205           2734mil       5107mil       2734mil       5107mil       2734mil       5137mil  T        270.00 0.1uf          
+C1_UUT49   0603_072205         3811.5mil       5107mil     3811.5mil       5107mil     3811.5mil       5137mil  T        270.00 0.1uf          
+C1_UUT50   0603_072205           4889mil       5107mil       4889mil       5107mil       4889mil       5137mil  T        270.00 0.1uf          
+C1_UUT51   0603_072205         5966.5mil       5107mil     5966.5mil       5107mil     5966.5mil       5137mil  T        270.00 0.1uf          
+C1_UUT52   0603_072205           7044mil       5107mil       7044mil       5107mil       7044mil       5137mil  T        270.00 0.1uf          
+C1_UUT53   0603_072205         8121.5mil       5107mil     8121.5mil       5107mil     8121.5mil       5137mil  T        270.00 0.1uf          
+C1_UUT54   0603_072205           9199mil       5107mil       9199mil       5107mil       9199mil       5137mil  T        270.00 0.1uf          
+C2_UUT1    CAP_A_CASE_030205        854mil      10322mil        854mil      10322mil        919mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT2    CAP_A_CASE_030205     1931.5mil      10322mil     1931.5mil      10322mil     1996.5mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT3    CAP_A_CASE_030205       3009mil      10322mil       3009mil      10322mil       3074mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT4    CAP_A_CASE_030205     4086.5mil      10322mil     4086.5mil      10322mil     4151.5mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT5    CAP_A_CASE_030205       5164mil      10322mil       5164mil      10322mil       5229mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT6    CAP_A_CASE_030205     6241.5mil      10322mil     6241.5mil      10322mil     6306.5mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT7    CAP_A_CASE_030205       7319mil      10322mil       7319mil      10322mil       7384mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT8    CAP_A_CASE_030205     8396.5mil      10322mil     8396.5mil      10322mil     8461.5mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT9    CAP_A_CASE_030205       9474mil      10322mil       9474mil      10322mil       9539mil      10322mil  T        360.00 2.2uf 10V Tant 
+C2_UUT10   CAP_A_CASE_030205        854mil       9333mil        854mil       9333mil        919mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT11   CAP_A_CASE_030205     1931.5mil       9333mil     1931.5mil       9333mil     1996.5mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT12   CAP_A_CASE_030205       3009mil       9333mil       3009mil       9333mil       3074mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT13   CAP_A_CASE_030205     4086.5mil       9333mil     4086.5mil       9333mil     4151.5mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT14   CAP_A_CASE_030205       5164mil       9333mil       5164mil       9333mil       5229mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT15   CAP_A_CASE_030205     6241.5mil       9333mil     6241.5mil       9333mil     6306.5mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT16   CAP_A_CASE_030205       7319mil       9333mil       7319mil       9333mil       7384mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT17   CAP_A_CASE_030205     8396.5mil       9333mil     8396.5mil       9333mil     8461.5mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT18   CAP_A_CASE_030205       9474mil       9333mil       9474mil       9333mil       9539mil       9333mil  T        360.00 2.2uf 10V Tant 
+C2_UUT19   CAP_A_CASE_030205        854mil       8344mil        854mil       8344mil        919mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT20   CAP_A_CASE_030205     1931.5mil       8344mil     1931.5mil       8344mil     1996.5mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT21   CAP_A_CASE_030205       3009mil       8344mil       3009mil       8344mil       3074mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT22   CAP_A_CASE_030205     4086.5mil       8344mil     4086.5mil       8344mil     4151.5mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT23   CAP_A_CASE_030205       5164mil       8344mil       5164mil       8344mil       5229mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT24   CAP_A_CASE_030205     6241.5mil       8344mil     6241.5mil       8344mil     6306.5mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT25   CAP_A_CASE_030205       7319mil       8344mil       7319mil       8344mil       7384mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT26   CAP_A_CASE_030205     8396.5mil       8344mil     8396.5mil       8344mil     8461.5mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT27   CAP_A_CASE_030205       9474mil       8344mil       9474mil       8344mil       9539mil       8344mil  T        360.00 2.2uf 10V Tant 
+C2_UUT28   CAP_A_CASE_030205        854mil       7355mil        854mil       7355mil        919mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT29   CAP_A_CASE_030205     1931.5mil       7355mil     1931.5mil       7355mil     1996.5mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT30   CAP_A_CASE_030205       3009mil       7355mil       3009mil       7355mil       3074mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT31   CAP_A_CASE_030205     4086.5mil       7355mil     4086.5mil       7355mil     4151.5mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT32   CAP_A_CASE_030205       5164mil       7355mil       5164mil       7355mil       5229mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT33   CAP_A_CASE_030205     6241.5mil       7355mil     6241.5mil       7355mil     6306.5mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT34   CAP_A_CASE_030205       7319mil       7355mil       7319mil       7355mil       7384mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT35   CAP_A_CASE_030205     8396.5mil       7355mil     8396.5mil       7355mil     8461.5mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT36   CAP_A_CASE_030205       9474mil       7355mil       9474mil       7355mil       9539mil       7355mil  T        360.00 2.2uf 10V Tant 
+C2_UUT37   CAP_A_CASE_030205        854mil       6366mil        854mil       6366mil        919mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT38   CAP_A_CASE_030205     1931.5mil       6366mil     1931.5mil       6366mil     1996.5mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT39   CAP_A_CASE_030205       3009mil       6366mil       3009mil       6366mil       3074mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT40   CAP_A_CASE_030205     4086.5mil       6366mil     4086.5mil       6366mil     4151.5mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT41   CAP_A_CASE_030205       5164mil       6366mil       5164mil       6366mil       5229mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT42   CAP_A_CASE_030205     6241.5mil       6366mil     6241.5mil       6366mil     6306.5mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT43   CAP_A_CASE_030205       7319mil       6366mil       7319mil       6366mil       7384mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT44   CAP_A_CASE_030205     8396.5mil       6366mil     8396.5mil       6366mil     8461.5mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT45   CAP_A_CASE_030205       9474mil       6366mil       9474mil       6366mil       9539mil       6366mil  T        360.00 2.2uf 10V Tant 
+C2_UUT46   CAP_A_CASE_030205        854mil       5377mil        854mil       5377mil        919mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT47   CAP_A_CASE_030205     1931.5mil       5377mil     1931.5mil       5377mil     1996.5mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT48   CAP_A_CASE_030205       3009mil       5377mil       3009mil       5377mil       3074mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT49   CAP_A_CASE_030205     4086.5mil       5377mil     4086.5mil       5377mil     4151.5mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT50   CAP_A_CASE_030205       5164mil       5377mil       5164mil       5377mil       5229mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT51   CAP_A_CASE_030205     6241.5mil       5377mil     6241.5mil       5377mil     6306.5mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT52   CAP_A_CASE_030205       7319mil       5377mil       7319mil       5377mil       7384mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT53   CAP_A_CASE_030205     8396.5mil       5377mil     8396.5mil       5377mil     8461.5mil       5377mil  T        360.00 2.2uf 10V Tant 
+C2_UUT54   CAP_A_CASE_030205       9474mil       5377mil       9474mil       5377mil       9539mil       5377mil  T        360.00 2.2uf 10V Tant 
+C10        CAP_C_CASE_041412       4644mil        355mil       4644mil        355mil       4524mil        355mil  T        360.00 4.7uf 25V      
+C11        CAP_D_CASE_030205       4524mil        715mil       4524mil        715mil   4380.299mil        715mil  T        180.00 47uf 10V       
+C12        CAP_A_CASE_030205       5209mil        732mil       5209mil        732mil       5144mil        732mil  T        180.00 2.2uf 10V Tant 
+C13        0603_072205           5179mil        362mil       5179mil        362mil       5149mil        362mil  T        360.00 0.1uf          
+J2_UUT15   TestPoint52x32        6401mil       8791mil       6401mil       8791mil       6401mil       8791mil  T         90.00 POGOPIN        
+J2_UUT31   TestPoint52x32        4246mil       6813mil       4246mil       6813mil       4246mil       6813mil  T         90.00 POGOPIN        
+J2_UUT47   TestPoint52x32        2091mil       4835mil       2091mil       4835mil       2091mil       4835mil  T         90.00 POGOPIN        
+P10        1X4_HEADER_50mil_071411       5069mil        907mil       5144mil        907mil       5144mil        907mil  T        180.00 1x4 50mil      
+U3_UUT1    SOT25_030205         768.5mil  10069.751mil        776mil  10051.001mil        711mil  10126.001mil  T        180.00 LP2980         
+U3_UUT2    SOT25_030205          1846mil  10069.751mil     1853.5mil  10051.001mil     1788.5mil  10126.001mil  T        180.00 LP2980         
+U3_UUT3    SOT25_030205        2923.5mil  10069.751mil       2931mil  10051.001mil       2866mil  10126.001mil  T        180.00 LP2980         
+U3_UUT4    SOT25_030205          4001mil  10069.751mil     4008.5mil  10051.001mil     3943.5mil  10126.001mil  T        180.00 LP2980         
+U3_UUT5    SOT25_030205        5078.5mil  10069.751mil       5086mil  10051.001mil       5021mil  10126.001mil  T        180.00 LP2980         
+U3_UUT6    SOT25_030205          6156mil  10069.751mil     6163.5mil  10051.001mil     6098.5mil  10126.001mil  T        180.00 LP2980         
+U3_UUT7    SOT25_030205        7233.5mil  10069.751mil       7241mil  10051.001mil       7176mil  10126.001mil  T        180.00 LP2980         
+U3_UUT8    SOT25_030205          8311mil  10069.751mil     8318.5mil  10051.001mil     8253.5mil  10126.001mil  T        180.00 LP2980         
+U3_UUT9    SOT25_030205        9388.5mil  10069.751mil       9396mil  10051.001mil       9331mil  10126.001mil  T        180.00 LP2980         
+U3_UUT10   SOT25_030205         768.5mil   9080.751mil        776mil   9062.001mil        711mil   9137.001mil  T        180.00 LP2980         
+U3_UUT11   SOT25_030205          1846mil   9080.751mil     1853.5mil   9062.001mil     1788.5mil   9137.001mil  T        180.00 LP2980         
+U3_UUT12   SOT25_030205        2923.5mil   9080.751mil       2931mil   9062.001mil       2866mil   9137.001mil  T        180.00 LP2980         
+U3_UUT13   SOT25_030205          4001mil   9080.751mil     4008.5mil   9062.001mil     3943.5mil   9137.001mil  T        180.00 LP2980         
+U3_UUT14   SOT25_030205        5078.5mil   9080.751mil       5086mil   9062.001mil       5021mil   9137.001mil  T        180.00 LP2980         
+U3_UUT15   SOT25_030205          6156mil   9080.751mil     6163.5mil   9062.001mil     6098.5mil   9137.001mil  T        180.00 LP2980         
+U3_UUT16   SOT25_030205        7233.5mil   9080.751mil       7241mil   9062.001mil       7176mil   9137.001mil  T        180.00 LP2980         
+U3_UUT17   SOT25_030205          8311mil   9080.751mil     8318.5mil   9062.001mil     8253.5mil   9137.001mil  T        180.00 LP2980         
+U3_UUT18   SOT25_030205        9388.5mil   9080.751mil       9396mil   9062.001mil       9331mil   9137.001mil  T        180.00 LP2980         
+U3_UUT19   SOT25_030205         768.5mil   8091.751mil        776mil   8073.001mil        711mil   8148.001mil  T        180.00 LP2980         
+U3_UUT20   SOT25_030205          1846mil   8091.751mil     1853.5mil   8073.001mil     1788.5mil   8148.001mil  T        180.00 LP2980         
+U3_UUT21   SOT25_030205        2923.5mil   8091.751mil       2931mil   8073.001mil       2866mil   8148.001mil  T        180.00 LP2980         
+U3_UUT22   SOT25_030205          4001mil   8091.751mil     4008.5mil   8073.001mil     3943.5mil   8148.001mil  T        180.00 LP2980         
+U3_UUT23   SOT25_030205        5078.5mil   8091.751mil       5086mil   8073.001mil       5021mil   8148.001mil  T        180.00 LP2980         
+U3_UUT24   SOT25_030205          6156mil   8091.751mil     6163.5mil   8073.001mil     6098.5mil   8148.001mil  T        180.00 LP2980         
+U3_UUT25   SOT25_030205        7233.5mil   8091.751mil       7241mil   8073.001mil       7176mil   8148.001mil  T        180.00 LP2980         
+U3_UUT26   SOT25_030205          8311mil   8091.751mil     8318.5mil   8073.001mil     8253.5mil   8148.001mil  T        180.00 LP2980         
+U3_UUT27   SOT25_030205        9388.5mil   8091.751mil       9396mil   8073.001mil       9331mil   8148.001mil  T        180.00 LP2980         
+U3_UUT28   SOT25_030205         768.5mil   7102.751mil        776mil   7084.001mil        711mil   7159.001mil  T        180.00 LP2980         
+U3_UUT29   SOT25_030205          1846mil   7102.751mil     1853.5mil   7084.001mil     1788.5mil   7159.001mil  T        180.00 LP2980         
+U3_UUT30   SOT25_030205        2923.5mil   7102.751mil       2931mil   7084.001mil       2866mil   7159.001mil  T        180.00 LP2980         
+U3_UUT31   SOT25_030205          4001mil   7102.751mil     4008.5mil   7084.001mil     3943.5mil   7159.001mil  T        180.00 LP2980         
+U3_UUT32   SOT25_030205        5078.5mil   7102.751mil       5086mil   7084.001mil       5021mil   7159.001mil  T        180.00 LP2980         
+U3_UUT33   SOT25_030205          6156mil   7102.751mil     6163.5mil   7084.001mil     6098.5mil   7159.001mil  T        180.00 LP2980         
+U3_UUT34   SOT25_030205        7233.5mil   7102.751mil       7241mil   7084.001mil       7176mil   7159.001mil  T        180.00 LP2980         
+U3_UUT35   SOT25_030205          8311mil   7102.751mil     8318.5mil   7084.001mil     8253.5mil   7159.001mil  T        180.00 LP2980         
+U3_UUT36   SOT25_030205        9388.5mil   7102.751mil       9396mil   7084.001mil       9331mil   7159.001mil  T        180.00 LP2980         
+U3_UUT37   SOT25_030205         768.5mil   6113.751mil        776mil   6095.001mil        711mil   6170.001mil  T        180.00 LP2980         
+U3_UUT38   SOT25_030205          1846mil   6113.751mil     1853.5mil   6095.001mil     1788.5mil   6170.001mil  T        180.00 LP2980         
+U3_UUT39   SOT25_030205        2923.5mil   6113.751mil       2931mil   6095.001mil       2866mil   6170.001mil  T        180.00 LP2980         
+U3_UUT40   SOT25_030205          4001mil   6113.751mil     4008.5mil   6095.001mil     3943.5mil   6170.001mil  T        180.00 LP2980         
+U3_UUT41   SOT25_030205        5078.5mil   6113.751mil       5086mil   6095.001mil       5021mil   6170.001mil  T        180.00 LP2980         
+U3_UUT42   SOT25_030205          6156mil   6113.751mil     6163.5mil   6095.001mil     6098.5mil   6170.001mil  T        180.00 LP2980         
+U3_UUT43   SOT25_030205        7233.5mil   6113.751mil       7241mil   6095.001mil       7176mil   6170.001mil  T        180.00 LP2980         
+U3_UUT44   SOT25_030205          8311mil   6113.751mil     8318.5mil   6095.001mil     8253.5mil   6170.001mil  T        180.00 LP2980         
+U3_UUT45   SOT25_030205        9388.5mil   6113.751mil       9396mil   6095.001mil       9331mil   6170.001mil  T        180.00 LP2980         
+U3_UUT46   SOT25_030205         768.5mil   5124.751mil        776mil   5106.001mil        711mil   5181.001mil  T        180.00 LP2980         
+U3_UUT47   SOT25_030205          1846mil   5124.751mil     1853.5mil   5106.001mil     1788.5mil   5181.001mil  T        180.00 LP2980         
+U3_UUT48   SOT25_030205        2923.5mil   5124.751mil       2931mil   5106.001mil       2866mil   5181.001mil  T        180.00 LP2980         
+U3_UUT49   SOT25_030205          4001mil   5124.751mil     4008.5mil   5106.001mil     3943.5mil   5181.001mil  T        180.00 LP2980         
+U3_UUT50   SOT25_030205        5078.5mil   5124.751mil       5086mil   5106.001mil       5021mil   5181.001mil  T        180.00 LP2980         
+U3_UUT51   SOT25_030205          6156mil   5124.751mil     6163.5mil   5106.001mil     6098.5mil   5181.001mil  T        180.00 LP2980         
+U3_UUT52   SOT25_030205        7233.5mil   5124.751mil       7241mil   5106.001mil       7176mil   5181.001mil  T        180.00 LP2980         
+U3_UUT53   SOT25_030205          8311mil   5124.751mil     8318.5mil   5106.001mil     8253.5mil   5181.001mil  T        180.00 LP2980         
+U3_UUT54   SOT25_030205        9388.5mil   5124.751mil       9396mil   5106.001mil       9331mil   5181.001mil  T        180.00 LP2980         
+U10        TI_PowerTrendsPT_061812       4139mil        550mil       4139mil        450mil       4139mil        450mil  T         90.00 PT5101A        
+U11        SOT25_030205       5165.25mil      539.5mil       5184mil        547mil       5109mil        482mil  T        270.00 LP2980         
+C3_CTL1    0603_072205            954mil       3912mil        954mil       3912mil        954mil       3942mil  T        270.00 0.1uf          
+C3_CTL2    0603_072205         2031.5mil       3912mil     2031.5mil       3912mil     2031.5mil       3942mil  T        270.00 0.1uf          
+C3_CTL3    0603_072205           3109mil       3912mil       3109mil       3912mil       3109mil       3942mil  T        270.00 0.1uf          
+C3_CTL4    0603_072205         4186.5mil       3912mil     4186.5mil       3912mil     4186.5mil       3942mil  T        270.00 0.1uf          
+C3_CTL5    0603_072205           5264mil       3912mil       5264mil       3912mil       5264mil       3942mil  T        270.00 0.1uf          
+C3_CTL6    0603_072205         6341.5mil       3912mil     6341.5mil       3912mil     6341.5mil       3942mil  T        270.00 0.1uf          
+C3_CTL7    0603_072205           7419mil       3912mil       7419mil       3912mil       7419mil       3942mil  T        270.00 0.1uf          
+C3_CTL8    0603_072205         8496.5mil       3912mil     8496.5mil       3912mil     8496.5mil       3942mil  T        270.00 0.1uf          
+C3_CTL9    0603_072205           9574mil       3912mil       9574mil       3912mil       9574mil       3942mil  T        270.00 0.1uf          
+C3_CTL10   0603_072205            954mil       3412mil        954mil       3412mil        954mil       3442mil  T        270.00 0.1uf          
+C3_CTL11   0603_072205         2031.5mil       3412mil     2031.5mil       3412mil     2031.5mil       3442mil  T        270.00 0.1uf          
+C3_CTL12   0603_072205           3109mil       3412mil       3109mil       3412mil       3109mil       3442mil  T        270.00 0.1uf          
+C3_CTL13   0603_072205         4186.5mil       3412mil     4186.5mil       3412mil     4186.5mil       3442mil  T        270.00 0.1uf          
+C3_CTL14   0603_072205           5264mil       3412mil       5264mil       3412mil       5264mil       3442mil  T        270.00 0.1uf          
+C3_CTL15   0603_072205         6341.5mil       3412mil     6341.5mil       3412mil     6341.5mil       3442mil  T        270.00 0.1uf          
+C3_CTL16   0603_072205           7419mil       3412mil       7419mil       3412mil       7419mil       3442mil  T        270.00 0.1uf          
+C3_CTL17   0603_072205         8496.5mil       3412mil     8496.5mil       3412mil     8496.5mil       3442mil  T        270.00 0.1uf          
+C3_CTL18   0603_072205           9574mil       3412mil       9574mil       3412mil       9574mil       3442mil  T        270.00 0.1uf          
+C3_CTL19   0603_072205            954mil       2912mil        954mil       2912mil        954mil       2942mil  T        270.00 0.1uf          
+C3_CTL20   0603_072205         2031.5mil       2912mil     2031.5mil       2912mil     2031.5mil       2942mil  T        270.00 0.1uf          
+C3_CTL21   0603_072205           3109mil       2912mil       3109mil       2912mil       3109mil       2942mil  T        270.00 0.1uf          
+C3_CTL22   0603_072205         4186.5mil       2912mil     4186.5mil       2912mil     4186.5mil       2942mil  T        270.00 0.1uf          
+C3_CTL23   0603_072205           5264mil       2912mil       5264mil       2912mil       5264mil       2942mil  T        270.00 0.1uf          
+C3_CTL24   0603_072205         6341.5mil       2912mil     6341.5mil       2912mil     6341.5mil       2942mil  T        270.00 0.1uf          
+C3_CTL25   0603_072205           7419mil       2912mil       7419mil       2912mil       7419mil       2942mil  T        270.00 0.1uf          
+C3_CTL26   0603_072205         8496.5mil       2912mil     8496.5mil       2912mil     8496.5mil       2942mil  T        270.00 0.1uf          
+C3_CTL27   0603_072205           9574mil       2912mil       9574mil       2912mil       9574mil       2942mil  T        270.00 0.1uf          
+C3_CTL28   0603_072205            954mil       2412mil        954mil       2412mil        954mil       2442mil  T        270.00 0.1uf          
+C3_CTL29   0603_072205         2031.5mil       2412mil     2031.5mil       2412mil     2031.5mil       2442mil  T        270.00 0.1uf          
+C3_CTL30   0603_072205           3109mil       2412mil       3109mil       2412mil       3109mil       2442mil  T        270.00 0.1uf          
+C3_CTL31   0603_072205         4186.5mil       2412mil     4186.5mil       2412mil     4186.5mil       2442mil  T        270.00 0.1uf          
+C3_CTL32   0603_072205           5264mil       2412mil       5264mil       2412mil       5264mil       2442mil  T        270.00 0.1uf          
+C3_CTL33   0603_072205         6341.5mil       2412mil     6341.5mil       2412mil     6341.5mil       2442mil  T        270.00 0.1uf          
+C3_CTL34   0603_072205           7419mil       2412mil       7419mil       2412mil       7419mil       2442mil  T        270.00 0.1uf          
+C3_CTL35   0603_072205         8496.5mil       2412mil     8496.5mil       2412mil     8496.5mil       2442mil  T        270.00 0.1uf          
+C3_CTL36   0603_072205           9574mil       2412mil       9574mil       2412mil       9574mil       2442mil  T        270.00 0.1uf          
+C3_CTL37   0603_072205            954mil       1912mil        954mil       1912mil        954mil       1942mil  T        270.00 0.1uf          
+C3_CTL38   0603_072205         2031.5mil       1912mil     2031.5mil       1912mil     2031.5mil       1942mil  T        270.00 0.1uf          
+C3_CTL39   0603_072205           3109mil       1912mil       3109mil       1912mil       3109mil       1942mil  T        270.00 0.1uf          
+C3_CTL40   0603_072205         4186.5mil       1912mil     4186.5mil       1912mil     4186.5mil       1942mil  T        270.00 0.1uf          
+C3_CTL41   0603_072205           5264mil       1912mil       5264mil       1912mil       5264mil       1942mil  T        270.00 0.1uf          
+C3_CTL42   0603_072205         6341.5mil       1912mil     6341.5mil       1912mil     6341.5mil       1942mil  T        270.00 0.1uf          
+C3_CTL43   0603_072205           7419mil       1912mil       7419mil       1912mil       7419mil       1942mil  T        270.00 0.1uf          
+C3_CTL44   0603_072205         8496.5mil       1912mil     8496.5mil       1912mil     8496.5mil       1942mil  T        270.00 0.1uf          
+C3_CTL45   0603_072205           9574mil       1912mil       9574mil       1912mil       9574mil       1942mil  T        270.00 0.1uf          
+C3_CTL46   0603_072205            954mil       1412mil        954mil       1412mil        954mil       1442mil  T        270.00 0.1uf          
+C3_CTL47   0603_072205         2031.5mil       1412mil     2031.5mil       1412mil     2031.5mil       1442mil  T        270.00 0.1uf          
+C3_CTL48   0603_072205           3109mil       1412mil       3109mil       1412mil       3109mil       1442mil  T        270.00 0.1uf          
+C3_CTL49   0603_072205         4186.5mil       1412mil     4186.5mil       1412mil     4186.5mil       1442mil  T        270.00 0.1uf          
+C3_CTL50   0603_072205           5264mil       1412mil       5264mil       1412mil       5264mil       1442mil  T        270.00 0.1uf          
+C3_CTL51   0603_072205         6341.5mil       1412mil     6341.5mil       1412mil     6341.5mil       1442mil  T        270.00 0.1uf          
+C3_CTL52   0603_072205           7419mil       1412mil       7419mil       1412mil       7419mil       1442mil  T        270.00 0.1uf          
+C3_CTL53   0603_072205         8496.5mil       1412mil     8496.5mil       1412mil     8496.5mil       1442mil  T        270.00 0.1uf          
+C3_CTL54   0603_072205           9574mil       1412mil       9574mil       1412mil       9574mil       1442mil  T        270.00 0.1uf          
+D1_CTL1    LED_5MM_X_2.5MM_061112        474mil       3757mil        474mil       3757mil    542.898mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL2    LED_5MM_X_2.5MM_061112     1551.5mil       3757mil     1551.5mil       3757mil   1620.398mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL3    LED_5MM_X_2.5MM_061112       2629mil       3757mil       2629mil       3757mil   2697.898mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL4    LED_5MM_X_2.5MM_061112     3706.5mil       3757mil     3706.5mil       3757mil   3775.398mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL5    LED_5MM_X_2.5MM_061112       4784mil       3757mil       4784mil       3757mil   4852.898mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL6    LED_5MM_X_2.5MM_061112     5861.5mil       3757mil     5861.5mil       3757mil   5930.398mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL7    LED_5MM_X_2.5MM_061112       6939mil       3757mil       6939mil       3757mil   7007.898mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL8    LED_5MM_X_2.5MM_061112     8016.5mil       3757mil     8016.5mil       3757mil   8085.398mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL9    LED_5MM_X_2.5MM_061112       9094mil       3757mil       9094mil       3757mil   9162.898mil   3729.441mil  T        360.00 LTST-C155      
+D1_CTL10   LED_5MM_X_2.5MM_061112        474mil       3257mil        474mil       3257mil    542.898mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL11   LED_5MM_X_2.5MM_061112     1551.5mil       3257mil     1551.5mil       3257mil   1620.398mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL12   LED_5MM_X_2.5MM_061112       2629mil       3257mil       2629mil       3257mil   2697.898mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL13   LED_5MM_X_2.5MM_061112     3706.5mil       3257mil     3706.5mil       3257mil   3775.398mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL14   LED_5MM_X_2.5MM_061112       4784mil       3257mil       4784mil       3257mil   4852.898mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL15   LED_5MM_X_2.5MM_061112     5861.5mil       3257mil     5861.5mil       3257mil   5930.398mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL16   LED_5MM_X_2.5MM_061112       6939mil       3257mil       6939mil       3257mil   7007.898mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL17   LED_5MM_X_2.5MM_061112     8016.5mil       3257mil     8016.5mil       3257mil   8085.398mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL18   LED_5MM_X_2.5MM_061112       9094mil       3257mil       9094mil       3257mil   9162.898mil   3229.441mil  T        360.00 LTST-C155      
+D1_CTL19   LED_5MM_X_2.5MM_061112        474mil       2757mil        474mil       2757mil    542.898mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL20   LED_5MM_X_2.5MM_061112     1551.5mil       2757mil     1551.5mil       2757mil   1620.398mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL21   LED_5MM_X_2.5MM_061112       2629mil       2757mil       2629mil       2757mil   2697.898mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL22   LED_5MM_X_2.5MM_061112     3706.5mil       2757mil     3706.5mil       2757mil   3775.398mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL23   LED_5MM_X_2.5MM_061112       4784mil       2757mil       4784mil       2757mil   4852.898mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL24   LED_5MM_X_2.5MM_061112     5861.5mil       2757mil     5861.5mil       2757mil   5930.398mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL25   LED_5MM_X_2.5MM_061112       6939mil       2757mil       6939mil       2757mil   7007.898mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL26   LED_5MM_X_2.5MM_061112     8016.5mil       2757mil     8016.5mil       2757mil   8085.398mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL27   LED_5MM_X_2.5MM_061112       9094mil       2757mil       9094mil       2757mil   9162.898mil   2729.441mil  T        360.00 LTST-C155      
+D1_CTL28   LED_5MM_X_2.5MM_061112        474mil       2257mil        474mil       2257mil    542.898mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL29   LED_5MM_X_2.5MM_061112     1551.5mil       2257mil     1551.5mil       2257mil   1620.398mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL30   LED_5MM_X_2.5MM_061112       2629mil       2257mil       2629mil       2257mil   2697.898mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL31   LED_5MM_X_2.5MM_061112     3706.5mil       2257mil     3706.5mil       2257mil   3775.398mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL32   LED_5MM_X_2.5MM_061112       4784mil       2257mil       4784mil       2257mil   4852.898mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL33   LED_5MM_X_2.5MM_061112     5861.5mil       2257mil     5861.5mil       2257mil   5930.398mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL34   LED_5MM_X_2.5MM_061112       6939mil       2257mil       6939mil       2257mil   7007.898mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL35   LED_5MM_X_2.5MM_061112     8016.5mil       2257mil     8016.5mil       2257mil   8085.398mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL36   LED_5MM_X_2.5MM_061112       9094mil       2257mil       9094mil       2257mil   9162.898mil   2229.441mil  T        360.00 LTST-C155      
+D1_CTL37   LED_5MM_X_2.5MM_061112        474mil       1757mil        474mil       1757mil    542.898mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL38   LED_5MM_X_2.5MM_061112     1551.5mil       1757mil     1551.5mil       1757mil   1620.398mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL39   LED_5MM_X_2.5MM_061112       2629mil       1757mil       2629mil       1757mil   2697.898mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL40   LED_5MM_X_2.5MM_061112     3706.5mil       1757mil     3706.5mil       1757mil   3775.398mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL41   LED_5MM_X_2.5MM_061112       4784mil       1757mil       4784mil       1757mil   4852.898mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL42   LED_5MM_X_2.5MM_061112     5861.5mil       1757mil     5861.5mil       1757mil   5930.398mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL43   LED_5MM_X_2.5MM_061112       6939mil       1757mil       6939mil       1757mil   7007.898mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL44   LED_5MM_X_2.5MM_061112     8016.5mil       1757mil     8016.5mil       1757mil   8085.398mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL45   LED_5MM_X_2.5MM_061112       9094mil       1757mil       9094mil       1757mil   9162.898mil   1729.441mil  T        360.00 LTST-C155      
+D1_CTL46   LED_5MM_X_2.5MM_061112        474mil       1257mil        474mil       1257mil    542.898mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL47   LED_5MM_X_2.5MM_061112     1551.5mil       1257mil     1551.5mil       1257mil   1620.398mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL48   LED_5MM_X_2.5MM_061112       2629mil       1257mil       2629mil       1257mil   2697.898mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL49   LED_5MM_X_2.5MM_061112     3706.5mil       1257mil     3706.5mil       1257mil   3775.398mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL50   LED_5MM_X_2.5MM_061112       4784mil       1257mil       4784mil       1257mil   4852.898mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL51   LED_5MM_X_2.5MM_061112     5861.5mil       1257mil     5861.5mil       1257mil   5930.398mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL52   LED_5MM_X_2.5MM_061112       6939mil       1257mil       6939mil       1257mil   7007.898mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL53   LED_5MM_X_2.5MM_061112     8016.5mil       1257mil     8016.5mil       1257mil   8085.398mil   1229.441mil  T        360.00 LTST-C155      
+D1_CTL54   LED_5MM_X_2.5MM_061112       9094mil       1257mil       9094mil       1257mil   9162.898mil   1229.441mil  T        360.00 LTST-C155      
+R1_CTL1    0603_072205            469mil       3932mil        469mil       3932mil        469mil       3902mil  T         90.00 130            
+R1_CTL2    0603_072205         1546.5mil       3932mil     1546.5mil       3932mil     1546.5mil       3902mil  T         90.00 130            
+R1_CTL3    0603_072205           2624mil       3932mil       2624mil       3932mil       2624mil       3902mil  T         90.00 130            
+R1_CTL4    0603_072205         3701.5mil       3932mil     3701.5mil       3932mil     3701.5mil       3902mil  T         90.00 130            
+R1_CTL5    0603_072205           4779mil       3932mil       4779mil       3932mil       4779mil       3902mil  T         90.00 130            
+R1_CTL6    0603_072205         5856.5mil       3932mil     5856.5mil       3932mil     5856.5mil       3902mil  T         90.00 130            
+R1_CTL7    0603_072205           6934mil       3932mil       6934mil       3932mil       6934mil       3902mil  T         90.00 130            
+R1_CTL8    0603_072205         8011.5mil       3932mil     8011.5mil       3932mil     8011.5mil       3902mil  T         90.00 130            
+R1_CTL9    0603_072205           9089mil       3932mil       9089mil       3932mil       9089mil       3902mil  T         90.00 130            
+R1_CTL10   0603_072205            469mil       3432mil        469mil       3432mil        469mil       3402mil  T         90.00 130            
+R1_CTL11   0603_072205         1546.5mil       3432mil     1546.5mil       3432mil     1546.5mil       3402mil  T         90.00 130            
+R1_CTL12   0603_072205           2624mil       3432mil       2624mil       3432mil       2624mil       3402mil  T         90.00 130            
+R1_CTL13   0603_072205         3701.5mil       3432mil     3701.5mil       3432mil     3701.5mil       3402mil  T         90.00 130            
+R1_CTL14   0603_072205           4779mil       3432mil       4779mil       3432mil       4779mil       3402mil  T         90.00 130            
+R1_CTL15   0603_072205         5856.5mil       3432mil     5856.5mil       3432mil     5856.5mil       3402mil  T         90.00 130            
+R1_CTL16   0603_072205           6934mil       3432mil       6934mil       3432mil       6934mil       3402mil  T         90.00 130            
+R1_CTL17   0603_072205         8011.5mil       3432mil     8011.5mil       3432mil     8011.5mil       3402mil  T         90.00 130            
+R1_CTL18   0603_072205           9089mil       3432mil       9089mil       3432mil       9089mil       3402mil  T         90.00 130            
+R1_CTL19   0603_072205            469mil       2932mil        469mil       2932mil        469mil       2902mil  T         90.00 130            
+R1_CTL20   0603_072205         1546.5mil       2932mil     1546.5mil       2932mil     1546.5mil       2902mil  T         90.00 130            
+R1_CTL21   0603_072205           2624mil       2932mil       2624mil       2932mil       2624mil       2902mil  T         90.00 130            
+R1_CTL22   0603_072205         3701.5mil       2932mil     3701.5mil       2932mil     3701.5mil       2902mil  T         90.00 130            
+R1_CTL23   0603_072205           4779mil       2932mil       4779mil       2932mil       4779mil       2902mil  T         90.00 130            
+R1_CTL24   0603_072205         5856.5mil       2932mil     5856.5mil       2932mil     5856.5mil       2902mil  T         90.00 130            
+R1_CTL25   0603_072205           6934mil       2932mil       6934mil       2932mil       6934mil       2902mil  T         90.00 130            
+R1_CTL26   0603_072205         8011.5mil       2932mil     8011.5mil       2932mil     8011.5mil       2902mil  T         90.00 130            
+R1_CTL27   0603_072205           9089mil       2932mil       9089mil       2932mil       9089mil       2902mil  T         90.00 130            
+R1_CTL28   0603_072205            469mil       2432mil        469mil       2432mil        469mil       2402mil  T         90.00 130            
+R1_CTL29   0603_072205         1546.5mil       2432mil     1546.5mil       2432mil     1546.5mil       2402mil  T         90.00 130            
+R1_CTL30   0603_072205           2624mil       2432mil       2624mil       2432mil       2624mil       2402mil  T         90.00 130            
+R1_CTL31   0603_072205         3701.5mil       2432mil     3701.5mil       2432mil     3701.5mil       2402mil  T         90.00 130            
+R1_CTL32   0603_072205           4779mil       2432mil       4779mil       2432mil       4779mil       2402mil  T         90.00 130            
+R1_CTL33   0603_072205         5856.5mil       2432mil     5856.5mil       2432mil     5856.5mil       2402mil  T         90.00 130            
+R1_CTL34   0603_072205           6934mil       2432mil       6934mil       2432mil       6934mil       2402mil  T         90.00 130            
+R1_CTL35   0603_072205         8011.5mil       2432mil     8011.5mil       2432mil     8011.5mil       2402mil  T         90.00 130            
+R1_CTL36   0603_072205           9089mil       2432mil       9089mil       2432mil       9089mil       2402mil  T         90.00 130            
+R1_CTL37   0603_072205            469mil       1932mil        469mil       1932mil        469mil       1902mil  T         90.00 130            
+R1_CTL38   0603_072205         1546.5mil       1932mil     1546.5mil       1932mil     1546.5mil       1902mil  T         90.00 130            
+R1_CTL39   0603_072205           2624mil       1932mil       2624mil       1932mil       2624mil       1902mil  T         90.00 130            
+R1_CTL40   0603_072205         3701.5mil       1932mil     3701.5mil       1932mil     3701.5mil       1902mil  T         90.00 130            
+R1_CTL41   0603_072205           4779mil       1932mil       4779mil       1932mil       4779mil       1902mil  T         90.00 130            
+R1_CTL42   0603_072205         5856.5mil       1932mil     5856.5mil       1932mil     5856.5mil       1902mil  T         90.00 130            
+R1_CTL43   0603_072205           6934mil       1932mil       6934mil       1932mil       6934mil       1902mil  T         90.00 130            
+R1_CTL44   0603_072205         8011.5mil       1932mil     8011.5mil       1932mil     8011.5mil       1902mil  T         90.00 130            
+R1_CTL45   0603_072205           9089mil       1932mil       9089mil       1932mil       9089mil       1902mil  T         90.00 130            
+R1_CTL46   0603_072205            469mil       1432mil        469mil       1432mil        469mil       1402mil  T         90.00 130            
+R1_CTL47   0603_072205         1546.5mil       1432mil     1546.5mil       1432mil     1546.5mil       1402mil  T         90.00 130            
+R1_CTL48   0603_072205           2624mil       1432mil       2624mil       1432mil       2624mil       1402mil  T         90.00 130            
+R1_CTL49   0603_072205         3701.5mil       1432mil     3701.5mil       1432mil     3701.5mil       1402mil  T         90.00 130            
+R1_CTL50   0603_072205           4779mil       1432mil       4779mil       1432mil       4779mil       1402mil  T         90.00 130            
+R1_CTL51   0603_072205         5856.5mil       1432mil     5856.5mil       1432mil     5856.5mil       1402mil  T         90.00 130            
+R1_CTL52   0603_072205           6934mil       1432mil       6934mil       1432mil       6934mil       1402mil  T         90.00 130            
+R1_CTL53   0603_072205         8011.5mil       1432mil     8011.5mil       1432mil     8011.5mil       1402mil  T         90.00 130            
+R1_CTL54   0603_072205           9089mil       1432mil       9089mil       1432mil       9089mil       1402mil  T         90.00 130            
+R2_CTL1    0603_072205            544mil       3932mil        544mil       3932mil        544mil       3902mil  T         90.00 130            
+R2_CTL2    0603_072205         1621.5mil       3932mil     1621.5mil       3932mil     1621.5mil       3902mil  T         90.00 130            
+R2_CTL3    0603_072205           2699mil       3932mil       2699mil       3932mil       2699mil       3902mil  T         90.00 130            
+R2_CTL4    0603_072205         3776.5mil       3932mil     3776.5mil       3932mil     3776.5mil       3902mil  T         90.00 130            
+R2_CTL5    0603_072205           4854mil       3932mil       4854mil       3932mil       4854mil       3902mil  T         90.00 130            
+R2_CTL6    0603_072205         5931.5mil       3932mil     5931.5mil       3932mil     5931.5mil       3902mil  T         90.00 130            
+R2_CTL7    0603_072205           7009mil       3932mil       7009mil       3932mil       7009mil       3902mil  T         90.00 130            
+R2_CTL8    0603_072205         8086.5mil       3932mil     8086.5mil       3932mil     8086.5mil       3902mil  T         90.00 130            
+R2_CTL9    0603_072205           9164mil       3932mil       9164mil       3932mil       9164mil       3902mil  T         90.00 130            
+R2_CTL10   0603_072205            544mil       3432mil        544mil       3432mil        544mil       3402mil  T         90.00 130            
+R2_CTL11   0603_072205         1621.5mil       3432mil     1621.5mil       3432mil     1621.5mil       3402mil  T         90.00 130            
+R2_CTL12   0603_072205           2699mil       3432mil       2699mil       3432mil       2699mil       3402mil  T         90.00 130            
+R2_CTL13   0603_072205         3776.5mil       3432mil     3776.5mil       3432mil     3776.5mil       3402mil  T         90.00 130            
+R2_CTL14   0603_072205           4854mil       3432mil       4854mil       3432mil       4854mil       3402mil  T         90.00 130            
+R2_CTL15   0603_072205         5931.5mil       3432mil     5931.5mil       3432mil     5931.5mil       3402mil  T         90.00 130            
+R2_CTL16   0603_072205           7009mil       3432mil       7009mil       3432mil       7009mil       3402mil  T         90.00 130            
+R2_CTL17   0603_072205         8086.5mil       3432mil     8086.5mil       3432mil     8086.5mil       3402mil  T         90.00 130            
+R2_CTL18   0603_072205           9164mil       3432mil       9164mil       3432mil       9164mil       3402mil  T         90.00 130            
+R2_CTL19   0603_072205            544mil       2932mil        544mil       2932mil        544mil       2902mil  T         90.00 130            
+R2_CTL20   0603_072205         1621.5mil       2932mil     1621.5mil       2932mil     1621.5mil       2902mil  T         90.00 130            
+R2_CTL21   0603_072205           2699mil       2932mil       2699mil       2932mil       2699mil       2902mil  T         90.00 130            
+R2_CTL22   0603_072205         3776.5mil       2932mil     3776.5mil       2932mil     3776.5mil       2902mil  T         90.00 130            
+R2_CTL23   0603_072205           4854mil       2932mil       4854mil       2932mil       4854mil       2902mil  T         90.00 130            
+R2_CTL24   0603_072205         5931.5mil       2932mil     5931.5mil       2932mil     5931.5mil       2902mil  T         90.00 130            
+R2_CTL25   0603_072205           7009mil       2932mil       7009mil       2932mil       7009mil       2902mil  T         90.00 130            
+R2_CTL26   0603_072205         8086.5mil       2932mil     8086.5mil       2932mil     8086.5mil       2902mil  T         90.00 130            
+R2_CTL27   0603_072205           9164mil       2932mil       9164mil       2932mil       9164mil       2902mil  T         90.00 130            
+R2_CTL28   0603_072205            544mil       2432mil        544mil       2432mil        544mil       2402mil  T         90.00 130            
+R2_CTL29   0603_072205         1621.5mil       2432mil     1621.5mil       2432mil     1621.5mil       2402mil  T         90.00 130            
+R2_CTL30   0603_072205           2699mil       2432mil       2699mil       2432mil       2699mil       2402mil  T         90.00 130            
+R2_CTL31   0603_072205         3776.5mil       2432mil     3776.5mil       2432mil     3776.5mil       2402mil  T         90.00 130            
+R2_CTL32   0603_072205           4854mil       2432mil       4854mil       2432mil       4854mil       2402mil  T         90.00 130            
+R2_CTL33   0603_072205         5931.5mil       2432mil     5931.5mil       2432mil     5931.5mil       2402mil  T         90.00 130            
+R2_CTL34   0603_072205           7009mil       2432mil       7009mil       2432mil       7009mil       2402mil  T         90.00 130            
+R2_CTL35   0603_072205         8086.5mil       2432mil     8086.5mil       2432mil     8086.5mil       2402mil  T         90.00 130            
+R2_CTL36   0603_072205           9164mil       2432mil       9164mil       2432mil       9164mil       2402mil  T         90.00 130            
+R2_CTL37   0603_072205            544mil       1932mil        544mil       1932mil        544mil       1902mil  T         90.00 130            
+R2_CTL38   0603_072205         1621.5mil       1932mil     1621.5mil       1932mil     1621.5mil       1902mil  T         90.00 130            
+R2_CTL39   0603_072205           2699mil       1932mil       2699mil       1932mil       2699mil       1902mil  T         90.00 130            
+R2_CTL40   0603_072205         3776.5mil       1932mil     3776.5mil       1932mil     3776.5mil       1902mil  T         90.00 130            
+R2_CTL41   0603_072205           4854mil       1932mil       4854mil       1932mil       4854mil       1902mil  T         90.00 130            
+R2_CTL42   0603_072205         5931.5mil       1932mil     5931.5mil       1932mil     5931.5mil       1902mil  T         90.00 130            
+R2_CTL43   0603_072205           7009mil       1932mil       7009mil       1932mil       7009mil       1902mil  T         90.00 130            
+R2_CTL44   0603_072205         8086.5mil       1932mil     8086.5mil       1932mil     8086.5mil       1902mil  T         90.00 130            
+R2_CTL45   0603_072205           9164mil       1932mil       9164mil       1932mil       9164mil       1902mil  T         90.00 130            
+R2_CTL46   0603_072205            544mil       1432mil        544mil       1432mil        544mil       1402mil  T         90.00 130            
+R2_CTL47   0603_072205         1621.5mil       1432mil     1621.5mil       1432mil     1621.5mil       1402mil  T         90.00 130            
+R2_CTL48   0603_072205           2699mil       1432mil       2699mil       1432mil       2699mil       1402mil  T         90.00 130            
+R2_CTL49   0603_072205         3776.5mil       1432mil     3776.5mil       1432mil     3776.5mil       1402mil  T         90.00 130            
+R2_CTL50   0603_072205           4854mil       1432mil       4854mil       1432mil       4854mil       1402mil  T         90.00 130            
+R2_CTL51   0603_072205         5931.5mil       1432mil     5931.5mil       1432mil     5931.5mil       1402mil  T         90.00 130            
+R2_CTL52   0603_072205           7009mil       1432mil       7009mil       1432mil       7009mil       1402mil  T         90.00 130            
+R2_CTL53   0603_072205         8086.5mil       1432mil     8086.5mil       1432mil     8086.5mil       1402mil  T         90.00 130            
+R2_CTL54   0603_072205           9164mil       1432mil       9164mil       1432mil       9164mil       1402mil  T         90.00 130            
+R3_CTL1    0603_072205            824mil       3772mil        824mil       3772mil        794mil       3772mil  T        360.00 1K             
+R3_CTL2    0603_072205         1901.5mil       3772mil     1901.5mil       3772mil     1871.5mil       3772mil  T        360.00 1K             
+R3_CTL3    0603_072205           2979mil       3772mil       2979mil       3772mil       2949mil       3772mil  T        360.00 1K             
+R3_CTL4    0603_072205         4056.5mil       3772mil     4056.5mil       3772mil     4026.5mil       3772mil  T        360.00 1K             
+R3_CTL5    0603_072205           5134mil       3772mil       5134mil       3772mil       5104mil       3772mil  T        360.00 1K             
+R3_CTL6    0603_072205         6211.5mil       3772mil     6211.5mil       3772mil     6181.5mil       3772mil  T        360.00 1K             
+R3_CTL7    0603_072205           7289mil       3772mil       7289mil       3772mil       7259mil       3772mil  T        360.00 1K             
+R3_CTL8    0603_072205         8366.5mil       3772mil     8366.5mil       3772mil     8336.5mil       3772mil  T        360.00 1K             
+R3_CTL9    0603_072205           9444mil       3772mil       9444mil       3772mil       9414mil       3772mil  T        360.00 1K             
+R3_CTL10   0603_072205            824mil       3272mil        824mil       3272mil        794mil       3272mil  T        360.00 1K             
+R3_CTL11   0603_072205         1901.5mil       3272mil     1901.5mil       3272mil     1871.5mil       3272mil  T        360.00 1K             
+R3_CTL12   0603_072205           2979mil       3272mil       2979mil       3272mil       2949mil       3272mil  T        360.00 1K             
+R3_CTL13   0603_072205         4056.5mil       3272mil     4056.5mil       3272mil     4026.5mil       3272mil  T        360.00 1K             
+R3_CTL14   0603_072205           5134mil       3272mil       5134mil       3272mil       5104mil       3272mil  T        360.00 1K             
+R3_CTL15   0603_072205         6211.5mil       3272mil     6211.5mil       3272mil     6181.5mil       3272mil  T        360.00 1K             
+R3_CTL16   0603_072205           7289mil       3272mil       7289mil       3272mil       7259mil       3272mil  T        360.00 1K             
+R3_CTL17   0603_072205         8366.5mil       3272mil     8366.5mil       3272mil     8336.5mil       3272mil  T        360.00 1K             
+R3_CTL18   0603_072205           9444mil       3272mil       9444mil       3272mil       9414mil       3272mil  T        360.00 1K             
+R3_CTL19   0603_072205            824mil       2772mil        824mil       2772mil        794mil       2772mil  T        360.00 1K             
+R3_CTL20   0603_072205         1901.5mil       2772mil     1901.5mil       2772mil     1871.5mil       2772mil  T        360.00 1K             
+R3_CTL21   0603_072205           2979mil       2772mil       2979mil       2772mil       2949mil       2772mil  T        360.00 1K             
+R3_CTL22   0603_072205         4056.5mil       2772mil     4056.5mil       2772mil     4026.5mil       2772mil  T        360.00 1K             
+R3_CTL23   0603_072205           5134mil       2772mil       5134mil       2772mil       5104mil       2772mil  T        360.00 1K             
+R3_CTL24   0603_072205         6211.5mil       2772mil     6211.5mil       2772mil     6181.5mil       2772mil  T        360.00 1K             
+R3_CTL25   0603_072205           7289mil       2772mil       7289mil       2772mil       7259mil       2772mil  T        360.00 1K             
+R3_CTL26   0603_072205         8366.5mil       2772mil     8366.5mil       2772mil     8336.5mil       2772mil  T        360.00 1K             
+R3_CTL27   0603_072205           9444mil       2772mil       9444mil       2772mil       9414mil       2772mil  T        360.00 1K             
+R3_CTL28   0603_072205            824mil       2272mil        824mil       2272mil        794mil       2272mil  T        360.00 1K             
+R3_CTL29   0603_072205         1901.5mil       2272mil     1901.5mil       2272mil     1871.5mil       2272mil  T        360.00 1K             
+R3_CTL30   0603_072205           2979mil       2272mil       2979mil       2272mil       2949mil       2272mil  T        360.00 1K             
+R3_CTL31   0603_072205         4056.5mil       2272mil     4056.5mil       2272mil     4026.5mil       2272mil  T        360.00 1K             
+R3_CTL32   0603_072205           5134mil       2272mil       5134mil       2272mil       5104mil       2272mil  T        360.00 1K             
+R3_CTL33   0603_072205         6211.5mil       2272mil     6211.5mil       2272mil     6181.5mil       2272mil  T        360.00 1K             
+R3_CTL34   0603_072205           7289mil       2272mil       7289mil       2272mil       7259mil       2272mil  T        360.00 1K             
+R3_CTL35   0603_072205         8366.5mil       2272mil     8366.5mil       2272mil     8336.5mil       2272mil  T        360.00 1K             
+R3_CTL36   0603_072205           9444mil       2272mil       9444mil       2272mil       9414mil       2272mil  T        360.00 1K             
+R3_CTL37   0603_072205            824mil       1772mil        824mil       1772mil        794mil       1772mil  T        360.00 1K             
+R3_CTL38   0603_072205         1901.5mil       1772mil     1901.5mil       1772mil     1871.5mil       1772mil  T        360.00 1K             
+R3_CTL39   0603_072205           2979mil       1772mil       2979mil       1772mil       2949mil       1772mil  T        360.00 1K             
+R3_CTL40   0603_072205         4056.5mil       1772mil     4056.5mil       1772mil     4026.5mil       1772mil  T        360.00 1K             
+R3_CTL41   0603_072205           5134mil       1772mil       5134mil       1772mil       5104mil       1772mil  T        360.00 1K             
+R3_CTL42   0603_072205         6211.5mil       1772mil     6211.5mil       1772mil     6181.5mil       1772mil  T        360.00 1K             
+R3_CTL43   0603_072205           7289mil       1772mil       7289mil       1772mil       7259mil       1772mil  T        360.00 1K             
+R3_CTL44   0603_072205         8366.5mil       1772mil     8366.5mil       1772mil     8336.5mil       1772mil  T        360.00 1K             
+R3_CTL45   0603_072205           9444mil       1772mil       9444mil       1772mil       9414mil       1772mil  T        360.00 1K             
+R3_CTL46   0603_072205            824mil       1272mil        824mil       1272mil        794mil       1272mil  T        360.00 1K             
+R3_CTL47   0603_072205         1901.5mil       1272mil     1901.5mil       1272mil     1871.5mil       1272mil  T        360.00 1K             
+R3_CTL48   0603_072205           2979mil       1272mil       2979mil       1272mil       2949mil       1272mil  T        360.00 1K             
+R3_CTL49   0603_072205         4056.5mil       1272mil     4056.5mil       1272mil     4026.5mil       1272mil  T        360.00 1K             
+R3_CTL50   0603_072205           5134mil       1272mil       5134mil       1272mil       5104mil       1272mil  T        360.00 1K             
+R3_CTL51   0603_072205         6211.5mil       1272mil     6211.5mil       1272mil     6181.5mil       1272mil  T        360.00 1K             
+R3_CTL52   0603_072205           7289mil       1272mil       7289mil       1272mil       7259mil       1272mil  T        360.00 1K             
+R3_CTL53   0603_072205         8366.5mil       1272mil     8366.5mil       1272mil     8336.5mil       1272mil  T        360.00 1K             
+R3_CTL54   0603_072205           9444mil       1272mil       9444mil       1272mil       9414mil       1272mil  T        360.00 1K             
+R4_CTL1    0603_072205            829mil       4047mil        829mil       4047mil        859mil       4047mil  T        180.00 1K             
+R4_CTL2    0603_072205         1906.5mil       4047mil     1906.5mil       4047mil     1936.5mil       4047mil  T        180.00 1K             
+R4_CTL3    0603_072205           2984mil       4047mil       2984mil       4047mil       3014mil       4047mil  T        180.00 1K             
+R4_CTL4    0603_072205         4061.5mil       4047mil     4061.5mil       4047mil     4091.5mil       4047mil  T        180.00 1K             
+R4_CTL5    0603_072205           5139mil       4047mil       5139mil       4047mil       5169mil       4047mil  T        180.00 1K             
+R4_CTL6    0603_072205         6216.5mil       4047mil     6216.5mil       4047mil     6246.5mil       4047mil  T        180.00 1K             
+R4_CTL7    0603_072205           7294mil       4047mil       7294mil       4047mil       7324mil       4047mil  T        180.00 1K             
+R4_CTL8    0603_072205         8371.5mil       4047mil     8371.5mil       4047mil     8401.5mil       4047mil  T        180.00 1K             
+R4_CTL9    0603_072205           9449mil       4047mil       9449mil       4047mil       9479mil       4047mil  T        180.00 1K             
+R4_CTL10   0603_072205            829mil       3547mil        829mil       3547mil        859mil       3547mil  T        180.00 1K             
+R4_CTL11   0603_072205         1906.5mil       3547mil     1906.5mil       3547mil     1936.5mil       3547mil  T        180.00 1K             
+R4_CTL12   0603_072205           2984mil       3547mil       2984mil       3547mil       3014mil       3547mil  T        180.00 1K             
+R4_CTL13   0603_072205         4061.5mil       3547mil     4061.5mil       3547mil     4091.5mil       3547mil  T        180.00 1K             
+R4_CTL14   0603_072205           5139mil       3547mil       5139mil       3547mil       5169mil       3547mil  T        180.00 1K             
+R4_CTL15   0603_072205         6216.5mil       3547mil     6216.5mil       3547mil     6246.5mil       3547mil  T        180.00 1K             
+R4_CTL16   0603_072205           7294mil       3547mil       7294mil       3547mil       7324mil       3547mil  T        180.00 1K             
+R4_CTL17   0603_072205         8371.5mil       3547mil     8371.5mil       3547mil     8401.5mil       3547mil  T        180.00 1K             
+R4_CTL18   0603_072205           9449mil       3547mil       9449mil       3547mil       9479mil       3547mil  T        180.00 1K             
+R4_CTL19   0603_072205            829mil       3047mil        829mil       3047mil        859mil       3047mil  T        180.00 1K             
+R4_CTL20   0603_072205         1906.5mil       3047mil     1906.5mil       3047mil     1936.5mil       3047mil  T        180.00 1K             
+R4_CTL21   0603_072205           2984mil       3047mil       2984mil       3047mil       3014mil       3047mil  T        180.00 1K             
+R4_CTL22   0603_072205         4061.5mil       3047mil     4061.5mil       3047mil     4091.5mil       3047mil  T        180.00 1K             
+R4_CTL23   0603_072205           5139mil       3047mil       5139mil       3047mil       5169mil       3047mil  T        180.00 1K             
+R4_CTL24   0603_072205         6216.5mil       3047mil     6216.5mil       3047mil     6246.5mil       3047mil  T        180.00 1K             
+R4_CTL25   0603_072205           7294mil       3047mil       7294mil       3047mil       7324mil       3047mil  T        180.00 1K             
+R4_CTL26   0603_072205         8371.5mil       3047mil     8371.5mil       3047mil     8401.5mil       3047mil  T        180.00 1K             
+R4_CTL27   0603_072205           9449mil       3047mil       9449mil       3047mil       9479mil       3047mil  T        180.00 1K             
+R4_CTL28   0603_072205            829mil       2547mil        829mil       2547mil        859mil       2547mil  T        180.00 1K             
+R4_CTL29   0603_072205         1906.5mil       2547mil     1906.5mil       2547mil     1936.5mil       2547mil  T        180.00 1K             
+R4_CTL30   0603_072205           2984mil       2547mil       2984mil       2547mil       3014mil       2547mil  T        180.00 1K             
+R4_CTL31   0603_072205         4061.5mil       2547mil     4061.5mil       2547mil     4091.5mil       2547mil  T        180.00 1K             
+R4_CTL32   0603_072205           5139mil       2547mil       5139mil       2547mil       5169mil       2547mil  T        180.00 1K             
+R4_CTL33   0603_072205         6216.5mil       2547mil     6216.5mil       2547mil     6246.5mil       2547mil  T        180.00 1K             
+R4_CTL34   0603_072205           7294mil       2547mil       7294mil       2547mil       7324mil       2547mil  T        180.00 1K             
+R4_CTL35   0603_072205         8371.5mil       2547mil     8371.5mil       2547mil     8401.5mil       2547mil  T        180.00 1K             
+R4_CTL36   0603_072205           9449mil       2547mil       9449mil       2547mil       9479mil       2547mil  T        180.00 1K             
+R4_CTL37   0603_072205            829mil       2047mil        829mil       2047mil        859mil       2047mil  T        180.00 1K             
+R4_CTL38   0603_072205         1906.5mil       2047mil     1906.5mil       2047mil     1936.5mil       2047mil  T        180.00 1K             
+R4_CTL39   0603_072205           2984mil       2047mil       2984mil       2047mil       3014mil       2047mil  T        180.00 1K             
+R4_CTL40   0603_072205         4061.5mil       2047mil     4061.5mil       2047mil     4091.5mil       2047mil  T        180.00 1K             
+R4_CTL41   0603_072205           5139mil       2047mil       5139mil       2047mil       5169mil       2047mil  T        180.00 1K             
+R4_CTL42   0603_072205         6216.5mil       2047mil     6216.5mil       2047mil     6246.5mil       2047mil  T        180.00 1K             
+R4_CTL43   0603_072205           7294mil       2047mil       7294mil       2047mil       7324mil       2047mil  T        180.00 1K             
+R4_CTL44   0603_072205         8371.5mil       2047mil     8371.5mil       2047mil     8401.5mil       2047mil  T        180.00 1K             
+R4_CTL45   0603_072205           9449mil       2047mil       9449mil       2047mil       9479mil       2047mil  T        180.00 1K             
+R4_CTL46   0603_072205            829mil       1547mil        829mil       1547mil        859mil       1547mil  T        180.00 1K             
+R4_CTL47   0603_072205         1906.5mil       1547mil     1906.5mil       1547mil     1936.5mil       1547mil  T        180.00 1K             
+R4_CTL48   0603_072205           2984mil       1547mil       2984mil       1547mil       3014mil       1547mil  T        180.00 1K             
+R4_CTL49   0603_072205         4061.5mil       1547mil     4061.5mil       1547mil     4091.5mil       1547mil  T        180.00 1K             
+R4_CTL50   0603_072205           5139mil       1547mil       5139mil       1547mil       5169mil       1547mil  T        180.00 1K             
+R4_CTL51   0603_072205         6216.5mil       1547mil     6216.5mil       1547mil     6246.5mil       1547mil  T        180.00 1K             
+R4_CTL52   0603_072205           7294mil       1547mil       7294mil       1547mil       7324mil       1547mil  T        180.00 1K             
+R4_CTL53   0603_072205         8371.5mil       1547mil     8371.5mil       1547mil     8401.5mil       1547mil  T        180.00 1K             
+R4_CTL54   0603_072205           9449mil       1547mil       9449mil       1547mil       9479mil       1547mil  T        180.00 1K             
+U1_CTL1    SOT25_030205        847.75mil     3914.5mil        829mil       3907mil        904mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL2    SOT25_030205       1925.25mil     3914.5mil     1906.5mil       3907mil     1981.5mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL3    SOT25_030205       3002.75mil     3914.5mil       2984mil       3907mil       3059mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL4    SOT25_030205       4080.25mil     3914.5mil     4061.5mil       3907mil     4136.5mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL5    SOT25_030205       5157.75mil     3914.5mil       5139mil       3907mil       5214mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL6    SOT25_030205       6235.25mil     3914.5mil     6216.5mil       3907mil     6291.5mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL7    SOT25_030205       7312.75mil     3914.5mil       7294mil       3907mil       7369mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL8    SOT25_030205       8390.25mil     3914.5mil     8371.5mil       3907mil     8446.5mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL9    SOT25_030205       9467.75mil     3914.5mil       9449mil       3907mil       9524mil       3972mil  T         90.00 74LVC1G66      
+U1_CTL10   SOT25_030205        847.75mil     3414.5mil        829mil       3407mil        904mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL11   SOT25_030205       1925.25mil     3414.5mil     1906.5mil       3407mil     1981.5mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL12   SOT25_030205       3002.75mil     3414.5mil       2984mil       3407mil       3059mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL13   SOT25_030205       4080.25mil     3414.5mil     4061.5mil       3407mil     4136.5mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL14   SOT25_030205       5157.75mil     3414.5mil       5139mil       3407mil       5214mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL15   SOT25_030205       6235.25mil     3414.5mil     6216.5mil       3407mil     6291.5mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL16   SOT25_030205       7312.75mil     3414.5mil       7294mil       3407mil       7369mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL17   SOT25_030205       8390.25mil     3414.5mil     8371.5mil       3407mil     8446.5mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL18   SOT25_030205       9467.75mil     3414.5mil       9449mil       3407mil       9524mil       3472mil  T         90.00 74LVC1G66      
+U1_CTL19   SOT25_030205        847.75mil     2914.5mil        829mil       2907mil        904mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL20   SOT25_030205       1925.25mil     2914.5mil     1906.5mil       2907mil     1981.5mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL21   SOT25_030205       3002.75mil     2914.5mil       2984mil       2907mil       3059mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL22   SOT25_030205       4080.25mil     2914.5mil     4061.5mil       2907mil     4136.5mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL23   SOT25_030205       5157.75mil     2914.5mil       5139mil       2907mil       5214mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL24   SOT25_030205       6235.25mil     2914.5mil     6216.5mil       2907mil     6291.5mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL25   SOT25_030205       7312.75mil     2914.5mil       7294mil       2907mil       7369mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL26   SOT25_030205       8390.25mil     2914.5mil     8371.5mil       2907mil     8446.5mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL27   SOT25_030205       9467.75mil     2914.5mil       9449mil       2907mil       9524mil       2972mil  T         90.00 74LVC1G66      
+U1_CTL28   SOT25_030205        847.75mil     2414.5mil        829mil       2407mil        904mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL29   SOT25_030205       1925.25mil     2414.5mil     1906.5mil       2407mil     1981.5mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL30   SOT25_030205       3002.75mil     2414.5mil       2984mil       2407mil       3059mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL31   SOT25_030205       4080.25mil     2414.5mil     4061.5mil       2407mil     4136.5mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL32   SOT25_030205       5157.75mil     2414.5mil       5139mil       2407mil       5214mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL33   SOT25_030205       6235.25mil     2414.5mil     6216.5mil       2407mil     6291.5mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL34   SOT25_030205       7312.75mil     2414.5mil       7294mil       2407mil       7369mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL35   SOT25_030205       8390.25mil     2414.5mil     8371.5mil       2407mil     8446.5mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL36   SOT25_030205       9467.75mil     2414.5mil       9449mil       2407mil       9524mil       2472mil  T         90.00 74LVC1G66      
+U1_CTL37   SOT25_030205        847.75mil     1914.5mil        829mil       1907mil        904mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL38   SOT25_030205       1925.25mil     1914.5mil     1906.5mil       1907mil     1981.5mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL39   SOT25_030205       3002.75mil     1914.5mil       2984mil       1907mil       3059mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL40   SOT25_030205       4080.25mil     1914.5mil     4061.5mil       1907mil     4136.5mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL41   SOT25_030205       5157.75mil     1914.5mil       5139mil       1907mil       5214mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL42   SOT25_030205       6235.25mil     1914.5mil     6216.5mil       1907mil     6291.5mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL43   SOT25_030205       7312.75mil     1914.5mil       7294mil       1907mil       7369mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL44   SOT25_030205       8390.25mil     1914.5mil     8371.5mil       1907mil     8446.5mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL45   SOT25_030205       9467.75mil     1914.5mil       9449mil       1907mil       9524mil       1972mil  T         90.00 74LVC1G66      
+U1_CTL46   SOT25_030205        847.75mil     1414.5mil        829mil       1407mil        904mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL47   SOT25_030205       1925.25mil     1414.5mil     1906.5mil       1407mil     1981.5mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL48   SOT25_030205       3002.75mil     1414.5mil       2984mil       1407mil       3059mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL49   SOT25_030205       4080.25mil     1414.5mil     4061.5mil       1407mil     4136.5mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL50   SOT25_030205       5157.75mil     1414.5mil       5139mil       1407mil       5214mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL51   SOT25_030205       6235.25mil     1414.5mil     6216.5mil       1407mil     6291.5mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL52   SOT25_030205       7312.75mil     1414.5mil       7294mil       1407mil       7369mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL53   SOT25_030205       8390.25mil     1414.5mil     8371.5mil       1407mil     8446.5mil       1472mil  T         90.00 74LVC1G66      
+U1_CTL54   SOT25_030205       9467.75mil     1414.5mil       9449mil       1407mil       9524mil       1472mil  T         90.00 74LVC1G66      
+P21        POWER_JACK_SMT_071312       7034mil        290mil       7034mil        170mil       6809mil        410mil  T        360.00 CON3           
+

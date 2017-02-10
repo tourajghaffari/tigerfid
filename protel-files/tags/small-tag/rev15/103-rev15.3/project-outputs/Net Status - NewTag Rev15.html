@@ -1,0 +1,441 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body { 
+			font-family : verdana;
+		}
+		td, th {  
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;	
+		}
+		th { 
+			background-color : #A6CAF0;
+		
+		}
+		th.column1, td.column1 { 
+			text-align: left;
+			width : auto; 
+		}
+		table { 
+			width : 100%; 
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3 {
+			padding-top : 0.1em;
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top
+		}
+		.front_matter_column1 {
+			text-align : right;
+		}
+		.total_column1, .total_column {
+			font-weight : bold;	
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.front_matter_column2 {
+			text-align : center;
+		}
+		.front_matter_column3 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow 
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script></head>
+<body onload="document.getElementById('radio_mil').click()"><img ALT="Altium" src="
+			file://C:\PROGRAM FILES\ALTIUM DESIGNER 6\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Net Status Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">5/28/2008</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">9:03:39 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB" class="file"><acronym title="F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB">F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB</acronym></a></td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Units</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">
+<form><input type="radio" name="radio_units" id="radio_mm" onclick="changeUnits(this, 'mm')">mm<input type="radio" name="radio_units" id="radio_mil" onclick="changeUnits(this, 'mil')">mils</form>
+</td>
+</tr>
+</table>
+<hr><a name="IDAVA4UO"><table>
+<tr>
+<th class="column1">Nets</th>
+<th class="column2">Layer</th>
+<th class="column3">Length</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9246.031mil|Location2.X=10501.469mil|Location1.Y=6941.146mil|Location2.Y=8622.501mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9246.031mil|Location2.X=10501.469mil|Location1.Y=6941.146mil|Location2.Y=8622.501mil|Absolute=True">+V1.2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="12111170">1211.117mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9271.531mil|Location2.X=10526.969mil|Location1.Y=6743.724mil|Location2.Y=8425.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9271.531mil|Location2.X=10526.969mil|Location1.Y=6743.724mil|Location2.Y=8425.079mil|Absolute=True">3V</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="35865063">3586.506mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9191.6mil|Location2.X=10447.038mil|Location1.Y=7012.345mil|Location2.Y=8693.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9191.6mil|Location2.X=10447.038mil|Location1.Y=7012.345mil|Location2.Y=8693.7mil|Absolute=True">ENABLE_RCVR</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6129850">612.985mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9178.304mil|Location2.X=10433.743mil|Location1.Y=6743.724mil|Location2.Y=8425.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9178.304mil|Location2.X=10433.743mil|Location1.Y=6743.724mil|Location2.Y=8425.079mil|Absolute=True">GND</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="31525191">3152.519mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9404.714mil|Location2.X=10660.152mil|Location1.Y=6781.618mil|Location2.Y=8462.972mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9404.714mil|Location2.X=10660.152mil|Location1.Y=6781.618mil|Location2.Y=8462.972mil|Absolute=True">I2CSCL</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="13515559">1351.556mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9371.918mil|Location2.X=10627.357mil|Location1.Y=6799.323mil|Location2.Y=8480.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9371.918mil|Location2.X=10627.357mil|Location1.Y=6799.323mil|Location2.Y=8480.677mil|Absolute=True">I2CSDA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="10612768">1061.277mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9248.737mil|Location2.X=10504.176mil|Location1.Y=7115.323mil|Location2.Y=8796.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9248.737mil|Location2.X=10504.176mil|Location1.Y=7115.323mil|Location2.Y=8796.677mil|Absolute=True">LED OUT</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8803.281mil|Location2.X=10058.719mil|Location1.Y=6913.823mil|Location2.Y=8595.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8803.281mil|Location2.X=10058.719mil|Location1.Y=6913.823mil|Location2.Y=8595.177mil|Absolute=True">NetC10_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5754273">575.427mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9120.281mil|Location2.X=10375.719mil|Location1.Y=6707.823mil|Location2.Y=8389.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9120.281mil|Location2.X=10375.719mil|Location1.Y=6707.823mil|Location2.Y=8389.177mil|Absolute=True">NetC11_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="827817">82.782mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9054.69mil|Location2.X=10310.129mil|Location1.Y=6300.913mil|Location2.Y=7982.267mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9054.69mil|Location2.X=10310.129mil|Location1.Y=6300.913mil|Location2.Y=7982.267mil|Absolute=True">NetC12_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1641421">164.142mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8821.781mil|Location2.X=10077.219mil|Location1.Y=6915.323mil|Location2.Y=8596.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8821.781mil|Location2.X=10077.219mil|Location1.Y=6915.323mil|Location2.Y=8596.677mil|Absolute=True">NetC13_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="26301029">2630.103mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9210.281mil|Location2.X=10465.719mil|Location1.Y=6660.323mil|Location2.Y=8341.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9210.281mil|Location2.X=10465.719mil|Location1.Y=6660.323mil|Location2.Y=8341.677mil|Absolute=True">NetC14_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1980122">198.012mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9344.021mil|Location2.X=10599.459mil|Location1.Y=6697.323mil|Location2.Y=8378.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9344.021mil|Location2.X=10599.459mil|Location1.Y=6697.323mil|Location2.Y=8378.677mil|Absolute=True">NetC17_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9128978">912.898mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9533.58mil|Location2.X=10789.019mil|Location1.Y=6946.527mil|Location2.Y=8627.882mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9533.58mil|Location2.X=10789.019mil|Location1.Y=6946.527mil|Location2.Y=8627.882mil|Absolute=True">NetC26_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1735685">173.569mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9452.686mil|Location2.X=10708.125mil|Location1.Y=7097.618mil|Location2.Y=8778.972mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9452.686mil|Location2.X=10708.125mil|Location1.Y=7097.618mil|Location2.Y=8778.972mil|Absolute=True">NetC27_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2311556">231.156mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8792.486mil|Location2.X=10047.924mil|Location1.Y=6328.118mil|Location2.Y=8009.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8792.486mil|Location2.X=10047.924mil|Location1.Y=6328.118mil|Location2.Y=8009.472mil|Absolute=True">NetC2_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2345205">234.521mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8778.686mil|Location2.X=10034.125mil|Location1.Y=6392.917mil|Location2.Y=8074.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8778.686mil|Location2.X=10034.125mil|Location1.Y=6392.917mil|Location2.Y=8074.272mil|Absolute=True">NetC2_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2632964">263.296mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8822.123mil|Location2.X=10077.562mil|Location1.Y=6802.232mil|Location2.Y=8483.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8822.123mil|Location2.X=10077.562mil|Location1.Y=6802.232mil|Location2.Y=8483.587mil|Absolute=True">NetC3_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1090000">109mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8931.781mil|Location2.X=10187.219mil|Location1.Y=6787.823mil|Location2.Y=8469.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8931.781mil|Location2.X=10187.219mil|Location1.Y=6787.823mil|Location2.Y=8469.177mil|Absolute=True">NetC3_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5055218">505.522mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8762.781mil|Location2.X=10018.219mil|Location1.Y=6508.291mil|Location2.Y=8189.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8762.781mil|Location2.X=10018.219mil|Location1.Y=6508.291mil|Location2.Y=8189.646mil|Absolute=True">NetC6_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1234853">123.485mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8956.281mil|Location2.X=10211.719mil|Location1.Y=6948.323mil|Location2.Y=8629.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8956.281mil|Location2.X=10211.719mil|Location1.Y=6948.323mil|Location2.Y=8629.677mil|Absolute=True">NetC7_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1680000">168mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8911.06mil|Location2.X=10166.499mil|Location1.Y=6396.823mil|Location2.Y=8078.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8911.06mil|Location2.X=10166.499mil|Location1.Y=6396.823mil|Location2.Y=8078.177mil|Absolute=True">NetC8_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1194702">119.47mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9027.686mil|Location2.X=10283.125mil|Location1.Y=6419.791mil|Location2.Y=8101.146mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9027.686mil|Location2.X=10283.125mil|Location1.Y=6419.791mil|Location2.Y=8101.146mil|Absolute=True">NetC8_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1470914">147.091mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8860.281mil|Location2.X=10115.719mil|Location1.Y=6985.823mil|Location2.Y=8667.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8860.281mil|Location2.X=10115.719mil|Location1.Y=6985.823mil|Location2.Y=8667.177mil|Absolute=True">NetC9_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7432958">743.296mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8867.781mil|Location2.X=10123.219mil|Location1.Y=6545.823mil|Location2.Y=8227.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8867.781mil|Location2.X=10123.219mil|Location1.Y=6545.823mil|Location2.Y=8227.177mil|Absolute=True">NetQ3_D</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3960663">396.066mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9346.43mil|Location2.X=10601.869mil|Location1.Y=6685.834mil|Location2.Y=8367.189mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9346.43mil|Location2.X=10601.869mil|Location1.Y=6685.834mil|Location2.Y=8367.189mil|Absolute=True">NetR18_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1876015">187.602mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9550.43mil|Location2.X=10805.869mil|Location1.Y=6679.311mil|Location2.Y=8360.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9550.43mil|Location2.X=10805.869mil|Location1.Y=6679.311mil|Location2.Y=8360.665mil|Absolute=True">NetR19_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2135494">213.549mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9468.43mil|Location2.X=10723.869mil|Location1.Y=6690.323mil|Location2.Y=8371.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9468.43mil|Location2.X=10723.869mil|Location1.Y=6690.323mil|Location2.Y=8371.677mil|Absolute=True">NetR21_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3651699">365.17mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9418.69mil|Location2.X=10674.129mil|Location1.Y=7019.823mil|Location2.Y=8701.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9418.69mil|Location2.X=10674.129mil|Location1.Y=7019.823mil|Location2.Y=8701.177mil|Absolute=True">NetR23_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2961050">296.105mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8909.781mil|Location2.X=10165.219mil|Location1.Y=6509.823mil|Location2.Y=8191.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8909.781mil|Location2.X=10165.219mil|Location1.Y=6509.823mil|Location2.Y=8191.177mil|Absolute=True">NetR7_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1224856">122.486mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9396.938mil|Location2.X=10652.377mil|Location1.Y=6996.122mil|Location2.Y=8677.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9396.938mil|Location2.X=10652.377mil|Location1.Y=6996.122mil|Location2.Y=8677.477mil|Absolute=True">PANIC SWITCH</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9634278">963.428mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9415.531mil|Location2.X=10670.969mil|Location1.Y=6999.606mil|Location2.Y=8680.961mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9415.531mil|Location2.X=10670.969mil|Location1.Y=6999.606mil|Location2.Y=8680.961mil|Absolute=True">PROG CLK</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6969626">696.963mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9381.623mil|Location2.X=10637.062mil|Location1.Y=6999.606mil|Location2.Y=8680.961mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9381.623mil|Location2.X=10637.062mil|Location1.Y=6999.606mil|Location2.Y=8680.961mil|Absolute=True">PROG DATA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4755771">475.577mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9465.895mil|Location2.X=10721.333mil|Location1.Y=7035.149mil|Location2.Y=8716.504mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9465.895mil|Location2.X=10721.333mil|Location1.Y=7035.149mil|Location2.Y=8716.504mil|Absolute=True">PROG MCLR</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7234708">723.471mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9431.159mil|Location2.X=10686.598mil|Location1.Y=6797.48mil|Location2.Y=8478.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9431.159mil|Location2.X=10686.598mil|Location1.Y=6797.48mil|Location2.Y=8478.835mil|Absolute=True">RX DATA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6089653">608.965mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9248.737mil|Location2.X=10504.176mil|Location1.Y=6808.236mil|Location2.Y=8489.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9248.737mil|Location2.X=10504.176mil|Location1.Y=6808.236mil|Location2.Y=8489.591mil|Absolute=True">SPEAKER OUT</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9274.328mil|Location2.X=10529.766mil|Location1.Y=6808.236mil|Location2.Y=8489.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9274.328mil|Location2.X=10529.766mil|Location1.Y=6808.236mil|Location2.Y=8489.591mil|Absolute=True">TAMPER PWR</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9496.395mil|Location2.X=10751.833mil|Location1.Y=6966.279mil|Location2.Y=8647.634mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9496.395mil|Location2.X=10751.833mil|Location1.Y=6966.279mil|Location2.Y=8647.634mil|Absolute=True">TAMPER SIG</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6659941">665.994mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9171.966mil|Location2.X=10427.404mil|Location1.Y=6808.236mil|Location2.Y=8489.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9171.966mil|Location2.X=10427.404mil|Location1.Y=6808.236mil|Location2.Y=8489.591mil|Absolute=True">TILT SENSOR</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9066.123mil|Location2.X=10321.562mil|Location1.Y=6932.323mil|Location2.Y=8613.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9066.123mil|Location2.X=10321.562mil|Location1.Y=6932.323mil|Location2.Y=8613.677mil|Absolute=True">TX DATA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5271487">527.149mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9269.281mil|Location2.X=10524.719mil|Location1.Y=7147.323mil|Location2.Y=8828.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9269.281mil|Location2.X=10524.719mil|Location1.Y=7147.323mil|Location2.Y=8828.677mil|Absolute=True">VMP</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="810906">81.091mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9318.281mil|Location2.X=10573.719mil|Location1.Y=6973.323mil|Location2.Y=8654.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=9318.281mil|Location2.X=10573.719mil|Location1.Y=6973.323mil|Location2.Y=8654.677mil|Absolute=True">VMS</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5564213">556.421mils
+			</a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

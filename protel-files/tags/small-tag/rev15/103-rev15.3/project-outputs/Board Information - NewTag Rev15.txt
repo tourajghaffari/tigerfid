@@ -1,0 +1,9 @@
+Board Information Report
+Filename     : F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag103 Rev15\Tag103 Rev15v3\NewTag Rev15.PCB
+Date         : 4/30/2008
+Time         : 9:52:25 PM
+Time Elapsed : 00:00:00
+
+Net Track Width, Count
+    6mils, 42
+count : 1

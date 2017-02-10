@@ -1,0 +1,18 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Project [NewTag Rev15.PrjPcb]
+   Generated File[NewTag Rev15.GTL]
+   Generated File[NewTag Rev15.GBL]
+   Generated File[NewTag Rev15.GTO]
+   Generated File[NewTag Rev15.GTP]
+   Generated File[NewTag Rev15.GTS]
+   Generated File[NewTag Rev15.GBS]
+   Generated File[NewTag Rev15.RUL]
+   Generated File[NewTag Rev15.EXTREP]
+   Generated File[NewTag Rev15.REP]
+
+
+Files Generated   : 9
+Documents Printed : 0
+
+Finished Output Generation At 11:18:41 PM On 4/17/2008

@@ -1,0 +1,101 @@
+Added Component: Designator=D1(LED TH_021505)
+Added Component: Designator=D2(LED TH_021505)
+Added Component: Designator=J1(1X5 HEADER_011905)
+Added Component: Designator=J2(JACK POWER VPJ-002A-SMT_100307)
+Added Component: Designator=J3(1X5 POGO PIN HEADER)
+Added Component: Designator=J4(CONN BNC A24516-ND_100307)
+Added Component: Designator=J5(CONN SMA_060507)
+Added Component: Designator=J6(1X2 HEADER_022205)
+Added Component: Designator=J7(CONN BNC A24516-ND_100307)
+Added Component: Designator=J8(CONN BNC A24516-ND_100307)
+Added Component: Designator=R1(0805_011905)
+Added Component: Designator=R2(0805_011905)
+Added Component: Designator=SW1(SWITCH M2013SS1W03 VERT_042705)
+Added Component: Designator=SW2(SWITCH M2013SS1W03 VERT_042705)
+Added Component: Designator=SW3(SWITCH M2013SS1W03 VERT_042705)
+Added Component: Designator=TP1(POGO PIN PAD_100307)
+Added Component: Designator=TP2(POGO PIN PAD_100307)
+Added Component: Designator=TP3(TEST POINT PAD 2_100307)
+Added Component: Designator=TP4(POGO PIN PAD_100307)
+Added Component: Designator=TP5(TEST POINT PAD 2_100307)
+Added Component: Designator=TP6(POGO PIN PAD_100307)
+Added Component: Designator=TP7(POGO PIN PAD_100307)
+Added Component: Designator=TP8(POGO PIN PAD_100307)
+Added Component: Designator=TP9(POGO PIN PAD_100307)
+Added Pin To Net: NetName=NetD1_A Pin=D1-A
+Added Pin To Net: NetName=GND Pin=D1-K
+Added Pin To Net: NetName=GND Pin=D2-K
+Added Pin To Net: NetName=GND Pin=J2-3
+Added Pin To Net: NetName=GND Pin=J2-4
+Added Pin To Net: NetName=GND Pin=J4-2
+Added Pin To Net: NetName=GND Pin=J4-3
+Added Pin To Net: NetName=GND Pin=J4-4
+Added Pin To Net: NetName=GND Pin=J4-5
+Added Pin To Net: NetName=GND Pin=J5-2
+Added Pin To Net: NetName=GND Pin=J5-3
+Added Pin To Net: NetName=GND Pin=J5-4
+Added Pin To Net: NetName=GND Pin=J5-5
+Added Pin To Net: NetName=GND Pin=J7-1
+Added Pin To Net: NetName=GND Pin=J7-2
+Added Pin To Net: NetName=GND Pin=J7-3
+Added Pin To Net: NetName=GND Pin=J7-4
+Added Pin To Net: NetName=GND Pin=J7-5
+Added Pin To Net: NetName=GND Pin=J8-1
+Added Pin To Net: NetName=GND Pin=J8-2
+Added Pin To Net: NetName=GND Pin=J8-3
+Added Pin To Net: NetName=GND Pin=J8-4
+Added Pin To Net: NetName=GND Pin=J8-5
+Added Pin To Net: NetName=NetD1_A Pin=R1-1
+Added Pin To Net: NetName=GND Pin=SW2-1
+Added Pin To Net: NetName=GND Pin=TP9-1
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=R2-2
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=SW1-2
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=SW3-1
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=TP6-1
+Added Net: Name=+3.3V SWITCHED
+Added Pin To Net: NetName=+3.3V Pin=J2-1
+Added Pin To Net: NetName=+3.3V Pin=J2-2
+Added Pin To Net: NetName=+3.3V Pin=SW3-2
+Added Net: Name=+3.3V
+Added Pin To Net: NetName=NetD2_A Pin=D2-A
+Added Pin To Net: NetName=NetD2_A Pin=R2-1
+Added Net: Name=NetD2_A
+Added Pin To Net: NetName=NetJ1_1 Pin=J1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=J3-1
+Added Net: Name=NetJ1_1
+Added Pin To Net: NetName=NetJ1_2 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=J3-2
+Added Net: Name=NetJ1_2
+Added Pin To Net: NetName=NetJ1_3 Pin=J1-3
+Added Pin To Net: NetName=NetJ1_3 Pin=J3-3
+Added Net: Name=NetJ1_3
+Added Pin To Net: NetName=NetJ1_4 Pin=J1-4
+Added Pin To Net: NetName=NetJ1_4 Pin=J3-4
+Added Net: Name=NetJ1_4
+Added Pin To Net: NetName=NetJ1_5 Pin=J1-5
+Added Pin To Net: NetName=NetJ1_5 Pin=J3-5
+Added Net: Name=NetJ1_5
+Added Pin To Net: NetName=NetJ4_1 Pin=J4-1
+Added Pin To Net: NetName=NetJ4_1 Pin=SW2-3
+Added Net: Name=NetJ4_1
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-1
+Added Pin To Net: NetName=NetJ5_1 Pin=J6-2
+Added Net: Name=NetJ5_1
+Added Pin To Net: NetName=NetJ6_1 Pin=J6-1
+Added Pin To Net: NetName=NetJ6_1 Pin=TP8-1
+Added Net: Name=NetJ6_1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=SW1-1
+Added Pin To Net: NetName=NetR1_2 Pin=TP1-1
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetSW2_2 Pin=SW2-2
+Added Pin To Net: NetName=NetSW2_2 Pin=TP7-1
+Added Net: Name=NetSW2_2
+Added Pin To Net: NetName=NetTP2_1 Pin=TP2-1
+Added Pin To Net: NetName=NetTP2_1 Pin=TP3-1
+Added Net: Name=NetTP2_1
+Added Pin To Net: NetName=NetTP4_1 Pin=TP4-1
+Added Pin To Net: NetName=NetTP4_1 Pin=TP5-1
+Added Net: Name=NetTP4_1
+Added Class: Name=Tag Test Fixture
+Added Room: Name=Tag Test Fixture

@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Project [Tag105.Rev20.PrjPcb]
+   Generated File[Pick Place for Tag105 Rev20.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 7:17:48 PM On 2/7/2012

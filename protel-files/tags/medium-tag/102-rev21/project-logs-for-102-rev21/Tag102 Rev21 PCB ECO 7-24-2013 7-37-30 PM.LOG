@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=TILT SENSOR Pin=D2-K
+Removed Pin From Net: NetName=GND Pin=D3-A
+Removed Pin From Net: NetName=TILT SENSOR Pin=R26-1
+Removed Pin From Net: NetName=GND Pin=R26-2
+Change Component Footprint: Designator=SW2 Old Footprint=SQ-SEN-200 New Footprint=SQ-SEN-DUAL1
+Change Component Comment : Designator=C25 Old Comment=0.1pF New Comment=22pF
+Change Component Comment : Designator=R25 Old Comment=300K New Comment=1M
+Added Pin To Net: NetName=TILT SENSOR Pin=R25-2
+Added Pin To Net: NetName=TILT SENSOR Pin=SW2-1

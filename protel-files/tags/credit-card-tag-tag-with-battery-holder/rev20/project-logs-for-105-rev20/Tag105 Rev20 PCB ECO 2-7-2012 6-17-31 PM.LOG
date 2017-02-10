@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=SP1 Old Footprint=SMT-1028-S-R New Footprint=SPEAKER 12mmx12mm_011012
+Change Component Comment : Designator=SP1 Old Comment=2,830+/-500 Hz New Comment=4000 Hz
+Added Component: Designator=L4(COIL_6mmx6mm_011012)
+Added Pin To Net: NetName=3V Pin=C5-1
+Added Pin To Net: NetName=NetL4_2 Pin=L4-2
+Added Pin To Net: NetName=NetL4_2 Pin=Q4-D
+Added Net: Name=NetL4_2
+Added Pin To Net: NetName=NetL4_3 Pin=L4-3
+Added Pin To Net: NetName=NetL4_3 Pin=SP1-2
+Added Net: Name=NetL4_3

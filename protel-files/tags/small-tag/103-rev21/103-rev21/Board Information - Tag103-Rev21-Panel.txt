@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\PCBJOBs\ActiveWave2010\Tag103.Rev21\Tag103-Rev21-Panel.PCB
+Date         : 12/21/2010
+Time         : 12:39:57 PM
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, -44
+    Connections routed, -44
+    Connections remaing, 0
+count : 4

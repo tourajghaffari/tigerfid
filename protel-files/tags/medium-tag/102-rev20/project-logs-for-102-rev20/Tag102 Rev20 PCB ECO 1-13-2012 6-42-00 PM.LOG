@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=3V Pin=L1-1
+Added Pin To Net: NetName=SPEAKER OUT Pin=Q5-G
+Added Pin To Net: NetName=GND Pin=Q5-S
+Added Pin To Net: NetName=SPEAKER OUT Pin=R30-1
+Added Pin To Net: NetName=GND Pin=R30-2
+Added Member To Class: ClassName=PG03 SHEET1 Member=Component L1 TRANSFORMER
+Added Member To Class: ClassName=PG03 SHEET1 Member=Component Q5 FDN327N
+Added Member To Class: ClassName=PG03 SHEET1 Member=Component R30 1M

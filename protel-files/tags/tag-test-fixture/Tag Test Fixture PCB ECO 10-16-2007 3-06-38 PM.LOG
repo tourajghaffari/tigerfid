@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=Tag Test Fixture Member=TP5
+Added Pin To Net: NetName=GND Pin=J11-2
+Added Pin To Net: NetName=GND Pin=J11-3
+Added Pin To Net: NetName=GND Pin=J11-4
+Added Pin To Net: NetName=GND Pin=J11-5
+Added Pin To Net: NetName=NetJ11_1 Pin=J11-1
+Added Pin To Net: NetName=NetJ11_1 Pin=TP4-1
+Added Net: Name=NetJ11_1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component J11 BNC

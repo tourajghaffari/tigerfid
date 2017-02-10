@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=GND Pin=SW4-1
+Added Pin To Net: NetName=NetSW4_2 Pin=SW4-2
+Added Pin To Net: NetName=NetSW4_2 Pin=TP13-1
+Added Net: Name=NetSW4_2
+Added Member To Class: ClassName=Tag Test Fixture Member=Component SW4 SWITCH ON/OFF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP13 TP

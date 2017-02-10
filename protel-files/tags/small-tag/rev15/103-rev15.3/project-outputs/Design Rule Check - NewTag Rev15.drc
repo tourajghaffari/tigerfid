@@ -1,0 +1,13 @@
+Protel Design System Design Rule Check
+PCB File : E:\PCB04092008A\Rev15\NewTag Rev15.PCB
+Date     : 4/18/2008
+Time     : 9:29:11 AM
+
+Processing Rule : Broken-Net Constraint ( (All) )
+   Violation between Net NetC3_1 is broken into 5 sub-nets. Routed To 0.00%
+
+Rule Violations :1
+
+
+Violations Detected : 1
+Time Elapsed        : 00:00:00

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=+5V SWITCHED Pin=C13-1
+Removed Pin From Net: NetName=+5V SWITCHED Pin=R18-2
+Added Pin To Net: NetName=NetC13_1 Pin=C13-1
+Added Pin To Net: NetName=NetC13_1 Pin=R18-2
+Added Pin To Net: NetName=NetC13_1 Pin=SW7-1
+Added Net: Name=NetC13_1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component SW7 SWITCH ON/OFF
+Removed Pin From Net: NetName=NetSW2_2 Pin=SW7-2
+Added Pin To Net: NetName=+5V SWITCHED Pin=SW7-2

@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=J6-2
+Added Net: Name=NetC5_2
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C5 ???

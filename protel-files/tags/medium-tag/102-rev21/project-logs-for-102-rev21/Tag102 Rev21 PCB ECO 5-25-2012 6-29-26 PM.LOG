@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=+V1.2 Pin=R14-2
+Removed Pin From Net: NetName=+V1.2 Pin=R19-1
+Removed Pin From Net: NetName=+V1.2 Pin=U2-1
+Removed Pin From Net: NetName=+V1.2 Pin=U5-4
+Removed Pin From Net: NetName=+V1.2 Pin=U5-5
+Change Component Comment : Designator=U5 Old Comment=TC1070 New Comment=MIC5306-2.6YD5 TR
+Added Component: Designator=R27(0603)
+Added Pin To Net: NetName=+2.6V Pin=R14-2
+Added Pin To Net: NetName=+2.6V Pin=R27-1
+Added Pin To Net: NetName=+2.6V Pin=U5-5
+Added Net: Name=+2.6V
+Added Pin To Net: NetName=NetR19_1 Pin=R19-1
+Added Pin To Net: NetName=NetR19_1 Pin=U2-1
+Added Net: Name=NetR19_1

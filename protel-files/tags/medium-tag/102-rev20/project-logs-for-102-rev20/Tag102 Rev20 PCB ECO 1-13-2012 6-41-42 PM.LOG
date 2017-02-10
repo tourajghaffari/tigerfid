@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=3V Pin=L4-1
+Removed Pin From Net: NetName=SPEAKER OUT Pin=Q4-G
+Removed Pin From Net: NetName=GND Pin=Q4-S
+Removed Member From Class: ClassName=PG03 SHEET1 Member=Q4
+Change Component Designator: OldDesignator=R29 NewDesignator=R30
+Added Component: Designator=L1(COIL_6mmx6mm_011012)
+Added Component: Designator=Q5(SOT23 FET)
+Added Pin To Net: NetName=ANT Pin=L4-1
+Added Pin To Net: NetName=NetC2_1 Pin=L4-2
+Added Pin To Net: NetName=NetL1_2 Pin=L1-2
+Added Pin To Net: NetName=NetL1_2 Pin=Q5-D
+Added Net: Name=NetL1_2
+Added Pin To Net: NetName=NetL1_3 Pin=L1-3
+Added Pin To Net: NetName=NetL1_3 Pin=SP1-2
+Added Net: Name=NetL1_3

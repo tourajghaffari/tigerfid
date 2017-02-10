@@ -1,0 +1,6 @@
+DRC Rules Export File for PCB: C:\Protel Files\Tags\Tag Test Fixture\Tag Test Fixture.PCB
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=6.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=8.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit_1|Scope=Board|Allowed=1

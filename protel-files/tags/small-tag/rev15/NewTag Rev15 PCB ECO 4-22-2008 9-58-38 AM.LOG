@@ -1,0 +1,6 @@
+Added Component: Designator=E1(EH_D1650P2300)
+Added Component: Designator=E2(EH_D1650P2300)
+Added Pin To Net: NetName=PANIC SWITCH Pin=E1-1
+Added Pin To Net: NetName=GND Pin=E2-1
+Added Member To Class: ClassName=PAGE1 Member=Component E1 HOLE
+Added Member To Class: ClassName=PAGE1 Member=Component E2 HOLE

@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=C1-2
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Pin From Net: NetName=GND Pin=J7-1
+Removed Pin From Net: NetName=GND Pin=J8-1
+Added Component: Designator=TP10(TEST POINT PAD 2_100307)
+Added Component: Designator=TP11(TEST POINT PAD 2_100307)
+Added Component: Designator=TP12(TEST POINT PAD 2_100307)
+Added Pin To Net: NetName=GND Pin=TP10-1
+Added Pin To Net: NetName=GND Pin=TP11-1
+Added Pin To Net: NetName=GND Pin=TP12-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=J8-1
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=J7-1
+Added Net: Name=NetC2_2
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C1 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C2 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP10 TP
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP11 TP
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP12 TP

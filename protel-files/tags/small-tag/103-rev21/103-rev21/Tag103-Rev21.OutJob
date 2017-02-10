@@ -1,0 +1,77 @@
+[OutputJobFile]
+Version=1.0
+
+[OutputGroup1]
+Name=
+Description=
+TargetOutputMedium=Publish To PDF
+IncludedInRelease=0
+TargetPrinter=HP Officejet 9100 series PCL 5
+PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
+OutputMedium1=Print To HP Officejet 9100 series PCL 5
+OutputMedium1_Type=Printer
+OutputMedium1_Printer=
+OutputMedium1_PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
+OutputMedium2=Publish To PDF
+OutputMedium2_Type=Publish
+OutputMedium3=Publish To Web
+OutputMedium3_Type=PublishToWeb
+OutputMedium4=Generate Files
+OutputMedium4_Type=GeneratedFiles
+OutputType1=PCB Print
+OutputName1=PCB Prints
+OutputDocumentPath1=Tag103-Rev21-Panel.PCB
+OutputVariantName1=
+OutputEnabled1=1
+OutputEnabled1_OutputMedium1=0
+OutputEnabled1_OutputMedium2=1
+OutputEnabled1_OutputMedium3=0
+OutputEnabled1_OutputMedium4=0
+OutputDefault1=0
+PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.42|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-4|MediaType=1|DitherType=10|PaperKind=Letter|PrintScaleMode=1
+Configuration1_Name1=OutputConfigurationParameter1
+Configuration1_Item1=PrintArea=DesignExtent|PrintAreaLowerLeftCornerX=0|PrintAreaLowerLeftCornerY=0|PrintAreaUpperRightCornerX=0|PrintAreaUpperRightCornerY=0|Record=PcbPrintView
+Configuration1_Name2=OutputConfigurationParameter2
+Configuration1_Item2=IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|Index=0|Mirror=False|Name=Multilayer Composite Print|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=False|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False
+Configuration1_Name3=OutputConfigurationParameter3
+Configuration1_Item3=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|DDSymbolKind=0|DDSymbolSize=500000|DDSymbolSortKind=0|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical1|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
+Configuration1_Name4=OutputConfigurationParameter4
+Configuration1_Item4=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|DDSymbolKind=0|DDSymbolSize=500000|DDSymbolSortKind=0|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical3|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
+Configuration1_Name5=OutputConfigurationParameter5
+Configuration1_Item5=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|DDSymbolKind=0|DDSymbolSize=500000|DDSymbolSortKind=0|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical4|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
+Configuration1_Name6=OutputConfigurationParameter6
+Configuration1_Item6=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|DDSymbolKind=0|DDSymbolSize=500000|DDSymbolSortKind=0|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical8|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
+
+[PublishSettings]
+PublishMethod2=0
+OpenOutput2=1
+PromptOverwrite2=1
+ZoomLevel2=50
+FitSCHPrintSizeToDoc2=0
+FitPCBPrintSizeToDoc2=0
+GenerateNetsInfo2=1
+MarkPins2=1
+MarkNetLabels2=1
+MarkPortsId2=1
+OutputFilePath2=C:\PCBJOBs\ActiveWave2010\Tag103.Rev21\Tag103-Rev21-Panel.pdf
+PublishMethod3=2
+OpenOutput3=1
+PromptOverwrite3=1
+ZoomLevel3=50
+FitSCHPrintSizeToDoc3=1
+FitPCBPrintSizeToDoc3=1
+GenerateNetsInfo3=1
+MarkPins3=1
+MarkNetLabels3=1
+MarkPortsId3=1
+WebOutputMediumType3=FS
+OutputDirectory3=C:\PCBJOBs\ActiveWave2010\Tag103.Rev21\Project Outputs for Tag103-Rev21\WebOutput
+
+[GeneratedFilesSettings]
+RelativeOutputPath4=
+OpenOutputs4=0
+AddToProject4=1
+TimestampFolder4=0
+SeparateFolderForEachOutput4=0
+UseOutputName4=0
+

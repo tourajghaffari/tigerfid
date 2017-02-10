@@ -1,0 +1,331 @@
+*************************************************************
+FileName = Tag102 Rev17.GBR
+AutoAperture = True
+*************************************************************
+Generating : TopLayer
+      File : Tag102 Rev17.GTL
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+*************************************************************
+
+*************************************************************
+Generating : BottomLayer
+      File : Tag102 Rev17.GBL
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D13
+    D33
+    D34
+    D35
+    D37
+    D38
+    D40
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+*************************************************************
+
+*************************************************************
+Generating : TopOverlay
+      File : Tag102 Rev17.GTO
+
+    Adding Layer      : TopOverlay
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+
+Used DCodes :
+    D33
+    D35
+    D37
+    D40
+    D42
+    D43
+    D57
+*************************************************************
+
+*************************************************************
+Generating : BottomOverlay
+      File : Tag102 Rev17.GBO
+
+    Adding Layer      : BottomOverlay
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+
+Used DCodes :
+    D33
+    D35
+    D37
+    D40
+    D42
+    D43
+    D57
+*************************************************************
+
+*************************************************************
+Generating : TopPaste
+      File : Tag102 Rev17.GTP
+
+    Adding Layer      : TopPaste
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D37
+    D40
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : BottomPaste
+      File : Tag102 Rev17.GBP
+
+    Adding Layer      : BottomPaste
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D33
+    D37
+    D40
+    D42
+    D43
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+*************************************************************
+
+*************************************************************
+Generating : TopSolder
+      File : Tag102 Rev17.GTS
+
+    Adding Layer      : TopSolder
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D33
+    D37
+    D40
+    D42
+    D43
+    D47
+    D50
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+*************************************************************
+
+*************************************************************
+Generating : BottomSolder
+      File : Tag102 Rev17.GBS
+
+    Adding Layer      : BottomSolder
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D33
+    D37
+    D40
+    D42
+    D43
+    D47
+    D49
+    D50
+    D62
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Tag102 Rev17.GD1
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : DrillDrawing
+
+    Adding Drill Pair : TopLayer-BottomLayer
+
+
+Used DCodes :
+    D33
+    D36
+    D37
+    D38
+    D40
+    D42
+    D43
+    D93
+*************************************************************
+

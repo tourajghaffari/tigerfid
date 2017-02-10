@@ -1,0 +1,10 @@
+Added Pin To Net: NetName=GND Pin=D4-K
+Added Pin To Net: NetName=NetD4_A Pin=D4-A
+Added Pin To Net: NetName=NetD4_A Pin=R19-1
+Added Net: Name=NetD4_A
+Added Pin To Net: NetName=NetR19_2 Pin=R19-2
+Added Pin To Net: NetName=NetR19_2 Pin=TP19-1
+Added Pin To Net: NetName=NetR19_2 Pin=TP20-1
+Added Net: Name=NetR19_2
+Added Member To Class: ClassName=Tag Test Fixture Member=Component D4 RED LED
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R19 200

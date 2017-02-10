@@ -1,0 +1,164 @@
+Change Component Comment : Designator=B1 Old Comment=BATT HOLDER COIN CR2032 CUT New Comment=BATTERY
+Added Pin To Net: NetName=GND Pin=B1-1
+Added Pin To Net: NetName=3V Pin=B1-2
+Added Pin To Net: NetName=TAMPER PWR Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=TAMPER SIG Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=3V Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC7_1 Pin=C10-2
+Added Pin To Net: NetName=NetC3_2 Pin=C11-1
+Added Pin To Net: NetName=NetC11_2 Pin=C11-2
+Added Pin To Net: NetName=NetC12_1 Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=NetC10_1 Pin=C13-2
+Added Pin To Net: NetName=GND Pin=C14-1
+Added Pin To Net: NetName=3V Pin=C15-1
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=GND Pin=C17-2
+Added Pin To Net: NetName=3V Pin=C18-1
+Added Pin To Net: NetName=GND Pin=C18-2
+Added Pin To Net: NetName=NetC2_2 Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C19-2
+Added Pin To Net: NetName=NetC9_1 Pin=C20-1
+Added Pin To Net: NetName=GND Pin=C20-2
+Added Pin To Net: NetName=NetC3_1 Pin=C21-2
+Added Pin To Net: NetName=NetC3_1 Pin=C22-2
+Added Pin To Net: NetName=NetC3_1 Pin=C23-2
+Added Pin To Net: NetName=NetC9_1 Pin=C24-1
+Added Pin To Net: NetName=GND Pin=C24-2
+Added Pin To Net: NetName=TILT SENSOR Pin=C25-1
+Added Pin To Net: NetName=GND Pin=C25-2
+Added Pin To Net: NetName=NetC27_2 Pin=C27-2
+Added Pin To Net: NetName=GND Pin=DS1-K
+Added Pin To Net: NetName=GND Pin=DS2-2
+Added Pin To Net: NetName=NetC3_1 Pin=E1-1
+Added Pin To Net: NetName=NetC2_1 Pin=E2-1
+Added Pin To Net: NetName=NetC12_1 Pin=L2-1
+Added Pin To Net: NetName=NetC2_1 Pin=L2-2
+Added Pin To Net: NetName=NetC2_2 Pin=L3-2
+Added Pin To Net: NetName=3V Pin=L4-1
+Added Pin To Net: NetName=NetC3_2 Pin=L6-1
+Added Pin To Net: NetName=NetC7_1 Pin=L6-2
+Added Pin To Net: NetName=NetC8_1 Pin=Q1-B
+Added Pin To Net: NetName=NetC2_1 Pin=Q1-C
+Added Pin To Net: NetName=NetC2_2 Pin=Q1-E
+Added Pin To Net: NetName=NetC10_1 Pin=Q2-B
+Added Pin To Net: NetName=NetC3_1 Pin=Q2-C
+Added Pin To Net: NetName=NetC3_2 Pin=Q2-E
+Added Pin To Net: NetName=NetQ3_D Pin=Q3-D
+Added Pin To Net: NetName=TX DATA Pin=Q3-G
+Added Pin To Net: NetName=GND Pin=Q3-S
+Added Pin To Net: NetName=SPEAKER OUT Pin=Q4-G
+Added Pin To Net: NetName=GND Pin=Q4-S
+Added Pin To Net: NetName=PROG CLK Pin=R1-1
+Added Pin To Net: NetName=+V1.2 Pin=R1-2
+Added Pin To Net: NetName=TX DATA Pin=R2-1
+Added Pin To Net: NetName=GND Pin=R2-2
+Added Pin To Net: NetName=PROG MCLR Pin=R3-1
+Added Pin To Net: NetName=3V Pin=R3-2
+Added Pin To Net: NetName=VMS Pin=R4-1
+Added Pin To Net: NetName=VMP Pin=R4-2
+Added Pin To Net: NetName=3V Pin=R5-1
+Added Pin To Net: NetName=I2CSDA Pin=R5-2
+Added Pin To Net: NetName=NetC12_1 Pin=R6-1
+Added Pin To Net: NetName=3V Pin=R6-2
+Added Pin To Net: NetName=3V Pin=R7-2
+Added Pin To Net: NetName=NetC8_1 Pin=R8-1
+Added Pin To Net: NetName=TAMPER PWR Pin=R9-1
+Added Pin To Net: NetName=TAMPER SIG Pin=R9-2
+Added Pin To Net: NetName=NetQ3_D Pin=R10-2
+Added Pin To Net: NetName=NetQ3_D Pin=R11-2
+Added Pin To Net: NetName=NetC10_1 Pin=R12-1
+Added Pin To Net: NetName=NetC9_1 Pin=R12-2
+Added Pin To Net: NetName=NetC9_1 Pin=R13-1
+Added Pin To Net: NetName=NetC9_1 Pin=R14-1
+Added Pin To Net: NetName=+V1.2 Pin=R14-2
+Added Pin To Net: NetName=GND Pin=R15-1
+Added Pin To Net: NetName=VMS Pin=R15-2
+Added Pin To Net: NetName=NetC11_2 Pin=R16-2
+Added Pin To Net: NetName=NetC7_1 Pin=R17-1
+Added Pin To Net: NetName=GND Pin=R17-2
+Added Pin To Net: NetName=+V1.2 Pin=R19-1
+Added Pin To Net: NetName=NetR19_2 Pin=R19-2
+Added Pin To Net: NetName=ENABLE_RCVR Pin=R20-1
+Added Pin To Net: NetName=LED OUT Pin=R22-2
+Added Pin To Net: NetName=NetC27_2 Pin=R23-1
+Added Pin To Net: NetName=GND Pin=R23-2
+Added Pin To Net: NetName=NetR19_2 Pin=R24-1
+Added Pin To Net: NetName=GND Pin=R24-2
+Added Pin To Net: NetName=TAMPER PWR Pin=R25-1
+Added Pin To Net: NetName=TILT SENSOR Pin=R25-2
+Added Pin To Net: NetName=PANIC SWITCH Pin=R28-1
+Added Pin To Net: NetName=3V Pin=R28-2
+Added Pin To Net: NetName=SPEAKER OUT Pin=R29-1
+Added Pin To Net: NetName=GND Pin=R29-2
+Added Pin To Net: NetName=3V Pin=SP1-1
+Added Pin To Net: NetName=PANIC SWITCH Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=SW1-2
+Added Pin To Net: NetName=TILT SENSOR Pin=SW2-1
+Added Pin To Net: NetName=GND Pin=SW2-2
+Added Pin To Net: NetName=3V Pin=U1-1
+Added Pin To Net: NetName=NetC27_2 Pin=U1-3
+Added Pin To Net: NetName=PROG MCLR Pin=U1-4
+Added Pin To Net: NetName=SPEAKER OUT Pin=U1-5
+Added Pin To Net: NetName=VMP Pin=U1-6
+Added Pin To Net: NetName=LED OUT Pin=U1-7
+Added Pin To Net: NetName=I2CSCL Pin=U1-8
+Added Pin To Net: NetName=I2CSDA Pin=U1-9
+Added Pin To Net: NetName=TX DATA Pin=U1-10
+Added Pin To Net: NetName=TILT SENSOR Pin=U1-11
+Added Pin To Net: NetName=RX DATA Pin=U1-12
+Added Pin To Net: NetName=PANIC SWITCH Pin=U1-13
+Added Pin To Net: NetName=ENABLE_RCVR Pin=U1-14
+Added Pin To Net: NetName=TAMPER PWR Pin=U1-15
+Added Pin To Net: NetName=VMS Pin=U1-16
+Added Pin To Net: NetName=TAMPER SIG Pin=U1-17
+Added Pin To Net: NetName=PROG CLK Pin=U1-18
+Added Pin To Net: NetName=GND Pin=U1-20
+Added Pin To Net: NetName=+V1.2 Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=I2CSDA Pin=U3-1
+Added Pin To Net: NetName=I2CSCL Pin=U3-2
+Added Pin To Net: NetName=GND Pin=U3-4
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=GND Pin=U3-6
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=3V Pin=U3-8
+Added Pin To Net: NetName=GND Pin=U4-4
+Added Pin To Net: NetName=I2CSDA Pin=U4-5
+Added Pin To Net: NetName=I2CSCL Pin=U4-6
+Added Pin To Net: NetName=GND Pin=U4-7
+Added Pin To Net: NetName=3V Pin=U4-8
+Added Pin To Net: NetName=3V Pin=U5-1
+Added Pin To Net: NetName=GND Pin=U5-2
+Added Pin To Net: NetName=ENABLE_RCVR Pin=U5-3
+Added Pin To Net: NetName=+V1.2 Pin=U5-4
+Added Pin To Net: NetName=+V1.2 Pin=U5-5
+Added Pin To Net: NetName=RX DATA Pin=U6-1
+Added Pin To Net: NetName=GND Pin=U6-2
+Added Pin To Net: NetName=NetR19_2 Pin=U6-4
+Added Pin To Net: NetName=TAMPER PWR Pin=U7-1
+Added Pin To Net: NetName=TAMPER SIG Pin=U7-2
+Added Pin To Net: NetName=GND Pin=U7-3
+Added Pin To Net: NetName=GND Pin=Y1-1
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=GND Pin=Y1-3
+Added Pin To Net: NetName=GND Pin=Y1-4
+Added Pin To Net: NetName=GND Pin=Y1-5
+Added Pin To Net: NetName=NetC8_2 Pin=Y1-6
+Added Pin To Net: NetName=GND Pin=Y1-7
+Added Pin To Net: NetName=GND Pin=Y1-8

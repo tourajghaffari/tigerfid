@@ -1,0 +1,30 @@
+Protel Design System Design Rule Check
+PCB File : C:\ActiveWave\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev21\PCB\Tag105 Rev21.PCB
+Date     : 8/1/2013
+Time     : 7:11:19 PM
+
+Processing Rule : Routing Via (MinHoleWidth=15mil) (MaxHoleWidth=17mil) (PreferredHoleWidth=15mil) (MinWidth=28mil) (MaxWidth=40mil) (PreferedWidth=28mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+   Violation between Pad Free-0(1540.146mil,907mil)  MultiLayer and 
+                     Pad DS1-K(1540.146mil,971.961mil)  TopLayer
+   Violation between Pad Free-0(1540.146mil,907mil)  MultiLayer and 
+                     Pad DS1-A(1540.146mil,842.039mil)  TopLayer
+Rule Violations :2
+
+
+Violations Detected : 2
+Time Elapsed        : 00:00:00

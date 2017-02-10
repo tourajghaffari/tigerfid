@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=PROG DATA / LF RX DATA Pin=J2-1
+Added Pin To Net: NetName=PROG CLK Pin=J2-2
+Added Pin To Net: NetName=PROG MCLR Pin=J2-3
+Added Pin To Net: NetName=GND Pin=J2-4
+Added Pin To Net: NetName=3V Pin=J2-5

@@ -1,0 +1,3 @@
+Change Component Comment : Designator=B1 Old Comment=Comment New Comment=BATT HOLDER COIN CR2032 CUT
+Added Pin To Net: NetName=GND Pin=B1-1
+Added Pin To Net: NetName=3V Pin=B1-2

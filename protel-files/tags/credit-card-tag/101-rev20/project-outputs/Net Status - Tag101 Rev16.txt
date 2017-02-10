@@ -1,0 +1,52 @@
+Net Status Report
+Filename     : E:\ActiveWaveFiles 4-16-2008\Tag101\Tag101 Rev16\Tag101 Rev16.PCB
+Date         : 6/10/2008
+Time         : 2:32:50 PM
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    +V1.2, Signal Layers Only, 1265.175mils
+    3V, Signal Layers Only, 6618.024mils
+    ENABLE_RCVR, Signal Layers Only, 647.097mils
+    GND, Signal Layers Only, 6808.311mils
+    I2CSCL, Signal Layers Only, 1477.102mils
+    I2CSDA, Signal Layers Only, 1203.589mils
+    LED OUT, Signal Layers Only, 1339.572mils
+    NetC10_1, Signal Layers Only, 575.427mils
+    NetC11_2, Signal Layers Only, 82.782mils
+    NetC12_1, Signal Layers Only, 164.142mils
+    NetC13_2, Signal Layers Only, 2735.873mils
+    NetC14_2, Signal Layers Only, 198.012mils
+    NetC17_2, Signal Layers Only, 1029.166mils
+    NetC26_2, Signal Layers Only, 178.112mils
+    NetC27_2, Signal Layers Only, 282.056mils
+    NetC2_1, Signal Layers Only, 2979.809mils
+    NetC2_2, Signal Layers Only, 263.296mils
+    NetC3_1, Signal Layers Only, 0mils
+    NetC3_2, Signal Layers Only, 505.522mils
+    NetC5_1, Signal Layers Only, 778.942mils
+    NetC6_2, Signal Layers Only, 123.485mils
+    NetC7_1, Signal Layers Only, 168mils
+    NetC8_1, Signal Layers Only, 119.47mils
+    NetC8_2, Signal Layers Only, 147.091mils
+    NetC9_1, Signal Layers Only, 772.585mils
+    NetD1_A, Signal Layers Only, 87.06mils
+    NetQ3_D, Signal Layers Only, 396.066mils
+    NetR18_2, Signal Layers Only, 187.602mils
+    NetR19_2, Signal Layers Only, 177.752mils
+    NetR21_2, Signal Layers Only, 370.615mils
+    NetR23_1, Signal Layers Only, 233.656mils
+    NetR7_2, Signal Layers Only, 122.486mils
+    PANIC SWITCH, Signal Layers Only, 3514.058mils
+    PROG CLK, Signal Layers Only, 2218.779mils
+    PROG DATA, Signal Layers Only, 1715.245mils
+    PROG MCLR, Signal Layers Only, 1262.002mils
+    RX DATA, Signal Layers Only, 711.714mils
+    SPEAKER OUT, Signal Layers Only, 1530.781mils
+    TAMPER PWR, Signal Layers Only, 1108.971mils
+    TAMPER SIG, Signal Layers Only, 1155.981mils
+    TILT SENSOR, Signal Layers Only, 1935.297mils
+    TX DATA, Signal Layers Only, 537.351mils
+    VMP, Signal Layers Only, 82.304mils
+    VMS, Signal Layers Only, 773.169mils
+count : 44

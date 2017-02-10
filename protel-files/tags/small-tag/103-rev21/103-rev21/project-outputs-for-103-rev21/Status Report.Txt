@@ -1,0 +1,11 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Project [Tag103-Rev21.PrjPCB]
+   Generated File[Pick Place for Tag103-Rev21-Panel.txt]
+   Generated File[Pick Place for Tag103-Rev21-Panel.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 3:31:13 PM On 1/10/2011

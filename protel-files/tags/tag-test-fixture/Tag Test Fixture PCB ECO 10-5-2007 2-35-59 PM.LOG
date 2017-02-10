@@ -1,0 +1,41 @@
+Removed Pin From Net: NetName=+3.3V SWITCHED Pin=SW1-2
+Removed Pin From Net: NetName=+3.3V SWITCHED Pin=TP6-1
+Added Component: Designator=C3(0805_011905)
+Added Component: Designator=C4(CAP A CASE_030205)
+Added Component: Designator=R3(0805_011905)
+Added Component: Designator=R4(0805_011905)
+Added Component: Designator=R5(0805_011905)
+Added Component: Designator=R6(2010_012005)
+Added Component: Designator=SW5(SWITCH M2013SS1W03 VERT_042705)
+Added Component: Designator=U1(TO263 REGULATOR_070306)
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=GND Pin=SW5-2
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=U1-3
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC4_1 Pin=R5-2
+Added Pin To Net: NetName=NetC4_1 Pin=R6-2
+Added Pin To Net: NetName=NetC4_1 Pin=SW1-2
+Added Pin To Net: NetName=NetC4_1 Pin=TP6-1
+Added Pin To Net: NetName=NetC4_1 Pin=U1-2
+Added Pin To Net: NetName=NetC4_1 Pin=U1-4
+Added Net: Name=NetC4_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=R4-1
+Added Pin To Net: NetName=NetR3_2 Pin=SW5-1
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=R5-1
+Added Pin To Net: NetName=NetR4_2 Pin=U1-1
+Added Net: Name=NetR4_2
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C3 .1uF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C4 1uF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R3 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R4 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R5 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R6 220
+Added Member To Class: ClassName=Tag Test Fixture Member=Component SW5 SWITCH SPDT
+Added Member To Class: ClassName=Tag Test Fixture Member=Component U1 LM317S-ND

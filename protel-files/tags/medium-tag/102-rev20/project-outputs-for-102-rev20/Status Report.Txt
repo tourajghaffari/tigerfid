@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Tag102 Rev20.PrjPCB]
+   Generated File[Tag102 Rev20-Plated.TXT]
+   Generated File[Tag102 Rev20.DRL]
+   Generated File[Tag102 Rev20.LDP]
+   Generated File[Tag102 Rev20.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:47:44 AM On 5/25/2012

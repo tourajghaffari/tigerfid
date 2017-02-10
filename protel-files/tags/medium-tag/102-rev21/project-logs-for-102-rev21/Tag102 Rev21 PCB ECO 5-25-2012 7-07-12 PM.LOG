@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=+2.6V Pin=R1-2
+Removed Pin From Net: NetName=NetR19_2 Pin=R19-2
+Change Component Comment : Designator=R19 Old Comment=2K New Comment=100K
+Added Component: Designator=R28(0603)
+Added Pin To Net: NetName=+2.6V Pin=R19-1
+Change Net Name : Old Net Name=NetR19_2 New Net Name=NetR24_1
+Added Pin To Net: NetName=+1.2V Pin=R1-2
+Added Pin To Net: NetName=+1.2V Pin=R19-2
+Added Pin To Net: NetName=+1.2V Pin=R28-2
+Added Pin To Net: NetName=+1.2V Pin=U2-1
+Added Net: Name=+1.2V

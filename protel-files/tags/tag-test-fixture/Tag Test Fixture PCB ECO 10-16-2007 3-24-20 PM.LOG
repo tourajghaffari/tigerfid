@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=NetJ1_1 Pin=J13-1
+Added Pin To Net: NetName=NetJ1_2 Pin=J13-2
+Added Pin To Net: NetName=NetJ1_3 Pin=J13-3
+Added Pin To Net: NetName=NetJ1_4 Pin=J13-4
+Added Pin To Net: NetName=NetJ1_5 Pin=J13-5
+Added Pin To Net: NetName=UUT PWR Pin=TP5-1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component J13 1X5 POGO PIN HEADER
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP5 TP

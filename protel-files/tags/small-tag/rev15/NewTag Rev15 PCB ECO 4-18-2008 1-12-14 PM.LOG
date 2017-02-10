@@ -1,0 +1,4 @@
+Added Component: Designator=R26(0603)
+Added Pin To Net: NetName=3V Pin=R26-1
+Added Pin To Net: NetName=PANIC SWITCH Pin=R26-2
+Added Member To Class: ClassName=PAGE1 Member=Component R26 39K

@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag102 Rev17.PcbDoc   3/27/2009  4:54:39 AM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Tag102 Rev17.TXT
+EIA File   : Tag102 Rev17.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        15mil (0.381mm)          Round          7                2.07 Inch (52.53 mm)
+T2        17mil (0.4318mm)         Round          70               11.27 Inch (286.35 mm)
+T3        33mil (0.8382mm)         Round          4                4.55 Inch (115.49 mm)
+T4        35mil (0.889mm)          Round          5                0.79 Inch (20.07 mm)
+T5        122mil (3.0988mm)        Round          1                0.80 Inch (20.20 mm)
+---------------------------------------------------------------------------
+Totals                                            87               19.47 Inch (494.64 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,61 @@
+Protel Design System Design Rule Check
+PCB File : C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB
+Date     : 3/18/2008
+Time     : 4:55:44 PM
+
+Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+   Violation between Net NetC3_1     Subnet : C22-2         Subnet : C21-2         Subnet : C23-2         Subnet : C3-1          Subnet : Q2-C     
+Rule Violations :1
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Track (124mil,904mil)(124mil,914mil)  TopLayer and 
+                     Pad C21-2(124mil,904mil)  TopLayer
+   Violation between Track (124mil,855mil)(124mil,904mil)  TopLayer and 
+                     Pad C21-2(124mil,904mil)  TopLayer
+   Violation between Track (124mil,914mil)(153mil,943mil)  TopLayer and 
+                     Pad C21-2(124mil,904mil)  TopLayer
+   Violation between Track (159mil,949mil)(159mil,972mil)  TopLayer and 
+                     Pad C3-1(159mil,972mil)  TopLayer
+   Violation between Track (124mil,805mil)(124mil,855mil)  TopLayer and 
+                     Pad C22-2(124mil,805mil)  TopLayer
+   Violation between Track (256.685mil,945.685mil)(256.685mil,973.819mil)  TopLayer and 
+                     Pad Q2-C(256.685mil,973.819mil)  TopLayer
+   Violation between Track (124mil,805mil)(124mil,855mil)  TopLayer and 
+                     Pad C23-2(124mil,855mil)  TopLayer
+   Violation between Track (124mil,855mil)(124mil,904mil)  TopLayer and 
+                     Pad C23-2(124mil,855mil)  TopLayer
+Rule Violations :8
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+   Violation between Track (124mil,904mil)(124mil,914mil)  TopLayer and 
+                     Pad C21-2(124mil,904mil)  TopLayer
+   Violation between Track (124mil,855mil)(124mil,904mil)  TopLayer and 
+                     Pad C21-2(124mil,904mil)  TopLayer
+   Violation between Track (124mil,914mil)(153mil,943mil)  TopLayer and 
+                     Pad C21-2(124mil,904mil)  TopLayer
+   Violation between Track (153mil,943mil)(159mil,949mil)  TopLayer and 
+                     Pad C3-1(159mil,972mil)  TopLayer
+   Violation between Track (159mil,949mil)(159mil,972mil)  TopLayer and 
+                     Pad C3-1(159mil,972mil)  TopLayer
+   Violation between Track (124mil,805mil)(124mil,855mil)  TopLayer and 
+                     Pad C22-2(124mil,805mil)  TopLayer
+   Violation between Track (256.685mil,945.685mil)(256.685mil,973.819mil)  TopLayer and 
+                     Pad Q2-C(256.685mil,973.819mil)  TopLayer
+   Violation between Track (124mil,805mil)(124mil,855mil)  TopLayer and 
+                     Pad C23-2(124mil,855mil)  TopLayer
+   Violation between Track (124mil,855mil)(124mil,904mil)  TopLayer and 
+                     Pad C23-2(124mil,855mil)  TopLayer
+Rule Violations :9
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC21_2')),(InNet('NetC13_2'))
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(All)
+Rule Violations :0
+
+
+Violations Detected : 18
+Time Elapsed        : 00:00:01

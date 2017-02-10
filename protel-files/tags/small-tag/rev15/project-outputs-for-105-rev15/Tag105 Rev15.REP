@@ -1,0 +1,11 @@
+------------------------------------------------------------
+Single Pin Net Report for Tag105 Rev15.PrjPCB
+-- 4/16/2008
+-- 3:06:09 PM
+------------------------------------------------------------
+
+Net TILT SENSOR has only one pin (Pin U1-11)
+Net TAMPER PWR has only one pin (Pin U1-15)
+Net SPEAKER OUT has only one pin (Pin U1-14)
+Net PANIC SWITCH has only one pin (Pin U1-13)
+Net LED OUT has only one pin (Pin U1-7)

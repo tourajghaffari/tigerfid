@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=3V Pin=L4-1
+Removed Pin From Net: NetName=NetL4_2 Pin=L4-2
+Added Pin To Net: NetName=3V Pin=L4-1
+Added Pin To Net: NetName=ANT Pin=L4-1
+Added Pin To Net: NetName=NetC2_1 Pin=L4-2
+Added Pin To Net: NetName=NetL4_2 Pin=L4-2
+Added Pin To Net: NetName=SPEAKER OUT Pin=R29-1
+Added Pin To Net: NetName=GND Pin=R29-2
+Added Member To Class: ClassName=PG03 SHEET1 Member=Component R29 1M

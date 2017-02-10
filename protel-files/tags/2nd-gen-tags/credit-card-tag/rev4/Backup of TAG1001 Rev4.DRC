@@ -1,0 +1,26 @@
+Protel Design System Design Rule Check
+PCB File : Documents\Imported EXTQUENCH.DSN\TAG1001 Rev4.PCB
+Date     : 20-Apr-2007
+Time     : 14:56:06
+
+Processing Rule : Clearance Constraint (Gap=6mil) (Disabled)(On the board ),(On the board )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) (On the board ),(On the board )
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(On the board )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5mil) (Max=100mil) (Prefered=10mil) (On the board )
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (On the board ) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Not Allowed) (On the board ),(On the board )
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:01

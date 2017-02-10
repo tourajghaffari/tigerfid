@@ -1,0 +1,16 @@
+Change Component Footprint: Designator=D1 Old Footprint=404-1032-2-ND New Footprint=LED STANLEY H_1105W
+Change Component Footprint: Designator=SP1 Old Footprint=SMT_1028-S-R New Footprint=SPEAKER 12mmx12mm_011012
+Change Component Comment : Designator=R16 Old Comment=22K New Comment=3.0K
+Change Component Comment : Designator=SP1 Old Comment=SPEAKER New Comment=4000 Hz
+Added Component: Designator=R29(0603)
+Added Pin To Net: NetName=3V Pin=C5-1
+Added Pin To Net: NetName=3V Pin=L4-1
+Added Pin To Net: NetName=NetL4_2 Pin=L4-2
+Added Pin To Net: NetName=NetL4_2 Pin=Q4-D
+Added Net: Name=NetL4_2
+Added Pin To Net: NetName=NetL4_3 Pin=SP1-2
+Added Net: Name=NetL4_3
+Change Class Name : Old Net Name=PAGE1 New Net Name=PG03 SHEET1
+Change Class Name : Old Net Name=PAGE2 New Net Name=PG04 SHEET2
+Added Room: Name=PG03 SHEET1
+Added Room: Name=PG04 SHEET2

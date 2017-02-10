@@ -1,0 +1,10 @@
+Added Pin To Net: NetName=NetC4_1 Pin=R11-2
+Added Pin To Net: NetName=GND Pin=SW6-1
+Change Net Name : Old Net Name=NetC4_1 New Net Name=UUT PWR
+Added Pin To Net: NetName=NetR11_1 Pin=R11-1
+Added Pin To Net: NetName=NetR11_1 Pin=SW6-2
+Added Pin To Net: NetName=NetR11_1 Pin=TP18-1
+Added Net: Name=NetR11_1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R11 10K
+Added Member To Class: ClassName=Tag Test Fixture Member=Component SW6 SWITCH ON/OFF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP18 TP

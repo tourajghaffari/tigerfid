@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=C29-1
+Removed Pin From Net: NetName=GND Pin=C30-1
+Removed Pin From Net: NetName=GND Pin=L1-2
+Removed Pin From Net: NetName=3V Pin=R26-1
+Removed Pin From Net: NetName=PROG DATA / LF RX DATA Pin=R30-2
+Removed Pin From Net: NetName=3V Pin=R31-1
+Removed Pin From Net: NetName=GND Pin=R33-2
+Added Component: Designator=J1(1X5 HEADER)
+Added Pin To Net: NetName=3V Pin=B1-1
+Added Pin To Net: NetName=GND Pin=B1-2

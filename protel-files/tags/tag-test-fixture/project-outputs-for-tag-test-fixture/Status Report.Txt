@@ -1,0 +1,9 @@
+Output: Bill of Materials
+Type  : ReportComponents
+From  : Project [Tag Test Fixture.PrjPCB]
+
+
+Files Generated   : 0
+Documents Printed : 0
+
+Finished Output Generation At 4:00:16 PM On 10/23/2007

@@ -1,0 +1,23 @@
+Protel Design System Design Rule Check
+PCB File : F:\PCBJOBS\ActiveWaveFiles 4-16-2008\Tag102.REV17\PCB\Tag102 Rev17.PcbDoc
+Date     : 3/27/2009
+Time     : 4:47:13 AM
+
+Processing Rule : Broken-Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.1778mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC13_2')),(InNet('NetC3_1'))
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.0254mm) (Max=2.54mm) (Disabled)(All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:00

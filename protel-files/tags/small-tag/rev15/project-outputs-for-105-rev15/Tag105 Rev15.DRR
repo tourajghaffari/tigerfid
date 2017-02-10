@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag105 Rev15.PCB   1/31/2008  12:27:00 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Tag105 Rev15.TXT
+EIA File   : Tag105 Rev15.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        17mil (0.4318mm)         Round          88               15.91 Inch (404.02 mm)
+T2        33mil (0.8382mm)         Round          4                3.13 Inch (79.38 mm)
+T3        35mil (0.889mm)          Round          12               5.44 Inch (138.20 mm)
+T4        40mil (1.016mm)          Round          1                1.12 Inch (28.57 mm)
+T5        122mil (3.0988mm)        Round          2                3.42 Inch (86.84 mm)
+T6        100mil (2.54mm)          Round          1         NPTH   1.79 Inch (45.40 mm)
+T7        200mil (5.08mm)          Round          1         NPTH   2.74 Inch (69.58 mm)
+---------------------------------------------------------------------------
+Totals                                            109              33.54 Inch (851.98 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

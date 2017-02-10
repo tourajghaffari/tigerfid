@@ -1,0 +1,26 @@
+Protel Design System Design Rule Check
+PCB File : C:\Protel Files\Tags\Tag Test Fixture\Tag Test Fixture.PCB
+Date     : 10/11/2007
+Time     : 4:30:44 PM
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC21_2')),(InNet('NetC13_2'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=200mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:06

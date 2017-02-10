@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag201_GangProgrammerRev1.PcbDoc   7/19/2012  10:32:25 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Tag201_GangProgrammerRev1.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        28mil (0.7112mm)         Round          656              211.02 Inch (5359.93 mm)
+T2        33mil (0.8382mm)         Round          5                12.47 Inch (316.76 mm)
+T3        35mil (0.889mm)          Round          644              150.24 Inch (3816.00 mm)
+T4        43mil (1.0922mm)         Round          3                0.20 Inch (5.08 mm)
+T5        48mil (1.2192mm)         Round          324              75.26 Inch (1911.60 mm)
+T6        62mil (1.5748mm)         Round          2                0.57 Inch (14.48 mm)
+T7        63mil (1.6002mm)         Round          1                0.00 Inch (0.00 mm)
+T8        70mil (1.778mm)          Round          2                0.21 Inch (5.33 mm)
+T9        71mil (1.8034mm)         Round          1                0.00 Inch (0.00 mm)
+T10       78mil (1.9812mm)         Round          3                0.46 Inch (11.57 mm)
+T11       120mil (3.048mm)         Round          21        NPTH   80.94 Inch (2055.87 mm)
+T12       238mil (6.0452mm)        Round          4         NPTH   31.51 Inch (800.44 mm)
+---------------------------------------------------------------------------
+Totals                                            1666             562.88 Inch (14297.06 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:03

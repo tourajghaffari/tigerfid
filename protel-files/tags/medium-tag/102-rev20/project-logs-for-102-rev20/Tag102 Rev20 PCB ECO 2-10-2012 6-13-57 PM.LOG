@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=GND Pin=C26-1
+Removed Pin From Net: NetName=GND Pin=C27-1
+Removed Member From Class: ClassName=PG03 SHEET1 Member=C26
+Removed Member From Class: ClassName=PG03 SHEET1 Member=Y2
+Change Component Comment : Designator=R1 Old Comment=39K New Comment=4.7K
+Added Pin To Net: NetName=NetR21_2 Pin=C27-2
+Added Pin To Net: NetName=GND Pin=R23-2
+Change Net Name : Old Net Name=NetR21_2 New Net Name=RSSI
+Added Pin To Net: NetName=NetC27_1 Pin=C27-1
+Added Pin To Net: NetName=NetC27_1 Pin=R23-1
+Added Pin To Net: NetName=NetC27_1 Pin=U1-3
+Added Net: Name=NetC27_1

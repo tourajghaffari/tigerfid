@@ -1,0 +1,4 @@
+Added Component: Designator=EH1(EH_D0500P1000)
+Added Component: Designator=EH2(EH_D0500P1000)
+Added Pin To Net: NetName=PANIC SWITCH Pin=EH1-1
+Added Pin To Net: NetName=GND Pin=EH2-1

@@ -1,0 +1,29 @@
+Output: Gerber Files
+Type  : Gerber
+From  : PCB Document [Tag102 Rev21.PcbDoc]
+   Generated File[Tag102 Rev21.GTL]
+   Generated File[Tag102 Rev21.GBL]
+   Generated File[Tag102 Rev21.GTO]
+   Generated File[Tag102 Rev21.GBO]
+   Generated File[Tag102 Rev21.GTP]
+   Generated File[Tag102 Rev21.GBP]
+   Generated File[Tag102 Rev21.GTS]
+   Generated File[Tag102 Rev21.GBS]
+   Generated File[Tag102 Rev21.GD1]
+   Generated File[Tag102 Rev21.RUL]
+   Generated File[Tag102 Rev21.EXTREP]
+   Generated File[Tag102 Rev21.REP]
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Tag102 Rev21.PcbDoc]
+   Generated File[Tag102 Rev21.TXT]
+   Generated File[Tag102 Rev21.DRL]
+   Generated File[Tag102 Rev21.LDP]
+   Generated File[Tag102 Rev21.DRR]
+
+
+Files Generated   : 16
+Documents Printed : 0
+
+Finished Output Generation At 5:27:25 PM On 8/2/2013

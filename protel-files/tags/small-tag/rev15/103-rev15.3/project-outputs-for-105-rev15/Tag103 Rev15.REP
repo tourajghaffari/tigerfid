@@ -1,0 +1,292 @@
+*************************************************************
+FileName = Tag103 Rev15.GBR
+AutoAperture = True
+*************************************************************
+Generating : TopLayer
+      File : Tag103 Rev15.GTL
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+*************************************************************
+
+*************************************************************
+Generating : BottomLayer
+      File : Tag103 Rev15.GBL
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D28
+    D29
+    D30
+    D31
+    D33
+    D35
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+*************************************************************
+
+*************************************************************
+Generating : TopOverlay
+      File : Tag103 Rev15.GTO
+
+    Adding Layer      : TopOverlay
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+
+Used DCodes :
+    D28
+    D29
+    D33
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : BottomOverlay
+      File : Tag103 Rev15.GBO
+
+    Adding Layer      : BottomOverlay
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+
+Used DCodes :
+    D28
+    D29
+    D33
+    D37
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : TopPaste
+      File : Tag103 Rev15.GTP
+
+    Adding Layer      : TopPaste
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D33
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : BottomPaste
+      File : Tag103 Rev15.GBP
+
+    Adding Layer      : BottomPaste
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D28
+    D29
+    D33
+    D38
+    D39
+    D45
+    D46
+*************************************************************
+
+*************************************************************
+Generating : TopSolder
+      File : Tag103 Rev15.GTS
+
+    Adding Layer      : TopSolder
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D26
+    D28
+    D29
+    D33
+    D38
+    D39
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+*************************************************************
+
+*************************************************************
+Generating : BottomSolder
+      File : Tag103 Rev15.GBS
+
+    Adding Layer      : BottomSolder
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D28
+    D29
+    D33
+    D38
+    D39
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Tag103 Rev15.GD1
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : DrillDrawing
+
+    Adding Drill Pair : TopLayer-BottomLayer
+
+
+Used DCodes :
+    D28
+    D29
+    D33
+    D34
+    D38
+    D39
+    D73
+    D74
+*************************************************************
+

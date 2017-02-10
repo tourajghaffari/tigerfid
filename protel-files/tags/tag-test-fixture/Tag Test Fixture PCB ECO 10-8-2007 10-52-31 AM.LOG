@@ -1,0 +1,41 @@
+Added Component: Designator=D3(LED TH_021505)
+Added Component: Designator=P1(POT TOP ADJUST_070306)
+Added Component: Designator=Q1(SOT23 TRANS_011905)
+Added Component: Designator=R7(0805_011905)
+Added Component: Designator=R8(0805_011905)
+Added Component: Designator=R9(0805_011905)
+Added Component: Designator=U2(SO8_030205)
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=D3-A
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=GND Pin=Q1-E
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=NetTP16_1 Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-4
+Added Pin To Net: NetName=+3.3V SWITCHED Pin=U2-8
+Change Net Name : Old Net Name=+3.3V New Net Name=+5V
+Change Net Name : Old Net Name=+3.3V SWITCHED New Net Name=+5V SWITCHED
+Added Pin To Net: NetName=NetD3_K Pin=D3-K
+Added Pin To Net: NetName=NetD3_K Pin=R7-1
+Added Net: Name=NetD3_K
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=U2-3
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetQ1_B Pin=Q1-B
+Added Pin To Net: NetName=NetQ1_B Pin=R8-2
+Added Pin To Net: NetName=NetQ1_B Pin=R9-2
+Added Net: Name=NetQ1_B
+Added Pin To Net: NetName=NetQ1_C Pin=Q1-C
+Added Pin To Net: NetName=NetQ1_C Pin=R7-2
+Added Net: Name=NetQ1_C
+Added Pin To Net: NetName=NetR8_1 Pin=R8-1
+Added Pin To Net: NetName=NetR8_1 Pin=U2-7
+Added Net: Name=NetR8_1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component D3 RED LED
+Added Member To Class: ClassName=Tag Test Fixture Member=Component P1 10K
+Added Member To Class: ClassName=Tag Test Fixture Member=Component Q1 2N3904
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R7 1K
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R8 1K
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R9 10K
+Added Member To Class: ClassName=Tag Test Fixture Member=Component U2 LM311

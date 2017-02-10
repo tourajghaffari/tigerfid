@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag103-Rev20Final-Panel.PCB   12/21/2010  1:12:24 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Tag103-Rev20Final-Panel.TXT
+EIA File   : Tag103-Rev20Final-Panel.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        10mil (0.254mm)          Round          531              359.29 Inch (9126.06 mm)
+T2        27.6mil (0.70104mm)      Round          45               297.96 Inch (7568.27 mm)
+T3        30mil (0.762mm)          Round          20               294.97 Inch (7492.16 mm)
+T4        33mil (0.8382mm)         Round          36               302.68 Inch (7688.05 mm)
+T5        40mil (1.016mm)          Round          9                292.31 Inch (7424.77 mm)
+T6        20mil (0.508mm)          Round          144       NPTH   307.53 Inch (7811.38 mm)
+T7        118mil (2.9972mm)        Round          3         NPTH   289.61 Inch (7356.05 mm)
+---------------------------------------------------------------------------
+Totals                                            788              2144.36 Inch (54466.74 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

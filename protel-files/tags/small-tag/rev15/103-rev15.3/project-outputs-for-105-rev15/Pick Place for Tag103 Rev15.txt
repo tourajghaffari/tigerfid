@@ -1,0 +1,67 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+J1         CONN5                  829mil        869mil        729mil        869mil        729mil        869mil  T        360.00 1X5 HEADER     
+C20        0603                   370mil        585mil        400mil        585mil        400mil        585mil  T        180.00 15pF           
+C17        0603                   340mil        495mil        340mil        525mil        340mil        525mil  T        270.00 .01uF          
+C11        0603                   430mil        405mil        400mil        405mil        400mil        405mil  T        360.00 .1uF           
+C15        0603                   255mil        235mil        255mil        265mil        255mil        265mil  T        270.00 0.1 uF         
+C18        0603               884.866mil         22mil    884.866mil         -8mil    884.866mil         -8mil  T         90.00 0.1 uF         
+C24        0603                   115mil        780mil         85mil        780mil         85mil        780mil  T          0.00 0.1 uF         
+L3         0603                    35mil    115.937mil         35mil    145.937mil         35mil    145.937mil  T        270.00 0.18uH         
+L6         0603                   266mil        504mil        266mil        474mil        266mil        474mil  T         90.00 0.33uH         
+R2         0603                   340mil        377mil        340mil        347mil        340mil        347mil  T         90.00 1 M            
+R17        0603                   236mil        702mil        266mil        702mil        266mil        702mil  T        180.00 2K             
+R12        0603                   153mil        676mil        153mil        646mil        153mil        646mil  T         90.00 10             
+R13        0603                    23mil        501mil         23mil        531mil         23mil        531mil  T        270.00 10             
+C6         0603                    48mil        224mil         48mil        254mil         48mil        254mil  T        270.00 100 pF         
+C7         0603                   236mil        644mil        266mil        644mil        266mil        644mil  T        180.00 100 pF         
+C8         0603                   253mil         33mil        223mil         33mil        223mil         33mil  T        360.00 1000 pF        
+C9         0603                    23mil        621mil         23mil        651mil         23mil        651mil  T        270.00 1000 pF        
+C10        0603                   236mil        584mil        206mil        584mil        206mil        584mil  T          0.00 1000 pF        
+C4         0603                   959mil        675mil        959mil        705mil        959mil        705mil  T        270.00 10pF           
+C26        0603                   900mil        675mil        900mil        705mil        900mil        705mil  T        270.00 15pF           
+C27        0603                   819mil        799mil        849mil        799mil        849mil        799mil  T        180.00 15pF           
+R18        0603                   610mil        305mil        580mil        305mil        580mil        305mil  T        360.00 1K             
+C2         0603                    95mil         10mil         95mil        -20mil         95mil        -20mil  T         90.00 2 PF           
+C3         0603                    83mil        501mil         83mil        471mil         83mil        471mil  T         90.00 2 pF           
+C21        0603                    18mil        403mil        -12mil        403mil        -12mil        403mil  T          0.00 1.5pF          
+R6         0603                444.41mil      -4.41mil     444.41mil     -34.41mil     444.41mil     -34.41mil  T         90.00 22             
+R21        0603                   610mil        355mil        580mil        355mil        580mil        355mil  T        360.00 220K           
+C14        0603                   520mil        365mil        520mil        395mil        520mil        395mil  T        270.00 100pF          
+U4         SO8                    627mil        104mil        552mil         -6mil        552mil         -6mil  T         90.00 24aa256        
+Q3         SOT23_FET            242.5mil        367mil        280mil        407mil        242mil        327mil  T        180.00 2N7002         
+L2         0603                254.41mil     -24.41mil     284.41mil     -24.41mil     284.41mil     -24.41mil  T        180.00 10nH           
+R23        0603                   819mil        579mil        789mil        579mil        789mil        579mil  T        360.00 300K           
+Y2         CRYSTAL_ABRACON_ABS07        809mil        694mil        809mil        694mil        809mil    741.244mil  T        270.00 32.768KHZ CRYSTAL
+C12        0603                354.41mil      -4.41mil     354.41mil     -34.41mil     354.41mil     -34.41mil  T         90.00 33 pF          
+C13        0603                   134mil        587mil        164mil        587mil        164mil        587mil  T        180.00 33 pF          
+R20        0603                   400mil        495mil        400mil        525mil        400mil        525mil  T        270.00 2.7K           
+R1         0603                   819mil        489mil        789mil        489mil        789mil        489mil  T        360.00 39K            
+R10        0603                   185mil        124mil        185mil        154mil        185mil        154mil  T        270.00 39K            
+R15        0603                   614mil        414mil        644mil        414mil        644mil        414mil  T        180.00 39K            
+R3         0603                   939mil        534mil        909mil        534mil        909mil        534mil  T        360.00 39k            
+R4         0603                   609mil        864mil        639mil        864mil        639mil        864mil  T        180.00 39k            
+R5         0603                   879mil        224mil        849mil        224mil        849mil        224mil  T          0.00 39k            
+R8         0603                   254mil        130mil        254mil        100mil        254mil        100mil  T         90.00 4.7 K          
+C19        0603                   109mil        120mil        109mil         90mil        109mil         90mil  T         90.00 2.7 pF         
+R14        0603                   235mil        780mil        205mil        780mil        205mil        780mil  T          0.00 470            
+R7         0603                   185mil        235mil        185mil        265mil        185mil        265mil  T        270.00 6.8K           
+R11        0603                   110mil        240mil        110mil        210mil        110mil        210mil  T         90.00 68             
+R16        0603                   430mil        350mil        400mil        350mil        400mil        350mil  T        360.00 22K            
+Y1         RESONATOR          396.071mil    192.469mil        395mil        189mil        444mil        274mil  T          0.00 916.5_Resonator
+R19        0603                   834mil        384mil        804mil        384mil        804mil        384mil  T        360.00 2K             
+R24        0603                   834mil        314mil        804mil        314mil        804mil        314mil  T        360.00 100K           
+C22        0603                    18mil        304mil        -12mil        304mil        -12mil        304mil  T          0.00 DNS            
+C23        0603                    18mil        354mil        -12mil        354mil        -12mil        354mil  T          0.00 DNS            
+U3         SO8_SMALL          796.614mil     59.575mil        835mil        153mil        835mil        153mil  T        180.00 DS1631         
+U6         SC70                   950mil        360mil        950mil        360mil    975.591mil    403.307mil  T        180.00 MAX9119EXK+    
+U2         SC70                   723mil        360mil        723mil        360mil    748.591mil    403.307mil  T        180.00 MIC861         
+Q1         3_PIN_ULTRA_SUPER_MINI_MOLD    164.685mil       6.41mil        145mil         32mil        145mil         32mil  T        270.00 NE85619        
+Q2         3_PIN_ULTRA_SUPER_MINI_MOLD    180.685mil    498.409mil        161mil        524mil     200.37mil        524mil  T        270.00 NE85619        
+U1         SSOP20_WIDE        596.842mil    631.457mil        712mil        785mil        712mil        785mil  T        180.00 PIC16F690      
+U5         SOT23-5A             372.5mil        740mil        335mil        690mil        335mil        690mil  T         90.00 TC1070         
+R26        0603                   939mil        474mil        969mil        474mil        969mil        474mil  T        180.00 39K            
+E1         EH_D0500P1000          509mil        864mil        509mil        864mil        509mil        864mil  T         90.00 HOLE           
+E2         EH_D0500P1000          449mil        864mil        449mil        864mil        449mil        864mil  T         90.00 HOLE           
+B1         BATT_HOLDER1       484.157mil        369mil        494mil        369mil     60.929mil        369mil  B        270.00 BATT HOLDER COIN CR2032 CUT
+

@@ -1,0 +1,31 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag Test Fixture.PCB   10/16/2007  4:35:39 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Tag Test Fixture.TXT
+EIA File   : Tag Test Fixture.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        28mil (0.7112mm)         Round          8                12.01 Inch (305.11 mm)
+T2        30mil (0.762mm)          Round          3                2.72 Inch (69.06 mm)
+T3        35mil (0.889mm)          Round          169              49.23 Inch (1250.32 mm)
+T4        67mil (1.7018mm)         Round          11               7.61 Inch (193.31 mm)
+T5        68mil (1.7272mm)         Round          30               11.29 Inch (286.78 mm)
+T6        100mil (2.54mm)          Round          24               11.90 Inch (302.28 mm)
+T7        110mil (2.794mm)         Round          21               26.08 Inch (662.49 mm)
+T8        122mil (3.0988mm)        Round          3                3.46 Inch (87.76 mm)
+T9        135mil (3.429mm)         Round          4                21.97 Inch (558.02 mm)
+T10       250mil (6.35mm)          Round          4                5.89 Inch (149.48 mm)
+T11       63mil (1.6002mm)         Round          1         NPTH   4.74 Inch (120.49 mm)
+T12       66.9mil (1.69926mm)      Round          1         NPTH   4.59 Inch (116.66 mm)
+---------------------------------------------------------------------------
+Totals                                            279              161.49 Inch (4101.77 mm)
+
+Two holes at same point : 2
+-----------------------
+-1512,-175
+-475,725
+
+Total Processing Time (hh:mm:ss) : 00:00:01

@@ -1,0 +1,94 @@
+Change Component Comment : Designator=C13 Old Comment=.1uF New Comment=1nF
+Change Component Comment : Designator=C13 Old Comment=1nF New Comment=100pF
+Change Component Comment : Designator=C13 Old Comment=100pF New Comment=???
+Change Component Comment : Designator=R18 Old Comment=10K New Comment=0 Ohm
+Change Component Comment : Designator=R18 Old Comment=0 Ohm New Comment=52.3
+Change Component Comment : Designator=R18 Old Comment=52.3 New Comment=???
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=+5V SWITCHED Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=GND Pin=J9-2
+Added Pin To Net: NetName=GND Pin=J9-3
+Added Pin To Net: NetName=GND Pin=J9-4
+Added Pin To Net: NetName=GND Pin=J9-5
+Added Pin To Net: NetName=GND Pin=J10-2
+Added Pin To Net: NetName=GND Pin=J10-3
+Added Pin To Net: NetName=GND Pin=J10-4
+Added Pin To Net: NetName=GND Pin=J10-5
+Added Pin To Net: NetName=GND Pin=R12-1
+Added Pin To Net: NetName=GND Pin=R13-2
+Added Pin To Net: NetName=+5V SWITCHED Pin=R18-2
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=C6-1
+Added Pin To Net: NetName=NetC5_1 Pin=R12-2
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=U3-2
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=U3-3
+Added Net: Name=NetC7_2
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=NetC8_2 Pin=U3-5
+Added Net: Name=NetC8_2
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_1 Pin=J5-1
+Added Pin To Net: NetName=NetC9_1 Pin=R13-1
+Added Net: Name=NetC9_1
+Added Pin To Net: NetName=NetC9_2 Pin=C9-2
+Added Pin To Net: NetName=NetC9_2 Pin=U3-6
+Added Net: Name=NetC9_2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=R18-1
+Added Pin To Net: NetName=NetC10_1 Pin=U3-4
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=NetC11_1 Pin=U3-14
+Added Net: Name=NetC11_1
+Added Pin To Net: NetName=NetC12_1 Pin=C12-1
+Added Pin To Net: NetName=NetC12_1 Pin=U3-8
+Added Net: Name=NetC12_1
+Added Pin To Net: NetName=NetJ9_1 Pin=J9-1
+Added Pin To Net: NetName=NetJ9_1 Pin=R14-1
+Added Net: Name=NetJ9_1
+Added Pin To Net: NetName=NetJ10_1 Pin=J10-1
+Added Pin To Net: NetName=NetJ10_1 Pin=R17-1
+Added Net: Name=NetJ10_1
+Added Pin To Net: NetName=NetR14_2 Pin=R14-2
+Added Pin To Net: NetName=NetR14_2 Pin=R15-1
+Added Pin To Net: NetName=NetR14_2 Pin=U3-13
+Added Net: Name=NetR14_2
+Added Pin To Net: NetName=NetR15_2 Pin=R15-2
+Added Pin To Net: NetName=NetR15_2 Pin=U3-12
+Added Net: Name=NetR15_2
+Added Pin To Net: NetName=NetR16_1 Pin=R16-1
+Added Pin To Net: NetName=NetR16_1 Pin=R17-2
+Added Pin To Net: NetName=NetR16_1 Pin=U3-9
+Added Net: Name=NetR16_1
+Added Pin To Net: NetName=NetR16_2 Pin=R16-2
+Added Pin To Net: NetName=NetR16_2 Pin=U3-10
+Added Net: Name=NetR16_2
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C6 1nF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C7 1nF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C8 1nF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C9 1nF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C10 100pF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C11 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C12 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component C13 .1uF
+Added Member To Class: ClassName=Tag Test Fixture Member=Component J9 50 Ohm Ant
+Added Member To Class: ClassName=Tag Test Fixture Member=Component J10 50 Ohm Ant
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R12 52.3
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R13 52.3
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R14 0 Ohm
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R15 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R16 ???
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R17 0 Ohm
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R18 0 Ohm
+Added Member To Class: ClassName=Tag Test Fixture Member=Component U3 AD8302

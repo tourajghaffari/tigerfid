@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=+5V SWITCHED Pin=P1-1
+Added Component: Designator=R10(0805_011905)
+Added Pin To Net: NetName=+5V SWITCHED Pin=R10-2
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_1 Pin=R10-1
+Added Net: Name=NetP1_1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component R10 10K

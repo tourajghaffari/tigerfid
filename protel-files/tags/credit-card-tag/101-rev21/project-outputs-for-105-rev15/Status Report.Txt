@@ -1,0 +1,33 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : PCB Document [Tag101 Rev21new.PCB]
+   Generated File[Pick Place for Tag101 Rev21new.txt]
+   Generated File[Pick Place for Tag101 Rev21new.csv]
+
+Output: Gerber Files
+Type  : Gerber
+From  : PCB Document [Tag101 Rev21new.PCB]
+   Generated File[Tag101 Rev21new.GTL]
+   Generated File[Tag101 Rev21new.GBL]
+   Generated File[Tag101 Rev21new.GTO]
+   Generated File[Tag101 Rev21new.GTP]
+   Generated File[Tag101 Rev21new.GTS]
+   Generated File[Tag101 Rev21new.GBS]
+   Generated File[Tag101 Rev21new.GD1]
+   Generated File[Tag101 Rev21new.RUL]
+   Generated File[Tag101 Rev21new.EXTREP]
+   Generated File[Tag101 Rev21new.REP]
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Tag101 Rev21new.PCB]
+   Generated File[Tag101 Rev21new.TXT]
+   Generated File[Tag101 Rev21new.DRL]
+   Generated File[Tag101 Rev21new.LDP]
+   Generated File[Tag101 Rev21new.DRR]
+
+
+Files Generated   : 16
+Documents Printed : 0
+
+Finished Output Generation At 6:09:28 PM On 8/6/2013

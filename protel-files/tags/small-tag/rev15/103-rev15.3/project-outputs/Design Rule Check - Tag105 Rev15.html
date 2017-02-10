@@ -1,0 +1,301 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body { 
+			font-family : verdana;
+		}
+		td, th {  
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;	
+		}
+		th { 
+			background-color : #A6CAF0;
+		
+		}
+		th.column1, td.column1 { 
+			text-align: left;
+			width : auto; 
+		}
+		table { 
+			width : 100%; 
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3 {
+			padding-top : 0.1em;
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top
+		}
+		.front_matter_column1 {
+			text-align : right;
+		}
+		.total_column1, .total_column {
+			font-weight : bold;	
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.front_matter_column2 {
+			text-align : center;
+		}
+		.front_matter_column3 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow 
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script></head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\PROGRAM FILES\ALTIUM DESIGNER 6\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">3/18/2008</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">4:55:44 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB" class="file"><acronym title="C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB">C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB</acronym></a></td>
+</tr>
+</table>
+<hr><a name="IDATAEWJ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAFBEWJ">Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDALBEWJ">Broken-Net Constraint ( (All) )</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAICEWJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAWEEWJ">Clearance Constraint (Gap=6mil) (All),(All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDANHEWJ">Short-Circuit Constraint (Allowed=Yes) (InNet('NetC21_2')),(InNet('NetC13_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDATHEWJ">Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">18</td>
+</tr>
+</table><br><hr><a name="IDALBEWJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Broken-Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5456.807mil|Location2.Y=9660.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5456.807mil|Location2.Y=9660.193mil|Absolute=True">Net NetC3_1</acronym></a><br>     Subnet : C22-2    <br>     Subnet : C21-2    <br>     Subnet : C23-2    <br>     Subnet : C3-1     <br>     Subnet : Q2-C     <br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAICEWJ"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5477.307mil|Location2.Y=9680.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5477.307mil|Location2.Y=9680.693mil|Absolute=True">Track (124mil,904mil)(124mil,914mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True">Pad C21-2(124mil,904mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True">Track (124mil,855mil)(124mil,904mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True">Pad C21-2(124mil,904mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5496.807mil|Location2.Y=9700.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5496.807mil|Location2.Y=9700.193mil|Absolute=True">Track (124mil,914mil)(153mil,943mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True">Pad C21-2(124mil,904mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.807mil|Location2.Y=9732.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.807mil|Location2.Y=9732.193mil|Absolute=True">Track (159mil,949mil)(159mil,972mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5540.307mil|Location2.Y=9743.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5540.307mil|Location2.Y=9743.693mil|Absolute=True">Pad C3-1(159mil,972mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True">Track (124mil,805mil)(124mil,855mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5373.307mil|Location2.Y=9576.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5373.307mil|Location2.Y=9576.693mil|Absolute=True">Pad C22-2(124mil,805mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.059mil|Location2.Y=9731.445mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.059mil|Location2.Y=9731.445mil|Absolute=True">Track (256.685mil,945.685mil)(256.685mil,973.819mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5542.125mil|Location2.Y=9745.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5542.125mil|Location2.Y=9745.512mil|Absolute=True">Pad Q2-C(256.685mil,973.819mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True">Track (124mil,805mil)(124mil,855mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True">Pad C23-2(124mil,855mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True">Track (124mil,855mil)(124mil,904mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True">Pad C23-2(124mil,855mil)  TopLayer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAWEEWJ"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Clearance Constraint (Gap=6mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5477.307mil|Location2.Y=9680.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5477.307mil|Location2.Y=9680.693mil|Absolute=True">Track (124mil,904mil)(124mil,914mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True">Pad C21-2(124mil,904mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True">Track (124mil,855mil)(124mil,904mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True">Pad C21-2(124mil,904mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5496.807mil|Location2.Y=9700.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5496.807mil|Location2.Y=9700.193mil|Absolute=True">Track (124mil,914mil)(153mil,943mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5472.307mil|Location2.Y=9675.693mil|Absolute=True">Pad C21-2(124mil,904mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5514.307mil|Location2.Y=9717.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5514.307mil|Location2.Y=9717.693mil|Absolute=True">Track (153mil,943mil)(159mil,949mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5540.307mil|Location2.Y=9743.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5540.307mil|Location2.Y=9743.693mil|Absolute=True">Pad C3-1(159mil,972mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.807mil|Location2.Y=9732.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.807mil|Location2.Y=9732.193mil|Absolute=True">Track (159mil,949mil)(159mil,972mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5540.307mil|Location2.Y=9743.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5540.307mil|Location2.Y=9743.693mil|Absolute=True">Pad C3-1(159mil,972mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True">Track (124mil,805mil)(124mil,855mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5373.307mil|Location2.Y=9576.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5373.307mil|Location2.Y=9576.693mil|Absolute=True">Pad C22-2(124mil,805mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.059mil|Location2.Y=9731.445mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5528.059mil|Location2.Y=9731.445mil|Absolute=True">Track (256.685mil,945.685mil)(256.685mil,973.819mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5542.125mil|Location2.Y=9745.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5542.125mil|Location2.Y=9745.512mil|Absolute=True">Pad Q2-C(256.685mil,973.819mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5398.307mil|Location2.Y=9601.693mil|Absolute=True">Track (124mil,805mil)(124mil,855mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True">Pad C23-2(124mil,855mil)  TopLayer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5447.807mil|Location2.Y=9651.193mil|Absolute=True">Track (124mil,855mil)(124mil,904mil)  TopLayer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev15\Tag105 Rev15.PCB;viewname=PCBEditor;Action=Area|Location1.X=8417.074mil|Location2.X=11435.208mil|Location1.Y=5423.307mil|Location2.Y=9626.693mil|Absolute=True">Pad C23-2(124mil,855mil)  TopLayer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

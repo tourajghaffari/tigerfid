@@ -1,0 +1,56 @@
+Protel Design System Design Rule Check
+PCB File : E:\ActiveWaveFiles 4-16-2008\Tag101\Tag101 Rev16\Tag101 Rev16.PCB
+Date     : 6/17/2008
+Time     : 1:57:59 PM
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC3_1')),(InNet('NetC13_2'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Pad R24-1(880mil,815mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Pad R24-2(940mil,815mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (969.72mil,843mil)(984.72mil,828mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (940mil,855mil)(952mil,843mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (952mil,843mil)(969.72mil,843mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (930mil,845mil)(940mil,855mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (921mil,845mil)(930mil,845mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (891mil,815mil)(921mil,845mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (880mil,815mil)(891mil,815mil)  TopLayer
+   Violation between Track (940mil,815mil)(969mil,786mil)  TopLayer and 
+                     Track (877mil,830mil)(965mil,830mil)  TopLayer
+Rule Violations :10
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Pad R24-1(880mil,815mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Pad R24-2(940mil,815mil)  TopLayer
+   Violation between Track (877mil,830mil)(965mil,830mil)  TopLayer and 
+                     Track (891mil,815mil)(921mil,845mil)  TopLayer
+Rule Violations :3
+
+Processing Rule : Broken-Net Constraint ( (All) )
+   Violation between Net NetR21_2 is broken into 2 sub-nets. Routed To 50.00%
+
+   Violation between Net NetC3_1 is broken into 5 sub-nets. Routed To 0.00%
+
+Rule Violations :2
+
+Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 15
+Time Elapsed        : 00:00:01

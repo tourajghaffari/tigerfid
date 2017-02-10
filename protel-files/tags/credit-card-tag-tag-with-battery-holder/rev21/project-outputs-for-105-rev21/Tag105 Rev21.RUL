@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: C:\ActiveWave\Protel Files\Tags\105 Credit Card Size with Batt Holder\Rev21\PCB\Tag105 Rev21.PCB
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=6.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=6.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00

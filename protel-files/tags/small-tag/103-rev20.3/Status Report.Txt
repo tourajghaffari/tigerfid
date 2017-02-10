@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Project [Free Documents]
+   Generated File[Pick Place for Tag103-Rev20Final-Panel.txt]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 1:13:09 PM On 12/21/2010

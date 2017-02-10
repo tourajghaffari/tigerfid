@@ -1,0 +1,4 @@
+Added Component: Designator=B1(BATT HOLDER1)
+Added Pin To Net: NetName=GND Pin=B1-1
+Added Pin To Net: NetName=3V Pin=B1-2
+Added Member To Class: ClassName=PAGE2 Member=Component B1 BATT HOLDER COIN CR2032 CUT

@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=NetTP14_1 Pin=TP14-1
+Added Pin To Net: NetName=NetTP14_1 Pin=TP15-1
+Added Net: Name=NetTP14_1
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP14 TP
+Added Member To Class: ClassName=Tag Test Fixture Member=Component TP15 TP

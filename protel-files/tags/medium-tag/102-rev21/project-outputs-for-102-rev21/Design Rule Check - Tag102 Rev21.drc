@@ -1,0 +1,37 @@
+Protel Design System Design Rule Check
+PCB File : C:\ActiveWave\Protel Files\Tags\102 Medium Size\Tag102.REV21\Tag102 Rev21.PcbDoc
+Date     : 8/1/2013
+Time     : 6:03:45 PM
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Track (-1730mil,-782mil)(14mil,-782mil)  BottomLayer
+   Violation between Net Antennae: Track (-1779mil,-259mil)(-1779mil,-49mil)  BottomLayer
+Rule Violations :2
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC13_2')),(InNet('NetC3_1'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=15mil) (MaxHoleWidth=20mil) (PreferredHoleWidth=15mil) (MinWidth=28mil) (MaxWidth=40mil) (PreferedWidth=28mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 2
+Time Elapsed        : 00:00:00

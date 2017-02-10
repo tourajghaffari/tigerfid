@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag101 Rev21new.PCB   8/5/2013  6:58:45 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Tag101 Rev21new.TXT
+EIA File   : Tag101 Rev21new.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        17mil (0.4318mm)         Round          95               297.94 Inch (7567.67 mm)
+T2        35mil (0.889mm)          Round          11               288.27 Inch (7321.99 mm)
+T3        122mil (3.0988mm)        Round          2                286.26 Inch (7270.97 mm)
+T4        78mil (1.9812mm)         Round          1         NPTH   284.57 Inch (7228.09 mm)
+T5        200mil (5.08mm)          Round          1         NPTH   285.04 Inch (7240.11 mm)
+---------------------------------------------------------------------------
+Totals                                            110              1442.08 Inch (36628.82 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
