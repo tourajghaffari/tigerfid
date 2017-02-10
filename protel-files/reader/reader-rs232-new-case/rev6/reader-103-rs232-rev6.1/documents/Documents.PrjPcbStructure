@@ -1,0 +1,44 @@
+Record=SheetSymbol|SourceDocument=Reader 103 Rev6.sch|Designator=Sheet2|SchDesignator=Sheet2|FileName=Sheet2.SCHDOC|SymbolType=Normal|RawFileName=Sheet2.SCHDOC|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=Reader 103 Rev6.sch|Designator=Sheet3|SchDesignator=Sheet3|FileName=Sheet3.SCHDOC|SymbolType=Normal|RawFileName=Sheet3.SCHDOC|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=Reader 103 Rev6.sch|Designator=Sheet4|SchDesignator=Sheet4|FileName=Sheet4.SCHDOC|SymbolType=Normal|RawFileName=Sheet4.SCHDOC|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SubProject|ProjectPath=_3
+Record=SubProject|ProjectPath=_12
+Record=SubProject|ProjectPath=_18
+Record=SubProject|ProjectPath=_22
+Record=SubProject|ProjectPath=_30
+Record=SubProject|ProjectPath=_31
+Record=SubProject|ProjectPath=_38
+Record=SubProject|ProjectPath=_50
+Record=SubProject|ProjectPath=_60
+Record=SubProject|ProjectPath=_70
+Record=SubProject|ProjectPath=_83
+Record=SubProject|ProjectPath=_84
+Record=SubProject|ProjectPath=_91
+Record=SubProject|ProjectPath=_92
+Record=SubProject|ProjectPath=_97
+Record=SubProject|ProjectPath=_104
+Record=SubProject|ProjectPath=_122
+Record=SubProject|ProjectPath=_126
+Record=SubProject|ProjectPath=_127
+Record=SubProject|ProjectPath=_133
+Record=SubProject|ProjectPath=_139
+Record=SubProject|ProjectPath=_140
+Record=SubProject|ProjectPath=_141
+Record=SubProject|ProjectPath=_153
+Record=SubProject|ProjectPath=_155
+Record=SubProject|ProjectPath=_160
+Record=SubProject|ProjectPath=_177
+Record=SubProject|ProjectPath=_178
+Record=SubProject|ProjectPath=_9
+Record=SubProject|ProjectPath=_19
+Record=SubProject|ProjectPath=_55
+Record=SubProject|ProjectPath=_66
+Record=SubProject|ProjectPath=_86
+Record=SubProject|ProjectPath=_87
+Record=SubProject|ProjectPath=_89
+Record=SubProject|ProjectPath=_93
+Record=SubProject|ProjectPath=_96
+Record=SubProject|ProjectPath=_107
+Record=SubProject|ProjectPath=_108
+Record=SubProject|ProjectPath=_109
+Record=TopLevelDocument|FileName=Reader 103 Rev6.sch

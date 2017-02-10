@@ -1,0 +1,194 @@
+Removed Pin From Net: NetName=+5VD Pin=C3-1
+Removed Pin From Net: NetName=GND_COM Pin=C3-2
+Removed Pin From Net: NetName=VREG Pin=C18-1
+Removed Pin From Net: NetName=+5VD Pin=C30-1
+Removed Pin From Net: NetName=GND_COM Pin=C30-2
+Removed Pin From Net: NetName=+5VD Pin=C37-1
+Removed Pin From Net: NetName=GND_COM Pin=C37-2
+Removed Pin From Net: NetName=+5VD Pin=C39-1
+Removed Pin From Net: NetName=GND_COM Pin=C39-2
+Removed Pin From Net: NetName=+5VD Pin=C42-1
+Removed Pin From Net: NetName=GND_COM Pin=C42-2
+Removed Pin From Net: NetName=SIN Pin=C46-1
+Removed Pin From Net: NetName=GND_COM Pin=C76-2
+Removed Pin From Net: NetName=GND_COM Pin=C77-2
+Removed Pin From Net: NetName=VREG Pin=D2-A
+Removed Pin From Net: NetName=GND_COM Pin=D11-K
+Removed Pin From Net: NetName=GND_COM Pin=FB1-1
+Removed Pin From Net: NetName=GND_COM Pin=J1-4
+Removed Pin From Net: NetName=GND_COM Pin=J3-4
+Removed Pin From Net: NetName=+5VD Pin=J3-5
+Removed Pin From Net: NetName=GND_COM Pin=J6-4
+Removed Pin From Net: NetName=+5VD Pin=J6-5
+Removed Pin From Net: NetName=GND_COM Pin=J8-4
+Removed Pin From Net: NetName=+5VD Pin=J8-5
+Removed Pin From Net: NetName=SOUT Pin=J17-1
+Removed Pin From Net: NetName=GND_COM Pin=J20-4
+Removed Pin From Net: NetName=+5VD Pin=K1-1
+Removed Pin From Net: NetName=+5VD Pin=K2-1
+Removed Pin From Net: NetName=+RY1 Pin=Q1-1
+Removed Pin From Net: NetName=+RY2 Pin=Q2-1
+Removed Pin From Net: NetName=GND_COM Pin=Q4-2
+Removed Pin From Net: NetName=GND_COM Pin=Q6-2
+Removed Pin From Net: NetName=+5VD Pin=R1-2
+Removed Pin From Net: NetName=GND_COM Pin=R3-1
+Removed Pin From Net: NetName=VREG Pin=R5-1
+Removed Pin From Net: NetName=+5VD Pin=R7-1
+Removed Pin From Net: NetName=GND_COM Pin=R15-2
+Removed Pin From Net: NetName=+5VD Pin=R17-1
+Removed Pin From Net: NetName=+5VD Pin=R18-1
+Removed Pin From Net: NetName=GND_COM Pin=R19-1
+Removed Pin From Net: NetName=GND_COM Pin=R26-2
+Removed Pin From Net: NetName=+5VD Pin=R27-1
+Removed Pin From Net: NetName=+5VD Pin=R28-1
+Removed Pin From Net: NetName=+5VD Pin=R29-1
+Removed Pin From Net: NetName=+5VD Pin=R30-1
+Removed Pin From Net: NetName=GND_COM Pin=R31-2
+Removed Pin From Net: NetName=+5VD Pin=R34-2
+Removed Pin From Net: NetName=GND_COM Pin=R37-2
+Removed Pin From Net: NetName=GND_COM Pin=R38-1
+Removed Pin From Net: NetName=+5VD Pin=R40-1
+Removed Pin From Net: NetName=SIN Pin=R42-2
+Removed Pin From Net: NetName=+5VD Pin=R45-2
+Removed Pin From Net: NetName=+5VD Pin=R46-2
+Removed Pin From Net: NetName=+5VD Pin=R47-2
+Removed Pin From Net: NetName=+5VD Pin=R48-2
+Removed Pin From Net: NetName=+5VD Pin=R49-2
+Removed Pin From Net: NetName=+5VD Pin=R50-2
+Removed Pin From Net: NetName=+5VD Pin=R53-2
+Removed Pin From Net: NetName=+5VD Pin=R54-1
+Removed Pin From Net: NetName=+5VD Pin=R55-2
+Removed Pin From Net: NetName=+5VD Pin=R58-2
+Removed Pin From Net: NetName=SOUT Pin=R69-2
+Removed Pin From Net: NetName=GND_COM Pin=S1-1
+Removed Pin From Net: NetName=GND_COM Pin=S1-2
+Removed Pin From Net: NetName=GND_COM Pin=S1-3
+Removed Pin From Net: NetName=GND_COM Pin=S1-4
+Removed Pin From Net: NetName=GND_COM Pin=TP15-1
+Removed Pin From Net: NetName=+5VD Pin=U1-3
+Removed Pin From Net: NetName=GND_COM Pin=U1-8
+Removed Pin From Net: NetName=GND_COM Pin=U1-9
+Removed Pin From Net: NetName=GND_COM Pin=U1-10
+Removed Pin From Net: NetName=GND_COM Pin=U1-11
+Removed Pin From Net: NetName=GND_COM Pin=U1-12
+Removed Pin From Net: NetName=3.3VDC Pin=U2-4
+Removed Pin From Net: NetName=GND_COM Pin=U3-8
+Removed Pin From Net: NetName=GND_COM Pin=U3-19
+Removed Pin From Net: NetName=+5VD Pin=U3-20
+Removed Pin From Net: NetName=GND_COM Pin=U4-8
+Removed Pin From Net: NetName=GND_COM Pin=U4-19
+Removed Pin From Net: NetName=+5VD Pin=U4-20
+Removed Pin From Net: NetName=+5VA Pin=U5-4
+Removed Pin From Net: NetName=+5VD Pin=U6-4
+Removed Pin From Net: NetName=-DI1_UP Pin=U9-3
+Removed Pin From Net: NetName=-DI1_FLT Pin=U9-4
+Removed Pin From Net: NetName=-DI2_UP Pin=U9-5
+Removed Pin From Net: NetName=-DI2_FLT Pin=U9-7
+Removed Pin From Net: NetName=GND_COM Pin=U9-8
+Removed Pin From Net: NetName=GND_COM Pin=U9-19
+Removed Pin From Net: NetName=+5VD Pin=U9-20
+Removed Pin From Net: NetName=GND_COM Pin=U10-8
+Removed Pin From Net: NetName=GND_COM Pin=U10-10
+Removed Pin From Net: NetName=GND_COM Pin=U10-11
+Removed Pin From Net: NetName=GND_COM Pin=U10-12
+Removed Pin From Net: NetName=GND_COM Pin=U10-13
+Removed Pin From Net: NetName=+5VD Pin=U10-16
+Removed Pin From Net: NetName=GND_COM Pin=U17-2
+Removed Pin From Net: NetName=+5VD Pin=U17-4
+Removed Pin From Net: NetName=+5VD Pin=U19-3
+Removed Pin From Net: NetName=SOUT Pin=U20-53
+Removed Pin From Net: NetName=GND_COM Pin=U23-4
+Removed Pin From Net: NetName=GND_COM Pin=U23-17
+Removed Pin From Net: NetName=GND_COM Pin=U23-20
+Removed Pin From Net: NetName=GND_COM Pin=U23-24
+Removed Pin From Net: NetName=GND_COM Pin=U23-26
+Change Net Name : Old Net Name=NetD3_K New Net Name=NetC19_1
+Change Net Name : Old Net Name=NetJ11_1 New Net Name=NetFB14_2
+Change Net Name : Old Net Name=NetJ11_2 New Net Name=NetFB15_2
+Change Net Name : Old Net Name=NetJ11_3 New Net Name=NetFB16_2
+Change Net Name : Old Net Name=NetJ11_4 New Net Name=NetFB17_2
+Change Net Name : Old Net Name=NetJ20_1 New Net Name=NetC76_1
+Change Net Name : Old Net Name=NetK1_4 New Net Name=NetC57_2
+Change Net Name : Old Net Name=NetK1_6 New Net Name=NetC57_1
+Change Net Name : Old Net Name=NetK1_8 New Net Name=NetC58_1
+Change Net Name : Old Net Name=NetK2_4 New Net Name=NetC59_2
+Change Net Name : Old Net Name=NetK2_6 New Net Name=NetC59_1
+Change Net Name : Old Net Name=NetK2_8 New Net Name=NetC60_1
+Change Net Name : Old Net Name=NetL2_2 New Net Name=NetC5_1
+Change Net Name : Old Net Name=NetQ1_3 New Net Name=NetK1_16
+Change Net Name : Old Net Name=NetQ2_3 New Net Name=NetK2_16
+Change Net Name : Old Net Name=NetQ4_3 New Net Name=NetJ8_3
+Change Net Name : Old Net Name=NetQ6_3 New Net Name=NetJ6_3
+Change Net Name : Old Net Name=NetR15_1 New Net Name=NetC36_2
+Change Net Name : Old Net Name=NetR27_2 New Net Name=NetD10_A
+Change Net Name : Old Net Name=NetR28_2 New Net Name=NetD8_A
+Change Net Name : Old Net Name=NetR29_2 New Net Name=NetD9_A
+Change Net Name : Old Net Name=NetR32_2 New Net Name=NetQ6_1
+Change Net Name : Old Net Name=NetR34_1 New Net Name=NetD11_A
+Change Net Name : Old Net Name=NetR45_1 New Net Name=NetJ1_2
+Change Net Name : Old Net Name=NetU3_17 New Net Name=NetR22_1
+Change Net Name : Old Net Name=NetU3_21 New Net Name=NetTP12_1
+Change Net Name : Old Net Name=NetU3_24 New Net Name=NetR19_2
+Change Net Name : Old Net Name=NetU3_26 New Net Name=NetTP4_1
+Change Net Name : Old Net Name=NetU3_27 New Net Name=NetJ3_2
+Change Net Name : Old Net Name=NetU3_28 New Net Name=NetJ3_1
+Change Net Name : Old Net Name=NetU4_2 New Net Name=NetC47_1
+Change Net Name : Old Net Name=NetU4_24 New Net Name=NetR26_1
+Change Net Name : Old Net Name=NetU4_26 New Net Name=NetC45_1
+Change Net Name : Old Net Name=NetU4_27 New Net Name=NetJ6_2
+Change Net Name : Old Net Name=NetU4_28 New Net Name=NetJ6_1
+Change Net Name : Old Net Name=NetU8_1 New Net Name=NetC17_1
+Change Net Name : Old Net Name=NetU8_7 New Net Name=NetC18_2
+Change Net Name : Old Net Name=NetU8_8 New Net Name=NetC16_1
+Change Net Name : Old Net Name=NetU9_2 New Net Name=NetC43_1
+Change Net Name : Old Net Name=NetU9_6 New Net Name=NetD8_K
+Change Net Name : Old Net Name=NetU9_9 New Net Name=NetJ19_1
+Change Net Name : Old Net Name=NetU9_13 New Net Name=NetC40_1
+Change Net Name : Old Net Name=NetU9_14 New Net Name=NetC50_1
+Change Net Name : Old Net Name=NetU9_15 New Net Name=NetC51_1
+Change Net Name : Old Net Name=NetU9_16 New Net Name=NetD3_A
+Change Net Name : Old Net Name=NetU9_18 New Net Name=NetJ1_3
+Change Net Name : Old Net Name=NetU9_21 New Net Name=NetTP8_1
+Change Net Name : Old Net Name=NetU9_22 New Net Name=NetTP22_1
+Change Net Name : Old Net Name=NetU9_23 New Net Name=NetTP2_1
+Change Net Name : Old Net Name=NetU9_24 New Net Name=NetR31_1
+Change Net Name : Old Net Name=NetU9_25 New Net Name=NetR38_2
+Change Net Name : Old Net Name=NetU9_26 New Net Name=NetTP1_1
+Change Net Name : Old Net Name=NetU9_27 New Net Name=NetJ8_2
+Change Net Name : Old Net Name=NetU9_28 New Net Name=NetJ8_1
+Change Net Name : Old Net Name=NetU10_1 New Net Name=NetU4_7
+Change Net Name : Old Net Name=NetU10_2 New Net Name=NetU4_22
+Change Net Name : Old Net Name=NetU10_9 New Net Name=NetU4_23
+Change Net Name : Old Net Name=NetU12_AC1 New Net Name=NetD5_2
+Change Net Name : Old Net Name=NetU12_AC2 New Net Name=NetD5_1
+Change Net Name : Old Net Name=NetU20_52 New Net Name=NetJ18_1
+Change Net Name : Old Net Name=NetU20_61 New Net Name=NetR62_2
+Change Net Name : Old Net Name=NetU20_62 New Net Name=NetR68_1
+Change Net Name : Old Net Name=NetU20_63 New Net Name=NetR63_2
+Change Net Name : Old Net Name=NetU20_67 New Net Name=NetR64_2
+Change Net Name : Old Net Name=NetU21_1 New Net Name=NetJ15_8
+Change Net Name : Old Net Name=NetU21_2 New Net Name=NetJ15_7
+Change Net Name : Old Net Name=NetU23_2 New Net Name=NetR22_2
+Change Net Name : Old Net Name=NetU23_30 New Net Name=NetR23_2
+Added Pin To Net: NetName=NetC17_2 Pin=C17-2
+Added Pin To Net: NetName=NetC17_2 Pin=D1-K
+Added Net: Name=NetC17_2
+Added Pin To Net: NetName=NetC18_1 Pin=C18-1
+Added Pin To Net: NetName=NetC18_1 Pin=D2-A
+Added Pin To Net: NetName=NetC18_1 Pin=R5-1
+Added Net: Name=NetC18_1
+Added Pin To Net: NetName=NetC77_1 Pin=C77-1
+Added Pin To Net: NetName=NetC77_1 Pin=U23-16
+Added Net: Name=NetC77_1
+Added Pin To Net: NetName=NetL3_1 Pin=L3-1
+Added Pin To Net: NetName=NetL3_1 Pin=U8-3
+Added Net: Name=NetL3_1
+Added Pin To Net: NetName=NetU23_8 Pin=U23-8
+Added Pin To Net: NetName=NetU23_8 Pin=U23-32
+Added Net: Name=NetU23_8
+Added Class: Name=Sheet2
+Added Class: Name=Sheet3
+Added Class: Name=Sheet4
+Added Room: Name=Sheet2
+Added Room: Name=Sheet3
+Added Room: Name=Sheet4

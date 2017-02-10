@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=..\..\..\..\ParkingMeter\Sharp Display NFC Parking Meter\ParkingMeter Sharp NFC Rev0\ParkingMeter-Sharp-NFC-Rev0.PrjPCB
+[Project2]
+ProjectPath=..\..\..\..\ParkingMeter\E-Ink Display NFC Parking Meter\ParkingMeterRev0\ParkingMeterRev0.PrjPCB

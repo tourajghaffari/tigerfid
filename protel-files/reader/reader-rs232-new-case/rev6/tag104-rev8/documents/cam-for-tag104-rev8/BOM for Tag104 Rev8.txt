@@ -1,0 +1,87 @@
+Bill Of Material For Tag104 Rev8.PCB
+On 29-Jul-2005 at 12:22:31
+
+ Comment             Pattern     Quantity  Components
+------------------------------------------------------------------------------
+
+
+ 0.1 uF              0603             4    C1, C15, C17, C24
+
+ 0.18 uH             0603             1    L3
+
+ 0.33 uH             0603             1    L6
+
+ 1 K                 0603             1    R20
+
+ 1 M                 0603             2    R1, R2
+
+ 10                  0603             2    R12, R13
+
+ 10 pF               0603             1    C4
+
+ 100 pF              0603             2    C6, C7
+
+ 1000 pF             0603             4    C8, C9, C10, C11
+
+ 1K                  0603             1    R21
+
+ 2 pF +/- .1 pf      0603             3    C2, C3, C21
+
+ 2.7 K               0603             2    R17, R18
+
+ 200                 0603             1    R22
+
+ 22                  0603             1    R6
+
+ 24AAXX              SO8              1    U4
+
+ 2N7002              SOT23 TRANS      1    Q4
+
+ 2N7002LT1           SOT23 TRANS      1    Q3
+
+ 3.3 nH              0603             1    L2
+
+ 33 pF               0603             1    C12
+
+ 33 pF +/- .1 pf     0603             1    C13
+
+ 330                 0603             1    R15
+
+ 39 K                0603             5    R3, R4, R5, R9, R10
+
+ 4.7 K               0603             2    R8, R19
+
+ 4.7 uF              CAP A CASE       1    C20
+
+ 470                 0603             1    R14
+
+ 470 K               0603             1    R16
+
+ 5 pF +/- .1 pF      0603             1    C19
+
+ 6.8 K               0603             1    R7
+
+ 68                  0603             1    R11
+
+ 916.5_Resonator     RESONATOR        1    Y1
+
+ A3212               SOT23W           1    U7
+
+ BATT HOLDER COIN CR2BATT HOLDER COIN CR2032 CUT     1    B1A
+
+ DNS                 0603             2    C22, C23
+
+ LED                 LED 0603         1    D1
+
+ MIC862              SOT23-8          1    U6
+
+ NE85619             3 PIN ULTRA SUPER MINI MOLD     2    Q1, Q2
+
+ PIC16F648A          SSOP20 WIDE      1    U1
+
+ TC1070              SOT23-5A         1    U5
+
+ TC54                SOT23            1    U2
+
+ TP                  TEST POINT PAD 5     4    J7, J9, J10, J11
+

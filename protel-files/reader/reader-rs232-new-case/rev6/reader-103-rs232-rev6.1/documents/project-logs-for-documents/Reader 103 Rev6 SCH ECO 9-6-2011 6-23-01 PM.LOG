@@ -1,0 +1,75 @@
+Change Component Footprint: Designator=J3 Old Footprint=1X5 HEADER New Footprint=HDR5
+Change Component Footprint: Designator=J6 Old Footprint=1X5 HEADER New Footprint=HDR5
+Change Component Footprint: Designator=J8 Old Footprint=1X5 HEADER New Footprint=HDR5
+Change Component Footprint: Designator=J10 Old Footprint=1X10 HEADER New Footprint=HDR_10
+Change Component Footprint: Designator=J1 Old Footprint=2X3 HEADER New Footprint=HDR3X2
+Change Component Footprint: Designator=C76 Old Footprint=0603 New Footprint=0805
+Change Component Footprint: Designator=C52 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=C53 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=C54 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=C55 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=C56 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R50 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R51 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R52 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R53 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R54 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R55 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R56 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R57 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R58 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R59 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R60 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=R61 Old Footprint=0805 New Footprint=0603
+Change Component Footprint: Designator=C40 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=C43 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=C45 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=C46 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=C47 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=C50 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=C51 Old Footprint=C0603 New Footprint=0603
+Change Component Footprint: Designator=J2 Old Footprint=CONN PHOENIX 1803227-2 New Footprint=CONN PHOENIX 1844210-2
+Change Component Footprint: Designator=J11 Old Footprint=CONN PHOENIX 1803293-4 New Footprint=CONN PHOENIX 1844236-4
+Change Component Footprint: Designator=R16 Old Footprint=R0603 New Footprint=0603
+Change Component Footprint: Designator=R20 Old Footprint=R0603 New Footprint=0603
+Change Component Footprint: Designator=R24 Old Footprint=R0603 New Footprint=0603
+Change Component Footprint: Designator=R25 Old Footprint=R0603 New Footprint=0603
+Change Component Footprint: Designator=R36 Old Footprint=R0603 New Footprint=0603
+Change Component Footprint: Designator=R42 Old Footprint=R0603 New Footprint=0603
+Change Component Footprint: Designator=R21 Old Footprint=R-603 New Footprint=0603
+Change Component Footprint: Designator=C57 Old Footprint=SM/C_0805 New Footprint=0603
+Change Component Footprint: Designator=C58 Old Footprint=SM/C_0805 New Footprint=0603
+Change Component Footprint: Designator=C59 Old Footprint=SM/C_0805 New Footprint=0603
+Change Component Footprint: Designator=C60 Old Footprint=SM/C_0805 New Footprint=0603
+Change Component Footprint: Designator=FB18 Old Footprint=SM/R_1206 New Footprint=0603
+Change Component Footprint: Designator=FB19 Old Footprint=SM/R_1206 New Footprint=0603
+Change Component Footprint: Designator=FB20 Old Footprint=SM/R_1206 New Footprint=0603
+Change Component Footprint: Designator=FB21 Old Footprint=SM/R_1206 New Footprint=0603
+Change Component Footprint: Designator=FB22 Old Footprint=SM/R_1206 New Footprint=0603
+Change Component Footprint: Designator=FB23 Old Footprint=SM/R_1206 New Footprint=0603
+Change Component Footprint: Designator=Q4 Old Footprint=SOT23 TRANS New Footprint=SOT-23
+Change Component Footprint: Designator=Q6 Old Footprint=SOT23 TRANS New Footprint=SOT-23
+Change Component Footprint: Designator=U2 Old Footprint=SOT223 REG GOI New Footprint=SOT223 REG
+Change Component Footprint: Designator=TP1 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP2 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP4 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP5 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP8 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP9 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP10 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP11 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP12 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP13 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP14 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP15 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP20 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP22 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP23 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP24 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP25 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP26 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Footprint: Designator=TP27 Old Footprint=TESTPOINT-1 New Footprint=TEST POINT PAD 3
+Change Component Comment: Designator=J20 Old Comment=CON4 New Comment=USB CONN
+Change Component Comment: Designator=J2 Old Comment=PHOENIX 1937499 New Comment=PHOENIX 1844210
+Change Component Comment: Designator=J11 Old Comment=PHOENIX 1937512 New Comment=PHOENIX 1844236
+Change Component Comment: Designator=J12 Old Comment=PHOENIX 1953415 New Comment=PHOENIX 1953211

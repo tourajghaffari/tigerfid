@@ -1,0 +1,32 @@
+Protel Design System Design Rule Check
+PCB File : Documents\Tag104 Rev8.PCB
+Date     : 19-Jul-2005
+Time     : 17:58:58
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (On the board )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Prefered=8mil) (On the board )
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (On the board ) )
+   Violation         Net NetC13_2   is broken into 2 sub-nets. Routed To 75.00%
+     Subnet : C21-1    C22-1    C23-1         Subnet : R13-2    C13-2    Rule Violations :1
+
+Processing Rule : Short-Circuit Constraint (Allowed=Not Allowed) (On the board ),(On the board )
+   Violation between Track (761.866mil,559.134mil)(761.866mil,610.913mil)  TopLayer and                      Pad U1-13(761.866mil,610.913mil)  TopLayer   
+   Violation between Track (787.457mil,610.913mil)(787.457mil,697.543mil)  TopLayer and                      Pad U1-14(787.457mil,610.913mil)  TopLayer   
+   Violation between Track (55mil,489mil)(55mil,524mil)  TopLayer and                      Track (30mil,524mil)(90mil,524mil)  TopLayer   
+   Violation between Track (90mil,524mil)(90mil,557mil)  TopLayer and                      Track (30mil,524mil)(90mil,524mil)  TopLayer   
+   Violation between Via (90mil,524mil) TopLayer to MidLayer1 and                      Track (30mil,524mil)(90mil,524mil)  TopLayer   
+Rule Violations :5
+
+Processing Rule : Clearance Constraint (Gap=8mil) (On the board ),(On the board )
+   Violation between Track (55mil,489mil)(55mil,524mil)  TopLayer and                      Track (30mil,524mil)(90mil,524mil)  TopLayer   
+   Violation between Track (90mil,524mil)(90mil,557mil)  TopLayer and                      Track (30mil,524mil)(90mil,524mil)  TopLayer   
+   Violation between Via (90mil,524mil) TopLayer to MidLayer1 and                      Track (30mil,524mil)(90mil,524mil)  TopLayer   
+Rule Violations :3
+
+
+Violations Detected : 9
+Time Elapsed        : 00:00:01

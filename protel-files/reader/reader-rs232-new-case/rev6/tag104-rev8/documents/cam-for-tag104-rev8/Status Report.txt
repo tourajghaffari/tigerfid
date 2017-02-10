@@ -1,0 +1,41 @@
+CAM Outputs Generation Report
+for 'CAM Outputs for Tag104 Rev8.cam'
+at 12:22:24 on 29-Jul-2005
+
+
+'NC Drill Output 1'
+'Tag104 Rev8.TXT' generated
+'Tag104 Rev8.DRL' generated
+'Tag104 Rev8.TX1' generated
+'Tag104 Rev8.DR1' generated
+'Tag104 Rev8.TX2' generated
+'Tag104 Rev8.DR2' generated
+'Tag104 Rev8.DRR' generated
+
+'Gerber Output 1'
+'Tag104 Rev8.GTL' generated
+'Tag104 Rev8.G1' generated
+'Tag104 Rev8.G2' generated
+'Tag104 Rev8.GBL' generated
+'Tag104 Rev8.GTO' generated
+'Tag104 Rev8.GBO' generated
+'Tag104 Rev8.GTP' generated
+'Tag104 Rev8.GBP' generated
+'Tag104 Rev8.GTS' generated
+'Tag104 Rev8.GBS' generated
+'Tag104 Rev8.GM2' generated
+'Tag104 Rev8.GM4' generated
+'Tag104 Rev8.GM5' generated
+'Tag104 Rev8.GPT' generated
+'Tag104 Rev8.GPB' generated
+'Tag104 Rev8.GD1' generated
+'Tag104 Rev8.GG1' generated
+'Tag104 Rev8.REP' generated
+
+'Bom Output 1'
+'BOM for Tag104 Rev8.bom' generated
+'BOM for Tag104 Rev8.txt' generated
+'BOM for Tag104 Rev8.csv' generated
+
+
+Total number of generated files = 28

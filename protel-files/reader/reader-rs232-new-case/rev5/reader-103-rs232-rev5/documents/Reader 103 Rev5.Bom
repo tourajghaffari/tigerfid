@@ -1,0 +1,131 @@
+Bill of Material for Reader 103 Rev5.Bom
+
+Used Part Type                              Designator Footprint                 Description           
+==== ====================================== ========== ========================= ===================== 
+24   .1uF                                   C1 C2 C6   0603                      Capacitor             
+                                            C7 C9 C10                                                  
+                                            C15 C16                                                    
+                                            C17 C61                                                    
+                                            C62 C63                                                    
+                                            C64 C65                                                    
+                                            C66 C67                                                    
+                                            C68 C69                                                    
+                                            C70 C71                                                    
+                                            C72 C73                                                    
+                                            C74 C75                                                    
+5    0.1                                    C52 C53    0805                                            
+                                            C54 C55                                                    
+                                            C56                                                        
+12   0.1uF                                  C3 C4 C5   0603                                            
+                                            C21 C22                                                    
+                                            C30 C32                                                    
+                                            C33 C34                                                    
+                                            C37 C39                                                    
+                                            C42                                                        
+1    0 Ohm                                  R69        0603                                            
+1    1.2K                                   R1         0603                                            
+2    1.5K                                   R51 R54    0805                                            
+4    1K                                     R58 R59    0805                                            
+                                            R60 R61                                                    
+2    1N4148                                 D2 D3      SOD123                    Diode                 
+1    1X5 HEADER                             J8         1X5 HEADER                                      
+1    1X10 HEADER                            J10        1X10 HEADER                                     
+2    2N3904                                 Q4 Q6      SOT23 TRANS                                     
+1    2X3 HEADER                             J1         2X3 HEADER                                      
+1    2X5 HEADER                             J15        2X5 HEADER                                      
+2    6.8K                                   R32 R33    0603                                            
+1    10                                     R42        R0603                                           
+1    10                                     R21        R-603                                           
+24   10K                                    R4 R7 R17  0603                                            
+                                            R18 R19                                                    
+                                            R26 R30                                                    
+                                            R31 R37                                                    
+                                            R38 R39                                                    
+                                            R40 R45                                                    
+                                            R46 R47                                                    
+                                            R48 R49                                                    
+                                            R62 R63                                                    
+                                            R64 R65                                                    
+                                            R66 R67                                                    
+                                            R68                                                        
+4    10K                                    R50 R52    0805                                            
+                                            R53 R55                                                    
+2    10uF                                   C11 C12    CAP A CASE                Capacitor             
+1    15uH                                   L3         COIL COILTRONICS UP2B-150                       
+1    22uF                                   C8         CAP A CASE                Capacitor             
+1    33                                     R70        0603                                            
+7    47pF                                   C40 C43    C0603                                           
+                                            C45 C46                                                    
+                                            C47 C50                                                    
+                                            C51                                                        
+2    100                                    R56 R57    0805                                            
+5    100                                    R16 R20    R0603                                           
+                                            R24 R25                                                    
+                                            R36                                                        
+2    100 nH                                 L1 L2      0603                                            
+2    100pF                                  C19 C36    0603                      Capacitor             
+4    100pF                                  C57 C58    SM/C_0805                                       
+                                            C59 C60                                                    
+2    100uF                                  C13 C14    CAP D CASE                Capacitor             
+1    120                                    R28        0603                                            
+1    150                                    R15        0603                                            
+1    180                                    R29        0603                                            
+2    330                                    R27 R34    0603                                            
+1    470                                    R2         0603                                            
+1    820                                    R3         0603                                            
+1    3300pF                                 C18        0603                      Capacitor             
+1    74165                                  U10        SO16                                            
+2    ??                                     R5 R6      0603                                            
+1    ALTERA EP1C3T100                       U20        TQFP100                                         
+1    AWI501C                                U4         PIC16F870                                       
+1    AWI501D                                U3         SSOP-28                                         
+1    AWI501E                                U9         PIC16F870                                       
+1    B230DICT-ND                            D1         DIODE SMB                 Schottky Diode        
+1    BLED                                   D9         LED TH                                          
+1    BRIDGE 100V 0.5A                       U12        BRIDGE                    Diode Bridge          
+1    CRY-16-MHZ                             U17        CRY-SMD-5-7                                     
+1    DB9FL                                  J7         DB9FL                                           
+1    EPCS1SI8/M25P40                        U21        SO8                                             
+16   FB                                     FB1 FB2    0603                                            
+                                            FB3 FB4                                                    
+                                            FB6 FB7                                                    
+                                            FB8 FB9                                                    
+                                            FB10 FB11                                                  
+                                            FB12 FB13                                                  
+                                            FB14 FB15                                                  
+                                            FB16 FB17                                                  
+6    FB                                     FB18 FB19  SM/R_1206                                       
+                                            FB20 FB21                                                  
+                                            FB22 FB23                                                  
+1    GLED                                   D8         LED TH                                          
+2    HDR5                                   J3 J6      1X5 HEADER                                      
+1    LM339                                  U1         SO14                      Operational Amplifier 
+2    LM339A                                 U18 U19    SO14                                            
+1    MAX202CSE                              U7         SO16                                            
+1    NCP1086-33T3                           U2         SOT223 REG GOI                                  
+2    NCP1117-ST50T3                         U5 U6      SOT223 REG                                      
+2    NUD3112                                Q1 Q2      SOT23                                           
+2    OMR_G5V_2                              K1 K2      RELAY44                                         
+1    P0300SARP                              D5         TRANSORB_1                                      
+1    PHOENIX 1937499                        J2         CONN PHOENIX 1803227-2    Connector             
+1    PHOENIX 1937512                        J11        CONN PHOENIX 1803293-4                          
+1    PHOENIX 1953415                        J12        CONN PHOENIX 1953211-6    Connector             
+1    REG ONSEMI CS51414                     U8         SO8                                             
+1    RJ11                                   J5         RJ11                      Connector             
+2    RLED                                   D10 D11    LED TH                                          
+1    SWITCH 4 POS SPST                      S1         SWITCH 4 POS SPST                               
+21   TP                                     TP1 TP2    TESTPOINT-1                                     
+                                            TP3 TP4                                                    
+                                            TP5 TP8                                                    
+                                            TP9 TP10                                                   
+                                            TP11 TP12                                                  
+                                            TP13 TP14                                                  
+                                            TP15 TP19                                                  
+                                            TP20 TP22                                                  
+                                            TP23 TP24                                                  
+                                            TP25 TP26                                                  
+                                            TP27                                                       
+4    TP                                     J16 J17    TEST POINT PAD 3          Connector             
+                                            J18 J19                                                    
+1    TPS73615DCQ                            U22        SOT223-5                                        
+1    XPORT RJ45                             J4         CONN XPORT                                      

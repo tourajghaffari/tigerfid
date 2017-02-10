@@ -1,0 +1,8 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=Documents\Documents.PrjPcb
+[Project2]
+ProjectPath=..\..\Rev6\Reader 103 RS232 Rev6\Documents\Documents.PrjPcb
+[Project3]
+ProjectPath=..\..\..\..\Seal Tag\New Rev-2\Tag201-Rev2.PrjPCB

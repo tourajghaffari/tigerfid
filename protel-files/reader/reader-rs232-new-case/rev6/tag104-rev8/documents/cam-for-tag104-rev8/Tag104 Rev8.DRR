@@ -1,0 +1,45 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag104 Rev8.PCB   29-Jul-2005  12:22:24
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : TopLayer to BottomLayer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        15mil (0.381mm)          5                1.23 Inch (31.23 mm)
+T3        33mil (0.8382mm)         4                2.73 Inch (69.28 mm)
+T4        40mil (1.016mm)          1                1.02 Inch (25.81 mm)
+T5        60mil (1.524mm)          2         NPTH   1.31 Inch (33.30 mm)
+---------------------------------------------------------------------------
+Totals                             12               6.28 Inch (159.62 mm)
+
+
+Layer Pair : TopLayer to MidLayer1
+ASCII File : NCDrillOutput.TX1
+EIA File   : NCDrillOutput.DR1
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        15mil (0.381mm)          44               6.54 Inch (166.23 mm)
+T2        18mil (0.4572mm)         1                0.35 Inch (8.85 mm)
+---------------------------------------------------------------------------
+Totals                             45               6.89 Inch (175.08 mm)
+
+
+Layer Pair : MidLayer2 to BottomLayer
+ASCII File : NCDrillOutput.TX2
+EIA File   : NCDrillOutput.DR2
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        15mil (0.381mm)          3                0.79 Inch (19.94 mm)
+---------------------------------------------------------------------------
+Totals                             3                0.79 Inch (19.94 mm)
+---------------------------------------------------------------------------
+Totals                             60               13.96 Inch (354.63 mm)
+
+Total Processing Time : 00:00:01

@@ -1,0 +1,56 @@
+Protel Design System Design Rule Check
+PCB File : Documents\Handheld Reader6.PCB
+Date     : 18-Jul-2005
+Time     : 16:26:23
+
+Processing Rule : Clearance Constraint (Gap=8mil) (Is on net GND_SIGNAL ),(On the board )
+   Violation between Pad J2-3(-2130.165mil,-693.323mil)  MultiLayer and                      Track (-2130.165mil,-693.323mil)(-2081.397mil,-742.091mil)  BottomLayer   
+   Violation between Pad J2-2(-2130.165mil,-443.323mil)  MultiLayer and                      Track (-2130.165mil,-443.324mil)(-2084.397mil,-489.092mil)  BottomLayer   
+   Violation between Pad J2-3(-2130.165mil,-693.323mil)  MultiLayer and                      Track (-2130.165mil,-693.323mil)(-2084.397mil,-647.556mil)  BottomLayer   
+Rule Violations :3
+
+Processing Rule : Clearance Constraint (Gap=6mil) (On the board ),(On the board )
+   Violation between Track (-800.488mil,-275.849mil)(-800.488mil,-217.912mil)  TopLayer and                      Pad L13-1(-800.488mil,-217.912mil)  TopLayer   
+   Violation between Track (-420.315mil,-1566.771mil)(-420.315mil,-1508.834mil)  TopLayer and                      Pad L5-1(-420.315mil,-1566.771mil)  TopLayer   
+   Violation between Track (-800.488mil,-275.849mil)(-800.488mil,-217.912mil)  TopLayer and                      Pad C42-1(-800.551mil,-217.849mil)  TopLayer   
+   Violation between Track (-800.614mil,-157.787mil)(-800.488mil,-217.912mil)  TopLayer and                      Track (-800.488mil,-275.849mil)(-800.488mil,-217.912mil)  TopLayer   
+   Violation between Track (-441.252mil,-1566.835mil)(-420.252mil,-1566.835mil)  TopLayer and                      Track (-420.315mil,-1566.771mil)(-420.315mil,-1508.834mil)  TopLayer   
+   Violation between Pad J2-8(-2130.165mil,-1193.323mil)  MultiLayer and                      Track (-2130.165mil,-1193.323mil)(-2081.165mil,-1242.323mil)  MidLayer2   
+   Violation between Pad J2-5(-2130.165mil,-893.323mil)  MultiLayer and                      Track (-2130.165mil,-893.323mil)(-2055.397mil,-968.091mil)  MidLayer2   
+   Violation between Pad J2-6(-2130.165mil,-993.323mil)  MultiLayer and                      Track (-2130.165mil,-993.323mil)(-2083.397mil,-1040.091mil)  MidLayer2   
+   Violation between Pad J2-9(-2130.165mil,-1293.323mil)  MultiLayer and                      Track (-2130.165mil,-1293.323mil)(-2084.397mil,-1339.091mil)  BottomLayer   
+   Violation between Pad J2-10(-2130.165mil,-1393.323mil)  MultiLayer and                      Track (-2130.165mil,-1563.437mil)(-2130.165mil,-1393.323mil)  BottomLayer   
+   Violation between Pad J2-7(-2130.165mil,-1093.323mil)  MultiLayer and                      Track (-2178.397mil,-1141.556mil)(-2130.165mil,-1093.323mil)  BottomLayer   
+   Violation between Pad J2-4(-2130.165mil,-793.323mil)  MultiLayer and                      Track (-2203.397mil,-866.556mil)(-2130.165mil,-793.323mil)  BottomLayer   
+   Violation between Pad J2-1(-2130.165mil,-343.323mil)  MultiLayer and                      Track (-2130.165mil,-343.324mil)(-2069.278mil,-343.324mil)  BottomLayer   
+Rule Violations :13
+
+Processing Rule : Short-Circuit Constraint (Allowed=Not Allowed) (On the board ),(On the board )
+   Violation between Track (-800.488mil,-275.849mil)(-800.488mil,-217.912mil)  TopLayer and                      Pad L13-1(-800.488mil,-217.912mil)  TopLayer   
+   Violation between Track (-420.315mil,-1566.771mil)(-420.315mil,-1508.834mil)  TopLayer and                      Pad L5-1(-420.315mil,-1566.771mil)  TopLayer   
+   Violation between Track (-800.488mil,-275.849mil)(-800.488mil,-217.912mil)  TopLayer and                      Pad C42-1(-800.551mil,-217.849mil)  TopLayer   
+   Violation between Track (-800.614mil,-157.787mil)(-800.488mil,-217.912mil)  TopLayer and                      Track (-800.488mil,-275.849mil)(-800.488mil,-217.912mil)  TopLayer   
+   Violation between Track (-441.252mil,-1566.835mil)(-420.252mil,-1566.835mil)  TopLayer and                      Track (-420.315mil,-1566.771mil)(-420.315mil,-1508.834mil)  TopLayer   
+   Violation between Pad J2-8(-2130.165mil,-1193.323mil)  MultiLayer and                      Track (-2130.165mil,-1193.323mil)(-2081.165mil,-1242.323mil)  MidLayer2   
+   Violation between Pad J2-5(-2130.165mil,-893.323mil)  MultiLayer and                      Track (-2130.165mil,-893.323mil)(-2055.397mil,-968.091mil)  MidLayer2   
+   Violation between Pad J2-6(-2130.165mil,-993.323mil)  MultiLayer and                      Track (-2130.165mil,-993.323mil)(-2083.397mil,-1040.091mil)  MidLayer2   
+   Violation between Pad J2-3(-2130.165mil,-693.323mil)  MultiLayer and                      Track (-2130.165mil,-693.323mil)(-2081.397mil,-742.091mil)  BottomLayer   
+   Violation between Pad J2-2(-2130.165mil,-443.323mil)  MultiLayer and                      Track (-2130.165mil,-443.324mil)(-2084.397mil,-489.092mil)  BottomLayer   
+   Violation between Pad J2-3(-2130.165mil,-693.323mil)  MultiLayer and                      Track (-2130.165mil,-693.323mil)(-2084.397mil,-647.556mil)  BottomLayer   
+   Violation between Pad J2-9(-2130.165mil,-1293.323mil)  MultiLayer and                      Track (-2130.165mil,-1293.323mil)(-2084.397mil,-1339.091mil)  BottomLayer   
+   Violation between Pad J2-10(-2130.165mil,-1393.323mil)  MultiLayer and                      Track (-2130.165mil,-1563.437mil)(-2130.165mil,-1393.323mil)  BottomLayer   
+   Violation between Pad J2-7(-2130.165mil,-1093.323mil)  MultiLayer and                      Track (-2178.397mil,-1141.556mil)(-2130.165mil,-1093.323mil)  BottomLayer   
+   Violation between Pad J2-4(-2130.165mil,-793.323mil)  MultiLayer and                      Track (-2203.397mil,-866.556mil)(-2130.165mil,-793.323mil)  BottomLayer   
+   Violation between Pad J2-1(-2130.165mil,-343.323mil)  MultiLayer and                      Track (-2130.165mil,-343.324mil)(-2069.278mil,-343.324mil)  BottomLayer   
+Rule Violations :16
+
+Processing Rule : Broken-Net Constraint ( (On the board ) )
+   Violation         Net +5V   is broken into 2 sub-nets. Routed To 96.97%
+     Subnet : R31-1    Q2-E     FB4-1    R19-1    J2-8     L7-1     U5-8     C26-1    U5-3     R20-1                  U6-4          Subnet : R5-2     FB4-2    U11-5    U8-5     R45-2    R7-2     R44-2    C18-1    U3-5     U4-5                   R47-2    U10-4    U10-8    R53-2    R28-2    R3-2     U9-4     R41-2    R38-2    U9-8     C53-1                  R43-1    R34-1    Rule Violations :1
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Prefered=22mil) (On the board )
+Rule Violations :0
+
+
+Violations Detected : 33
+Time Elapsed        : 00:00:30

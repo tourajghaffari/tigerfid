@@ -1,0 +1,483 @@
+*************************************************************
+FileName = Tag104 Rev8.GBR
+AutoAperture = True
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GTL
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.G1
+
+    Adding Layer      : MidLayer1
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D14
+    D24
+    D25
+    D26
+    D28
+    D31
+    D33
+    D34
+    D35
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.G2
+
+    Adding Layer      : MidLayer2
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D14
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D35
+    D38
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GBL
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D14
+    D24
+    D25
+    D26
+    D30
+    D31
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GTO
+
+    Adding Layer      : TopOverlay
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D27
+    D30
+    D31
+    D33
+    D34
+    D43
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GBO
+
+    Adding Layer      : BottomOverlay
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D30
+    D31
+    D33
+    D34
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GTP
+
+    Adding Layer      : TopPaste
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GBP
+
+    Adding Layer      : BottomPaste
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D40
+    D41
+    D42
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GTS
+
+    Adding Layer      : TopSolder
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GBS
+
+    Adding Layer      : BottomSolder
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GM2
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GM4
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : Tag104 Rev8.GM5
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : Tag104 Rev8.GPT
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D35
+    D36
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : Tag104 Rev8.GPB
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D35
+    D36
+    D37
+    D40
+    D41
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Tag104 Rev8.GD1
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : DrillDrawing
+
+    Adding Drill Pair : TopLayer-BottomLayer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D43
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : Tag104 Rev8.GG1
+
+    Adding Layer      : DrillGuide
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Drill Pair : TopLayer-BottomLayer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D31
+    D33
+    D34
+    D43
+*************************************************************
+

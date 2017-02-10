@@ -1,0 +1,30 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Reader 103 RS-232 Rev6.PCB   9/7/2011  8:26:35 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Reader 103 RS-232 Rev6.TXT
+EIA File   : Reader 103 RS-232 Rev6.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        18mil (0.4572mm)         Round          261              332.05 Inch (8434.18 mm)
+T2        31mil (0.7874mm)         Round          2                286.46 Inch (7276.02 mm)
+T3        34mil (0.8636mm)         Round          2                286.67 Inch (7281.42 mm)
+T4        35mil (0.889mm)          Round          41               296.33 Inch (7526.72 mm)
+T5        36mil (0.9144mm)         Round          27               290.26 Inch (7372.70 mm)
+T6        38mil (0.9652mm)         Round          10               286.32 Inch (7272.50 mm)
+T7        40mil (1.016mm)          Round          12               289.82 Inch (7361.54 mm)
+T8        45mil (1.143mm)          Round          6                287.50 Inch (7302.56 mm)
+T9        46mil (1.1684mm)         Round          12               289.63 Inch (7356.49 mm)
+T10       47.24mil (1.1999mm)      Round          6                288.44 Inch (7326.27 mm)
+T11       63mil (1.6002mm)         Round          2                286.15 Inch (7268.16 mm)
+T12       95mil (2.413mm)          Round          2                283.45 Inch (7199.70 mm)
+T13       125mil (3.175mm)         Round          1                284.63 Inch (7229.61 mm)
+T14       130mil (3.302mm)         Round          2                286.80 Inch (7284.70 mm)
+T15       210mil (5.334mm)         Round          2                284.92 Inch (7237.08 mm)
+T16       128mil (3.2512mm)        Round          2         NPTH   286.39 Inch (7274.20 mm)
+---------------------------------------------------------------------------
+Totals                                            390              4645.82 Inch (118003.85 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

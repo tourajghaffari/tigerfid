@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=..\..\..\..\TollHouseCookies\Toll-USB\Toll-USB-Rev1.PrjPCB
+[Project2]
+ProjectPath=..\..\..\..\CCJamer\Rev-2\CCjammerRev2.PrjPCB

@@ -1,0 +1,30 @@
+CAM Outputs Generation Report
+for 'CAM Outputs for Reader 103 RS-232 Rev5.cam'
+at 15:05:59 on 8-Feb-2006 
+
+
+'NC Drill Output 1'
+'Reader 103 RS-232 Rev5.TXT' generated
+'Reader 103 RS-232 Rev5.DRL' generated
+'Reader 103 RS-232 Rev5.DRR' generated
+
+'Gerber Output 1'
+'Reader 103 RS-232 Rev5.GTL' generated
+'Reader 103 RS-232 Rev5.GBL' generated
+'Reader 103 RS-232 Rev5.GTO' generated
+'Reader 103 RS-232 Rev5.GBO' generated
+'Reader 103 RS-232 Rev5.GTP' generated
+'Reader 103 RS-232 Rev5.GBP' generated
+'Reader 103 RS-232 Rev5.GTS' generated
+'Reader 103 RS-232 Rev5.GBS' generated
+'Reader 103 RS-232 Rev5.GM2' generated
+'Reader 103 RS-232 Rev5.GM4' generated
+'Reader 103 RS-232 Rev5.GM5' generated
+'Reader 103 RS-232 Rev5.GPT' generated
+'Reader 103 RS-232 Rev5.GPB' generated
+'Reader 103 RS-232 Rev5.GD1' generated
+'Reader 103 RS-232 Rev5.GG1' generated
+'Reader 103 RS-232 Rev5.REP' generated
+
+
+Total number of generated files = 19

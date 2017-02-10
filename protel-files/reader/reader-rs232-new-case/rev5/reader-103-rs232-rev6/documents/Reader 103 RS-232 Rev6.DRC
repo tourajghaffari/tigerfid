@@ -1,0 +1,23 @@
+Protel Design System Design Rule Check
+PCB File : Documents\Reader 103 RS-232 Rev6.PCB
+Date     : 26-Jan-2007
+Time     : 13:44:11
+
+Processing Rule : Clearance Constraint (Gap=10mil) (Disabled)(Is on net GND_COM ),(On the board )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7.5mil) (On the board ),(On the board )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Prefered=20mil) (On the board )
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (On the board ) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Not Allowed) (On the board ),(On the board )
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:11
