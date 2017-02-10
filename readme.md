@@ -31,7 +31,7 @@ Touraj's favorite animal was the tiger - in particular, the [Caspian tiger](http
 
 * Ali Amjadi
 
-* Mehdi Heidari
+* Mehdi Haidari
 
 * [Fabiano Kovalski](https://www.linkedin.com/in/fabianogk)
 
