@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWIComponentLib", "AWIComponentLib\AWIComponentLib.csproj", "{5B978054-9CEE-47D9-8B37-AA7F0E0806F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A99EAB4-077C-4EC8-8E3C-419570DBD4F1} = {4A99EAB4-077C-4EC8-8E3C-419570DBD4F1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBInterface", "DBInterface\DBInterface.csproj", "{4A99EAB4-077C-4EC8-8E3C-419570DBD4F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B978054-9CEE-47D9-8B37-AA7F0E0806F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B978054-9CEE-47D9-8B37-AA7F0E0806F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B978054-9CEE-47D9-8B37-AA7F0E0806F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B978054-9CEE-47D9-8B37-AA7F0E0806F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A99EAB4-077C-4EC8-8E3C-419570DBD4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A99EAB4-077C-4EC8-8E3C-419570DBD4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A99EAB4-077C-4EC8-8E3C-419570DBD4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A99EAB4-077C-4EC8-8E3C-419570DBD4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

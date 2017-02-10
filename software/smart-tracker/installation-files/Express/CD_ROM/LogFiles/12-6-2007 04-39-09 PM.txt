@@ -1,0 +1,150 @@
+================= Logging started at 12/6/2007 04:39:09 PM ==================
+Created release folders
+AdminExecuteSequence table successfully built
+AdminUISequence table successfully built
+AdvtExecuteSequence table successfully built
+AdvtUISequence table successfully built
+InstallExecuteSequence table successfully built
+InstallUISequence table successfully built
+Directory table successfully built
+Feature table successfully built
+FeatureComponents table successfully built
+Component table successfully built
+Loading File table
+Building File table
+ISEXP : warning -6245: One or more of the project's components contain .NET properties that require the .NET Framework.  It is recommended that the release include the .NET Framework.
+Adding file 'MySql.Data.dll' that is a dependency of component 'Smart_Tracker_V3.0.0.exe'
+Adding file 'UserListControl_V3.0.dll' that is a dependency of component 'Smart_Tracker_V3.0.0.exe'
+ISEXP : warning -6248: Could not find dependent file CrystalDecisions.CrystalReports.Engine, or one of its dependencies of component Smart_Tracker_V3.0.0.exe
+ISEXP : warning -6248: Could not find dependent file CrystalDecisions.ReportSource, or one of its dependencies of component Smart_Tracker_V3.0.0.exe
+ISEXP : warning -6248: Could not find dependent file CrystalDecisions.Shared, or one of its dependencies of component Smart_Tracker_V3.0.0.exe
+ISEXP : warning -6248: Could not find dependent file CrystalDecisions.Windows.Forms, or one of its dependencies of component Smart_Tracker_V3.0.0.exe
+ISEXP : warning -6248: Could not find dependent file ICSharpCode.SharpZipLib, or one of its dependencies of component Smart_Tracker_V3.0.0.exe
+Merging modules...
+Merging Microsoft Component Category Manager Library: C:\Program Files\Common Files\Merge Modules\COMCAT.MSM
+Merging CMDialog ActiveX Control DLL: C:\Program Files\Common Files\Merge Modules\COMDLG32.MSM
+Merging DAO360: C:\Program Files\InstallShield\Express 5.0\Objects\DAO360.Msm
+Merging DCOM95: C:\Program Files\InstallShield\Express 5.0\Modules\i386\DCOM95.Msm
+Merging Database Access RTL X86 ---: C:\Program Files\Common Files\Merge Modules\Crystal_Database_Access2003.msm
+Merging Database Access RTL X86 enu: C:\Program Files\Common Files\Merge Modules\Crystal_Database_Access2003_enu.msm
+Merging MDAC 2.5 Sp3 (English): C:\Program Files\InstallShield\Express 5.0\Objects\MDAC25.Msm
+Merging Microsoft (R) C Runtime Library: C:\Program Files\Common Files\Merge Modules\MSVCRT.MSM
+Merging Managed RTL X86 ---: C:\Program Files\Common Files\Merge Modules\Crystal_Managed2003.msm
+Merging Microsoft OLE 2.40  for Windows NT(TM) and Windows 95(TM) Operating Systems: C:\Program Files\Common Files\Merge Modules\OLEAUT32.MSM
+Merging OLE DB 2.1: C:\Program Files\InstallShield\Express 5.0\Objects\OLEDB21.msm
+Merging Registration Wizard module: c:\downloads\Crystal_regwiz2003.msm
+Merging reportengine: C:\Program Files\InstallShield\Express 5.0\Objects\reportengine.msm
+ISEXP : warning -6638: The merge module 'Crystal Reports 9 - Crystal Reports Engine components (Required)'
+	requires one of the following merge modules also to be included in the setup:
+	ATL 3.0
+File table successfully built
+Building MsiFileHash table
+MsiFileHash table successfully built
+Class table successfully built
+Extension table successfully built
+ODBCDataSource table successfully built
+ODBCDriver table successfully built
+ActionText table successfully built
+AppSearch table successfully built
+BindImage table successfully built
+CCPSearch table successfully built
+Condition table successfully built
+AppId table successfully built
+Property table successfully built
+BBControl table successfully built
+Billboard table successfully built
+Binary table successfully built
+CompLocator table successfully built
+Complus table successfully built
+ControlCondition table successfully built
+ControlEvent table successfully built
+CreateFolder table successfully built
+CustomAction table successfully built
+Error table successfully built
+DrLocator table successfully built
+DuplicateFile table successfully built
+Environment table successfully built
+EventMapping table successfully built
+FileSFPCatalog table successfully built
+Font table successfully built
+IniFile table successfully built
+IniLocator table successfully built
+IsolatedComponent table successfully built
+ISSelfReg table successfully built
+Verb table successfully built
+LaunchCondition table successfully built
+LockPermissions table successfully built
+MIME table successfully built
+MoveFile table successfully built
+MsiAssembly table successfully built
+MsiAssemblyName table successfully built
+MsiDigitalCertificate table successfully built
+MsiDigitalSignature table successfully built
+ODBCAttribute table successfully built
+ODBCSourceAttribute table successfully built
+ODBCTranslator table successfully built
+PatchPackage table successfully built
+ProgId table successfully built
+PublishComponent table successfully built
+Registry table successfully built
+RegLocator table successfully built
+RemoveFile table successfully built
+RemoveIniFile table successfully built
+RemoveRegistry table successfully built
+ReserveCost table successfully built
+SelfReg table successfully built
+ServiceControl table successfully built
+ServiceInstall table successfully built
+SFPCatalog table successfully built
+Shortcut table successfully built
+Signature table successfully built
+TextStyle table successfully built
+TypeLib table successfully built
+UIText table successfully built
+Upgrade table successfully built
+_Validation table successfully built
+Searching project for extract-at-build components...
+Building scanned MsiAssembly records
+Building scanned MsiAssemblyName records
+Validating Custom Action sequencing
+ISEXP : warning -6525: The Custom Action CA_CONFIIS4_Uninstall.3643236F_FC70_11D3_A536_0090278A1BB8 in the InstallExecuteSequence table is run from an installed file. It must be sequenced after the InstallFiles action. Ensure that the Custom Action is sequenced properly and that the base actions exists in the sequence.
+Dialog AdminChangeFolder for language English (United States) built
+Dialog AdminNetworkLocation for language English (United States) built
+Dialog AdminWelcome for language English (United States) built
+Dialog CancelSetup for language English (United States) built
+Dialog CustomSetup for language English (United States) built
+Dialog CustomSetupTips for language English (United States) built
+Dialog CustomerInformation for language English (United States) built
+Dialog DatabaseFolder for language English (United States) built
+Dialog DestinationFolder for language English (United States) built
+Dialog DiskSpaceRequirements for language English (United States) built
+Dialog FilesInUse for language English (United States) built
+Dialog InstallChangeFolder for language English (United States) built
+Dialog InstallWelcome for language English (United States) built
+Dialog LicenseAgreement for language English (United States) built
+Dialog MaintenanceType for language English (United States) built
+Dialog MaintenanceWelcome for language English (United States) built
+Dialog OutOfSpace for language English (United States) built
+Dialog PatchWelcome for language English (United States) built
+Dialog ReadmeInformation for language English (United States) built
+Dialog ReadyToInstall for language English (United States) built
+Dialog ReadyToRemove for language English (United States) built
+Dialog SetupCompleteError for language English (United States) built
+Dialog SetupCompleteSuccess for language English (United States) built
+Dialog SetupError for language English (United States) built
+Dialog SetupInitialization for language English (United States) built
+Dialog SetupInterrupted for language English (United States) built
+Dialog SetupProgress for language English (United States) built
+Dialog SetupResume for language English (United States) built
+Dialog SetupType for language English (United States) built
+Dialog SplashBitmap for language English (United States) built
+Resolving strings...
+Language English (United States) built
+Files built
+Media table successfully built
+Performing Upgrading and Patching Validation
+Setup.exe created
+Express\CD_ROM - 0 error(s), 8 warning(s)
+================= Logging stopped at 12/6/2007 04:40:17 PM ==================
+Log file has been created: <file:C:\AWI Softwares\Smart Tracker\V3.0.0\Server\Smart Tracker Installation V3.0.0\Express\CD_ROM\LogFiles\12-6-2007 04-39-09 PM.txt>
+

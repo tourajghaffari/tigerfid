@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C46943EB-22C7-4ECE-B248-3F8A2E39ADAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AWI.SmartTracker</RootNamespace>
+    <AssemblyName>Smart Tracker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/Smart Tracker/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AWI.SmartTracker.MainForm</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tracker.ico</ApplicationIcon>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWControls, Version=1.0.4091.21892, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\$(Configuration)\AWControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AWIComponentLib, Version=1.0.4652.39062, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\$(Configuration)\AWIComponentLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AW_API_NET, Version=1.0.4652.38962, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\$(Configuration)\AW_API_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DBInterface, Version=1.0.4652.39061, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\$(Configuration)\DBInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UserListControl, Version=1.0.4667.42737, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\$(Configuration)\UserListControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForm.designer.cs">
+      <DependentUpon>ActionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AssetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AWIHelperClass.cs" />
+    <Compile Include="AWIHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AWIRSSIUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseCheck.cs" />
+    <Compile Include="GroupPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupPolicy.Designer.cs">
+      <DependentUpon>GroupPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupSchedule.Designer.cs">
+      <DependentUpon>GroupSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewFocus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReaderInputRelayManager.cs" />
+    <Compile Include="ReaderOutputRelayManager.cs" />
+    <Compile Include="ReportClass\GroupZones.cs" />
+    <Compile Include="ReportClass\GroupSchedules.cs" />
+    <Compile Include="ReportClass\Zones.cs" />
+    <Compile Include="ReportClass\EmployeeHistory.cs" />
+    <Compile Include="ReportClass\Employees.cs" />
+    <Compile Include="ReportClass\Groups.cs" />
+    <Compile Include="ReportClass\Traffic.cs" />
+    <Compile Include="ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadMsgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadMsgForm.Designer.cs">
+      <DependentUpon>LoadMsgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReaderListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RSSIConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagHistoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TagImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AccessForm.resx">
+      <DependentUpon>AccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessImageView.resx">
+      <DependentUpon>AccessImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForm.resx">
+      <DependentUpon>ActionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetForm.resx">
+      <DependentUpon>AssetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetImageView.resx">
+      <DependentUpon>AssetImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AWIHistoryControl.resx">
+      <DependentUpon>AWIHistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AWIRSSIUserControl.resx">
+      <DependentUpon>AWIRSSIUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommForm.resx">
+      <DependentUpon>CommForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseForm.resx">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupPolicy.resx">
+      <DependentUpon>GroupPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupSchedule.resx">
+      <DependentUpon>GroupSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVForm.resx">
+      <DependentUpon>INVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListViewEx.resx">
+      <DependentUpon>ListViewEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMsgForm.resx">
+      <DependentUpon>LoadMsgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgForm.resx">
+      <DependentUpon>MsgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReaderListView.resx">
+      <DependentUpon>ReaderListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportClass\Alarms.rdlc" />
+    <EmbeddedResource Include="ReportClass\EmployeeHistory.rdlc" />
+    <EmbeddedResource Include="ReportClass\Employees.rdlc" />
+    <EmbeddedResource Include="ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSSIConfigForm.resx">
+      <DependentUpon>RSSIConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusSearch.resx">
+      <DependentUpon>StatusSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagHistoryView.resx">
+      <DependentUpon>TagHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagImageView.resx">
+      <DependentUpon>TagImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoneForm.resx">
+      <DependentUpon>ZoneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ReportClass\Group.datasource" />
+    <None Include="ReportClass\Employee.datasource" />
+    <None Include="ReportClass\EmployeeHistory.datasource" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <Service Include="{FE73BB80-53F4-4AD0-A5F9-6A0BCE662292}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tracker.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if "$(ConfigurationName)"=="Debug" (if exist "$(TargetPath)*.locked" del "$(TargetDir)*.locked")
+if "$(ConfigurationName)"=="Debug" (if exist "$(TargetPath)" move "$(TargetPath)" "$(TargetPath).%25date:~4,2%25%25date:~7,2%25%25date:~10,4%25_@_%25time:~0,2%25h%25time:~3,2%25m%25time:~6,2%25s.locked")</PreBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)"=="Debug" (copy "$(SolutionDir)Properties\app.manifest" "$(TargetPath).manifest")
+if "$(ConfigurationName)"=="Debug" (if exist "$(TargetPath)*.locked" del "$(TargetDir)*.locked")
+
+if "$(ConfigurationName)"=="Release" (if not exist "$(TargetDir)Distribute\" mkdir "$(TargetDir)Distribute\")
+
+if "$(ConfigurationName)"=="Release" (if exist "$(MSBuildProgramFiles32)\Microsoft\ILMerge\ILMerge.exe" "$(MSBuildProgramFiles32)\Microsoft\ILMerge\ILMerge.exe" /target:winexe /lib:"$(ProjectDir)bin\$(ConfigurationName)" /targetplatform:v4 /ndebug /out:"$(TargetDir)Distribute\$(TargetFileName)" "$(TargetPath)" UserListControl.dll DBInterface.dll AW_API_NET.dll AWIComponentLib.dll AWControls.dll)
+if "$(ConfigurationName)"=="Release" (copy /y "$(TargetDir)AWI_API_C.dll" "$(TargetDir)Distribute\AWI_API_C.dll")
+if "$(ConfigurationName)"=="Release" (copy /y "$(TargetDir)cbx_enc.dll" "$(TargetDir)Distribute\cbx_enc.dll")
+if "$(ConfigurationName)"=="Release" (echo a181a603769c1f98ad927e7367c7aa51 &gt; "$(TargetDir)Distribute\License.awi")
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

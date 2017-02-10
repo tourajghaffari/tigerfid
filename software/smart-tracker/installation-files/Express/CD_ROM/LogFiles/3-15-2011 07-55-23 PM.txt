@@ -1,0 +1,268 @@
+================= Logging started at 3/15/2011 07:55:23 PM ==================
+ISEXP : error -6102: Error searching for dynamic files matching "C:\Program Files\MySQL\MySQL Server 5.0\data\SmartTracker\*.*"
+Created release folders
+AdminExecuteSequence table successfully built
+AdminUISequence table successfully built
+AdvtExecuteSequence table successfully built
+AdvtUISequence table successfully built
+InstallExecuteSequence table successfully built
+InstallUISequence table successfully built
+Directory table successfully built
+Feature table successfully built
+FeatureComponents table successfully built
+Component table successfully built
+Loading File table
+Building File table
+ISEXP : warning -6245: One or more of the project's components contain .NET properties that require the .NET Framework.  It is recommended that the release include the .NET Framework.
+ISEXP : warning -6248: Could not find dependent file +.dll, or one of its dependencies of component AWIComponentLib.dll
+ISEXP : warning -6248: Could not find dependent file coredll.dll, or one of its dependencies of component MySql.Data.dll
+Adding merge module 'Crystal Reports Runtime .NET (Managed Code)' that is a dependency of component 'Smart_Tracker.exe'
+ISEXP : warning -6248: Could not find dependent file +.dll, or one of its dependencies of component Smart_Tracker.exe
+ISEXP : warning -6248: Could not find dependent file coredll.dll, or one of its dependencies of component Smart_Tracker.exe
+ISEXP : warning -6248: Could not find dependent file +.dll, or one of its dependencies of component AW_API_NET.dll
+Merging modules...
+ISEXP : error -4075: File not found. An error occurred merging Module 'CrystalDecisionsRedist2005_x86.D923CFE7_83D3_4BC1_A9DF_95580F1320E4:0' for Feature 'AlwaysInstall'.
+Merging Visual C++ 8.0 ATL (x86) WinSXS MSM: C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC80_ATL_x86.msm
+Merging Visual C++ 8.0 ATL.Policy (x86) WinSXS MSM: C:\Program Files (x86)\Common Files\Merge Modules\policy_8_0_Microsoft_VC80_ATL_x86.msm
+Merging Microsoft Component Category Manager Library: C:\Program Files (x86)\Common Files\Merge Modules\COMCAT.MSM
+Merging CMDialog ActiveX Control DLL: C:\Program Files (x86)\Common Files\Merge Modules\COMDLG32.MSM
+Merging Visual C++ 8.0 CRT (x86) WinSXS MSM: C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC80_CRT_x86.msm
+Merging Visual C++ 8.0 CRT.Policy (x86) WinSXS MSM: C:\Program Files (x86)\Common Files\Merge Modules\policy_8_0_Microsoft_VC80_CRT_x86.msm
+Merging MDAC 2.7 Sp1 (English): C:\Program Files (x86)\Macrovision\IS 2008 Express\Objects\MDAC27ENU.msm
+Merging Microsoft (R) C Runtime Library: C:\Program Files (x86)\Common Files\Merge Modules\MSVCRT.MSM
+Merging Managed RTL X86 ---: C:\Program Files (x86)\Common Files\Merge Modules\Crystal_Managed2003.msm
+Merging Microsoft OLE 2.40  for Windows NT(TM) and Windows 95(TM) Operating Systems: C:\Program Files (x86)\Common Files\Merge Modules\OLEAUT32.MSM
+File table successfully built
+Building MsiFileHash table
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\ack.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\AlarmsReport.cs not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\AlarmsReport.rpt not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\retails\version r.v1.9.2\gc stock\bin\release\AlarmText.bmp not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\breach.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\retails\version r.v1.8.3\gc stock\bin\release\cbx_enc.dll not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\check.ico not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\database.ico not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\ding.WAV not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\disable.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\disconn.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\disconnectDB.ico not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeeHistoryReport.cs not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeeHistoryReport.rpt not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeesReport.cs not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeesReport.rpt not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\enable.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\error.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\release\License.awi not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\program files\protex\retail\log\Log.txt not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\retails\version r.v1.9.1\gc stock\bin\release\ManagedHooks.dll not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\Reader2.ico not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\Reader2X.ico not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\mapper\RfidDbInterface.dll not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\retails\version r.v1.9.2\gc stock\bin\release\SmartMarshal.dll not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\retails\version r.v1.9.2\gc stock\bin\release\SystemHookCore.dll not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Program Files (x86)\awi softwares\awi sounds\tamper.wav not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\Windows\system32\spool\drivers\w32x86\3\TSS5CUI.DLL not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\yellowcheck.ico not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZoneHistoryReport.cs not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZoneHistoryReport.rpt not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZonesReport.cs not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+ISEXP : error -6271: File C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZonesReport.rpt not found. An error occurred building the MsiFileHash table record for this file. Verify that the file exists in the specified location.
+MsiFileHash table successfully built
+Class table successfully built
+Extension table successfully built
+ODBCDataSource table successfully built
+ODBCDriver table successfully built
+ISSQLScriptFile table successfully built
+ISSQLScriptReplace table successfully built
+ISSQLConnectionScript table successfully built
+ISSQLConnection table successfully built
+ISSQLConnectionDBServer table successfully built
+ISSQLRequirement table successfully built
+ISPalmApp table successfully built
+ISPalmAppFile table successfully built
+ISComPlusProxy table successfully built
+ISComPlusApplication table successfully built
+ISComCatalogCollection table successfully built
+ISComCatalogCollectionObjects table successfully built
+ISComCatalogObject table successfully built
+ISComCatalogAttribute table successfully built
+ISComPlusApplicationDLL table successfully built
+ISComPlusServerFile table successfully built
+ISComPlusProxyFile table successfully built
+ISComPlusServerDepFile table successfully built
+ISComPlusProxyDepFile table successfully built
+ISXmlFile table successfully built
+ISXmlElement table successfully built
+ISXmlElementAttrib table successfully built
+ActionText table successfully built
+AppSearch table successfully built
+BindImage table successfully built
+CCPSearch table successfully built
+Condition table successfully built
+AppId table successfully built
+Property table successfully built
+BBControl table successfully built
+Billboard table successfully built
+Binary table successfully built
+CompLocator table successfully built
+Complus table successfully built
+ControlCondition table successfully built
+ControlEvent table successfully built
+CreateFolder table successfully built
+CustomAction table successfully built
+Error table successfully built
+DrLocator table successfully built
+DuplicateFile table successfully built
+Environment table successfully built
+EventMapping table successfully built
+FileSFPCatalog table successfully built
+Font table successfully built
+IniFile table successfully built
+IniLocator table successfully built
+ISBillBoard table successfully built
+ISCEApp table successfully built
+ISCEDir table successfully built
+ISCEFileExt table successfully built
+ISCEInstall table successfully built
+ISCEOtherAppCABs table successfully built
+ISCERegistry table successfully built
+ISCESetupFile table successfully built
+ISCEShtCut table successfully built
+ProgId table successfully built
+ISComponentExtended table successfully built
+ISDRMFile table successfully built
+ISFileManifests table successfully built
+ISIISAppPool table successfully built
+ISIISCommon table successfully built
+ISIISMetaData table successfully built
+ISIISWebServiceExtension table successfully built
+ISObjectProperty table successfully built
+IsolatedComponent table successfully built
+ISSelfReg table successfully built
+ISSetupType table successfully built
+ISSetupTypeFeatures table successfully built
+ISSQLDBMetaData table successfully built
+ISSQLScriptError table successfully built
+ISVRoot table successfully built
+ISVRootAppMaps table successfully built
+Verb table successfully built
+ISWebSite table successfully built
+ISXmlLocator table successfully built
+LaunchCondition table successfully built
+LockPermissions table successfully built
+MIME table successfully built
+MoveFile table successfully built
+MsiAssembly table successfully built
+MsiAssemblyName table successfully built
+MsiDigitalCertificate table successfully built
+MsiDigitalSignature table successfully built
+MsiDriverPackages table successfully built
+MsiPatchCertificate table successfully built
+ODBCAttribute table successfully built
+ODBCSourceAttribute table successfully built
+ODBCTranslator table successfully built
+PatchPackage table successfully built
+PublishComponent table successfully built
+Registry table successfully built
+RegLocator table successfully built
+RemoveFile table successfully built
+RemoveIniFile table successfully built
+RemoveRegistry table successfully built
+ReserveCost table successfully built
+SelfReg table successfully built
+ServiceControl table successfully built
+ServiceInstall table successfully built
+SFPCatalog table successfully built
+Shortcut table successfully built
+Signature table successfully built
+TextStyle table successfully built
+TypeLib table successfully built
+UIText table successfully built
+Upgrade table successfully built
+ISVirtualFile table successfully built
+ISVirtualRegistry table successfully built
+ISVirtualDirectory table successfully built
+ISVirtualShortcut table successfully built
+ISVirtualPackage table successfully built
+ISVirtualRelease table successfully built
+_Validation table successfully built
+Searching project for extract-at-build components...
+Building scanned MsiAssembly records
+Building scanned MsiAssemblyName records
+Validating Custom Action sequencing
+ISEXP : warning -6525: The Custom Action CA_CONFIIS4_Uninstall.3643236F_FC70_11D3_A536_0090278A1BB8 in the InstallExecuteSequence table is run from an installed file. It must be sequenced after the InstallFiles action. Ensure that the Custom Action is sequenced properly and that the base actions exists in the sequence.
+Embedding manifest SetupExe.Invoker.manifest into setup.exe
+Dialog AdminChangeFolder for language English (United States) built
+Dialog AdminNetworkLocation for language English (United States) built
+Dialog AdminWelcome for language English (United States) built
+Dialog CancelSetup for language English (United States) built
+Dialog CustomSetup for language English (United States) built
+Dialog CustomSetupTips for language English (United States) built
+Dialog CustomerInformation for language English (United States) built
+Dialog DatabaseFolder for language English (United States) built
+Dialog DestinationFolder for language English (United States) built
+Dialog DiskSpaceRequirements for language English (United States) built
+Dialog FilesInUse for language English (United States) built
+Dialog InstallChangeFolder for language English (United States) built
+Dialog InstallWelcome for language English (United States) built
+Dialog LicenseAgreement for language English (United States) built
+Dialog MaintenanceType for language English (United States) built
+Dialog MaintenanceWelcome for language English (United States) built
+Dialog MsiRMFilesInUse for language English (United States) built
+Dialog OutOfSpace for language English (United States) built
+Dialog PatchWelcome for language English (United States) built
+Dialog ReadmeInformation for language English (United States) built
+Dialog ReadyToInstall for language English (United States) built
+Dialog ReadyToRemove for language English (United States) built
+Dialog SetupCompleteError for language English (United States) built
+Dialog SetupCompleteSuccess for language English (United States) built
+Dialog SetupError for language English (United States) built
+Dialog SetupInitialization for language English (United States) built
+Dialog SetupInterrupted for language English (United States) built
+Dialog SetupProgress for language English (United States) built
+Dialog SetupResume for language English (United States) built
+Dialog SetupType for language English (United States) built
+Dialog SplashBitmap for language English (United States) built
+Resolving strings...
+Language English (United States) built
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\program files\protex\retail\log\Log.txt' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Log\Log.txt'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\retails\version r.v1.9.2\gc stock\bin\release\SystemHookCore.dll' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\SystemHookCore.dll'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\retails\version r.v1.9.1\gc stock\bin\release\ManagedHooks.dll' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\ManagedHooks.dll'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\database.ico' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\database.ico'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\retails\version r.v1.9.2\gc stock\bin\release\AlarmText.bmp' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\AlarmText.bmp'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\ack.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\ack.wav'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\tamper.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\tamper.wav'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\ding.WAV' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\ding.WAV'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\disable.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\disable.wav'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\disconn.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\disconn.wav'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\enable.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\enable.wav'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\error.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\error.wav'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\check.ico' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\check.ico'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\awi sounds\breach.wav' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\breach.wav'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\disconnectDB.ico' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\disconnectDB.ico'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\yellowcheck.ico' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\yellowcheck.ico'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\Reader2.ico' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reader2.ico'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\debug\Reader2X.ico' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reader2X.ico'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\bin\release\License.awi' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\License.awi'
+ISEXP : error -1007: Cannot copy source 'C:\Windows\system32\spool\drivers\w32x86\3\TSS5CUI.DLL' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\TSS5CUI.DLL'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZonesReport.rpt' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\ZonesReport.rpt'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZonesReport.cs' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\ZonesReport.cs'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZoneHistoryReport.rpt' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\ZoneHistoryReport.rpt'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\ZoneHistoryReport.cs' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\ZoneHistoryReport.cs'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeesReport.rpt' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\EmployeesReport.rpt'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeesReport.cs' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\EmployeesReport.cs'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeeHistoryReport.rpt' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\EmployeeHistoryReport.rpt'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\EmployeeHistoryReport.cs' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\EmployeeHistoryReport.cs'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\AlarmsReport.rpt' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\AlarmsReport.rpt'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\server\reports\AlarmsReport.cs' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\Reports\AlarmsReport.cs'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\retails\version r.v1.8.3\gc stock\bin\release\cbx_enc.dll' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\cbx_enc.dll'
+ISEXP : error -1007: Cannot copy source 'C:\Program Files (x86)\awi softwares\retails\version r.v1.9.2\gc stock\bin\release\SmartMarshal.dll' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\SmartMarshal.dll'
+ISEXP : error -1007: Cannot copy source 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\mapper\RfidDbInterface.dll' to target 'C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\DiskImages\DISK1\program files\ActiveWave\Smart Tracker\RfidDbInterface.dll'
+Files built
+Media table successfully built
+Setup.exe created
+Automatic update notification disabled
+Express\CD_ROM - 68 error(s), 7 warning(s)
+================= Logging stopped at 3/15/2011 07:55:40 PM ==================
+Log file has been created: <file:C:\mydev\ActiveWave\Software\Smart Tracker Installation\Express\CD_ROM\LogFiles\3-15-2011 07-55-23 PM.txt>
+

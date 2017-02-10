@@ -1,0 +1,6 @@
+================= Logging started at 12/6/2007 05:14:43 PM ==================
+ISEXP : error -32000: Build canceled by the user
+Express\CD_ROM - 1 error(s), 0 warning(s)
+================= Logging stopped at 12/6/2007 05:14:53 PM ==================
+Log file has been created: <file:C:\AWI Softwares\Smart Tracker\V3.0.0\Server\Smart Tracker Installation V3.0.0\Express\CD_ROM\LogFiles\12-6-2007 05-14-43 PM.txt>
+

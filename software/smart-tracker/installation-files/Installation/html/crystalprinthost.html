@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<TITLE>Crystal Reports Viewer</TITLE>
+<SCRIPT language="Javascript" src="../js/print.js"></SCRIPT>
+<SCRIPT FOR="CrystalPrintControl" EVENT="Finished(status, statusText)" LANGUAGE="Javascript">
+<!--
+window.close();
+-->
+</SCRIPT>
+</HEAD>
+<BODY onload="checkUserCancelledInstallation(document.getElementById('CrystalPrintControl'))" onBeforeUnload="cancelPrinting(document.getElementById('CrystalPrintControl'))">
+<SCRIPT LANGUAGE="Javascript">
+<!--
+var objectTag = "<OBJECT ID=\"CrystalPrintControl\" CLASSID=\"CLSID:BAEE131D-290A-4541-A50A-8936F159563A\" CODEBASE=\"";
+objectTag += window.dialogArguments.codebase;
+objectTag += "#Version=";
+objectTag += IE_PRINT_CONTROL_PRODUCTVERSION;
+objectTag += "\" VIEWASTEXT>";
+
+if (window.dialogArguments.url) {
+    objectTag +="<PARAM NAME=\"URL\" VALUE=\"";
+    objectTag += window.dialogArguments.url;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.postbackdata) {
+    objectTag += "<PARAM NAME=\"PostBackData\" VALUE=\"";
+    objectTag += window.dialogArguments.postbackdata;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.title) {
+    objectTag +="<PARAM NAME=\"Title\" VALUE=\"";
+    objectTag += window.dialogArguments.title;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.maxpage) {
+    objectTag +="<PARAM NAME=\"MaxPageNumber\" VALUE=\"";
+    objectTag += window.dialogArguments.maxpage;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.pageorientation) {
+    objectTag +="<PARAM NAME=\"PageOrientation\" VALUE=\"";
+    objectTag += window.dialogArguments.pageorientation;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.papersize) {
+    objectTag +="<PARAM NAME=\"PaperSize\" VALUE=\"";
+    objectTag += window.dialogArguments.papersize;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.drivername) {
+    objectTag +="<PARAM NAME=\"PrinterDriverName\" VALUE=\"";
+    objectTag += window.dialogArguments.drivername;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.usedefprinter) {
+    objectTag +="<PARAM NAME=\"UseDefaultPrinter\" VALUE=\"";
+    objectTag += window.dialogArguments.usedefprinter;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.usedefprintersettings) {
+    objectTag +="<PARAM NAME=\"UseDefaultPrinterSettings\" VALUE=\"";
+    objectTag += window.dialogArguments.usedefprintersettings;
+    objectTag += "\">";
+}
+
+if (window.dialogArguments.sendpostdataonce) {
+    objectTag +="<PARAM NAME=\"SendPostDataOnce\" VALUE=\"";
+    objectTag += window.dialogArguments.sendpostdataonce;
+    objectTag += "\">";
+}
+
+objectTag += "</OBJECT>";
+
+document.writeln(objectTag);
+-->
+</SCRIPT>
+</BODY>
+</HTML>

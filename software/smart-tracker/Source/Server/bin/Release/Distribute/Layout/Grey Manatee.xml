@@ -1,0 +1,22 @@
+<TrackerMap>
+  <Map id="1" name="Grey Manatee" file="C:\Users\user\Desktop\1111Gray Manatee east elevation-Model.jpg" size="1600,554">
+    <Map id="2" name="Ground Floor" file="C:\Users\user\Desktop\groundfloor.jpg" size="1600,600">
+      <Item type="rect" bounds="715,307,168,69">
+        <Properties linecolor="FF000000" linewidth="1" linestlye="0" filled="True" fillcolor="FFFFFFFF" lockratio="False" />
+        <Text font-family="Microsoft Sans Serif" font-size="10" font-style="0" color="FF000000" align="1,1" margins="0,0">Port Passage</Text>
+        <Link type="Reader" id="1" visible="False" />
+      </Item>
+      <Item type="rect" bounds="957,355,211,92">
+        <Properties linecolor="FF000000" linewidth="1" linestlye="0" filled="True" fillcolor="FFFFFFFF" lockratio="False" />
+        <Text font-family="Microsoft Sans Serif" font-size="10" font-style="0" color="FF000000" align="1,1" margins="0,0">Engine Room</Text>
+        <Link type="Reader" id="2" visible="False" />
+      </Item>
+      <Item type="rect" bounds="997,225,229,75">
+        <Properties linecolor="FF000000" linewidth="1" linestlye="0" filled="True" fillcolor="FFFFFFFF" lockratio="False" />
+        <Text font-family="Microsoft Sans Serif" font-size="10" font-style="0" color="FF000000" align="1,1" margins="0,0">Crews Lounge</Text>
+        <Link type="Reader" id="3" visible="False" />
+      </Item>
+    </Map>
+    <Map id="3" name="Second Floor" file="C:\Users\user\Desktop\2ndfloor.jpg" size="1530,608" />
+  </Map>
+</TrackerMap>

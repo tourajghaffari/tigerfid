@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	</head>
+	<body>
+		<script language="javascript">
+<!--
+// export UI functions
+function check(obj) {
+	return !obj.disabled;
+}
+
+function toggleRangeFields(obj) {
+	if( obj.id == "radio1") {
+		document.Export.from.disabled = true;
+		document.Export.to.disabled = true;
+	}
+	else {
+		document.Export.from.disabled = false;
+		document.Export.to.disabled = false;
+	}
+	return check(obj);
+}
+
+function checkDisableRange() {
+	if( document.Export.exportformat.value == "CrystalReports"
+		|| document.Export.exportformat.value == "RecordToMSExcel" ) {
+		if( document.Export.isRange[1].checked ) {
+			document.Export.isRange[0].checked = true;
+		}
+		document.Export.isRange[1].disabled = true;
+		document.Export.from.disabled = true;
+		document.Export.to.disabled = true;
+	}
+	else {
+		document.Export.isRange[1].disabled = false;
+	}
+}
+
+function isValidNumber(number) {
+	var nonDigit = /\D+/;
+	if( nonDigit.test(number) || number == '0' || number == "") {
+		return false;
+	}
+	return true;
+}
+
+function checkValuesAndSubmit() {
+	if( document.Export.isRange[1].checked ) {
+		if (!isValidNumber(document.Export.from.value) || !isValidNumber(document.Export.to.value) || (parseInt(document.Export.from.value, 10) > parseInt(document.Export.to.value, 10))) {
+			alert(parent.parent.opener.L_InvalidPageRange);
+			return;
+		}
+	}
+	if( document.Export.exportformat != null && document.Export.exportformat.selectedIndex == 0 ) {
+		alert(parent.parent.opener.L_ExportFormat);
+		return;
+	}
+	document.Export.action = opener.document.getElementById('crystal_handler_page').value;
+	document.Export.submit();
+}
+
+function init() {
+    if (document.getElementById('reportsource')) {
+	    document.getElementById('reportsource').value = parent.opener.document.getElementById('crystal_print_rptsrc').value;
+	}
+	if (document.getElementById('viewstate')) {
+	    document.getElementById('viewstate').value = parent.opener.document.getElementById('crystal_print_vs').value;
+	}
+}
+
+document.write(parent.parent.opener.getExportDialog());
+-->
+		</script>
+	</body>
+</html>

@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="&quot;C:\AWI Software\AWI_ProgStation.exe&quot;"/>
+    <OBJFILES value="Object\AWI_ProgStation.obj Object\ProgStationUnit.obj 
+      Object\ComConfigPage.obj Object\DiagnosticUnit.obj Object\AboutUnit.obj 
+      Object\ReaderIDDefUnit.obj Object\FileSysMsgUnit.obj 
+      Object\ConfigProgStationUnit.obj Object\WriteThreadUnit.obj 
+      Object\ScanUnit.obj Object\TCPIPUnit.obj Object\NetworkUnit.obj 
+      Object\AWSocketUnit.obj Object\AboutUnitNoLogo.obj Object\Rijndael.obj 
+      Object\ReadLargeDataUnit.obj"/>
+    <RESFILES value="AWI_ProgStation.res BitmapsImport.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) ProgStationUnit.dfm ComConfigPage.dfm DiagnosticUnit.dfm 
+      AboutUnit.dfm ReaderIDDefUnit.dfm FileSysMsgUnit.dfm 
+      ConfigProgStationUnit.dfm ScanUnit.dfm TCPIPUnit.dfm NetworkUnit.dfm 
+      AWSocketUnit.dfm AboutUnitNoLogo.dfm ReadLargeDataUnit.dfm"/>
+    <LIBFILES value="&quot;c:\program files\borland\cbuilder6\Lib\ws2_32.lib&quot;"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib vclx.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi qrpt.bpi dbrtl.bpi vcldb.bpi 
+      bdertl.bpi ibsmp.bpi vcldbx.bpi teeui.bpi teedb.bpi tee.bpi teeqr.bpi 
+      ibxpress.bpi bcbie.bpi vclie.bpi inetdb.bpi inet.bpi nmfast.bpi dclocx.bpi 
+      bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG;WIN32;"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="AWI_ProgStation.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include\vcl;$(BCB)\Include"/>
+    <LIBPATH value="$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include\vcl -I$(BCB)\Include -src_suffix cpp -D_DEBUG -DWIN32 -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\Lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -5 -b- -k -y -v -vi- 
+      -c -tW -tWM"/>
+    <PFLAGS value="-N2Object -N0Object -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-IObject -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="AWI_ProgStation.cpp" FORMNAME="" UNITNAME="AWI_ProgStation" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AWI_ProgStation.res" FORMNAME="" UNITNAME="AWI_ProgStation" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ProgStationUnit.cpp" FORMNAME="ProgStationForm" UNITNAME="ProgStationUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BitmapsImport.res" FORMNAME="" UNITNAME="BitmapsImport" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ComConfigPage.cpp" FORMNAME="CommConfigDlg" UNITNAME="ComConfigPage" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ComConfigPage.h" FORMNAME="" UNITNAME="ComConfigPage" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Commands.h" FORMNAME="" UNITNAME="Commands" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DiagnosticUnit.cpp" FORMNAME="DiagnosticForm" UNITNAME="DiagnosticUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AboutUnit.cpp" FORMNAME="AboutForm" UNITNAME="AboutUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ReaderIDDefUnit.cpp" FORMNAME="ReaderIDDefForm" UNITNAME="ReaderIDDefUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FileSysMsgUnit.cpp" FORMNAME="FileSysMsgForm" UNITNAME="FileSysMsgUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ConfigProgStationUnit.cpp" FORMNAME="ConfigProgStationForm" UNITNAME="ConfigProgStationUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="WriteThreadUnit.cpp" FORMNAME="" UNITNAME="WriteThreadUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="c:\program files\borland\cbuilder6\Lib\ws2_32.lib" FORMNAME="" UNITNAME="ws2_32.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ScanUnit.cpp" FORMNAME="ScanForm" UNITNAME="ScanUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TCPIPUnit.cpp" FORMNAME="TCPIPForm" UNITNAME="TCPIPUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="NetworkUnit.cpp" FORMNAME="NetworkForm" UNITNAME="NetworkUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AWSocketUnit.cpp" FORMNAME="TAWSocket" UNITNAME="AWSocketUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AboutUnitNoLogo.cpp" FORMNAME="AboutFormNoLogo" UNITNAME="AboutUnitNoLogo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Rijndael.cpp" FORMNAME="" UNITNAME="Rijndael" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ReadLargeDataUnit.cpp" FORMNAME="TagReadLargDataForm" UNITNAME="ReadLargeDataUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=91
+Release=0
+Build=1
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=ActiveWave
+FileDescription=Programming Station
+FileVersion=1.91.0.1
+InternalName=AWI_ProgStation.exe
+LegalCopyright=Copyright © ActiveWave
+LegalTrademarks=
+OriginalFilename=AWI_ProgStation.exe
+ProductName=Programming Station
+ProductVersion=1.91
+Comments=ActiveWave Programming Station
+
+[HistoryLists\hlIncludePath]
+Count=30
+Item0=$(BCB)\include\vcl;$(BCB)\Include
+Item1=$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Include
+Item2=$(BCB)\include\vcl;C:\Borland\CBuilder6\Include
+Item3=C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Include;C:\Program Files\Borland\CBuilder6\Lib;$(BCB)\include\vcl;C:\ActiveWaveSoftwares\AWI Prog Station\Programming Station
+Item4=G:\Program Files\Borland\CBuilder6\Projects;G:\Program Files\Borland\CBuilder6\Include;G:\Program Files\Borland\CBuilder6\Lib;$(BCB)\include\vcl;G:\ActiveWaveSoftwares\AWI Prog Station\Programming Station
+Item5=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Include
+Item6=C:\Program Files\Borland\CBuilder6\Projects;G:\Program Files\Borland\CBuilder6\Lib;G:\Program Files\Borland\CBuilder6\Projects;G:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl;G:\ActiveWaveSoftwares\AWI Prog Station\Programming Station
+Item7=G:\Program Files\Borland\CBuilder6\Lib;G:\Program Files\Borland\CBuilder6\Projects;G:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl;G:\ActiveWaveSoftwares\AWI Prog Station\Programming Station
+Item8=G:\Program Files\Borland\CBuilder6\Lib;G:\Program Files\Borland\CBuilder6\Projects;G:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl;G:\Active Wave Softwares\AWI Prog STation\Programming Station
+Item9=G:\Program Files\Borland\CBuilder6\Lib;G:\Program Files\Borland\CBuilder6\Projects;G:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl;G:\Programming Station
+Item10=C:\Tracke:r;C:\Program Files\Borland\CBuilder6\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl;C:\Programming Station
+Item11=D:\Tracker;D:\Program Files\Borland\CBuilder6\Lib;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl;D:\Programming Station
+Item12=D:\Tracker;C:\Tracker;C:\Program Files\Borland\CBuilder6\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Include;C:\Programming Station;$(BCB)\include\vcl
+Item13=C:\Tracker;C:\Program Files\Borland\CBuilder6\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Include;C:\Programming Station;$(BCB)\include\vcl
+Item14=D:\Tracker;D:\Program Files\Borland\CBuilder6\Lib;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl
+Item15=D:\Tracker;D:\Tracker;D:\Program Files\Borland\CBuilder6\Lib;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl
+Item16=D:\Tracker;D:\Program Files\Borland\CBuilder6\Lib;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl;D:\Tracker
+Item17=D:\Tracker;C:\Program Files\Borland\CBuilder6\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Include;C:\Programming Station;$(BCB)\include\vcl;C:\Tracker
+Item18=C:\Program Files\Borland\CBuilder6\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Include;C:\Programming Station;$(BCB)\include\vcl;C:\Tracker
+Item19=D:\Program Files\Borland\CBuilder6\Lib;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl;D:\Tracker
+Item20=D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl;D:\Tracker
+Item21=D:\Tracker;D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl
+Item22=D:\Program Files\Borland\CBuilder6\Include;D:\Programming Station;$(BCB)\include\vcl
+Item23=D:\Tracker;D:\Programming Station;D:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl
+Item24=D:\Programming Station;D:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl
+Item25=D:\Tracker;D:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl
+Item26=D:\Program Files\Borland\CBuilder6\Include;$(BCB)\include\vcl
+Item27=D:\Tracker;D:\Program Files\Borland\CBuilder6\Include;$(BCB)\include;$(BCB)\include\vcl
+Item28=D:\Tracker;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item29=D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=30
+Item0=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects
+Item1=$(BCB)\Lib;$(BCB)\lib\obj;C:\Program Files\Borland\CBuilder6\Projects
+Item2=$(BCB)\Lib;$(BCB)\lib\obj;G:\Program Files\Borland\CBuilder6\Projects
+Item3=$(BCB)\Lib;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;G:\Program Files\Borland\CBuilder6\Projects
+Item4=G:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Lib;C\Tracker;C:\Program Files\Borland\CBuilder6\Projects;C:\Programming Station;$(BCB)\lib\obj
+Item5=$(BCB)\Lib;C\Tracker;C:\Program Files\Borland\CBuilder6\Projects;C:\Programming Station;$(BCB)\lib\obj
+Item6=$(BCB)\Lib;C\Tracker;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\lib;C:\Programming Station;$(BCB)\lib\obj
+Item7=D:\Tracker;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\lib;D:\Programming Station;$(BCB)\lib\obj
+Item8=D:\Tracker;C:\Tracker;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\lib;C:\Programming Station;$(BCB)\lib\obj
+Item9=C:\Tracker;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\lib;C:\Programming Station;$(BCB)\lib\obj
+Item10=D:\Tracker;D:\Tracker;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\lib;D:\Programming Station;$(BCB)\lib\obj
+Item11=D:\Tracker;D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\lib;D:\Programming Station;$(BCB)\lib\obj;D:\Tracker
+Item12=D:\Tracker;C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\lib;C:\Programming Station;$(BCB)\lib\obj;C:\Tracker
+Item13=C:\Program Files\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\lib;C:\Programming Station;$(BCB)\lib\obj;C:\Tracker
+Item14=D:\Program Files\Borland\CBuilder6\Projects;D:\Program Files\Borland\CBuilder6\lib;D:\Programming Station;$(BCB)\lib\obj;D:\Tracker
+Item15=D:\Program Files\Borland\CBuilder6\lib;D:\Programming Station;$(BCB)\lib\obj;D:\Tracker
+Item16=D:\Tracker;D:\Programming Station;D:\Program Files\Borland\CBuilder6\lib;$(BCB)\lib\obj
+Item17=D:\Programming Station;D:\Program Files\Borland\CBuilder6\lib;$(BCB)\lib\obj
+Item18=D:\Tracker;D:\Program Files\Borland\CBuilder6\lib;$(BCB)\lib\obj
+Item19=D:\Program Files\Borland\CBuilder6\lib;$(BCB)\lib\obj
+Item20=D:\Tracker;D:\Program Files\Borland\CBuilder6\lib;$(BCB)\lib\obj;$(BCB)\lib
+Item21=D:\Tracker;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item22=D:\Tracker;D:\Program Files\DevStudio\VC\lib;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item23=D:\Program Files\DevStudio\VC\lib;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item24=D:\Tracker;D:\Program Files\Borland\CBuilder5\Projects;D:\Program Files\Borland\CBuilder5\Lib\PSDK;$(BCB)\lib\obj;$(BCB)\lib
+Item25=D:\Program Files\Borland\CBuilder5\Projects;D:\Program Files\Borland\CBuilder5\Lib\PSDK;$(BCB)\lib\obj;$(BCB)\lib
+Item26=D:\Tracker;D:\Program Files\Borland\CBuilder5\Lib;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item27=D:\Program Files\Borland\CBuilder5\Lib;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item28=D:\Tracker;D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib;D:\Program Files\Borland\CBuilder5\Lib
+Item29=D:\Tracker\;D:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib;D:\Program Files\Borland\CBuilder5\Lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=5
+Item0=_DEBUG;WIN32;
+Item1=_DEBUG;WIN32;_SOCKET_DBG;
+Item2=_DEBUG;WIN32
+Item3=_DEBUG WIN32
+Item4=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=Object
+Item1=D:\Programming Station\Object
+
+[HistoryLists\hlFinalOutputDir]
+Count=30
+Item0=C:\AWI Software\
+Item1=C:\AWI Softwares\Programming Station\Programming Station 188\Release\
+Item2=C:\AWI Softwares\Programming Station\Programming Station 188\Debug\
+Item3=C:\AWI Softwares\Programming Station\Programming Station 187\Debug\
+Item4=C:\AWI Softwares\Programming Station\Programming Station 186\Debug\
+Item5=C:\AWI Softwares\Programming Station\Programming Station 186\Debug
+Item6=C:\AWI Softwares\Programming Station\Programming Station 185\Debug\
+Item7=C:\AWI Softwares\Programming Station\Programming Station 185\Debug
+Item8=C:\AWI Softwares\Programming Station\Programming Station 184\Debug\
+Item9=C:\AWI Softwares\Programming Station\Programming Station 184\Debug
+Item10=C:\AWI Softwares\Programming Station\Programming Station 183\Debug\
+Item11=C:\AWI Softwares\Programming Station\Programming Station 183\Debug
+Item12=C:\AWI Softwares\Programming Station\Programming Station 182\Debug\
+Item13=C:\AWI Softwares\Programming Station\Programming Station 182\Debug
+Item14=C:\AWI Softwares\Programming Station\Programming Station 181\Debug\
+Item15=C:\AWI Softwares\Programming Station\Programming Station 181\Debug
+Item16=C:\AWI Softwares\Programming Station\Programming Station 180\Debug\
+Item17=C:\AWI Softwares\Programming Station\Programming Station 179\Debug\
+Item18=C:\AWI Softwares\Programming Station\Programming Station 178\Debug\
+Item19=C:\AWI Softwares\Programming Station\Programming Station 177\Debug\
+Item20=C:\AWI Softwares\Programming Station\Programming Station 177\Debug
+Item21=C:\AWI Softwares\Programming Station\Programming Station 176\Debug\
+Item22=C:\AWI Softwares\Programming Station\Programming Station 176\Debug
+Item23=C:\AWI Softwares\Programming Station\Programming Station 174\Debug\
+Item24=C:\AWI Softwares\Programming Station\Programming Station 174\Debug
+Item25=C:\AWI Softwares\Programming Station\Programming Station 173\Debug\
+Item26=C:\AWI Softwares\Programming Station\Programming Station 173\Debug
+Item27=G:\ActiveWaveSoftwares\AWI Prog Station\Programming Station 173\Debug\
+Item28=G:\ActiveWaveSoftwares\AWI Prog Station\Programming Station 173\Debug
+Item29=G:\ActiveWaveSoftwares\AWI Prog Station\Programming Station 172\Debug\
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

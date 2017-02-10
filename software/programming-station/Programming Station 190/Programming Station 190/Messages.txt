@@ -1,0 +1,68 @@
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] ProgStationUnit.cpp(1004): W8004 'numLines' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(6431): W8004 'momo' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(18477): W8004 'nID' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(18477): W8004 'readerInit' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(18659): W8066 Unreachable code
+[C++ Warning] ProgStationUnit.cpp(22489): W8004 'tIndex' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(31464): W8008 Condition is always false
+[C++ Warning] ProgStationUnit.cpp(31597): W8019 Code has no effect
+[C++ Warning] ProgStationUnit.cpp(31796): W8066 Unreachable code
+[C++ Warning] ProgStationUnit.cpp(31797): W8004 'counter' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(31797): W8004 'out' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(31906): W8066 Unreachable code
+[C++ Warning] ProgStationUnit.cpp(31907): W8004 'pktLen' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(31907): W8004 'bytesReadIn' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(32635): W8066 Unreachable code
+[C++ Warning] ProgStationUnit.cpp(32651): W8004 'k' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(32651): W8004 'sendBytes' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(32680): W8066 Unreachable code
+[C++ Warning] ProgStationUnit.cpp(32806): W8004 'k' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(32806): W8004 'sendBytes' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(32926): W8004 'sendBytes' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(37040): W8004 'found' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(38982): W8004 'index' is assigned a value that is never used
+[C++ Warning] ProgStationUnit.cpp(40555): W8012 Comparing signed and unsigned values
+[C++ Warning] ProgStationUnit.cpp(40638): W8012 Comparing signed and unsigned values
+[C++ Warning] ProgStationUnit.cpp(40845): W8012 Comparing signed and unsigned values
+[C++ Warning] ProgStationUnit.cpp(42045): W8004 'end' is assigned a value that is never used
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] ComConfigPage.cpp(398): W8004 'index' is assigned a value that is never used
+[C++ Warning] ComConfigPage.cpp(1143): W8004 'item' is assigned a value that is never used
+[C++ Warning] ComConfigPage.cpp(1484): W8066 Unreachable code
+[C++ Warning] ComConfigPage.cpp(1485): W8066 Unreachable code
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] ScanUnit.cpp(65): W8008 Condition is always false
+[C++ Warning] ScanUnit.cpp(246): W8004 'nbytes' is assigned a value that is never used
+[C++ Warning] ScanUnit.cpp(340): W8008 Condition is always false
+[C++ Warning] ScanUnit.cpp(415): W8004 'ret' is assigned a value that is never used
+[C++ Warning] ScanUnit.cpp(415): W8004 'in' is assigned a value that is never used
+[C++ Warning] ScanUnit.cpp(506): W8008 Condition is always false
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] TCPIPUnit.cpp(319): W8004 'ret' is assigned a value that is never used
+[C++ Warning] TCPIPUnit.cpp(421): W8008 Condition is always false
+[C++ Warning] TCPIPUnit.cpp(496): W8004 'k' is assigned a value that is never used
+[C++ Warning] TCPIPUnit.cpp(881): W8066 Unreachable code
+[C++ Warning] TCPIPUnit.cpp(1034): W8004 'ret' is assigned a value that is never used
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] NetworkUnit.cpp(164): W8004 'k' is assigned a value that is never used
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[C++ Warning] Rijndael.cpp(1315): W8012 Comparing signed and unsigned values
+[C++ Warning] Rijndael.cpp(1326): W8012 Comparing signed and unsigned values
+[C++ Warning] Rijndael.cpp(1337): W8012 Comparing signed and unsigned values
+[C++ Warning] Rijndael.cpp(1360): W8012 Comparing signed and unsigned values
+[C++ Warning] Rijndael.cpp(1371): W8012 Comparing signed and unsigned values
+[C++ Warning] Rijndael.cpp(1383): W8012 Comparing signed and unsigned values
+[C++ Warning] wspiapi.h(786): W8060 Possibly incorrect assignment
+[Linker Warning] Public symbol '_crc' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_key' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_pstate' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_pstatd' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_shared_key' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_blockEncrypt' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_ive' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Public symbol '_ivd' defined in both module C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\PROGSTATIONUNIT.OBJ and C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\OBJECT\TCPIPUNIT.OBJ
+[Linker Warning] Duplicate resource:  Type 16 (VERSIONINFO), ID 1; File C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\AWI_PROGSTATION.RES resource kept; file C:\ACTIVEWAVE\SOFTWARE\PROGRAMMING STATION\FABIANO\PROGRAMMING STATION 190\PROGRAMMING STATION 190\BITMAPSIMPORT.RES resource discarded.
