@@ -1,0 +1,28 @@
+Output: Gerber Files
+Type  : Gerber
+From  : PCB Document [Reader 103 USB Rev6.PCB]
+   Generated File[Reader 103 USB Rev6.GTL]
+   Generated File[Reader 103 USB Rev6.GBL]
+   Generated File[Reader 103 USB Rev6.GTO]
+   Generated File[Reader 103 USB Rev6.GTP]
+   Generated File[Reader 103 USB Rev6.GTS]
+   Generated File[Reader 103 USB Rev6.GBS]
+   Generated File[Reader 103 USB Rev6.GM4]
+   Generated File[Reader 103 USB Rev6.GM5]
+   Generated File[Reader 103 USB Rev6.RUL]
+   Generated File[Reader 103 USB Rev6.EXTREP]
+   Generated File[Reader 103 USB Rev6.REP]
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Reader 103 USB Rev6.PCB]
+   Generated File[Reader 103 USB Rev6.TXT]
+   Generated File[Reader 103 USB Rev6.DRL]
+   Generated File[Reader 103 USB Rev6.LDP]
+   Generated File[Reader 103 USB Rev6.DRR]
+
+
+Files Generated   : 15
+Documents Printed : 0
+
+Finished Output Generation At 12:56:32 PM On 3/9/2007

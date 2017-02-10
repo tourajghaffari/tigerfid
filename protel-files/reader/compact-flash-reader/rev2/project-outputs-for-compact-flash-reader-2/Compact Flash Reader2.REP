@@ -1,0 +1,531 @@
+*************************************************************
+FileName = Compact Flash Reader2.GBR
+AutoAperture = True
+*************************************************************
+Generating : TopLayer
+      File : Compact Flash Reader2.GTL
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+*************************************************************
+
+*************************************************************
+Generating : MidLayer1
+      File : Compact Flash Reader2.G1
+
+    Adding Layer      : MidLayer1
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D48
+    D50
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+    D60
+    D62
+*************************************************************
+
+*************************************************************
+Generating : InternalPlane1
+      File : Compact Flash Reader2.GP1
+
+    Adding Layer      : InternalPlane1
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+*************************************************************
+
+*************************************************************
+Generating : InternalPlane2
+      File : Compact Flash Reader2.GP2
+
+    Adding Layer      : InternalPlane2
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+*************************************************************
+
+*************************************************************
+Generating : MidLayer2
+      File : Compact Flash Reader2.G2
+
+    Adding Layer      : MidLayer2
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D13
+    D48
+    D51
+    D52
+    D53
+    D54
+    D55
+    D57
+    D58
+    D60
+    D62
+    D63
+    D64
+*************************************************************
+
+*************************************************************
+Generating : BottomLayer
+      File : Compact Flash Reader2.GBL
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+    D16
+    D17
+    D18
+    D24
+    D36
+    D37
+    D48
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+*************************************************************
+
+*************************************************************
+Generating : TopOverlay
+      File : Compact Flash Reader2.GTO
+
+    Adding Layer      : TopOverlay
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D48
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+*************************************************************
+
+*************************************************************
+Generating : BottomOverlay
+      File : Compact Flash Reader2.GBO
+
+    Adding Layer      : BottomOverlay
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+*************************************************************
+
+*************************************************************
+Generating : TopPaste
+      File : Compact Flash Reader2.GTP
+
+    Adding Layer      : TopPaste
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+*************************************************************
+
+*************************************************************
+Generating : BottomPaste
+      File : Compact Flash Reader2.GBP
+
+    Adding Layer      : BottomPaste
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+    D16
+    D17
+    D18
+    D24
+    D36
+    D37
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+*************************************************************
+
+*************************************************************
+Generating : TopSolder
+      File : Compact Flash Reader2.GTS
+
+    Adding Layer      : TopSolder
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+    D62
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+    D117
+    D118
+    D119
+    D120
+    D121
+    D122
+*************************************************************
+
+*************************************************************
+Generating : BottomSolder
+      File : Compact Flash Reader2.GBS
+
+    Adding Layer      : BottomSolder
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+    D84
+    D85
+    D86
+    D88
+    D89
+    D90
+    D96
+    D108
+    D109
+    D120
+    D121
+    D122
+    D123
+    D124
+    D125
+    D126
+    D127
+    D128
+    D129
+    D130
+    D131
+    D132
+    D133
+*************************************************************
+
+*************************************************************
+Generating : Title
+      File : Compact Flash Reader2.GM4
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+*************************************************************
+
+*************************************************************
+Generating : Notes
+      File : Compact Flash Reader2.GM5
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D51
+    D52
+    D54
+    D55
+    D57
+    D58
+*************************************************************
+

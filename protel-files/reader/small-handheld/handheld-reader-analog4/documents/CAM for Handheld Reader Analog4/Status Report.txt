@@ -1,0 +1,34 @@
+CAM Outputs Generation Report
+for 'CAM Outputs for Handheld Reader Analog4.cam'
+at 15:36:29 on 17-Sep-2004
+
+
+'NC Drill Output 1'
+'Handheld Reader Analog4.TXT' generated
+'Handheld Reader Analog4.DRL' generated
+'Handheld Reader Analog4.DRR' generated
+
+'Gerber Output 1'
+'Handheld Reader Analog4.GTL' generated
+'Handheld Reader Analog4.GBL' generated
+'Handheld Reader Analog4.GTO' generated
+'Handheld Reader Analog4.GTP' generated
+'Handheld Reader Analog4.GBP' generated
+'Handheld Reader Analog4.GTS' generated
+'Handheld Reader Analog4.GBS' generated
+'Handheld Reader Analog4.GM2' generated
+'Handheld Reader Analog4.GM4' generated
+'Handheld Reader Analog4.GM5' generated
+'Handheld Reader Analog4.GPT' generated
+'Handheld Reader Analog4.GPB' generated
+'Handheld Reader Analog4.GD1' generated
+'Handheld Reader Analog4.GG1' generated
+'Handheld Reader Analog4.REP' generated
+
+'Bom Output 1'
+'BOM for Handheld Reader Analog4.bom' generated
+'BOM for Handheld Reader Analog4.txt' generated
+'BOM for Handheld Reader Analog4.csv' generated
+
+
+Total number of generated files = 21

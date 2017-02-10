@@ -1,0 +1,23 @@
+Protel Design System Design Rule Check
+PCB File : C:\Protel Files\Reader\Reader USB\Rev6\Reader 103 USB Rev6.PCB
+Date     : 3/9/2007
+Time     : 11:19:48 AM
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Preferred=20mil) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7.5mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=10mil) (Disabled)(InNet('GND_COM')),(All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:06

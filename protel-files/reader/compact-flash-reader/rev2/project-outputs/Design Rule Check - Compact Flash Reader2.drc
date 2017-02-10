@@ -1,0 +1,28 @@
+Protel Design System Design Rule Check
+PCB File : C:\Protel Files\Reader\Compact Flash Reader\Rev2\Compact Flash Reader2.PCB
+Date     : 10/1/2007
+Time     : 2:52:49 PM
+
+Processing Rule : Clearance Constraint (Gap=5mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5mil) (Max=100mil) (Preferred=8mil) (All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+   Violation between Net NetC40_2     Subnet : L13-2         Subnet : C40-2    Q6-C     C43-1    
+   Violation between Net +5V     Subnet : C53-1    R43-1    R34-1    R38-2    U9-8     U9-4     R3-2     R41-2    R47-2    U3-5                   R45-2    U11-5    R44-2    U4-5     U10-8    U10-4    R5-2     R28-2    R53-2    FB4-2    U8-5                   C18-1    R7-2          Subnet : U6-4     U5-3     U5-8     FB5-2    R31-1    Q2-E     R19-1    R20-1    FB4-1    L7-1                   C26-1    
+Rule Violations :2
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC40_2')),(InNet('NetC42_1'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (InNet('NetC9_1')),(InNet('NetC19_1'))
+Rule Violations :0
+
+
+Violations Detected : 2
+Time Elapsed        : 00:00:00

@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Handheld Reader Analog4.PCB   17-Sep-2004  15:36:29
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : TopLayer to BottomLayer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        10mil (0.254mm)          99               17.13 Inch (435.00 mm)
+T2        25mil (0.635mm)          10               1.47 Inch (37.35 mm)
+T3        35mil (0.889mm)          3                1.70 Inch (43.17 mm)
+T4        75mil (1.905mm)          2                1.85 Inch (46.91 mm)
+---------------------------------------------------------------------------
+Totals                             114              22.14 Inch (562.43 mm)
+
+Total Processing Time : 00:00:01

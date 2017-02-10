@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Compact Flash Reader2.PCB   10/1/2007  3:59:47 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Compact Flash Reader2.TXT
+EIA File   : Compact Flash Reader2.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        10mil (0.254mm)          Round          310              34.70 Inch (881.41 mm)
+T2        20mil (0.508mm)          Round          14               1.62 Inch (41.23 mm)
+T3        35mil (0.889mm)          Round          13               6.01 Inch (152.65 mm)
+---------------------------------------------------------------------------
+Totals                                            337              42.33 Inch (1075.29 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:01

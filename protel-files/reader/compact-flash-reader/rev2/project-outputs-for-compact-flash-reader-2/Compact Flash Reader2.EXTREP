@@ -1,0 +1,23 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: Compact Flash Reader2.GBR   10/1/2007  3:59:46 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                TopLayer                                
+.G1                 MidLayer1                               
+.GP1                InternalPlane1                          
+.GP2                InternalPlane2                          
+.G2                 MidLayer2                               
+.GBL                BottomLayer                             
+.GTO                TopOverlay                              
+.GBO                BottomOverlay                           
+.GTP                TopPaste                                
+.GBP                BottomPaste                             
+.GTS                TopSolder                               
+.GBS                BottomSolder                            
+.GM4                Title                                   
+.GM5                Notes                                   
+------------------------------------------------------------------------------------------

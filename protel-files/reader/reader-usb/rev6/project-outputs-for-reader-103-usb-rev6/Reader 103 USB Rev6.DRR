@@ -1,0 +1,30 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Reader 103 USB Rev6.PCB   3/9/2007  12:56:32 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : Reader 103 USB Rev6.TXT
+EIA File   : Reader 103 USB Rev6.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        18mil (0.4572mm)         Round          271              52.42 Inch (1331.36 mm)
+T2        31mil (0.7874mm)         Round          2                3.33 Inch (84.62 mm)
+T3        34mil (0.8636mm)         Round          2                3.60 Inch (91.49 mm)
+T4        35mil (0.889mm)          Round          41               15.17 Inch (385.21 mm)
+T5        36mil (0.9144mm)         Round          27               7.42 Inch (188.36 mm)
+T6        38mil (0.9652mm)         Round          10               3.17 Inch (80.46 mm)
+T7        40mil (1.016mm)          Round          12               6.60 Inch (167.64 mm)
+T8        45mil (1.143mm)          Round          6                4.54 Inch (115.27 mm)
+T9        46mil (1.1684mm)         Round          12               6.39 Inch (162.31 mm)
+T10       47.2mil (1.19888mm)      Round          6                6.59 Inch (167.28 mm)
+T11       63mil (1.6002mm)         Round          2                3.79 Inch (96.37 mm)
+T12       95mil (2.413mm)          Round          2                0.75 Inch (19.05 mm)
+T13       125mil (3.175mm)         Round          1                1.93 Inch (49.08 mm)
+T14       130mil (3.302mm)         Round          2                4.13 Inch (104.98 mm)
+T15       210mil (5.334mm)         Round          2                3.40 Inch (86.42 mm)
+T16       128mil (3.2512mm)        Round          2         NPTH   4.12 Inch (104.53 mm)
+---------------------------------------------------------------------------
+Totals                                            400              127.34 Inch (3234.42 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

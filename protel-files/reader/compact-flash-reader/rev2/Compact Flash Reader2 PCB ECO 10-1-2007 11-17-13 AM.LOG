@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=Analog1 Member=FD1
+Added Component: Designator=FID1(FiducialOrigin_020205)
+Added Component: Designator=FID2(FiducialOneSide_011905)
+Added Class: Name=Compact Flash Reader2
+Added Member To Class: ClassName=Analog1 Member=Component U13 DS1804
+Added Room: Name=Compact Flash Reader2

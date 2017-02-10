@@ -1,0 +1,6 @@
+DRC Rules Export File for PCB: C:\Protel Files\Reader\Reader USB\Rev6\Reader 103 USB Rev6.PCB
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=8.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.50
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=10.00

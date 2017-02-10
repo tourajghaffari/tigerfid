@@ -1,0 +1,21 @@
+Change Component Comment : Designator=U24 Old Comment=FT232RQ New Comment=MCP1316
+Added Pin To Net: NetName=NetJ6_3 Pin=D4-A
+Added Pin To Net: NetName=NetJ3_3 Pin=D6-A
+Added Pin To Net: NetName=NetJ8_3 Pin=D7-A
+Added Pin To Net: NetName=GND_COM Pin=U24-2
+Added Pin To Net: NetName=+5VD Pin=U24-3
+Added Pin To Net: NetName=+5VD Pin=U24-4
+Added Pin To Net: NetName=NetTP4_1 Pin=U24-5
+Change Net Name : Old Net Name=NetJ3_3 New Net Name=NetD6_A
+Change Net Name : Old Net Name=NetJ6_3 New Net Name=NetD4_A
+Change Net Name : Old Net Name=NetJ8_3 New Net Name=NetD7_A
+Added Pin To Net: NetName=NetD4_K Pin=D4-K
+Added Pin To Net: NetName=NetD4_K Pin=D6-K
+Added Pin To Net: NetName=NetD4_K Pin=D7-K
+Added Pin To Net: NetName=NetD4_K Pin=U24-1
+Added Pin To Net: NetName=NetD4_K Pin=U24-1
+Added Net: Name=NetD4_K
+Added Member To Class: ClassName=Sheet2 Member=Component D4 1N4148
+Added Member To Class: ClassName=Sheet2 Member=Component D6 1N4148
+Added Member To Class: ClassName=Sheet2 Member=Component D7 1N4148
+Added Member To Class: ClassName=Sheet2 Member=Component U24 MCP1316

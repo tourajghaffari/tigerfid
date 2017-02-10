@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=+5V Pin=R54-1
+Removed Pin From Net: NetName=DPOT ~INC Pin=R54-2
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U12-2
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U12-3
+Removed Pin From Net: NetName=NetC1_1 Pin=U12-4
+Removed Pin From Net: NetName=NetC8_1 Pin=U12-5
+Removed Pin From Net: NetName=DPOT ~INC Pin=U13-1
+Removed Pin From Net: NetName=DPOT UP/~DOWN Pin=U13-2
+Removed Pin From Net: NetName=+5V Pin=U13-3
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U13-4
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U13-6
+Removed Pin From Net: NetName=+5V Pin=U13-8
+Removed Pin From Net: NetName=_CS Pin=U14-2
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U14-3
+Removed Pin From Net: NetName=+5V Pin=U14-5
+Removed Member From Class: ClassName=Analog1 Member=C62
+Removed Member From Class: ClassName=Analog1 Member=R54
+Removed Member From Class: ClassName=Analog1 Member=U12
+Removed Member From Class: ClassName=Analog1 Member=U13
+Removed Member From Class: ClassName=Analog1 Member=U14
+Added Pin To Net: NetName=NetC1_1 Pin=L18-1
+Added Pin To Net: NetName=NetC1_1 Pin=U1-4

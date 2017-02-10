@@ -1,0 +1,39 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : PCB Document [Compact Flash Reader2.PCB]
+   Generated File[Pick Place for Compact Flash Reader2.txt]
+
+Output: Gerber Files
+Type  : Gerber
+From  : PCB Document [Compact Flash Reader2.PCB]
+   Generated File[Compact Flash Reader2.GTL]
+   Generated File[Compact Flash Reader2.G1]
+   Generated File[Compact Flash Reader2.GP1]
+   Generated File[Compact Flash Reader2.GP2]
+   Generated File[Compact Flash Reader2.G2]
+   Generated File[Compact Flash Reader2.GBL]
+   Generated File[Compact Flash Reader2.GTO]
+   Generated File[Compact Flash Reader2.GBO]
+   Generated File[Compact Flash Reader2.GTP]
+   Generated File[Compact Flash Reader2.GBP]
+   Generated File[Compact Flash Reader2.GTS]
+   Generated File[Compact Flash Reader2.GBS]
+   Generated File[Compact Flash Reader2.GM4]
+   Generated File[Compact Flash Reader2.GM5]
+   Generated File[Compact Flash Reader2.RUL]
+   Generated File[Compact Flash Reader2.EXTREP]
+   Generated File[Compact Flash Reader2.REP]
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Compact Flash Reader2.PCB]
+   Generated File[Compact Flash Reader2.TXT]
+   Generated File[Compact Flash Reader2.DRL]
+   Generated File[Compact Flash Reader2.LDP]
+   Generated File[Compact Flash Reader2.DRR]
+
+
+Files Generated   : 22
+Documents Printed : 0
+
+Finished Output Generation At 3:59:48 PM On 10/1/2007

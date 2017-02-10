@@ -1,0 +1,7 @@
+DRC Rules Export File for PCB: C:\Protel Files\Reader\Compact Flash Reader\Rev2\Compact Flash Reader2.PCB
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=5.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=ShortCircuit|RuleName=ShortCircuit_1|Scope=Board|Allowed=1
+RuleKind=ShortCircuit|RuleName=ShortCircuit_2|Scope=Board|Allowed=1
