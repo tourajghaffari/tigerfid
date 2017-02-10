@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: SmallHandheldRev1.PcbDoc   2/24/2012  6:53:33 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : SmallHandheldRev1.TXT
+EIA File   : SmallHandheldRev1.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        10mil (0.254mm)          Round          230              310.48 Inch (7886.09 mm)
+T2        30mil (0.762mm)          Round          7                286.96 Inch (7288.71 mm)
+T3        35mil (0.889mm)          Round          16               284.67 Inch (7230.58 mm)
+T4        57mil (1.4478mm)         Round          10               286.24 Inch (7270.43 mm)
+---------------------------------------------------------------------------
+Totals                                            263              1168.34 Inch (29675.81 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

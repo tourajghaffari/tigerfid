@@ -1,0 +1,76 @@
+Protel Design System Design Rule Check
+PCB File : Documents\TRX-101_15.PCB
+Date     : 18-Apr-2007
+Time     : 15:47:58
+
+Processing Rule : Clearance Constraint (Gap=10mil) (Disabled)(Is on net GND_SIGNAL ),(On the board )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7mil) (On the board ),(On the board )
+   Violation between Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer and                      Pad L13-2(1463mil,1379.181mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer and                      Pad L13-2(1463mil,1379.181mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer and                      Pad L13-2(1463mil,1379.181mil)  TopLayer   
+   Violation between Track (1488mil,1562.654mil)(1488mil,1620.591mil)  TopLayer and                      Pad L13-1(1488mil,1620.591mil)  TopLayer   
+   Violation between Track (1893.174mil,419.669mil)(1893.174mil,513.142mil)  TopLayer and                      Pad L5-2(1893.173mil,513.142mil)  TopLayer   
+   Violation between Track (1868.173mil,271.732mil)(1868.173mil,329.669mil)  TopLayer and                      Pad L5-1(1868.173mil,271.732mil)  TopLayer   
+   Violation between Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer and                      Pad Q6-C(1463.055mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer and                      Pad Q6-C(1463.055mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer and                      Pad Q6-C(1463.055mil,1379.402mil)  TopLayer   
+   Violation between Track (1488mil,1562.654mil)(1488mil,1620.591mil)  TopLayer and                      Pad C42-1(1487.937mil,1620.654mil)  TopLayer   
+   Violation between Track (1893.174mil,419.669mil)(1893.174mil,513.142mil)  TopLayer and                      Pad Q1-C(1897.819mil,515.496mil)  TopLayer   
+   Violation between Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer and                      Track (1463.055mil,1379.402mil)(1481.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer and                      Track (1463.055mil,1379.402mil)(1481.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer and                      Track (1463.055mil,1379.402mil)(1481.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1303.717mil)(1462.874mil,1379.221mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1379.221mil)(1463.055mil,1379.402mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1303.717mil)(1462.874mil,1379.221mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1379.221mil)(1463.055mil,1379.402mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1482mil,1379.402mil)(1482.779mil,1379.402mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1482.779mil,1379.402mil)(1499mil,1363.181mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1487.937mil,1620.654mil)(1487.937mil,1680.654mil)  TopLayer and                      Track (1488mil,1562.654mil)(1488mil,1620.591mil)  TopLayer   
+   Violation between Track (1462.874mil,1303.717mil)(1462.874mil,1379.221mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer   
+   Violation between Track (1462.874mil,1379.221mil)(1463.055mil,1379.402mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer   
+   Violation between Track (1847.236mil,271.669mil)(1868.236mil,271.669mil)  TopLayer and                      Track (1868.173mil,271.732mil)(1868.173mil,329.669mil)  TopLayer   
+   Violation between Track (1897.819mil,515.496mil)(1897.819mil,560mil)  TopLayer and                      Track (1893.174mil,419.669mil)(1893.174mil,513.142mil)  TopLayer   
+   Violation between Pad Free-0(1750.323mil,1860mil)  MultiLayer and                      Text "activewaveinc.com" (1524.622mil,1778.181mil)  TopLayer   
+Rule Violations :26
+
+Processing Rule : Short-Circuit Constraint (Allowed=Not Allowed) (On the board ),(On the board )
+   Violation between Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer and                      Pad L13-2(1463mil,1379.181mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer and                      Pad L13-2(1463mil,1379.181mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer and                      Pad L13-2(1463mil,1379.181mil)  TopLayer   
+   Violation between Track (1488mil,1562.654mil)(1488mil,1620.591mil)  TopLayer and                      Pad L13-1(1488mil,1620.591mil)  TopLayer   
+   Violation between Track (1893.174mil,419.669mil)(1893.174mil,513.142mil)  TopLayer and                      Pad L5-2(1893.173mil,513.142mil)  TopLayer   
+   Violation between Track (1868.173mil,271.732mil)(1868.173mil,329.669mil)  TopLayer and                      Pad L5-1(1868.173mil,271.732mil)  TopLayer   
+   Violation between Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer and                      Pad Q6-C(1463.055mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer and                      Pad Q6-C(1463.055mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer and                      Pad Q6-C(1463.055mil,1379.402mil)  TopLayer   
+   Violation between Track (1488mil,1562.654mil)(1488mil,1620.591mil)  TopLayer and                      Pad C42-1(1487.937mil,1620.654mil)  TopLayer   
+   Violation between Track (1893.174mil,419.669mil)(1893.174mil,513.142mil)  TopLayer and                      Pad Q1-C(1897.819mil,515.496mil)  TopLayer   
+   Violation between Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer and                      Track (1463.055mil,1379.402mil)(1481.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer and                      Track (1463.055mil,1379.402mil)(1481.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer and                      Track (1463.055mil,1379.402mil)(1481.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1303.717mil)(1462.874mil,1379.221mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1379.221mil)(1463.055mil,1379.402mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463.221mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1303.717mil)(1462.874mil,1379.221mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1462.874mil,1379.221mil)(1463.055mil,1379.402mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1482mil,1379.402mil)(1482.779mil,1379.402mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1482.779mil,1379.402mil)(1499mil,1363.181mil)  TopLayer and                      Track (1463.221mil,1379.402mil)(1482mil,1379.402mil)  TopLayer   
+   Violation between Track (1487.937mil,1620.654mil)(1487.937mil,1680.654mil)  TopLayer and                      Track (1488mil,1562.654mil)(1488mil,1620.591mil)  TopLayer   
+   Violation between Track (1462.874mil,1303.717mil)(1462.874mil,1379.221mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer   
+   Violation between Track (1462.874mil,1379.221mil)(1463.055mil,1379.402mil)  TopLayer and                      Track (1463mil,1379.181mil)(1463mil,1472.654mil)  TopLayer   
+   Violation between Track (1847.236mil,271.669mil)(1868.236mil,271.669mil)  TopLayer and                      Track (1868.173mil,271.732mil)(1868.173mil,329.669mil)  TopLayer   
+   Violation between Track (1897.819mil,515.496mil)(1897.819mil,560mil)  TopLayer and                      Track (1893.174mil,419.669mil)(1893.174mil,513.142mil)  TopLayer   
+   Violation between Pad Free-0(1750.323mil,1860mil)  MultiLayer and                      Text "activewaveinc.com" (1524.622mil,1778.181mil)  TopLayer   
+Rule Violations :26
+
+Processing Rule : Broken-Net Constraint ( (On the board ) )
+   Violation         Net +5V   is broken into 2 sub-nets. Routed To 96.97%
+     Subnet : R31-1    J2-8     FB4-1    Q2-E     R19-1    L7-1     U5-8     C26-1    R20-1    U5-3                   U6-4          Subnet : R5-2     FB4-2    U11-5    U8-5     R45-2    R44-2    U3-5     R7-2     U4-5     C18-1                  R47-2    U10-4    U10-8    R53-2    R28-2    R3-2     U9-4     R41-2    R38-2    U9-8     C53-1                  R43-1    R34-1    Rule Violations :1
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Prefered=10mil) (On the board )
+Rule Violations :0
+
+
+Violations Detected : 53
+Time Elapsed        : 00:00:04

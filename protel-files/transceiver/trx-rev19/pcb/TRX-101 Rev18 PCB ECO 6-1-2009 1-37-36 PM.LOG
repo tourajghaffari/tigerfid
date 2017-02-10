@@ -1,0 +1,4 @@
+Change Physical Footprint: Designator=C10 Old Footprint=CAP A CASE New Footprint=CAP A CASE
+Change Physical Footprint: Designator=D3 Old Footprint=DIODE SC79 New Footprint=DIODE SC79
+Change Physical Footprint: Designator=Q11 Old Footprint=SOT23 TRANS New Footprint=SOT23 TRANS
+Change Physical Footprint: Designator=U1 Old Footprint=SOT343 New Footprint=SOT343

@@ -1,0 +1,6 @@
+DRC Rules Export File for PCB: F:\PCBJOBS\ActiveWaveFiles May2009\TRX-101.REV18\PCB\TRX-101 Rev18.PcbDoc
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=8.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.00
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=10.00

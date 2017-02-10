@@ -1,0 +1,23 @@
+Protel Design System Design Rule Check
+PCB File : C:\ActiveWave\Protel Files\SmallHandheld\SmallHandheldRev1\SmallHandheldRev1.PcbDoc
+Date     : 2/24/2012
+Time     : 6:09:53 PM
+
+Processing Rule : Clearance Constraint (Gap=10mil) (Disabled)(InNet('GND_SIGNAL')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:01

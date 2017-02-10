@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=+5V Pin=U6-4
+Change Component Comment : Designator=L2 Old Comment=18 nH New Comment=8.2nH
+Change Component Comment : Designator=R3 Old Comment=22 New Comment=10
+Added Pin To Net: NetName=NetC54_1 Pin=U6-4
+Added Net: Name=NetC54_1

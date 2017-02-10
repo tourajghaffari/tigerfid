@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=GND_SIGNAL Pin=C63-1
+Removed Pin From Net: NetName=GND_SIGNAL Pin=C64-1
+Removed Member From Class: ClassName=PG05_Schematic Sheet3 Member=C63
+Removed Member From Class: ClassName=PG05_Schematic Sheet3 Member=C64
+Removed Member From Class: ClassName=PG05_Schematic Sheet3 Member=FB7
+Removed Member From Class: ClassName=PG05_Schematic Sheet3 Member=FB8
+Change Component Comment : Designator=L16 Old Comment=3.6nH New Comment=3.3nH
+Change Component Comment : Designator=C56 Old Comment=4.7 pF New Comment=4.7pF
+Change Component Comment : Designator=R30 Old Comment=10 New Comment=100
+Change Component Comment : Designator=R27 Old Comment=100 New Comment=220
+Change Component Comment : Designator=C27 Old Comment=100 pF New Comment=10 pF
+Change Component Comment : Designator=U107 Old Comment=LT1930 New Comment=REG LINEAR LT1930
+Added Pin To Net: NetName=NetQ8_C Pin=Q8-C
+Added Pin To Net: NetName=NetQ8_C Pin=R41-1
+Added Pin To Net: NetName=NetQ8_C Pin=U7-4
+Added Net: Name=NetQ8_C
+Added Pin To Net: NetName=NetR42_2 Pin=R42-2
+Added Pin To Net: NetName=NetR42_2 Pin=U7-6
+Added Pin To Net: NetName=NetR42_2 Pin=U9-3
+Added Net: Name=NetR42_2

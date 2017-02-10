@@ -1,0 +1,71 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\WinZop\ActiveWaveFiles 4-16-2008\December10 2008\VishayCapacitor.mdb;Persist Security Info=False
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+LibraryDatabaseType=Microsoft Access
+LibraryDatabasePath=C:\WinZop\ActiveWaveFiles 4-16-2008\December10 2008\VishayCapacitor.mdb
+DatabasePathRelative=0
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=0
+LastFocusedTable=Capacitor - Ceramic
+[Table1]
+SchemaName=
+TableName=Capacitor - Ceramic
+Enabled=True
+UserWhere=0
+UserWhereText=
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=Part Number0=82|Library Ref0=125|Library Path0=151|Footprint Path0=327|Footprint Ref0=91|Component Type0=104|ComponentLink1Description0=156|ComponentLink1URL0=127|ComponentLink2Description0=156|ComponentLink2URL0=349|DatasheetDocument0=121|Designator0=74|Footprint0=91|Note0=46|PackageDocument0=115|PackageReference0=116|Pin Count0=69|Published0=70|Publisher0=72|Signal Integrity0=92|Simulation0=71|Value0=50|LatestRevisionDate0=116|LatestRevisionNote0=116
+[Table2]
+SchemaName=
+TableName=Capacitor - Electrolytic
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table3]
+SchemaName=
+TableName=Capacitor - Tantalum
+Enabled=True
+UserWhere=0
+UserWhereText=
+[FieldMap1]
+Options=FieldName=Capacitor - Ceramic.Part Number|TableNameOnly=Capacitor - Ceramic|FieldNameOnly=Part Number|FieldType=0|ParameterName=Part Number|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=Capacitor - Ceramic.Library Ref|TableNameOnly=Capacitor - Ceramic|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=Capacitor - Ceramic.Library Path|TableNameOnly=Capacitor - Ceramic|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=Capacitor - Ceramic.Footprint Path|TableNameOnly=Capacitor - Ceramic|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=Capacitor - Ceramic.Footprint Ref|TableNameOnly=Capacitor - Ceramic|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=Capacitor - Electrolytic.Part Number|TableNameOnly=Capacitor - Electrolytic|FieldNameOnly=Part Number|FieldType=0|ParameterName=Part Number|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap7]
+Options=FieldName=Capacitor - Electrolytic.Library Ref|TableNameOnly=Capacitor - Electrolytic|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=Capacitor - Electrolytic.Library Path|TableNameOnly=Capacitor - Electrolytic|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=Capacitor - Electrolytic.Footprint Path|TableNameOnly=Capacitor - Electrolytic|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=Capacitor - Electrolytic.Footprint Ref|TableNameOnly=Capacitor - Electrolytic|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=Capacitor - Tantalum.Part Number|TableNameOnly=Capacitor - Tantalum|FieldNameOnly=Part Number|FieldType=0|ParameterName=Part Number|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap12]
+Options=FieldName=Capacitor - Tantalum.Library Ref|TableNameOnly=Capacitor - Tantalum|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap13]
+Options=FieldName=Capacitor - Tantalum.Library Path|TableNameOnly=Capacitor - Tantalum|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap14]
+Options=FieldName=Capacitor - Tantalum.Footprint Path|TableNameOnly=Capacitor - Tantalum|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap15]
+Options=FieldName=Capacitor - Tantalum.Footprint Ref|TableNameOnly=Capacitor - Tantalum|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0

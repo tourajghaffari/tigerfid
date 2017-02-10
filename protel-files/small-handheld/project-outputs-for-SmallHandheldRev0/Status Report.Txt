@@ -1,0 +1,11 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Project [SmallHandheldRev1.PrjPCB]
+   Generated File[Pick Place for SmallHandheldRev1.txt]
+   Generated File[Pick Place for SmallHandheldRev1.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 3:42:43 PM On 10/22/2012

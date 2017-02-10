@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [SmallHandheldRev1.PrjPCB]
+   Generated File[SmallHandheldRev1.TXT]
+   Generated File[SmallHandheldRev1.DRL]
+   Generated File[SmallHandheldRev1.LDP]
+   Generated File[SmallHandheldRev1.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 4:13:03 PM On 3/21/2012

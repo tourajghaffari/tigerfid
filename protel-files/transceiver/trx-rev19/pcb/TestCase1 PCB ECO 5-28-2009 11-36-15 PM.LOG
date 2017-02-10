@@ -1,0 +1,9 @@
+Added Component: Designator=C54(0603)
+Added Component: Designator=R5(0603)
+Added Component: Designator=R28(0603)
+Added Pin To Net: NetName=NetC54_1 Pin=C54-1
+Added Pin To Net: NetName=GND_SIGNAL Pin=C54-2
+Added Pin To Net: NetName=+5V Pin=R5-1
+Added Pin To Net: NetName=NetC54_1 Pin=R5-2
+Added Pin To Net: NetName=NetC54_1 Pin=R28-1
+Added Pin To Net: NetName=GND_SIGNAL Pin=R28-2

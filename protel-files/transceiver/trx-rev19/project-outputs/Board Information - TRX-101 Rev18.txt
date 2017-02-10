@@ -1,0 +1,8 @@
+Board Information Report
+Filename     : F:\PCBJOBS\ActiveWaveFiles May2009\TRX-101.REV18\PCB\TRX-101 Rev18.PcbDoc
+Date         : 6/1/2009
+Time         : 7:37:45 PM
+Time Elapsed : 00:00:00
+
+Plated Slot Size / Length, Pads
+count : 0

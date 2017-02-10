@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=P1 Old Footprint=1X5 HEADER_011905 New Footprint=1X6 HEADER
+Change Component Comment : Designator=P1 Old Comment=1x5 HEADER New Comment=Header 6
+Change Component Comment : Designator=C9 Old Comment=5 pF New Comment=0.5 pF
+Change Component Comment : Designator=R23 Old Comment=6.8K New Comment=3.3K
+Change Component Comment : Designator=C19 Old Comment=33 pF New Comment=22 pF
+Change Component Comment : Designator=L8 Old Comment=100 nH New Comment=60 nH
+Added Component: Designator=R112(0603)
+Added Pin To Net: NetName=NetP1_6 Pin=P1-6
+Added Pin To Net: NetName=NetP1_6 Pin=R112-1
+Added Net: Name=NetP1_6

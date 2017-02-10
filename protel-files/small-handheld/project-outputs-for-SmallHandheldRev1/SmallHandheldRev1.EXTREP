@@ -1,0 +1,23 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: SmallHandheldRev1.GBR   3/21/2012  4:08:36 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                TopLayer                                
+.G1                 MidLayer1                               
+.G2                 MidLayer2                               
+.G3                 MidLayer3                               
+.G4                 MidLayer4                               
+.GBL                BottomLayer                             
+.GTO                TopOverlay                              
+.GBO                BottomOverlay                           
+.GTP                TopPaste                                
+.GBP                BottomPaste                             
+.GTS                TopSolder                               
+.GBS                BottomSolder                            
+.GM10               Panel                                   
+.GD1                Drill Drawing                           
+------------------------------------------------------------------------------------------

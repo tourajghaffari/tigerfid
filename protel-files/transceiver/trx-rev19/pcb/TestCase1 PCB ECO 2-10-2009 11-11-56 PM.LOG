@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=GND_SIGNAL Pin=C54-1
+Removed Pin From Net: NetName=GND_SIGNAL Pin=C55-1
+Removed Pin From Net: NetName=+5V Pin=R5-2
+Removed Pin From Net: NetName=+5V Pin=R28-2
+Removed Pin From Net: NetName=GND_SIGNAL Pin=R32-1
+Removed Pin From Net: NetName=+5V Pin=R44-2
+Removed Pin From Net: NetName=+5V Pin=R45-2
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U10-1
+Removed Pin From Net: NetName=+5V Pin=U10-4
+Removed Pin From Net: NetName=+5V Pin=U10-8
+Removed Pin From Net: NetName=GND_SIGNAL Pin=U11-2
+Removed Pin From Net: NetName=+5V Pin=U11-5
+Added Pin To Net: NetName=916_RX_DATA Pin=FB1-1
+Added Pin To Net: NetName=916_RX_DATA Pin=TP5-1
+Added Pin To Net: NetName=916_RX_DATA Pin=U3-4
+Added Net: Name=916_RX_DATA

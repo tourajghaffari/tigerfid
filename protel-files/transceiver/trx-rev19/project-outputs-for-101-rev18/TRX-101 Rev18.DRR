@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: TRX-101 Rev18.PcbDoc   6/1/2009  7:49:33 PM
+---------------------------------------------------------------------------
+
+Layer Pair : TopLayer to BottomLayer
+ASCII RoundHoles File : TRX-101 Rev18.TXT
+EIA File   : TRX-101 Rev18.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        10mil (0.254mm)          Round          116              19.67 Inch (499.73 mm)
+T2        25mil (0.635mm)          Round          20               7.93 Inch (201.47 mm)
+T3        30mil (0.762mm)          Round          6                3.81 Inch (96.65 mm)
+T4        35mil (0.889mm)          Round          10               1.36 Inch (34.56 mm)
+T5        57mil (1.4478mm)         Round          16               6.43 Inch (163.38 mm)
+T6        122mil (3.0988mm)        Round          1                2.47 Inch (62.75 mm)
+---------------------------------------------------------------------------
+Totals                                            169              41.68 Inch (1058.55 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

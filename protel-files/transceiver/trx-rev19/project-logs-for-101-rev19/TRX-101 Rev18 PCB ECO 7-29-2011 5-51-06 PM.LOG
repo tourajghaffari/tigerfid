@@ -1,0 +1,6 @@
+Change Component Comment : Designator=L19 Old Comment=18nh New Comment=6.8 nH
+Added Pin To Net: NetName=NetC40_2 Pin=L13-2
+Added Pin To Net: NetName=NetC42_1 Pin=C42-1
+Added Pin To Net: NetName=NetC42_1 Pin=L13-1
+Added Pin To Net: NetName=NetC42_1 Pin=R33-1
+Added Net: Name=NetC42_1

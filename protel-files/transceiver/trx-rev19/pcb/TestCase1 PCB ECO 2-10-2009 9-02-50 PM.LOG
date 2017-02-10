@@ -1,0 +1,3 @@
+Added Component: Designator=R52(POT PANA EVN5)
+Added Pin To Net: NetName=NetC52_1 Pin=R52-1
+Added Pin To Net: NetName=+5V Pin=R52-2
