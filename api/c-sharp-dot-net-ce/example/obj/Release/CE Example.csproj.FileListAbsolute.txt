@@ -1,0 +1,41 @@
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Release\Alarm.wav
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Release\comport.txt
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Release\Ding.WAV
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Release\AWI_API_CE.dll
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Release\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form1.resources
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form2.resources
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form3.resources
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Release\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Release\Alarm.wav
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Release\comport.txt
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Release\Ding.WAV
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Release\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form1.resources
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form2.resources
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form3.resources
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Release\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Release\Alarm.wav
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Release\comport.txt
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Release\Ding.WAV
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Release\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form1.resources
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form2.resources
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form3.resources
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Release\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Release\Alarm.wav
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Release\comport.txt
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Release\Ding.WAV
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Release\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Release\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form1.resources
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form2.resources
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Release\TagDetector.Form3.resources
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Release\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Release\CE_EXAMPLE.exe

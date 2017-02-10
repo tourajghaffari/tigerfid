@@ -1,0 +1,52 @@
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Debug\Alarm.wav
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Debug\comport.txt
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Debug\Ding.WAV
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\bin\Debug\AWI_API_CE.dll
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form1.resources
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form2.resources
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form3.resources
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\AWI\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Debug\Alarm.wav
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Debug\comport.txt
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Debug\Ding.WAV
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\bin\Debug\AWI_API_CE.dll
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form1.resources
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form2.resources
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form3.resources
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\API\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Debug\Alarm.wav
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Debug\comport.txt
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Debug\Ding.WAV
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\bin\Debug\AWI_API_CE.dll
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form1.resources
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form2.resources
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form3.resources
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Debug\Alarm.wav
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Debug\comport.txt
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Debug\Ding.WAV
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Debug\CE_EXAMPLE.pdb
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\bin\Debug\AWI_API_CE.dll
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\ResolveAssemblyReference.cache
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form1.resources
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form2.resources
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\TagDetector.Form3.resources
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\CE Example.csproj.GenerateResource.Cache
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.exe
+C:\mydev\ActiveWave\Software\Customer Release\API\C# .Net CE\C# API CE Example\obj\Debug\CE_EXAMPLE.pdb

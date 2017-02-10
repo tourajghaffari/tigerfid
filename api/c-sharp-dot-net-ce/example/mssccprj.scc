@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[CE Example.sln]
+SCC_Aux_Path = "\\STRIKESOFTDEV\Strike VSS"
+SCC_Project_Name = "$/AWI/C# .Net CE/API Version 5.1.0 Debug/C# API CE V5.1.0 Example", CNBAAAAA
+
+[CE Example V5.1.0.csdproj]
+SCC_Aux_Path = "\\STRIKESOFTDEV\Strike VSS"
+SCC_Project_Name = "$/AWI/C# .Net CE/API Version 5.1.0 Debug/C# API CE V5.1.0 Example", CNBAAAAA
+
+[CE Example V5.1.sln]
+SCC_Aux_Path = "\\STRIKESOFTDEV\Strike VSS"
+SCC_Project_Name = "$/AWI/C# .Net CE/API Version 5.1.0 Debug/C# API CE V5.1.0 Example", CNBAAAAA

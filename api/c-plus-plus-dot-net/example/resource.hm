@@ -1,0 +1,4 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by TestAPI.rc
+//
+#define HIDC_STATIC                     0x8089ffff    // IDD_DIALOG_STDFGEN
