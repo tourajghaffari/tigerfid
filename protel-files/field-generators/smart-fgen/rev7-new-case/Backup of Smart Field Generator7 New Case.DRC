@@ -1,0 +1,23 @@
+Protel Design System Design Rule Check
+PCB File : Documents\Smart Field Generator7 New Case.PCB
+Date     : 15-Nov-2004
+Time     : 14:30:48
+
+Processing Rule : Clearance Constraint (Gap=8mil) (Disabled)(On the board ),(On the board )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=10mil) (Is on net GND ),(On the board )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Not Allowed) (On the board ),(On the board )
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (On the board ) )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Prefered=15mil) (On the board )
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:09

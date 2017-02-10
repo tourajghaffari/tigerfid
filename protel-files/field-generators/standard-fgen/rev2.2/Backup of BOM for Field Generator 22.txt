@@ -1,0 +1,128 @@
+Bill Of Material For Field Generator 22.PCB
+On 20-Jun-2005 at 09:32:33
+
+ Comment             Pattern     Quantity  Components
+------------------------------------------------------------------------------
+
+
+ .1uF                0603             1    C20
+
+ 0.1uF               0603             9    C4, C13, C17, C21, C26, C27,
+                                           C28, C29, C30
+
+ 100 nH              0603             6    L1, L4, L5, L6, L7, L8
+
+ 100nH               0603             2    L2, L3
+
+ 100pF               0603             5    C3, C5, C6, C7, C31
+
+ 10K                 0603             5    R3, R13, R16, R21, R27
+
+ 10K                 POT_15MM_TH      1    R9
+
+ 10pF                0603             1    C15
+
+ 133                 0603             1    R6
+
+ 180                 0603             1    R20
+
+ 1K                  0603             1    R11
+
+ 1N4148              SOD123           1    D6
+
+ 2.2K                0603             5    R4, R8, R10, R12, R14
+
+ 2.2uF 16V           CT-3216          2    C11, C16
+
+ 22                  0603             1    R7
+
+ 270                 0603             1    R28
+
+ 27pF                0603             2    C24, C25
+
+ 2N3904              SOT23 TRANS      1    Q5
+
+ 2N3906              SOT23 TRANS      1    Q4
+
+ 2pF                 0603             1    C8
+
+ 3.3K                0603             1    R18
+
+ 33                  0603             1    R29
+
+ 330nH               0805             1    L10
+
+ 33nH                0603             1    L11
+
+ 3K                  0603             1    R19
+
+ 4.00 MHz            XTAL_WATCH       1    Y1
+
+ 4.7K                0603             2    R1, R2
+
+ 4.7uF               CAP A CASE       1    C12
+
+ 4.7uF 16V           CAP A CASE       2    C1, C2
+
+ 433.92Mhz           RESONATOR        1    Y2
+
+ 470                 0603             1    R5
+
+ 47nH                0603             1    L9
+
+ 47pF                0603             3    C9, C10, C18
+
+ 50 Ohm Ant          50 OHM ANT       1    J7
+
+ 560                 0603             1    R22
+
+ 68                  0603             1    R17
+
+ 7pF                 0603             1    C14
+
+ 8pF                 0603             1    C19
+
+ AMBER LED           LED-1206         1    D3
+
+ AT-113              SO8              1    U2
+
+ BFR193              SOT23 TRANS      2    Q2, Q6
+
+ BRIDGE 100V 0.5A    BRIDGE           1    U3
+
+ CON4                1X4 HEADER       1    J6
+
+ FB_0603             0603             3    FB1, FB2, FB3
+
+ GREEN LED           LED TH 4         1    D5
+
+ HDR2                HDR2             1    J1
+
+ HDR5                HDR5             1    J3
+
+ Jumper              1X2 HEADER       1    J8
+
+ MAX202CSE           SO-16            1    U6
+
+ MMBD914             SOT-23           1    D1
+
+ MMBT3904            SOT-23           1    Q3
+
+ MMBT3906            SOT-23           1    Q1
+
+ NCP1117             SOT223 REG       1    U1
+
+ PIC16LF628A         SSOP-20          1    U5
+
+ POWER CONNECTOR     JACK POWER VPJ-002A-SMT     1    J2
+
+ RED LED             LED TH 4         1    D2
+
+ RJ11                RJ11             1    J4
+
+ TC54                TC54             1    U7
+
+ TESTPOINT_1         TESTPOINT-1      8    TP3, TP5, TP6, TP7, TP8, TP9,
+                                           TP10, TP11
+
+ TRANSORB            TRANSORB_1       1    D4
