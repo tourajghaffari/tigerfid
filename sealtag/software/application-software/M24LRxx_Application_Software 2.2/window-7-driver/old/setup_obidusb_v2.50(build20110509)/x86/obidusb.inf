@@ -1,0 +1,125 @@
+;
+; OBID USB Setup Information file V2.50
+; Copyright (c) 1998-2009 by FEIG ELECTRONIC GmbH
+; 03.03.2009
+;
+; This file supports:
+;     Windows 2000
+;     Windows 2000 Server
+;     Windows XP
+;     Windows Vista
+;     Windows 7
+;     Windows 2000 Server
+;     Windows Server 2003
+;     Windows Server 2008
+;
+
+;******************************************************************************
+; Version section
+;------------------------------------------------------------------------------
+[Version]
+Signature="$Windows NT$"
+Provider=%S_Provider%
+DriverVer=10/06/2009,2.50.0.0
+
+; This specifies the .cat file provided by WHQL if the driver is certified.
+CatalogFile=obidusb.cat
+
+;
+; we use a private device class that is defined by USBIO:
+Class=USBIOControlledDevices
+ClassGUID={96e73b6e-7a5a-11d4-9f24-0080c82727f4}
+
+
+;******************************************************************************
+; Class Install section (optional)
+;------------------------------------------------------------------------------
+;
+[ClassInstall32] 
+AddReg=_AddReg_ClassInstall
+
+[_AddReg_ClassInstall]
+HKR,,,,"%S_DeviceClassDisplayName%"
+HKR,,Icon,,"-20"
+
+
+;******************************************************************************
+; Options
+;------------------------------------------------------------------------------
+[ControlFlags]
+; Advanced options can be specified here.
+; For details, refer to the Windows DDK documentation.
+
+
+;******************************************************************************
+; Manufacturer section
+;------------------------------------------------------------------------------
+[Manufacturer]
+%S_Mfg%=_Models
+
+
+;******************************************************************************
+; Models section
+;------------------------------------------------------------------------------
+; x86-based systems
+[_Models]
+; This section specifies your device's hardware ID.
+
+; OBID RFID Reader Configuration Interface
+%S_DeviceDesc1%=_Install, USB\Vid_0ab1&Pid_0001
+
+; OBID RFID Reader Configuration Interface and HID-Keyboard
+%S_DeviceDesc2%=_Install, USB\VID_0AB1&PID_0002&Rev_0101&MI_00
+
+
+
+;******************************************************************************
+; Install sections x86-based systems
+;------------------------------------------------------------------------------
+[_Install.ntx86]
+CopyFiles=_CopyFiles_sys
+
+[_Install.ntx86.Services]
+AddService = %S_DriverName%, 0x00000002, _AddService, _EventLog
+
+[_Install.ntx86.HW]
+AddReg=_AddReg_HW
+
+[_AddService]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\%S_DriverName%.sys
+
+[_EventLog]
+AddReg=_EventLog_AddReg
+
+[_EventLog_AddReg]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\%S_DriverName%.sys"
+HKR,,TypesSupported,  %REG_DWORD%,7
+
+
+;******************************************************************************
+; Registry sections
+;------------------------------------------------------------------------------
+[_AddReg_HW]
+HKR,,CleanupWizard_DeviceIdentString,%REG_SZ%,"{DAB6A146-D93E-48ab-B3E5-374AB8FFF277}"
+
+;
+HKR,,DriverUserInterfaceGuid,%REG_SZ%,"{b45f78e1-9ed7-11d4-b7ae-00001c5339d0}"
+
+; default behaviour of the driver for Windows 2000 and Windows XP
+HKR,,PowerStateOnOpen,     %REG_DWORD%, 0
+HKR,,PowerStateOnClose,    %REG_DWORD%, 0
+HKR,,MinPowerStateUsed,    %REG_DWORD%, 3
+HKR,,MinPowerStateUnused,  %REG_DWORD%, 3
+HKR,,EnableRemoteWakeup,   %REG_DWORD%, 0
+HKR,,AbortPipesOnPowerDown,%REG_DWORD%, 1
+HKR,,UnconfigureOnClose,   %REG_DWORD%, 1
+HKR,,ResetDeviceOnClose,   %REG_DWORD%, 0
+HKR,,MaxIsoPackets,        %REG_DWORD%, 512
+HKR,,ShortTransferOk,      %REG_DWORD%, 1
+HKR,,RequestTimeout,       %REG_DWORD%, 3000
+HKR,,SuppressPnPRemoveDlg, %REG_DWORD%, 1
+
+; lines to enable automatic configuration of the device when the driver sta

@@ -1,0 +1,117 @@
+           STM8L15x(F2/F3/G2/G3/K2/K3/C2/C3) FASTROM MICROCONTROLLER OPTION LIST
+		(last update: February 2012)
+
+Customer  ...................................................................
+Address   ...................................................................
+          ...................................................................
+Contact   ...................................................................
+Phone No  ...................................................................
+Reference FASTROM Code*: ....................................................
+*FASTROM code name is assigned by STMicroelectronics.
+
+		
+IMPORTANT:	FASTROM code must be sent .Hex (.s19 can be processed but verification files are  
+==========      generated in .Hex
+
+
+IMPORTANT NOTE: SEE OPTION BYTE SECTION IN THE DATASHEET FOR AUTORIZED OPTION 
+BYTE COMBINATION AND DETAILED EXPLANATION.
+DO NOT USE MORE THAN ONE REMAPPING OPTION IN THE SAME PORT. IT IS FORBIDDEN TO 
+ENABLE BOTH AFR1 AND AFRO.
+
+
+
+Device Type/Memory Size/Package (check only one option):		
+------------------|-------------------------------------------------------
+FASTROM DEVICE:   |     4K                               8K                    		
+------------------|-------------------------------------------------------
+TSSOP20:	  |     [ ]STM8L151F2			[ ]STM8L151F3
+UQFN20            |     [ ]STM8L151F2			[X]STM8L151F3
+UQFN28:           |     [ ]STM8L151G2			[ ]STM8L151G3
+UQFN32:	          |	[ ]STM8L151K2			[ ]STM8L151K3 
+LQFP48:	          |	[ ]STM8L151C2			[ ]STM8L151C3
+UQFN48:           |	[ ]STM8L151C2			[ ]STM8L151C3
+                                             
+
+Conditioning (check only one option):	
+	   
+[X] Tape & Reel  or  [ ] Tray
+
+Special Marking:        [X] No          [ ] Yes 
+
+Authorized characters are letters, digits, '.', '-', '/' and spaces only. 
+Maximum characters count are:
+for TSSOP20: 1 line of 10 characters max: "_ _ _ _ _ _ _ _ _ _" 
+for UQFN20:  1 line  of  4 characters max: "_ _ _ _"
+for UQFN28:  1 line  of  6 characters max: "_ _ _ _ _ _ " 	
+for UQFN32:  1 line  of  7 characters max: "_ _ _ _ _ _ _ " 
+for LQFP48:  2 lines of  8 characters max: "_ _ _ _ _ _ _ _" and "_ _ _ _ _ _ _ _"
+for UQFN48:  2 lines of  8 characters max: "_ _ _ _ _ _ _ _" and "_ _ _ _ _ _ _ _"
+
+
+Temperature range:      	 [X] -40°C to +85°C   or   [ ] -40°C to +125°C
+
+OPT0 Memory readout Protection:  [X] Enable  or  [ ] Disable
+-------------------------------
+OPT1 User Boot code size (UBC)  :  0x(_ _) fill in value, refer to Datasheet
+------------------------
+[0]	UBC_BIT0 (X=1, nothing=0)
+[0]	UBC_BIT1 (X=1, nothing=0)
+[0]	UBC_BIT2 (X=1, nothing=0)
+[0]	UBC_BIT3 (X=1, nothing=0)
+[0]	UBC_BIT4 (X=1, nothing=0)
+[0]	UBC_BIT5 (X=1, nothing=0)
+[0]	UBC_BIT6 (X=1, nothing=0)
+[0]	UBC_BIT7 (X=1, nothing=0)
+-------------------------------
+OPT2 is reserved
+
+-------------------------------
+OPT3 Watchdog			:  0x(_ _) fill in value, refer to Datasheet
+-------------
+IWDG_HW	(select one only)
+[X] IWDG Independent watchdog activated by software
+[ ] IWDG Independent watchdog activated by hardware
+
+IWDG_HALT (select one only)
+[X] IWDG Independent watchdog continues running in Halt/Active-Halt mode
+[ ] IWDG Independent watchdog stopped in Halt/Active-Halt mode
+
+WWDG_HW	(select one only)
+[X] WWDG Window watchdog activated by software
+[ ] WWDG Window watchdog activated by hardware
+
+WWDG_HALT (select one only)
+[X] WWDG Window watchdog stopped in Halt
+[ ] WWDG Window watchdog generates a reset when MCU enters Halt modecontinues running in Halt/Active-Halt mode
+--------------------------------
+OPT4 Stab clock cycles HSE/LSE: 0x(_ _) fill in value, refer to Datasheet
+--------------------------------
+HSECNT 	(select one only)
+[X] HSE stabilization counter depth is 1 clock cycle
+[ ] HSE stabilization counter depth is 16 clock cycles
+[ ] HSE stabilization counter depth is 512 clock cycles
+[ ] HSE stabilization counter depth is 4096 clock cycles
+
+LSECNT 	(select one only)
+[X] LSE stabilization counter depth is 1 clock cycle
+[ ] LSE stabilization counter depth is 16 clock cycles
+[ ] LSE stabilization counter depth is 512 clock cycles
+[ ] LSE stabilization counter depth is 4096 clock cycles
+--------------------------------
+OPT5 Brown Out Reset          : 0x(_ _) fill in value, refer to Datasheet
+--------------------------------
+BOR_ON	(select one only)
+[ ] BOR off
+[X] BOR on
+
+BOR_TH 	(select one only)
+[1] VBOR0 treshold selected
+[0] VBOR1 treshold selected
+[0] VBOR2 treshold selected
+[0] VBOR3 treshold selected
+
+
+Comments/Notes : 		
+Date:					
+Signature:					

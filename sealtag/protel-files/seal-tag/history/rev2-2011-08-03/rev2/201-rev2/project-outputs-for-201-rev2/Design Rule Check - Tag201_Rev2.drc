@@ -1,0 +1,51 @@
+Protel Design System Design Rule Check
+PCB File : C:\Documents and Settings\JCM_II\My Documents\Client Folders\ActiveWave\Tag201-Rev2\Tag201_Rev2.PcbDoc
+Date     : 8/23/2011
+Time     : 6:52:48 AM
+
+Processing Rule : Room Tag201_Rev2 (Bounding Region = (4989mil, 3708mil, 6203mil, 4817mil) (InComponentClass('Tag201_Rev2'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=50mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=12mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=5mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=2mil) (All),(All)
+   Violation between Track (584mil,505mil)(584mil,685mil)  Top Overlay and 
+                     Pad TP1-1(615mil,530mil)  Multi-Layer
+   Violation between Track (335mil,330mil)(395mil,330mil)  Top Overlay and 
+                     Pad TP3-1(365mil,300mil)  Multi-Layer
+Rule Violations :2
+
+Processing Rule : Silk to Silk (Clearance=2mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 2
+Time Elapsed        : 00:00:01

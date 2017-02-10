@@ -1,0 +1,82 @@
+[DebugChecksum]
+Checksum=263257444
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=1
+Graph=0
+Symbiont=0
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
+[TraceHelper]
+Enabled=0
+ShowSource=1
+[BreakpointUsageDialog]
+Placement=_ 461 230 906 509
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\..\..\..\..\..\Users\ActiveWave\Desktop}.1275.1@1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\src\stm8l15x_i2c.c}.1227.1@1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\sealTamper.c}.55.5@1" 0 0 0 0 "" 0 ""
+Bp3=_ "STD_DATA" "0x000000" 0 0 0 3 0 "" 0 ""
+Bp4=_ "STD_DATA" "0x000000" 0 0 0 3 0 "" 0 ""
+Bp5=_ "STD_CODE" "{$PROJ_DIR$\..\i2c_ee.c}.187.5@1" 0 0 0 0 "" 0 ""
+Bp6=_ "STD_CODE" "{$PROJ_DIR$\..\i2c_ee.c}.187.5@1" 0 0 0 0 "" 0 ""
+Bp7=_ "STD_CODE" "{$PROJ_DIR$\..\i2c_ee.c}.187.5@1" 0 0 0 0 "" 0 ""
+Bp8=_ "STD_CODE" "{$PROJ_DIR$\..\i2c_ee.c}.187.5@1" 0 0 0 0 "" 0 ""
+Bp9=_ "STD_CODE" "{$PROJ_DIR$\..\i2c_ee.c}.187.5@1" 0 0 0 0 "" 0 ""
+Bp10=_ "STD_CODE" "{$PROJ_DIR$\..\blocker_services.c}.487.5@1" 0 0 0 0 "" 0 ""
+Bp11=_ "STD_CODE" "{$PROJ_DIR$\..\blocker_services.c}.237.9@1" 0 0 0 0 "" 0 ""
+Bp12=_ "STD_CODE" "{$PROJ_DIR$\..\blocker_services.c}.261.5@1" 0 0 0 0 "" 0 ""
+Bp13=_ "STD_CODE" "{$PROJ_DIR$\..\blocker_services.c}.82.9@1" 0 0 0 0 "" 0 ""
+Bp14=_ "STD_CODE" "{$PROJ_DIR$\..\blocker_services.c}.72.9@1" 0 0 0 0 "" 0 ""
+Bp15=_ "STD_CODE" "{$PROJ_DIR$\..\blocker_services.c}.111.5@1" 0 0 0 0 "" 0 ""
+Bp16=_ "STD_CODE" "0x006000" 0 0 0 0 "" 0 ""
+Bp17=_ "STD_CODE" "{$PROJ_DIR$\..\stm8l15x_it.c}.43.5@1" 0 0 0 0 "" 0 ""
+Bp18=_ "STD_CODE" "{$PROJ_DIR$\..\stm8l15x_it.c}.32.5@1" 0 0 0 0 "" 0 ""
+Bp19=_ "STD_CODE" "{$PROJ_DIR$\..\stm8l15x_it.c}.34.5@1" 0 0 0 0 "" 0 ""
+Bp20=_ "STD_CODE" "{$PROJ_DIR$\..\stm8l15x_it.c}.24.5@1" 0 0 0 0 "" 0 ""
+Count=21
+[Aliases]
+A0=_ "C:\imoware\ActiveWave\STM8L\Release_320_LSE_BS\BLocker\main.c" ""
+A1=_ "C:\mydev\ActiveWave\Software\STM8L\BLocker\sealTamper.c" ""
+Count=2
+SuppressDialog=1

@@ -1,0 +1,33 @@
+[Last Settings]
+PROTOCOL=SWIM
+DEVICE=STM8L151x3
+Hardware=ST-LINK
+Port=USB
+CpuFreq=
+Blank check before programming (when available)=0
+Verify after programming=1
+Clear memory before loading a file=1
+Erase device memory before programming (when available)=0
+Display a popup window when an error occurs=1
+Log activity=0
+Log file=
+Unlock protection before a programming cycle=1
+Prompt for new programming cycle=0
+Activate secure mode on next project loading=0
+Enable Serial=0
+Start addr=0
+Length=0
+High Base=0
+Low Base=0
+Step=0
+[OPTION BYTE]
+Count=2
+File0=C:\ActiveWave\Software\Seal tag\Seal tag  Manfacturing release code\STVP\BLocker Options.hex
+File1=C:\Users\Touraj\Desktop\Software\Seal tag\Seal tag  Manfacturing release code\STVP\BLocker Options.hex
+[DATA MEMORY]
+Count=1
+File0=C:\Users\Touraj\Desktop\Software\Seal tag\Seal tag  Manfacturing release code\STVP\Blocker Data.hex
+[PROGRAM MEMORY]
+Count=2
+File0=C:\ActiveWave\Software\Seal tag\Seal tag  Manfacturing release code\STVP\BLocker Code.hex
+File1=C:\Users\Touraj\Desktop\Software\Seal tag\Seal tag  Manfacturing release code\STVP\BLocker Code.hex

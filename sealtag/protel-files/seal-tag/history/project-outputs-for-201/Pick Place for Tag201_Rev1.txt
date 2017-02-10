@@ -1,0 +1,30 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+C1         0603_072205            649mil        645mil        649mil        645mil        649mil        675mil  T        270.00 0.01uf         
+C2         0603_072205            364mil        647mil        364mil        647mil        364mil        677mil  T        270.00 0.1uf          
+C3         0603_072205            364mil        510mil        364mil        510mil        364mil        480mil  T         90.00 0.01uf         
+C4         0603_072205            779mil        460mil        779mil        460mil        779mil        490mil  T        270.00 0.01uf         
+J1         MOUNTING_PAD          1017mil        875mil       1017mil        875mil       1017mil        875mil  T          0.00 POGOPIN        
+J2         MOUNTING_PAD          1017mil        135mil       1017mil        135mil       1017mil        135mil  T          0.00 POGOPIN        
+J3         MOUNTING_PAD            89mil        860mil         89mil        860mil         89mil        860mil  T          0.00 POGOPIN        
+J4         MOUNTING_PAD            67mil         85mil         67mil         85mil         67mil         85mil  T          0.00 POGOPIN        
+L1         0603_072205            779mil        580mil        779mil        580mil        779mil        550mil  T         90.00 BEAD           
+L2         0603_072205            779mil        350mil        779mil        350mil        779mil        380mil  T        270.00 BEAD           
+P1         1X4_HEADER_50mil_071411        535mil        750mil        460mil        750mil        460mil        750mil  T        360.00 1x4 50mil      
+R1         0603_072205            720mil        690mil        720mil        690mil        720mil        660mil  T         90.00 1K             
+R2         0603_072205            780mil        690mil        780mil        690mil        780mil        660mil  T         90.00 2K             
+R3         0603_072205            364mil        400mil        364mil        400mil        364mil        430mil  T        270.00 100K           
+R4         0603_072205            719mil        580mil        719mil        580mil        719mil        550mil  T         90.00 39K            
+R5         0603_072205            719mil        350mil        719mil        350mil        719mil        320mil  T         90.00 20K            
+R6         0603_072205            659mil        350mil        659mil        350mil        659mil        320mil  T         90.00 20K            
+R7         0603_072205            719mil        460mil        719mil        460mil        719mil        490mil  T        270.00 100            
+R8         0603_072205            659mil        460mil        659mil        460mil        659mil        490mil  T        270.00 100            
+U1         UFQFPN20_071011        494mil        595mil        494mil        595mil    432.976mil     634.37mil  T        360.00 STM8L151F2     
+U2         TSSOP08_022410         520mil        330mil        520mil        330mil      481.6mil        210mil  T         90.00 M24LR16E       
+TP1        TestPoint52x32         605mil        505mil        605mil        505mil        605mil        505mil  T          0.00 TESTPOINT      
+TP2        TestPoint52x32         415mil        240mil        415mil        240mil        415mil        240mil  T         90.00 TESTPOINT      
+TP3        TestPoint52x32         365mil        300mil        365mil        300mil        365mil        300mil  T         90.00 TESTPOINT      
+FID1       FiducialTwoSide_020205        100mil        750mil        100mil        750mil        100mil        750mil  T         90.00 FIDUCIAL       
+BT1        COINCELL_070911        540mil        500mil        600mil        500mil        120mil        500mil  B        360.00 BATTERY        
+L3         SDR0302                 95mil        220mil         95mil        220mil         95mil        177mil  B        360.00 4.7uh          
+

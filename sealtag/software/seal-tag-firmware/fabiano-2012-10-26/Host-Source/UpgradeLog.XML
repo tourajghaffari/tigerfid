@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SHE">
+</Property><Property Name="Solution File" Value="C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\SHE.sln">
+</Property><Property Name="Date" Value="Saturday, October 20, 2012">
+</Property><Property Name="Time" Value="10:23 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Seal Host Environment" Source="Seal Host Environment\Seal Host Environment.vcproj" Description="Converting project file 'C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\Seal Host Environment\Seal Host Environment.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Seal Host Environment" Source="Seal Host Environment\Seal Host Environment.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="Seal Host Environment" Source="Seal Host Environment\Seal Host Environment.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="Seal Host Environment" Source="Seal Host Environment\Seal Host Environment.vcproj" Description="Done converting to new project file 'C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\Seal Host Environment\Seal Host Environment.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Seal Host Environment" Source="Seal Host Environment\Seal Host Environment.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SCLT" Source="SCLT\SCLT.vcproj" Description="Converting project file 'C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\SCLT\SCLT.vcproj'.">
+</Event><Event ErrorLevel="1" Project="SCLT" Source="SCLT\SCLT.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="SCLT" Source="SCLT\SCLT.vcproj" Description="MSB8012: $(TargetPath) ('C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\SCLT\Debug\SCLT.exe') does not match the Linker's OutputFile property value 'Debug\SCLT.exe' ('C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\Debug\SCLT.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="SCLT" Source="SCLT\SCLT.vcproj" Description="MSB8012: $(TargetPath) ('C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\SCLT\Release\SCLT.exe') does not match the Linker's OutputFile property value 'Release\SCLT.exe' ('C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\Release\SCLT.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="SCLT" Source="SCLT\SCLT.vcproj" Description="Done converting to new project file 'C:\Backup Laptop Office\ActiveWAVE\Seal\Host-Source\SCLT\SCLT.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="SCLT" Source="SCLT\SCLT.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SHE.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SHE.sln" Description="Converted">
+</Event></UpgradeLog>

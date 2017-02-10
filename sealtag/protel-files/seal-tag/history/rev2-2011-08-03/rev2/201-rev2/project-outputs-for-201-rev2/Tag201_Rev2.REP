@@ -1,0 +1,263 @@
+*************************************************************
+FileName = Tag201_Rev2.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : Tag201_Rev2.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Tag201_Rev2.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Tag201_Rev2.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D17
+    D18
+    D21
+    D22
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Tag201_Rev2.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D21
+    D22
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : Tag201_Rev2.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D21
+    D22
+    D23
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : Tag201_Rev2.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D21
+    D22
+    D23
+    D30
+    D39
+    D40
+    D41
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Tag201_Rev2.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D21
+    D22
+    D23
+    D29
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Tag201_Rev2.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D17
+    D18
+    D21
+    D22
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Panel
+      File : Tag201_Rev2.GM10
+
+    Adding Layer      : Panel
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D17
+    D18
+    D21
+    D22
+    D23
+    D44
+*************************************************************
+

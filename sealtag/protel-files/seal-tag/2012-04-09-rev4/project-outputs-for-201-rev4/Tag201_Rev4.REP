@@ -1,0 +1,299 @@
+*************************************************************
+FileName = Tag201_Rev4.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : Tag201_Rev4.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Tag201_Rev4.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Tag201_Rev4.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Tag201_Rev4.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Tag201_Rev4.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : Tag201_Rev4.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D32
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : Tag201_Rev4.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D32
+    D45
+    D46
+    D47
+    D48
+    D49
+*************************************************************
+
+*************************************************************
+Generating : Panel
+      File : Tag201_Rev4.GM10
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Panel
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Tag201_Rev4.GD1
+
+    Adding Layer      : Dimension
+
+    Adding Layer      : Outline
+
+    Adding Layer      : Title
+
+    Adding Layer      : Notes
+
+    Adding Layer      : Drill Drawing
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D50
+    D51
+    D52
+*************************************************************
+

@@ -1,0 +1,12 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Project [Tag201.PrjPcb]
+   Generated File[Tag201_Rev1.RUL]
+   Generated File[Tag201_Rev1.EXTREP]
+   Generated File[Tag201_Rev1.REP]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 9:53:33 AM On 7/15/2011

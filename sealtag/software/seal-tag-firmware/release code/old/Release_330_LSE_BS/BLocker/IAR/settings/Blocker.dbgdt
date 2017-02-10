@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1307</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>980</ColumnWidth1><ColumnWidth2>261</ColumnWidth2><ColumnWidth3>65</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>183</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly>
+      <Memory>
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><FindDirection>1</FindDirection><FindAsHex>0</FindAsHex></Memory>
+      <Register><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Register>
+      <Watch>
+        <Format>
+          <struct_types/>
+          <watch_formats><Fmt><Key>{W}Watch-2:commandStatusHistoryAddress</Key><Value>4</Value></Fmt><Fmt><Key>{W}Watch-2:histPacketAddress</Key><Value>4</Value></Fmt><Fmt><Key>{W}Watch-2:rtcHistoryAddress</Key><Value>4</Value></Fmt></watch_formats>
+        </Format>
+        
+        
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>125</Column0><Column1>469</Column1><Column2>100</Column2><Column3>100</Column3></Watch>
+    <Find-in-Files><ColumnWidth0>470</ColumnWidth0><ColumnWidth1>67</ColumnWidth1><ColumnWidth2>806</ColumnWidth2></Find-in-Files><QuickWatch><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Watch</Factory></Window></Windows></PreferedWindows><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></QuickWatch><TerminalIO><InputSource>1</InputSource><InputMode>10</InputMode><Filename>$PROJ_DIR$\TermIOInput.txt</Filename><InputEcho>1</InputEcho><ShowReset>0</ShowReset></TerminalIO></Static>
+    <Windows>
+      
+      
+      
+      
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30663-28769</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-30140-28779</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-986-10337</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-8643-28772</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Blocker</ExpandedNode><ExpandedNode>Blocker/Output</ExpandedNode><ExpandedNode>Blocker/Source Files</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2><Tabs><Tab><Identity>TabID-3273-24809</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions><Expression><Expression>harvestVoltage</Expression></Expression><Expression><Expression>time</Expression></Expression><Expression><Expression>histPacket</Expression></Expression><Expression><Expression>empId</Expression></Expression><Expression><Expression>histPacketAddress</Expression></Expression><Expression><Expression>commandStatusHistoryAddress</Expression></Expression><Expression><Expression>rtcHistoryAddress</Expression></Expression><Expression><Expression>tSeconds</Expression></Expression><Expression><Expression>time</Expression></Expression><Expression><Expression>seal</Expression></Expression><Expression><Expression>clockFreq</Expression></Expression><Expression><Expression>rtcConfigured</Expression></Expression></Expressions><TabId>2</TabId><Column0>125</Column0><Column1>469</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab><Tab><Identity>TabID-23724-24835</Identity><TabName>Quick Watch</TabName><Factory>QuickWatch</Factory><Session><Expression>0x07f8</Expression></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd2><Wnd7><Tabs><Tab><Identity>TabID-11998-9663</Identity><TabName>Terminal I/O</TabName><Factory>TerminalIO</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd7><Wnd8><Tabs><Tab><Identity>TabID-27583-13447</Identity><TabName>Disassembly</TabName><Factory>Disassembly</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd8></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane/><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00d80ce0><key>iaridepm.enu1</key></Toolbar-00d80ce0></Sizes></Row0><Row1><Sizes><Toolbar-00df9928><key>debuggergui.enu1</key></Toolbar-00df9928></Sizes></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>374</Bottom><Right>257</Right><x>-2</x><y>-2</y><xscreen>130</xscreen><yscreen>172</yscreen><sizeHorzCX>95168</sizeHorzCX><sizeHorzCY>250729</sizeHorzCY><sizeVertCX>189605</sizeVertCX><sizeVertCY>548105</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>374</Bottom><Right>217</Right><x>-2</x><y>-2</y><xscreen>130</xscreen><yscreen>172</yscreen><sizeHorzCX>95168</sizeHorzCX><sizeHorzCY>250729</sizeHorzCY><sizeVertCX>160322</sizeVertCX><sizeVertCY>548105</sizeVertCY></Rect></Wnd2></Sizes></Row0><Row1><Sizes><Wnd7><Rect><Top>-2</Top><Left>215</Left><Bottom>374</Bottom><Right>465</Right><x>215</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>146413</sizeHorzCX><sizeHorzCY>291545</sizeHorzCY><sizeVertCX>183016</sizeVertCX><sizeVertCY>548105</sizeVertCY></Rect></Wnd7></Sizes></Row1><Row2><Sizes><Wnd8><Rect><Top>-2</Top><Left>463</Left><Bottom>374</Bottom><Right>663</Right><x>463</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>146413</sizeHorzCX><sizeHorzCY>291545</sizeHorzCY><sizeVertCX>146413</sizeVertCX><sizeVertCY>548105</sizeVertCY></Rect></Wnd8></Sizes></Row2></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>243</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>245</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>357143</sizeHorzCY><sizeVertCX>95168</sizeVertCX><sizeVertCY>250729</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

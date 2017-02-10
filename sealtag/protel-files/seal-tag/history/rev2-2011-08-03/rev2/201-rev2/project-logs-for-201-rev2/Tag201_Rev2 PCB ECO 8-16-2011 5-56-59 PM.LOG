@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=VCC Pin=C3-1
+Removed Pin From Net: NetName=NetJ1_1 Pin=R1-2
+Removed Pin From Net: NetName=NetJ2_1 Pin=R2-2
+Removed Pin From Net: NetName=WRIST Pin=R4-1
+Removed Pin From Net: NetName=VCC Pin=R4-2
+Removed Pin From Net: NetName=SCL Pin=R7-1
+Removed Pin From Net: NetName=SDA Pin=R8-1
+Removed Pin From Net: NetName=VCC Pin=U2-8
+Removed Member From Class: ClassName=Tag103_Rev1 Member=L3
+Removed Member From Class: ClassName=Tag103_Rev1 Member=R1
+Removed Member From Class: ClassName=Tag103_Rev1 Member=R2
+Removed Member From Class: ClassName=Tag103_Rev1 Member=R4
+Removed Member From Class: ClassName=Tag103_Rev1 Member=R7
+Removed Member From Class: ClassName=Tag103_Rev1 Member=R8
+Change Component Comment : Designator=R6 Old Comment=20K New Comment=3.9K
+Change Component Comment : Designator=R5 Old Comment=20K New Comment=3.9K
+Change Component Comment : Designator=R3 Old Comment=100K New Comment=10K
+Added Component: Designator=C5(0603_072205)
+Added Component: Designator=C6(0603_072205)
+Added Component: Designator=P2(1X2 HEADER_50mil_081611)
+Added Pin To Net: NetName=PULLUP Pin=C3-1
+Added Pin To Net: NetName=NetJ1_1 Pin=L1-2
+Added Pin To Net: NetName=SCL Pin=R5-2
+Added Pin To Net: NetName=SDA Pin=R6-2
+Added Pin To Net: NetName=SDA Pin=U2-5
+Added Pin To Net: NetName=SCL Pin=U2-6
+Added Pin To Net: NetName=PULLUP Pin=U2-8
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=C5-2
+Added Pin To Net: NetName=NetC5_1 Pin=C6-1
+Added Pin To Net: NetName=NetC5_1 Pin=C6-2
+Added Pin To Net: NetName=NetC5_1 Pin=U2-2
+Added Pin To Net: NetName=NetC5_1 Pin=U2-3
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=TESTING RESULT Pin=P2-2
+Added Pin To Net: NetName=TESTING RESULT Pin=U1-11
+Added Net: Name=TESTING RESULT
+Change Class Name : Old Net Name=Tag103_Rev1 New Net Name=Tag201_Rev2
+Added Member To Class: ClassName=Tag201_Rev2 Member=Component FID1 FIDUCIAL
+Added Room: Name=Tag201_Rev2

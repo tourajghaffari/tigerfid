@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Project [Tag201-Rev4.PrjPCB]
+   Generated File[Pick Place for Tag201_Rev4.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:45:54 AM On 7/19/2012

@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Tag201_Rev2.PcbDoc   8/23/2011  6:56:12 AM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Tag201_Rev2.TXT
+EIA File   : Tag201_Rev2.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        12mil (0.3048mm)         Round          18               2.45 Inch (62.28 mm)
+T2        28mil (0.7112mm)         Round          6                0.30 Inch (7.62 mm)
+T3        33mil (0.8382mm)         Round          7                3.25 Inch (82.45 mm)
+---------------------------------------------------------------------------
+Totals                                            31               6.00 Inch (152.35 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

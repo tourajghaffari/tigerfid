@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>Blocker/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>267</Column0><Column1>19</Column1><Column2>22</Column2><Column3>0</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>567</ColumnWidth1><ColumnWidth2>597</ColumnWidth2><ColumnWidth3>212</ColumnWidth3></Build>
+    <Debug-Log><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1307</ColumnWidth1></Debug-Log><TerminalIO/><Find-in-Files><ColumnWidth0>1021</ColumnWidth0><ColumnWidth1>67</ColumnWidth1><ColumnWidth2>806</ColumnWidth2></Find-in-Files><Disassembly><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20985-18289</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Blocker</ExpandedNode><ExpandedNode>Blocker/Include Files</ExpandedNode><ExpandedNode>Blocker/Source Files</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-21299-20330</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-7616-15547</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-24934-3730</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-26579-28851</Identity><TabName>Breakpoints</TabName><Factory>Breakpoints</Factory></Tab></Tabs>
+        
+      <SelectedTab>2</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm8l15x_conf.h</Filename><XPos>0</XPos><YPos>71</YPos><SelStart>3048</SelStart><SelEnd>3048</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Kickstart\stm8\inc\c\DLib_Defaults.h</Filename><XPos>0</XPos><YPos>964</YPos><SelStart>31482</SelStart><SelEnd>31482</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Kickstart\stm8\inc\c\yvals.h</Filename><XPos>0</XPos><YPos>38</YPos><SelStart>1165</SelStart><SelEnd>1165</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Kickstart\stm8\inc\c\stdlib.h</Filename><XPos>0</XPos><YPos>222</YPos><SelStart>6623</SelStart><SelEnd>6623</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Kickstart\stm8\inc\c\ycheck.h</Filename><XPos>0</XPos><YPos>29</YPos><SelStart>908</SelStart><SelEnd>908</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\inc\stm8l15x_gpio.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>153</SelStart><SelEnd>153</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\inc\stm8l15x_i2c.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>152</SelStart><SelEnd>152</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\inc\stm8l15x_itc.h</Filename><XPos>0</XPos><YPos>53</YPos><SelStart>3113</SelStart><SelEnd>3113</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\src\stm8l15x_clk.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>152</SelStart><SelEnd>152</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>152</SelStart><SelEnd>152</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\i2c_ee.h</Filename><XPos>0</XPos><YPos>1</YPos><SelStart>706</SelStart><SelEnd>706</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm8l15x_it.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>706</SelStart><SelEnd>706</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>132</SelStart><SelEnd>132</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\inc\stm8l15x.h</Filename><XPos>0</XPos><YPos>320</YPos><SelStart>11791</SelStart><SelEnd>11791</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Kickstart\stm8\inc\c\intrinsics.h</Filename><XPos>0</XPos><YPos>29</YPos><SelStart>863</SelStart><SelEnd>863</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\blocker_services.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>144</SelStart><SelEnd>144</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm8l15x_it.c</Filename><XPos>0</XPos><YPos>2</YPos><SelStart>701</SelStart><SelEnd>701</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\blocker_services.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>144</SelStart><SelEnd>144</SelEnd></Tab><ActiveTab>17</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\inc\stm8l15x_clk.h</Filename><XPos>0</XPos><YPos>293</YPos><SelStart>13128</SelStart><SelEnd>13128</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\inc\stm8l15x_rtc.h</Filename><XPos>0</XPos><YPos>914</YPos><SelStart>35752</SelStart><SelEnd>35752</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\src\stm8l15x_rtc.c</Filename><XPos>0</XPos><YPos>2022</YPos><SelStart>67118</SelStart><SelEnd>67118</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0340e9f0><key>iaridepm.enu1</key></Toolbar-0340e9f0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>334</Bottom><Right>328</Right><x>-2</x><y>-2</y><xscreen>253</xscreen><yscreen>315</yscreen><sizeHorzCX>185212</sizeHorzCX><sizeHorzCY>459184</sizeHorzCY><sizeVertCX>241581</sizeVertCX><sizeVertCY>489796</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>307</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>309</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>450437</sizeHorzCY><sizeVertCX>185212</sizeVertCX><sizeVertCY>459184</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

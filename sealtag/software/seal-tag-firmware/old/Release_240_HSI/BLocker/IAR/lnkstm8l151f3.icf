@@ -1,0 +1,97 @@
+/////////////////////////////////////////////////////////////////
+//      Example ILINK command file for
+//      STM8 IAR C/C++ Compiler and Assembler.
+//
+//      Copyright 2010 IAR Systems AB.
+//
+//      $Revision: 2384 $
+//
+/////////////////////////////////////////////////////////////////
+
+define memory with size = 16M;
+
+define region TinyData = [from 0x00 to 0xFF];
+
+define region NearData = [from 0x0000 to 0x03FF];
+
+define region Eeprom = [from 0x1000 to 0x10FF];
+
+define region BootROM = [from 0x6000 to 0x67FF];
+
+define region NearFuncCode = [from 0x8000 to 0x9FFF];
+
+
+/////////////////////////////////////////////////////////////////
+
+define block CSTACK with size = _CSTACK_SIZE  {};
+
+define block HEAP  with size = _HEAP_SIZE {};
+
+define block INTVEC with size = 0x80 { ro section .intvec };
+
+// Initialization
+initialize by copy { rw section .far.bss,
+                     rw section .far.data,
+                     rw section .far_func.textrw,
+                     rw section .huge.bss,
+                     rw section .huge.data,
+                     rw section .huge_func.textrw,
+                     rw section .iar.dynexit,
+                     rw section .near.bss,
+                     rw section .near.data,
+                     rw section .near_func.textrw,
+                     rw section .tiny.bss,
+                     rw section .tiny.data,
+                     ro section .tiny.rodata };
+
+do not initialize  { rw section .eeprom.noinit,
+                     rw section .far.noinit,
+                     rw section .huge.noinit,
+                     rw section .near.noinit,
+                     rw section .tiny.noinit,
+                     rw section .vregs };
+
+// Placement
+place at start of TinyData      { rw section .vregs };
+place in TinyData               { rw section .tiny.bss,
+                                  rw section .tiny.data,
+                                  rw section .tiny.noinit,
+                                  rw section .tiny.rodata };
+
+place at end of NearData        { block CSTACK };
+place in NearData               { block HEAP,
+                                  rw section .far.bss,
+                                  rw section .far.data,
+                                  rw section .far.noinit,
+                                  rw section .far_func.textrw,
+                                  rw section .huge.bss,
+                                  rw section .huge.data,
+                                  rw section .huge.noinit,
+                                  rw section .huge_func.textrw,
+                                  rw section .iar.dynexit,
+                                  rw section .near.bss,
+                                  rw section .near.data,
+                                  rw section .near.noinit,
+                                  rw section .near_func.textrw };
+
+place at start of NearFuncCode  { block INTVEC };
+place in NearFuncCode           { ro section .far.data_init,
+      	 			  ro section .huge.data_init,
+				  ro section .iar.init_table,
+				  ro section .init_array,
+                                  ro section .near.data_init,
+                                  ro section .near.rodata,				  
+				  ro section .near_func.textrw_init,
+                                  ro section .tiny.data_init,
+                                  ro section .tiny.rodata_init,
+                                  ro section .far.rodata,
+                                  ro section .huge.rodata,
+                                  ro section .far_func.textrw_init,
+                                  ro section .huge_func.textrw_init,
+                                  ro section .near_func.text,
+                                  ro section .far_func.text,
+                                  ro section .huge_func.text };
+
+place in Eeprom                 { rw section .eeprom.noinit };
+
+/////////////////////////////////////////////////////////////////

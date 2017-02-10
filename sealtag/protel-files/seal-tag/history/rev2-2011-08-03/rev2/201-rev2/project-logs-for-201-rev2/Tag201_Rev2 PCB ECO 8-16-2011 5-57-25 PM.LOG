@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=GND Pin=P2-1
+Added Member To Class: ClassName=Tag201_Rev2 Member=Component C5 30 pF
+Added Member To Class: ClassName=Tag201_Rev2 Member=Component C6 68 pF
+Added Member To Class: ClassName=Tag201_Rev2 Member=Component P2 Value

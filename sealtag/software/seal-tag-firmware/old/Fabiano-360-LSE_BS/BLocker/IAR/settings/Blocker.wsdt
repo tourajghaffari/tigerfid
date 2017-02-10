@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>Blocker/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>181</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>470</ColumnWidth0><ColumnWidth1>67</ColumnWidth1><ColumnWidth2>806</ColumnWidth2></Find-in-Files>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>980</ColumnWidth1><ColumnWidth2>261</ColumnWidth2><ColumnWidth3>65</ColumnWidth3></Build>
+      <TerminalIO/>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1307</ColumnWidth1></Debug-Log>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-31731-13640</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Blocker</ExpandedNode><ExpandedNode>Blocker/Include Files</ExpandedNode><ExpandedNode>Blocker/Source Files</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11050-13823</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-7683-14090</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-5885-14329</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>2</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\clock.c</Filename><XPos>0</XPos><YPos>26</YPos><SelStart>1620</SelStart><SelEnd>1620</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\src\stm8l15x_pwr.c</Filename><XPos>0</XPos><YPos>132</YPos><SelStart>5763</SelStart><SelEnd>5763</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\blocker_services.c</Filename><XPos>0</XPos><YPos>626</YPos><SelStart>17253</SelStart><SelEnd>17253</SelEnd></Tab><ActiveTab>2</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>29</YPos><SelStart>1479</SelStart><SelEnd>1479</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\i2c_ee.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1198</SelStart><SelEnd>1328</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\i2c_ee.h</Filename><XPos>0</XPos><YPos>42</YPos><SelStart>1490</SelStart><SelEnd>1490</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Libraries\STM8L15x_StdPeriph_Driver\src\stm8l15x_gpio.c</Filename><XPos>0</XPos><YPos>289</YPos><SelStart>11365</SelStart><SelEnd>11365</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\rtc.c</Filename><XPos>0</XPos><YPos>57</YPos><SelStart>1025</SelStart><SelEnd>1025</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\led.c</Filename><XPos>0</XPos><YPos>25</YPos><SelStart>1618</SelStart><SelEnd>1618</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\blocker_services.h</Filename><XPos>0</XPos><YPos>58</YPos><SelStart>2526</SelStart><SelEnd>2526</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\platform.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-03430ce0><key>iaridepm.enu1</key></Toolbar-03430ce0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>471</Bottom><Right>272</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>212</yscreen><sizeHorzCX>146413</sizeHorzCX><sizeHorzCY>292011</sizeHorzCY><sizeVertCX>200586</sizeVertCX><sizeVertCY>651515</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>210</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>212</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>292011</sizeHorzCY><sizeVertCX>146413</sizeVertCX><sizeVertCY>292011</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

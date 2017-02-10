@@ -1,0 +1,18 @@
+// SCLT.idl : IDL source for SCLT
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SCLT.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(979E95C5-D70D-419F-B938-67A4952ED628),
+	version(1.0),
+	helpstring("SCLT 1.0 Type Library")
+]
+library SCLTLib
+{
+	importlib("stdole2.tlb");
+};
