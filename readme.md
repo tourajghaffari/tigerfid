@@ -23,6 +23,8 @@ _Note: Any help in cleaning up the files or directory structure is very much app
 
 7. [Software](software) - This includes all the different applications required to actually run the system.
 
+Visiting the [ActiveWave](http://www.activewaveinc.com/) website will also give you a great idea of some of the capabilities of this system.
+
 ## Fun Touraj Fact
 
 Touraj's favorite animal was the tiger - in particular, the [Caspian tiger](https://en.wikipedia.org/wiki/Caspian_tiger). Just like this project has arisen from extinction, the Caspian tiger should hopefully [make a triumphant return](http://www.bbc.co.uk/newsbeat/article/38663101/scientists-want-to-bring-cousin-of-extinct-caspian-tiger-to-central-asia) as well!
