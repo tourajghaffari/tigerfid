@@ -7,7 +7,37 @@ This repository has been created in honor of my father, Touraj Ghaffari. He foun
 
 _Note: Any help in cleaning up the files or directory structure is very much appreciated. We included everything we found in case any of it is useful to someone. Any and all advice is appreciated!_
 
-## Table of Contents
+## What is this?
+
+ActiveWave designed and built active RFID (Radio Frequency IDentification) products that work together to provide a new approach to tracking and security. The system includes the following features:
+
+* Extended Read Range. A single RFID reader can cover up to 30,000 square feet of floor space.
+
+* Multi-Tag Capability. Our tags employ anti-collision logic to assure each tag's information is read, even when multiple tags are attempting to transmit concurrently.
+
+* Compact Low-Cost Design. Our exclusive design brings you the advantages of RFID technology, combined with long battery life and low cost.
+
+* Simplified Installation. Our wireless device attachment capability simplifies the installation and interconnection of ActiveWave system components.
+
+The [presentations](presentations) and [website](http://www.activewaveinc.com/) provide a great deal more detail - especially the [product datasheets](http://www.activewaveinc.com/products_datasheets.php).
+
+## What is the project's current state?
+
+This project is currently fully functional in its current state. The minimum system requirements are as follows:
+
+1. One [Standard Reader](http://www.activewaveinc.com/products_datasht_standardreader.php) to both program the tags and read them.
+
+2. At least one tag (the [sealTag](sealtag) and [compactTag](http://www.activewaveinc.com/products_datasht_compacttag.php) were the most popular).
+
+3. Software options:
+
+  1. Use the [API](api) to develop your own software; or,
+  
+  2. Use the [Programming Station](software/programming-station) to program tags and the [Smart Tracker](software/smart-tracker) to actually keep track of and monitor the tags.
+
+The [Demo Kit](http://www.activewaveinc.com/products_datasht_demokit.php) included a few extra items: It included a [Standard Field Generator](http://www.activewaveinc.com/products_datasht_standardfieldgen.php) to demonstrate how to create zones within the range of the Reader as well as a motion detector to show how third-party devices can be integrated into the system as a whole through the use of the API.
+
+## Contents
 
 1. [API](api) - Included are APIs for C++ .NET, C# .NET, C# .NET CE, and VB .NET. There is a manual for a Java-based API which we haven't yet found. There is also documentation - both for internal use and customers.
 
@@ -22,8 +52,6 @@ _Note: Any help in cleaning up the files or directory structure is very much app
 6. [sealTag](sealtag) - One of the most versatile and popular tags of all, this was important enough to reside in its own section.
 
 7. [Software](software) - This includes all the different applications required to actually run the system.
-
-Visiting the [ActiveWave](http://www.activewaveinc.com/) website will also give you a great idea of some of the capabilities of this system.
 
 ## Fun Touraj Fact
 
