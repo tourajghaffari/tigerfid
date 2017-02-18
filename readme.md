@@ -41,9 +41,9 @@ The [Demo Kit](http://www.activewaveinc.com/products_datasht_demokit.php) includ
 
 1. Determine how you will configure your system. Remember the minimum system requirements listed above. As long as you have one Reader, one Tag, and either your own software using the [API](api) or the ActiveWave software suite ([Programming Station](software/programming-station) and [Smart Tracker](software/smart-tracker)), your system will work.
 
-2. Use the BOMs to figure out which parts you need.
+2. Use the [BOM files](bom-files) to figure out which parts you need.
 
-3. Manufacture the parts using the [Protel Files](protel-files). All the PCBs were designed using [Protel (now known as Altium)](http://www.altium.com/).
+3. Manufacture the parts using the [Protel files](protel-files). All the PCBs were designed using [Protel (now known as Altium)](http://www.altium.com/).
 
 4. Share whatever improvements you make!
 
