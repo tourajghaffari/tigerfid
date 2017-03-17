@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This repository has been created in honor of my father, Touraj Ghaffari. He founded [ActiveWave, Inc.](http://www.activewaveinc.com/) in 2001. It was his life work and something he loved and enjoyed thoroughly. He also loved spreading knowledge. In honor of that principle, we, his three sons, have open-sourced everything associated with his active RFID system under the [Apache 2.0 license](license). We hope this release helps you acheive your dreams.
+This repository has been created [in honor of our father](http://www.google.com/url?q=http%3A%2F%2Fwww.rfidjournal.com%2Farticles%2Fview%3F15751%2F&sa=D&sntz=1&usg=AFQjCNFzgbwhSGX3zh8ChPgzKGI9xTuZzw), Touraj Ghaffari. He founded [ActiveWave, Inc.](http://www.activewaveinc.com/) in 2001. It was his life work and something he loved and enjoyed thoroughly. He also loved spreading knowledge. In honor of that principle, we, his three sons, have open-sourced everything associated with his active RFID system under the [Apache 2.0 license](license). We hope this release helps you acheive your dreams.
 
 ## What is this?
 
