@@ -1,0 +1,28 @@
+{
+  "_readme": "Sync provenance sidecar — written by the hub's scripts/sync-session-wrap.mjs on every sync (lawcuments.com Story 1.9.4; S4 resolution (a), 2026-07-26). Each entry is the sha256 of the LF-normalized canonical this repo received, plus the hub commit the sync ran from: to verify a copy from inside this repo, LF-normalize it, sha256 it, and compare. NOT itself a canonical — never part of the --check byte-identity surface. Do not hand-edit; the next sync rewrites it.",
+  "hubCommit": "0f5404c2e0681b6c3ef09fed3bf6382e6d9a0cf4",
+  "syncedAt": "2026-10-26T21:04:35.092Z",
+  "files": {
+    "scripts/wrap-session.mjs": "sha256:b906ab4f086358fa2bee2f3aa9c2b52542e9f567e9673aacbe7e0eca6f4b1050",
+    "scripts/lib/hub-write-worktree.mjs": "sha256:7cc3aaf03cef9d0982c6d79ed6f473bab4486ceecec27507e3e3380b08921f56",
+    "scripts/lib/forge.mjs": "sha256:d31dab6ada2fa30d97d73d97e7be1d9cd4fdf88365bcefebbd84e66c95901390",
+    "scripts/lib/gh-token.mjs": "sha256:cf8a3672110f8c3b25391d8c744115ba0c3328071fa212d52895eeb6806ee042",
+    "scripts/lib/ci-forge.mjs": "sha256:7c9e36f3502e72b81a3e3184f726f116a007e771e0837534f830ab0241686c5a",
+    "scripts/block-commit-on-main.mjs": "sha256:ddd9a75e05d8363cfe780ef319ab6cb3672a873eefd9eea61e706f47eb459e4b",
+    "scripts/block-secrets.mjs": "sha256:0e23f661289c3c658aef3e8626fa768de7047e1035ed0b5e888a67b74e555a0d",
+    "scripts/check-template-antipatterns.mjs": "sha256:2ddebe50b8e66f86e80baa5e550ed245f329c56d692b53e019b24213812bc7d9",
+    "scripts/close-lint.mjs": "sha256:22bb81461c876aba0b2ceb72cf6c79cfda666d8f66a30396df0581b1ff020632",
+    "scripts/ci-docs-only.mjs": "sha256:8723926bf62d107c488dafe1ce2c0ceca84689fb7f6eefd55704452f333979bc",
+    "scripts/check-tick-merge-claim.mjs": "sha256:142a97ee87847c87f704bde018abe500ccd0298c8f60c82b3b8b63f1d038432f",
+    "scripts/warn-piped-checker.mjs": "sha256:0515017f11e52b7ca0a9e10312bcc744a6fecbe56bde0d9520ea53441108c08d",
+    "scripts/warn-cwd-drift.mjs": "sha256:1463079e31cd27f40df78ef7cbf7e919c1c1c2683f11ffc4347e7ee427813ebf",
+    "scripts/warn-zsh-word-split.mjs": "sha256:365e54b94f6fe0fe1a611fb03bd986b75ee5c05838621fb6c427bb85e5deb532",
+    "scripts/warn-stale-clone.mjs": "sha256:b17faedf408ff2491bba419247dcd1c37d4b5474b51d10900beb5c63f7af3fe1",
+    "scripts/warn-swept-surface.mjs": "sha256:314f75ef51112686750f58dfd5146fdd5d74ed51f39513d3205982cbdcf32bc0",
+    "scripts/warn-unmarked-session.mjs": "sha256:85777cabd04886802ad7cf965e14236ab9c89e8193da602491b2df87a0c289c4",
+    "scripts/warn-scratch-write.mjs": "sha256:041dd18c15725a43d173f6a6e0c90f6d9a295a31af76995c1667d1924f95c01e",
+    "scripts/warn-heroku-spaced-arg.mjs": "sha256:e839075fdf13281573a96608d5d373e8238fbe02ce9f3656c1d69d627d94537f",
+    "scripts/warn-invisible-char.mjs": "sha256:9acc97b4318ecff2605a042bf02c491c2a82b3dd7ac6268226b5a959e6fd73da",
+    ".githooks/pre-commit": "sha256:b74e1fcb33dc1261122db23db7e58996dc57e83ee33370251b8561b215069845"
+  }
+}
