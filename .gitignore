@@ -1,0 +1,5 @@
+# Dependencies
+node_modules/
+
+# superpowers SDD per-plan workspace (ledger, briefs, reports, review packages) — the skill assumes it is ignored
+.superpowers/

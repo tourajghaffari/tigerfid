@@ -1,0 +1,14 @@
+# Action-pin currency: ci.yml pins every third-party action by commit SHA with
+# a bare `# vX.Y.Z` comment, and this block keeps those pins current, so a
+# security fix to an action reaches this repo — it is what makes ci.yml's
+# pin-maintenance comment true as written. Dependabot rewrites the SHA and the
+# bare comment together (hub KB dependabot-sha-pin-version-comments), so keep
+# any rationale prose on its own line, never trailing a pin. No npm block:
+# package.json carries no dependencies — add the npm ecosystem in the same PR
+# as the first one. Weekly matches the fleet's other configs.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
