@@ -213,8 +213,19 @@ design exception) is recorded once in the notices file. A vendor reference
 design whose terms are not on the list goes to the ASK-OMID register one by
 one and is never copied silently. New work stays Apache-2.0.
 `docs/ci-contract.md` gains the gate's command in the same PR.
-**Done when:** the 1.1 teeth `notices-file`, `licence-gate-passes`,
-`licence-gate-in-test` and `allowlist-widened` PASS.
+
+Once the gate reads `THIRD_PARTY_NOTICES.md`, that file is a `test` input, so a
+notices-only PR must not skip `test`. The story's hub companion adds
+`tigerfid: ['*_NOTICES.md']` to `REPO_BUILD_INPUTS` in the hub's canonical
+`scripts/ci-docs-only.mjs`, and it reaches this repo by the fleet's sync round,
+never by a hand edit here. This is the class tigerian's entry records. At
+adoption the table carries no tigerfid entry: no markdown build inputs, assessed
+2026-10-26, recorded in #4's body.
+
+**Done when:**
+- the 1.1 teeth `notices-file`, `licence-gate-passes`, `licence-gate-in-test`
+  and `allowlist-widened` PASS;
+- the hub's `REPO_BUILD_INPUTS` names `tigerfid` with the notices glob.
 
 #### Story 1.1.5: The second machine — its clone and its reference folder
 

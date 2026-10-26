@@ -132,6 +132,14 @@
       "note": "Story 1.1.4 (spec C5): tigerian's allowlist, widened for hardware sources."
     },
     {
+      "id": "build-inputs-name-notices",
+      "run": "node -e \"const t=require('fs').readFileSync('scripts/ci-docs-only.mjs','utf8');process.exit(/tigerfid: [[^]]*_NOTICES.md/.test(t)?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "RED until Story 1.1.4: its hub companion adds tigerfid to REPO_BUILD_INPUTS and the fleet sync round brings the canonical here."
+    },
+    {
       "id": "second-machine-clone",
       "prose": "Story 1.1.5: confirm the tick quotes, from the second machine's clone, the reference folder's recreate-and-verify run (every pin matched) and the clone's git config user.email read-back ending @users.noreply.github.com (spec D8), and that no corpus-dependent review ran on that machine before it.",
       "requires": "omid"
