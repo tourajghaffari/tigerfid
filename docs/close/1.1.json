@@ -20,7 +20,7 @@
     },
     {
       "id": "runner-hosted-only",
-      "run": "node -e \"const t=require('child_process').execFileSync('git',['show','refs/remotes/origin/main:.github/workflows/ci.yml'],{encoding:'utf8'});const r=t.split(String.fromCharCode(10)).map((l)=>l.trim()).filter((l)=>l.startsWith('runs-on:'));process.exit(r.length>0&&r.every((l)=>l==='runs-on: ubuntu-latest')&&t.includes('FLEET_RUNNER')===false?0:1)\"",
+      "run": "node -e \"const cp=require('child_process');const ls=cp.execFileSync('git',['ls-tree','--name-only','refs/remotes/origin/main','.github/workflows/'],{encoding:'utf8'}).split(String.fromCharCode(10)).filter((n)=>/[.]ya?ml$/.test(n));const ok=ls.length>0&&ls.every((n)=>{const t=cp.execFileSync('git',['show','refs/remotes/origin/main:'+n],{encoding:'utf8'});const r=t.split(String.fromCharCode(10)).map((l)=>l.trim()).filter((l)=>l.startsWith('runs-on:'));return r.length>0&&r.every((l)=>l==='runs-on: ubuntu-latest')&&!t.includes('FLEET_RUNNER')});process.exit(ok?0:1)\"",
       "expect": {
         "exit": 0
       },
@@ -65,6 +65,14 @@
         "exit": 0
       },
       "note": "Story 1.1.2 (spec D10): RED until the refresh. The 18F Code of Conduct link is gone and a code of conduct is named; which one is Omid's choice in the PR. The 2018 credit line thanking 18F for the file's inspiration may stay."
+    },
+    {
+      "id": "sparse-view-retired",
+      "run": "node -e \"const cp=require('child_process');const ls=cp.execFileSync('git',['ls-tree','--name-only','refs/remotes/origin/main','.github/workflows/'],{encoding:'utf8'}).split(String.fromCharCode(10)).filter((n)=>/[.]ya?ml$/.test(n));const hit=ls.some((n)=>cp.execFileSync('git',['show','refs/remotes/origin/main:'+n],{encoding:'utf8'}).includes('sparse-checkout'));process.exit(ls.length>0&&!hit?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "RED until Story 1.1.2 retires the interim sparse view (it would hide the rebuild's own software/ and api/ from CI and from the secret scan)."
     },
     {
       "id": "readme-read-by-omid",
@@ -117,7 +125,7 @@
     },
     {
       "id": "licence-gate-in-test",
-      "run": "node -e \"const t=require('child_process').execFileSync('git',['show','refs/remotes/origin/main:.github/workflows/ci.yml'],{encoding:'utf8'});const L=t.split(String.fromCharCode(10)).map((l)=>l.trimEnd());const i=L.indexOf('  test:');let j=i+1;while(i>=0&&j<L.length&&(L[j]===''||L[j].startsWith('   ')||L[j].startsWith('  #')))j++;process.exit(i>=0&&L.slice(i,j).some((l)=>l.includes('node scripts/check-licenses.mjs'))?0:1)\"",
+      "run": "node -e \"const t=require('child_process').execFileSync('git',['show','refs/remotes/origin/main:.github/workflows/ci.yml'],{encoding:'utf8'});const L=t.split(String.fromCharCode(10)).map((l)=>l.trimEnd());const i=L.indexOf('  test:');let j=i+1;while(i>=0&&j<L.length&&(L[j]===''||L[j].startsWith('   ')||L[j].startsWith('  #')))j++;process.exit(i>=0&&L.slice(i,j).some((l)=>/^[ ]*(- )?run: node scripts[/]check-licenses[.]mjs/.test(l))?0:1)\"",
       "expect": {
         "exit": 0
       },

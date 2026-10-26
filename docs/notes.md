@@ -16,10 +16,11 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   this file, the plan with Sprint 1, the archive, the close protocol and two
   born-failing manifests, CI (`scope` + `test` on `ubuntu-latest`) with its
   contract doc, `package.json` (no dependencies) and `.npmrc`, `.gitignore`,
-  Dependabot for the Actions pins, the pre-commit hook and the session
-  settings. Its body is the adoption record.
-- **Next:** Sprint 1 leg 1 — Story 1.1.3, the reference corpus and the early
-  capture of the old website (plan § Sprint 1); then Stories 1.1.2, 1.1.4,
+  Dependabot for the Actions pins and the session settings; the synced
+  scripts and the pre-commit hook arrived first, by the fleet round #3. Its
+  body is the adoption record.
+- **Next:** Sprint 1 leg 1 — Story 1.1.3, the reference corpus (adopting the
+  old website capture already taken) (plan § Sprint 1); then Stories 1.1.2, 1.1.4,
   2.1.1 and 2.1.2, in that order.
 - **Surprises / decisions:**
   - **The website capture is already done.** The old website's pages, photos and

@@ -73,7 +73,7 @@ is public and written for a stranger (spec D8).
 ## Contributions and strangers' pull requests
 
 - Issues and questions are welcome now; pull requests once the design study
-  has set the direction (spec D10; the README says so).
+  has set the direction (spec D10; the README says so from Story 1.1.2).
 - **A fleet session never checks out a stranger's PR branch on Omid's
   machines:** that branch's `.claude/`, `scripts/` and `.githooks/` would run
   beside the machine's credentials. Review it by `gh pr diff <n>` (and

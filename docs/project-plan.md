@@ -58,7 +58,7 @@ otherwise first. Filed 2026-10-26 by the onboarding PR (spec §2, §7).
 
 ## Sprint 1 — "Adopted: the original kept, the study begun" — ✅ APPROVED (2026-10-26, at adoption — the spec is the approval record)
 
-**Born:** 2026-10-26, at adoption (the onboarding PR's merge `<merge sha>`;
+**Born:** 2026-10-26, at adoption (the onboarding PR, tigerfid #4 — its merge sha is recorded by hub Story 243.1.2's tick;
 hub spec `2026-10-26-tigerfid-onboarding-design`, hub PR #4355).
 **Approval:** ✅ APPROVED — Omid, 2026-10-26 (his approval of the spec,
 which records this sprint in §7; KB `new-repo-standard` item 5).
@@ -167,9 +167,21 @@ family's). The `.msg` file follows ASK-OMID A1. The rebuild's top-level
 layout is settled by the study (a starting shape: `hardware/`, `firmware/`,
 `software/`, `guides/`, `docs/`). After this lands, a CI checkout fetches
 only the small current tree.
-**Done when:** the 1.1 teeth `archive-left-the-tree`, `dedication-verbatim`,
-`readme-points-at-the-original` and `contributing-coc-replaced` PASS, and the
-PR records Omid's read of the new wording and his code-of-conduct choice.
+
+The same PR retires the interim sparse view:
+- both `sparse-checkout` blocks in `.github/workflows/ci.yml`;
+- CLAUDE.md § CI's sparse sentence;
+- `git sparse-checkout disable` in each machine's clone.
+
+Why it must go: its excluded names (`software/`, `api/`) would otherwise hide
+the rebuild's own folders from CI and from `block-secrets --repo-scan`, which
+skips files that are not on disk.
+
+**Done when:**
+- the 1.1 teeth `archive-left-the-tree`, `dedication-verbatim`,
+  `readme-points-at-the-original`, `contributing-coc-replaced` and
+  `sparse-view-retired` PASS;
+- the PR records Omid's read of the new wording and his code-of-conduct choice.
 
 #### Story 1.1.3: The reference corpus adopted, with the early capture of the old website
 
@@ -184,11 +196,20 @@ a repo, never committed — and is recreated from the tag by `git archive`
 (the family's own Apache-2.0 work, so reading or porting from it needs no
 notice). The study's third-party sources (vendor datasheets, reference
 designs) are pinned with the dial set to **copy-with-trail**; Story 1.1.4's
-lane lands before any copy. Spec C11: this leg runs first, so the
-activewaveinc.com pages, photos and datasheets are captured before the
-sibling site's seat changes the live site; the Wayback copies are the
-fallback. The Chorus notes, images and sources gathered for spec D12 are
-adopted into `docs/reference-research.md`. The recreate-and-verify tool
+lane lands before any copy.
+
+Spec C11's capture is already TAKEN. On 2026-10-26 at 19:50:53Z the old
+website's rendered pages, photos, datasheet PDFs and datasheet sources were
+copied into the folder's `activewaveinc/` from the activewaveinc.com seat's
+pre-change pull. The folder's README records what was left out: server code, a
+database login, visitor logs and a vendor's menu runtime. This story adopts the
+capture; the Wayback copies are the fallback.
+
+The Chorus notes and source URLs gathered for spec D12 go into
+`docs/reference-research.md` as prose and links only. Images, captures and
+datasheets stay in the uncommitted folder. **This story commits no third-party
+file:** the licence lane (Story 1.1.4) comes after it, and this repo is public
+with a history that is never rewritten. The recreate-and-verify tool
 follows tigerian's and tigerdash's shape (`scripts/reference-check.mjs`
 behind `npm run setup`) — the builder's call.
 **Done when:** `docs/reference-repos.md` (reading rules, licence audit,
@@ -218,7 +239,8 @@ Once the gate reads `THIRD_PARTY_NOTICES.md`, that file is a `test` input, so a
 notices-only PR must not skip `test`. The story's hub companion adds
 `tigerfid: ['*_NOTICES.md']` to `REPO_BUILD_INPUTS` in the hub's canonical
 `scripts/ci-docs-only.mjs`, and it reaches this repo by the fleet's sync round,
-never by a hand edit here. This is the class tigerian's entry records. At
+never by a hand edit here. The same PR corrects `docs/ci-contract.md`'s "no
+markdown build inputs" line. This is the class tigerian's entry records. At
 adoption the table carries no tigerfid entry: no markdown build inputs, assessed
 2026-10-26, recorded in #4's body.
 
@@ -365,7 +387,8 @@ toolchain on all three platforms, a debugger a beginner can afford, and the
 licence of any reference design (Story 1.1.4's lane). It weighs §3.7's
 question — one electronics core in three enclosures (the seal, the fob, the
 card) against three separate boards — a suggestion to weigh, not a
-decision.
+decision. The spec's §7 files §3.7 under 2.1.7: this story weighs it, and
+2.1.7's decision sitting decides it.
 **Done when:** `docs/study/parts-and-toolchains.md` names the parts per
 device, the toolchain per part with its install on each platform, and the
 one-core-or-three answer with its reasons.
