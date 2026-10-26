@@ -1,0 +1,14 @@
+#!/bin/sh
+# pre-commit — block committing a provider credential (delegates to
+# scripts/block-secrets.mjs --pre-commit). Covers EVERY commit, including
+# hand-made ones outside a Claude Code session.
+#
+# This file is a canonical synced from the hub (sync-session-wrap.mjs) into every
+# repo, but git does not run a hooks dir until it is pointed at one. Enable it per
+# clone (one time):
+#
+#   git config core.hooksPath .githooks
+#
+# (setup-plugins.mjs / onboarding sets this automatically on new machines.)
+# Bypass a single false-positive commit with `git commit --no-verify`.
+exec node "$(git rev-parse --show-toplevel)/scripts/block-secrets.mjs" --pre-commit
