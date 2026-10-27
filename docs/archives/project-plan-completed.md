@@ -352,7 +352,7 @@ matched) and its `git config user.email` read-back ending
 
 #### Story 1.1.6: Close out Epic 1.1 — ✅ DONE (2026-10-27)
 
-**Completed:** 2026-10-27 — this PR (the close PR is the archival PR), by session `ce689038-d1e9-483f-9350-492b8e1ff75f`: a fresh launch (its background-task path id equals the session id; no `/clear` before it), not elevated, role closer, with none of the epic's work.
+**Completed:** 2026-10-27 — tigerfid #19 (branch `close/epic-1.1`, pre-tick head `050b5d6`; the close PR is the archival PR), by session `ce689038-d1e9-483f-9350-492b8e1ff75f`: a fresh launch (its background-task path id equals the session id; no `/clear` before it), not elevated, role closer, with none of the epic's work.
 **Outcome:** the close evidence below — 19 machine checks PASS, 4 prose checks adjudicated, 2 of them by Omid — and Initiative 1 archived whole, with ASK-OMID A1 relocated beside it and the Sprint 1 block moved to § Executed sprints (its review PENDING). A dated correction is added to Story 1.1.3's tick, and one CLAUDE.md line the evidence falsified is corrected in this PR.
 
 **Story:** As the fresh-session closer, I want Epic 1.1 closed per KB
