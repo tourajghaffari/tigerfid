@@ -7,6 +7,33 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — Story 1.1.5: the second machine's clone and reference folder
+
+- **Landed:** #11 is Story 1.1.5. The plan's tick and the PR body are the
+  record: the second machine's verify run (291 of 291, exit 0) and its
+  noreply identity read-back.
+- **Next:**
+  - Story 1.1.6, the Epic 1.1 close, in a fresh session. It waits on
+    `build-inputs-name-notices` going green, which happens when the fleet's
+    sync round (hub Sprint 68) brings Story 1.1.4's hub companion (hub inbox
+    #4410) here.
+  - Sprint 1 legs 4–5, Stories 2.1.1 and 2.1.2. The corpus now verifies on
+    both machines, so either one can run them.
+- **Surprises / decisions:**
+  - **A tick-only PR still touches its manifest.** `close-lint`'s lockstep
+    check fails a diff that edits a story's lines but not
+    `docs/close/<epic>.json`. Its suggested remedy, a `"reviewed"` date bump,
+    does nothing when the field already reads today's date. #11 re-affirmed
+    `1.1.json` with a `reviewedFor` entry in the form
+    `Story X (PR #n, date): … No run, expect or prose changed.` Legs 4–5
+    will meet the same check for `2.1.json`.
+  - **The second machine's clone is partial,** as the plan asks:
+    `--filter=blob:none`, full history, not sparse. Its pack is 758 MiB,
+    because `--recreate` fetched the 2018 blobs.
+  - **The fresh-session read:** session `54985f54-8bd1-4ecb-8f31-b4a125beafb4`.
+    Its background-task path id was the same, so no `/clear` came before it.
+    It ran without elevation.
+
 ## Session: 2026-10-27 — Sprint 1 legs 1–3: the corpus, the restructure, the licence lane (Stories 1.1.3, 1.1.2, 1.1.4)
 
 - **Landed:**
