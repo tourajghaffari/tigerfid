@@ -1,7 +1,7 @@
 {
   "epic": "1.1",
   "planRef": "docs/project-plan.md",
-  "reviewed": "2026-10-26",
+  "reviewed": "2026-10-27",
   "reviewedFor": [],
   "stories": [
     "1.1.1",
@@ -102,6 +102,14 @@
         "contains": "Chorus"
       },
       "note": "Story 1.1.3 (spec D12): the research log adopts the Chorus notes gathered for the spec's amendment."
+    },
+    {
+      "id": "reference-check-tested",
+      "run": "node --test scripts/reference-check.test.mjs",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 1.1.3: the recreate-and-verify tool's own tests pass — byte-true recreation under core.autocrlf=true, drift, extras, unpinned files, sidecars, a moved tag, no write over a present tree, and the tar reader's refusals. Each case builds its own throwaway repo, so this tooth needs no corpus."
     },
     {
       "id": "corpus-recreated-and-captured",

@@ -28,18 +28,20 @@ node scripts/check-tick-merge-claim.mjs
 node scripts/block-secrets.mjs --repo-scan
 ```
 
-Required context `test` (the lint leg; with `scope`, one of the two required
-checks):
+Required context `test` (the lint leg and the tools' tests; with `scope`,
+one of the two required checks):
 
 ```
 node scripts/close-lint.mjs
+node --test scripts/reference-check.test.mjs
 ```
 
 The context NAMES are load-bearing — required checks match by name (hub KB
 `required-status-check-rename`); keep `scope` and `test` stable. `test`
-grows as the rebuild brings checks to run — the licence gate first (plan
-Story 1.1.4), then hardware, firmware and software checks as they come to
-exist — and each one joins this contract in the PR that wires it.
+grows as the rebuild brings checks to run — the reference-check tests (plan
+Story 1.1.3), the licence gate (Story 1.1.4), then hardware, firmware and
+software checks as they come to exist — and each one joins this contract in
+the PR that wires it.
 
 ## Platform surface (inventoried hub-side with exit paths)
 

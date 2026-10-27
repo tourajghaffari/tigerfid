@@ -183,7 +183,30 @@ skips files that are not on disk.
   `sparse-view-retired` PASS;
 - the PR records Omid's read of the new wording and his code-of-conduct choice.
 
-#### Story 1.1.3: The reference corpus adopted, with the early capture of the old website
+#### Story 1.1.3: The reference corpus adopted, with the early capture of the old website — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #6 (branch `story/1.1.3-reference-corpus`).
+**Outcome:** `docs/reference-repos.md`, `docs/reference-corpus.tsv` (291 pins: the tree row and 290 file rows), `docs/reference-research.md` (its Chorus entry as prose and links), the folder stub `docs/reference-readme-stub.md`, and `scripts/reference-check.mjs` behind `npm run setup`, its tests in CI's `test`. No third-party file is committed.
+- **The folder recreated and verified on the first machine.** `--recreate` ran from 00:36:57Z to 00:38:44Z: 6,062 missing blobs fetched in one batch, then `git archive` of `f25ff13f3fb6` wrote 9,477 files. The verify ran at 2026-10-27T00:39:34Z, exit 0:
+
+  ```
+  ok      tree   activewave-2018  f25ff13f3fb6 — 9477 files at their blob ids, none extra
+  ok      files  activewaveinc/  268 of 268 at their sha256
+  ok      files  chorus/  22 of 22 at their sha256
+  ok      sidecars none
+  ok      readme stub
+  reference-check: ok — 291 rows verified, README the stub
+  ```
+- **The capture's file list with sha256s** is the 268 `activewaveinc/` rows of `docs/reference-corpus.tsv`, kept there once, because the pins live in that file only.
+  - The rows: `rendered/` 99, `docroot/images/` 138, `docroot/pdf/` 16, `docroot/css/` 2, and the 13 datasheet page sources, 4,909,103 bytes in all.
+  - The digest binding the list: `dfacd09c277c07be25d2dd7ba7e7285bae64b1d23207ca0b5b6f0344e09f5525`. That is the sha256 of the rows as `<sha256>  <name>` lines, in the tsv's order, LF-joined with a trailing LF.
+- **Dated before the site's first change.** The capture was taken on 2026-10-26:
+  - `rendered/` fetched 19:43:31Z–19:43:36Z;
+  - `docroot/` pulled 19:48:01Z–19:49:11Z;
+  - both copied into the folder at 19:50:53Z. Every file's modified time is that minute, and none is newer.
+
+  The 49 response bodies match the sha256s the capture's `INDEX.tsv` recorded at fetch time. When #6 opened, the activewaveinc.com repo was not yet cloned into the fleet: no fleet change had reached the site. The Wayback copies were not needed.
+- **rfidguardian.com was dropped,** with its reason and reversible: the research log, § 2.
 
 **Story:** As a session doing the design study, I want the original tree,
 the old website's pages and datasheets and the study's third-party sources
