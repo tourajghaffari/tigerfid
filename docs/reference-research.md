@@ -20,8 +20,10 @@ Reader, Transceiver, Field Generator and tag boards, and the sealTag's
 board and firmware. What each record says, where the records conflict and
 what no record states are in `docs/study/original-system.md`, which a later
 session reads before re-reading the tree. Not read: the host applications'
-source, left for Story 2.1.5, and the Outlook message that ASK-OMID A1
-holds closed.
+source, left for Story 2.1.5, and the Outlook message. Omid answered
+ASK-OMID A1 "Keep the default" at #7, so that file left the current tree
+unread and stays at the tag, and reading rule 7 of `docs/reference-repos.md`
+keeps it closed.
 
 ## 2. The old website — activewaveinc.com — KEPT, captured 2026-10-26
 

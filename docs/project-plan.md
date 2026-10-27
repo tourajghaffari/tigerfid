@@ -516,7 +516,27 @@ anti-collision scheme, the zone mechanism, the alarms and I/O, and each
 milestone device's hardware, citing for each claim the file at the tag it
 was read from; a claim no record supports is marked INFERRED.
 
-#### Story 2.1.9: The Sprint 1 review's two fixes to the original-system study
+#### Story 2.1.9: The Sprint 1 review's two fixes to the original-system study — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #29 (branch `story-2.1.9-review-fixes`).
+**Outcome:** both findings fixed in the three files, and nothing else moved.
+- **Finding 3.** `docs/study/original-system.md` now lists three corrections
+  to the onboarding spec, and its disagreement table has a row for each. The
+  new one is the Reader's radio, which is on the Transceiver daughterboard.
+  § The Reader now points to the list.
+  - MEASURED in the reference folder: the Transceiver's pick-and-place names
+    the 916.5 MHz SAW filter, the BGA2001 and the SA636 once each. The Reader's
+    Rev 6 netlist names no SAW, BGA2001, SA636, NE85619 or BFR193 part.
+- **Finding 4.** Three files said the Outlook message waits on ASK-OMID A1:
+  the study's § The records read, `docs/reference-research.md` § 1 and
+  `docs/reference-repos.md` reading rule 7. Each now says that Omid answered
+  A1 "Keep the default" at #7, and that reading rule 7 keeps the file closed.
+- **The story's two greps** are quoted in the PR body with each hit's
+  disposition. The headings Sprint 2's later legs cite are unchanged, and
+  `original-system-doc` stays PASS.
+- **Before this leg, its own PR** (#28): a root `.gitattributes` pins LF line
+  endings, and this clone's CRLF working tree was repaired (hub #4452;
+  friction F4).
 
 **Story:** As a stranger reading the study, I want
 `docs/study/original-system.md` to list every correction it makes to the

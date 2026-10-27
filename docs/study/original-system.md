@@ -64,10 +64,13 @@ the newer.
 | TUNE | `documentation/optimal_tag_values.md` |
 | TIPS | `documentation/troubleshooting_tips.md` |
 
-**Not read:** `software/smart-tracker/SmartTracker  SaniFaucet.msg`, which
-stays closed until Omid rules on it (the plan's ASK-OMID A1). The host
-applications' source (Smart Tracker and the Programming Station) was not
-read: Story 2.1.5 reads it for the software stack.
+**Not read:** `software/smart-tracker/SmartTracker  SaniFaucet.msg`, an
+Outlook message that may hold correspondence. Omid answered the plan's
+ASK-OMID A1 "Keep the default" at #7, so the file left the current tree
+unread and stays at the tag (the row is in the plan's archive). Reading
+rule 7 of `docs/reference-repos.md` keeps it closed. The host applications'
+source (Smart Tracker and the Programming Station) was not read: Story 2.1.5
+reads it for the software stack.
 
 ## The names: products and boards
 
@@ -87,12 +90,18 @@ records map them as follows.
 The Protel folders agree. `protel-files/tags/credit-card-tag/` holds
 Tag 101, `medium-tag/` holds Tag 102, and `small-tag/` holds Tag 103.
 
-**Two corrections to the onboarding spec** (hub spec
+**Three corrections to the onboarding spec** (hub spec
 `2026-10-26-tigerfid-onboarding-design`, Context and Appendix B):
 
 - The compactTag is Tag **102**. The "Tag 103 pick-and-place" the spec
   quotes is the miniTag's. The two boards share nearly every part, so the
   spec's parts list holds for both.
+- The Reader's radio is the **Transceiver daughterboard** (§ The Reader;
+  § The Transceiver). The spec's Context says the Reader 103 USB Rev 6
+  schematic sheets name "an LNA and a SAW front end". The Reader's netlist
+  names no SAW part, RF transistor or radio IC. The 916.5 MHz SAW filter,
+  the BGA2001 (INFERRED: the low-noise amplifier) and the SA636DK mixer are
+  on the Transceiver (TRX-PNP).
 - The sealTag of 2012 is **not an active radio tag** (§ The sealTag). The
   spec's Appendix B gave it the same radio as the tiewrapTag. No record at
   the tag names a tiewrapTag; the capture holds only a PDF of that name
@@ -509,7 +518,9 @@ ActiveWave's own markings instead of part numbers in R6NET: "AWI501C",
   "1X10 HEADER", J10. The Transceiver has a 10-pin connector, J2 "CON10"
   (TRX-PNP). INFERRED: the Transceiver plugs into J10. The older Reader
   assembly lists "PWA, Transceiver Board" beside "PWA, Reader Board"
-  (`bom-files/reader/standard-old-reader/RDRASM102110804.xls`).
+  (`bom-files/reader/standard-old-reader/RDRASM102110804.xls`). This
+  corrects the onboarding spec, which puts the radio front end on the
+  Reader's sheets (§ The names: products and boards).
 - **Comparators:** three LM339 parts (R6NET), with no labelled role.
 - **I/O:** the two relays, the two contact inputs and the motion input
   (§ Alarms and I/O); four LEDs, the parts "GLED", "BLED" and two "RLED"
@@ -691,6 +702,7 @@ in, 916/927/868 MHz out, temperature) belong to the PIC tag family.
 |---|---|---|
 | The sealTag's radio | an ISO 15693 seal; no 433 MHz or UHF active radio (§ The sealTag) | Appendix B: the tiewrapTag's radio and a temperature sensor |
 | The compactTag's board | Tag 102 | the spec's Context quotes Tag 103, the miniTag |
+| The Reader's radio | on the Transceiver daughterboard; the Reader's netlist names no SAW part, RF transistor or radio IC (§ The Reader) | the spec's Context: the Reader 103 sheets name "an LNA and a SAW front end" |
 | Reply bands | 916 MHz only in the protocol; 868.95, 927.2 and 867 MHz builds in the BOMs | 916/927 MHz (US), 868 MHz (EU) |
 | Tag memory | a 256 Kbit part; a protocol that addresses 128 Kbit; a 4 Kbit option | 256 or 128 Kbit |
 | Reader host links | USB and Ethernet on Rev 6; RS-232 on the 2004–2006 boards; no WLAN part | RS-232, Ethernet, optional WLAN |
