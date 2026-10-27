@@ -7,6 +7,42 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — Story 1.1.6: the Epic 1.1 close (Initiative 1 archived)
+
+- **Landed:** #19 → `25c0f972` (13:02:01Z), merged on Omid's word, pinned
+  to its green head. The archive is the record: Initiative 1 whole, with the
+  Epic 1.1 close evidence and A1 beside it, and § Executed sprints › Sprint 1.
+- **Next:**
+  - The Sprint 1 reviewer pass, in a fresh session. The block now lives in
+    the archive, not the plan. The review PR refreshes its `**Review:** PENDING`
+    line and the Epic 1.1 evidence's "Sprint 1's review had not run" bullet;
+    the PENDING line names both.
+  - Sprint 2 needs proposing (Stories 2.1.3 onward).
+- **Surprises / decisions:**
+  - **The Sprint 1 block moved with this close.** Once #16 ticked leg 5, the
+    close runner printed its RELOCATE banner: the legs span Epics 1.1 and
+    2.1, every leg read ticked, so the first close owns the move (hub Story
+    89.1.1). #17 had stamped the block in place. This close moved it whole, on
+    Air Traffic Control's grant. Legs 4–5 (Stories 2.1.1, 2.1.2) stay ticked
+    in the plan until Epic 2.1's close archives them.
+  - **CLAUDE.md § CI corrected:** since #8, `npm test` runs four commands,
+    not two.
+  - **Story 1.1.3's tick has a dated correction.** The live site was frozen
+    to static HTML at 20:04:41Z on 2026-10-26, before #6 opened. The capture
+    predates the freeze, so its dating holds.
+  - **The conduct alias works.** #7 required `conduct@activewaveinc.com` to
+    exist before its merge, and no record showed it. Omid confirmed it at
+    this close: "Yes, it works".
+  - **A close's Completed line names its PR number once the PR is open.**
+    `scope`'s `check-tick-merge-claim` refused "this PR" on #19's first head.
+    A second commit named #19 and the pre-tick head.
+  - **The wrap refused once, rightly.** #20 amended the Story 2.1.2 block on
+    origin while this block was being written. The block was re-laid on
+    origin's notes, never `--amend`ed over them.
+  - **The fresh-session read:** session `ce689038-d1e9-483f-9350-492b8e1ff75f`.
+    Its background-task path id was the same, so no `/clear` came before it.
+    It ran without elevation.
+
 ## Session: 2026-10-27 — Story 2.1.2: how the original worked (Sprint 1 leg 5); Sprint 1 EXECUTED
 
 - **Landed:**
@@ -83,31 +119,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **The fresh-session read:** session `c59c545c-e735-4344-b0b8-697d9f897dca`.
     Its background-task path id was the same, so no `/clear` came before
     it, and it ran without elevation.
-
-## Session: 2026-10-27 — Story 1.1.5: the second machine's clone and reference folder
-
-- **Landed:** #11 is Story 1.1.5. The plan's tick and the PR body are the
-  record: the second machine's verify run (291 of 291, exit 0) and its
-  noreply identity read-back.
-- **Next:**
-  - Story 1.1.6, the Epic 1.1 close, in a fresh session. It waits on
-    `build-inputs-name-notices` going green, which happens when the fleet's
-    sync round (hub Sprint 68) brings Story 1.1.4's hub companion (hub inbox
-    #4410) here.
-  - Sprint 1 legs 4–5, Stories 2.1.1 and 2.1.2. The corpus now verifies on
-    both machines, so either one can run them.
-- **Surprises / decisions:**
-  - **A tick-only PR still touches its manifest.** `close-lint`'s lockstep
-    check fails a diff that edits a story's lines but not
-    `docs/close/<epic>.json`. Its suggested remedy, a `"reviewed"` date bump,
-    does nothing when the field already reads today's date. #11 re-affirmed
-    `1.1.json` with a `reviewedFor` entry in the form
-    `Story X (PR #n, date): … No run, expect or prose changed.` Legs 4–5
-    will meet the same check for `2.1.json`.
-  - **The second machine's clone is partial,** as the plan asks:
-    `--filter=blob:none`, full history, not sparse. Its pack is 758 MiB,
-    because `--recreate` fetched the 2018 blobs.
-  - **The fresh-session read:** session `54985f54-8bd1-4ecb-8f31-b4a125beafb4`.
-    Its background-task path id was the same, so no `/clear` came before it.
-    It ran without elevation.
 
