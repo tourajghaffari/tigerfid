@@ -52,9 +52,10 @@ shared by the two, and nothing here edits the site.
 - Two required checks, `scope` and `test`; extend `test`, never rename it.
   The commands are recorded in `docs/ci-contract.md`.
 - `npm test` runs what CI's `test` job runs: the close-protocol lint
-  (`node scripts/close-lint.mjs`) and the reference-check tests. No npm
-  dependencies exist; the repo-root `.npmrc` guard (`ignore-scripts=true`)
-  stays when the first one arrives.
+  (`node scripts/close-lint.mjs`), the licence gate
+  (`node scripts/check-licenses.mjs`), and the reference-check and licence-gate
+  tests. No npm dependencies exist; the repo-root `.npmrc` guard
+  (`ignore-scripts=true`) stays when the first one arrives.
 
 ## The reference corpus
 
