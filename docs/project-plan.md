@@ -425,7 +425,17 @@ medical device or a monitor of vital signs (spec C8).
 **Done when:** `docs/study/requirements.md` carries, per scenario, a number,
 its reasoning and Omid's recorded answer for each of the five measures.
 
-#### Story 2.1.2: How the original worked
+#### Story 2.1.2: How the original worked — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #16 (branch `story-2.1.2-original-system`).
+**Outcome:** `docs/study/original-system.md` describes the 2001–2013 system from its records at the tag `activewave-2018`: the radio link, the anti-collision scheme, the zone mechanism, the alarms and I/O, and the hardware of the Reader, the Field Generator and the three tags. Each claim cites the file it was read from or is marked INFERRED, and a script found all 208 of its quoted phrases in their sources.
+- **Measured:** the packets' CRC is CRC-16/X.25. It matches the records' three test vectors and their `0xF0B8` residue.
+- **No record states the radio's data rate**, its modulation or any tags-per-second figure. The requirements' 250 kbit/s stays ASSUMED, and the receiver's 330 kHz IF filter suggests the original ran slower (INFERRED).
+- **Three corrections to the onboarding spec** (Context and Appendix B):
+  - the compactTag is Tag 102; Tag 103 is the miniTag;
+  - the Reader's radio is the Transceiver daughterboard;
+  - the 2012 sealTag is an ISO 15693 logging seal with no active radio and no temperature sensor.
+- **For Stories 2.1.3, 2.1.4 and 2.1.7:** milestone 1's sealTag is therefore a new design. The document's last section says why: one core in a seal enclosure, per spec §3.7, is weighed by 2.1.4 and decided by 2.1.7.
 
 **Story:** As the study, I want one written description of the 2001–2013
 system, read from its own records, so that every option has a reference to
