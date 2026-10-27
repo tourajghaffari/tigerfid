@@ -139,8 +139,12 @@ Each source class has its own rule:
 - **The first rows,** added by Story 2.1.3 (2026-10-27): three Texas
   Instruments documents for the CC1312PSIP module, its certification note
   and the CC1312R7 datasheet. The research log's § 4 has their verdicts.
-- **Licence:** `third-party`. TI's documents carry TI's own notice and no
-  open licence, so they are read for study and never copied into the repo.
+- **Story 2.1.4's rows** (2026-10-27): five more. They are Energizer's
+  CR2032 and CR2450 datasheets, TI's coin-cell white paper, the TMP117
+  datasheet and TI's standard terms for evaluation modules.
+- **Licence:** `third-party`. TI's and Energizer's documents carry their
+  makers' own notices and no open licence, so they are read for study and
+  never copied into the repo.
 - **On another machine:** fetch each file from its row's URL, or copy it
   from a machine whose folder verifies. A fetched file counts only once its
   bytes match the pin. Vendors revise a document behind the same URL, so a
@@ -185,8 +189,9 @@ Run these steps before any corpus-dependent review runs on that machine (KB
 5. **`node scripts/reference-check.mjs --write-stub`** writes the folder's
    README from `docs/reference-readme-stub.md`.
 6. **`node scripts/reference-check.mjs`** must exit 0 and print
-   `reference-check: ok — 294 rows verified, README the stub` (291 before
-   Story 2.1.3's three `sources/` rows).
+   `reference-check: ok — 299 rows verified, README the stub`. It was 294
+   before Story 2.1.4's five `sources/` rows, and 291 before Story 2.1.3's
+   three.
 
 Outside the fleet, step 3 gives you the original tree. The website capture
 and the Chorus images exist only on the fleet's machines; the Wayback Machine

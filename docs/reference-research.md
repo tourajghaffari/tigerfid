@@ -207,6 +207,49 @@ session reads before searching again.
   EN 302 065-2, and Part 15's Subpart B for digital devices. The study says
   why each was not needed, or which story reads it.
 
+### Story 2.1.4 — parts and toolchains (2026-10-27)
+
+What was read is cited in `docs/study/parts-and-toolchains.md`, which a
+later session reads before searching again.
+
+- **The law: READ, cited by dated URL, not pinned.** 47 CFR §15.3(h), (i),
+  (k) and (z), §15.101, §15.103, §15.107, §15.109, §2.803(d)(2)(iv) and
+  §2.906, through the eCFR's API at its point in time of 2026-10-23. The API
+  now answers only a request that accepts a compressed reply.
+- **KEPT and pinned** (`sources/`, `third-party`, study only), because a
+  choice rests on them:
+  - `energizer-cr2032.pdf` and `energizer-cr2450.pdf`: the two cells'
+    rated capacities, sizes, self-discharge and the compartment safety note.
+    [27]'s choice rests on them;
+  - `ti-swra349.pdf`: TI's 2010 white paper on coin cells under peak
+    currents. The usable-capacity bounds rest on it;
+  - `ti-tmp117-snosd82d.pdf`: the tag's temperature sensor;
+  - `ti-sszz027.pdf`: TI's standard terms for evaluation modules, which bind
+    the development board and the debugger.
+- **KEPT, cited by URL and fetch date, not pinned:**
+  - TI's pages for the development board, the two XDS110 debuggers, CCS,
+    UniFlash, SysConfig and TI Arm Clang;
+  - the CCS 21.0.1 user's guide;
+  - the board's EU declaration;
+  - the SDK's public Git repository, its README and licence;
+  - KiCad's download and licence pages;
+  - a Microchip note on USB CDC.
+  - The board's design files (`SWRR186.ZIP`) were opened for their licence
+    only. They hold no licence file, and their sha256 is in the study.
+- **Refused or not read:**
+  - the FCC's equipment-authorisation search, fccid.io and fcc.report
+    (HTTP 403, a content network's "Access Denied" page). A retry after Omid
+    changed the network route was refused the same way, and Omid answered
+    "Write it as not read". So the grant record stays unread, and two FCC
+    IDs in TI's documents (ZAT-1312PSIP-2 and -3) are left for a browser
+    read before any part is bought;
+  - FTDI's driver page and Microchip's product pages (HTTP 403), so no USB
+    bridge part is named by datasheet;
+  - TI's certification page (HTTP 404);
+  - Arm's GNU toolchain page, which renders by script;
+  - the development board's quick start guide, which holds its US FCC
+    notice: no public page this leg reached carries it.
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -234,3 +277,7 @@ a verdict here.
   parts (§ 4, above). The search ideas for 2.1.3 above are answered there.
   How open active-RFID and indoor-location projects place zones was not
   searched: the study's zones follow the original's Field Generators.
+- **2026-10-27:** Story 2.1.4's searches for the module's parts, tools,
+  debugger, cells, sensor, Subpart B and the grant record (§ 4, above). The
+  search ideas for 2.1.4 above are answered there. A debugger outside TI's
+  terms, and the GCC route's platforms, were not searched.
