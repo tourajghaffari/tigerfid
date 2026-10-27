@@ -1,0 +1,37 @@
+# Line endings: store text as LF and check it out as LF on every OS. Without
+# this, a Windows checkout under Git for Windows' default core.autocrlf=true
+# writes CRLF working trees, and a per-line parser anchored on `$` stops
+# matching (the fleet's EOL standard, hub Story 5.7.1; hub #4452 measured the
+# failure in this repo). A clone made before this file landed keeps its CRLF
+# working tree until it is repaired per KB gitattributes-eol-pin-stale-checkout:
+# delete the files, then `git checkout-index -f -u`. Never
+# `git add --renormalize` for it.
+* text=auto eol=lf
+
+# The repo's own text: LF always, and a textual diff even if a stray control
+# byte would make git guess binary.
+*.md text eol=lf diff
+*.mjs text eol=lf diff
+*.json text eol=lf diff
+*.tsv text eol=lf diff
+*.yml text eol=lf
+.githooks/pre-commit text eol=lf
+
+# Binary files: never converted.
+*.jpg binary
+*.png binary
+*.pdf binary
+*.gz binary
+
+# The originals still on main: git never rewrites their bytes. `license` and
+# `_assets/` are 2018 files unchanged since the tag `activewave-2018`.
+# `readme.md` and `contributing.md` were rewritten by Story 1.1.2 (#7) and
+# follow the *.md rule; their stored bytes were LF already, so the rule
+# changes none of them. The rest of the 2018 tree is read at the tag, which
+# this file cannot reach: `git show` applies no filter, and `git archive` of
+# the tag reads the tag's own attributes, of which it has none. The tag's
+# folder names (`software/`, `api/` and the rest) are not listed on purpose:
+# the rebuild may reuse them, which is how the retired sparse view hid the
+# rebuild's own folders.
+license -text
+_assets/** -text
