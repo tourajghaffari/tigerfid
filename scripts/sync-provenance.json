@@ -1,7 +1,7 @@
 {
   "_readme": "Sync provenance sidecar — written by the hub's scripts/sync-session-wrap.mjs on every sync (lawcuments.com Story 1.9.4; S4 resolution (a), 2026-07-26). Each entry is the sha256 of the LF-normalized canonical this repo received, plus the hub commit the sync ran from: to verify a copy from inside this repo, LF-normalize it, sha256 it, and compare. NOT itself a canonical — never part of the --check byte-identity surface. Do not hand-edit; the next sync rewrites it.",
-  "hubCommit": "0f5404c2e0681b6c3ef09fed3bf6382e6d9a0cf4",
-  "syncedAt": "2026-10-26T21:04:35.092Z",
+  "hubCommit": "3d373af63a4578e7173794962b4448d44d3b1553",
+  "syncedAt": "2026-10-27T11:42:16.987Z",
   "files": {
     "scripts/wrap-session.mjs": "sha256:b906ab4f086358fa2bee2f3aa9c2b52542e9f567e9673aacbe7e0eca6f4b1050",
     "scripts/lib/hub-write-worktree.mjs": "sha256:7cc3aaf03cef9d0982c6d79ed6f473bab4486ceecec27507e3e3380b08921f56",
@@ -12,7 +12,7 @@
     "scripts/block-secrets.mjs": "sha256:0e23f661289c3c658aef3e8626fa768de7047e1035ed0b5e888a67b74e555a0d",
     "scripts/check-template-antipatterns.mjs": "sha256:2ddebe50b8e66f86e80baa5e550ed245f329c56d692b53e019b24213812bc7d9",
     "scripts/close-lint.mjs": "sha256:22bb81461c876aba0b2ceb72cf6c79cfda666d8f66a30396df0581b1ff020632",
-    "scripts/ci-docs-only.mjs": "sha256:8723926bf62d107c488dafe1ce2c0ceca84689fb7f6eefd55704452f333979bc",
+    "scripts/ci-docs-only.mjs": "sha256:2173a913919e2f805fe823b97aaff7cbc2f6c6d111667d7564feed4f05fa8b1e",
     "scripts/check-tick-merge-claim.mjs": "sha256:142a97ee87847c87f704bde018abe500ccd0298c8f60c82b3b8b63f1d038432f",
     "scripts/warn-piped-checker.mjs": "sha256:0515017f11e52b7ca0a9e10312bcc744a6fecbe56bde0d9520ea53441108c08d",
     "scripts/warn-cwd-drift.mjs": "sha256:1463079e31cd27f40df78ef7cbf7e919c1c1c2683f11ffc4347e7ee427813ebf",

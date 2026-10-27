@@ -101,6 +101,11 @@ export const REPO_BUILD_INPUTS = {
   // under src/ are build inputs. Same class as ghaffaritabrizi.com /
   // bridgetandomid.com.
   'gtllclaw.com': ['src/**'],
+  // Born 2026-10-27 (hub Story 245.1.1; assessed at birth per KB
+  // new-repo-standard item 11, 2026-10-26 — spec § 1): njk pages and the
+  // vendored payload's READMEs under src/ are build inputs. Same class as
+  // ghaffaritabrizi.com / bridgetandomid.com / gtllclaw.com.
+  'activewaveinc.com': ['src/**'],
   // Born 2026-09-05 (hub Story 75.1.2; spec 2026-09-05-tigerdash-design §7.2):
   // src/ IS the Eleventy input dir, and the vendored @fgl/vituno payload lands
   // READMEs under src/ (gates/, icons/, fonts/) — a payload edit classified
@@ -132,6 +137,15 @@ export const REPO_BUILD_INPUTS = {
   // gate's own exemptions (the manifest, `assets/README.md`) are not the
   // classifier's: an edit there must run the gate (Story 201.1.1).
   tigerian: ['*_NOTICES.md', 'assets/**'],
+  // tigerfid (adopted 2026-10-26, hub Initiative 243) has no build, but its
+  // root third-party notices file is a VALIDATED OUTPUT of the licence gate
+  // its `test` job runs (`scripts/check-licenses.mjs`, tigerfid Story 1.1.4,
+  // tigerfid #8): a notices-only PR must run `test`, so the root
+  // `*_NOTICES.md` glob is a build input — tigerian's form, the file never
+  // named here (the literal-absence pin above holds for every gate that
+  // scans this synced canonical). Hub inbox #4410, triaged by hub Story
+  // 245.1.2's PR on Air Traffic Control's addendum.
+  tigerfid: ['*_NOTICES.md'],
 };
 
 // The third tier's per-repo validator job (Story 19.2.1): the ONE workflow
