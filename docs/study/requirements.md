@@ -110,16 +110,24 @@ Story 2.1.4 replaces each with the chosen parts' datasheet figures.
   220–240 mAh by its makers. Radio pulses cost a coin cell part of its
   capacity, so the study counts **150 mAh** as usable. A CR2450-size cell
   is rated about 600 mAh and is thicker and wider.
+  *Replaced 2026-10-27 by Story 2.1.4:* rated 235 mAh (CR2032) and 620 mAh
+  (CR2450), each to 2.0 V; 150 mAh stays the planning figure, bounded below
+  by 117.5 mAh (`docs/study/parts-and-toolchains.md` § The battery).
 - **ASSUMED: one reply** costs about 25 mA for about 3 ms (wake-up, a
   short packet and back to sleep), which is roughly **0.02 µAh**. A tag
   replying every second would spend about 630 mAh a year on replies
   alone (86,400 a day). A faster link shortens the packet, but the
   wake-up stays, so the figure stays in the hundreds of mAh.
+  *Replaced 2026-10-27 by Story 2.1.4:* 18.09 µC (0.0050 µAh) a reply, its
+  start-up included (`docs/study/parts-and-toolchains.md` § The battery).
 - **ASSUMED: listening.** A tag listening for a wake, duty-cycled so that
   it answers within about a second, averages about **8 µA**, sleep
   included. Over a year that is about **70 mAh**, and it dominates every
   scenario's battery budget. Listening less often (answering within a few
   seconds) cuts it to about 2–3 µA.
+  *Replaced 2026-10-27 by Story 2.1.4:* 13.9 µA at a listen every 1 s,
+  7.3 µA every 2 s and 1.8 µA every 12 s
+  (`docs/study/parts-and-toolchains.md` § The battery).
 - **INFERRED: a channel's capacity at 250 kbit/s.** A short reply of
   about 30 bytes, preamble included, lasts about 1 ms on air. A scheme
   where the reader assigns reply slots can carry a few hundred replies a
@@ -311,6 +319,10 @@ about 55. By the arithmetic, listening alone would take about 350 mAh over
 needs either a slower wake (a few seconds is fine for an inventory, about
 2–3 µA) or a larger cell (CR2450-size, about 600 mAh rated). Story 2.1.4
 chooses between them.
+*Chosen 2026-10-27 by Story 2.1.4:* the slower wake, a listen every 12 s,
+which keeps five years on a CR2032 on paper; a CR2450 alone does not. The
+CR2450 is recommended as well, for margin
+(`docs/study/parts-and-toolchains.md` § [27]). The number is unchanged.
 **Omid's answer:** as recommended.
 
 ## What binds the design
