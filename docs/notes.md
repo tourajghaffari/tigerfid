@@ -7,6 +7,42 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — the Sprint 2 proposal (approved, four legs)
+
+- **Landed:** #26 → `e06bf9b9` (17:31:48Z), merged under Omid's in-session
+  merge instruction, pinned to its green head.
+  - The plan's § Sprint 2 block is the record.
+  - Omid approved it first-hand in this terminal, between its `date -u`
+    reads of 17:29:28Z and 17:29:48Z: "Approve as proposed (Recommended)".
+  - Hub inbox #4452 merged at 17:28:39Z (the line-ending gap, below).
+- **Next:**
+  - Sprint 2's leg 1, Story 2.1.9, in a FRESH executor session per the
+    block's kickoff (one session per leg, either machine). Legs 2–4 (2.1.3,
+    2.1.4, 2.1.5) follow serially, each after the previous leg merges.
+  - After leg 4: the Sprint 2 reviewer pass, then the Sprint 3 proposal
+    (Story 2.1.6 and any remainder the block's D9 splits off), then the
+    decision sitting (2.1.7).
+- **Surprises / decisions:**
+  - **No line-ending pin here.** This repo has no `.gitattributes`, and Git
+    for Windows checks text out with CRLF line endings. Over the working-tree
+    plan the fleet's sprint parser printed `found: false`; over the staged
+    blob (LF) it read all four legs. MEASURED.
+    - The fleet's other repos pin LF in a `.gitattributes`.
+    - Filed to the hub as #4452. Until the hub acts, a parser read on Windows
+      runs over `git show :docs/project-plan.md`, not the file.
+  - **Three stale "waits on A1" lines, not one.** The Sprint 1 review's
+    finding 4 named one. A grep for its predicate found three:
+    `original-system.md`, `reference-research.md` and `reference-repos.md`
+    reading rule 7. Story 2.1.9 carries all three.
+  - **One manifest check could never pass, fixed in #26.**
+    `free-tools-three-platforms` asked for boards "drawn in KiCad 10", but
+    the study draws none. It now asks that every planned board is planned in
+    KiCad 10.
+  - **The fresh-session read:** session `49c256bc-78bf-445e-b2a6-f970dfb1f707`.
+    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
+    the Sprint 1 leg 4 session's process, last used by the Sprint 1 reviewer
+    pass, so a `/clear` came before it. It ran without elevation.
+
 ## Session: 2026-10-27 — the Sprint 1 reviewer pass (every leg PASS)
 
 - **Landed:** both merged on Omid's in-session merge instruction, each pinned
@@ -80,53 +116,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **The fresh-session read:** session `ce689038-d1e9-483f-9350-492b8e1ff75f`.
     Its background-task path id was the same, so no `/clear` came before it.
     It ran without elevation.
-
-## Session: 2026-10-27 — Story 2.1.2: how the original worked (Sprint 1 leg 5); Sprint 1 EXECUTED
-
-- **Landed:**
-  - #16 is Story 2.1.2 (`d476e556`). It holds `docs/study/original-system.md`,
-    the plan's tick, the 2.1 manifest's `reviewedFor` entry and a pointer in
-    the research log's §1.
-  - #17 stamps Sprint 1 EXECUTED with the five legs' PRs and shas
-    (`3da6253b`, auto-merged at 12:55:50Z). **Review:** reads PENDING.
-  - Hub #4436 (`62066244`, auto-merged at 13:00:04Z) is the inbox fragment
-    `docs/inbox/tigerfid-onboarding-spec-corrections.md`, filed on Omid's
-    go. It asks a hub seat for a dated correction note in the onboarding
-    spec, covering the three corrections below. The hub seat that triages
-    it does the work; tigerfid needs no change.
-- **Next:**
-  - The Sprint 1 reviewer pass, in a fresh session (KB
-    `sprint-proposal-standard` § Roles).
-  - Story 1.1.6, the Epic 1.1 close, is not this terminal's. Air Traffic
-    Control released it to the Mac's hub closer, who opens a tigerfid-rooted
-    terminal for it on Omid's hand.
-  - Stories 2.1.3 and 2.1.4 have no sprint yet; Sprint 2 needs proposing.
-- **Surprises / decisions:**
-  - **Three corrections to the onboarding spec's Context and Appendix B**,
-    read from the records at the tag. The study document records them; the
-    hub spec itself is unchanged (it is the hub's file):
-    - the compactTag is Tag 102; Tag 103 is the miniTag;
-    - the Reader's radio is the TRX-101 daughterboard;
-    - the 2012 sealTag is an ISO 15693 logging seal, with no active radio
-      and no temperature sensor.
-  - **So milestone 1's sealTag is a new design.** Story 2.1.4 weighs it and
-    Story 2.1.7 decides it (the document's last section).
-  - **No record states the radio's data rate.** The requirements'
-    250 kbit/s stays ASSUMED for Story 2.1.3 to replace.
-  - **Forks cannot write files.** The harness refused their Write to the
-    scratchpad ("Subagents should return findings as text"), so the three
-    research forks returned their findings in their replies. Every quote the
-    document uses was then checked against its source by a script.
-  - **`gh pr merge --auto` raced the checks on #16.** Armed right after the
-    push, it failed with "2 of 2 required status checks are expected". Once
-    the checks were green, `--auto` refused a PR "in clean status", and a
-    direct `--squash --match-head-commit` merged it. MEASURED: both errors.
-    INFERRED cause: the call landed before the new head's checks registered.
-    A PR reading `CLEAN` with auto-merge armed but still OPEN is only lag.
-    MEASURED on hub #4436: auto-merge fired at 13:00:04Z, and a direct merge
-    sent seconds later answered "already merged".
-  - **The fresh-session read:** session
-    `c40e0637-2dc0-4ae7-bea5-428bee160ea7`. Its background-task path id was
-    `c59c545c-e735-4344-b0b8-697d9f897dca`, leg 4's process, so a `/clear`
-    came between the two. Elevation was not read on win32.
 
