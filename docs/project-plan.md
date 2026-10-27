@@ -165,7 +165,16 @@ schema can fill; simple readers and a smart server; three hardware tiers
 on off-the-shelf modules; and, not to copy, a crowd-sourced reader network.
 Each item is ADOPTED or DECLINED with its reason, and the study says whether
 ActiveWave's room-level zones from a field generator, its relay outputs and
-its wake-on-command still win.
+its wake-on-command still win. From the study's first two documents (the
+Sprint 1 review, 2026-10-27): this story answers first [3]'s 1,000 tags/s
+per reader against [2]'s 30 m with the tag worn, and meets [3] or brings it
+back to Omid with its cost; it chooses reader-assigned slots, a faster link
+or several channels for [3] and [21], designs how a zone move is noticed
+within [13]'s 5 s, and takes from the chosen radio what no original record
+states — the bit rate, modulation, output power, certification and the wake
+signal's form (the Story 2.1.1 tick; `docs/study/requirements.md` § Ground
+rules and items [3], [13] and [21]; `docs/study/original-system.md` § What
+no record states).
 **Done when:** `docs/study/radio-and-location.md` compares the options
 against the requirements, cites each rule above, names the chosen
 architecture, and answers its Chorus items one by one.
@@ -182,7 +191,15 @@ licence of any reference design (Story 1.1.4's lane). It weighs §3.7's
 question — one electronics core in three enclosures (the seal, the fob, the
 card) against three separate boards — a suggestion to weigh, not a
 decision. The spec's §7 files §3.7 under 2.1.7: this story weighs it, and
-2.1.7's decision sitting decides it.
+2.1.7's decision sitting decides it. From the study's first two documents
+(the Sprint 1 review, 2026-10-27): this story replaces the requirements'
+ASSUMED cell, reply-cost and listening figures with the chosen parts'
+datasheet figures, chooses for the warehouse item tag ([27]) between a slower
+wake and a CR2450-size cell, and weighs milestone 1's sealTag as a new
+design inside §3.7's question, because the 2012 sealTag is an ISO 15693
+logging seal with no active radio (the Story 2.1.2 tick;
+`docs/study/requirements.md` § The arithmetic and item [27];
+`docs/study/original-system.md` § What this means for the study).
 **Done when:** `docs/study/parts-and-toolchains.md` names the parts per
 device, the toolchain per part with its install on each platform, and the
 one-core-or-three answer with its reasons.
@@ -203,7 +220,14 @@ on every tag, so pairing is scan-and-scan; view-only, time-limited share
 links; and, not to copy, a cloud-only service, and free hardware plus a
 subscription with printed battery labels. Each item is ADOPTED or DECLINED
 with its reason, and the study says whether owned infrastructure with no
-subscription and pairing people with things still win.
+subscription and pairing people with things still win. From the study's
+second document (the Sprint 1 review, 2026-10-27): this story reads the
+original host applications' source, Smart Tracker and the Programming
+Station, which Story 2.1.2 left for it (the Outlook message beside them stays
+unread under `docs/reference-repos.md` reading rule 7), and, with Story
+2.1.3, says whether the rebuild's seal keeps an HF interface for reading by
+a phone (`docs/study/original-system.md` § The records read and § What this
+means for the study).
 **Done when:** `docs/study/software-stack.md` names the stack and why,
 sketches the event schema the readers report (tag, reader, signal strength,
 time, payload), and answers its Chorus items one by one.
@@ -228,7 +252,13 @@ study's documents, so that the rebuild has an approved spec to build from.
 **Context:** spec §3.9. The six study documents are the sitting's input; its
 output is the rebuild's design spec in this repo, at
 `docs/superpowers/specs/<date>-rebuild-design.md`, with Omid's approval line
-and milestone 1 (Initiative 2) as its acceptance target.
+and milestone 1 (Initiative 2) as its acceptance target. From the study so
+far (the Sprint 1 review, 2026-10-27): the sitting also decides milestone 1's
+sealTag design, which Story 2.1.4 weighs (`docs/study/original-system.md`
+§ What this means for the study), and the spec names the rebuild's top-level
+layout, which Story 1.1.2 left to the study with a starting shape of
+`hardware/`, `firmware/`, `software/`, `guides/` and `docs/` (#7; the
+archive's Story 1.1.2 Context).
 **Done when:** the spec exists at that path and carries `**Approved by:** Omid`
 with the date.
 

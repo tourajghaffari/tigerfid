@@ -4,7 +4,8 @@
   "reviewed": "2026-10-27",
   "reviewedFor": [
     "Story 2.1.1 DONE (PR #14, 2026-10-27): docs/study/requirements.md carries the 27 numbers (five measures per scenario plus each scenario's size), each with its reasoning and Omid's answer recorded first-hand beside it — 24 as recommended, [3], [12] and [13] set by him; the requirements-doc tooth now passes, and requirements-put-to-omid and no-medical-claim stay prose checks for the closer. No run, expect or prose changed.",
-    "Story 2.1.2 DONE (PR #16, 2026-10-27): docs/study/original-system.md describes the radio link, the anti-collision scheme, the zone mechanism, the alarms and I/O, and each milestone device's hardware, from the records at the tag activewave-2018, each claim cited to its file or marked INFERRED; the original-system-doc tooth now passes, and original-claims-cited and no-medical-claim stay prose checks for the closer. No run, expect or prose changed."
+    "Story 2.1.2 DONE (PR #16, 2026-10-27): docs/study/original-system.md describes the radio link, the anti-collision scheme, the zone mechanism, the alarms and I/O, and each milestone device's hardware, from the records at the tag activewave-2018, each claim cited to its file or marked INFERRED; the original-system-doc tooth now passes, and original-claims-cited and no-medical-claim stay prose checks for the closer. No run, expect or prose changed.",
+    "Sprint 1 review (2026-10-27, PR #23): two edits on Air Traffic Control's grant. (1) One Context sentence each on Stories 2.1.3, 2.1.4, 2.1.5 and 2.1.7 carries the forward work that the 2.1.1 and 2.1.2 ticks, the two study documents and #7 assign them, which no owning story held (register class premark-promise-not-written-into-owning-story); no Done-when moved and no prose check widened. (2) The rebuild-spec-approved run line is corrected: in the born regex the JSON newline escape had decoded to a raw newline, and its three digit classes had lost their backslashes. MEASURED under Git Bash, the close runner's win32 shell, on fixture spec files: the born form exited 1 with \"SyntaxError: Invalid regular expression: missing /\" on every input, so the tooth could never pass; the corrected form exits 0 on \"**Approved by:** Omid, 2026-11-15\" and 1 on an Approved line with no date. INFERRED: 1.1's born build-inputs-name-notices pattern, corrected by #8, lost its backslashes the same way (one mechanism). The tooth stays RED until Story 2.1.7's spec lands."
   ],
   "stories": [
     "2.1.1",
@@ -81,7 +82,7 @@
     },
     {
       "id": "rebuild-spec-approved",
-      "run": "node -e \"const f=require('fs');const p=require('path');const d=p.join('docs','superpowers','specs');const hit=(f.existsSync(d)?f.readdirSync(d):[]).filter((n)=>n.endsWith('-rebuild-design.md')).some((n)=>/[*][*]Approved by:[*][*] Omid[^\n]*d{4}-d{2}-d{2}/.test(f.readFileSync(p.join(d,n),'utf8')));process.exit(hit?0:1)\"",
+      "run": "node -e \"const f=require('fs');const p=require('path');const d=p.join('docs','superpowers','specs');const hit=(f.existsSync(d)?f.readdirSync(d):[]).filter((n)=>n.endsWith('-rebuild-design.md')).some((n)=>/[*][*]Approved by:[*][*] Omid[^\\n]*\\d{4}-\\d{2}-\\d{2}/.test(f.readFileSync(p.join(d,n),'utf8')));process.exit(hit?0:1)\"",
       "expect": {
         "exit": 0
       },
