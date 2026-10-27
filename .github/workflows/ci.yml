@@ -2,8 +2,9 @@
 # tick-merge-claim arm and the secret-scan backstop on every PR. TWO required
 # checks, `scope` and `test` (KB ci-gating-standard) — extend `test`, never
 # rename it (KB required-status-check-rename). `test` grows as the rebuild
-# brings checks to run: the licence gate (plan Story 1.1.4), then KiCad
-# ERC/DRC, firmware builds and software tests as they come to exist.
+# brings checks to run: the reference-check tests (plan Story 1.1.3), the
+# licence gate (Story 1.1.4), then KiCad ERC/DRC, firmware builds and
+# software tests as they come to exist.
 #
 # Runners (hub spec 2026-10-26-tigerfid-onboarding-design, C2): every job runs
 # on GitHub-hosted ubuntu-latest, never the fleet's self-hosted runner
@@ -123,3 +124,7 @@ jobs:
           node-version: 24
       - name: Close-protocol lint
         run: node scripts/close-lint.mjs
+      # The reference-corpus check's own tests (plan Story 1.1.3). Each case
+      # builds a throwaway repo and folder, so CI never needs the corpus.
+      - name: Reference-check tests
+        run: node --test scripts/reference-check.test.mjs

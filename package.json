@@ -6,7 +6,8 @@
   "license": "Apache-2.0",
   "description": "TigeRFID — the ActiveWave active-RFID system, open-sourced in 2017–2018 and rebuilt from the ground up for beginners (FGL fleet). Node runs the fleet's scripts here; it is not the system's stack.",
   "scripts": {
-    "test": "node scripts/close-lint.mjs"
+    "setup": "git config core.hooksPath .githooks && node scripts/reference-check.mjs",
+    "test": "node scripts/close-lint.mjs && node --test scripts/reference-check.test.mjs"
   },
   "engines": {
     "node": ">=24"

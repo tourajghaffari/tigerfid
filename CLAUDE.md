@@ -49,9 +49,22 @@ shared by the two, and nothing here edits the site.
   '!/software/' '!/api/'`). Story 1.1.2 removes both.
 - Two required checks, `scope` and `test`; extend `test`, never rename it.
   The commands are recorded in `docs/ci-contract.md`.
-- `node scripts/close-lint.mjs` (also `npm test`) is the close-protocol
-  lint CI's `test` job runs. No npm dependencies exist; the repo-root
-  `.npmrc` guard (`ignore-scripts=true`) stays when the first one arrives.
+- `npm test` runs what CI's `test` job runs: the close-protocol lint
+  (`node scripts/close-lint.mjs`) and the reference-check tests. No npm
+  dependencies exist; the repo-root `.npmrc` guard (`ignore-scripts=true`)
+  stays when the first one arrives.
+
+## The reference corpus
+
+- `../tigerfid-reference/` holds the original tree recreated from the tag,
+  the old website's capture and the study's comparisons. It is a plain
+  folder, never a repo, never committed.
+- Read `docs/reference-repos.md` before reading anything in it (the dial,
+  the reading rules, the licence audit), and `docs/reference-research.md`
+  before any search for sources.
+- `npm run setup` verifies it (`node scripts/reference-check.mjs`);
+  `--recreate` rebuilds the original tree from the tag.
+- The pins live in `docs/reference-corpus.tsv` and nowhere else.
 
 ## Writing in public
 
