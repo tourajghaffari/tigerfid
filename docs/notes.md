@@ -7,6 +7,40 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — Sprint 2 leg 3 (Story 2.1.4, the parts and toolchains study)
+
+- **Landed:** #33 → `3068168d` (GitHub's merge stamp 19:39:32Z, by
+  auto-merge armed on the full head sha `69832608`). `scope` was green at
+  19:38:23Z and `test` at 19:38:35Z. Story 2.1.4 ✅ DONE. The tick, the
+  study and #33's body (its greps, claims audit and checks) are the record.
+- **Next:**
+  - Sprint 2's leg 4, Story 2.1.5 (`docs/study/software-stack.md`), in a
+    FRESH executor session after this wrap. It is the sprint's last leg, so
+    its executor stamps the block executed.
+  - **For leg 4, from this study:** the Reader reaches the host as a USB CDC
+    serial port, with no driver to install on any of the three platforms.
+  - **Before any part is bought:** read the FCC grant pages for
+    ZAT-1312PSIP-2 and ZAT-1312PSIP-3 in a browser. Every machine route was
+    refused (HTTP 403).
+  - **The other machine, on its next session:** `node
+    scripts/reference-check.mjs` will report the five new `sources/` files
+    missing. Fetch each from its row's URL (it counts only once its sha256
+    matches), or copy it from this machine.
+- **Surprises / decisions:**
+  - **The grant read was put to Omid first-hand,** between this terminal's
+    `date -u` reads of 19:17:09Z and 19:25:00Z. He answered "Write it as not
+    read". Changing the network route did not lift the refusals (friction
+    F13).
+  - **TI's documents name two FCC IDs:** -2 in the datasheet, and -3 for
+    the 2024 filings (F15). `radio-and-location.md`'s label line is the
+    datasheet's.
+  - **The eCFR's API now needs a compressed request** (`curl
+    --compressed`, F14).
+  - **The fresh-session read:** session `326f43fb-a014-4eea-838f-59fff96f5faa`.
+    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
+    the process the Sprint 2 proposal and legs 1–2 used, so a `/clear` came
+    before it. It ran without elevation.
+
 ## Session: 2026-10-27 — Sprint 2 leg 2 (Story 2.1.3, the radio and location study)
 
 - **Landed:** #31 → `ef5c2895` (GitHub's merge stamp 18:55:56Z, by
@@ -76,40 +110,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
     the Sprint 2 proposal's process, so a `/clear` came before it. It ran
     without elevation.
-
-## Session: 2026-10-27 — the Sprint 2 proposal (approved, four legs)
-
-- **Landed:** #26 → `e06bf9b9` (17:31:48Z), merged under Omid's in-session
-  merge instruction, pinned to its green head.
-  - The plan's § Sprint 2 block is the record.
-  - Omid approved it first-hand in this terminal, between its `date -u`
-    reads of 17:29:28Z and 17:29:48Z: "Approve as proposed (Recommended)".
-  - Hub inbox #4452 merged at 17:28:39Z (the line-ending gap, below).
-- **Next:**
-  - Sprint 2's leg 1, Story 2.1.9, in a FRESH executor session per the
-    block's kickoff (one session per leg, either machine). Legs 2–4 (2.1.3,
-    2.1.4, 2.1.5) follow serially, each after the previous leg merges.
-  - After leg 4: the Sprint 2 reviewer pass, then the Sprint 3 proposal
-    (Story 2.1.6 and any remainder the block's D9 splits off), then the
-    decision sitting (2.1.7).
-- **Surprises / decisions:**
-  - **No line-ending pin here.** This repo has no `.gitattributes`, and Git
-    for Windows checks text out with CRLF line endings. Over the working-tree
-    plan the fleet's sprint parser printed `found: false`; over the staged
-    blob (LF) it read all four legs. MEASURED.
-    - The fleet's other repos pin LF in a `.gitattributes`.
-    - Filed to the hub as #4452. Until the hub acts, a parser read on Windows
-      runs over `git show :docs/project-plan.md`, not the file.
-  - **Three stale "waits on A1" lines, not one.** The Sprint 1 review's
-    finding 4 named one. A grep for its predicate found three:
-    `original-system.md`, `reference-research.md` and `reference-repos.md`
-    reading rule 7. Story 2.1.9 carries all three.
-  - **One manifest check could never pass, fixed in #26.**
-    `free-tools-three-platforms` asked for boards "drawn in KiCad 10", but
-    the study draws none. It now asks that every planned board is planned in
-    KiCad 10.
-  - **The fresh-session read:** session `49c256bc-78bf-445e-b2a6-f970dfb1f707`.
-    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
-    the Sprint 1 leg 4 session's process, last used by the Sprint 1 reviewer
-    pass, so a `/clear` came before it. It ran without elevation.
 
