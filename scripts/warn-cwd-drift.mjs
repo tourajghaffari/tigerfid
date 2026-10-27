@@ -185,9 +185,17 @@
 // platforms: a stage whose command word — bare, by path, `.exe`, or after
 // `mise exec --`, past assignments, keywords and wrappers — is an interpreter
 // (python, python2/3, python3.x, py, node, ruby, perl, php) and whose
-// arguments carry a BARE `-` program word (`python3 -`, `node -`,
-// `python3 -u -`, `python3 - "$@" <<EOF`, `cat x | python3 -`, a here-string
-// piped into `python3 -` in the PowerShell tool). A warn would reach the model
+// PROGRAM SLOT holds a BARE `-` (`python3 -`, `node -`, `python3 -u -`,
+// `python3 - "$@" <<EOF`, `cat x | python3 -`, a here-string piped into
+// `python3 -` in the PowerShell tool). Since Story 244.1.12 (the pen's false
+// positive of 2026-10-26: `node PATH/file-waiver.mjs FILE ci-gating - 1.1.1 …`
+// was denied as `node -`) the slot is the first word after the interpreter that
+// is not an option: a word starting with `-` (other than `-`) is an option, a
+// named value-taking option (STDIN_VALUE_OPTIONS — `-X utf8`, `--require x`)
+// takes its value with it, and a redirection is read past. A `-` after a
+// script run by path is that script's argument — silent. Accepted limit: an
+// option NOT on the value list that takes a separate value
+// (`node --inspect-port 9229 -`) reads its value as the program — silent. A warn would reach the model
 // after the interpreter is already waiting — the damage is the wait itself —
 // so the face is denied like arm 4's two. Silent by design: a program by path;
 // `-c`/`-e` inline programs (arm 4's and the CLAUDE.md inline rule's); a `-`
@@ -451,6 +459,20 @@ const NODE_EVAL_FLAGS = new Set(['-e', '--eval', '-p', '--print', '-pe', '-ep'])
 // Interpreters whose BARE `-` program word reads the program from stdin (the
 // eighth arm, Story 214.1.1): the command word's basename, `.exe` optional.
 const STDIN_INTERPRETERS = /^(?:python(?:[23](?:\.\d+)?)?|py|node|ruby|perl|php)(?:\.exe)?$/;
+// Story 244.1.12: the options, per interpreter family, whose VALUE is the next
+// word — read past it, so `python3 -X utf8 -` keeps its dash in the program
+// slot. An option not named here that takes a separate value reads its value
+// as the program (the accepted limit, the header's). `-c`/`-e`/`-m`/`-f` are
+// absent by design: the word after them IS the program, so a later `-` is its
+// argument.
+const STDIN_VALUE_OPTIONS = {
+  python: new Set(['-X', '-W', '--check-hash-based-pycs']),
+  node: new Set(['-r', '--require', '--import', '--loader', '--experimental-loader', '--input-type', '--env-file', '-C', '--conditions']),
+  ruby: new Set(['-I', '-r', '-E', '-C']),
+  perl: new Set(['-I']),
+  php: new Set(['-c', '-d', '-z']),
+};
+const stdinFamily = (base) => (/^py/.test(base) ? 'python' : base.replace(/\.exe$/, ''));
 const PROGRAM_DRIVE_PATH = /(?<![\w.\/\\-])\/[A-Za-z]\/[\w.-]+(?=[\/'"`]|$)/;
 const PROGRAM_VAR_SLASH = /(?<!\\)\$(?:\{([A-Za-z_]\w*)\}|([A-Za-z_]\w*))\//g;
 const DRIVE_VALUE = /^\/[A-Za-z](?:\/|$)/;
@@ -1292,8 +1314,15 @@ function nodeEvalFaces(command) {
 
 // Returns { verb } for the first stage whose command word — bare, by path,
 // `.exe`, or after `mise exec --`, past assignments, keywords and wrappers —
-// is an interpreter (STDIN_INTERPRETERS) and whose arguments carry a BARE `-`
+// is an interpreter (STDIN_INTERPRETERS) and whose PROGRAM SLOT holds a BARE `-`
 // word (never `--`, never `-x`, never a `-` inside quotes); null otherwise.
+// Story 244.1.12: the program slot is the first word after the interpreter
+// that is not an option — a word starting with `-` other than `-` itself is an
+// option, a named value-taking option (STDIN_VALUE_OPTIONS) takes its next word
+// with it, and a redirection word (`2>/dev/null`, `>`, `<<EOF`) is read past
+// (a bare operator with its target). So `node scripts/x.mjs - arg` is a script
+// by path with a `-` argument (silent), while `node -`, `python3 -u -` and
+// `node --input-type=module -` keep the dash in the slot (denied).
 // Heredoc bodies and PowerShell here-strings are data, dropped before the
 // words are read: `python3 - <<'EOF'` keeps its operator word and loses its
 // body, and a `python3 -` LINE inside a body never fires. Accepted limit,
@@ -1308,9 +1337,29 @@ function stdinInterpreterFace(command) {
     const verb = wordText(stage[i]);
     const base = verb.slice(Math.max(verb.lastIndexOf('/'), verb.lastIndexOf('\\')) + 1);
     if (!STDIN_INTERPRETERS.test(base)) continue;
-    if (stage.slice(i + 1).some((w) => isBare(w) && w[0].text === '-')) return { verb: base };
+    const slot = programSlot(stage, i, STDIN_VALUE_OPTIONS[stdinFamily(base)] ?? new Set());
+    if (slot !== -1 && isBare(stage[slot]) && stage[slot][0].text === '-') return { verb: base };
   }
   return null;
+}
+
+// Story 244.1.12: the index of the interpreter's program-slot word, or -1.
+function programSlot(stage, i, valueOptions) {
+  for (let k = i + 1; k < stage.length; k++) {
+    const w = stage[k];
+    const t = wordText(w);
+    if (isBare(w) && t === '-') return k;
+    if (w[0].q === '' && /^\d*(?:<<?|>>?)/.test(t)) {
+      if (/^\d*(?:<<?|>>?)&?$/.test(t)) k++; // a bare operator: its target is the next word
+      continue;
+    }
+    if (w[0].q === '' && t.startsWith('-')) {
+      if (isBare(w) && valueOptions.has(t)) k++;
+      continue;
+    }
+    return k;
+  }
+  return -1;
 }
 // --- ninth arm: a fleet repo's org derived from its clone's origin (Story 219.1.1) ----
 
