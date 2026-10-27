@@ -7,6 +7,41 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — Sprint 2 leg 2 (Story 2.1.3, the radio and location study)
+
+- **Landed:** #31 → `ef5c2895` (GitHub's merge stamp 18:55:56Z, by
+  auto-merge armed on the full head sha `0b929589`; `scope` and `test` green
+  at 18:54:37Z and 18:54:47Z). Story 2.1.3 ✅ DONE. The tick, the study and
+  #31's body (its greps, claims audit and checks) are the record.
+- **Next:**
+  - Sprint 2's leg 3, Story 2.1.4 (`docs/study/parts-and-toolchains.md`), in
+    a FRESH executor session after this wrap. Leg 4 follows.
+  - **For leg 3, from this study:**
+    - read the CC1312PSIP's FCC grant record (FCC ID ZAT-1312PSIP-2). The
+      FCC's search and fccid.io answered HTTP 403 to a plain request, so its
+      equipment class is unread, and a browser read by Omid may be the route;
+    - read Part 15 Subpart B for the Reader's USB or Ethernet parts;
+    - replace the study's ASSUMED antenna, slot-guard and receive start-up
+      figures.
+  - **The other machine, on its next session:** `node scripts/reference-check.mjs`
+    reports `MISSING folder sources/` until the three TI files arrive. Fetch
+    each from its row's URL (it counts only once its sha256 matches), or copy
+    it from this machine.
+- **Surprises / decisions:**
+  - **The EU texts came through the Publications Office's Cellar service.**
+    EUR-Lex's own pages answered curl with an empty HTTP 202. The Cellar
+    service (`publications.europa.eu/resource/celex/<CELEX>`, with an
+    `Accept: application/xhtml+xml` header) served the consolidated texts.
+    The Decision's identifier needs `(01)` URL-encoded. Friction F8 and F12.
+  - **A browser-identity retry was refused.** The permission check refused
+    one retry against a vendor's 403 that would have presented a browser's
+    identity, as bot-check circumvention. Every later request was plain
+    (friction F8).
+  - **The fresh-session read:** session `f367e3c4-268f-4213-80f5-0de763c5a7e2`.
+    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
+    the process the Sprint 2 proposal and leg 1 used, so a `/clear` came
+    before it. It ran without elevation.
+
 ## Session: 2026-10-27 — Sprint 2 leg 1 (Story 2.1.9) and the line-ending pin
 
 - **Landed:** both squash-merged, each pinned to its green head.
@@ -77,42 +112,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
     the Sprint 1 leg 4 session's process, last used by the Sprint 1 reviewer
     pass, so a `/clear` came before it. It ran without elevation.
-
-## Session: 2026-10-27 — the Sprint 1 reviewer pass (every leg PASS)
-
-- **Landed:** both merged on Omid's in-session merge instruction, each pinned
-  to its green head.
-  - #23 → `a647e11b` (15:28:02Z). The archive's Sprint 1 `**Reviewed:**`
-    record is the adjudication: every leg PASS, five findings. #23 also
-    refreshes the two restated PENDING copies, adds one dated Context
-    sentence to each of Stories 2.1.3, 2.1.4, 2.1.5 and 2.1.7, and corrects
-    `docs/close/2.1.json`'s `rebuild-spec-approved` run line, with one
-    `reviewedFor` entry.
-  - #24 → `3c2cdbbf` (15:31:22Z) corrects the record's register-seats
-    bullet. The Epic 1.1 close's two seats had landed in hub #4446 before
-    #23 opened.
-- **Next:**
-  - The Sprint 2 proposal, on Omid's word, from Story 2.1.3. The Context
-    sentences on 2.1.3–2.1.7 are its inputs.
-  - Its first study PR also carries the review's fix-up to
-    `docs/study/original-system.md` (findings 3–4 in the Sprint 1 record):
-    the spec corrections are three, not two, and the Outlook-message
-    sentence still waits on A1, which is answered.
-- **Surprises / decisions:**
-  - **A born tooth that could never pass.** `rebuild-spec-approved`'s regex
-    failed to parse on every input (`SyntaxError`). MEASURED on fixtures
-    under Git Bash. INFERRED: the same lost-backslash mechanism as 1.1's
-    `build-inputs-name-notices`. A born-RED tooth hides this kind of defect,
-    because its red reads as "not yet".
-  - **A shared record moved during a wait.** Omid's answer on the #6–#8
-    merges came between this terminal's `date -u` reads of 13:21:53Z and
-    15:22:47Z. The hub register gained the close's two seats in between, so
-    the record written from the first read was stale, and #24 corrects it.
-  - **A CR check that misread.** On this machine, `grep -c $'\r'` over
-    `git show` output counted every line, on `origin/main`'s files too. Only
-    `git cat-file -p … | od -c` showed the blobs are LF. MEASURED.
-  - **The fresh-session read:** session `f08270bf-1a7d-43fc-8c97-df28f66d8ebc`.
-    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
-    leg 4's process, which leg 5's session `c40e0637-…` also ran in. So a
-    `/clear` came before it. It ran without elevation.
 
