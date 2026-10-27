@@ -118,7 +118,7 @@ at 915 MHz as well.
 | Host link | a USB-to-serial bridge that enumerates as a USB CDC device | No driver to install on any of the three platforms. "The CDC class has been implemented in Windows (since Windows 98), macOS and most Linux distributions. Since Windows 10 ... the operating system now has a generic driver that will be used for CDC" (MCHP-CDC § 2.3). The part is the build initiative's choice: the vendors' pages this leg tried refused (§ What was read) |
 | Power | USB's 5 V, through a 3.3 V regulator | INFERRED: the regulator is rated above the 86 mA the module draws at +20 dBm (PSIP p14), and USB powers the Reader and carries its data on one cable. This fills a gap no original record states, the Reader's supply (`original-system.md` § What no record states). Its current is the module's (62 mA at +19 dBm, PSIP p14; the Reader sends 17 dBm) plus the bridge's and the relays', which their parts' datasheets will state |
 | I/O | two relays and two supervised inputs, with their drivers and protection | The original's I/O, kept (`radio-and-location.md` § Does ActiveWave's approach still win). The parts are the build initiative's |
-| Debug | a 10-pin connector for the XDS110's "XDS110 out" cable | § The debugger |
+| Debug | a 10-pin connector, to take the debugger's "10-pin XDS110 out connector" | § The debugger |
 
 **In the EU,** the Reader stays at 25 mW e.r.p. (SRD band 47, read by
 `radio-and-location.md`). INFERRED: with the W5017's +0.90 dBi, that is a
@@ -166,7 +166,7 @@ requirements' words:
 | Cell compartment | opened with a tool | The cell maker's safety note: "battery compartments should be designed with one of the following methods: a) a tool such as screwdriver or coin is required to open battery compartment" or two independent movements (Energizer CR2032) |
 | Temperature sensor | TI TMP117, on the nursery's tags and the cold-chain item tags; a fitting option on the others | ±0.1 °C from −20 to 50 °C; I²C; 1.7–5.5 V; a one-shot conversion of 15.5 ms at 135 µA; 0.15 µA in shutdown; a 2 mm × 2 mm package (TMP117 p1, p6). The module's own sensor reads to ±3.5 °C at 2 °C resolution (PSIP p32). INFERRED: that is too coarse for a cold-chain limit a few degrees wide, and it measures the chip, not the item |
 | Tamper input | the band's or seal's loop, wired to a pin that wakes the module on either edge | Wake on a pin edge from standby (PSIP p51). The 2012 seal woke on its band's input the same way (`original-system.md` § The sealTag) |
-| Debug | pads for the XDS110's cable, or a pogo-pin fixture | INFERRED: a 10-pin connector does not fit a fob. The 2012 seal carried pogo pins (`original-system.md` § The sealTag) |
+| Debug | pads for the debugger's 10-pin connector, through an adapter or a pogo-pin fixture | INFERRED: a 10-pin connector does not fit a fob. The 2012 seal carried pogo pins (`original-system.md` § The sealTag) |
 
 **The nursery tag reads its temperature sensor against a limit set on
 screen.** It is not a medical device and not a monitor of vital signs (spec
@@ -238,6 +238,9 @@ regulators and the relays have no toolchain. The USB bridge needs no driver
 on any platform (§ The Reader). Every board is planned in KiCad 10 (spec
 D4). The table cites each install. None was run.
 
+**Platforms measured: none. Platforms cited: Windows, macOS and Linux,**
+for every tool except the Arm GNU Toolchain, whose platforms were not read.
+
 | Tool | What it is for | Windows | macOS | Linux | Licence and price | Source |
 |---|---|---|---|---|---|---|
 | KiCad 10.0.7 | every board: the Reader, the Field Generator, the tag core | Windows 10 and 11 | macOS 12 and newer | an AppImage for x86-64 | GPL-3.0-or-later; no price. Its libraries' licence is in `THIRD_PARTY_NOTICES.md` | KICAD-DL; KICAD-LIC |
@@ -290,8 +293,9 @@ requirements test battery life by "the tag's measured average current
 against its cell's rated capacity" (`requirements.md` § The five measures,
 defined), and the ET variant measures current. That makes the battery
 figures below measurable by the first builder, for 24.20 more than the
-plain debugger. It connects to the rebuild's boards through its 10-pin
-cable. The module debugs over cJTAG (PSIP p50).
+plain debugger. It reaches the rebuild's boards through its "10-pin XDS110
+out connector" (TI-XDS110ET). The module debugs over cJTAG (PSIP p50).
+Whether a cable for that connector comes in the box was not read.
 
 **The development board** is a bench tool for a builder's first firmware,
 before their own boards exist. It is never part of a device:
