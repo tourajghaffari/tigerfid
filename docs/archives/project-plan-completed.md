@@ -109,15 +109,18 @@ the wrap notes and the Epic 1.1 close evidence.
   face of its item 3.
 - **Register seats.** Sent to Air Traffic Control as text, by class id:
   - finding 2's face;
-  - this pass's own guard events: a refusal, a seat of
-    `stdin-guard-reads-a-bare-dash-argument-as-the-stdin-program`, and a
-    caught warning, a seat of `piped-checker-exit`.
+  - this pass's own guard events, each caught before it changed anything:
+    - a refusal, a seat of
+      `stdin-guard-reads-a-bare-dash-argument-as-the-stdin-program`;
+    - a warning, a seat of `piped-checker-exit`;
+    - a refusal of close-lint chained to a commit by `;`, a seat of
+      `semicolon-chained-checker-does-not-gate-commit`.
 
   Not re-sent: the two seats the close's triage names (items 3 and 4). The
   hub register did not hold them at this pass's first read, between its
   `date -u` reads of 13:13:47Z and 13:21:53Z. They landed by hub #4446 at
   13:41:54Z (`manifest-check-keyed-on-a-plan-spelling` and
-  `reference-folder-moved-not-copied`), before #23 opened. Corrected by #PRNUM.
+  `reference-folder-moved-not-copied`), before #23 opened. Corrected by #24.
 **Archived:** 2026-10-27, by the Epic 1.1 close (Story 1.1.6), on the
 runner's RELOCATE banner. The legs span Epics 1.1 and 2.1, and every leg read
 ticked once #16 landed (hub Story 89.1.1). Legs 1–3 (Stories 1.1.3, 1.1.2,
