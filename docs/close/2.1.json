@@ -3,7 +3,8 @@
   "planRef": "docs/project-plan.md",
   "reviewed": "2026-10-27",
   "reviewedFor": [
-    "Story 2.1.1 DONE (PR #14, 2026-10-27): docs/study/requirements.md carries the 27 numbers (five measures per scenario plus each scenario's size), each with its reasoning and Omid's answer recorded first-hand beside it — 24 as recommended, [3], [12] and [13] set by him; the requirements-doc tooth now passes, and requirements-put-to-omid and no-medical-claim stay prose checks for the closer. No run, expect or prose changed."
+    "Story 2.1.1 DONE (PR #14, 2026-10-27): docs/study/requirements.md carries the 27 numbers (five measures per scenario plus each scenario's size), each with its reasoning and Omid's answer recorded first-hand beside it — 24 as recommended, [3], [12] and [13] set by him; the requirements-doc tooth now passes, and requirements-put-to-omid and no-medical-claim stay prose checks for the closer. No run, expect or prose changed.",
+    "Story 2.1.2 DONE (PR #16, 2026-10-27): docs/study/original-system.md describes the radio link, the anti-collision scheme, the zone mechanism, the alarms and I/O, and each milestone device's hardware, from the records at the tag activewave-2018, each claim cited to its file or marked INFERRED; the original-system-doc tooth now passes, and original-claims-cited and no-medical-claim stay prose checks for the closer. No run, expect or prose changed."
   ],
   "stories": [
     "2.1.1",

@@ -15,6 +15,14 @@ design option must beat (plan Story 2.1.2), and it is the family's own
 Apache-2.0 work, so the study reads it and ports from it freely. The folder
 copy is recreated from the tag; nothing about it needs searching.
 
+**Read by Story 2.1.2 (2026-10-27):** the protocol and API documents, the
+Reader, Transceiver, Field Generator and tag boards, and the sealTag's
+board and firmware. What each record says, where the records conflict and
+what no record states are in `docs/study/original-system.md`, which a later
+session reads before re-reading the tree. Not read: the host applications'
+source, left for Story 2.1.5, and the Outlook message that ASK-OMID A1
+holds closed.
+
 ## 2. The old website — activewaveinc.com — KEPT, captured 2026-10-26
 
 **Why first:** the sibling site's seat is about to change the live site, so
