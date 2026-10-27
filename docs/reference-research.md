@@ -154,11 +154,58 @@ also works offline; and pairing people with things.
 The images and the Kuehne+Nagel PDF from these pages are in the folder's
 `chorus/`, third-party and study only.
 
-## 4. The study's third-party sources — none pinned yet
+## 4. The study's third-party sources
 
 The study's own sources (vendor datasheets, reference designs, the radio
 rules) are pinned as each study story reads them, under the copy-with-trail
-dial. Nothing is copied before Story 1.1.4's licence lane lands.
+dial. Nothing is copied before Story 1.1.4's licence lane lands. A source a
+choice rests on is pinned under the folder's `sources/`; a law text is cited
+by its dated URL, which is its pin; other pages are cited by URL and fetch
+date (plan D8).
+
+### Story 2.1.3 — radio, location and legality (2026-10-27)
+
+What was read is cited in `docs/study/radio-and-location.md`, which a later
+session reads before searching again.
+
+- **The law: READ, cited by dated URL, not pinned.** 47 CFR Part 15 §15.3,
+  §15.5, §15.23, §15.212, §15.231, §15.247, §15.249, §15.503, §15.517 and
+  §15.519, through the eCFR's API at its point in time of 2026-10-23. The
+  Radio Equipment Directive (consolidated 30.05.2026) and Decision
+  2006/771/EC (consolidated 23.01.2025), through the EU Publications Office's
+  Cellar service at `publications.europa.eu`. ERC/REC 70-03 (edition of
+  October 2026), from CEPT's document database. The study's § The law, read
+  first, lists each with its version.
+- **KEPT and pinned** (`sources/`, `third-party`, study only), because the
+  choice rests on them:
+  - `ti-cc1312psip-swrs293.pdf`, the CC1312PSIP module's datasheet: its
+    certifications (FCC ID ZAT-1312PSIP-2), radio figures and package;
+  - `ti-swra797.pdf`, TI's note on reusing the module's FCC certification:
+    the certified PHYs, their powers and the antenna conditions;
+  - `ti-cc1312r7-swrs254a.pdf`, the CC1312R7 datasheet: the radio core's
+    sniff-mode and whitening features, and the faster PHYs' sensitivities.
+- **KEPT, cited by URL and fetch date, not pinned:** TI's CC1352P7
+  datasheet (SWRS251A), for Bluetooth LE Coded's sensitivity in the
+  comparison; The Things Network's US902-928 page, for LoRa's bit rates.
+- **Refused, not read** (each a public page that refused this leg's
+  request; the friction log's leg 2 section records how each was met):
+  - Silicon Labs' FGM230S and EFR32FG23 datasheets (HTTP 403), a
+    sub-GHz module the leg meant to compare;
+  - the FCC's equipment-authorisation search and the fccid.io mirror
+    (HTTP 403), so the module grant's own record, with its equipment class,
+    is unread. Story 2.1.4 reads it;
+  - ETSI's server (HTTP 403 to a plain request): the version listings of
+    EN 300 220-2, EN 300 328 and EN 302 065-1 were read through a
+    web-reading tool, and the standards' files were not opened;
+  - ST's STM32WLE5 datasheet (the connection closed);
+  - EUR-Lex's own pages (an empty HTTP 202); the same texts came from the
+    Cellar service.
+- **Searched, not found:** a pre-certified module of a dual-band
+  (sub-GHz plus Bluetooth) TI chip. The search found TI's CC1312PSIP and
+  nothing for the CC1352P7.
+- **Not read:** the EU's ultra-wideband Decision, ECC/DEC/(06)04,
+  EN 302 065-2, and Part 15's Subpart B for digital devices. The study says
+  why each was not needed, or which story reads it.
 
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
@@ -183,3 +230,7 @@ a verdict here.
 
 - **2026-10-26:** the activewaveinc.com capture (by that site's seat, before
   any change) and the Chorus read for spec D12 (§3's sources).
+- **2026-10-27:** Story 2.1.3's searches for the radio rules and the radio
+  parts (§ 4, above). The search ideas for 2.1.3 above are answered there.
+  How open active-RFID and indoor-location projects place zones was not
+  searched: the study's zones follow the original's Field Generators.
