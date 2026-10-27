@@ -8,8 +8,9 @@
 // state-changing verb; or (Story 139.1.1, the shape arm) reads `$?` /
 // `$LASTEXITCODE` right after ANY pipeline; or (Story 167.1.1, the background
 // arm) runs in the background with its last pipeline piping a gate into tail,
-// head or grep, whose exit the harness's task notification reports; and BLOCK three shapes with no
-// legitimate reading: a recognized verdict run ended by `;` ahead of `git
+// head or grep, whose exit the harness's task notification reports; or (Story
+// 244.1.8, the git-verb arm) pipes a state-changing git command into anything;
+// and BLOCK three shapes with no legitimate reading: a recognized verdict run ended by `;` ahead of `git
 // commit` / `git push` (Story 115.1.1), a `gh pr merge` / `gh pr checks` gate
 // ended by `;` ahead of a local branch change (Story 126.1.1), and a `git
 // push` ended by `;` ahead of `gh pr merge` (Story 140.1.2).
@@ -102,6 +103,25 @@
 // never expands), and when the pipe arm already warned (its advice covers the
 // read). The shared neutralizer decides what is a pipe — a `|` inside a quoted
 // pattern is not one — and now records each quoted span's quote character.
+//
+// THE GIT-VERB ARM (Story 244.1.8, hub Initiative 244 — register class
+// piped-checker-exit, the pen's two seats of 2026-10-26, hub #4358): `git merge
+// --ff-only origin/main 2>&1 | tail -n 1` hid a refusal twice (15:55:07Z,
+// 19:39:26Z) — the tail showed one line, not whether the checkout moved, and no
+// `$?` was read, so the shape arm above never saw it. So the guard also WARNS,
+// never denies, when a NON-FINAL pipe stage runs `git` whose verb is exactly
+// `merge`, `pull`, `checkout` or `rebase`, whether or not a `$?` follows — the
+// remedy is to run it unpiped and read its exit. Global options before the verb
+// are read past: `-C PATH`, `-c KEY=VALUE`, `--git-dir[=]PATH`,
+// `--work-tree[=]PATH`, `--no-pager`; any other option there ends the read
+// (silent). The verb is the WHOLE word, so `merge-base`, `checkout-index` and
+// every read verb stay silent, as do `gh pr checkout` (not git) and an unpiped
+// merge. Judged (recorded in the Hub Sprint 68 log): `git rebase
+// --show-current-patch` is a read (silent); `git checkout -- PATH` is a write (it
+// warns). A `$?` read after such a pipe is named by this arm alone (the shape arm
+// folds in). Census (P74, the hub's docs/ at the leg's base): every recorded
+// command that pipes one of the four verbs is state-changing — no recorded read
+// pipes them.
 //
 // THE POWERSHELL TOOL (Story 73.1.1): the Windows box's primary shell is the
 // harness's PowerShell tool, a different tool name — register seat
@@ -376,6 +396,11 @@ if (typeof payload !== 'object' || payload === null || Array.isArray(payload)) {
 
 // Story 73.1.1: the harness's shell tools — Bash on both machines, PowerShell
 // on the Windows box (its primary shell; register seat piped-checker-exit 6).
+// Story 244.1.8, the git-verb arm (pipedGitVerb, below): the four state-changing
+// verbs, and the global options that take a value before the verb.
+const GIT_STATE_VERBS = new Set(['merge', 'pull', 'checkout', 'rebase']);
+const GIT_VALUE_OPTIONS = new Set(['-C', '-c', '--git-dir', '--work-tree']);
+
 const SHELL_TOOLS = new Set(['Bash', 'PowerShell']);
 if (!SHELL_TOOLS.has(payload.tool_name)) process.exit(0);
 const isPowerShell = payload.tool_name === 'PowerShell';
@@ -412,7 +437,10 @@ const semi = ungatedVerbAfterGate(command);
 // Story 139.1.1, the shape arm: a `$?` / `$LASTEXITCODE` read right after ANY
 // pipeline. Read only when no recognized gate is piped — the pipe arm's advice
 // already covers that read.
-const dollarQ = masked ? null : dollarQAfterPipe(command);
+// Story 244.1.8, the git-verb arm: a state-changing git verb in a non-final pipe
+// stage, read whether or not a `$?` follows; its advice covers that read.
+const gitPipe = pipedGitVerb(command);
+const dollarQ = masked || gitPipe ? null : dollarQAfterPipe(command);
 // Story 167.1.1, the background arm (register class piped-checker-exit): a
 // `run_in_background` call's exit is read by the HARNESS, whose task
 // notification reports the compound's exit, the LAST pipe stage's. So when
@@ -422,7 +450,7 @@ const dollarQ = masked ? null : dollarQAfterPipe(command);
 // `gh pr checks … --watch | tail -12`. The flag is a documented Bash
 // tool_input field (Claude Code's hooks reference).
 const bgPipe = payload.tool_input?.run_in_background === true ? backgroundMaskedGate(command) : null;
-if (!masked && !pipestatusOnDarwin && !semi && !dollarQ && !bgPipe) process.exit(0);
+if (!masked && !gitPipe && !pipestatusOnDarwin && !semi && !dollarQ && !bgPipe) process.exit(0);
 
 // `npm test` (Story 84.1.1) is a battery like `node --test` (Story 24.3.26):
 // its script IS `node --test …` in tigerdash and every vituno consumer, and a
@@ -464,6 +492,13 @@ const pipeAdvice = masked
     ` into another command, so the compound's exit code is the LAST pipe stage's — \`${exitVar}\` no ` +
     `longer proves the ${kind}'s verdict. If this run is the ` +
     `exit-code proof, re-run UNPIPED (e.g. ${rerun}). `
+  : '';
+const gitAdvice = gitPipe
+  ? `piped-checker guard (warn, not a block): this command pipes \`git ${gitPipe.verb}\` — a state-changing git ` +
+    'command — into another command, so a refusal it prints (`Not possible to fast-forward`, a conflict, ' +
+    "`would be overwritten`) is hidden behind the filter, and the compound's exit is the LAST stage's " +
+    `whether or not \`${exitVar}\` is read after it. Before you believe the checkout moved, run it UNPIPED and read ` +
+    `its exit (e.g. ${unpiped(gitPipe.invocation)}). `
   : '';
 const pipestatusAdvice = pipestatusOnDarwin
   ? 'piped-checker guard (warn, not a block): this command reads `${PIPESTATUS…}` on a darwin host, where the ' +
@@ -557,12 +592,18 @@ const semiCitations =
   'ahead of a local branch change is refused too (Story 126.1.1); pantheon #423 armed auto-merge after a push ' +
   'ended by `;` — had the push failed, the PR\'s previous head would have landed — so a push ahead of a merge is ' +
   'refused (Story 140.1.2).';
-const citations = [masked || pipestatusOnDarwin ? pipeCitations : null, semi ? semiCitations : null]
+// Story 244.1.8: the git-verb arm's own faces.
+const gitCitations =
+  "Class piped-checker-exit, its seats in the hub's docs/friction/recurrences.json: the pen's two of 2026-10-26 " +
+  '(hub #4358) — `git merge --ff-only origin/main 2>&1 | tail -n 1` hid a refusal twice, and no `$?` was read ' +
+  'for the shape arm to see (Story 244.1.8).';
+const citations = [masked || pipestatusOnDarwin ? pipeCitations : null, gitPipe ? gitCitations : null, semi ? semiCitations : null]
   .filter(Boolean)
   .join(' ');
-const advice = pipeAdvice + pipestatusAdvice + dollarQAdvice + bgAdvice + semiAdvice + citations;
+const advice = pipeAdvice + gitAdvice + pipestatusAdvice + dollarQAdvice + bgAdvice + semiAdvice + citations;
 const summary = [
   masked ? `${masked} piped — exit code masked` : null,
+  gitPipe ? `git ${gitPipe.verb} piped — a refusal hidden` : null,
   pipestatusOnDarwin ? '${PIPESTATUS read on zsh — expands empty' : null,
   dollarQ ? `${dollarQ.read} read after a pipe — the last stage's exit` : null,
   bgPipe ? `${bgPipe.gate} piped in a background call — the notification's exit is ${bgPipe.filter}'s` : null,
@@ -572,7 +613,7 @@ const summary = [
   .join('; ');
 const stories = [
   ...new Set(
-    [masked ? pipeStory : null, pipestatusOnDarwin ? '84.1.1' : null, dollarQ ? '139.1.1' : null, bgPipe ? '167.1.1' : null].filter(
+    [masked ? pipeStory : null, gitPipe ? '244.1.8' : null, pipestatusOnDarwin ? '84.1.1' : null, dollarQ ? '139.1.1' : null, bgPipe ? '167.1.1' : null].filter(
       Boolean
     )
   ),
@@ -839,6 +880,49 @@ function maskedCheckerInvocation(command) {
     if (hit) return hit;
   }
   return null;
+}
+
+// Story 244.1.8 — the git-verb arm. Returns { verb, invocation } for the first
+// non-final pipe stage that runs `git` with a state-changing verb, else null.
+// The pipeline split and the substitution bodies are maskedCheckerInvocation's.
+// Its two sets sit with the other top-level sets (GIT_STATE_VERBS, above).
+function pipedGitVerb(command) {
+  const reader = stageReader(command);
+  const pipelines = reader.text
+    .replace(/\|&/g, '|')
+    .replace(/\d*>&\d*/g, ' ')
+    .replace(/&>>?/g, '>')
+    .split(/(?:&&|\|\||[;&\n(){}`])+/);
+  for (const pipeline of pipelines) {
+    const stages = pipeline.split('|');
+    if (stages.length < 2) continue;
+    for (const stage of stages.slice(0, -1)) {
+      const hit = gitStateVerb(stage, reader);
+      if (hit) return hit;
+    }
+  }
+  for (const body of reader.nested) {
+    const hit = pipedGitVerb(body);
+    if (hit) return hit;
+  }
+  return null;
+}
+function gitStateVerb(stage, { resolve, basename, tokensOf, commandIndex }) {
+  const tokens = tokensOf(stage);
+  const i = commandIndex(tokens);
+  if (i >= tokens.length || !/^git(?:\.exe)?$/i.test(basename(tokens[i]))) return null;
+  let k = i + 1;
+  while (k < tokens.length) {
+    const t = resolve(tokens[k]);
+    if (GIT_VALUE_OPTIONS.has(t)) k += 2;
+    else if (/^--(?:git-dir|work-tree)=/.test(t) || t === '--no-pager') k += 1;
+    else break;
+  }
+  const verb = k < tokens.length ? resolve(tokens[k]) : null;
+  if (!GIT_STATE_VERBS.has(verb)) return null;
+  // Judged a read (Hub Sprint 68 leg 5): it prints the stopped patch and moves nothing.
+  if (verb === 'rebase' && tokens.slice(k + 1).map(resolve).includes('--show-current-patch')) return null;
+  return { verb, invocation: tokens.slice(i).map(resolve).join(' ') };
 }
 
 // Story 139.1.1 — the shape arm. Returns { read, pipeline, first } when the

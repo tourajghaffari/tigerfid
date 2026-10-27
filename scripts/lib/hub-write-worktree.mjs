@@ -67,20 +67,25 @@ const backOff = (ms) => { Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),
 // .git/worktrees/wt3/commondir: Undefined error: 0". Retryable (a re-run of the
 // add succeeds once the sibling's transient state settles); a branch-name
 // collision ("reference already exists") is deterministic, NOT this.
-// Story 242.1.2 (2026-10-26): two more faces of the same race, MEASURED in ONE
-// stderr on the shared Linux runner (hub #4102's test, run 39959199535 — register
-// class concurrent-worktree-add-admin-dir-race-outside-the-transient-classifier):
-// "fatal: not a git repository: /tmp/…/repo/.git/worktrees/wt" (anchored on the
-// .git/worktrees/NAME path — the bare text and git's outside-a-repo line stay NOT
-// transient) and "fatal: '/tmp/hub-write-…/wt' is not a working tree". Either
-// line alone fires the one retry, and classifyAddError labels a second failure
-// on either one WORKTREE_RACE.
+// Story 242.1.2 (2026-10-26): a second face of the same race on the shared Linux
+// runner (hub #4102's test, run 39959199535 — register class
+// concurrent-worktree-add-admin-dir-race-outside-the-transient-classifier):
+// "fatal: not a git repository: /tmp/…/repo/.git/worktrees/wt", anchored on the
+// .git/worktrees/NAME path (the bare text and git's outside-a-repo line stay NOT
+// transient); it fires the one retry, and classifyAddError labels a second
+// failure on it WORKTREE_RACE. Corrected by Story 244.1.13 (the Hub Sprint 67
+// review's finding 2, hub #4360, measured before its battery's GO at 19:55:28Z
+// 2026-10-26): Story 242.1.2 recorded the run's two lines as ONE stderr thrown at
+// addWorktree; they were read off the test's console. The second line, "fatal:
+// '/tmp/hub-write-…/wt' is not a working tree", is the `finally`'s cleanup echo —
+// `worktree remove --force` on the dir the failed add never created, its stderr
+// inherited by the console — git's permanent wrong-path error, never an add text.
+// It is not transient, and the cleanup now runs with stdio 'pipe' (below).
 export function isTransientWorktreeError(errText) {
   const t = errText ?? '';
   return (
     /worktrees\/[^/\s]+\/(commondir|gitdir)/i.test(t) ||
-    /not a git repository: \S*\.git[\\/]worktrees[\\/][^\\/\s]+/i.test(t) ||
-    /'[^']+' is not a working tree/i.test(t)
+    /not a git repository: \S*\.git[\\/]worktrees[\\/][^\\/\s]+/i.test(t)
   );
 }
 
@@ -233,8 +238,11 @@ export function withWriteWorktree({ repoRoot, branch, base = 'origin/main' }, fn
     return fn(dir);
   } finally {
     // Windows can hold the dir briefly; the unconditional prune below then sweeps
-    // the stale metadata so it never blocks the next writer.
-    try { wtGit(repoRoot, ['worktree', 'remove', '--force', dir]); } catch { /* prune sweeps it */ }
+    // the stale metadata so it never blocks the next writer. Story 244.1.13: stdio
+    // 'pipe' — after a failed add there is no dir, and the remove's "is not a working
+    // tree" printed beside the add's own error read as an add face (Story 242.1.2's
+    // record); its error is discarded here, so quieting it hides nothing actionable.
+    try { wtGit(repoRoot, ['worktree', 'remove', '--force', dir], { stdio: 'pipe' }); } catch { /* prune sweeps it */ }
     // 11.4.7 (review M1): delete the dir BEFORE pruning — when `worktree remove`
     // failed, prune can only sweep a registration whose dir is gone, so this
     // order makes the cleanup self-contained instead of leaning on the next
