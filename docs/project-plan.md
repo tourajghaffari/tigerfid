@@ -49,10 +49,13 @@ Keep that section above the first `## Initiative` block in the archive.
 No open rows. A1, answered, moved to the archive with Initiative 1 (KB
 `register-relocation-at-close`, 2026-10-27).
 
-## Sprint 2 — "The study makes its choices: a radio a beginner may legally run, the parts and free tools to build it, and host software for any laptop" (proposed 2026-10-27; 4 legs, serial)
+## Sprint 2 — "The study makes its choices: a radio a beginner may legally run, the parts and free tools to build it, and host software for any laptop" (proposed 2026-10-27; 4 legs, serial) — ✅ APPROVED (2026-10-27)
 
-**Approval:** PENDING — Omid signs first-hand in the proposer's terminal, and
-the proposer records his words on this line.
+**Approval:** approved 2026-10-27 (Omid, first-hand in the proposer's
+terminal "tigerfid Sprint 2 Proposal", between its `date -u` reads of
+17:29:28Z and 17:29:48Z: "Approve as proposed (Recommended)"): the block as
+proposed, four legs, D1–D11 at their defaults. The sign-off edit is the
+proposer's, on the proposal PR's branch (tigerfid #26).
 
 **Proposed:** 2026-10-27 by the repo-rooted session "tigerfid Sprint 2
 Proposal" (session `49c256bc-78bf-445e-b2a6-f970dfb1f707`), on Air Traffic
