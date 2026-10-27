@@ -15,6 +15,11 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     the research log's §1.
   - #17 stamps Sprint 1 EXECUTED with the five legs' PRs and shas
     (`3da6253b`, auto-merged at 12:55:50Z). **Review:** reads PENDING.
+  - Hub #4436 (`62066244`, auto-merged at 13:00:04Z) is the inbox fragment
+    `docs/inbox/tigerfid-onboarding-spec-corrections.md`, filed on Omid's
+    go. It asks a hub seat for a dated correction note in the onboarding
+    spec, covering the three corrections below. The hub seat that triages
+    it does the work; tigerfid needs no change.
 - **Next:**
   - The Sprint 1 reviewer pass, in a fresh session (KB
     `sprint-proposal-standard` § Roles).
@@ -43,6 +48,9 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     the checks were green, `--auto` refused a PR "in clean status", and a
     direct `--squash --match-head-commit` merged it. MEASURED: both errors.
     INFERRED cause: the call landed before the new head's checks registered.
+    A PR reading `CLEAN` with auto-merge armed but still OPEN is only lag.
+    MEASURED on hub #4436: auto-merge fired at 13:00:04Z, and a direct merge
+    sent seconds later answered "already merged".
   - **The fresh-session read:** session
     `c40e0637-2dc0-4ae7-bea5-428bee160ea7`. Its background-task path id was
     `c59c545c-e735-4344-b0b8-697d9f897dca`, leg 4's process, so a `/clear`
