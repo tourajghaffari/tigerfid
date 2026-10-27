@@ -17,9 +17,10 @@ Everything in this plan is public, written for a stranger (CLAUDE.md
 
 **Provenance / re-review note:** this plan was born at adoption, not audited — authored 2026-10-26 by hub Story 243.1.2 per KB `new-repo-standard`'s authored-plan template, from the approved design spec (hub spec `2026-10-26-tigerfid-onboarding-design`, Omid 2026-10-26, hub PR #4355). No `/audit-project` run yet; the spec's decisions D1–D12 and calls C1–C11 are the re-review record until the first audit.
 
-**Last staleness sweep:** 2026-10-26 (adopted this day — every pointer in
-this plan was written against the state it cites; the first sweep proper is
-the first sprint proposal's step 2, KB `plan-staleness-sweep`).
+**Last staleness sweep:** 2026-10-27 (tigerfid #26, the Sprint 2 proposal's
+step-2 sweep, KB `plan-staleness-sweep`: scoped to the sprint's inputs, which
+were the whole live plan, `docs/close/2.1.json` and the records its stories
+cite).
 
 ## Plan format
 
