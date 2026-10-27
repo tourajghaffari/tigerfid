@@ -97,3 +97,66 @@ lost-context defect.
   warned on a `git pull` piped into `tail` and on a re-verify read that piped
   `npm test` into `grep` after a `;`-chained `close-lint`. Each state was
   re-read unpiped, and every commit ran behind `close-lint && npm test &&`.
+
+## Leg 2 — Story 2.1.3 (2026-10-27)
+
+Run by the repo-rooted session "tigerfid Sprint 2 leg 2" (session
+`f367e3c4-268f-4213-80f5-0de763c5a7e2`), fresh by `/clear`. Its
+background-task path id, `c59c545c-e735-4344-b0b8-697d9f897dca`, is the
+process the Sprint 2 proposal and leg 1 used. Not elevated.
+
+**Context checkpoint:** a plan of eight tasks, at D9's tripwire and not
+above it. They were the US reads, the EU reads, the radios' figures, the
+comparison and choice, the Chorus items, the corpus rows, the tick with its
+manifest line and this section, and the checks and the merge. No split was
+needed. No compaction, no forced re-read, no lost-context defect.
+
+- **F8 — Vendor and regulator sites refused plain requests.**
+  - **Refused:** Silicon Labs' datasheets, the FCC's
+    equipment-authorisation search and the fccid.io mirror, and ETSI's
+    server (HTTP 403). EUR-Lex's pages answered with an empty HTTP 202, and
+    ST's server closed the connection.
+  - **Cost:**
+    - a Silicon Labs module dropped out of the comparison;
+    - the TI module grant's equipment class is unread, so the design hops
+      channels to hold under either class, and Story 2.1.4 reads the
+      record;
+    - the three ETSI standards were read as their version listings only.
+  - **How each was met:** the first requests to EUR-Lex and Silicon Labs
+    carried a generic browser user-agent string. A retry presenting a full
+    browser identity was refused by the session's own permission check as
+    bot-check circumvention, before it ran. Every later request was plain.
+    The EU texts came instead from the Publications Office's Cellar service,
+    the official machine route to the same consolidated texts. The ETSI
+    listings were read through the harness's web-reading tool.
+  - **Suggested fix:** the research log's search ideas name the official
+    machine endpoints first (the eCFR's API, the Cellar service). A record
+    that only a browser can open, such as the FCC grant, goes to Omid's
+    hand.
+- **F9 — "Read before any radio is named": reading order or document
+  order?** The US sections and Decision 2006/771/EC were read before any
+  datasheet was opened. The RED's articles, ERC/REC 70-03, the ETSI listings
+  and §15.3 were read after the first datasheets were downloaded, and before
+  the document named a radio. The study's § The law, read first, states the
+  order with its clock reads, so the closer can judge
+  `legal-texts-read-dated`. Suggested fix: a block that bakes "the law
+  before the radios" says which order it binds.
+- **F10 — ERC/REC 70-03 lost its column alignment as text.** The PDF's
+  tables came out with their columns crossed. The study cites it only for
+  what reads without doubt, and takes the binding EU band conditions from
+  the Decision, which read cleanly. Cost: one source's tables unused.
+- **F11 — The reference check's message says copy-only for every file
+  row.** `scripts/reference-check.mjs` prints "copy-only — copy it, never
+  move it" for a missing file. D8 lets `sources/` be fetched again from its
+  URL, and `docs/reference-repos.md` and the tsv's header now say so. The
+  script was not edited, because this leg's grant excludes `scripts/`.
+  Suggested fix: a later story aligns the message for `sources/`.
+- **F12 — The Decision's consolidated identifier needs encoding.** Its
+  CELEX number carries a `(01)` suffix that the Cellar service wants
+  URL-encoded. Three guessed dates returned 404 before a query to the
+  Publications Office's SPARQL endpoint listed the real versions. Cost: a
+  few minutes.
+- **Guard events, each a read and not a proof.** The piped-checker guard
+  warned once, on the close runner piped into `grep`. The flip map was
+  re-run unpiped for the PR body, and every commit ran behind
+  `close-lint && npm test &&`.

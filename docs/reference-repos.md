@@ -46,9 +46,9 @@ Each source class has its own rule:
   company's own pages, photos and datasheets. They were never released under
   this repo's licence. Read them for study. A copy into this repo is Omid's
   call, item by item, and goes through the lane with its trail.
-- **Third-party** (`chorus/`'s images and PDF, licence `third-party`): all
-  rights reserved. Study only. No image, text or file is copied; cite by URL
-  and fetch date.
+- **Third-party** (`chorus/`'s images and PDF, and `sources/`'s vendor
+  documents, licence `third-party`): all rights reserved. Study only. No
+  image, text or file is copied; cite by URL and fetch date.
 - **Ours** (`chorus/NOTES.md`, licence `ours`): a fleet session's own notes,
   adopted as prose into the research log.
 
@@ -129,6 +129,23 @@ Each source class has its own rule:
 - **Licences:** `NOTES.md` is ours, adopted into the research log. The other
   21 (images and one PDF) are `third-party`, all rights reserved, study only.
 
+### `sources/` — the study's third-party sources (plan D8)
+
+- **What it holds:** each datasheet, application note or reference design a
+  study choice rests on, as fetched from its public URL, one row each.
+  Pages read without a choice resting on them are cited by URL and fetch
+  date in the research log and are not pinned. A law text is cited by its
+  dated URL and is not pinned either: its version date is its pin.
+- **The first rows,** added by Story 2.1.3 (2026-10-27): three Texas
+  Instruments documents for the CC1312PSIP module, its certification note
+  and the CC1312R7 datasheet. The research log's § 4 has their verdicts.
+- **Licence:** `third-party`. TI's documents carry TI's own notice and no
+  open licence, so they are read for study and never copied into the repo.
+- **On another machine:** fetch each file from its row's URL, or copy it
+  from a machine whose folder verifies. A fetched file counts only once its
+  bytes match the pin. Vendors revise a document behind the same URL, so a
+  mismatch means a newer revision, and the pinned bytes are copied instead.
+
 ## Recreating the folder on a new machine
 
 Run these steps before any corpus-dependent review runs on that machine (KB
@@ -161,13 +178,15 @@ Run these steps before any corpus-dependent review runs on that machine (KB
      shape fits a move that stopped partway. The tree came back by
      `--recreate`, and the images by a pin-checked re-fetch where the public
      bytes still match, or from the other machine's verified copy. These folders are copy-only:
-   the site they came from changes, so they are never re-fetched. On macOS,
+   the site they came from changes, so they are never re-fetched. `sources/`
+   is fetched from its rows' URLs or copied (§ `sources/`, above). On macOS,
    strip the sidecars the copy leaves:
    `find ../tigerfid-reference \( -name '._*' -o -name '.DS_Store' \) -type f -print -delete`.
 5. **`node scripts/reference-check.mjs --write-stub`** writes the folder's
    README from `docs/reference-readme-stub.md`.
 6. **`node scripts/reference-check.mjs`** must exit 0 and print
-   `reference-check: ok — 291 rows verified, README the stub`.
+   `reference-check: ok — 294 rows verified, README the stub` (291 before
+   Story 2.1.3's three `sources/` rows).
 
 Outside the fleet, step 3 gives you the original tree. The website capture
 and the Chorus images exist only on the fleet's machines; the Wayback Machine
