@@ -364,7 +364,12 @@ the archival PR cuts Initiative 1 whole.
 block is written into the archive entry, and Initiative 1 is cut to the
 archive in the same PR.
 
-**Close evidence (2026-10-27, Opus 5.5, darwin):** HEAD 90ce1a1 (clean); hub tooling: origin/main baecc306. The runner ran from the repo root between 12:41:37Z and 12:41:38Z, through the box's battery lock (exit 0).
+**Close evidence (2026-10-27, Opus 5.5, darwin):** HEAD 9478118 (clean); hub tooling: DIFFERS (1 file) from origin/main fc0f3d71. The differing file is outside the close tooling: `scripts/close/`, `scripts/close-lint.mjs` and `scripts/lib/` show no diff from origin/main. The runner ran from the repo root through the box's battery lock (exit 0), three times:
+  - at 90ce1a1, 12:41:37Z–12:41:38Z;
+  - after the rebase onto #16, 12:55:16Z–12:55:18Z, which first printed the RELOCATE banner;
+  - the record below, 12:58:22Z–12:58:23Z, after the lock waited from 12:57:37Z on the Hub Sprint 68 Executor's battery.
+
+  The machine verdicts were the same 19 PASS at all three.
 - lint: PASS
 - runner-hosted-only: PASS
 - tag-preserves-2018: PASS
