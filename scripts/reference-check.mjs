@@ -152,14 +152,14 @@ export function verify({ folder, rows, root = REPO_ROOT, stubText, log = console
       counts.get(top).total++;
       const p = join(folder, r.name);
       if (!existsSync(join(folder, top))) { findings.push(r.name); continue; } // one line per absent folder, below
-      if (!existsSync(p) || !statSync(p).isFile()) { log(`MISSING file   ${r.name} (copy-only — copy it from the first machine)`); findings.push(r.name); }
+      if (!existsSync(p) || !statSync(p).isFile()) { log(`MISSING file   ${r.name} (copy-only — copy it, never move it, from a machine whose folder verifies)`); findings.push(r.name); }
       else if (sha256(p) !== r.pin) { log(`DRIFT   file   ${r.name} — its sha256 is not the pin`); findings.push(r.name); }
       else counts.get(top).ok++;
     } else { log(`UNKNOWN kind   ${JSON.stringify(r.kind)} for ${r.name}`); findings.push(r.name); }
   }
   for (const [top, names] of pinned) {
     const c = counts.get(top);
-    if (!existsSync(join(folder, top))) { log(`MISSING folder ${top}/ — ${c.total} files, copy-only: copy the folder whole from the first machine`); continue; }
+    if (!existsSync(join(folder, top))) { log(`MISSING folder ${top}/ — ${c.total} files, copy-only: copy the folder whole, never move it, from a machine whose folder verifies`); continue; }
     const unpinned = walkFiles(join(folder, top), top).filter((p) => !names.has(p) && !SIDECAR_RE.test(p.split('/').at(-1)));
     for (const p of unpinned) log(`UNPINNED file  ${p} — in the folder, not in ${TSV}`);
     findings.push(...unpinned.map((p) => `unpinned:${p}`));

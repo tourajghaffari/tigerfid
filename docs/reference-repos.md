@@ -146,9 +146,19 @@ Run these steps before any corpus-dependent review runs on that machine (KB
 
    On the first machine (2026-10-27) this took under two minutes: 6,062
    blobs fetched (the clone's pack grew to 758 MiB) and 2.8 GB written.
-4. **Copy `activewaveinc/` and `chorus/` whole from the first machine.** Use
-   a direct copy you control, such as a drive or a local network copy, and
-   never a repo, a cloud share or a public link. These folders are copy-only:
+4. **Copy `activewaveinc/` and `chorus/` whole from a machine whose folder
+   verifies** (the first machine at adoption). Use a direct copy you
+   control, such as a drive or a local network copy, and never a repo, a
+   cloud share or a public link.
+   - **Copy, never move.** A move that stops partway leaves the source
+     damaged as well as the destination. The original's paths past Windows'
+     260-character limit are one way a Windows tool stops.
+   - Run the check on the source before and after the copy. On 2026-10-27
+     the first machine lost its `chorus/` and 528 files of
+     `activewave-2018/` within two minutes. The cause was not measured; the
+     shape fits a move that stopped partway. The tree came back by
+     `--recreate`, and the images by a pin-checked re-fetch where the public
+     bytes still match, or from the other machine's verified copy. These folders are copy-only:
    the site they came from changes, so they are never re-fetched. On macOS,
    strip the sidecars the copy leaves:
    `find ../tigerfid-reference \( -name '._*' -o -name '.DS_Store' \) -type f -print -delete`.
@@ -171,7 +181,9 @@ and 2 when the folder is absent or the usage is wrong.
   is extra.
 - `ok files` — every file row in that folder matches its sha256.
 - `MISSING tree` — run `--recreate`.
-- `MISSING folder` / `MISSING file` — copy it from the first machine.
+- `MISSING folder` / `MISSING file` — copy it, never move it, from a machine
+  whose folder verifies. A file still served at its source may also be
+  re-fetched, but it only counts once its bytes match the pin.
 - `DRIFT tree` lists each path `missing`, `changed` or `extra`. `DRIFT file`
   means the bytes are not the pin's. Never edit a corpus file; copy it again.
 - `UNPINNED file` — a file is in a pinned folder without a row. Add the row
