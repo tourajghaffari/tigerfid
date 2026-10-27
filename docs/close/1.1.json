@@ -67,6 +67,14 @@
       "note": "Story 1.1.2 (spec D10): RED until the refresh. The 18F Code of Conduct link is gone and a code of conduct is named; which one is Omid's choice in the PR. The 2018 credit line thanking 18F for the file's inspiration may stay."
     },
     {
+      "id": "front-door-links-resolve",
+      "run": "node -e \"const cp=require('child_process');const show=(f)=>cp.execFileSync('git',['show','refs/remotes/origin/main:'+f],{encoding:'utf8'});const tree=cp.execFileSync('git',['ls-tree','-r','--name-only','refs/remotes/origin/main'],{encoding:'utf8',maxBuffer:1e8}).split(String.fromCharCode(10)).filter(Boolean);const has=(u)=>{const d=u.endsWith('/')?u.slice(0,-1):u;return tree.includes(d)||tree.some((p)=>p.startsWith(d+'/'))};const bad=[];for(const f of ['readme.md','contributing.md']){for(const m of show(f).matchAll(/][(]([^) ]+)[)]/g)){const u=m[1].split('#')[0];if(u===''||/^[a-z]+:/.test(u))continue;if(!has(u))bad.push(f+' -> '+m[1])}}console.log(bad.length?'dead: '+bad.join(', '):'every relative link in readme.md and contributing.md resolves on main');process.exit(bad.length?1:0)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 1.1.2: removing the 2018 folders is how a front door gets dead links. Every relative markdown link in readme.md and contributing.md (a file, a folder, or a file with an anchor; URLs and mailto skipped) names a path in origin/main's tree. Added by the restructure PR, which re-pointed the 2018 sections' folder links at the tag."
+    },
+    {
       "id": "sparse-view-retired",
       "run": "node -e \"const cp=require('child_process');const ls=cp.execFileSync('git',['ls-tree','--name-only','refs/remotes/origin/main','.github/workflows/'],{encoding:'utf8'}).split(String.fromCharCode(10)).filter((n)=>/[.]ya?ml$/.test(n));const hit=ls.some((n)=>cp.execFileSync('git',['show','refs/remotes/origin/main:'+n],{encoding:'utf8'}).includes('sparse-checkout'));process.exit(ls.length>0&&!hit?0:1)\"",
       "expect": {

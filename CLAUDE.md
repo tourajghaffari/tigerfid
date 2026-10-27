@@ -30,9 +30,11 @@ shared by the two, and nothing here edits the site.
   the forks depend on it.
 - Read an original at the tag (`git show activewave-2018:<path>`), or in the
   reference folder recreated from it (plan Story 1.1.3).
-- After the restructure (plan Story 1.1.2) the current tree holds the
+- Since the restructure (plan Story 1.1.2) the current tree holds the
   rebuild plus the 2018 `license`, `contributing.md`, `readme.md` and
-  `_assets/`. The README's dedication sections stay verbatim.
+  `_assets/`; every other 2018 path is read at the tag. The README's
+  dedication sections (Introduction, Fun Touraj Fact, Thank You) stay
+  verbatim.
 
 ## CI
 
@@ -42,11 +44,11 @@ shared by the two, and nothing here edits the site.
   because opening it would let any fork's pull request run code on Omid's
   machines. Hosted minutes are free for public repos.
 - Checkouts are blobless (`fetch-depth: 0` + `filter: blob:none`, spec C3):
-  full history for the merge-base reads, never the 2018 blobs. Until Story
-  1.1.2 lands they are also sparse, skipping `protel-files/`, `sealtag/`,
-  `software/` and `api/` (about 2.9 GB); local clones use the same view
-  (`git sparse-checkout set --no-cone '/*' '!/protel-files/' '!/sealtag/'
-  '!/software/' '!/api/'`). Story 1.1.2 removes both.
+  full history for the merge-base reads, never the 2018 blobs. They are not
+  sparse: Story 1.1.2 moved the 2018 folders off `main` and retired the
+  interim sparse view, whose excluded names (`software/`, `api/`) would
+  otherwise hide the rebuild's own folders from CI and from the secret scan.
+  Local clones are partial (`--filter=blob:none`) and not sparse either.
 - Two required checks, `scope` and `test`; extend `test`, never rename it.
   The commands are recorded in `docs/ci-contract.md`.
 - `npm test` runs what CI's `test` job runs: the close-protocol lint
@@ -86,7 +88,9 @@ is public and written for a stranger (spec D8).
 ## Contributions and strangers' pull requests
 
 - Issues and questions are welcome now; pull requests once the design study
-  has set the direction (spec D10; the README says so from Story 1.1.2).
+  has set the direction (spec D10; the README and `contributing.md` say so).
+  Conduct reports go to the address `contributing.md` names (Contributor
+  Covenant 3.0, linked, not copied).
 - **A fleet session never checks out a stranger's PR branch on Omid's
   machines:** that branch's `.claude/`, `scripts/` and `.githooks/` would run
   beside the machine's credentials. Review it by `gh pr diff <n>` (and

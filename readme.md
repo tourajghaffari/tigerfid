@@ -17,77 +17,51 @@ ActiveWave designed and built active RFID (Radio Frequency IDentification) produ
 
 * Simplified Installation. Our wireless device attachment capability simplifies the installation and interconnection of ActiveWave system components.
 
-The [presentations](presentations) and [website](http://www.activewaveinc.com/) provide a great deal more detail - especially the [product datasheets](http://www.activewaveinc.com/products_datasheets.php).
+The [presentations](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/presentations) and [website](http://www.activewaveinc.com/) provide a great deal more detail - especially the [product datasheets](http://www.activewaveinc.com/products_datasheets.php).
 
-## What is the project's current state?
+## Where this is going
 
-This project is currently fully functional in its current state. The minimum system requirements are as follows:
+We are rebuilding the system from the ground up, so that a complete beginner can build it with free tools on Windows, macOS or Linux. The first build is one Reader, one Field Generator and three tags (a sealTag, a compactTag and a cardTag) across two zones.
 
-1. One [Standard Reader](http://www.activewaveinc.com/products_datasht_standardreader.php) to both program the tags and read them.
+A design study comes first. It decides the new system against three scenarios:
 
-2. At least one tag (the [sealTag](sealtag) and [compactTag](http://www.activewaveinc.com/products_datasht_compacttag.php) were the most popular).
+* a conference, where the software shows each attendee on a floorplan;
+* a nursery, where each baby's tag carries a temperature sensor, so staff can find each baby and read the sensor;
+* a warehouse that counts 100,000 items in minutes.
 
-3. Software options:
+The work is planned in the open in [docs/project-plan.md](docs/project-plan.md).
 
-  1. Use the [API](api) to develop your own software; or,
-  
-  2. Use the [Programming Station](software/programming-station) to program tags and the [Smart Tracker](software/smart-tracker) to actually keep track of and monitor the tags.
+### The original
 
-The [Demo Kit](http://www.activewaveinc.com/products_datasht_demokit.php) included a few extra items: It included a [Standard Field Generator](http://www.activewaveinc.com/products_datasht_standardfieldgen.php) to demonstrate how to create zones within the range of the Reader as well as a motion detector to show how third-party devices can be integrated into the system as a whole through the use of the API.
+Everything released in 2017 and 2018 is kept, byte for byte, at the tag [`activewave-2018`](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018), with its [release notes](https://github.com/tourajghaffari/tigerfid/releases/tag/activewave-2018) and the [2018 README](https://github.com/tourajghaffari/tigerfid/blob/activewave-2018/readme.md). The first release, [`1.0.0`](https://github.com/tourajghaffari/tigerfid/releases/tag/1.0.0) (February 2017), is the system as he left it. Folder by folder:
 
-## How can I get involved?
+1. [API](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/api) - the APIs for C++ .NET, C# .NET, C# .NET CE and VB .NET, with their documentation.
 
-### Setup
+2. [BOM files](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/bom-files) - the Bills Of Materials, with each part and its cost at the time.
 
-1. Determine how you will configure your system. Remember the minimum system requirements listed above. As long as you have one Reader, one Tag, and either your own software using the [API](api) or the ActiveWave software suite ([Programming Station](software/programming-station) and [Smart Tracker](software/smart-tracker)), your system will work.
+3. [Documentation](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/documentation) - documents converted to Markdown.
 
-2. Use the [BOM files](bom-files) to figure out which parts you need.
+4. [Patents](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/patents) - the patents that covered the technology.
 
-3. Manufacture the parts using the [Protel files](protel-files). All the PCBs were designed using [Protel (now known as Altium)](http://www.altium.com/).
+5. [Presentations](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/presentations) - the marketing materials for different applications.
 
-4. Share whatever improvements you make!
+6. [Protel files](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/protel-files) - the schematics and board files, designed in Protel (now Altium).
 
-### Skillsets required
+7. [sealTag](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/sealtag) - the sealTag, the one device whose firmware source is in the tree.
 
-#### Software
+8. [Software](https://github.com/tourajghaffari/tigerfid/tree/activewave-2018/software) - the applications that ran the system, among them the Programming Station and the Smart Tracker.
 
-* Programming with either C++ or C#
+To work with the original on your own machine, clone without downloading all of its files up front (about 3 GB):
 
-* Designing PCBs
+```
+git clone --filter=blob:none https://github.com/tourajghaffari/tigerfid.git
+```
 
-#### Hardware
+That fetches the files on `main` only. `git checkout activewave-2018` then fetches the original's files as it checks them out.
 
-* Antenna design
+### Getting involved
 
-* Radio frequency communication
-
-* Soldering
-
-### Assistance required
-
-* We are looking for help to remove some of the old files. We included a few previous versions of each device in order to provide people with some history. We would like to remove all those older files and create a single-source-of-truth folder for each device.
-
-* We are looking for help to improve documentation. In particular, we would like help to create a guide to stand-up a demo system based on the minimum requirements, a guide to manufacutre each device, and a guide to troubleshoot each device.
-
-* We would like people's thoughts on whether the current structure is best or if it would be preferrable to have each device seperated out like the sealTag.
-
-* We would like people's thoughts on the best way to display the BOMs. Should we convert them to markdown? Use a Google Sheet? Something else?
-
-## Contents
-
-1. [API](api) - Included are APIs for C++ .NET, C# .NET, C# .NET CE, and VB .NET. There is a manual for a Java-based API which we haven't yet found. There is also documentation - both for internal use and customers.
-
-2. [BOM files](bom-files) - These are all the Bill Of Materials we could find. This should provide the different parts as well as costs associated with each based on the time they were made.
-
-3. [Documentation](documentation) - These are documents, converted to Markdown, that were important enough for inclusion, but without a natural location that we could determine.
-
-4. [Presentations](presentations) - These are the marketing materials that were sent to potential customers for a few different types of applications.
-
-5. [Protel files](protel-files) - These are all the schematics and other related files that are required to actually manufacture the hardware.
-
-6. [sealTag](sealtag) - One of the most versatile and popular tags of all, this was important enough to reside in its own section.
-
-7. [Software](software) - This includes all the different applications required to actually run the system.
+Issues and questions are welcome now: [open an issue](https://github.com/tourajghaffari/tigerfid/issues/new). Pull requests are welcome once the design study has set the direction. See [contributing](contributing.md).
 
 ## Fun Touraj Fact
 

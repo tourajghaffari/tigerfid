@@ -1,8 +1,13 @@
 ## Welcome!
 
-We're so glad you're thinking about contributing to TigeRFID! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
+We're so glad you're thinking about contributing to TigeRFID! If you're unsure about anything, just ask -- or open the issue anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
 
-We want to ensure a welcoming environment for all of our projects. We follow the [18F Code of Conduct](https://github.com/18F/code-of-conduct/blob/master/code-of-conduct.md) and all contributors should do the same.
+TigeRFID is being rebuilt from the ground up (the readme's [Where this is going](readme.md#where-this-is-going)):
+
+* **Issues and questions are welcome now.** Open an issue for a question, an idea, a correction, or something you know about the original system.
+* **Pull requests are welcome once the design study has set the direction.** Until then, we may close a pull request with thanks and keep its idea as an issue.
+
+We want to ensure a welcoming environment for everyone. We follow the [Contributor Covenant 3.0](https://www.contributor-covenant.org/version/3/0/code_of_conduct/) code of conduct, and all contributors should do the same. To report a possible violation, email [conduct@activewaveinc.com](mailto:conduct@activewaveinc.com); reports go to the maintainers only.
 
 We encourage you to read this project's 'contributing' policy (you are here), its '[license](license)', and its '[readme](readme.md)'.
 
