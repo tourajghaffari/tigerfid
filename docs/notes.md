@@ -7,6 +7,41 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — Sprint 2 leg 1 (Story 2.1.9) and the line-ending pin
+
+- **Landed:** both squash-merged, each pinned to its green head.
+  - #28 → `fc86cd14` (GitHub's merge stamp 18:09:01Z, by auto-merge): a root
+    `.gitattributes`, LF stored and checked out. `license` and `_assets/`,
+    the 2018 files unchanged since the tag, are `-text`. This closes friction
+    F4 and gap (1) of hub #4452; gaps (2) and (3) are the hub's.
+  - #29 → `bdd23c4f` (merge stamp 18:16:19Z): Story 2.1.9 ✅ DONE. The
+    tick and the PR body are the record: both greps with each hit's
+    disposition, and a claims audit. The arm had not fired on a green, CLEAN
+    head, so it was merged by hand, pinned to the full head sha.
+- **Next:**
+  - Sprint 2's leg 2, Story 2.1.3 (`docs/study/radio-and-location.md`), in
+    a FRESH executor session per the block's kickoff, after this wrap. Legs 3
+    and 4 follow serially.
+  - **The Mac clone, on its next session:** run `git ls-files --eol`. Any
+    `w/crlf` row takes #28's repair (delete the files, then
+    `git checkout-index -f -u`, never a renormalize). INFERRED: none, since
+    git on macOS leaves `autocrlf` unset.
+- **Surprises / decisions:**
+  - **"The originals" read as the 2018 files still on `main`.** The orders
+    asked that the originals' tree be marked `-text`. Naming the tag's
+    folders would also catch the rebuild's own future `software/`. MEASURED:
+    a `.gitattributes` on `main` cannot reach the tag, because `git archive`
+    of the tag ignored it. `readme.md` and `contributing.md` were rewritten
+    by #7, so they follow `*.md`. #28's body and friction F6 record this.
+  - **This Windows clone is repaired.** All 54 tracked files read `w/lf`.
+    The sprint parser now reads the working-tree plan (`found: true`, exit 0),
+    so the workaround of reading `git show :docs/project-plan.md` is retired
+    here.
+  - **The fresh-session read:** session `014c145a-45db-4c1d-b7ff-a2e9bcbcb0c4`.
+    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
+    the Sprint 2 proposal's process, so a `/clear` came before it. It ran
+    without elevation.
+
 ## Session: 2026-10-27 — the Sprint 2 proposal (approved, four legs)
 
 - **Landed:** #26 → `e06bf9b9` (17:31:48Z), merged under Omid's in-session
@@ -80,40 +115,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
     leg 4's process, which leg 5's session `c40e0637-…` also ran in. So a
     `/clear` came before it. It ran without elevation.
-
-## Session: 2026-10-27 — Story 1.1.6: the Epic 1.1 close (Initiative 1 archived)
-
-- **Landed:** #19 → `25c0f972` (13:02:01Z), merged on Omid's word, pinned
-  to its green head. The archive is the record: Initiative 1 whole, with the
-  Epic 1.1 close evidence and A1 beside it, and § Executed sprints › Sprint 1.
-- **Next:**
-  - The Sprint 1 reviewer pass, in a fresh session. The block now lives in
-    the archive, not the plan. The review PR refreshes its `**Review:** PENDING`
-    line and the Epic 1.1 evidence's "Sprint 1's review had not run" bullet;
-    the PENDING line names both.
-  - Sprint 2 needs proposing (Stories 2.1.3 onward).
-- **Surprises / decisions:**
-  - **The Sprint 1 block moved with this close.** Once #16 ticked leg 5, the
-    close runner printed its RELOCATE banner: the legs span Epics 1.1 and
-    2.1, every leg read ticked, so the first close owns the move (hub Story
-    89.1.1). #17 had stamped the block in place. This close moved it whole, on
-    Air Traffic Control's grant. Legs 4–5 (Stories 2.1.1, 2.1.2) stay ticked
-    in the plan until Epic 2.1's close archives them.
-  - **CLAUDE.md § CI corrected:** since #8, `npm test` runs four commands,
-    not two.
-  - **Story 1.1.3's tick has a dated correction.** The live site was frozen
-    to static HTML at 20:04:41Z on 2026-10-26, before #6 opened. The capture
-    predates the freeze, so its dating holds.
-  - **The conduct alias works.** #7 required `conduct@activewaveinc.com` to
-    exist before its merge, and no record showed it. Omid confirmed it at
-    this close: "Yes, it works".
-  - **A close's Completed line names its PR number once the PR is open.**
-    `scope`'s `check-tick-merge-claim` refused "this PR" on #19's first head.
-    A second commit named #19 and the pre-tick head.
-  - **The wrap refused once, rightly.** #20 amended the Story 2.1.2 block on
-    origin while this block was being written. The block was re-laid on
-    origin's notes, never `--amend`ed over them.
-  - **The fresh-session read:** session `ce689038-d1e9-483f-9350-492b8e1ff75f`.
-    Its background-task path id was the same, so no `/clear` came before it.
-    It ran without elevation.
 
