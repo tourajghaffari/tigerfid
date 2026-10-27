@@ -59,12 +59,26 @@ current tree only. **Asked:** read it first and decide, or keep the default.
 **Gates:** nothing — Story 1.1.2 proceeds on the default unless Omid rules
 otherwise first. Filed 2026-10-26 by the onboarding PR (spec §2, §7).
 
-## Sprint 1 — "Adopted: the original kept, the study begun" — ✅ APPROVED (2026-10-26, at adoption — the spec is the approval record)
+## Sprint 1 — "Adopted: the original kept, the study begun" — ✅ APPROVED (2026-10-26, at adoption — the spec is the approval record) — ✅ EXECUTED (2026-10-27)
 
 **Born:** 2026-10-26, at adoption (the onboarding PR, tigerfid #4 — its merge sha is recorded by hub Story 243.1.2's tick;
 hub spec `2026-10-26-tigerfid-onboarding-design`, hub PR #4355).
 **Approval:** ✅ APPROVED — Omid, 2026-10-26 (his approval of the spec,
 which records this sprint in §7; KB `new-repo-standard` item 5).
+**Executed:** 2026-10-27. The five legs, each its own PR, squash-merged in
+order:
+1. Story 1.1.3 — PR #6 → `2221bd1b` (2026-10-27T00:46:05Z);
+2. Story 1.1.2 — PR #7 → `e8597e58` (01:55:07Z);
+3. Story 1.1.4 — PR #8 → `435d1ce5` (02:01:38Z);
+4. Story 2.1.1 — PR #14 → `566947f0` (12:08:37Z);
+5. Story 2.1.2 — PR #16 → `d476e556` (12:53:26Z).
+
+Between legs 3 and 4, `main` also took #9 (a reference-check fix) and #11
+(Story 1.1.5, the second machine, not a leg). Leg 5 was run by the
+repo-rooted Windows session "tigerfid Sprint 1 Executor", fresh by `/clear`
+(session `c40e0637-2dc0-4ae7-bea5-428bee160ea7`; the cleared process,
+`c59c545c-e735-4344-b0b8-697d9f897dca`, was leg 4's).
+**Review:** PENDING.
 
 Story 1.1.1 is the onboarding PR itself — it carries this plan and is
 ticked in it, so it is not a leg. Five legs, in this order, each its own PR:
