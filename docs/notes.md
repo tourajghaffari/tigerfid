@@ -7,6 +7,34 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-27 — Story 2.1.1: the requirements, with numbers (Sprint 1 leg 4)
+
+- **Landed:** #14 is Story 2.1.1. The record is the plan's tick and
+  `docs/study/requirements.md`: 27 numbers, each with Omid's answer
+  recorded first-hand. He accepted 24 as recommended and set three himself:
+  [3], [12] and [13].
+- **Next:**
+  - Sprint 1 leg 5, Story 2.1.2 (`docs/study/original-system.md`), by
+    Omid's `/clear` in this terminal. Its tick meets the same lockstep
+    check as #14: one `reviewedFor` entry in `docs/close/2.1.json` plus
+    the `reviewed` date, in the form #14 used.
+  - Story 1.1.6, the Epic 1.1 close, in a fresh session.
+- **Surprises / decisions:**
+  - **Omid raised the conference's throughput tenfold:** 1,000 tags/s per
+    reader where the study recommended 100. By the document's arithmetic
+    (INFERRED, not measured), the original's random-delay anti-collision
+    cannot reach that. It needs a fast link (about 1 Mbit/s) with short
+    replies and reader-assigned slots, or several channels per reader, at
+    some cost in range. Story 2.1.3 weighs [3] against [2] (30 m, tag worn)
+    first. If the radio cannot meet it, the number goes back to Omid with
+    its cost, as the document's ground rule says.
+  - **Story 2.1.2 should read the original's data rate.** The
+    requirements' channel arithmetic assumes 250 kbit/s and leaves the
+    original's real rate for 2.1.2 to read.
+  - **The fresh-session read:** session `c59c545c-e735-4344-b0b8-697d9f897dca`.
+    Its background-task path id was the same, so no `/clear` came before
+    it, and it ran without elevation.
+
 ## Session: 2026-10-27 — Story 1.1.5: the second machine's clone and reference folder
 
 - **Landed:** #11 is Story 1.1.5. The plan's tick and the PR body are the
@@ -106,28 +134,3 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     Its background-task path id was the same, so no `/clear` came before it.
     Elevation is not read on this platform.
 
-## Session: 2026-10-26 — adopted into the fleet (Story 1.1.1; hub Story 243.1.2)
-
-- **The adoption:** before the onboarding PR, on GitHub — the settings
-  family, the annotated tag `activewave-2018` on the 2018 head with its
-  release, the default branch renamed `master` → `main`, and the
-  `protect-main` ruleset. The onboarding PR (Story 1.1.1) carries CLAUDE.md,
-  this file, the plan with Sprint 1, the archive, the close protocol and two
-  born-failing manifests, CI (`scope` + `test` on `ubuntu-latest`) with its
-  contract doc, `package.json` (no dependencies) and `.npmrc`, `.gitignore`,
-  Dependabot for the Actions pins and the session settings; the synced
-  scripts and the pre-commit hook arrived first, by the fleet round #3. Its
-  body is the adoption record.
-- **Next:** Sprint 1 leg 1 — Story 1.1.3, the reference corpus (adopting the
-  old website capture already taken) (plan § Sprint 1); then Stories 1.1.2, 1.1.4,
-  2.1.1 and 2.1.2, in that order.
-- **Surprises / decisions:**
-  - **The website capture is already done.** The old website's pages, photos and
-    datasheets were captured on 2026-10-26, before the site changed, into the local
-    reference folder (spec C11). Story 1.1.3 adopts that capture rather than re-taking
-    it.
-  - **An older release exists.** `1.0.0` (2017-02-10) is the system "as he left it when
-    he passed". `activewave-2018` is the newest release, and its notes link to `1.0.0`
-    (Omid's ruling).
-  - **Sparse checkouts until Story 1.1.2.** This clone and CI skip the four large 2018
-    folders until Story 1.1.2 removes them from the tree (CLAUDE.md § CI).
