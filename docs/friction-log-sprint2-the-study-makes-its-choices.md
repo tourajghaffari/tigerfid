@@ -160,3 +160,73 @@ needed. No compaction, no forced re-read, no lost-context defect.
   warned once, on the close runner piped into `grep`. The flip map was
   re-run unpiped for the PR body, and every commit ran behind
   `close-lint && npm test &&`.
+
+## Leg 3 — Story 2.1.4 (2026-10-27)
+
+Run by the repo-rooted session "tigerfid Sprint 2 leg 3" (session
+`326f43fb-a014-4eea-838f-59fff96f5faa`), fresh by `/clear`. Its
+background-task path id, `c59c545c-e735-4344-b0b8-697d9f897dca`, is the
+process the Sprint 2 proposal, leg 1 and leg 2 used. Not elevated.
+
+**Context checkpoint:** a plan of eight tasks, at D9's tripwire and not
+above it:
+1. the grant record and Subpart B;
+2. the module's figures;
+3. the parts around the module;
+4. the toolchains and the debugger;
+5. [27] and the replaced figures;
+6. one core or three;
+7. the corpus rows, with the tick, the manifest line and this section;
+8. the checks and the merge.
+
+No split was needed. No compaction, no forced re-read, no lost-context
+defect.
+
+- **F13 — The refusals held on a second network route.**
+  - **What was refused:** the FCC's search, two mirrors of it, FTDI and
+    Microchip answered HTTP 403 to plain requests, and so did the harness's
+    web-reading tool.
+  - **The retry:** Omid changed the session's network route, and a retry
+    was refused the same way. The FCC's and Microchip's bodies
+    are a content network's "Access Denied" page, so the refusal is of the
+    client, not the route (MEASURED: the body; the cause beyond it
+    INFERRED).
+  - **The ruling:** a browser read was put to Omid first-hand, and he
+    answered "Write it as not read".
+  - **Cost:**
+    - the grant's equipment class and its two FCC IDs stay open;
+    - the Reader's USB bridge is named by its class, not its part.
+  - **Suggested fix:** the research log names the browser-only records up
+    front, so a leg asks for them once, early, or writes them as not read
+    without spending requests.
+- **F14 — The eCFR's API now insists on compression.** A plain request
+  answered HTTP 406, "This endpoint requires response compression".
+  `curl --compressed` read every section. Leg 2's URLs are unchanged.
+  Cost: one retry.
+- **F15 — Two FCC IDs in TI's own documents.** The datasheet (November
+  2023) labels the module ZAT-1312PSIP-2. The certification note (September
+  2024) lists its filings, including the Wi-SUN test report for the PHY
+  that leg 2 chose, under ZAT-1312PSIP-3. Leg 2 cited the first. The study
+  records both and leaves them to the grant read. Cost: none landed wrong,
+  because the label line in `radio-and-location.md` is marked as the
+  datasheet's.
+- **F16 — A rule renumbered weeks before it was read.** The evaluation-kit
+  rule moved to §2.803(d)(2)(iv) in the amendment of September 11, 2026. The
+  first draft cited (c), from memory of the older numbering. The claims
+  check against the fetched text caught it. Suggested fix: a paragraph
+  number comes from the fetched text, never from memory, as D6 already asks
+  of whole sections.
+- **F17 — PDF tables lost their columns as text.** Three tables came out
+  scrambled:
+  - the module's standby rows (which current belongs to which oscillator);
+  - the certified-PHY table's PHY labels;
+  - the first antenna table.
+
+  Each was settled by a raw-order extraction of the one page, or by the
+  table that reads cleanly: the second antenna table, and the labels
+  counted by row. Page rendering was unavailable on this box. Cost: a few
+  minutes. Leg 2 met the same problem in ERC/REC 70-03 (F10).
+- **Guard events.** The cwd-drift guard warned once, on a `cd` into the
+  reference folder for a PDF conversion. The shell was reset, and every
+  later repo command used absolute paths. Every commit ran behind
+  `close-lint && npm test &&`.
