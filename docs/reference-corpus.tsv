@@ -291,3 +291,6 @@ file	chorus/x-header.jpg	-	fa72d6007dd17915b0bfe0a71ed343a72d4303a54bcc485c07e99
 file	chorus/x-seeker.jpg	-	a8deaa2bc7cd035466e2bcce487576324669f3ab47f0082bcabed85e18118f39	third-party	study-only
 file	chorus/x-sensors1.jpg	-	332e91f789755a2f02abe9b9bbaf87a2491d41e0efe8fe037add93e060782860	third-party	study-only
 file	chorus/x-sensors2.jpg	-	cf5cf590f6247d7fa05c4d794d22565a945e9933ba527fdefe6cd4e564c772cf	third-party	study-only
+file	sources/ti-cc1312psip-swrs293.pdf	https://www.ti.com/lit/ds/symlink/cc1312psip.pdf	da5eb47438cf7c3253251f2e42ee87cac81abc238d1144cf80e1cdd325c163f3	third-party	study-only
+file	sources/ti-cc1312r7-swrs254a.pdf	https://www.ti.com/lit/ds/symlink/cc1312r7.pdf	04b6984dd5c7162cd1723e7a1fae08f0e9fdd7a159a5265cf9e708b1aa32c3a0	third-party	study-only
+file	sources/ti-swra797.pdf	https://www.ti.com/lit/an/swra797/swra797.pdf	2fbe59c4ae3fff517f08a6973ec3207a7099ef024e531ad4d7fd351f4cea9232	third-party	study-only
