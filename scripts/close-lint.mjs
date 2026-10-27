@@ -350,7 +350,13 @@ function pipeWarning(num, c, p, tail = '') {
 //     heading tick carries in plan ∪ archive, and a story no heading ticks is
 //     written ahead of its tick; an undated entry has nothing to compare.
 //   arm 2 (monotone): `reviewed` is never older than any dated entry, whatever
-//     its verb — a sitting that appends today's entry bumps the stamp.
+//     its verb — a sitting that appends today's entry bumps the stamp. An entry's
+//     date for this arm is the NEWER of its dated records and its dated lead
+//     (Story 244.1.22, register class lockstep-entry-added-without-the-reviewed-bump:
+//     expeal.com #1066's `2026-10-27 — Story 1.10.6 RE-VERSIONED (… Omid's ruling of
+//     2026-10-26 …)` was dated by its record's quoted 2026-10-26 alone, and a
+//     `reviewed` left at 2026-10-26 reached main); reviewedForRecords below is
+//     unchanged, and reviewedForFailures reads the lead beside it.
 // A "dated entry" is the `Story X VERB (…)` shape with an ISO date inside the
 // parenthesis (the first one) — or, for an entry with no such record, the
 // entry's LEAD carrying an ISO date (Story 175.1.1): its text up to the first
@@ -444,6 +450,21 @@ function reviewedForFailures(num, m, ticks, why = '') {
     if (reviewed && rec.date && rec.date > reviewed) {
       const which = rec.lead ? `"${rec.lead.length > 80 ? `${rec.lead.slice(0, 80)}…` : rec.lead}"` : `Story ${rec.story} ${rec.verb}`;
       out.push(`docs/close/${num}.json: reviewed (${reviewed}) is older than its reviewedFor entry (${rec.date}) — ${which}${tail}`);
+    }
+  }
+  // Story 244.1.22: arm 2 dates an entry by the NEWER of its dated records and its dated lead. reviewedForRecords
+  // reads the lead only for an entry with no dated record (Story 175.1.1's fallback), so an entry whose record quotes
+  // an earlier ruling's date beside a later lead reached this arm by the record alone. A lead no newer than the
+  // entry's newest record adds nothing (that record was compared above), and arm 1 never reads a lead.
+  if (reviewed) {
+    for (const e of Array.isArray(m?.reviewedFor) ? m.reviewedFor : []) {
+      if (typeof e !== 'string') continue;
+      const recDates = [...e.matchAll(ENTRY_RE)].map((x) => x[3].match(ISO_RE)?.[0]).filter(Boolean);
+      if (recDates.length === 0) continue;
+      const lead = reviewedForLead(e);
+      const leadDate = lead.match(ISO_RE)?.[0];
+      if (!leadDate || leadDate <= reviewed || recDates.some((d) => d >= leadDate)) continue;
+      out.push(`docs/close/${num}.json: reviewed (${reviewed}) is older than its reviewedFor entry (${leadDate}) — "${lead.length > 80 ? `${lead.slice(0, 80)}…` : lead}"${tail}`);
     }
   }
   return out;
