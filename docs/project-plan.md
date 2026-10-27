@@ -44,10 +44,13 @@ Keep that section above the first `## Initiative` block in the archive.
 
 ## ASK-OMID register
 
-One open row.
+No open rows.
 
 **A1 — The Outlook message in the 2018 tree: read it before it leaves the
-tree, or keep the default?** `software/smart-tracker/SmartTracker  SaniFaucet.msg`
+tree, or keep the default? — ✅ ANSWERED (2026-10-27): keep the default.**
+Omid answered "Keep the default (Recommended)" first-hand in the Story 1.1.2
+session's terminal (tigerfid #7). The file left the current tree unread with
+the rest of the 2018 files and stays, unchanged, at the tag. `software/smart-tracker/SmartTracker  SaniFaucet.msg`
 (12 MB, an Outlook `.msg` file) was not read at adoption; it may hold
 correspondence. **Default:** it leaves the current tree with the rest of the
 2018 files in Story 1.1.2 and stays, unchanged, at the tag `activewave-2018`
@@ -146,7 +149,19 @@ read-back, the ruleset id and the commit identity); `protect-main` requires
 `test` + `scope`; this is the first PR through the ruleset with both green;
 the 1.1 teeth `runner-hosted-only` and `tag-preserves-2018` PASS.
 
-#### Story 1.1.2: The archive restructure — the 2018 tree leaves the current tree, the dedication stays
+#### Story 1.1.2: The archive restructure — the 2018 tree leaves the current tree, the dedication stays — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #7 (branch `story/1.1.2-restructure`).
+**Outcome:** the 2018 tree left the current tree. `git rm` removed 9,472 paths (`api/`, `bom-files/`, `documentation/`, `patents/`, `presentations/`, `protel-files/`, `sealtag/`, `software/`) and kept 5 (`license`, `contributing.md`, `readme.md`, `_assets/readme.md`, `_assets/tigerfid.jpg`); the tag and the history keep every byte.
+- **The README:** the Introduction, Fun Touraj Fact and Thank You sections are verbatim. "What is this?" stays, its presentations link re-pointed at the tag. `## Where this is going` is new: the rebuild, the original at the tag folder by folder, the one-line partial clone, and issues now, pull requests after the study. The 2018 sections that described files no longer on `main` ("current state", "get involved", "Contents") are read at the tag, through the 2018 README link.
+- **`contributing.md`:** it names the Contributor Covenant 3.0, linked, not copied. Copying its CC BY-SA 4.0 text would be a third-party copy, which waits on Story 1.1.4. Reports go to conduct@activewaveinc.com. The stance is issues now and pull requests once the study sets the direction, and the 18F credit line stays.
+- **The sparse view retired:** both `sparse-checkout` blocks are gone from `ci.yml`, and CLAUDE.md § CI is rewritten. This machine's clone runs `git sparse-checkout disable` once its `main` holds this change; the second machine's clone is Story 1.1.5's.
+- **Omid's read (D11),** first-hand in the Story 1.1.2 session's terminal, between that terminal's `date -u` reads of 00:46:07Z and 01:42:38Z, 2026-10-27:
+  - README: "As drafted (Recommended)", the wording in this PR;
+  - code of conduct: "Contributor Covenant 3.0 (Recommended)";
+  - reporting: "A role email address (Recommended)", then "conduct@activewaveinc.com (Recommended)";
+  - ASK-OMID A1: "Keep the default (Recommended)".
+- **A new tooth, `front-door-links-resolve`:** every relative link in `readme.md` and `contributing.md` resolves on `main`. Removing folders is how a front door gets dead links.
 
 **Story:** As a beginner arriving at the repo, I want a front door that
 shows the rebuild and links the original, so that I can start without

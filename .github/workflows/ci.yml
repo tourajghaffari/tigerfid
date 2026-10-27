@@ -60,16 +60,6 @@ jobs:
           # 98.1.1). Blobless (spec C3).
           fetch-depth: 0
           filter: blob:none
-          # Until Story 1.1.2 moves the 2018 originals off main, check out
-          # everything except their four large folders (about 2.9 GB) - the
-          # same view the fleet clone uses. Story 1.1.2 deletes these lines.
-          sparse-checkout: |
-            /*
-            !/protel-files/
-            !/sealtag/
-            !/software/
-            !/api/
-          sparse-checkout-cone-mode: false
       # The fleet Node pin here too: the scope scripts are hub-synced
       # canonicals written against Node 24, and a GitHub-hosted image's
       # default Node is not the fleet's choice.
@@ -105,16 +95,6 @@ jobs:
           # makes lockstep skip (loudly, but unenforced). Blobless (spec C3).
           fetch-depth: 0
           filter: blob:none
-          # Until Story 1.1.2 moves the 2018 originals off main, check out
-          # everything except their four large folders (about 2.9 GB) - the
-          # same view the fleet clone uses. Story 1.1.2 deletes these lines.
-          sparse-checkout: |
-            /*
-            !/protel-files/
-            !/sealtag/
-            !/software/
-            !/api/
-          sparse-checkout-cone-mode: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           # Fleet Node pin: 24 (the fleet-wide ruling of 2026-08-10). Retune
