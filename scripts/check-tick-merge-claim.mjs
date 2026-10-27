@@ -25,7 +25,7 @@
 //   `.number`), the range from the merge ref the job checks out (HEAD^1...HEAD,
 //   the same read scripts/ci-docs-only.mjs makes — Story 98.1.1's, through
 //   scripts/lib/ci-forge.mjs resolveRange).
-//   by hand: node scripts/check-tick-merge-claim.mjs --pr <n> [--opened <ISO-8601>] [--ready|--draft] [--repo <path>] --base <rev> --head <rev>
+//   by hand: node scripts/check-tick-merge-claim.mjs --pr <n> [--opened <ISO-8601>] [--ready|--draft] [--repo <path>] [--body-file <path>] --base <rev> --head <rev>
 //   (docs/close/206.1.json's arm-refuses-the-face tooth is the historical
 //   plant: --pr 3637 --base a2810c87^ --head a2810c87 — Hub Sprint 54 leg 1's
 //   own tick, which says "Merged by the executor …" of #3637 inside #3637;
@@ -156,6 +156,34 @@
 // line carrying the lineage parenthetical ("cut from `origin/main` `c310a71c` (the
 // Initiative 234 filing, hub #4010); merged by …") — covered by the same rule.
 //
+// THE BRACKET-SUBJECT RULE (hub Story 244.1.7, Hub Sprint 69 leg 6 — register class
+// tick-merge-claim-arm-reads-another-legs-merge-word-as-this-ticks-claim, seat 6: the Epic 242.1 close #4365's first
+// head refused on a quoted dispatch, "the Hub Sprint 67 review landed (hub #4360 → cd00e1f1, …)" — the verb's clause
+// named nothing, `#4360` sat inside the group the verb opens, unseen by the fallback, and the line's own `#4365` was
+// the nearest it could see). A bracket group that opens right after the verb, nothing but spaces between, names what
+// the verb is about: another PR's `#<n>` there is the verb's subject and the verb is no claim; THIS PR's `#<n>` there is
+// a claim (`via: 'clause'`); a group naming no PR leaves the fallback as it was. The census over every Completed line
+// with a `#N` in the hub's and the 16 clones' plans and archives (1,334 lines, each line's own PR its first `#N`, the
+// 241.1.2 census's shape) moved 205 refusals to 208: three lines whose first `#N` is the OTHER PR the verb is about
+// (tigerdash #348, hub #3901, lawcuments-app #823), each silent under both copies with its true own number.
+//
+// THE BODY ARM (hub Story 244.1.7 — register class tick-in-the-leg-pr-predicts-its-own-merge, seat 19: Story
+// 242.1.1's tick, hub #4335, said the `rate_limit` pools "are in its body"; the review found them never added). An
+// ADDED tick paragraph — a `**Completed…:**` or `**Outcome:**` line and the added lines that continue it (a plan or
+// archive hard-wraps its ticks) — that says something is "in its body", "in the PR body" or that "the PR body carries"
+// it is refused when a TOKEN of the claim's clause (a backticked span or a double-quoted phrase, read from the clause
+// as THE SUBJECT RULE bounds it) is absent from the PR body. The body is the event's `pull_request.body` — the body as
+// THAT event carried it: the hub's CI runs on opened/synchronize/reopened, so a body written after the push that adds
+// the claim is read at the next push, never by a re-run — or `--body-file PATH` by hand. The arm stands down with no
+// body known (a push to main; a hand run with no file) and the `ok:` line says how many claims it did not read; a
+// claim with no token in its clause is read and never refused; a MOVED paragraph (deleted and re-added verbatim in the
+// same diff — an archival cut, whose "its body" is its own PR's) is never read. P74's census over the plan's and the
+// archive's 48 claims against their PRs' bodies: 0 refused, #4335 the one claim with a token in its clause — SILENT
+// on its live body, which names `gh api rate_limit` in a promise it never kept ("… the pools that moved are added below
+// when it ends"). That is the arm's named limit: a token's presence is not the claimed content, so a body that names
+// the token while lacking the content reads silent, and that face stays the reviewer's read. The census read the
+// sentence first and refused five claims falsely on tokens outside their clause — hence the clause.
+//
 // --repo <path> (hub Story 235.1.1): the repository to read, so a live reading
 // over a sibling clone needs no `cd` (KB bash-cwd-drift-four-modes); the cwd
 // otherwise, as before.
@@ -181,7 +209,7 @@
 import { execFileSync } from 'node:child_process';
 import process from 'node:process';
 import path from 'node:path';
-import { realpathSync } from 'node:fs';
+import { readFileSync, realpathSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { readEventPayload, resolveRange } from './lib/ci-forge.mjs';
 
@@ -211,6 +239,8 @@ export const FIX_DATE =
 // (the merge word's clause named nothing — hub Story 241.1.2, seat 5's face).
 export const FIX_FALLBACK =
   "fix: the merge word's clause names no PR; if it is another PR's merge, name that PR in the same clause (`hub #4224 merged …`).";
+export const FIX_BODY =
+  "fix: put the claimed text in the PR body before the push that adds the claim — the arm reads the body the push's event carries, and a re-run reads the same event — or drop the claim from the tick (KB sprint-proposal-standard § Roles; hub Story 244.1.7).";
 export const FIX_THIS_PR =
   'fix: name the PR\'s number and pre-tick head in a second commit once the PR is open — "this PR" and the branch alone leave the number in the squash subject only (KB sprint-proposal-standard § Roles; register class tick-names-this-pr-without-its-number-and-head).';
 // The tick's leading date: `**Completed:** 2026-10-18 —`, or the dated-label
@@ -291,6 +321,109 @@ export function removedCompletedTexts(diffText) {
   return out;
 }
 
+// --- THE BODY ARM (hub Story 244.1.7) ---
+// A tick paragraph: a line opening with the `**Completed…:**` or `**Outcome:**` label, through the lines that
+// continue it (a plan or archive hard-wraps its ticks) — up to a blank line, a heading, another bold label, a list
+// item or a table row. `lines` is [{ text, line }]; each paragraph is { line, label, text } (its lines joined by a
+// space, each trimmed).
+export const TICK_LABEL_RE = /^\*\*(Completed|Outcome)\b[^*]*:\*\*/;
+const PARAGRAPH_STOP_RE = /^(?:#{1,6} |\*\*[^*]+:\*\*|[-*] |\| )/;
+export function tickParagraphs(lines) {
+  const out = [];
+  let cur = null;
+  for (const l of lines) {
+    const m = TICK_LABEL_RE.exec(l.text);
+    if (m) {
+      if (cur) out.push(cur);
+      cur = { line: l.line, label: m[1], text: l.text.trim() };
+      continue;
+    }
+    if (cur && l.text.trim() !== '' && !PARAGRAPH_STOP_RE.test(l.text)) {
+      cur.text += ` ${l.text.trim()}`;
+      continue;
+    }
+    if (cur) out.push(cur);
+    cur = null;
+  }
+  if (cur) out.push(cur);
+  return out;
+}
+
+// The diff's runs of consecutive ADDED (`+`) or DELETED (`-`) lines inside the two plan files, each run's tick
+// paragraphs with their file and new-file line. A context line, a hunk or file header ends a run.
+function diffTickParagraphs(diffText, sign) {
+  const out = [];
+  let file = null;
+  let inPlan = false;
+  let inHeader = false;
+  let line = 0;
+  let run = [];
+  const flush = () => { if (run.length) out.push(...tickParagraphs(run).map((p) => ({ file, ...p }))); run = []; };
+  for (const raw of String(diffText).split('\n')) {
+    if (raw.startsWith('diff --git ')) { flush(); file = null; inPlan = false; inHeader = true; continue; }
+    if (inHeader && (raw.startsWith('--- ') || raw.startsWith('+++ '))) {
+      const named = raw.slice(4).trim().replace(/^[ab]\//, '');
+      if (raw.startsWith(sign === '+' ? '+++ ' : '--- ')) { file = named === '/dev/null' ? null : named; inPlan = file != null && PLAN_FILES.includes(file); }
+      continue;
+    }
+    const hunk = /^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/.exec(raw);
+    if (hunk) { flush(); inHeader = false; line = Number(hunk[1]); continue; }
+    if (inHeader || raw.startsWith('\\')) continue;
+    if (raw.startsWith(sign)) { if (inPlan) run.push({ text: raw.slice(1), line }); if (sign === '+') line += 1; continue; }
+    flush();
+    if (!raw.startsWith('-')) line += 1;
+  }
+  flush();
+  return out;
+}
+
+export const addedTickParagraphs = (diffText) => diffTickParagraphs(diffText, '+');
+// The deleted tick paragraphs' texts — a move's other half (an epic close's archival cut), as removedCompletedTexts
+// is for the merge face: an added paragraph whose text equals a deleted one is never read by the body arm (its "its
+// body" is its own PR's).
+export const removedTickParagraphTexts = (diffText) => new Set(diffTickParagraphs(diffText, '-').map((p) => p.text));
+
+// A body claim in a tick paragraph: "in its body", "in the PR body" or "the PR body carries", with its TOKENS — the
+// backticked spans and the double-quoted phrases (a quote holding the claim itself aside) in the claim's CLAUSE: from
+// the last clause delimiter before it to the first after it (CLAUSE_DELIM_RE, the subject rule's — a sentence end, `; `,
+// `: `, a bracket, `, `, an em dash). P74's census at this leg read the sentence first: of the archive's 14 claims with a
+// token, five refused falsely on a token outside the claim's clause (a branch named in a parenthetical, a check's
+// quoted reason, an elided quote); the clause reads each of those as a claim with no token.
+const BODY_CLAIM_RE = /\bin its body\b|\bin the PR body\b|\bthe PR body carries\b/gi;
+const BODY_CLAIM_PHRASE_RE = /\bin its body\b|\bin the PR body\b|\bthe PR body carries\b/i;
+export function bodyClaims(text) {
+  const s = String(text);
+  const out = [];
+  for (const m of s.matchAll(BODY_CLAIM_RE)) {
+    let start = 0;
+    for (const d of s.slice(0, m.index).matchAll(CLAUSE_DELIM_RE)) start = d.index + d[0].length;
+    const after = new RegExp(CLAUSE_DELIM_RE.source).exec(s.slice(m.index + m[0].length));
+    const end = after ? m.index + m[0].length + after.index : s.length;
+    const clause = s.slice(start, end);
+    const tokens = [];
+    for (const t of clause.matchAll(/`([^`]+)`/g)) tokens.push(t[1]);
+    for (const q of clause.matchAll(/"([^"]+)"|“([^”]+)”/g)) {
+      const inner = q[1] ?? q[2];
+      if (!BODY_CLAIM_PHRASE_RE.test(inner)) tokens.push(inner);
+    }
+    out.push({ phrase: m[0], tokens });
+  }
+  return out;
+}
+
+// The body arm's refusals: each claim with a token the body does not carry, { file, line, label, text, phrase,
+// tokens, missing }. A claim with no token is a named limit, never refused.
+export function judgeBody(paragraphs, body) {
+  const refusals = [];
+  for (const p of paragraphs) {
+    for (const c of bodyClaims(p.text)) {
+      const missing = c.tokens.filter((t) => !String(body).includes(t));
+      if (c.tokens.length && missing.length) refusals.push({ ...p, kind: 'body-claim', phrase: c.phrase, tokens: c.tokens, missing });
+    }
+  }
+  return refusals;
+}
+
 // Bracket depth before each index over `()` and `[]` (the closing depth at
 // s.length); null when the line's brackets do not balance — THE VISIBLE-REFERENCE
 // RULE then stands down and the fallback reads plain distance (hub Story 235.1.1).
@@ -323,6 +456,23 @@ function visibleFrom(depths, refAt, verbAt) {
   return true;
 }
 
+// The bracket group (`(…)` or `[…]`) that opens at `from` after nothing but spaces: { open, close } (close is the
+// matching bracket's index, or the line's end when it never closes), or null.
+function groupAfter(s, from) {
+  const lead = /^ *[([]/.exec(s.slice(from));
+  if (!lead) return null;
+  const open = from + lead[0].length - 1;
+  let depth = 0;
+  for (let i = open; i < s.length; i += 1) {
+    if (s[i] === '(' || s[i] === '[') depth += 1;
+    else if (s[i] === ')' || s[i] === ']') {
+      depth -= 1;
+      if (depth === 0) return { open, close: i };
+    }
+  }
+  return { open, close: s.length };
+}
+
 // The claim on one line: the first merge verb that is about THIS PR — { verb, ref, at,
 // via } — or null. THE SUBJECT RULE (hub Story 234.1.3) reads the verb's clause first: a
 // clause naming another unit is about that unit; one naming this PR (`#<n>` or "this
@@ -346,6 +496,15 @@ export function claimsOwnMerge(text, pr) {
     const inClause = (at) => at >= start && at < m.index;
     if (refs.some((r) => !r.own && inClause(r.at)) || others.some(inClause)) continue;
     if (refs.some((r) => r.own && inClause(r.at))) return { verb: m[0], ref: own, at: m.index, via: 'clause' };
+    // THE BRACKET-SUBJECT RULE (hub Story 244.1.7): a bracket group opening right after the verb, nothing but
+    // spaces between, names what the verb is about — another PR's `#<n>` there is the verb's subject, this PR's is a
+    // claim; a group naming no PR leaves the fallback below as it was.
+    const group = groupAfter(s, m.index + m[0].length);
+    if (group) {
+      const inGroup = (at) => at > group.open && at < group.close;
+      if (refs.some((r) => r.own && inGroup(r.at))) return { verb: m[0], ref: own, at: m.index, via: 'clause' };
+      if (refs.some((r) => !r.own && inGroup(r.at))) continue;
+    }
     let nearest = null;
     for (const r of refs) {
       if (depths && !visibleFrom(depths, r.at, m.index)) continue;
@@ -386,6 +545,11 @@ export function judge(added, pr, openDay = null, removedTexts = new Set(), { dra
 
 export function formatRefusal(r, pr) {
   const text = r.text.length > 240 ? `${r.text.slice(0, 240)}…` : r.text;
+  if (r.kind === 'body-claim') {
+    const where = /its/i.test(r.phrase) ? 'in its body' : 'in the PR body';
+    const one = r.missing.length === 1;
+    return `refused: ${r.file}:${r.line} — an added **${r.label}:** paragraph says ${r.missing.map((t) => `\`${t}\``).join(', ')} ${one ? 'is' : 'are'} ${where}, and this PR's body does not carry ${one ? 'it' : 'them'}: ${text}`;
+  }
   if (r.kind === 'manifest-claim') {
     return `refused: ${r.file}:${r.line} — an added reviewedFor entry names #${pr} and says how it merged ("${r.verb}"): ${text}`;
   }
@@ -400,10 +564,12 @@ export function formatRefusal(r, pr) {
 
 // --pr / --opened / --ready | --draft / --repo / --base / --head by hand; the rest from the event.
 export function parseArgs(argv) {
-  const out = { pr: null, opened: null, base: null, head: null, ready: null, repo: null };
+  const out = { pr: null, opened: null, base: null, head: null, ready: null, repo: null, bodyFile: null };
   for (let i = 0; i < argv.length; i += 1) {
     const a = argv[i];
     if (a === '--pr') out.pr = argv[++i] ?? null;
+    else if (a === '--body-file') out.bodyFile = argv[++i] ?? null;
+    else if (a.startsWith('--body-file=')) out.bodyFile = a.slice(12);
     else if (a === '--opened') out.opened = argv[++i] ?? null;
     else if (a === '--base') out.base = argv[++i] ?? null;
     else if (a === '--head') out.head = argv[++i] ?? null;
@@ -437,6 +603,16 @@ export function draftFrom(args, payload) {
   if (args.ready === false) return true;
   const d = payload?.pull_request?.draft;
   return typeof d === 'boolean' ? d : null;
+}
+
+// THE BODY ARM's body (hub Story 244.1.7): --body-file by hand, else the event's pull_request.body — the body as
+// that event carried it (`null` there is an empty body); null when neither is known (a push to main, a hand run with
+// no file), and the arm stands down. A file that cannot be read throws (the caller's exit 2).
+export function bodyFrom(args, payload, readFile = (f) => readFileSync(f, 'utf8')) {
+  if (args.bodyFile) return readFile(args.bodyFile);
+  const pr = payload?.pull_request;
+  if (pr && typeof pr === 'object' && 'body' in pr) return pr.body ?? '';
+  return null;
 }
 
 // Every content-bearing git exec names its maxBuffer AT THE CALL SITE — the Story
@@ -550,12 +726,25 @@ export function main({ argv = process.argv.slice(2), env = process.env, cwd = pr
   const entries = parsed.flatMap((p) => p.entries);
   const openDay = openDayFrom(args, payload);
   const verdict = judge(addedCompletedLines(diff), pr, openDay, removedCompletedTexts(diff), { draft: draftFrom(args, payload), entries });
-  if (verdict.refusals.length > 0) {
-    for (const r of verdict.refusals) log(formatRefusal(r, pr));
-    if (verdict.refusals.some((r) => r.kind === 'merge-claim' || r.kind === 'manifest-claim')) log(FIX);
-    if (verdict.refusals.some((r) => r.via === 'fallback')) log(FIX_FALLBACK);
-    if (verdict.refusals.some((r) => r.kind === 'date')) log(FIX_DATE);
-    if (verdict.refusals.some((r) => r.kind === 'this-pr')) log(FIX_THIS_PR);
+  // THE BODY ARM (hub Story 244.1.7): the added tick paragraphs that are not moves, against the PR body.
+  let body;
+  try {
+    body = bodyFrom(args, payload);
+  } catch (e) {
+    error(`tick-merge-claim: --body-file ${args.bodyFile} cannot be read — ${e?.code || e?.message || e}`);
+    return 2;
+  }
+  const moves = removedTickParagraphTexts(diff);
+  const paragraphs = addedTickParagraphs(diff).filter((p) => !moves.has(p.text));
+  const bodyClaimCount = paragraphs.reduce((n, p) => n + bodyClaims(p.text).length, 0);
+  const refusals = [...verdict.refusals, ...(body == null ? [] : judgeBody(paragraphs, body))];
+  if (refusals.length > 0) {
+    for (const r of refusals) log(formatRefusal(r, pr));
+    if (refusals.some((r) => r.kind === 'merge-claim' || r.kind === 'manifest-claim')) log(FIX);
+    if (refusals.some((r) => r.via === 'fallback')) log(FIX_FALLBACK);
+    if (refusals.some((r) => r.kind === 'date')) log(FIX_DATE);
+    if (refusals.some((r) => r.kind === 'this-pr')) log(FIX_THIS_PR);
+    if (refusals.some((r) => r.kind === 'body-claim')) log(FIX_BODY);
     return 1;
   }
   const dateFace = openDay ? `or predates its open day (${openDay})` : '(open day unknown — the date face is not read; pass --opened <ISO-8601>)';
@@ -563,7 +752,11 @@ export function main({ argv = process.argv.slice(2), env = process.env, cwd = pr
   const movedNote = verdict.moved > 0 ? ` (${verdict.moved} moved — deleted and re-added verbatim in the same diff, an archival cut; the date face not read on them)` : '';
   // With no manifest touched the line is byte-identical to the pre-235 shape; a touched manifest names the read, count 0 included.
   const manifestNote = manifests.length > 0 ? ` and ${verdict.entriesRead} added reviewedFor entr${verdict.entriesRead === 1 ? 'y' : 'ies'} read over ${manifests.length} manifest(s) in docs/close/` : '';
-  log(`ok: tick-merge-claim: ${verdict.read} added **Completed:** line(s) read${movedNote}${manifestNote}, none claims #${pr}'s merge ${dateFace} (${range.base}...${range.head} over ${PLAN_FILES.join(', ')})`);
+  // With no body claim the line is byte-identical to the pre-244 shape.
+  const bodyNote = bodyClaimCount === 0 ? ''
+    : body == null ? ` (${bodyClaimCount} body claim(s) not read — no PR body known: a push, or no --body-file)`
+      : ` and ${bodyClaimCount} body claim(s) read against the PR body`;
+  log(`ok: tick-merge-claim: ${verdict.read} added **Completed:** line(s) read${movedNote}${manifestNote}${bodyNote}, none claims #${pr}'s merge ${dateFace} (${range.base}...${range.head} over ${PLAN_FILES.join(', ')})`);
   return 0;
 }
 

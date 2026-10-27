@@ -1,7 +1,7 @@
 {
   "_readme": "Sync provenance sidecar — written by the hub's scripts/sync-session-wrap.mjs on every sync (lawcuments.com Story 1.9.4; S4 resolution (a), 2026-07-26). Each entry is the sha256 of the LF-normalized canonical this repo received, plus the hub commit the sync ran from: to verify a copy from inside this repo, LF-normalize it, sha256 it, and compare. NOT itself a canonical — never part of the --check byte-identity surface. Do not hand-edit; the next sync rewrites it.",
-  "hubCommit": "295d68a3b6d0ba3120ed712a5df3bc9f3d45cdf6",
-  "syncedAt": "2026-10-27T13:13:26.319Z",
+  "hubCommit": "d20c6f45daa8a301687bf4a4cffaa171741cc38a",
+  "syncedAt": "2026-10-27T20:20:04.217Z",
   "files": {
     "scripts/wrap-session.mjs": "sha256:b906ab4f086358fa2bee2f3aa9c2b52542e9f567e9673aacbe7e0eca6f4b1050",
     "scripts/lib/hub-write-worktree.mjs": "sha256:8adff245cdffff1f10b0be41bd7468ac21d14251d658c6ecd09ae0a9ad13f779",
@@ -11,9 +11,9 @@
     "scripts/block-commit-on-main.mjs": "sha256:ddd9a75e05d8363cfe780ef319ab6cb3672a873eefd9eea61e706f47eb459e4b",
     "scripts/block-secrets.mjs": "sha256:0e23f661289c3c658aef3e8626fa768de7047e1035ed0b5e888a67b74e555a0d",
     "scripts/check-template-antipatterns.mjs": "sha256:2ddebe50b8e66f86e80baa5e550ed245f329c56d692b53e019b24213812bc7d9",
-    "scripts/close-lint.mjs": "sha256:22bb81461c876aba0b2ceb72cf6c79cfda666d8f66a30396df0581b1ff020632",
+    "scripts/close-lint.mjs": "sha256:d5de704adfbdcad13d48789f758731beba55b61023d4016eb06b70c89af9192d",
     "scripts/ci-docs-only.mjs": "sha256:2173a913919e2f805fe823b97aaff7cbc2f6c6d111667d7564feed4f05fa8b1e",
-    "scripts/check-tick-merge-claim.mjs": "sha256:142a97ee87847c87f704bde018abe500ccd0298c8f60c82b3b8b63f1d038432f",
+    "scripts/check-tick-merge-claim.mjs": "sha256:4b378d48dd5576cbbb60344ab78b179ca09573892a352367361e2b2cd2ffe639",
     "scripts/warn-piped-checker.mjs": "sha256:ee1bd67a6520273b22e1b1dd62773be38a4155c041f72cfc5571254197d562fd",
     "scripts/warn-cwd-drift.mjs": "sha256:325ad73d53e1ff6b4049ffaeb385afc744c096a62a4ddb2e7b066343c92470ea",
     "scripts/warn-zsh-word-split.mjs": "sha256:365e54b94f6fe0fe1a611fb03bd986b75ee5c05838621fb6c427bb85e5deb532",
