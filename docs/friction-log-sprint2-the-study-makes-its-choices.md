@@ -60,3 +60,40 @@ Proposed by the repo-rooted session "tigerfid Sprint 2 Proposal" (session
     siblings' `.gitattributes`.
   - The piped-checker guard warned once on a `$?` read after a grep, which
     was not used as proof.
+
+## Leg 1 — Story 2.1.9 (2026-10-27)
+
+Run by the repo-rooted session "tigerfid Sprint 2 Executor" (session
+`014c145a-45db-4c1d-b7ff-a2e9bcbcb0c4`), fresh by `/clear`. Its
+background-task path id, `c59c545c-e735-4344-b0b8-697d9f897dca`, is the
+process the Sprint 2 proposal used last. Not elevated. Before the leg, the
+same session landed the line-ending pin as its own PR (#28), on Air Traffic
+Control's orders.
+
+**Context checkpoint:** a plan of six tasks (the three files, the greps,
+the tick with its manifest line and this section, the checks and the merge),
+under D9's tripwire of eight. No compaction, no forced re-read, no
+lost-context defect.
+
+- **F5 — F4's cause, fixed before the leg.** #28 adds a root
+  `.gitattributes` (LF stored and checked out). Every blob was LF already, so
+  it changed no stored byte. This clone's 52 CRLF working files were repaired
+  by the delete-and-`checkout-index -f -u` recipe, never a renormalize. Over
+  the repaired working tree, the sprint parser now reads the block,
+  `found: true`, four legs, exit 0. Cost: one small PR before the leg.
+- **F6 — An order's literal scope would have rebuilt a known trap.** The
+  orders asked that "the originals' tree" be marked `-text`. Read literally,
+  that names the tag's 2018 folders, `software/` among them, and the
+  rebuild's starting layout has a `software/` of its own. A rule on those
+  names would have caught the rebuild's files, the same way the retired
+  sparse view hid them. The pin marks only the 2018 files still on `main`
+  (`license` and `_assets/`). It was measured that a `.gitattributes` on
+  `main` cannot reach the tag: `git archive` of the tag ignored it. #28's body
+  records the reading. Cost: none landed wrong.
+- **F7 — An edit missed on a re-wrapped line.** One edit's search text began
+  mid-line where the file wraps differently, so it matched nothing. Re-cut
+  from the line's start, it applied. Cost: one retry.
+- **Guard events, each a read and not a proof.** The piped-checker guard
+  warned on a `git pull` piped into `tail` and on a re-verify read that piped
+  `npm test` into `grep` after a `;`-chained `close-lint`. Each state was
+  re-read unpiped, and every commit ran behind `close-lint && npm test &&`.
