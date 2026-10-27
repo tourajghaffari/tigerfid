@@ -30,9 +30,10 @@ A third-party file may be copied into this repo only when three things hold:
 - a marker sits at the copy site;
 - `THIRD_PARTY_NOTICES.md` carries its entry.
 
-The gate enforces both halves (plan Story 1.1.4, tigerian's form). **Until
-Story 1.1.4 lands, nothing is copied at all:** the lane comes before the
-first copy. A source whose terms are not on the allowlist, such as a vendor
+The gate enforces both halves (`node scripts/check-licenses.mjs`, in CI's
+`test` job; tigerian's form). The lane landed with plan Story 1.1.4
+(2026-10-27) before the first copy, and its format and allowlist live in
+`THIRD_PARTY_NOTICES.md`. A source whose terms are not on the allowlist, such as a vendor
 reference design, goes to the plan's ASK-OMID register one by one and is
 never copied silently. New work stays Apache-2.0.
 

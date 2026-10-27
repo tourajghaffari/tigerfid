@@ -108,3 +108,12 @@ jobs:
       # builds a throwaway repo and folder, so CI never needs the corpus.
       - name: Reference-check tests
         run: node --test scripts/reference-check.test.mjs
+      # The copy-with-trail gate (plan Story 1.1.4, spec C5): every
+      # third-party copy carries its marker and its entry in the notices file,
+      # both ways, its licence on the allowlist. It landed before the first
+      # copy, by design. (This comment never spells out the notices file's
+      # name: the gate reads this file, and a bare mention is a finding.)
+      - name: Licence gate
+        run: node scripts/check-licenses.mjs
+      - name: Licence gate tests
+        run: node --test scripts/check-licenses.test.mjs

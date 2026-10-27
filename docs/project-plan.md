@@ -258,7 +258,26 @@ folder is recreated and verified on the first machine, the verify run
 quoted in the tick; the capture's file list with sha256s is in the tick,
 dated before the site's first change.
 
-#### Story 1.1.4: The licence lane — before any copy
+#### Story 1.1.4: The licence lane — before any copy — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #8 (branch `story/1.1.4-licence-lane`); the hub companion rides hub inbox #4410.
+**Outcome:** the lane landed before any copy, with zero entries.
+- **`THIRD_PARTY_NOTICES.md`** holds:
+  - the two halves of the trail: a marker at the copy site, or in a `<file>.license` text file beside a file that takes no comments, and an entry under `## Entries`;
+  - the five-line entry shape: `Source`, `Pin` (a commit URL with a full 40-hex revision, or `sha256:` of the file as fetched, for hardware sources with no commit), `License`, `Taken`, `Landed`;
+  - the allowlist: tigerian's eight, plus `CERN-OHL-P-2.0` and `CC-BY-4.0`;
+  - the KiCad standard libraries' `CC-BY-SA-4.0` and their design exception, recorded once, quoted from kicad.org, read 2026-10-27.
+- **`scripts/check-licenses.mjs`** checks:
+  - both directions, and the marker-to-entry licence match;
+  - the allowlist, the entry shape and the Pin;
+  - that no entry's Source is a corpus row marked `study-only`, or the original, which needs no entry;
+  - with entries read only under `## Entries`, so a standing note is never one.
+
+  It runs in CI's `test` job, as do its 8 tests; `npm test` runs it too, and `docs/ci-contract.md` names both commands. On the branch: `check-licenses: ok — 0 entries, 0 marker(s), 10 files scanned`.
+- **The manifest:** `build-inputs-name-notices`'s born regex, `[[^]]*`, could never match the entry's real shape, so it is corrected (both measured). `licence-gate-tested` is added.
+- **The hub companion** (`tigerfid: ['*_NOTICES.md']` in `REPO_BUILD_INPUTS`) is hub-owned: it is filed as hub inbox #4410 and reaches this repo by the sync round.
+  - Until then, `build-inputs-name-notices` reads RED, and a notices-only PR here still skips `test`.
+  - `docs/ci-contract.md`'s "no markdown build inputs" line is corrected in this PR.
 
 **Story:** As the repo's owner, I want every third-party file copied in to
 carry its trail and every licence checked in CI, so that the rebuild stays

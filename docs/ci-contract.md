@@ -34,6 +34,8 @@ one of the two required checks):
 ```
 node scripts/close-lint.mjs
 node --test scripts/reference-check.test.mjs
+node scripts/check-licenses.mjs
+node --test scripts/check-licenses.test.mjs
 ```
 
 The context NAMES are load-bearing — required checks match by name (hub KB
@@ -81,6 +83,13 @@ the fleet default:
 - **never documentation, fleet-wide** — `docs/project-plan.md`,
   `docs/close/**` (CI's own `close-lint` validates these, so they always buy
   a full run)
-- **no markdown build inputs** (`REPO_BUILD_INPUTS`, assessed 2026-10-26: no
-  build exists; re-assessed if a docs site or a generated guide ever reads
-  markdown)
+- **one markdown build input, the notices file** (`REPO_BUILD_INPUTS`,
+  re-assessed 2026-10-27 by plan Story 1.1.4). The licence gate in `test`
+  reads `THIRD_PARTY_NOTICES.md`, so a notices-only PR must not skip `test`.
+  The entry is `tigerfid: ['*_NOTICES.md']` in the hub's canonical
+  `scripts/ci-docs-only.mjs`, in tigerian's form. It is the story's hub
+  companion and reaches this repo by the fleet's sync round, never by a hand
+  edit here; until the round lands, a notices-only PR here still skips
+  `test`. It was first assessed at adoption (2026-10-26): no build inputs,
+  because no build exists. It is re-assessed again if a docs site or a
+  generated guide ever reads markdown.

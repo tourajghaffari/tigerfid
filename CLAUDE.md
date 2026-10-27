@@ -68,6 +68,16 @@ shared by the two, and nothing here edits the site.
   `--recreate` rebuilds the original tree from the tag.
 - The pins live in `docs/reference-corpus.tsv` and nowhere else.
 
+## The licence lane
+
+- New work is Apache-2.0. A third-party copy is allowed only from an
+  allowlisted licence and only with both halves of its trail: a marker at
+  the copy site and an entry in `THIRD_PARTY_NOTICES.md`, which holds the
+  format and the allowlist.
+- `node scripts/check-licenses.mjs` enforces it in CI's `test` job.
+- A source on other terms goes to the plan's ASK-OMID register, one at a
+  time; it is never copied silently (spec C5).
+
 ## Writing in public
 
 Everything here — plan, specs, notes, close records, commits, PR bodies —
