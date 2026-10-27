@@ -306,7 +306,33 @@ adoption the table carries no tigerfid entry: no markdown build inputs, assessed
   and `allowlist-widened` PASS;
 - the hub's `REPO_BUILD_INPUTS` names `tigerfid` with the notices glob.
 
-#### Story 1.1.5: The second machine — its clone and its reference folder
+#### Story 1.1.5: The second machine — its clone and its reference folder — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #11 (branch `story/1.1.5-second-machine`).
+**Outcome:** the second machine (macOS) holds a verified clone and a verified reference folder. Every line below was read by this story's session from the clone's root, unpiped, unless it names the set-up sitting.
+- **The verify run,** between the clock reads 10:32:33Z and 10:32:35Z on 2026-10-27, exit 0, every pin matched:
+
+  ```
+  ok      tree   activewave-2018  f25ff13f3fb6 — 9477 files at their blob ids, none extra
+  ok      files  activewaveinc/  268 of 268 at their sha256
+  ok      files  chorus/  22 of 22 at their sha256
+  ok      sidecars none
+  ok      readme stub
+  reference-check: ok — 291 rows verified, README the stub
+  ```
+- **The identity (spec D8),** read back at 10:32:51Z: `git config --local user.email` printed `oghaffari@users.noreply.github.com`. It was set before the clone's first commit, which is this PR's.
+- **The pre-commit hook is armed:** `core.hooksPath` is `.githooks`, and `.githooks/pre-commit` is `100755` in the index and executable on disk (#5's fix, read on this machine).
+- **The clone is partial and not sparse.**
+  - The set-up sitting made it with `gh repo clone … --filter=blob:none --no-checkout`; the reflog's first entry is 2026-10-27T00:26:28Z. Spec §6's check passed before the checkout: `fetch` exited 0, and `git show origin/main:` read the plan and CLAUDE.md.
+  - Read here: `remote.origin.promisor` is `true` and `remote.origin.partialclonefilter` is `blob:none`. The history is full, not shallow. `core.sparseCheckout` is `false`, so the sparse view is retired on this machine too (1.1.2's handoff).
+  - `git show` at the tag and at `origin/main` both exit 0, and the tag peels to `f25ff13f3fb672d8ec91f1fadc8894d69f781ed6`. The pack is 758.07 MiB: it holds the 2018 blobs that `--recreate` fetched.
+- **The folder, part by part** (the set-up sitting's record):
+  - `activewave-2018/` came from `--recreate`, 00:46:53Z–00:47:59Z, with 6,062 blobs fetched.
+  - `activewaveinc/` came from the first machine as one tar (sha256 `6425dbcf…`, 268 entries), carried by hand. Two earlier folder copies landed partial (140, then 175 of 268); the tar landed whole. The verify's 268 of 268 is its check.
+  - `chorus/` was already on this machine at its pins.
+
+  The set-up sitting's own verify read 291 of 291 at 09:51:19Z. The run above is the one this tick quotes.
+- **No corpus-dependent review ran here before it.** No study story has begun: Stories 2.1.1 and 2.1.2 (Sprint 1 legs 4–5) are unticked, and `docs/study/` is absent. Origin holds only `main`, and every PR before this one (#1–#10) is merged; none is a study story.
 
 **Story:** As a session on the fleet's second machine, I want tigerfid
 cloned and its reference folder recreated and verified there, so that a

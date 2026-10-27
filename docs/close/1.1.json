@@ -2,7 +2,9 @@
   "epic": "1.1",
   "planRef": "docs/project-plan.md",
   "reviewed": "2026-10-27",
-  "reviewedFor": [],
+  "reviewedFor": [
+    "Story 1.1.5 (PR #11, 2026-10-27): the tick quotes the second machine's verify run (reference-check: ok — 291 rows verified, README the stub; exit 0, read 10:32:33Z) and its git config user.email read-back, oghaffari@users.noreply.github.com, both read on that machine by the story's session; second-machine-clone stays a prose check for the closer, which also adjudicates that no corpus-dependent review ran there before it. No run, expect or prose changed."
+  ],
   "stories": [
     "1.1.1",
     "1.1.2",
