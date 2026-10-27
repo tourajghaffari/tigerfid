@@ -313,7 +313,7 @@ archive in the same PR.
 - contributing-coc-replaced: PASS
 - front-door-links-resolve: PASS
 - sparse-view-retired: PASS
-- readme-read-by-omid: OMID_VERDICT_README
+- readme-read-by-omid: PASS — Omid's verdict, "PASS (Recommended)", given first-hand in this session's terminal between its `date -u` reads of 12:49:43Z and 12:54:24Z, on the closer's evidence:
   - **His read predates the merge.** #7's body, § "Omid's read (D11)", records four answers given first-hand in the Story 1.1.2 session's terminal, between its `date -u` reads of 00:46:07Z and 01:42:38Z. #7 merged at 01:55:07Z (`e8597e58`).
   - **The answers:**
     - the README, "As drafted (Recommended)": the wording in #7, which carries `## Where this is going` and the stance (issues now, pull requests after the study, D10);
@@ -321,7 +321,7 @@ archive in the same PR.
     - the reporting address, "conduct@activewaveinc.com (Recommended)";
     - ASK-OMID A1, "Keep the default (Recommended)".
   - **A1's default held.** The `.msg` file is in the tag's tree (`software/smart-tracker/SmartTracker  SaniFaucet.msg`, blob `66346fa5`, 12,032,512 bytes) and absent from origin/main's 51 paths.
-  - **Outside the rubric:** OMID_ALIAS
+  - **Outside the rubric:** #7's body said the alias `conduct@activewaveinc.com` "must exist and reach Omid before this merges", and no record showed it. Asked at this close, Omid answered "Yes, it works", in the same sitting.
 - reference-repos-doc: PASS
 - reference-corpus-pins: PASS
 - reference-research-log: PASS
@@ -337,7 +337,7 @@ archive in the same PR.
 - allowlist-widened: PASS
 - licence-gate-tested: PASS
 - build-inputs-name-notices: PASS — green since the fleet's round `20261027` (#13) brought the hub companion here.
-- second-machine-clone: OMID_VERDICT_SECOND
+- second-machine-clone: PASS — Omid's verdict, "PASS (Recommended)", in the same sitting, on the closer's evidence:
   - **The tick.** Story 1.1.5's tick (above) quotes the second machine's verify, 10:32:33Z–10:32:35Z on 2026-10-27, exit 0, 291 rows verified with every pin matched. It also quotes the read-back `oghaffari@users.noreply.github.com` at 10:32:51Z.
   - **Re-taken by this closer** on the same machine and clone:
     - the verify, 12:49:00Z–12:49:03Z, exit 0, the same six lines (`reference-check: ok — 291 rows verified, README the stub`);
