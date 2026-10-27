@@ -25,13 +25,13 @@ Between legs 3 and 4, `main` also took #9 (a reference-check fix) and #11
 repo-rooted Windows session "tigerfid Sprint 1 Executor", fresh by `/clear`
 (session `c40e0637-2dc0-4ae7-bea5-428bee160ea7`; the cleared process,
 `c59c545c-e735-4344-b0b8-697d9f897dca`, was leg 4's).
-**Reviewed:** 2026-10-27, by the Sprint 1 reviewer pass (tigerfid #PRNUM).
+**Reviewed:** 2026-10-27, by the Sprint 1 reviewer pass (tigerfid #23).
 The pass was the repo-rooted Windows session "tigerfid Sprint 1 Reviewer",
 fresh by `/clear` (session `f08270bf-1a7d-43fc-8c97-df28f66d8ebc`). The
 cleared process, `c59c545c-e735-4344-b0b8-697d9f897dca`, was leg 4's, and
 leg 5's session ran in it too. The pass ran without elevation and held no
 other role in this sprint. **Verdict: all five legs meet their gates.** It
-made five findings, each fixed in #PRNUM or routed below. This repo keeps no
+made five findings, each fixed in #23 or routed below. This repo keeps no
 sprint friction log, so the record read is the five PR bodies, their ticks,
 the wrap notes and the Epic 1.1 close evidence.
 
@@ -70,14 +70,14 @@ the wrap notes and the Epic 1.1 close evidence.
      and 2.1.2 ticks, the two study documents and #7 assign work to Stories
      2.1.3, 2.1.4, 2.1.5 and 2.1.7, and none of those stories carried it
      (register class `premark-promise-not-written-into-owning-story`).
-     Fixed in #PRNUM, on Air Traffic Control's grant, with one dated Context
+     Fixed in #23, on Air Traffic Control's grant, with one dated Context
      sentence on each of the four stories; no Done-when moved. Among them:
      the original host software's source, which 2.1.2 left unread, is now
      2.1.5's, and the rebuild's top-level layout, which #7 left to "the
      study" and no story named, is now 2.1.7's.
   2. **The `rebuild-spec-approved` tooth could never pass.** Its born run
      line exited 1 with a `SyntaxError` on every input. It is fixed in
-     #PRNUM on the same grant, and the measurement is in
+     #23 on the same grant, and the measurement is in
      `docs/close/2.1.json`'s `reviewedFor` entry. 1.1's born
      `build-inputs-name-notices` pattern, which #8 corrected, has the same
      lost-backslash shape (INFERRED, one mechanism).
@@ -95,7 +95,7 @@ the wrap notes and the Epic 1.1 close evidence.
      What keeps the message closed is `docs/reference-repos.md` reading
      rule 7. Routed with finding 3.
   5. **This line, while PENDING, named only one other copy of the pending
-     review.** Story 1.1.6's Outcome restated it too. #PRNUM refreshes both
+     review.** Story 1.1.6's Outcome restated it too. #23 refreshes both
      copies (KB `epic-close-before-sprint-review` rule 4).
 - **Owner deferrals in the leg bodies,** each traced to its destination:
   - #6's form for the capture's list: the close, PASS by digest;
@@ -434,7 +434,7 @@ matched) and its `git config user.email` read-back ending
 #### Story 1.1.6: Close out Epic 1.1 — ✅ DONE (2026-10-27)
 
 **Completed:** 2026-10-27 — tigerfid #19 (branch `close/epic-1.1`, pre-tick head `050b5d6`; the close PR is the archival PR), by session `ce689038-d1e9-483f-9350-492b8e1ff75f`: a fresh launch (its background-task path id equals the session id; no `/clear` before it), not elevated, role closer, with none of the epic's work.
-**Outcome:** the close evidence below — 19 machine checks PASS, 4 prose checks adjudicated, 2 of them by Omid — and Initiative 1 archived whole, with ASK-OMID A1 relocated beside it and the Sprint 1 block moved to § Executed sprints (its review then pending; reviewed by #PRNUM, 2026-10-27). A dated correction is added to Story 1.1.3's tick, and one CLAUDE.md line the evidence falsified is corrected in this PR.
+**Outcome:** the close evidence below — 19 machine checks PASS, 4 prose checks adjudicated, 2 of them by Omid — and Initiative 1 archived whole, with ASK-OMID A1 relocated beside it and the Sprint 1 block moved to § Executed sprints (its review then pending; reviewed by #23, 2026-10-27). A dated correction is added to Story 1.1.3's tick, and one CLAUDE.md line the evidence falsified is corrected in this PR.
 
 **Story:** As the fresh-session closer, I want Epic 1.1 closed per KB
 `epic-close-protocol`, so that the archive carries the evidence.
@@ -499,7 +499,7 @@ archive in the same PR.
   - **The corpus is adopted on both machines:** Stories 1.1.3 and 1.1.5, and the second machine's re-verify above. The first machine's folder was damaged at 01:56Z and restored to 291 of 291 at 09:50:05Z (its wrap note of 2026-10-27). This close did not re-read the first machine.
   - **The licence lane came before any copy.** The gate landed with #8 (`435d1ce`, merged 02:01:38Z). The 42 files added between the tag and #8 (`git log --diff-filter=A activewave-2018..435d1ce`) are all the fleet's own work: 22 synced canonicals (#3), 14 born-with files (#4), and the corpus docs and tool (#6, "No third-party file is committed"). #5 and #7 added no file. At this close the gate reads `check-licenses: ok — 0 entries, 0 marker(s)`.
   - **Initiative Done-when** ("Epic 1.1 is archived with close evidence"): PASS. This PR archives it. At `90ce1a1` the plan held one epic of Initiative 1, Epic 1.1.
-- **Sprint 1's review had not run at this close.** The runner printed REVIEW SEATING MISSING for Sprint 1. The sprint finished during this close: leg 5 (#16) merged at 12:53:26Z and its EXECUTED stamp (#17) at 12:55:50Z, and the review comes next. The runner's re-run after #16 also printed RELOCATE SPRINT BLOCK(S) ("its legs span several epics, every leg ticked; this close owns the relocation (Story 89.1.1)"). So this PR moves the block, stamped by #17, whole to § Executed sprints, with its review PENDING (on Air Traffic Control's grant, the block being the executor's region). The triage below is a floor the Sprint 1 reviewer extends, never narrows. **Refreshed by the Sprint 1 review (#PRNUM, 2026-10-27):** all five legs PASS, with five findings fixed in that PR or routed. The triage below stands, extended: its item 3 gains a second face, the 2.1 manifest's `rebuild-spec-approved` tooth. The record is § Executed sprints › Sprint 1's `**Reviewed:**` line.
+- **Sprint 1's review had not run at this close.** The runner printed REVIEW SEATING MISSING for Sprint 1. The sprint finished during this close: leg 5 (#16) merged at 12:53:26Z and its EXECUTED stamp (#17) at 12:55:50Z, and the review comes next. The runner's re-run after #16 also printed RELOCATE SPRINT BLOCK(S) ("its legs span several epics, every leg ticked; this close owns the relocation (Story 89.1.1)"). So this PR moves the block, stamped by #17, whole to § Executed sprints, with its review PENDING (on Air Traffic Control's grant, the block being the executor's region). The triage below is a floor the Sprint 1 reviewer extends, never narrows. **Refreshed by the Sprint 1 review (#23, 2026-10-27):** all five legs PASS, with five findings fixed in that PR or routed. The triage below stands, extended: its item 3 gains a second face, the 2.1 manifest's `rebuild-spec-approved` tooth. The record is § Executed sprints › Sprint 1's `**Reviewed:**` line.
 - **Recurrence-prevention triage.** The hub register, censused by sitting at `d73d483d`, holds 12 seats naming tigerfid. Two are Story 1.1.5's own (`ugrep-bounded-repetition-exceeds-complexity-limit`, `zsh-pipestatus-lowercase`, both caught by their guards). None comes from legs 1–3 (#6, #7, #8). Those legs' faces and their decisions:
   1. **The pre-commit hook was stored `100644` by the round** (a confirmed bug-class), so macOS's git skipped it. Decision: a machine check, hub Story 244.1.16 ✅ DONE (2026-10-27): a round stages the declared mode, and the sync check reads a lost one. tigerfid's own fix is #5. The hub's filing judged it one face, with no register class.
   2. **The pre-commit secret scan failed closed (`ENOBUFS`) on #7's deletion** (a confirmed bug-class: it buffered lines it never reads). Decision: a machine fix, hub Story 244.1.20, filed from hub inbox #4409. The hook was never skipped.
