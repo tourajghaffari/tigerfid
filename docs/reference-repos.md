@@ -73,8 +73,10 @@ Each source class has its own rule:
    File Explorer.
 7. **`software/smart-tracker/SmartTracker  SaniFaucet.msg`** (an Outlook
    message, 12 MB) is in the folder like every other file of the original.
-   It may hold correspondence, and the plan's ASK-OMID A1 concerns it: no
-   session opens it unless Omid rules that it is read.
+   It may hold correspondence, and no session opens it. Omid answered the
+   plan's ASK-OMID A1 "Keep the default" at #7 (the row is in the plan's
+   archive): the file left the current tree unread and stays at the tag. A
+   session that needs it files a new ASK-OMID row first.
 
 ## Licence audit
 
