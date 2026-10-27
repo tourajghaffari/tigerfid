@@ -397,7 +397,18 @@ deliverable is still to be written).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
 and its prose checks are adjudicated.
 
-#### Story 2.1.1: The requirements, from the three scenarios, with numbers
+#### Story 2.1.1: The requirements, from the three scenarios, with numbers — ✅ DONE (2026-10-27)
+
+**Completed:** 2026-10-27 — tigerfid #14 (branch `story-2.1.1-requirements`).
+**Outcome:** `docs/study/requirements.md` carries 27 numbers. They are the five measures for each of the three scenarios, plus each scenario's size as an assumption, and each has its reasoning and Omid's answer recorded first-hand beside it.
+- **The answers.** The list went out after the session terminal's `date -u` read of 11:57:23Z, and his one-message answer came before the read of 12:05:05Z. He accepted 24 numbers as recommended and set three himself:
+  - [3]: 1,000 tags/s per reader;
+  - [12]: 100 tags/s in the nursery;
+  - [13]: a nursery move shown within 5 s.
+- **His question on [3]** ("Can we do that?") is answered in the document by the arithmetic, marked INFERRED. It needs a fast link with short replies and reader-assigned slots, or several channels per reader; the original's random delay cannot do it.
+- **For Stories 2.1.3–2.1.4:** every input to the arithmetic is marked ASSUMED or INFERRED, for those stories to replace with real parts' figures.
+- **The ground rules hold.** No datasheet figure is copied (spec Appendix B). The nursery is framed as finding tags and reading a sensor; every "medical" or "vital" mention is a negation (C8).
+- **Story 2.1.3 answers first** the hardest pairing: [3]'s 1,000 replies a second against [2]'s 30 m with the tag worn.
 
 **Story:** As the study, I want each scenario turned into measurable
 requirements, so that every design option is judged against numbers, not
