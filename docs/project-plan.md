@@ -920,7 +920,17 @@ figure it moves; and the PR body quotes the story's greps with each hit's
 disposition (manifest tooth `fcc-ids-both-named` and prose check
 `studies-review-fixes`).
 
-#### Story 2.1.6: The tiered cost of milestone 1
+#### Story 2.1.6: The tiered cost of milestone 1 — ✅ DONE (2026-10-28)
+
+**Completed:** 2026-10-28 — tigerfid #48 (branch `story-2.1.6-tiered-cost`, pre-tick head `c799d0aa`), with the research log's Story 2.1.6 entry (`docs/reference-research.md` § 4).
+**Outcome:** `docs/study/tiered-cost.md` prices milestone 1 per device, per build route and per tool tier, with D9's bench and a total per tier. Every price was read on 2026-10-28 from a seller's public page and is dated; shipping and tax are left out.
+- **The totals, each tier with its route:** starter with fully assembled boards, 538.83; advanced with partly assembled boards, 1,343.04; pro by hand, 1,916.23. A route-by-tier matrix gives the other pairings.
+- **Five prices are not read,** by Omid's word first-hand in this leg's terminal, between its `date -u` reads of 14:42:21Z and 15:59:59Z: "Write all as not read (Recommended)". They are the two W5017 whips, JLCPCB's boards, the module's sourcing at JLCPCB, the pro tier's iron and the tag enclosures. Each total names what it lacks.
+- **The devices' parts:** the Reader 39.87 and the Field Generator 28.99, each without its antenna; each tag core 13.31, without its enclosure. All devices come to 117.64 by hand, or 129.16 assembled, since an assembled order fits the sensor to every core.
+- **Representative parts are marked:** the connectors, the USB bridge, the regulator, the relays and their driver, the passives, the cells and holders, the enclosures and the supplies.
+- **Both cells are priced:** a CR2032 and its holder at 1.38 a tag, a CR2450 and its holder at 0.95.
+- **The bench:** the tinySA (100 kHz to 960 MHz), or the Ultra Plus for pro, and the development board. The RTL-SDR V4L is the cheaper receiver, outside the totals until its range is read. The barcode scanner is optional and not read.
+- **Recommended:** the starter tier with fully assembled boards. The EU build's differences are named, not priced. The three studies' hand-off lines now point to the document.
 
 **Story:** As a beginner, I want the first build priced in starter, advanced
 and pro tiers, so that I can choose what to spend before I start.
