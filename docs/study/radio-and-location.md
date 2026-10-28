@@ -643,7 +643,8 @@ their own:**
 - **Story 2.1.5** takes the event schema the Reader and the Field
   Generators report: tag, reader or Field Generator, signal strength, time
   and payload.
-- **Story 2.1.6** prices the module's assembled-board routes.
+- **Story 2.1.6** prices the module's assembled-board routes
+  (`tiered-cost.md` § The build routes, 2026-10-28).
 - **Story 2.1.7** decides, with this document's choice as its default. Its
   sitting reads both FCC grant pages, ZAT-1312PSIP-2 and -3, in a browser
   (§ The radio chosen).

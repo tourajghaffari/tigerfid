@@ -157,3 +157,63 @@ defect.
   runs even on a red, and the harness prints the red and the new state in
   the same result." Re-issued with the push inside the `&&` chain, it
   committed and pushed on a green gate.
+
+## Leg 2 — Story 2.1.6 (2026-10-28)
+
+Executed by the hub-rooted Windows session "tigerfid Sprint 3 leg 2"
+(session `293fce01-04ef-47ce-b16f-5288623c6019`), on Air Traffic Control's
+orders 28, sent 14:27:28Z. **The fresh-session read:** fresh by `/clear`.
+The background-task path id is `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`, not
+the session id. That process hosted the Sprint 2 review, the Sprint 3
+proposal and then the session "tigerfid Sprint 3 leg 1" (`0082985c-…`),
+the leg-1 process the orders name as the one this `/clear` cleared. Not
+elevated: a Windows administrator-role read, `False`, at 16:08:29Z.
+
+**Context checkpoint:** the plan was eight tasks, at the block's tripwire
+and not above it. No compaction, no forced re-read, no lost-context defect.
+
+- **F12 — The D7 answer held the leg for 78 minutes.** The one message went
+  to Omid at the terminal's 14:42:21Z read, and his answer came before the
+  15:59:59Z read. The question is a blocking prompt, so no work ran while it
+  waited. Cost: the wait. Suggested fix: the proposal lists the sellers
+  already known to refuse a plain request (Digi-Key, Mouser, Arrow, Newark,
+  Hakko USA, Jameco), so the D7 message can go in the leg's first minutes.
+- **F13 — Bot checks at eight sellers.** Digi-Key, Mouser, Arrow, Newark,
+  Hakko USA, Jameco, Chip Quik and JBC answered a plain request with HTTP
+  403, most with a "Just a moment..." or "Access Denied" page. Five of their
+  prices are written not read, by Omid's word, and three were not needed.
+  No request was disguised (the research log's rule since Sprint 2's leg 2).
+- **F14 — LCSC answered a quick run with a challenge page.** Five product
+  pages in under a second each came back as "Challenge Validation" (HTTP
+  200, 1,904 bytes). Read again 15 s apart, all of them answered. Cost: one
+  re-run. Suggested fix: a price read spaces its requests to one seller from
+  the start.
+- **F15 — The receiver changed with the page.** RTL-SDR Blog's store page
+  no longer lists the plain V4 dongle, and its V4L listing prints no upper
+  tuning range. The bench's receiver is the tinySA, whose page prints
+  100 kHz to 960 MHz. The RTL-SDR stays as the cheaper route, outside the
+  totals, until its range is read.
+- **F16 — Search summaries carry prices; none was used.** The web searches
+  that found the sellers' pages also summarised prices, some stale or from
+  resellers. Each price in the study was read from the seller's own page.
+  Suggested fix: the research log's rule says so for every price read.
+
+**Guard events:**
+- `cwd-drift` seat: the calls that opened with a `cd` into this repo drew
+  "cwd-drift guard (warn, not a block)", and the calls after them drew its
+  second arm. Every git command carried `git -C` with the literal path; none
+  ran in the wrong repository.
+- The staleness-sweep hook, class id not known: each edit of a swept file
+  drew "This file was verified by Sprint 3's staleness sweep (swept
+  2026-10-28). Your edit may decay its pre-verified facts — re-verify or
+  annotate the block (KB sprint-proposal-standard step 2)." The edits were
+  the leg's own: the new study, the item-8 pointer lines and the research
+  log.
+- The marker hook, class id not known: the first write drew "Widen the
+  marker so concurrent sessions can see this work. Run from <hub>: node
+  scripts/fleet-view.mjs --declare tigerfid" (the hub's path written here as
+  `<hub>`). The marker had been opened with `--repos tigerfid`. The command
+  ran and printed "marker declared: … repos: tigerfid".
+- `piped-checker-exit` seat: the session's first `git fetch origin` in this
+  repo was piped into `tail`, with no banner. The fetch was read after it by
+  `git rev-list --count HEAD..origin/main`: 0.

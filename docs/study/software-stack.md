@@ -679,7 +679,8 @@ zones, relay outputs and wake-on-command, is `radio-and-location.md`'s.
 
 - **Story 2.1.6:** nothing to price for the host itself. Python, pyserial,
   SQLite and the browsers cost nothing. A USB barcode scanner is an
-  optional bench item.
+  optional bench item. `tiered-cost.md` § The bench (2026-10-28) keeps it
+  outside every total, with its price not read.
 - **Story 2.1.7:** nothing is left open from this study. Omid decided its
   three items ahead of the sitting (§ Decided ahead of the sitting), and the
   sitting carries them into the rebuild spec.
