@@ -662,7 +662,7 @@ one-core-or-three answer with its reasons.
 
 #### Story 2.1.5: The software stack — ✅ DONE (2026-10-28)
 
-**Completed:** 2026-10-28 — tigerfid #36 (branch `story-2.1.5-software-stack`), with the research log's Story 2.1.5 entry (`docs/reference-research.md` § 4).
+**Completed:** 2026-10-28 — tigerfid #36 (branch `story-2.1.5-software-stack`, pre-tick head `bcf062f5`), with the research log's Story 2.1.5 entry (`docs/reference-research.md` § 4).
 **Outcome:** `docs/study/software-stack.md` reads the original host programs at the tag, chooses a small local Python program whose screen is the user's own browser, sketches the event schema and the API, and answers its Chorus items one by one.
 - **The original host programs, read at the tag.** Both are Windows only:
   - **Smart Tracker:** C# on .NET Framework 4.0, the API's x86 wrapper, and MySQL through ODBC;
