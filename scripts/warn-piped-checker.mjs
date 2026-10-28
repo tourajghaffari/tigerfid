@@ -396,9 +396,10 @@ if (typeof payload !== 'object' || payload === null || Array.isArray(payload)) {
 
 // Story 73.1.1: the harness's shell tools — Bash on both machines, PowerShell
 // on the Windows box (its primary shell; register seat piped-checker-exit 6).
-// Story 244.1.8, the git-verb arm (pipedGitVerb, below): the four state-changing
-// verbs, and the global options that take a value before the verb.
-const GIT_STATE_VERBS = new Set(['merge', 'pull', 'checkout', 'rebase']);
+// Story 244.1.8, the git-verb arm (pipedGitVerb, below): the state-changing verbs,
+// and the global options that take a value before the verb. Story 244.1.34 adds
+// `push` (piped-checker-exit's push face: `git push … | grep -v` read silent).
+const GIT_STATE_VERBS = new Set(['merge', 'pull', 'checkout', 'rebase', 'push']);
 const GIT_VALUE_OPTIONS = new Set(['-C', '-c', '--git-dir', '--work-tree']);
 
 const SHELL_TOOLS = new Set(['Bash', 'PowerShell']);
@@ -493,12 +494,17 @@ const pipeAdvice = masked
     `longer proves the ${kind}'s verdict. If this run is the ` +
     `exit-code proof, re-run UNPIPED (e.g. ${rerun}). `
   : '';
+// Story 244.1.34: a piped push hides a rejection the same way; its proof is the exit, or the branch read on origin.
+const gitIsPush = gitPipe?.verb === 'push';
 const gitAdvice = gitPipe
   ? `piped-checker guard (warn, not a block): this command pipes \`git ${gitPipe.verb}\` — a state-changing git ` +
-    'command — into another command, so a refusal it prints (`Not possible to fast-forward`, a conflict, ' +
-    "`would be overwritten`) is hidden behind the filter, and the compound's exit is the LAST stage's " +
-    `whether or not \`${exitVar}\` is read after it. Before you believe the checkout moved, run it UNPIPED and read ` +
-    `its exit (e.g. ${unpiped(gitPipe.invocation)}). `
+    'command — into another command, so a refusal it prints (' +
+    (gitIsPush
+      ? '`! [rejected]`, `non-fast-forward`, a remote hook\'s refusal'
+      : '`Not possible to fast-forward`, a conflict, `would be overwritten`') +
+    ") is hidden behind the filter, and the compound's exit is the LAST stage's " +
+    `whether or not \`${exitVar}\` is read after it. Before you believe ${gitIsPush ? 'the push landed' : 'the checkout moved'}, run it UNPIPED and read ` +
+    `its exit (e.g. ${unpiped(gitPipe.invocation)})${gitIsPush ? ', or read the branch on origin (`git ls-remote --heads origin BRANCH`)' : ''}. `
   : '';
 const pipestatusAdvice = pipestatusOnDarwin
   ? 'piped-checker guard (warn, not a block): this command reads `${PIPESTATUS…}` on a darwin host, where the ' +
@@ -596,7 +602,11 @@ const semiCitations =
 const gitCitations =
   "Class piped-checker-exit, its seats in the hub's docs/friction/recurrences.json: the pen's two of 2026-10-26 " +
   '(hub #4358) — `git merge --ff-only origin/main 2>&1 | tail -n 1` hid a refusal twice, and no `$?` was read ' +
-  'for the shape arm to see (Story 244.1.8).';
+  'for the shape arm to see (Story 244.1.8)' +
+  (gitIsPush
+    ? '; and its push face, every seat uncaught by any arm until Story 244.1.34 — `git push … | grep -v` and `| tail` ' +
+      "(activewaveinc.com's Epic 2.1 close and its Sprint 2 leg 3, 2026-10-27; the expeal.com Sprint 30 review, 2026-10-28)."
+    : '.');
 const citations = [masked || pipestatusOnDarwin ? pipeCitations : null, gitPipe ? gitCitations : null, semi ? semiCitations : null]
   .filter(Boolean)
   .join(' ');
@@ -613,7 +623,7 @@ const summary = [
   .join('; ');
 const stories = [
   ...new Set(
-    [masked ? pipeStory : null, gitPipe ? '244.1.8' : null, pipestatusOnDarwin ? '84.1.1' : null, dollarQ ? '139.1.1' : null, bgPipe ? '167.1.1' : null].filter(
+    [masked ? pipeStory : null, gitPipe ? '244.1.8' : null, gitIsPush ? '244.1.34' : null, pipestatusOnDarwin ? '84.1.1' : null, dollarQ ? '139.1.1' : null, bgPipe ? '167.1.1' : null].filter(
       Boolean
     )
   ),
@@ -950,16 +960,71 @@ function dollarQAfterPipe(command) {
   let pipefail = false;
   let pipeline = []; // the current pipeline's stages
   let after = null; // a pipeline of 2+ stages that just ended, awaiting the next command
+  // Story 244.1.34 — the producer rule (register class
+  // piped-checker-guard-misattributes-a-substitution-pipeline): each `(` opens a frame by the
+  // character before it — `$(` a command substitution, `<(` / `>(` a process substitution,
+  // anything else a `( … )` group — saving the outer pipeline. At its `)` the frame decides
+  // what the substitution's last pipeline is to the outer command: a group's exit IS it; a
+  // bare assignment's substitution (`x=$(… | …)`, every word before it an assignment, no
+  // command word) carries it into the assignment's exit; a substitution in a command's
+  // arguments (`echo $(… | …)`) and a process substitution never produce the outer
+  // command's exit. The outer pipeline resumes either way, so `echo $(…) | tail; echo $?`
+  // names `echo … | tail`. A group keeps its old reading exactly. Accepted limit: a
+  // backtick substitution is still split as before (the story names `$( )`, `<( )`, `>( )`).
+  const frames = [];
+  const ASSIGNMENT = /^[A-Za-z_][A-Za-z0-9_]*=/;
+  // After a substitution's `)`, the text up to the next separator is the SAME outer command
+  // (`diff <(…) <(…)`'s second `<`), joined to its stage — never a stage of its own.
+  let joinNext = false;
   for (let k = 0; k < parts.length; k++) {
     if (k % 2 === 1) {
       // A separator: `|` continues the pipeline; anything else ends it.
-      if (parts[k] === '|') continue;
+      if (parts[k] === '|') {
+        joinNext = false;
+        continue;
+      }
+      if (parts[k] === '(') {
+        const before = (parts[k - 1] ?? '').replace(/\s+$/, '');
+        const kind = before.endsWith('$') ? 'command' : /[<>]$/.test(before) ? 'process' : 'group';
+        const words = kind === 'command' ? before.slice(0, -1).trim().split(/\s+/).filter(Boolean) : [];
+        const bareAssignment = words.length > 0 && words.every((w) => ASSIGNMENT.test(w));
+        frames.push({ kind, bareAssignment, outer: pipeline });
+        if (kind === 'group') {
+          if (pipeline.length >= 2) after = pipeline;
+        } else {
+          after = null;
+        }
+        pipeline = [];
+        continue;
+      }
+      if (parts[k] === ')' && frames.length) {
+        const f = frames.pop();
+        const inner = pipeline.length >= 2 ? pipeline : null;
+        if (f.kind === 'group') {
+          if (inner) after = inner;
+          pipeline = [];
+          joinNext = false;
+        } else {
+          // A substitution: the outer command resumes; only a bare assignment's carries the exit.
+          pipeline = f.outer;
+          after = f.bareAssignment && inner ? inner : null;
+          joinNext = true;
+        }
+        continue;
+      }
+      joinNext = false;
       if (pipeline.length >= 2) after = pipeline;
       pipeline = [];
       continue;
     }
     const stage = parts[k].trim();
     if (!stage) continue;
+    if (joinNext && pipeline.length) {
+      pipeline[pipeline.length - 1] += ` ${stage}`;
+      joinNext = false;
+      continue;
+    }
+    joinNext = false;
     if (after) {
       const reads = expands(stage);
       if (!pipefail && READ.test(reads) && !HONEST.test(reads)) {

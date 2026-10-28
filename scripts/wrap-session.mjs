@@ -79,7 +79,14 @@
 //   spawned; older, absent, another root or unparsable → the run as before, loud about why.
 //   The real wrap always runs its own heartbeat (its stamp is the note's evidence).
 //   node scripts/wrap-session.mjs recall
-//   node scripts/wrap-session.mjs reconcile
+//   node scripts/wrap-session.mjs reconcile [--dry-run]
+//   Story 244.1.5: `reconcile --dry-run` is the preview that never acts — it fetches
+//   origin/main (a remote-tracking ref only; the verdict needs origin's current notes),
+//   prints the verdict and each step it would run (the notes restore; the fast-forward
+//   of local main), and leaves the working tree, the index and local main unchanged.
+//   Each subcommand takes only its own flags — wrap the eight above, reconcile only
+//   --dry-run, recall none — and an unknown one is refused with the usage, exit 2,
+//   before any repo access; an unknown subcommand keeps its exit 1.
 //   (--merge is accepted but a no-op — landing is the default everywhere now.)
 //
 // The session notes themselves are written by Claude (see CLAUDE.md "Session
@@ -834,12 +841,16 @@ function reconcileAfterLand() {
 // construction: its lines are not on origin/main, so the verdict is 'unsafe'.
 // Never throws and never exits non-zero — session-start plumbing must not
 // block. Returns the outcome for callers/tests.
-export function reconcile({ fetch = true, quietWhenClean = false } = {}) {
+export function reconcile({ fetch = true, quietWhenClean = false, dryRun = false } = {}) {
   let v;
   try {
     if (fetch) fetchOriginMain(repoRoot);
     v = notesReconcileVerdict(repoRoot, notesRel);
   } catch {
+    if (dryRun) {
+      console.log(`reconcile --dry-run: nothing written — ${notesRel} could not be verified against origin (offline?); a real reconcile would leave it as-is.`);
+      return 'unverified';
+    }
     console.log(
       `note: could not verify ${notesRel} against origin (offline?) — left as-is. Reconcile later,\n` +
         `AFTER confirming your note landed (git show refs/remotes/origin/main:${notesRel} — your block on top):\n` +
@@ -847,6 +858,7 @@ export function reconcile({ fetch = true, quietWhenClean = false } = {}) {
     );
     return 'unverified';
   }
+  if (dryRun) return reconcilePreview(v);
   let state;
   if (!v.dirty) {
     state = 'clean';
@@ -872,6 +884,70 @@ export function reconcile({ fetch = true, quietWhenClean = false } = {}) {
   }
   refreshLocalMain();
   return state;
+}
+
+// Story 244.1.5: `reconcile --dry-run` — the verdict and the steps a real reconcile
+// would run, read-only (rev-parse, status, rev-list; no checkout, no pull, no ref
+// write). Returns 'would-reconcile', 'clean' or 'unsafe'.
+function reconcilePreview(v) {
+  const lines = [`reconcile --dry-run: nothing written (the working tree, the index and local main are left as they are).`];
+  let state;
+  if (!v.dirty) {
+    state = 'clean';
+    lines.push(`verdict: clean — ${notesRel} has no uncommitted change; nothing to restore.`);
+  } else if (v.verdict !== 'safe') {
+    state = 'unsafe';
+    lines.push(`verdict: unsafe — ${v.added.length} uncommitted added line(s) of ${notesRel} are NOT on origin/main; a real reconcile leaves it untouched.`);
+  } else {
+    state = 'would-reconcile';
+    lines.push(`verdict: safe — every uncommitted added line of ${notesRel} is on origin/main.`);
+    lines.push(`would run: git checkout HEAD -- ${notesRel}`);
+  }
+  lines.push(fastForwardPlan({ notesRestored: state === 'would-reconcile' }));
+  for (const l of lines) console.log(l);
+  return state;
+}
+
+// What refreshLocalMain would do now, as one line (read-only). The tree is judged as it
+// would stand after the notes restore, so a dry run reports the real run's step.
+function fastForwardPlan({ notesRestored }) {
+  try {
+    const behind = Number(git(['rev-list', '--count', 'main..refs/remotes/origin/main']));
+    if (!behind) return 'would run: nothing more — local main is not behind origin/main.';
+    const n = `${behind} commit(s) behind origin/main`;
+    if (git(['rev-parse', '--abbrev-ref', 'HEAD']) !== 'main') return `would run: git fetch origin main:main (local main is ${n})`;
+    const others = execFileSync('git', ['status', '--porcelain'], { cwd: repoRoot, encoding: 'utf8' })
+      .split('\n').filter(Boolean).filter((l) => !(notesRestored && l.slice(3) === notesRel));
+    return others.length
+      ? `would run: no fast-forward — local main is ${n}, and the tree is not quiet (${others.length} other change(s)); pull when it is.`
+      : `would run: git pull --ff-only origin main (local main is ${n})`;
+  } catch {
+    return 'would run: the fast-forward, if it can — local main\'s distance from origin/main could not be read.';
+  }
+}
+
+// Story 244.1.5 (register class cli-ignores-an-unknown-flag-and-exits-0, form (a)): each
+// subcommand's own flags — the census of the fleet's invocations (the Hub Sprint 70
+// block's finding 4): wrap's eight, reconcile's --dry-run, recall none. A value flag
+// consumes the next word (a missing or flag-like value is the dispatcher's own exit 1).
+export const SUBCOMMAND_FLAGS = {
+  wrap: { bool: ['--dry-run', '--merge', '--amend', '--carry-siblings', '--tombstone-only'], value: ['-m', '--marker', '--session-id'] },
+  reconcile: { bool: ['--dry-run'], value: [] },
+  recall: { bool: [], value: [] },
+};
+
+// The words of `args` that `command` does not take: [] when every one parses; null for
+// an unknown subcommand (the dispatcher's usage and exit 1).
+export function unknownFlags(command, args) {
+  const spec = Object.hasOwn(SUBCOMMAND_FLAGS, command) ? SUBCOMMAND_FLAGS[command] : null;
+  if (!spec) return null;
+  const bad = [];
+  for (let i = 0; i < args.length; i++) {
+    if (spec.bool.includes(args[i])) continue;
+    if (spec.value.includes(args[i])) { i++; continue; }
+    bad.push(args[i]);
+  }
+  return bad;
 }
 
 // gh's first error line, for a banner's reason — never a raw stack.
@@ -2187,6 +2263,20 @@ function recall() {
 const argvRealMain = (() => { try { return process.argv[1] && realpathSync(process.argv[1]); } catch { return null; } })();
 if (argvRealMain === fileURLToPath(import.meta.url)) {
   const [, , command, ...rest] = process.argv;
+  const usage = 'Usage: node scripts/wrap-session.mjs <wrap|recall|reconcile> [-m msg] [--merge] [--amend] [--dry-run] [--marker <ref>] [--carry-siblings] [--session-id <uuid>] [--tombstone-only]';
+  // Story 244.1.5: a flag the subcommand does not take is refused before any repo
+  // access — an ignored flag made `reconcile --dry-run` reconcile (the Hub Sprint 67
+  // review's measurement). An unknown subcommand falls through to the exit 1 below.
+  const badFlags = unknownFlags(command, rest);
+  if (badFlags?.length) {
+    const { bool, value } = SUBCOMMAND_FLAGS[command];
+    const takes = [...value, ...bool];
+    console.error(
+      `wrap-session: ${command} does not take ${badFlags.join(' ')} — ${command} takes ${takes.length ? takes.join(' ') : 'no flag'}.`
+    );
+    console.error(usage);
+    process.exit(2);
+  }
   const dryRun = rest.includes('--dry-run');
   const merge = rest.includes('--merge');
   const amend = rest.includes('--amend');
@@ -2224,9 +2314,9 @@ if (argvRealMain === fileURLToPath(import.meta.url)) {
 
   if (command === 'wrap') wrap({ message, dryRun, merge, amend, marker, carrySiblings, sessionIdArg, tombstoneOnly });
   else if (command === 'recall') recall();
-  else if (command === 'reconcile') reconcile();
+  else if (command === 'reconcile') reconcile({ dryRun });
   else {
-    console.error('Usage: node scripts/wrap-session.mjs <wrap|recall|reconcile> [-m msg] [--merge] [--amend] [--dry-run] [--marker <ref>] [--carry-siblings] [--session-id <uuid>] [--tombstone-only]');
+    console.error(usage);
     process.exit(1);
   }
 }

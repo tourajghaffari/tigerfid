@@ -123,18 +123,27 @@ export function scanDiff(diffText) {
 // the pre-commit layer must block when it cannot scan (an index lock, a
 // maxBuffer overflow, a broken git binary; Story 26.1.1). The PreToolUse
 // hook path stays permissive by design: it is the warn-level layer and the
-// native pre-commit hook is the one whose header promises every commit.
-function scanStaged(cwd, includeUnstagedTracked, { failClosed = false } = {}) {
+// native pre-commit hook is the one whose header promises every commit — so
+// an overflow there degrades to an empty scan, and the pre-commit read is the
+// one that refuses.
+// Story 244.1.20: both diffs take --diff-filter=d, so a DELETED file adds no
+// line to the buffer — scanDiff reads `+` lines only, and a vendored tree
+// removed in one commit (tigerfid's 9,472 paths, a ~233 MB diff of `-` lines)
+// overflowed the 64 MiB buffer and was refused UNSCANNED for bytes the scan
+// never reads. An ADDED change larger than the buffer still fails closed.
+// `maxBuffer` is injectable for the tests only — there is no environment knob:
+// a security hook keeps none.
+export function scanStaged(cwd, includeUnstagedTracked, { failClosed = false, maxBuffer = 64 * 1024 * 1024 } = {}) {
   const git = (args) => {
     try {
-      return execFileSync('git', ['-C', cwd, ...args], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+      return execFileSync('git', ['-C', cwd, ...args], { encoding: 'utf8', maxBuffer });
     } catch (err) {
       if (failClosed) throw err;
       return '';
     }
   };
-  let diff = git(['diff', '--cached', '--unified=0']);
-  if (includeUnstagedTracked) diff += '\n' + git(['diff', '--unified=0']);
+  let diff = git(['diff', '--cached', '--unified=0', '--diff-filter=d']);
+  if (includeUnstagedTracked) diff += '\n' + git(['diff', '--unified=0', '--diff-filter=d']);
   return scanDiff(diff);
 }
 
