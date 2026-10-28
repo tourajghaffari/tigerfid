@@ -660,7 +660,23 @@ logging seal with no active radio (the Story 2.1.2 tick;
 device, the toolchain per part with its install on each platform, and the
 one-core-or-three answer with its reasons.
 
-#### Story 2.1.5: The software stack
+#### Story 2.1.5: The software stack — ✅ DONE (2026-10-28)
+
+**Completed:** 2026-10-28 — tigerfid #36 (branch `story-2.1.5-software-stack`, pre-tick head `bcf062f5`), with the research log's Story 2.1.5 entry (`docs/reference-research.md` § 4).
+**Outcome:** `docs/study/software-stack.md` reads the original host programs at the tag, chooses a small local Python program whose screen is the user's own browser, sketches the event schema and the API, and answers its Chorus items one by one.
+- **The original host programs, read at the tag.** Both are Windows only:
+  - **Smart Tracker:** C# on .NET Framework 4.0, the API's x86 wrapper, and MySQL through ODBC;
+  - **the Programming Station:** C++Builder, building the protocol's packets itself.
+  - **What they did:** zones keyed by a Reader and a Field Generator, alarm rules on screen, a history per tag, and access by group and schedule.
+  - **What they lacked:** no event carried a time, so the host stamped its local arrival time (263 `DateTime.Now`, no `UtcNow`, MEASURED). There is no missed check-in alarm and no temperature in Smart Tracker's source. The floorplan program has no source in the tree, and the station's encryption keys are compiled in. The Outlook message stays unread.
+- **The stack (option A).** Python 3 with its standard library's `sqlite3` and HTTP server, and pyserial (pure Python, BSD-3-Clause) for the Reader's port. The page is plain HTML, CSS and JavaScript, with SVG and Server-Sent Events, and nothing is fetched from the internet. It listens on the user's own machine only in milestone 1.
+  - **Measured here, on macOS 26.6.2:** 400,000 rows at one transaction per frame in 0.36 s, and 1,000 streamed events in 16 ms.
+  - **Cited:** Windows and Linux.
+  - **The runner-up:** Node.js (one language; its `node:sqlite` is a release candidate, and its serial port needs a native add-on).
+  - **Declined:** Go, a desktop shell, Web Serial in the page alone, and the original's stack.
+- **The event schema:** `tag`, `reader` (a Reader or a listening Field Generator), `via`, `rssi_dbm`, `time` (UTC, from the Reader's frame clock), `seq` and a `payload` with the Field Generators heard. On the wire it is a binary frame, INFERRED from the UART's rate at 1,363 replies a second. The API is HTTP and JSON with a live stream.
+- **Chorus, software side:** the five items ADOPTED (share links for the LAN tier, with a vendor's relay declined), both not-to-copy items DECLINED, and the four layers' schema, adopted by Story 2.1.3, written. Owned infrastructure with no subscription, and pairing people with things, still win.
+- **D5's software side:** no HF interface on milestone 1's seal (recommended). Web NFC is in Chrome on Android only, and the printed QR code and the radio's tamper alarm already cover the need. The sitting decides it with the seal's design.
 
 **Story:** As a user on any of the three platforms, I want the host
 software's stack chosen, so that the floorplan, the alarms and pairing run
@@ -697,7 +713,11 @@ Generator, the three tags); per build route (hand-solder, partly assembled,
 fully assembled); per tool tier (starter, advanced, pro — several ways to
 the same end, for example several soldering irons); and the bench D9 needs
 (a tool tier plus a cheap radio receiver to see what the boards transmit).
-Every price is dated. This is the rebuild's first real budget.
+Every price is dated. This is the rebuild's first real budget. From the
+software study (Story 2.1.5, 2026-10-28): the host software costs nothing
+(Python, pyserial, SQLite and the browsers), and a USB barcode scanner for
+scan-and-scan pairing is an optional bench item to price
+(`docs/study/software-stack.md` § What the choice leaves to later stories).
 **Done when:** `docs/study/tiered-cost.md` carries the tables with a date on
 every price and a total per tier.
 
@@ -714,7 +734,12 @@ sealTag design, which Story 2.1.4 weighs (`docs/study/original-system.md`
 § What this means for the study), and the spec names the rebuild's top-level
 layout, which Story 1.1.2 left to the study with a starting shape of
 `hardware/`, `firmware/`, `software/`, `guides/` and `docs/` (#7; the
-archive's Story 1.1.2 Context).
+archive's Story 1.1.2 Context). From the software study (Story 2.1.5,
+2026-10-28): the sitting also decides the host's language, Python (the
+study's choice) or Node.js (its runner-up); whether milestone 1's seal keeps
+an HF interface for a phone (D5, recommended: no), with the seal's design;
+and how long raw check-ins are kept by default
+(`docs/study/software-stack.md` § What the choice leaves to later stories).
 **Done when:** the spec exists at that path and carries `**Approved by:** Omid`
 with the date.
 

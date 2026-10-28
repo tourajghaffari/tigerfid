@@ -250,6 +250,45 @@ later session reads before searching again.
   - the development board's quick start guide, which holds its US FCC
     notice: no public page this leg reached carries it.
 
+### Story 2.1.5 — software stack (2026-10-28)
+
+What was read is cited in `docs/study/software-stack.md`, which a later
+session reads before searching again.
+
+- **The original host programs: READ at the tag.** Smart Tracker's source
+  (`software/smart-tracker/Source/`) and the Programming Station's
+  (`software/programming-station/`), by targeted searches, not line by line.
+  The Outlook message beside them stays unread (reading rule 7 of
+  `docs/reference-repos.md`). The binaries and the installers were not
+  opened.
+- **No new pin.** No choice rests on a document whose bytes must be kept,
+  so no `sources/` row is added (plan D8). The UART's rate and the radio's
+  signal-strength reading come from the CC1312PSIP datasheet that Story
+  2.1.3 pinned.
+- **KEPT, cited by URL and fetch date, not pinned:**
+  - pySerial's documentation and licence (BSD-3-Clause);
+  - python.org's downloads page and Python's `sqlite3` and `http.server`
+    documentation;
+  - SQLite's "Appropriate Uses" page and its FAQ;
+  - Node.js's `node:sqlite` documentation and the `serialport` installation
+    guide, for the runner-up;
+  - Go's install page;
+  - Apple's pages on opening apps from unverified developers and on its
+    developer programme;
+  - MDN's pages on Web Serial and `getUserMedia()`, and MDN's
+    browser-compatibility data for Web Serial, Web NFC, `EventSource` and
+    SVG. The data was read as JSON, because the pages' tables render by
+    script.
+- **Searched, not adopted:** an existing open host with floorplan zones,
+  alarms and pairing under an allowlisted licence. One web search found
+  none to adopt. It named GRAIL RTLS, reelyActive's rtlips-server and Trace
+  Me Now, none read beyond the search's own results. The rebuild writes its
+  host fresh.
+- **MEASURED on this study's machine (macOS 26.6.2):** Python 3.12.15 with
+  SQLite 3.54.1, and Node v24.15.0 with SQLite 3.51.3. A standard-library
+  probe of the chosen stack is recorded in the study. Windows and Linux were
+  not measured.
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -281,3 +320,7 @@ a verdict here.
   debugger, cells, sensor, Subpart B and the grant record (§ 4, above). The
   search ideas for 2.1.4 above are answered there. A debugger outside TI's
   terms, and the GCC route's platforms, were not searched.
+- **2026-10-28:** Story 2.1.5's reads for the host stack and its one search
+  for an existing open host (§ 4, above). The search ideas for 2.1.5 above
+  are answered there: no open host was found to adopt, the floorplan view is
+  written fresh, and the event schema is the study's own.
