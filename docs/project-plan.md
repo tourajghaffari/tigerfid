@@ -17,10 +17,10 @@ Everything in this plan is public, written for a stranger (CLAUDE.md
 
 **Provenance / re-review note:** this plan was born at adoption, not audited — authored 2026-10-26 by hub Story 243.1.2 per KB `new-repo-standard`'s authored-plan template, from the approved design spec (hub spec `2026-10-26-tigerfid-onboarding-design`, Omid 2026-10-26, hub PR #4355). No `/audit-project` run yet; the spec's decisions D1–D12 and calls C1–C11 are the re-review record until the first audit.
 
-**Last staleness sweep:** 2026-10-27 (tigerfid #26, the Sprint 2 proposal's
-step-2 sweep, KB `plan-staleness-sweep`: scoped to the sprint's inputs, which
-were the whole live plan, `docs/close/2.1.json` and the records its stories
-cite).
+**Last staleness sweep:** 2026-10-28 (tigerfid #43, the Sprint 3 proposal's step-2 sweep,
+KB `plan-staleness-sweep`: scoped to the sprint's inputs, which were Epic
+2.1, the archive's Sprint 2 record, `docs/close/2.1.json`, the study anchors
+the review's findings cite and `scripts/reference-check.mjs`).
 
 ## Plan format
 
@@ -43,6 +43,468 @@ way once every leg story is ✅ DONE **and** the sprint's review has landed —
 into the archive's `## Executed sprints` section, newest first, the heading
 stamped `— ✅ EXECUTED (date)` plus an **Executed:**/**Reviewed:** record.
 Keep that section above the first `## Initiative` block in the archive.
+
+## Sprint 3 — "Ready for the sitting: the three studies corrected, milestone 1 priced in three tiers, and a new machine told it may fetch the sources" (proposed 2026-10-28; 3 legs, serial) — ✅ APPROVED (2026-10-28)
+
+**Approval:** approved 2026-10-28 (Omid, first-hand in the proposer's
+terminal "tigerfid Sprint 3 proposal", between its `date -u` reads of
+10:59:30Z and 11:00:38Z: "Approve as proposed (Recommended)"): the block as
+proposed, three legs, D1–D12 at their defaults. The sign-off edit is the
+proposer's, on the proposal PR's branch (tigerfid #43).
+
+**Proposed:** 2026-10-28 by the hub-rooted Windows session "tigerfid Sprint 3
+proposal" (session `4ef9427a-246a-42f9-98aa-be892d938900`), on Air Traffic
+Control's orders 18, sent 10:49:58Z. The session was fresh by `/clear`: its
+background-task path id, `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`, is the
+process of the session "tigerfid Sprint 2 review", which this `/clear`
+ended. Role proposer; not elevated (a Windows administrator-role read:
+`False`).
+
+**The outcome:** Epic 2.1's study made ready for Omid's decision sitting:
+- the Sprint 2 review's corrections land in the three technical studies, so
+  the sitting decides on figures that hold and on the HF ruling Omid gave
+  (Story 2.1.10);
+- milestone 1 is priced per device, per build route and per tool tier, every
+  price dated: the rebuild's first budget (Story 2.1.6);
+- the reference check tells a new machine that the study's sources may be
+  fetched from their URLs (Story 2.1.11).
+
+**Admission (the meta-work test):** legs 1 and 2 ship public documents that
+a stranger reads on GitHub this month and that the sitting decides from. Leg
+3 changes what `npm run setup` prints to every stranger who sets up the
+reference folder.
+
+**Inputs swept 2026-10-28.** The scope is Epic 2.1 (its preamble, its
+Ordering line and Stories 2.1.6–2.1.8), the archive's Sprint 2 record (its
+`**Reviewed:**` findings, nits and routed list), `docs/close/2.1.json`, each
+study anchor a finding cites, and `scripts/reference-check.mjs` for F11.
+- **The events digest.** `git log origin/main --oneline --grep '<id>'` for
+  each of 2.1.6, 2.1.7 and 2.1.8:
+  - 2.1.6: only #41, which wrote its Context sentence;
+  - 2.1.7: #23, #39 and #41, each a Context edit;
+  - 2.1.8: no hit.
+
+  The same grep for 2.1.10, 2.1.11 and 2.1.12 finds nothing, so the ids are
+  free. `docs/notes.md` and the archive name 2.1.6–2.1.8 only as forward
+  work. `node <hub>/scripts/fleet/open-prs.mjs --repos tigerfid` read 0 open
+  PRs, and `git ls-remote --heads origin` lists `main` alone. Every story is
+  CURRENT; none has run.
+- **Each finding's anchor, re-read on `main` (`9cb0127`)** before a story
+  cites it:
+  - finding 1: `software-stack.md` lines 588 ("one browser only"), 608 (the
+    Decided line, "no space") and 686 (its table row);
+  - finding 2: `radio-and-location.md` names `ZAT-1312PSIP-2` at lines 365,
+    530 and 534, and `-3` nowhere (`grep -c` 0);
+  - finding 3: `parts-and-toolchains.md` line 167 charges "a one-shot
+    conversion of 15.5 ms";
+  - finding 4: `radio-and-location.md` line 477, "the Field Generators it
+    last heard";
+  - finding 5: `parts-and-toolchains.md` lines 242 ("except the Arm GNU
+    Toolchain"), 248–249 ("no price stated on the page") and 251 (CMake and
+    GNU make, no platform cells); `software-stack.md` lines 473–476
+    ("Against 921,600 baud", "222 %");
+  - the nits: `software-stack.md` 85 ("It carries no time"), 347 and 470
+    ("[3]'s 1,363"); `radio-and-location.md` 292 ("no worse by the
+    tables"); `parts-and-toolchains.md` 324 (§2.803's notice) and 384
+    ("counted only the sending antenna").
+- **Refreshed in this PR:**
+  - Epic 2.1's Ordering line, which named the fix-up without its story;
+  - Story 2.1.7's Context, whose "until the Sprint 3 fix-up corrects it"
+    now names Story 2.1.10.
+- **Observed, the closer's (Story 2.1.8):** the close runner prints "REVIEW
+  SEATING MISSING" for Sprint 2's review. That review sent its fifteen seats
+  to Air Traffic Control as text; the closer censuses the register.
+- This PR refreshes the plan's staleness stamp.
+
+The standard (KB `sprint-proposal-standard`) was read by its steps 0–8 at
+their rule level and the newest entries of its friction log (P60–P74), not
+entry by entry, with the rows Air Traffic Control's orders named: KB
+`plan-authoring-for-cold-execution` item 53, a test-arming read per leg, §
+Roles' "flagged" wording and the touched-file ledger.
+
+**Why this order (step 2):**
+- **Leg 1** goes first, as the review routed it: its findings 3 and 4 can
+  move a cell and the tags' listening budget, which leg 2 prices. The
+  corrections land before prices sit beside them.
+- **Leg 2** is the epic's path to the sitting. Its prices are dated as near
+  the sitting as the sprint allows.
+- **Leg 3** gates nothing in the study and edits no study file. It touches
+  `scripts/`, so it merges by Omid's word rather than by auto-merge, and
+  placing it last keeps the sitting's path from waiting on that merge. It
+  shares only the plan, the manifest and the friction log with legs 1 and 2,
+  so serial order spares those files a conflict.
+- **Stories 2.1.7 and 2.1.8 stay outside the sprint.** The sitting is Omid's,
+  and no executor seat can hold it. The close needs the sitting's spec for
+  `rebuild-spec-approved` and `build-initiatives-filed`, and a closer who did
+  none of the epic's work.
+
+**The sprint's shape.** Three legs, under the cap. Weighed and declined:
+- **Two fix-up stories** (the battery and the mechanism; the rest): one
+  leg's plan fits the eight-task tripwire on the estimate in § Pre-flight,
+  and D9 names the seam if it does not.
+- **F11 outside the sprint, as a chore:** the review routed it as a story,
+  and it is small.
+- **Story 2.1.6 in a later sprint, after a review of the fix-up:** leg 2
+  prices both cells wherever the studies leave the choice to the sitting
+  (D5), so no fix-up outcome re-prices it. A review between them would cost
+  a proposal and a review for no change a price depends on.
+
+1. **Leg 1 — Story 2.1.10** — the Sprint 2 review's fixes in
+   `docs/study/software-stack.md`, `docs/study/radio-and-location.md` and
+   `docs/study/parts-and-toolchains.md`: findings 1–5 and the five nits,
+   with finding 4's mechanism chosen (D3) and its listening cost carried into
+   the battery figures with finding 3's (D2). Gate: the story's greps quoted
+   in the PR body, each hit's disposition beside it, and a claims audit over
+   every changed figure. Flip map: `fcc-ids-both-named` FAIL → PASS; the four
+   study teeth stay PASS. Prose for the closer: `studies-review-fixes`, with
+   `three-platform-claims-sourced`, `free-tools-three-platforms` and
+   `no-medical-claim` read again where the leg edits. Item-8 scope: the
+   three studies, `docs/study/requirements.md`'s dated pointer lines (D1),
+   and Story 2.1.7's Context.
+2. **Leg 2 — Story 2.1.6** — `docs/study/tiered-cost.md`: milestone 1 per
+   device, per build route (hand-solder, partly assembled, fully assembled)
+   and per tool tier (starter, advanced, pro), with D9's bench and a total
+   per tier, every price dated (D5–D8). Flip map: `tiered-cost-doc` FAIL →
+   PASS. Prose for the closer: `tiers-dated` and `no-medical-claim`. Item-8
+   scope: the three studies' lines that hand work to 2.1.6 (each § What the
+   choice leaves to later stories, and `parts-and-toolchains.md` § The
+   debugger's "Story 2.1.6 prices the rest").
+3. **Leg 3 — Story 2.1.11** — the reference check names the fetch route for
+   a missing `sources/` file or folder (D11). Gate: the new tests seen red
+   against `main`'s script, then green, with `npm test` green. Flip map: no
+   tooth flips. Prose for the closer: `reference-check-sources-route`.
+   Item-8 scope: `docs/reference-repos.md` and `docs/reference-corpus.tsv`'s
+   header comment, where they describe the tool's messages.
+
+After the sprint, `rebuild-spec-approved` (Story 2.1.7) stays RED.
+
+**Decisions (step 5) — no decision currently blocks execution on Omid.** Each
+is the executor's at its default unless Omid says otherwise at the approval.
+
+- **D1 — A study chooses; the sitting decides** (Sprint 2's D1, unchanged).
+  A number Omid set or accepted in `docs/study/requirements.md` changes only
+  by his word. A figure that a dated pointer line there quotes, and that this
+  sprint changes, gets a new dated pointer line beside it; the text stays
+  otherwise unchanged.
+- **D2 — A margin that fails on paper after the re-pricing.** If findings 3
+  and 4 together leave [9], [18], [26] or [27] unmet on paper at the planning
+  capacity:
+  - the leg records it, names the routes with their costs (measure first, a
+    larger cell, a slower listen where a latency allows it, the fallback in
+    which the Field Generators listen) and recommends one, and the sitting
+    decides. No requirement is lowered.
+  - Only if no route meets the number does the leg put it to Omid first-hand
+    in its terminal, framed by the goal the number serves with the
+    recommendation for that goal (the review's friction R3), and record his
+    words. If he cannot be reached in the leg, it files ASK-OMID A2 with that
+    question. Default: the number stands, and the study's recommendation is
+    the closest route. The leg proceeds on the default.
+- **D3 — Finding 4's mechanism is the leg's choice.** The review's example is
+  the Reader's beacon naming the slots of the zone's neighbours. Others the
+  leg may weigh: the Field Generators' beacons grouped in one block after the
+  Reader's beacon, or a periodic wider listen. The leg weighs each on its
+  listening cost, on [13]'s 5 s move and on [22]'s 5 min, states the chosen
+  one in `radio-and-location.md` § Zones, and carries its cost into
+  `parts-and-toolchains.md` § Each worn tag's year and § [27].
+- **D4 — Finding 5: cite it or mark it.**
+  - **The tools:** each tool's platforms, install and licence are cited from
+    its maker's page by URL and fetch date, or marked not read. A licence
+    read from the tool's own licence text names it.
+  - **The wire frame:** the line rate the table is measured against is
+    sourced or marked ASSUMED. The module's 3 MBaud UART (PSIP p26) is
+    stated beside it, the USB bridge's own limit stays with the build
+    initiatives, and one sentence says whether the binary frame still wins
+    and why.
+- **D5 — Prices.**
+  - In US dollars, each from a seller's public page, with the date it was
+    read, the quantity it is for and the page's URL.
+  - Cited, never pinned: no choice rests on a price page (Sprint 2's D8).
+  - Shipping and tax are left out, and the document says so.
+  - Where the studies leave a choice to the sitting (the item tag's cell; the
+    nursery tag's cell if the measurement falls short), both options are
+    priced.
+  - Each tier's total states what it is made of: which devices, at which
+    build route, with which tools and bench.
+- **D6 — A part the studies leave unnamed** (the USB bridge, the regulator,
+  the relays, the passives, the enclosures) is priced as a representative
+  part the leg names, marked "representative, for pricing" with the reason.
+  It is never presented as a choice: the build initiatives choose it.
+- **D7 — A page that refuses a plain request** (as the FCC's, FTDI's and
+  Microchip's did for Sprint 2: F8, F13) is put to Omid early in the leg, in
+  ONE message listing every such URL with what each price is for and the
+  leg's default if it stays unread. His answer is recorded first-hand, with
+  the terminal's two bracketing `date -u` reads. A price no one reads is
+  written "not read", and the tier's total names what it lacks. No total
+  counts an unread price as zero.
+- **D8 — Milestone 1 is priced for the US build** (915 MHz parts), since
+  Omid, its first builder (spec D9), builds it there. The parts that differ
+  for the EU build are named, not priced.
+- **D9 — A leg is a session.** The tripwire: an executor's plan above eight
+  tasks stops before its first task, narrows the leg in story order, splits
+  the remainder off as a new story under the same step, and logs the miss
+  against this proposal. The seams:
+  - **Leg 1:** findings 1, 2 and 5 and the five nits become the remainder.
+    Findings 3 and 4 stay, because they can move what leg 2 prices.
+  - **Leg 2:** the tool tiers and D9's bench become the remainder. The
+    devices and the build routes stay.
+  - **Leg 3:** none; it is small.
+
+  A session limit mid-leg pushes the branch and leaves a notes DRAFT, and the
+  resumed sitting re-runs the re-verify set first.
+- **D10 — Every claim is sourced or marked** (Sprint 2's D10, unchanged):
+  every number and every "the rule allows" or "the part supports" sentence
+  names its source, is MEASURED with the read, or is INFERRED with its
+  arithmetic. Also binding:
+  - no figure from the 2005/2017 datasheets becomes a requirement (spec
+    Appendix B);
+  - no medical claim (spec C8);
+  - no third-party text, figure or file is copied into the repo (the licence
+    lane);
+  - nothing from the reference folder is committed;
+  - the Outlook message stays unread (reading rule 7).
+- **D11 — F11's fix is the message, not a fetcher.** A `--fetch` arm that
+  downloads `sources/` rows is declined:
+  - **its cost:** network code in the tool, and tests that need a stand-in
+    for the network;
+  - **its benefit:** eight rows, fetched once per machine;
+  - **its risk:** sellers refuse plain requests (F13), so the tool would fail
+    where a browser succeeds.
+
+  The tool keeps its rule, "The tool never fetches a file row"
+  (`docs/reference-repos.md`).
+- **D12 — Merges.**
+  - **Legs 1 and 2 are docs-only** (`docs/**`). Each merges by `gh pr merge
+    --squash --match-head-commit <full sha>` on green, under the session's
+    merge delegation as it stands, or by Omid's word.
+  - **Leg 3 touches `scripts/`.** It merges by Omid's word, which his
+    in-session delegation sentence is (this repo's `CLAUDE.md` § Git
+    workflow).
+  - **A relayed delegation can be refused** by the auto-mode classifier. The
+    leg then holds and tells the coordinator the PR and its head sha, and
+    Omid's own `!` in the leg's terminal is the pass.
+
+**The touched-file ledger** (Sprint 2's F21: leg 4's grants left out the
+research log). Every file each leg may edit, so the coordinator's grants name
+them all. Every leg edits `docs/project-plan.md` (its tick),
+`docs/close/2.1.json` (its `reviewedFor` line) and this sprint's friction log.
+- **Leg 1:**
+  - the three studies;
+  - `docs/study/requirements.md`, only for a dated pointer line (D1);
+  - `docs/reference-research.md` § 4, the research log's entry for the leg's
+    reads (MDN's Web NFC data, the tools' pages, the tag's `AWI_API.h`), as
+    every Sprint 2 study leg wrote one;
+  - `docs/reference-corpus.tsv` and `docs/reference-repos.md` § `sources/`,
+    only if the leg pins a source a choice rests on (Sprint 2's D8);
+  - Story 2.1.7's Context sentence on the HF footprint, refreshed once the
+    study carries the ruling.
+- **Leg 2:**
+  - `docs/study/tiered-cost.md` (new);
+  - `docs/reference-research.md` § 4, the price reads' entry;
+  - the corpus files only if it pins a source (none is expected, D5);
+  - a study's § What the choice leaves to later stories only where the item-8
+    grep finds a line the leg answers.
+- **Leg 3:**
+  - `scripts/reference-check.mjs` and `scripts/reference-check.test.mjs`;
+  - `docs/reference-repos.md` only if a line there quotes the old message.
+
+  `docs/ci-contract.md` does not change: `test` already runs the test file.
+
+**Pre-flight (step 4), per leg** (KB `plan-authoring-for-cold-execution`
+item 53's two halves, and a test-arming read):
+- **Leg 1:**
+  - **narrowing half:** each item of the review's routed list maps to one
+    Context bullet of Story 2.1.10 (findings 1–5, the five nits), and the
+    story's Done-when names each. Nothing is narrowed; finding 1's two
+    "fitting option" lines stay because the review measured them right.
+  - **forward-seam half:** leg 2 reads leg 1's cell choices and battery
+    figures, and prices both cells (D5), so a leg 1 outcome moves no price.
+    Leg 3 shares no file with leg 1 but the plan, the manifest and the log.
+  - **test arming, MEASURED** through `scripts/ci-docs-only.mjs`'s
+    `classify()` with `repoOptions('tigerfid')`: `test` runs in full, because
+    the plan and the manifest are CI-validated docs and this repo records no
+    validator job.
+  - **estimate:** seven tasks (re-verify; finding 4's mechanism; findings 3
+    and 4 in the battery; finding 1 and two nits; finding 2 and a nit;
+    finding 5 and two nits; the greps, the audit, the tick and the PR).
+- **Leg 2:**
+  - **narrowing half:** the Done-when's "tables with a date on every price
+    and a total per tier" against spec §3.6 and D7: per device, per route,
+    per tool tier, and D9's bench, each a table. `tiers-dated` reads all
+    four.
+  - **forward-seam half:** Story 2.1.7's sitting reads the totals, and the
+    build initiatives' bench story reads the bench table. Leg 3 touches
+    neither.
+  - **test arming, MEASURED** the same way: `test` runs in full.
+  - **estimate:** eight tasks (re-verify; the price list and the D7 message
+    to Omid; the device tables; the boards and assembly routes; the tool
+    tiers; the bench; the totals; the greps, the audit, the tick and the
+    PR). It sits at the tripwire, and D9's seam is named.
+- **Leg 3:**
+  - **narrowing half:** F11's sentence, the "copy-only" message where D8 lets
+    a `sources/` file be fetched from its row's URL, maps to the Done-when's
+    three cases. F18, the same message met again in leg 4, is the same
+    fix.
+  - **forward-seam half:** no later leg in this sprint. The build
+    initiatives' new `sources/` rows read the same message.
+  - **test arming, MEASURED** the same way: `test` runs in full, since
+    `scripts/` is not documentation. The new tests run in `npm test` and in
+    CI's `node --test scripts/reference-check.test.mjs`.
+  - **estimate:** four tasks (the red tests; the messages and the header
+    comment; the item-8 grep over the corpus documents; the tick and the
+    PR).
+
+**Checks per leg:**
+- the flip map, through `node <hub>/scripts/close/close-epic.mjs --epic 2.1
+  --repo <F> --only <ids>`;
+- `node scripts/close-lint.mjs` and `npm test` (the `test` job's commands),
+  unpiped, on every leg;
+- `node scripts/reference-check.mjs` on every leg that adds corpus rows, and
+  on leg 3.
+
+**Gate line (every leg):** the required set is `scope` + `test` (the
+`protect-main` ruleset).
+- **`test` runs in full on every leg**, by the test-arming reads above.
+- **`scope` also gates the tick and secrets.** It runs
+  `check-tick-merge-claim.mjs` (a tick never claims its own PR's merge) and
+  the secret scan.
+
+**Merge-loop line:** each leg's PR:
+1. ticks its story in place: the heading gains `— ✅ DONE (date)`, with
+   `**Completed:**` (the date, `tigerfid #N`, the branch and the pre-tick
+   head, never the merge) and `**Outcome:**` directly under it;
+2. appends its `reviewedFor` line to `docs/close/2.1.json` in the same PR
+   (lockstep);
+3. runs the item-8 anchor grep, `grep -n "Story 2.1.<K>"
+   docs/project-plan.md docs/close/2.1.json`, and the document-name grep,
+   `grep -rn "<document>.md" docs/`, under a PR-body heading titled exactly
+   "Item-8 anchor grep" (the hub's `check-item8-dispositions.mjs` reads no
+   other title: the review's friction R1). Each hit's disposition stands
+   beside it (refreshed, current, or frozen in a DONE story), and each
+   `current` one quotes its line;
+4. runs the C8 grep, `grep -n -i -E 'medical|vital' docs/study/<document>.md`
+   (each hit a negation), and reads the diff for a hostname, an IP address, a
+   machine name, a private path, or any person beyond those `readme.md`
+   names;
+5. carries a CLAIMS AUDIT in its body: every number and every rule or part
+   claim beside its source, its measurement or its INFERRED arithmetic (D10);
+6. runs `node scripts/close-lint.mjs` and `npm test` unpiped, gated by `&&`
+   all the way to `git commit`;
+7. rebases on the fetched `main` and merges per D12, after `node
+   <hub>/scripts/fleet/watch-pr.mjs <N> --repo tigerfid`.
+
+No CHANGELOG.
+
+**Kickoff (step 6, baked):** a FRESH executor session per leg, on either box:
+1. **Open:** from the hub root, `node scripts/fleet-view.mjs --start
+   "tigerfid Sprint 3 leg <N> — Story 2.1.<K>" --role executor --repos
+   tigerfid` (the marker goes to the hub's origin by itself). It fetches and
+   fast-forwards what it may. When it prints a read-at-origin line for the
+   hub, the hub's tools are read at `origin/main` and the hub is never
+   pulled.
+2. **Fetch this repo:** on `main`, `git -C <F> fetch origin` and `git -C <F>
+   merge --ff-only origin/main`, each unpiped, its exit read.
+3. **Clocks:** `date -u` before every clock written.
+4. **Read, before any search:**
+   - this block and the leg's story, with its checks in
+     `docs/close/2.1.json`;
+   - `CLAUDE.md` (this repo's), § Writing in public above all; a hub-rooted
+     seat reads it by hand, since it does not load there;
+   - `docs/reference-repos.md`, for the reading rules, and
+     `docs/reference-research.md`, for § 4's search ideas;
+   - the study documents the story cites, and the archive's Sprint 2
+     `**Reviewed:**` record (leg 1);
+   - the previous leg's PR body and this sprint's friction log.
+5. **Re-verify first:** the set below.
+6. **Branch:** `story-2.1.<K>-<slug>`, from the fetched, fast-forwarded
+   `main`.
+
+Paths and habits:
+- `<hub>` is the hub root's absolute path on the executor's box, `<F>` is
+  `<hub>/projects/tigerfid`, and `<SCRATCH>` is the session scratchpad
+  (`mkdir -p` first; on Windows `$TMPDIR` is unset).
+- Checkers run unpiped, and a census never reads through `head`, `tail` or
+  `cut`. Long files are written with the Write tool. `git -C` takes the
+  literal path, never a shell variable (the commit guard cannot resolve one
+  and judges the session's own checkout). `npm --prefix <F> test` runs the
+  repo's checks without a `cd`. `close-lint` lints the repo it is run FROM:
+  `node <F>/scripts/close-lint.mjs` from the hub root lints the hub and
+  prints the hub's adoption date, 2026-07-06, not this repo's 2026-10-26.
+  `npm test` here is light and takes no battery lock.
+- On Windows, a colon path through git takes `MSYS2_ARG_CONV_EXCL='*'`, and
+  no interpreter is fed by stdin.
+- On the Mac, the lid stays open while any fleet job runs (KB
+  `mac-standby-sleep-abandons-jobs`).
+- CI runs on GitHub-hosted runners only. No leg edits `.github/`, and only
+  leg 3 edits `scripts/`. A stranger's PR is never checked out.
+
+**Friction log:** `docs/friction-log-sprint3-ready-for-the-sitting.md`. Each
+leg appends its section, written for a stranger:
+- its context checkpoint: the plan's task count, compactions, forced
+  re-reads and lost-context defects;
+- each piece of friction it met;
+- each guard event with the guard's own banner line quoted whole and its
+  register class id beside the word "seat", so the hub's
+  `check-register-seats.mjs` can pair it (it read none of Sprint 2's, which
+  were written as prose). A seat note says "flagged" or "drew the arm",
+  never a verdict word, when a census line precedes the banner in its row (§
+  Roles).
+
+**Re-verify at execution** (each leg, before its first edit):
+- `git -C <F> log --oneline -3 origin/main` shows the previous leg's merge;
+- `git -C <F> config user.email` is Omid's GitHub noreply address;
+- `node scripts/close-lint.mjs` exits 0 and `npm test` is green on `main`;
+- `node scripts/reference-check.mjs` exits 0 on this box. A `MISSING file`
+  under `sources/` is fetched from its row's URL or copied (Sprint 2's D8);
+- the flip map's teeth read as the block says through the close runner
+  before the work;
+- the ASK-OMID register: any row an earlier leg filed, with its answer if
+  any;
+- leg 1 only: each finding's anchor above still reads as quoted.
+
+**Independent checks for the reviewer pass** (as Sprint 2's):
+- **leg 1's quotes against their sources:** the tag's `AWI_API.h` for
+  `logTimestamp`, and Smart Tracker's source read as live code, not comment
+  blocks (Sprint 2's F22); the eCFR's §2.803; PSIP p16 and p26; TMP117 p6
+  and p12; SWRA797 p14 and p17; MDN's Web NFC data;
+- **leg 1's arithmetic:** every re-priced margin reproduces from the study's
+  own inputs, by a script;
+- **the Chorus adopt-and-decline list** of `radio-and-location.md` and
+  `software-stack.md`, unchanged by leg 1 unless the leg says why;
+- **leg 2's prices:** a sample re-read at their URLs, any change since the
+  read date named as the date's, not as an error;
+- **leg 3's tests,** run against `main`'s script before the leg, red.
+
+**Verified-live at proposal** (2026-10-28, the session above, after its
+`date -u` read of 10:48:56Z, on Node v24.22.1):
+- `node scripts/close-lint.mjs`: `close-lint: ok (adopted 2026-10-26)`;
+  `npm test`: 17 of 17, exit 0, unpiped; `node scripts/reference-check.mjs`:
+  299 rows verified, exit 0.
+- **The close runner** at `9cb0127`: `lint` PASS, `legality-rules-cited`
+  PASS, `tiered-cost-doc` FAIL (the file is absent) and
+  `rebuild-spec-approved` FAIL (exit 1), each for its right reason.
+- **The test-arming reads**, through `classify()` over each leg's ledger:
+  the proposal and legs 1–3 read `docsOnly=false lintOnly=false`; a
+  notes-only wrap reads `docsOnly=true`.
+- **`fcc-ids-both-named`, executed against real files** through the close
+  runner (shell: Git Bash), after this session's `date -u` read of
+  10:57:11Z:
+  - on this PR's tree: FAIL (exit 1), the study naming `-2` alone;
+  - in a scratch worktree of `3770051` with `ZAT-1312PSIP-3` appended to
+    the study: PASS (exit 0);
+  - the same, with every `ZAT-1312PSIP-2` replaced: FAIL (exit 1).
+- **The parser,** `node <hub>/scripts/fleet-view/check-sprint-block.mjs
+  <hub> <plan> 3`, read this block as proposed, exit 0:
+  `{"found":true,"approvedDate":null,"executed":false,"reviewed":false,"declaredLegs":3,"legs":["2.1.10","2.1.6","2.1.11"],"legsSource":"structured","ambiguous":false,"sweptDate":"2026-10-28","problems":[]}`.
+- **The parser, as approved:** the same command over a scratch copy with an
+  approval pasted into the heading and the label line, exit 0:
+  `{"found":true,"approvedDate":"2026-10-28","executed":false,"reviewed":false,"declaredLegs":3,"legs":["2.1.10","2.1.6","2.1.11"],"legsSource":"structured","ambiguous":false,"sweptDate":"2026-10-28","problems":[]}`.
+
+**After the sprint:** the last leg's executor stamps the block as executed:
+the heading's stamp, the Executed record, and a line saying the review is
+pending. It then wraps. Then, in order:
+1. the Sprint 3 reviewer pass (FRESH);
+2. the decision sitting (Story 2.1.7), Omid's;
+3. Epic 2.1's close (Story 2.1.8, a FRESH closer).
 
 ## ASK-OMID register
 
@@ -83,12 +545,13 @@ Epic 2.1 is its only epic), and its close has filed the build initiatives.
 **Goal:** six study documents under `docs/study/`, each answering one part
 of spec §3, then the decision sitting and the approved rebuild spec.
 **Ordering:** 2.1.1 → 2.1.2 (Sprint 1 legs 4–5) → 2.1.9 → 2.1.3 → 2.1.4 →
-2.1.5 (Sprint 2) → 2.1.6 (proposed after Sprint 2's review) → 2.1.7 → 2.1.8.
+2.1.5 (Sprint 2) → 2.1.10 → 2.1.6 → 2.1.11 (Sprint 3) → 2.1.7 → 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
-The Sprint 2 review (2026-10-28) routes a fix-up of the three studies to the
-Sprint 3 proposal, ahead of 2.1.6: its findings can move a cell and the tags'
-listening budget (the archive's § Executed sprints › Sprint 2).
+The Sprint 2 review (2026-10-28) routes a fix-up of the three studies,
+Story 2.1.10, ahead of 2.1.6: its findings can move a cell and the tags'
+listening budget (the archive's § Executed sprints › Sprint 2). It routes
+F11's message fix, Story 2.1.11, after them.
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
@@ -339,6 +802,104 @@ means for the study).
 sketches the event schema the readers report (tag, reader, signal strength,
 time, payload), and answers its Chorus items one by one.
 
+#### Story 2.1.10: The Sprint 2 review's fixes to the three studies
+
+**Story:** As the decision sitting, I want the three technical studies to
+carry the Sprint 2 review's corrections, so that I decide on figures that
+hold and on the HF ruling Omid gave.
+**Context:** born 2026-10-28 by the Sprint 3 proposal, from the Sprint 2
+review's findings 1–5 and its five nits (tigerfid #41; the archive's
+§ Executed sprints › Sprint 2, its `**Reviewed:**` record). The review
+routed the studies' half of each here, ahead of Story 2.1.6. Each item says
+what the review MEASURED and what changes.
+- **Finding 1, `docs/study/software-stack.md`.**
+  - § Decided ahead of the sitting and its table row say "no space reserved"
+    for an HF interface on the seal's core. Omid's ruling in the review
+    replaces it: the core keeps an unfitted footprint for an NFC memory, its
+    I²C link and two antenna pads at the board's edge, and the coil lives in
+    the enclosure (Story 2.1.7's Context).
+  - § The seal's HF interface says "A web page reads NFC in one browser
+    only". MDN's data lists Web NFC in Chrome, Opera, Samsung Internet and
+    WebView on Android: still Android only, so milestone 1's no-HF decision
+    stands.
+  - The two "fitting option" lines are right as they stand.
+- **Finding 2, `docs/study/radio-and-location.md`.** It names FCC ID
+  ZAT-1312PSIP-2 alone. Its own pinned source points to ZAT-1312PSIP-3
+  (SWRA797 p14) and lists the -3 filings (p17). The study gains a pointer to
+  both IDs and to the browser read that Story 2.1.7 gives the sitting.
+- **Finding 3, `docs/study/parts-and-toolchains.md`.** The TMP117's ±0.1 °C
+  is specified at "8 averages, 1-Hz conversion cycle" (TMP117 p6), and its
+  factory setting averages eight conversions, 124 ms (p12). The study charges
+  one 15.5 ms conversion. At eight averages the review found [18]'s year
+  holding by 1.8 %, not 6 %, and [27]'s cold-chain item tag at a 12 s listen
+  by 1.4 %, not 5 %. The study either charges the setting that its cited
+  accuracy needs, or names the setting it charges and the accuracy that
+  setting has.
+- **Finding 4, `radio-and-location.md` § Zones and
+  `parts-and-toolchains.md` § The battery.** A tag listens only in "the slots
+  of the Field Generators it last heard", and no sentence says how it hears
+  one it has not heard before. INFERRED by the review: a tag carried into
+  such a room never listens in its slot, and both the 3.0 s move and [18]'s
+  battery assume it does. The study chooses the mechanism (Sprint 3's D3),
+  re-checks the move against [13], and re-prices the listening budget in
+  § Each worn tag's year and § [27] (Sprint 3's D2).
+- **Finding 5, two figures with no source or mark** (Sprint 2's D10):
+  - `parts-and-toolchains.md` § The toolchains: CMake and GNU make carry no
+    platform, install or licence entry; TI Arm Clang ("TI's free compiler")
+    and SysConfig carry "no price stated on the page". The sentence that
+    every tool's platforms are cited except the Arm GNU Toolchain's is then
+    untrue. The closer's `free-tools-three-platforms` needs this.
+  - `software-stack.md`'s wire-frame table measures the JSON form "against
+    921,600 baud", a figure with no source and no ASSUMED mark. The module's
+    UART runs at 3 MBaud (PSIP p26), and the USB bridge's limit is unread.
+    The study sources or marks the figure and says whether the binary frame
+    still wins (Sprint 3's D4).
+- **The five nits,** each MEASURED by the review:
+  - `software-stack.md` says the original's event "carries no time". Its
+    `rfTagEvent_t` has a `logTimestamp` member (`AWI_API.h` at the tag),
+    which Smart Tracker's source never reads. What the host lacked was a
+    time of hearing.
+  - `parts-and-toolchains.md` quotes §2.803(d)(2)(iv)'s notice as ending at
+    "FCC license holder". It goes on: "or must secure an experimental
+    authorization under part 5 of this chapter." The conclusion stands.
+  - `radio-and-location.md` calls a 500 kbit/s link "no worse by the
+    tables" at −95 dBm, from the CC1312R7's sheet. The chosen module's own
+    sheet prints −90 dBm under the same conditions (PSIP p16). The verdict
+    stands: it is declined for its certification.
+  - `parts-and-toolchains.md` says the radio study "counted only the sending
+    antenna". That study's table counted the Reader's +2 dBi too; the 21.8 dB
+    → 20.7 dB is that antenna's change to +0.90 dBi.
+  - `software-stack.md` twice calls 1,363 a second "[3]'s". [3] is 1,000
+    tags a second; 1,363 is the radio study's slot capacity.
+- **Predicates, not examples** (KB `plan-authoring-for-cold-execution` item
+  10, its review face). Each grep's hits are quoted in the PR body, each
+  with its disposition:
+
+  ```
+  grep -n -i -E 'space reserved|reserves no space|one browser' docs/study/*.md docs/project-plan.md
+  grep -n 'ZAT-1312PSIP' docs/study/*.md
+  grep -n -i -E '15\.5 ms|averag' docs/study/*.md
+  grep -n -E '921|222 %' docs/study/*.md
+  grep -n -i -E 'CMake|GNU make|no price stated|except the Arm' docs/study/*.md
+  grep -n -E "carries no time|\[3\]'s 1,363|no worse by the tables|counted only the sending|FCC license holder" docs/study/*.md
+  ```
+
+  And an old-value grep: each figure the re-pricing changes, grepped by its
+  old value across `docs/study/*.md` and `docs/project-plan.md`. Each hit is
+  refreshed, named current, or named frozen in a DONE story's Outcome.
+- **What stays.** No requirement number moves (Sprint 3's D1). A figure that
+  a dated pointer line in `requirements.md` quotes, and that this story
+  changes, gets a new dated pointer line. The three studies' choices and
+  Chorus verdicts stand unless a fix moves one, and the document then says
+  so. The Outcomes of Stories 2.1.3–2.1.5 are records and are not edited;
+  this story's tick names the figures it supersedes.
+**Done when:** each of findings 1–5 and the five nits is corrected in its
+document, or its sentence is shown correct with its source; finding 4's
+mechanism is stated, with its listening cost carried into every battery
+figure it moves; and the PR body quotes the story's greps with each hit's
+disposition (manifest tooth `fcc-ids-both-named` and prose check
+`studies-review-fixes`).
+
 #### Story 2.1.6: The tiered cost of milestone 1
 
 **Story:** As a beginner, I want the first build priced in starter, advanced
@@ -361,9 +922,54 @@ the advanced tool tier carries the vector network analyser
 each § What the choice leaves to later stories). A price page that refuses a
 plain request, as the FCC's, FTDI's and Microchip's pages did for the study
 (friction F8 and F13 of Sprint 2), is put to Omid early in the leg for a
-browser read, or written as not read.
+browser read, or written as not read. From the Sprint 3 proposal
+(2026-10-28), the block's D5–D8 bind the prices: US dollars from sellers'
+public pages, each cited with its URL and read date; both cells wherever the
+sitting chooses between them; a part the studies leave unnamed priced as a
+representative part, marked so; the refused pages put to Omid in one
+message; and the US build priced, with the parts that differ for the EU
+named.
 **Done when:** `docs/study/tiered-cost.md` carries the tables with a date on
 every price and a total per tier.
+
+#### Story 2.1.11: The reference check names the fetch route for the study's sources
+
+**Story:** As a builder setting up the reference folder on a new machine, I
+want the reference check to say that a missing `sources/` file may be
+fetched from its row's URL, so that I follow the corpus's own rule instead of
+looking for a machine to copy it from.
+**Context:** born 2026-10-28 by the Sprint 3 proposal, from Sprint 2's
+friction F11 (leg 2) and F18 (leg 4), which the review routed here as a
+story of its own (the archive's Sprint 2 record). MEASURED on `main`
+(`9cb0127`):
+- **What the check prints.** `scripts/reference-check.mjs` prints "(copy-only
+  — copy it, never move it, from a machine whose folder verifies)" for every
+  missing file row, and "copy-only: copy the folder whole, never move it, …"
+  for an absent folder. Its header comment says "File rows are copy-only:
+  the tool never fetches one".
+- **What the corpus's rule allows** for `sources/`:
+  - the header comment of `docs/reference-corpus.tsv`: "copy-only (never
+    re-fetched), except sources/, which may be fetched again from its url and
+    counts only once its bytes match the pin";
+  - `docs/reference-repos.md` § `sources/`: "On another machine: fetch each
+    file from its row's URL, or copy it from a machine whose folder
+    verifies. A fetched file counts only once its sha256 matches".
+- **The fix is the messages, not a fetcher** (Sprint 3's D11). The tool
+  still never fetches a file row (`docs/reference-repos.md`: "The tool never
+  fetches a file row").
+- **The tests,** in `scripts/reference-check.test.mjs`, written first and
+  seen red against `main`'s script:
+  - a missing `sources/` file names its row's URL, the sha256 rule and the
+    copy route;
+  - an absent `sources/` folder names the fetch route for its files;
+  - a missing file in another folder keeps the copy-only line.
+- `docs/ci-contract.md` needs no change: `test` already runs `node --test
+  scripts/reference-check.test.mjs`.
+**Done when:** the check's output for a missing `sources/` file and for an
+absent `sources/` folder names the fetch route, with the sha256 rule and the
+copy route as the alternative; every other file row's line is unchanged; and
+the tests above pass in `npm test` after failing before the fix, the PR body
+quoting the red run (manifest prose check `reference-check-sources-route`).
 
 #### Story 2.1.7: The decision sitting and the rebuild spec
 
@@ -404,7 +1010,7 @@ From the Sprint 2 review (2026-10-28):
   I²C link and two antenna pads at the board's edge. The coil lives in the
   enclosure, away from the module's antenna and its ground plane (SWRA797
   §3.1.2). Milestone 1 fits none of it. The study's Decided line still reads
-  "no space reserved" until the Sprint 3 fix-up corrects it.
+  "no space reserved" until Story 2.1.10 corrects it.
 - **The FCC grant read is the sitting's,** by Omid's hand in a browser: the
   grant pages of both FCC IDs in TI's documents, ZAT-1312PSIP-2 and -3,
   before the spec names an FCC ID or any part is bought
