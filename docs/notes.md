@@ -7,6 +7,36 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-28 — Sprint 3 leg 1 (Story 2.1.10, the studies' review fixes)
+
+- **Landed:** #45 → `4bd9694a` (GitHub's merge stamp 13:35:25Z), squash on
+  green, `--match-head-commit 678b0c1c…`. Story 2.1.10 is ticked in the
+  plan, `docs/close/2.1.json` carries its `reviewedFor` line, and the
+  friction log's § Leg 1 holds F5–F11 and the fresh-session read.
+- **Next:**
+  1. **Leg 2, Story 2.1.6**, the tiered cost, in a FRESH executor seat. Its
+     D7 message to Omid (the refused price pages) comes early in the leg.
+  2. **Leg 3, Story 2.1.11**, which touches `scripts/` and merges by Omid's
+     word. As the last leg, it stamps the sprint EXECUTED.
+  3. Then the Sprint 3 review, Story 2.1.7's sitting and Epic 2.1's close.
+- **Surprises / decisions:**
+  - **A relayed merge delegation was refused; a first-hand one passed.**
+    With the delegation relayed by the coordinator, the auto-mode
+    classifier refused `gh pr merge` [Merge Without Review] at the 11:55:00Z
+    read, and the leg held per the block's D12. Omid then gave the word in
+    this terminal himself, and the same command merged at 13:35:25Z. Each
+    face is MEASURED once; why the classifier tells them apart is not read.
+  - **Two requirements are unmet on paper, each with a route that meets
+    it.** [18] fails beyond 227 h a year in the corridor; [27] fails for a
+    cold-chain item tag on a CR2032. D2 applied: the studies recommend a
+    route (measure first, then a CR2450; a CR2450 on every cold-chain item
+    tag), so no ASK-OMID row. Story 2.1.7's sitting reads both.
+  - **The orders' leg-1 line cited plan line 246, the D9 seam, not the leg
+    line.** The whole story was executed (friction F5).
+- **Provenance:** Session id `0082985c-c964-4b27-a5c7-4592056265f0`, the
+  executor seat that followed a `/clear` of the Sprint 3 proposer's process
+  (the friction log's fresh-session read).
+
 ## Session: 2026-10-28 — the Sprint 3 proposal (approved, three legs)
 
 - **Landed:** #43 → `88d54034` (GitHub's merge stamp 11:02:31Z), squash by
@@ -67,44 +97,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **The fresh-session read:** session
     `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`, fresh by launch (its
     background-task path id is its own session id), and not elevated.
-
-## Session: 2026-10-28 — Sprint 2 leg 4 (Story 2.1.5, the software stack study) and the Sprint 2 stamp
-
-- **Landed:**
-  - #36 → `bbc791d7` (GitHub's merge stamp 00:35:02Z): squash by hand
-    under Omid's in-session delegation, `--match-head-commit b8f7608b…`.
-    `scope` and `test` were green on CI's first run. Story 2.1.5 ✅ DONE.
-    The tick, the study and #36's body (its greps, claims audit and checks)
-    are the record.
-  - #37 → `d59e1ae0` (GitHub's merge stamp 00:38:06Z), by hand on green:
-    the Sprint 2 block, stamped ✅ EXECUTED (2026-10-28), with its
-    **Executed:** record and `**Review:** PENDING`.
-  - #39 → `afb408c0` (GitHub's merge stamp 00:45:44Z), by hand on green,
-    after the first wrap: Omid's three decisions from the software study,
-    first-hand, ahead of the sitting.
-    - **The decisions:** Python for the host; no HF interface on milestone
-      1's seal, and no space reserved for one on its core; raw check-ins
-      kept 7 days by default.
-    - **Where they are recorded:** Story 2.1.7's Context and
-      `docs/study/software-stack.md` § Decided ahead of the sitting.
-- **Next:**
-  1. The Sprint 2 reviewer pass, in a FRESH seat (Omid's `/clear` after this
-     wrap lands). Its input is the block's "Open for the review" list, and
-     #39 landed after the stamp.
-  2. The Sprint 3 proposal: Story 2.1.6, with no D9 remainder.
-  3. Story 2.1.7, Omid's decision sitting. The software study leaves it
-     nothing open: it carries #39's three decisions into the spec.
-  4. Epic 2.1's close, Story 2.1.8.
-- **Surprises / decisions:**
-  - **This machine's corpus had no `sources/`.** All eight files, fetched
-    from their rows' URLs, matched their pins, and the check reads 299 rows
-    here (F18). The other machine has nothing new to fetch from leg 4.
-  - **The harness `grep` printed nothing,** not even a count, over a
-    non-UTF-8 source file of the original. `/usr/bin/grep -a` read it
-    (F19).
-  - **The research-log entry** rode #36 on Air Traffic Control's GRANT of
-    00:28:48Z (F21).
-  - **The fresh-session read:** session `a60005ee-b36d-474f-9f59-b2624330eb37`,
-    fresh by launch (its background-task path id is its own session id), and
-    not elevated.
 
