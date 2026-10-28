@@ -47,6 +47,15 @@ function fixture() {
 }
 
 const run = async (argv, root) => { const lines = []; const code = await main(argv, { root, log: (l) => lines.push(l) }); return { code, out: lines.join('\n') }; };
+const lineOf = (out, needle) => out.split('\n').find((l) => l.includes(needle));
+
+// Adds a sources/ row to a fixture: a study source, which the corpus lets a
+// builder fetch again from its URL (docs/reference-corpus.tsv's header).
+function withSource({ repo, folder }, name = 'sources/datasheet.pdf', url = 'https://example.invalid/datasheet.pdf') {
+  mkdirSync(join(folder, 'sources'), { recursive: true });
+  writeFileSync(join(folder, name), `the pinned bytes of ${name}\n`);
+  appendFileSync(join(repo, 'docs', 'reference-corpus.tsv'), `file\t${name}\t${url}\t${sha256(join(folder, name))}\tthird-party\tstudy-only\n`);
+}
 
 test('parseTsv skips comments and maps the header', () => {
   assert.deepEqual(parseTsv('# c\nkind\tname\r\ntree\ta\n'), [{ kind: 'tree', name: 'a' }]);
@@ -109,6 +118,54 @@ test('a moved tag and a present tree are never written over', async () => {
   const again = await run(['--folder', folder, '--recreate'], repo);
   assert.equal(again.code, 1);
   assert.match(again.out, /DRIFT {3}tree {3}orig/);
+});
+
+// Story 2.1.11: a sources/ file may be fetched again from its row's URL, so
+// the check names that route first and the copy as the alternative.
+test('a missing sources/ file names its row\'s URL, the sha256 rule and the copy route', async () => {
+  const f = fixture();
+  withSource(f);
+  rmSync(join(f.folder, 'sources', 'datasheet.pdf'));
+  const r = await run(['--folder', f.folder], f.repo);
+  assert.equal(r.code, 1);
+  const line = lineOf(r.out, 'MISSING file   sources/datasheet.pdf');
+  assert.ok(line, r.out);
+  assert.match(line, /fetch it from its row's URL, https:\/\/example\.invalid\/datasheet\.pdf/);
+  assert.match(line, /counts only once its sha256 matches the pin/);
+  assert.match(line, /copy it, never move it, from a machine whose folder verifies/);
+  assert.doesNotMatch(line, /copy-only/);
+});
+
+test('an absent sources/ folder names the fetch route for its files', async () => {
+  const f = fixture();
+  withSource(f);
+  withSource(f, 'sources/note.pdf', 'https://example.invalid/note.pdf');
+  withSource(f, 'sources/unlinked.pdf', '-');
+  rmSync(join(f.folder, 'sources'), { recursive: true });
+  const r = await run(['--folder', f.folder], f.repo);
+  assert.equal(r.code, 1);
+  const line = lineOf(r.out, 'MISSING folder sources/');
+  assert.ok(line, r.out);
+  assert.match(line, /sources\/ — 3 files; fetch each from its row's URL \(below\)/);
+  assert.match(line, /counts only once its sha256 matches the pin/);
+  assert.match(line, /copy the folder whole, never move it, from a machine whose folder verifies/);
+  assert.match(r.out, /^ {10}sources\/datasheet\.pdf {2}https:\/\/example\.invalid\/datasheet\.pdf$/m);
+  assert.match(r.out, /^ {10}sources\/note\.pdf {2}https:\/\/example\.invalid\/note\.pdf$/m);
+  assert.match(r.out, /^ {10}sources\/unlinked\.pdf {2}no URL in its row: copy it$/m);
+});
+
+test('a missing file elsewhere, or a sources/ row with no URL, keeps the copy-only line', async () => {
+  const f = fixture();
+  withSource(f, 'sources/unlinked.pdf', '-');
+  rmSync(join(f.folder, 'media', 'page.html'));
+  rmSync(join(f.folder, 'sources', 'unlinked.pdf'));
+  const r = await run(['--folder', f.folder], f.repo);
+  assert.equal(r.code, 1);
+  assert.equal(lineOf(r.out, 'media/page.html'), 'MISSING file   media/page.html (copy-only — copy it, never move it, from a machine whose folder verifies)');
+  assert.equal(lineOf(r.out, 'sources/unlinked.pdf'), 'MISSING file   sources/unlinked.pdf (copy-only — copy it, never move it, from a machine whose folder verifies)');
+  rmSync(join(f.folder, 'media'), { recursive: true });
+  const gone = await run(['--folder', f.folder], f.repo);
+  assert.equal(lineOf(gone.out, 'MISSING folder media/'), 'MISSING folder media/ — 1 files, copy-only: copy the folder whole, never move it, from a machine whose folder verifies');
 });
 
 test('the usage and an absent folder exit 2', async () => {

@@ -209,7 +209,9 @@ and 2 when the folder is absent or the usage is wrong.
 - `MISSING tree` — run `--recreate`.
 - `MISSING folder` / `MISSING file` — copy it, never move it, from a machine
   whose folder verifies. A file still served at its source may also be
-  re-fetched, but it only counts once its bytes match the pin.
+  re-fetched, but it only counts once its bytes match the pin. For
+  `sources/`, the line names that route first, with each file's URL from its
+  row, and the copy second (§ `sources/`).
 - `DRIFT tree` lists each path `missing`, `changed` or `extra`. `DRIFT file`
   means the bytes are not the pin's. Never edit a corpus file; copy it again.
 - `UNPINNED file` — a file is in a pinned folder without a row. Add the row

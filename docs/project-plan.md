@@ -962,7 +962,15 @@ named.
 **Done when:** `docs/study/tiered-cost.md` carries the tables with a date on
 every price and a total per tier.
 
-#### Story 2.1.11: The reference check names the fetch route for the study's sources
+#### Story 2.1.11: The reference check names the fetch route for the study's sources — ✅ DONE (2026-10-28)
+
+**Completed:** 2026-10-28 — tigerfid #50 (branch `story-2.1.11-sources-fetch-route`, pre-tick head `e663b8fd`).
+**Outcome:** `scripts/reference-check.mjs` names the fetch route for the study's sources. The tool still never fetches a file row (Sprint 3's D11).
+- **A missing `sources/` file:** "fetch it from its row's URL, <the URL>; it counts only once its sha256 matches the pin. Or copy it, never move it, from a machine whose folder verifies".
+- **An absent `sources/` folder:** the same route, then one line per file with its row's URL.
+- **Every other folder keeps its copy-only line,** and so does a `sources/` row with no URL.
+- **Three tests pin the cases** in `scripts/reference-check.test.mjs`. The first two failed against `main`'s script. The third pins the unchanged lines, so it passed there by design. `npm test` reads 20 of 20.
+- `docs/reference-repos.md` § Verifying a transfer names the route. The folder README's stub still says "the other two folders travel by copy only", stale since Story 2.1.3 added `sources/`. It is left for the review (friction F17): editing the stub makes every machine's folder README a finding until `--write-stub` runs there.
 
 **Story:** As a builder setting up the reference folder on a new machine, I
 want the reference check to say that a missing `sources/` file may be
