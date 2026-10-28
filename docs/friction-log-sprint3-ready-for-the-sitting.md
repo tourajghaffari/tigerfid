@@ -67,7 +67,7 @@ defect.
 - `piped-checker-exit` seat: the session's first `git fetch origin` in this
   repo was piped into `tail`, with no banner. The fetch was read after it by
   `git rev-list --count HEAD..origin/main`: 0.
-- `cwd-drift` seat: eight calls that opened with a `cd` into this repo or its
+- `cwd-drift` seat: nine calls that opened with a `cd` into this repo or its
   `docs/study/` each drew "cwd-drift guard (warn, not a block)", and the calls
   after them drew its second arm. Every git command carried `git -C` with the
   literal path or ran after a `cd` in the same call; none ran in the wrong
