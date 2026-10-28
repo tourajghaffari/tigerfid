@@ -298,7 +298,8 @@ these two licences as unread.
 
 The prices are the pages' `data-price` values. INFERRED: they are US
 dollars, since the pages' exchange-rate table is quoted against the dollar.
-Story 2.1.6 prices the rest and dates every price again.
+Story 2.1.6 prices the rest and dates every price again. It read these
+three again on 2026-10-28 at the same prices (`tiered-cost.md`).
 
 **Recommended: the LP-XDS110ET**, one per builder. INFERRED: the
 requirements test battery life by "the tag's measured average current
@@ -630,7 +631,8 @@ footprint for one with the coil off the core (`software-stack.md`
   on all three platforms.
 - **Story 2.1.6:** the prices of every part named here, the assembly routes
   for the module's 0.5 mm-pitch land grid (`radio-and-location.md`), and
-  the tool tiers, the vector network analyser among them.
+  the tool tiers, the vector network analyser among them. Priced in
+  `tiered-cost.md` (2026-10-28), where the W5017's price is not read.
 - **Story 2.1.7:** the sitting decides:
   - one core or three;
   - the item tag's cell: the CR2450 recommended on cold-chain tags, where a

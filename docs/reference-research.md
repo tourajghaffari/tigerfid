@@ -319,6 +319,37 @@ and `docs/study/software-stack.md`).
 - **Refused, not read:** GNU's own make page (the connection reset twice;
   the mirror stood in), and Arm's GNU toolchain page (HTTP 403).
 
+### Story 2.1.6 — the tiered cost (2026-10-28)
+
+What was read is cited in `docs/study/tiered-cost.md` § Sources, which a
+later session reads before searching again. No source is pinned: no choice
+rests on a price page (plan Sprint 2's D8).
+
+- **KEPT, cited by URL and read date, not pinned:** the sellers' public
+  price pages, each read once by a plain request:
+  - TI's product pages for the module, the sensor, the regulator and the
+    relay driver, and its tool pages for the two debuggers and the
+    development board (each page's own price list);
+  - LCSC's product pages for the chip antenna, the connectors, the USB
+    bridge, the relay, the cell holders and the passives (its US-dollar
+    ladders);
+  - Adafruit's product and search pages for the cells, the enclosure, the
+    supplies, the cable and the hand tools; PINE64's Pinecil page;
+    AmScope's, Fluke's and R&L Electronics' product pages; RTL-SDR Blog's
+    store page;
+  - OSH Park's 4-layer service page, and JLCPCB's assembly price page and
+    assembly FAQ.
+- **Refused, or priced by script only, and written not read** by Omid's
+  word ("Write all as not read (Recommended)", the study's § What was read):
+  Digi-Key's W5017 page (and Mouser's, Arrow's and Newark's), JLCPCB's
+  instant quote and parts search, Hakko USA's pages and Jameco's.
+- **Refused, not needed:** Chip Quik's store and JBC's US pages (HTTP 403).
+- **LCSC answered a quick run of requests with a challenge page.** Read
+  again with 15 s between requests, each page answered. Nothing about the
+  request was changed but its pace.
+- **Searched, not found:** a seller's page that prices a USB barcode
+  scanner (Adafruit's search lists none).
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -357,3 +388,8 @@ a verdict here.
 - **2026-10-28:** Story 2.1.10's reads for the Sprint 2 review's fixes
   (§ 4, above). No search was run: each read went to a source a finding
   cited, or to the maker's page of a tool a finding named.
+- **2026-10-28:** Story 2.1.6's price reads (§ 4, above). Web searches
+  found the sellers' pages, and each price was then read from the page
+  itself, never from a search result. The search ideas for 2.1.6 above are
+  answered there: a dated price for each part, the board and assembly
+  services, each tool tier and the bench's receiver.
