@@ -44,7 +44,22 @@ defect.
   records no none-qualified line". The review sent its seats to Air Traffic
   Control as text. The block hands the census to the closer (Story 2.1.8).
 
+- **F4 — `close-lint` by absolute path from the hub linted the hub.** The
+  proposal's commit gate ran `node <F>/scripts/close-lint.mjs` from the hub
+  root, and it printed "close-lint: ok (adopted 2026-07-06)", the hub's
+  adoption date, not this repo's 2026-10-26: the script reads the repo it is
+  run from. The same chain's `npm --prefix <F> test` ran this repo's own
+  close-lint ("adopted 2026-10-26", 17 of 17), so the gate held. Cost: one
+  re-read. Fixed in the block's § Paths and habits, so a hub-rooted executor
+  is told.
+
 **Guard events:**
+- The commit guard, class id not known: the first commit, with `git -C
+  "$F"` (a shell variable), was refused with "Hub guardrail: never commit on
+  main", because the guard "could not be resolved to a branch (shell-variable
+  or not-yet-created path)" and judged the hub's own `main`. Re-run with the
+  literal path, it committed on `sprint-3/proposal`. The block's § Paths and
+  habits now says so.
 - `piped-checker-exit` seat: this proposal's first `npm test` read was piped
   into `tail` and drew the guard, "piped-checker guard (warn, not a block)".
   Its `PIPESTATUS[0]` read 0, and the run was repeated unpiped into a scratch

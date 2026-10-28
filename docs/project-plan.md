@@ -421,8 +421,12 @@ Paths and habits:
   (`mkdir -p` first; on Windows `$TMPDIR` is unset).
 - Checkers run unpiped, and a census never reads through `head`, `tail` or
   `cut`. Long files are written with the Write tool. `git -C` takes the
-  literal path, and `npm --prefix <F>` runs the repo's scripts without a
-  `cd`. `npm test` here is light and takes no battery lock.
+  literal path, never a shell variable (the commit guard cannot resolve one
+  and judges the session's own checkout). `npm --prefix <F> test` runs the
+  repo's checks without a `cd`. `close-lint` lints the repo it is run FROM:
+  `node <F>/scripts/close-lint.mjs` from the hub root lints the hub and
+  prints the hub's adoption date, 2026-07-06, not this repo's 2026-10-26.
+  `npm test` here is light and takes no battery lock.
 - On Windows, a colon path through git takes `MSYS2_ARG_CONV_EXCL='*'`, and
   no interpreter is fed by stdin.
 - On the Mac, the lid stays open while any fleet job runs (KB
@@ -478,6 +482,19 @@ leg appends its section, written for a stranger:
 - **The test-arming reads**, through `classify()` over each leg's ledger:
   the proposal and legs 1–3 read `docsOnly=false lintOnly=false`; a
   notes-only wrap reads `docsOnly=true`.
+- **`fcc-ids-both-named`, executed against real files** through the close
+  runner (shell: Git Bash), after this session's `date -u` read of
+  10:57:11Z:
+  - on this PR's tree: FAIL (exit 1), the study naming `-2` alone;
+  - in a scratch worktree of `3770051` with `ZAT-1312PSIP-3` appended to
+    the study: PASS (exit 0);
+  - the same, with every `ZAT-1312PSIP-2` replaced: FAIL (exit 1).
+- **The parser,** `node <hub>/scripts/fleet-view/check-sprint-block.mjs
+  <hub> <plan> 3`, read this block as proposed, exit 0:
+  `{"found":true,"approvedDate":null,"executed":false,"reviewed":false,"declaredLegs":3,"legs":["2.1.10","2.1.6","2.1.11"],"legsSource":"structured","ambiguous":false,"sweptDate":"2026-10-28","problems":[]}`.
+- **The parser, as approved:** the same command over a scratch copy with an
+  approval pasted into the heading and the label line, exit 0:
+  `{"found":true,"approvedDate":"2026-10-28","executed":false,"reviewed":false,"declaredLegs":3,"legs":["2.1.10","2.1.6","2.1.11"],"legsSource":"structured","ambiguous":false,"sweptDate":"2026-10-28","problems":[]}`.
 
 **After the sprint:** the last leg's executor stamps the block as executed:
 the heading's stamp, the Executed record, and a line saying the review is
