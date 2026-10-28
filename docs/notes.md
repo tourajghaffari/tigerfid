@@ -7,6 +7,44 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-28 — Sprint 3 leg 2 (Story 2.1.6, the tiered cost)
+
+- **Landed:** #48 → `3d27bb01` (GitHub's merge stamp 21:39:52Z), squash on
+  green, `--match-head-commit 208db34e…`. `docs/study/tiered-cost.md` is the
+  state: Story 2.1.6 is ticked in the plan, `docs/close/2.1.json` carries its
+  `reviewedFor` line, and the friction log's § Leg 2 holds F12–F16 and the
+  fresh-session read.
+- **Next:**
+  1. **Leg 3, Story 2.1.11**, the reference check's `sources/` message, in a
+     FRESH executor seat. It touches `scripts/` and merges by Omid's word.
+     As the last leg, it stamps the sprint EXECUTED.
+  2. Then the Sprint 3 review, Story 2.1.7's sitting and Epic 2.1's close.
+- **Surprises / decisions:**
+  - **Five prices are not read, by Omid's word.** First-hand in this
+    terminal, between its `date -u` reads of 14:42:21Z and 15:59:59Z: "Write
+    all as not read (Recommended)". They are the W5017 whips, JLCPCB's
+    boards, the module's sourcing at JLCPCB, the pro iron and the tag
+    enclosures. Every total names them, and the sitting may read them in a
+    browser.
+  - **Eight sellers refuse a plain request** (MEASURED, HTTP 403): Digi-Key,
+    Mouser, Arrow, Newark, Hakko USA, Jameco, Chip Quik and JBC. LCSC
+    answered a quick run with a challenge page, and every page at 15 s
+    apart. A later price read can start from those two facts (friction F12,
+    F14).
+  - **The relayed merge delegation was refused again; a first-hand word
+    passed.** The auto-mode classifier refused `gh pr merge` [Merge Without
+    Review] at the 16:14:10Z read. The leg held and told Air Traffic Control.
+    Omid answered "Merge it now (Recommended)" between this terminal's reads
+    of 16:14:30Z and 21:39:50Z, and the same command merged. MEASURED twice
+    now (legs 1 and 2), so leg 3's Omid-word merge needs his line in its own
+    terminal.
+  - **The bench's receiver is the tinySA.** RTL-SDR Blog's store page no
+    longer lists the plain V4, and the V4L's page prints no upper range
+    (F15).
+- **Provenance:** Session id `293fce01-04ef-47ce-b16f-5288623c6019`, the
+  executor seat that followed a `/clear` of the leg-1 executor's process
+  (the friction log's fresh-session read).
+
 ## Session: 2026-10-28 — Sprint 3 leg 1 (Story 2.1.10, the studies' review fixes)
 
 - **Landed:** #45 → `4bd9694a` (GitHub's merge stamp 13:35:25Z), squash on
@@ -66,35 +104,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     `4ef9427a-246a-42f9-98aa-be892d938900`. Its background-task path id,
     `2a0782f7-…`, was the Sprint 2 reviewer pass's process, so a `/clear`
     came before it. It ran without elevation.
-
-## Session: 2026-10-28 — the Sprint 2 reviewer pass (every leg PASS; six findings)
-
-- **Landed:** #41 → `53abe343` (GitHub's merge stamp 10:39:16Z), squash by
-  hand on green under Omid's in-session sentence, `--match-head-commit
-  335ffd16…`. The Sprint 2 block is now in the archive's § Executed sprints,
-  with its `**Reviewed:**` record. That record is the state; this note is
-  the delta.
-- **Next:**
-  1. **The Sprint 3 proposal,** in a FRESH seat. Its input is the record's
-     routed list:
-     - a fix-up story for the three studies (findings 1–5 and five nits),
-       ahead of Story 2.1.6;
-     - then 2.1.6;
-     - then F11's message fix, as its own story.
-  2. **Story 2.1.7's sitting.** Its Context now carries Omid's HF footprint
-     ruling, the FCC grant read (both IDs, in his browser), the parts study's
-     open items and the studies' build-initiative items.
-  3. **Epic 2.1's close,** Story 2.1.8.
-- **Surprises / decisions:**
-  - **Omid changed one of #39's three decisions** in this pass, asked as a
-    question of commercial viability: "Reserve footprint, coil off-core
-    (Recommended)". The core keeps an unfitted NFC footprint and two antenna
-    pads, with the coil in the enclosure. `docs/study/software-stack.md`
-    still reads "no space reserved" until the fix-up corrects it.
-  - **The hub's Item-8 check reads only a section titled "Item-8 anchor
-    grep".** The legs' "Item-8 greps" sections read as nothing to it
-    (friction R1).
-  - **The fresh-session read:** session
-    `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`, fresh by launch (its
-    background-task path id is its own session id), and not elevated.
 
