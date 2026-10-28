@@ -314,3 +314,122 @@ defect.
   a facts-only docs PR by leg 4's seat.
 - **The checkpoint for the execution:** no compaction, no forced re-read
   and no lost-context defect across the four legs.
+
+## Reviewer pass (2026-10-28)
+
+Run by the hub-rooted Windows session "tigerfid Sprint 2 review" (session
+`2a0782f7-f632-4bab-b967-a9cfbfe1ba93`), on Air Traffic Control's orders of
+10:00:08Z. It was fresh by launch: its background-task path id is its own
+session id, so no earlier process was cleared. Not elevated. The
+adjudication is the `**Reviewed:**` record in
+`docs/archives/project-plan-completed.md` § Executed sprints › Sprint 2.
+
+**Context checkpoint:** four read-only readers, one per leg, then the pass's
+own re-measurement of every Important candidate. No compaction, no forced
+re-read, no lost-context defect.
+
+**The register-seat run, quoted whole** (hub
+`scripts/fleet/check-register-seats.mjs`, from the hub root):
+
+```
+register-seats: Sprint 2, "The study makes its choices" — projects/tigerfid/docs/friction-log-sprint2-the-study-makes-its-choices.md against docs\friction\recurrences.json (618 classes)
+register-seats: 0 banner line(s) read in 4 section(s) (leg 1, leg 2, leg 3, leg 4); 0 paired, 0 UNPAIRED — WARN — never a failure
+```
+
+It read no banner because the legs wrote each guard event as prose ("warned
+once"). Read row by row against the register, six events of legs 1–3 had no
+seat. Leg 4's seats, sent as text with its DONE line, are all there.
+
+**The Item-8 run.** Over the four leg PR bodies it read nothing at first
+("no Item-8 anchor grep section"), because the bodies title the section
+"Item-8 greps". Re-run over copies with that one heading renamed, quoted
+whole (the copies' scratch paths shortened to their names):
+
+```
+item8-dispositions: pr-29-item8.md — 14 disposition(s), 2 current, 1 named
+  NAMED (no quoted line): `2.1.json` 9: the proposal's `reviewedFor` line, **frozen**. 10: this PR's line, **refreshed**. 134: `original-system-review-fixes`, **current** (its three corrections and its three files match the fix).
+item8-dispositions: pr-31-item8.md — 23 disposition(s), 4 current, 4 named
+  NAMED (no quoted line): plan 72, 146: the approved Sprint 2 block, **current**;
+  NAMED (no quoted line): `2.1.json` 53, 85: the two teeth's notes, **current**;
+  NAMED (no quoted line): `2.1.json` 106, 139: `legality-and-modules` and `legal-texts-read-dated`, **current**. The study answers each.
+  NAMED (no quoted line): **current:** plan 256 (D7), 453 and 456 (the Ordering line), and 666 (Story 2.1.5's Context, which this study's § The seal's HF interface answers on the radio side);
+item8-dispositions: pr-33-item8.md — 33 disposition(s), 7 current, 3 named
+  NAMED (no quoted line): plan 74, 160: the approved Sprint 2 block, **current**;
+  NAMED (no quoted line): `2.1.json` 62: the tooth's note, **current**.
+  NAMED (no quoted line): **current:** 256 (D7), 453 and 455 (the Ordering line);
+item8-dispositions: pr-36-item8.md — 26 disposition(s), 5 current, 5 named
+  NAMED (no quoted line): plan 76 and 176: the approved Sprint 2 block, **current**;
+  NAMED (no quoted line): `2.1.json` 71: the tooth's note, **current**.
+  NAMED (no quoted line): 536 and 544: **current**, fulfilled (the HF option; the CDC port in § The stack on three platforms);
+  NAMED (no quoted line): 23 and 62: § 1's and § 3's records, **current**. The 2.1.5 reading is recorded in § 4's new entry.
+  NAMED (no quoted line): 306: the 2.1.5 search ideas, **current**, answered at 323–324.
+item8-dispositions: 4 body reads, 13 named — WARN, never a failure
+```
+
+Each NAMED line is a `current` disposition that cites its line without
+quoting it. The block's merge-loop item 3 asked only for "each hit's
+disposition", while the class's rider asks for a quote. One seat per leg
+PR, as the class's earlier seats were counted. No judged line was found
+false by the readers, but the quote is what lets the next reader see that.
+
+**Register seats, sent as text to Air Traffic Control by class id:**
+1. `piped-checker-exit`: leg 1 (#29), a `git pull` piped into `tail`.
+2. `piped-checker-exit`: leg 1 (#29), `npm test` piped into `grep` after a
+   `;`-chained `close-lint`, in a re-verify read.
+3. `piped-checker-exit`: leg 2 (#31), the close runner piped into `grep`.
+4. `cwd-drift`: leg 3 (#33), a `cd` into the reference folder for a PDF
+   conversion.
+5. `county-site-waf-refuses-the-probe`: leg 3 (#33, F13). The FCC's search,
+   two mirrors, FTDI and Microchip answered HTTP 403, and again on a second
+   network route.
+6. `multi-column-pdf-misread`: leg 3 (#33, F17), three tables scrambled as
+   text, settled by a raw-order extraction.
+7. `item-8-anchor-grep-misses-falsified-claims`, the rider face: leg 1
+   (#29), one `current` disposition cited without a quote.
+8. The same, leg 2 (#31): four.
+9. The same, leg 3 (#33): three.
+10. The same, leg 4 (#36): five.
+11. `piped-checker-exit`: this pass, `git merge --ff-only origin/main`
+    piped into `tail`. The fast-forward was read after it by `git
+    rev-parse`: the checkout and `origin/main` both at `4a7964f5`.
+12. `piped-checker-exit`: this pass's leg 2 reader, a `$?` read after a
+    piped privacy grep, re-run unpiped with `grep -c` (0 and 0).
+13. `cwd-drift`: this pass. Five `cd`s into this repo from the hub root
+    each drew the warning. No command ran in the wrong repository: every git
+    command carried `git -C` with the literal path.
+14. `cwd-drift-guard-warns-on-a-subshell-cd`: this pass, each call that ran the
+    repo's checks from a `( cd … )` subshell, which cannot move the shell.
+15. A new face, class id not known: a decision record that says more than
+    the written recommendation it cites (#39's "no space reserved" beside the
+    study's "stays a fitting option"; the review's finding 1).
+
+**Not seats, with the reason:**
+- F7: an edit whose search text began mid-line, one retry; no class.
+- F12: an identifier that needs URL-encoding; a few minutes.
+- F14: an API that now asks for compression; the research log records it.
+- F16: a paragraph number from memory, caught by the leg's own claims check.
+  D6 already asks for the fetched text.
+- F18: D8's fetch route worked as written.
+- F20: script-rendered tables, read from MDN's data instead.
+
+**Friction met by this pass:**
+- **R1. An Item-8 section under another title reads as absent.** The check
+  looks for one heading, and every leg titled its section "Item-8 greps"
+  (the block's merge-loop line never named the heading). Its "nothing read"
+  is easy to take as "nothing to judge". Suggested fix, for the next block's
+  merge-loop line: name the heading "Item-8 anchor grep", and ask each
+  `current` disposition to quote its line.
+- **R2. A reader's word is not the record's.** Each reader's measurement
+  that the record relies on was re-run by this pass first: the leg 3
+  arithmetic script, the leg 4 quote, privacy and live-or-comment scripts,
+  the reference-folder counts, the TMP117 pages, SWRA797's pages, the eCFR's
+  §2.803 and MDN's Web NFC data. The re-run mattered once: the privacy probe
+  printed ten values "IN-DOC", and each, read in context, was a common word,
+  an identifier, "localhost" inside a quote or a file's name. Taken bare,
+  that line reads as a leak.
+- **R3. The question to Omid was framed by the record, not by the goal.** It
+  asked which wording the record should hold. Omid asked instead which
+  choice best serves a system viable in commercial settings. The pass
+  answered on those merits, with the cost and the risk, then asked again.
+  Cost: one round. Suggested fix: a design decision put to Omid states the
+  goal it serves and the recommendation for that goal.
