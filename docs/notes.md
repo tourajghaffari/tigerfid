@@ -18,13 +18,21 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - #37 → `d59e1ae0` (GitHub's merge stamp 00:38:06Z), by hand on green:
     the Sprint 2 block, stamped ✅ EXECUTED (2026-10-28), with its
     **Executed:** record and `**Review:** PENDING`.
+  - #39 → `afb408c0` (GitHub's merge stamp 00:45:44Z), by hand on green,
+    after the first wrap: Omid's three decisions from the software study,
+    first-hand, ahead of the sitting.
+    - **The decisions:** Python for the host; no HF interface on milestone
+      1's seal, and no space reserved for one on its core; raw check-ins
+      kept 7 days by default.
+    - **Where they are recorded:** Story 2.1.7's Context and
+      `docs/study/software-stack.md` § Decided ahead of the sitting.
 - **Next:**
   1. The Sprint 2 reviewer pass, in a FRESH seat (Omid's `/clear` after this
-     wrap lands). Its input is the block's "Open for the review" list.
+     wrap lands). Its input is the block's "Open for the review" list, and
+     #39 landed after the stamp.
   2. The Sprint 3 proposal: Story 2.1.6, with no D9 remainder.
-  3. Story 2.1.7, Omid's decision sitting. It now also decides Python or
-     Node.js, the seal's HF interface, and how long raw check-ins are kept
-     (2.1.7's dated Context sentence).
+  3. Story 2.1.7, Omid's decision sitting. The software study leaves it
+     nothing open: it carries #39's three decisions into the spec.
   4. Epic 2.1's close, Story 2.1.8.
 - **Surprises / decisions:**
   - **This machine's corpus had no `sources/`.** All eight files, fetched
