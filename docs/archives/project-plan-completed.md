@@ -83,7 +83,7 @@ repo-rooted executor seat on Air Traffic Control's orders. None was elevated.
     - the grant-list omission;
     - a comment read as live code.
 
-**Reviewed:** 2026-10-28, by the Sprint 2 reviewer pass (tigerfid #PRNUM). The
+**Reviewed:** 2026-10-28, by the Sprint 2 reviewer pass (tigerfid #41). The
 pass was the hub-rooted Windows session "tigerfid Sprint 2 review" (session
 `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`), on Air Traffic Control's orders of
 10:00:08Z. It was fresh by launch: its background-task path id is its own

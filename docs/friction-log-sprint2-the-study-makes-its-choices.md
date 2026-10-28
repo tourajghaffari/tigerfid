@@ -397,7 +397,7 @@ false by the readers, but the quote is what lets the next reader see that.
 13. `cwd-drift`: this pass. Five `cd`s into this repo from the hub root
     each drew the warning. No command ran in the wrong repository: every git
     command carried `git -C` with the literal path.
-14. `cwd-drift-guard-warns-on-a-subshell-cd`: this pass, two calls with the
+14. `cwd-drift-guard-warns-on-a-subshell-cd`: this pass, three calls with the
     `cd` inside a `( … )` subshell, which cannot move the shell.
 15. A new face, class id not known: a decision record that says more than
     the written recommendation it cites (#39's "no space reserved" beside the
