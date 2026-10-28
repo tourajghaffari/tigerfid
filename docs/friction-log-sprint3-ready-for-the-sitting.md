@@ -217,3 +217,75 @@ and not above it. No compaction, no forced re-read, no lost-context defect.
 - `piped-checker-exit` seat: the session's first `git fetch origin` in this
   repo was piped into `tail`, with no banner. The fetch was read after it by
   `git rev-list --count HEAD..origin/main`: 0.
+
+## Leg 3 — Story 2.1.11 (2026-10-28)
+
+Executed by the hub-rooted Windows session "Windows 4" (session
+`13efb2b1-ddbf-4cd6-824f-74b58f5302ce`), on the Mac coordinator's orders 4,
+composed after its `date -u` read of 22:56:18Z. **The fresh-session read:** a
+fresh launch, not a `/clear`: the background-task path id is the session id
+itself. Not elevated: a Windows administrator-role read, `False`, at
+23:02:01Z.
+
+**The merge word:** Omid, first-hand in this terminal, after its UTC clock
+read of 23:02:01Z and before its `date -u` read of 23:03:44Z: "Please merge
+any PRs you open during this session when ready and in the riught order."
+It came at the leg's start, so the leg did not wait for it, as legs 1 and 2
+did.
+
+**Context checkpoint:** the plan was five tasks: the block's four (the red
+tests; the messages and the header comment; the item-8 grep over the corpus
+documents; the tick and the PR) and the sprint's EXECUTED stamp. No
+compaction, no forced re-read, no lost-context defect.
+
+- **F17 — The folder README's stub counts two copied folders, not three.**
+  `docs/reference-readme-stub.md` says "the other two folders travel by copy
+  only". Story 2.1.3 added `sources/` as a third, and § `sources/` lets its
+  files be fetched. The stub is outside leg 3's ledger, and editing it has a
+  cost: the check compares each machine's folder README with the stub byte
+  for byte, so every machine reads `README stale-stub`, a finding, until
+  `--write-stub` runs there once. Cost now: none. Suggested fix, recommended:
+  the next story that edits the corpus documents also rewrites that sentence
+  ("`activewaveinc/` and `chorus/` travel by copy only; `sources/` is fetched
+  from its rows' URLs or copied"), and runs `--write-stub` on each machine in
+  the same sitting. That costs one command per machine, and a stranger then
+  reads the same route in the folder as in the repo.
+- **F18 — A test-first rule meets a test that pins what must not change.**
+  The story asks for its three tests "seen red against `main`'s script". The
+  third, "a missing file in another folder keeps the copy-only line", cannot
+  fail there, since `main` already prints that line; it guards against the
+  fix changing it. The red run read two of three red, and the PR body says
+  so. Suggested fix: a story's red-first line names which of its tests are
+  pins expected green before the fix.
+- **F19 — A census read through a cut, caught before use.** The leg's first
+  document-name grep, `grep -rn "reference-check.mjs" docs/`, printed its
+  count (23) but passed each line through `awk` to its first 40 characters.
+  No disposition was written from it. It was run again whole into a file
+  and read in full. `truncated-read-taken-as-source-extent` seat.
+- **F20 — The line after a fetch that does not match.** When a vendor has
+  revised a document behind the same URL, a fetched `sources/` file reads
+  `DRIFT file … its sha256 is not the pin`. § `sources/` says what that
+  means (a newer revision; copy the pinned bytes instead), but the line does
+  not. It is outside this story's Done-when, which covers the missing lines
+  only. Suggested fix, recommended for the build initiatives' first story
+  that adds `sources/` rows: one more branch in the same message (the
+  revision, then the copy route) and one test. The cost is about ten lines.
+  The benefit is that a builder who fetched a revised datasheet is told what
+  to do, and the risk is nil, since the tool still fetches nothing.
+
+**Guard events:**
+- `cwd-drift` seat: the calls that opened with a `cd` into this repo drew
+  "cwd-drift guard (warn, not a block)", and the calls after them drew its
+  second arm. Every git command carried `git -C` with the literal path; none
+  ran in the wrong repository.
+- The staleness-sweep hook, class id not known: each edit of a swept file
+  drew "This file was verified by Sprint 3's staleness sweep (swept
+  2026-10-28). Your edit may decay its pre-verified facts — re-verify or
+  annotate the block (KB sprint-proposal-standard step 2)." The edits were
+  the leg's own: the script and its tests, the message list in
+  `docs/reference-repos.md`, the tick and the manifest line.
+- The marker hook, class id not known: the first write drew "Widen the
+  marker so concurrent sessions can see this work. Run from <hub>: node
+  scripts/fleet-view.mjs --declare tigerfid" (the hub's path written here as
+  `<hub>`). The command ran and printed "marker declared: … repos:
+  tigerfid".
