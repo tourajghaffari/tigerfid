@@ -7,6 +7,36 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-28 — the Sprint 3 proposal (approved, three legs)
+
+- **Landed:** #43 → `88d54034` (GitHub's merge stamp 11:02:31Z), squash by
+  hand on green under the session's merge delegation, `--match-head-commit
+  10906b17…`. The Sprint 3 block is the state: `docs/project-plan.md`
+  § Sprint 3, approved by Omid first-hand between this terminal's `date -u`
+  reads of 10:59:30Z and 11:00:38Z ("Approve as proposed (Recommended)").
+- **Next:**
+  1. **Leg 1, Story 2.1.10**, the Sprint 2 review's fixes to the three
+     studies, in a FRESH executor seat. The block's kickoff is baked; read
+     the touched-file ledger for the grants.
+  2. **Leg 2, Story 2.1.6**, the tiered cost, after leg 1 merges. Its D7
+     message to Omid (the refused price pages) comes early in the leg.
+  3. **Leg 3, Story 2.1.11**, the reference check's `sources/` message. It
+     touches `scripts/`, so it merges by Omid's word.
+  4. Then the Sprint 3 review, Story 2.1.7's sitting and Epic 2.1's close.
+- **Surprises / decisions:**
+  - **`close-lint` lints the repo it is run from.** Run by absolute path
+    from the hub root, it linted the hub ("adopted 2026-07-06"). `npm
+    --prefix <F> test` linted this repo. The block's § Paths and habits says
+    so (friction F4).
+  - **The commit guard cannot resolve `git -C "$VAR"`** and judged the hub's
+    `main`; a literal path committed.
+  - **The close runner prints "REVIEW SEATING MISSING" for Sprint 2's
+    review.** It is the closer's census (Story 2.1.8), noted in the block.
+  - **The fresh-session read:** session
+    `4ef9427a-246a-42f9-98aa-be892d938900`. Its background-task path id,
+    `2a0782f7-…`, was the Sprint 2 reviewer pass's process, so a `/clear`
+    came before it. It ran without elevation.
+
 ## Session: 2026-10-28 — the Sprint 2 reviewer pass (every leg PASS; six findings)
 
 - **Landed:** #41 → `53abe343` (GitHub's merge stamp 10:39:16Z), squash by
@@ -77,38 +107,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **The fresh-session read:** session `a60005ee-b36d-474f-9f59-b2624330eb37`,
     fresh by launch (its background-task path id is its own session id), and
     not elevated.
-
-## Session: 2026-10-27 — Sprint 2 leg 3 (Story 2.1.4, the parts and toolchains study)
-
-- **Landed:** #33 → `3068168d` (GitHub's merge stamp 19:39:32Z, by
-  auto-merge armed on the full head sha `69832608`). `scope` was green at
-  19:38:23Z and `test` at 19:38:35Z. Story 2.1.4 ✅ DONE. The tick, the
-  study and #33's body (its greps, claims audit and checks) are the record.
-- **Next:**
-  - Sprint 2's leg 4, Story 2.1.5 (`docs/study/software-stack.md`), in a
-    FRESH executor session after this wrap. It is the sprint's last leg, so
-    its executor stamps the block executed.
-  - **For leg 4, from this study:** the Reader reaches the host as a USB CDC
-    serial port, with no driver to install on any of the three platforms.
-  - **Before any part is bought:** read the FCC grant pages for
-    ZAT-1312PSIP-2 and ZAT-1312PSIP-3 in a browser. Every machine route was
-    refused (HTTP 403).
-  - **The other machine, on its next session:** `node
-    scripts/reference-check.mjs` will report the five new `sources/` files
-    missing. Fetch each from its row's URL (it counts only once its sha256
-    matches), or copy it from this machine.
-- **Surprises / decisions:**
-  - **The grant read was put to Omid first-hand,** between this terminal's
-    `date -u` reads of 19:17:09Z and 19:25:00Z. He answered "Write it as not
-    read". Changing the network route did not lift the refusals (friction
-    F13).
-  - **TI's documents name two FCC IDs:** -2 in the datasheet, and -3 for
-    the 2024 filings (F15). `radio-and-location.md`'s label line is the
-    datasheet's.
-  - **The eCFR's API now needs a compressed request** (`curl
-    --compressed`, F14).
-  - **The fresh-session read:** session `326f43fb-a014-4eea-838f-59fff96f5faa`.
-    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
-    the process the Sprint 2 proposal and legs 1–2 used, so a `/clear` came
-    before it. It ran without elevation.
 
