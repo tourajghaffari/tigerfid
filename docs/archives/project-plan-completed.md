@@ -89,9 +89,10 @@ pass was the hub-rooted Windows session "tigerfid Sprint 2 review" (session
 10:00:08Z. It was fresh by launch: its background-task path id is its own
 session id, so no earlier process was cleared. It ran without elevation and
 held no other role in this sprint. **Verdict: every leg meets its Done-when
-and its gate, with findings.** Six findings are Important. Two are fixed in
-this PR, and four go to the Sprint 3 proposal as a fix-up to the studies.
-Omid ruled one of them first-hand in this pass.
+and its gate, with findings.** Six findings are Important. Three are fixed
+in this PR's plan text (findings 1, 2 and 6). Five carry a correction to the
+studies, which goes to the Sprint 3 proposal as a fix-up (findings 1–5).
+Omid ruled finding 1 first-hand in this pass.
 - **The method** (hub KB `parallel-per-leg-reviewers-then-re-measure`):
   - four fresh, read-only readers, one per leg; leg 1's reader also took
     #28, #37 and #39;
