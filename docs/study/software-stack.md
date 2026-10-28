@@ -320,6 +320,8 @@ and its screen is a page in the user's own browser.**
 - **For the sitting:** B stays a sound choice if the sitting weighs one
   language over the compiler-free path. The schema and the API below do not
   change between A and B.
+- **Decided, 2026-10-28:** A, Python, by Omid ahead of the sitting (§ Decided
+  ahead of the sitting).
 
 ### The stack on three platforms
 
@@ -603,6 +605,12 @@ add a part and a phone-side program, for a hand read that no requirement
 asks for. The HF memory stays a fitting option on the core, for a later tier
 whose scenario needs it. The sitting decides it with the seal's design.
 
+**Decided, 2026-10-28:** no HF interface on milestone 1's seal, and no space
+reserved for one on its core, by Omid ahead of the sitting (§ Decided ahead
+of the sitting). INFERRED, the reason for reserving no space: a coil antenna
+beside the module's would sit inside the layout its certification rests on
+(`parts-and-toolchains.md` § One core or three).
+
 ## The Chorus comparison, software side
 
 Spec D12 and §3.8, and the research log's § 3. Each software-side item is
@@ -651,11 +659,9 @@ zones, relay outputs and wake-on-command, is `radio-and-location.md`'s.
 - **Story 2.1.6:** nothing to price for the host itself. Python, pyserial,
   SQLite and the browsers cost nothing. A USB barcode scanner is an
   optional bench item.
-- **Story 2.1.7:** the sitting decides:
-  - A or B, Python or Node.js (§ The choice);
-  - the seal's HF interface (§ The seal's HF interface), with the seal's
-    design;
-  - how long raw check-ins are kept by default.
+- **Story 2.1.7:** nothing is left open from this study. Omid decided its
+  three items ahead of the sitting (§ Decided ahead of the sitting), and the
+  sitting carries them into the rebuild spec.
 - **The build initiatives:**
   - the JSON Schema file, and the binary frame on the Reader's wire;
   - the USB bridge's own baud limit, from its datasheet;
@@ -665,6 +671,39 @@ zones, relay outputs and wake-on-command, is `radio-and-location.md`'s.
   - pyserial copied in with its trail, or installed by `pip`;
   - the QR decoder;
   - the LAN tier: HTTPS, user accounts, share links and phone scanning.
+
+## Decided ahead of the sitting
+
+On 2026-10-28 the study's three items for the decision sitting were put to
+Omid with a recommendation each, first-hand in the terminal of the session
+"tigerfid Sprint 2 leg 4". His answer came between that terminal's `date -u`
+reads of 00:39:20Z and 00:42:52Z: "I like all those recommendations, let's
+go with those."
+
+| Item | Decided | Its basis |
+|---|---|---|
+| The host's language | **Python** (option A). Node.js, the runner-up, is declined. | § The choice: no compiler anywhere. What would have changed it is Node's serial add-on shown to ship a ready build for every machine the builders use. |
+| The seal's HF interface (D5) | **None on milestone 1's seal, and no space reserved for one on its core** | § The seal's HF interface: a phone reads NFC from a web page in one browser only, and the printed QR code and the radio's tamper alarm cover what it would add. |
+| How long raw check-ins are kept | **7 days by default.** The history (zone moves, alarms and their acknowledgements, sensor readings) is kept until the owner deletes it. The setting sits on screen beside the disk use. | The sizing below |
+
+**The sizing for the retention default:**
+- **The probe's database** (§ The stack on three platforms) held 400,000
+  rows in 25,022,464 bytes: 62.6 bytes a row (MEASURED, on 2026-10-28).
+  Those rows carry a short payload and no index, so 62.6 bytes is the floor.
+- **INFERRED, a real row:** 150–200 bytes, with the Field Generators heard,
+  a sensor reading and an index for a tag's history.
+
+| Scenario | Check-ins a day (INFERRED) | Kept 7 days | Kept 30 days |
+|---|---|---|---|
+| Milestone 1, three tags at one every 20 s | 12,960 | 6–18 MB | 24–78 MB |
+| The nursery, 100 tags at one every 20 s ([18]) | 432,000 | 0.19–0.60 GB | 0.81–2.6 GB |
+| The conference, 1,000 tags at one a minute ([9]) | 1,440,000 | 0.63–2.0 GB | 2.7–8.6 GB |
+| The warehouse, 100,000 tags at one every 15 min ([25]) | 9,600,000 | 4.2–13 GB | 18–58 GB |
+
+The column ranges run from the 62.6-byte floor to 200 bytes a row. INFERRED:
+seven days covers a look back over a weekend, and it keeps the warehouse's
+raw check-ins within a laptop's disk. A thirty-day default would ask up to
+58 GB of an owner who never chose it.
 
 ## Sources
 

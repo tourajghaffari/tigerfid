@@ -812,11 +812,20 @@ sealTag design, which Story 2.1.4 weighs (`docs/study/original-system.md`
 layout, which Story 1.1.2 left to the study with a starting shape of
 `hardware/`, `firmware/`, `software/`, `guides/` and `docs/` (#7; the
 archive's Story 1.1.2 Context). From the software study (Story 2.1.5,
-2026-10-28): the sitting also decides the host's language, Python (the
-study's choice) or Node.js (its runner-up); whether milestone 1's seal keeps
-an HF interface for a phone (D5, recommended: no), with the seal's design;
-and how long raw check-ins are kept by default
-(`docs/study/software-stack.md` § What the choice leaves to later stories).
+2026-10-28): its three items for the sitting were **decided by Omid ahead
+of it**, first-hand in the terminal of the session "tigerfid Sprint 2 leg 4",
+between its `date -u` reads of 00:39:20Z and 00:42:52Z: "I like all those
+recommendations, let's go with those."
+- **The host is Python.** Node.js, the runner-up, is declined.
+- **Milestone 1's seal has no HF interface** for a phone (D5), and the core
+  reserves no space for one.
+- **Raw check-ins are kept 7 days by default.** The history (zone moves,
+  alarms and their acknowledgements, sensor readings) is kept until the owner
+  deletes it, and the setting sits on screen beside the disk use.
+
+The sitting carries the three into the rebuild spec. The study records them
+with their basis (`docs/study/software-stack.md` § Decided ahead of the
+sitting).
 **Done when:** the spec exists at that path and carries `**Approved by:** Omid`
 with the date.
 
