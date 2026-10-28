@@ -7,6 +7,37 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-28 — the Sprint 2 reviewer pass (every leg PASS; six findings)
+
+- **Landed:** #41 → `53abe343` (GitHub's merge stamp 10:39:16Z), squash by
+  hand on green under Omid's in-session sentence, `--match-head-commit
+  335ffd16…`. The Sprint 2 block is now in the archive's § Executed sprints,
+  with its `**Reviewed:**` record. That record is the state; this note is
+  the delta.
+- **Next:**
+  1. **The Sprint 3 proposal,** in a FRESH seat. Its input is the record's
+     routed list:
+     - a fix-up story for the three studies (findings 1–5 and five nits),
+       ahead of Story 2.1.6;
+     - then 2.1.6;
+     - then F11's message fix, as its own story.
+  2. **Story 2.1.7's sitting.** Its Context now carries Omid's HF footprint
+     ruling, the FCC grant read (both IDs, in his browser), the parts study's
+     open items and the studies' build-initiative items.
+  3. **Epic 2.1's close,** Story 2.1.8.
+- **Surprises / decisions:**
+  - **Omid changed one of #39's three decisions** in this pass, asked as a
+    question of commercial viability: "Reserve footprint, coil off-core
+    (Recommended)". The core keeps an unfitted NFC footprint and two antenna
+    pads, with the coil in the enclosure. `docs/study/software-stack.md`
+    still reads "no space reserved" until the fix-up corrects it.
+  - **The hub's Item-8 check reads only a section titled "Item-8 anchor
+    grep".** The legs' "Item-8 greps" sections read as nothing to it
+    (friction R1).
+  - **The fresh-session read:** session
+    `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`, fresh by launch (its
+    background-task path id is its own session id), and not elevated.
+
 ## Session: 2026-10-28 — Sprint 2 leg 4 (Story 2.1.5, the software stack study) and the Sprint 2 stamp
 
 - **Landed:**
@@ -79,40 +110,5 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **The fresh-session read:** session `326f43fb-a014-4eea-838f-59fff96f5faa`.
     Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
     the process the Sprint 2 proposal and legs 1–2 used, so a `/clear` came
-    before it. It ran without elevation.
-
-## Session: 2026-10-27 — Sprint 2 leg 2 (Story 2.1.3, the radio and location study)
-
-- **Landed:** #31 → `ef5c2895` (GitHub's merge stamp 18:55:56Z, by
-  auto-merge armed on the full head sha `0b929589`; `scope` and `test` green
-  at 18:54:37Z and 18:54:47Z). Story 2.1.3 ✅ DONE. The tick, the study and
-  #31's body (its greps, claims audit and checks) are the record.
-- **Next:**
-  - Sprint 2's leg 3, Story 2.1.4 (`docs/study/parts-and-toolchains.md`), in
-    a FRESH executor session after this wrap. Leg 4 follows.
-  - **For leg 3, from this study:**
-    - read the CC1312PSIP's FCC grant record (FCC ID ZAT-1312PSIP-2). The
-      FCC's search and fccid.io answered HTTP 403 to a plain request, so its
-      equipment class is unread, and a browser read by Omid may be the route;
-    - read Part 15 Subpart B for the Reader's USB or Ethernet parts;
-    - replace the study's ASSUMED antenna, slot-guard and receive start-up
-      figures.
-  - **The other machine, on its next session:** `node scripts/reference-check.mjs`
-    reports `MISSING folder sources/` until the three TI files arrive. Fetch
-    each from its row's URL (it counts only once its sha256 matches), or copy
-    it from this machine.
-- **Surprises / decisions:**
-  - **The EU texts came through the Publications Office's Cellar service.**
-    EUR-Lex's own pages answered curl with an empty HTTP 202. The Cellar
-    service (`publications.europa.eu/resource/celex/<CELEX>`, with an
-    `Accept: application/xhtml+xml` header) served the consolidated texts.
-    The Decision's identifier needs `(01)` URL-encoded. Friction F8 and F12.
-  - **A browser-identity retry was refused.** The permission check refused
-    one retry against a vendor's 403 that would have presented a browser's
-    identity, as bot-check circumvention. Every later request was plain
-    (friction F8).
-  - **The fresh-session read:** session `f367e3c4-268f-4213-80f5-0de763c5a7e2`.
-    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
-    the process the Sprint 2 proposal and leg 1 used, so a `/clear` came
     before it. It ran without elevation.
 
