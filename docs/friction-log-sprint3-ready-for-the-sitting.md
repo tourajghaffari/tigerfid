@@ -77,3 +77,75 @@ named and not priced) with its cost.
   after them drew its second arm. Every git command carried `git -C` with the
   literal path or ran after a `cd` in the same call; none ran in the wrong
   repository.
+
+## Leg 1 — Story 2.1.10 (2026-10-28)
+
+Executed by the hub-rooted Windows session "tigerfid Sprint 3 leg 1"
+(session `0082985c-c964-4b27-a5c7-4592056265f0`), on Air Traffic Control's
+orders 24, sent 11:20:51Z. **The fresh-session read:** fresh by `/clear`.
+The background-task path id is `2a0782f7-f632-4bab-b967-a9cfbfe1ba93`, not
+the session id. That process hosted the session "tigerfid Sprint 2 review"
+and then the session "tigerfid Sprint 3 proposal" (`4ef9427a-…`), the
+proposer's process the orders name as the one this `/clear` cleared. Not
+elevated: a Windows administrator-role read, `False`, at 11:49:05Z.
+
+**Context checkpoint:** the plan was eight tasks, the block's tripwire but
+not above it (the block estimated seven: the PR's opening came before the
+tick, as its own task). No compaction, no forced re-read, no lost-context
+defect.
+
+- **F5 — The orders described the leg by D9's seam.** Orders 24 said "leg 1
+  at line 246 — findings 1, 2 and 5 and the five nits". Line 246 is D9's
+  remainder, the part a split would move out. The block's leg line and
+  Story 2.1.10 carry all five findings, and the orders said the block
+  governs, so the leg ran whole. Cost: one re-read. Suggested fix: orders
+  quote a leg from the block's numbered leg list, never from a decision
+  that describes a split.
+- **F6 — No PDF page reader on this box.** The harness's file reader
+  needs `pdftoppm`, which this box lacks, so it could not open the pinned
+  datasheets' pages. Git for Windows' `pdftotext -layout` read them, and
+  each page number was recovered by counting form feeds. Cost: a few calls.
+  Suggested fix: the reading rules name `pdftotext` as the Windows route.
+- **F7 — A predicate grep split by a line break.** The story's first grep,
+  `space reserved|reserves no space|one browser`, cannot find the Decided
+  line of `software-stack.md`, which wrapped "no space" and "reserved"
+  onto two lines. The proposal's anchor list had named that line by hand.
+  The leg ran a second grep for `no space`. Cost: one grep. Suggested fix:
+  a predicate grep for a phrase a line break can split uses its shortest
+  unsplittable needle.
+- **F8 — Three makers' pages would not answer.** GNU's make page reset the
+  connection twice, and a GNU mirror's release list and the release's own
+  `README` and `COPYING` stood in. Arm's toolchain page answered HTTP 403.
+  TI's SysConfig and Arm Clang pages answered, but neither states a price
+  or a licence, so both licences are written as not read.
+- **F9 — `tar` read a Windows path as a host.** Under Git Bash, `tar -xzf
+  C:/…` printed "Cannot connect to C: resolve failed". `--force-local` with
+  a `/c/…` path worked. Cost: one re-run.
+- **F10 — A carriage-return count counted every line.** `grep -c $'\r'`
+  over the edited files returned each file's line count, though `git
+  ls-files --eol` reads them `w/lf`: the pattern did not reach `grep` as a
+  carriage return. Cost: one check. Suggested fix: read line endings with
+  `git ls-files --eol`, never by a grep for `\r`.
+- **F11 — The old-value grep's frozen hits.** Story 2.1.4's Outcome holds
+  four figures this leg supersedes (5–11 %, 2.9 years, 1.99 years and 6 %).
+  The story's § What stays keeps Outcomes as records, so the tick names
+  the new figures and the old ones stay.
+
+**Guard events:**
+- `piped-checker-exit` seat: the leg's first read of the close runner's
+  usage, `close-epic.mjs --help` piped into `head`, flagged "piped-checker
+  guard (warn, not a block): this command pipes `close-epic.mjs` into
+  another command, so the compound's exit code is the LAST pipe stage's —
+  `$?` no longer proves the checker's verdict." It was a usage read, not a
+  verdict. Every verdict run after it went to a file, unpiped, its exit
+  read.
+- `cwd-drift` seat: most calls after the leg's first `cd` into this repo
+  drew "cwd-drift guard (warn, not a block)", its first arm on a `cd` and
+  its second arm after it. Every git command carried `git -C` with the
+  literal path or ran after a `cd` in the same call; none ran in the wrong
+  repository.
+- The staleness-sweep hook, class id not known: every edit of a file the
+  proposal swept drew "This file was verified by Sprint 3's staleness sweep
+  (swept 2026-10-28). Your edit may decay its pre-verified facts —
+  re-verify or annotate the block (KB sprint-proposal-standard step 2)."
+  The edits were the leg's own, each finding's anchor re-read before it.
