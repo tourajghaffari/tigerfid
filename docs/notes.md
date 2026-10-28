@@ -7,6 +7,38 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-28 — Sprint 2 leg 4 (Story 2.1.5, the software stack study) and the Sprint 2 stamp
+
+- **Landed:**
+  - #36 → `bbc791d7` (GitHub's merge stamp 00:35:02Z): squash by hand
+    under Omid's in-session delegation, `--match-head-commit b8f7608b…`.
+    `scope` and `test` were green on CI's first run. Story 2.1.5 ✅ DONE.
+    The tick, the study and #36's body (its greps, claims audit and checks)
+    are the record.
+  - #37 → `d59e1ae0` (GitHub's merge stamp 00:38:06Z), by hand on green:
+    the Sprint 2 block, stamped ✅ EXECUTED (2026-10-28), with its
+    **Executed:** record and `**Review:** PENDING`.
+- **Next:**
+  1. The Sprint 2 reviewer pass, in a FRESH seat (Omid's `/clear` after this
+     wrap lands). Its input is the block's "Open for the review" list.
+  2. The Sprint 3 proposal: Story 2.1.6, with no D9 remainder.
+  3. Story 2.1.7, Omid's decision sitting. It now also decides Python or
+     Node.js, the seal's HF interface, and how long raw check-ins are kept
+     (2.1.7's dated Context sentence).
+  4. Epic 2.1's close, Story 2.1.8.
+- **Surprises / decisions:**
+  - **This machine's corpus had no `sources/`.** All eight files, fetched
+    from their rows' URLs, matched their pins, and the check reads 299 rows
+    here (F18). The other machine has nothing new to fetch from leg 4.
+  - **The harness `grep` printed nothing,** not even a count, over a
+    non-UTF-8 source file of the original. `/usr/bin/grep -a` read it
+    (F19).
+  - **The research-log entry** rode #36 on Air Traffic Control's GRANT of
+    00:28:48Z (F21).
+  - **The fresh-session read:** session `a60005ee-b36d-474f-9f59-b2624330eb37`,
+    fresh by launch (its background-task path id is its own session id), and
+    not elevated.
+
 ## Session: 2026-10-27 — Sprint 2 leg 3 (Story 2.1.4, the parts and toolchains study)
 
 - **Landed:** #33 → `3068168d` (GitHub's merge stamp 19:39:32Z, by
@@ -75,39 +107,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
     the process the Sprint 2 proposal and leg 1 used, so a `/clear` came
     before it. It ran without elevation.
-
-## Session: 2026-10-27 — Sprint 2 leg 1 (Story 2.1.9) and the line-ending pin
-
-- **Landed:** both squash-merged, each pinned to its green head.
-  - #28 → `fc86cd14` (GitHub's merge stamp 18:09:01Z, by auto-merge): a root
-    `.gitattributes`, LF stored and checked out. `license` and `_assets/`,
-    the 2018 files unchanged since the tag, are `-text`. This closes friction
-    F4 and gap (1) of hub #4452; gaps (2) and (3) are the hub's.
-  - #29 → `bdd23c4f` (merge stamp 18:16:19Z): Story 2.1.9 ✅ DONE. The
-    tick and the PR body are the record: both greps with each hit's
-    disposition, and a claims audit. The arm had not fired on a green, CLEAN
-    head, so it was merged by hand, pinned to the full head sha.
-- **Next:**
-  - Sprint 2's leg 2, Story 2.1.3 (`docs/study/radio-and-location.md`), in
-    a FRESH executor session per the block's kickoff, after this wrap. Legs 3
-    and 4 follow serially.
-  - **The Mac clone, on its next session:** run `git ls-files --eol`. Any
-    `w/crlf` row takes #28's repair (delete the files, then
-    `git checkout-index -f -u`, never a renormalize). INFERRED: none, since
-    git on macOS leaves `autocrlf` unset.
-- **Surprises / decisions:**
-  - **"The originals" read as the 2018 files still on `main`.** The orders
-    asked that the originals' tree be marked `-text`. Naming the tag's
-    folders would also catch the rebuild's own future `software/`. MEASURED:
-    a `.gitattributes` on `main` cannot reach the tag, because `git archive`
-    of the tag ignored it. `readme.md` and `contributing.md` were rewritten
-    by #7, so they follow `*.md`. #28's body and friction F6 record this.
-  - **This Windows clone is repaired.** All 54 tracked files read `w/lf`.
-    The sprint parser now reads the working-tree plan (`found: true`, exit 0),
-    so the workaround of reading `git show :docs/project-plan.md` is retired
-    here.
-  - **The fresh-session read:** session `014c145a-45db-4c1d-b7ff-a2e9bcbcb0c4`.
-    Its background-task path id was `c59c545c-e735-4344-b0b8-697d9f897dca`,
-    the Sprint 2 proposal's process, so a `/clear` came before it. It ran
-    without elevation.
 
