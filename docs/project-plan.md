@@ -44,10 +44,13 @@ into the archive's `## Executed sprints` section, newest first, the heading
 stamped `— ✅ EXECUTED (date)` plus an **Executed:**/**Reviewed:** record.
 Keep that section above the first `## Initiative` block in the archive.
 
-## Sprint 3 — "Ready for the sitting: the three studies corrected, milestone 1 priced in three tiers, and a new machine told it may fetch the sources" (proposed 2026-10-28; 3 legs, serial)
+## Sprint 3 — "Ready for the sitting: the three studies corrected, milestone 1 priced in three tiers, and a new machine told it may fetch the sources" (proposed 2026-10-28; 3 legs, serial) — ✅ APPROVED (2026-10-28)
 
-**Approval:** PENDING — Omid signs first-hand in the proposer's terminal; the
-sign-off edit is the proposer's, on the proposal PR's branch.
+**Approval:** approved 2026-10-28 (Omid, first-hand in the proposer's
+terminal "tigerfid Sprint 3 proposal", between its `date -u` reads of
+10:59:30Z and 11:00:38Z: "Approve as proposed (Recommended)"): the block as
+proposed, three legs, D1–D12 at their defaults. The sign-off edit is the
+proposer's, on the proposal PR's branch (tigerfid #43).
 
 **Proposed:** 2026-10-28 by the hub-rooted Windows session "tigerfid Sprint 3
 proposal" (session `4ef9427a-246a-42f9-98aa-be892d938900`), on Air Traffic

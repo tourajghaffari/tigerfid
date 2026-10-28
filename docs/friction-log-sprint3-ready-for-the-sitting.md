@@ -23,6 +23,11 @@ session "tigerfid Sprint 2 review" (background-task path id
 **Context checkpoint:** no compaction, no forced re-read, no lost-context
 defect.
 
+**The approval:** Omid, first-hand in this terminal between its `date -u`
+reads of 10:59:30Z and 11:00:38Z: "Approve as proposed (Recommended)". The
+question laid out the one decision a reader might change (D8, the EU build
+named and not priced) with its cost.
+
 - **F1 — The orders arrived after the work began.** Omid opened the session
   with the proposal's intent at the terminal's `date -u` read of 10:43:54Z.
   Air Traffic Control's orders 18 were sent at 10:49:58Z, after the inputs
