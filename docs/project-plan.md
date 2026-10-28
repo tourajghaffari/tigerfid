@@ -49,451 +49,6 @@ Keep that section above the first `## Initiative` block in the archive.
 No open rows. A1, answered, moved to the archive with Initiative 1 (KB
 `register-relocation-at-close`, 2026-10-27).
 
-## Sprint 2 — "The study makes its choices: a radio a beginner may legally run, the parts and free tools to build it, and host software for any laptop" (proposed 2026-10-27; 4 legs, serial) — ✅ APPROVED (2026-10-27) — ✅ EXECUTED (2026-10-28)
-
-**Executed:** 2026-10-28, 4/4 legs strictly serial (D7), each by a fresh
-repo-rooted executor seat on Air Traffic Control's orders. None was elevated.
-- **The seats** (each leg's friction-log section has its fresh-session read):
-  - **leg 1:** "tigerfid Sprint 2 Executor" `014c145a-…`;
-  - **leg 2:** "tigerfid Sprint 2 leg 2" `f367e3c4-…`;
-  - **leg 3:** "tigerfid Sprint 2 leg 3" `326f43fb-…`.
-
-    Each of these three was a `/clear` of the process `c59c545c-…`.
-  - **leg 4:** "tigerfid Sprint 2 leg 4" `a60005ee-…`, fresh by launch.
-- **The legs,** each clock GitHub's merge stamp:
-  - **Before leg 1, its own PR — #28 → `fc86cd14` (2026-10-27,
-    18:09:01Z):** the root `.gitattributes` pins LF line endings (F4, F5).
-  - **Leg 1, Story 2.1.9 — #29 → `bdd23c4f` (18:16:19Z):** the
-    original-system study lists its three corrections to the onboarding
-    spec. The Outlook message's three mentions say why it stays closed.
-  - **Leg 2, Story 2.1.3 — #31 → `ef5c2895` (18:55:56Z):** the law read and
-    dated first, then one sub-GHz band on TI's certified CC1312PSIP module,
-    reader-assigned slots and zones from Field Generators.
-    - [3] against [2] was met with no ASK-OMID row (D2).
-    - Three sources were pinned (294 rows).
-  - **Leg 3, Story 2.1.4 — #33 → `3068168d` (19:39:32Z):** each device's
-    parts and the free tools on three platforms (cited, none run), the
-    LP-XDS110ET, a 12 s wake for [27] (D4, no row), and one core recommended
-    (D3).
-    - The FCC grant record is written as not read, on Omid's first-hand
-      "Write it as not read".
-    - Five sources were pinned (299 rows).
-  - **Leg 4, Story 2.1.5 — #36 → `bbc791d7` (2026-10-28, 00:35:02Z):** the
-    original host programs read at the tag, a local Python host with Node.js
-    the runner-up, the event schema, the Chorus software items, and no HF
-    interface recommended for milestone 1's seal (D5). macOS was measured,
-    and Windows and Linux cited.
-- **The manifest,** `docs/close/2.1.json`, flipped as mapped:
-  - leg 1 flipped no tooth;
-  - leg 2 flipped `radio-and-location-doc` and `legality-rules-cited`;
-  - leg 3 flipped `parts-and-toolchains-doc`;
-  - leg 4 flipped `software-stack-doc`.
-
-  `tiered-cost-doc` and `rebuild-spec-approved` stay RED, as the block said.
-- **No ASK-OMID row** was filed by any leg. **No D9 split:** the legs
-  planned 6, 8, 8 and 8 tasks.
-- **The record:** `docs/friction-log-sprint2-the-study-makes-its-choices.md`
-  (F1–F22).
-- **Open for the review** (each a deferred Minor or a routed item):
-  - **Leg 1:** none recorded.
-  - **Leg 2:**
-    - F11: `scripts/reference-check.mjs` still prints "copy-only" for a
-      missing `sources/` file, where D8 lets it be fetched from its row's
-      URL. The script was outside every leg's grant, and leg 4 met the
-      message again (F18).
-    - F9: the block's "the law before the radios" did not say whether it
-      binds the reading order or the document's order.
-  - **Leg 3:**
-    - the FCC grant pages for ZAT-1312PSIP-2 and -3, a browser read before
-      any part is bought (F13, F15);
-    - the hub's `CLAUDE.md` still says "291 pins" for this corpus. It is
-      hub-owned (#33's body).
-  - **Leg 4:**
-    - legs 1–3's Completed lines name no pre-tick head, which KB
-      `sprint-proposal-standard` § Roles asks for; leg 4's does;
-    - F19: a search that prints no count at all is re-run in text mode
-      before a finding rests on it;
-    - F21: the orders' path grants for leg 4 omitted the research log.
-  - **The register seats,** sent to Air Traffic Control as text with leg 4's
-    DONE line, each caught:
-    - `zsh-equals-face`;
-    - a new face, class id not known: the harness `grep` silent over a
-      non-UTF-8 file;
-    - two `piped-checker-exit` reads;
-    - a `ugrep-bounded-repetition-exceeds-complexity-limit` warning;
-    - a cwd-drift warning;
-    - close-lint's reviewed-date face;
-    - the grant-list omission;
-    - a comment read as live code.
-
-**Review:** PENDING
-
-**Approval:** approved 2026-10-27 (Omid, first-hand in the proposer's
-terminal "tigerfid Sprint 2 Proposal", between its `date -u` reads of
-17:29:28Z and 17:29:48Z: "Approve as proposed (Recommended)"): the block as
-proposed, four legs, D1–D11 at their defaults. The sign-off edit is the
-proposer's, on the proposal PR's branch (tigerfid #26).
-
-**Proposed:** 2026-10-27 by the repo-rooted session "tigerfid Sprint 2
-Proposal" (session `49c256bc-78bf-445e-b2a6-f970dfb1f707`), on Air Traffic
-Control's orders of 17:13:26Z. The session was fresh by `/clear`: its
-background-task path id, `c59c545c-e735-4344-b0b8-697d9f897dca`, is the
-Sprint 1 leg 4 session's process, which the Sprint 1 reviewer pass used
-last. Role proposer; not elevated.
-
-**The outcome:** Epic 2.1's three technical studies written, each making its
-choice, so that the tiered cost has parts to price and Omid's decision sitting
-has a design to decide:
-- the Sprint 1 review's two fixes land first (Story 2.1.9);
-- a radio and location architecture that meets the requirements and that a
-  beginner may legally run (Story 2.1.3);
-- each device's parts, with a free toolchain on Windows, macOS and Linux
-  (Story 2.1.4);
-- the host software's stack and the event schema its readers report
-  (Story 2.1.5).
-
-**Admission (the meta-work test):** every leg ships a public document that a
-stranger reads on GitHub this month, and together they set the direction that
-opens this repo to pull requests (spec D10).
-
-**Inputs swept 2026-10-27.** The scope is the whole live plan (it is small:
-the preamble, the empty ASK-OMID register and Epic 2.1), the teeth and prose
-of `docs/close/2.1.json`, and every record the stories cite.
-- **The events digest.** `git log origin/main --oneline --grep '<id>'` for
-  each of 2.1.3–2.1.8 finds only the Sprint 1 review (#23), which wrote their
-  Context sentences. `docs/notes.md` and the archive name them only as forward
-  work. No PR is open, and `git ls-remote --heads origin` lists `main` alone.
-  Every story is CURRENT; none has run.
-- **The cited anchors exist:**
-  - in `docs/study/requirements.md`: § Ground rules, § The arithmetic behind
-    the numbers, and items [2], [3], [13], [21] and [27];
-  - in `docs/study/original-system.md`: § The records read, § What no record
-    states and § What this means for the study.
-- **FALSIFIED, fixed in this PR:**
-  - Epic 2.1's manifest clause, "every deliverable is still to be written"
-    (two documents exist);
-  - its Ordering line's "2.1.3 and 2.1.4", now serial (D7);
-  - `free-tools-three-platforms`' "the chosen boards are drawn in KiCad 10".
-    No board is drawn before the build initiatives, so the check now asks that
-    every board the study plans is planned in KiCad 10.
-- **FALSIFIED, routed to leg 1:** three documents still say the Outlook
-  message waits on ASK-OMID A1 (Story 2.1.9).
-- **The teeth, run:** the close runner reads `lint`, `requirements-doc` and
-  `original-system-doc` PASS. The four unwritten documents' teeth,
-  `legality-rules-cited` and `rebuild-spec-approved` read FAIL, each for its
-  right reason (the file is absent).
-- This PR refreshes the plan's staleness stamp.
-
-The standard (KB `sprint-proposal-standard`) was read by its steps 0–8 and
-the newest entries of its friction log, not entry by entry.
-
-**Why this order (step 2):**
-- **Leg 1** is a short docs fix, and it goes first: three public documents
-  tell strangers something no longer true, and leg 2 reads one of them.
-- **Leg 2** decides what the others build on: the radio architecture and its
-  legality. It answers [3] against [2] first.
-- **Leg 3** names the parts for that architecture: the radio, the
-  microcontrollers and their toolchains.
-- **Leg 4** chooses the host software for the event schema the readers
-  report, which follows leg 2's link.
-
-**The sprint's shape.** Air Traffic Control's lean was four legs, with Story
-2.1.6, the tiered cost, proposed after this sprint's review. Weighed, it
-stands:
-- **For:**
-  - 2.1.6 prices exactly the parts leg 3 names and the radio leg 2 chooses.
-    This sprint's review re-checks those choices before dated prices sit
-    beside them, so a review finding that moves a part re-prices nothing.
-  - A requirement put back to Omid in legs 2–3 (D2) can move a part too.
-  - Prices dated nearer the sitting are fresher for it.
-  - A remainder the session-fit tripwire splits off leg 2 or leg 4 (D9) has a
-    sprint to land in.
-- **Against:** one more proposal and review, two fresh seats, for a short
-  sprint.
-- **Declined:** a fifth leg for 2.1.6, gated on "no ASK-OMID row open from
-  legs 2–3". That gate cannot see a review finding.
-
-1. **Leg 1 — Story 2.1.9** — the Sprint 1 review's two fixes in
-   `docs/study/original-system.md`, `docs/reference-research.md` and
-   `docs/reference-repos.md` reading rule 7. Gate: the story's two greps
-   quoted in the PR body, each hit's disposition beside it. Flip map: no tooth
-   flips; `original-system-doc` stays PASS; `original-system-review-fixes` is
-   the closer's. Item-8 scope: the three files. The archive's Sprint 1 record
-   is history and is not edited.
-2. **Leg 2 — Story 2.1.3** — `docs/study/radio-and-location.md`, covering:
-   - the options against the requirements, [3] against [2] first (D2);
-   - the legality reads of D6, each cited before any radio is named;
-   - the chosen architecture, with how a zone move is noticed within [13]'s
-     5 s;
-   - what the chosen radio states that no original record does: the bit rate,
-     modulation, output power, certification and the wake signal's form;
-   - the Chorus radio items, one by one.
-
-   Flip map: `radio-and-location-doc` and `legality-rules-cited` FAIL → PASS.
-   Prose for the closer: `legality-and-modules`, `legal-texts-read-dated`,
-   `chorus-items-answered` (its radio half) and `no-medical-claim`. Item-8
-   scope: `docs/study/requirements.md` items [2], [3], [13] and [21] (D1), and
-   `docs/study/original-system.md` § What no record states.
-3. **Leg 3 — Story 2.1.4** — `docs/study/parts-and-toolchains.md`, covering:
-   - the parts per device for leg 2's architecture;
-   - each part's free toolchain and its install on Windows, macOS and Linux
-     (D10);
-   - a debugger a beginner can afford;
-   - the licence of each reference design read;
-   - [27]'s choice (D4);
-   - the requirements' ASSUMED figures replaced (D1);
-   - §3.7's one-core-or-three weighed, the sealTag as a new design inside it
-     (D3).
-
-   Flip map: `parts-and-toolchains-doc` FAIL → PASS. Prose for the closer:
-   `three-platform-claims-sourced`, `free-tools-three-platforms` and
-   `no-medical-claim`. Item-8 scope: `docs/study/requirements.md` § The
-   arithmetic behind the numbers and item [27] (D1), and
-   `docs/study/original-system.md` § What this means for the study.
-4. **Leg 4 — Story 2.1.5** — `docs/study/software-stack.md`, covering:
-   - the host stack, local first, on all three platforms;
-   - the event schema the readers report;
-   - the original host applications' source, read at the tag;
-   - whether the seal keeps an HF interface for a phone (D5);
-   - the Chorus software items, one by one.
-
-   Flip map: `software-stack-doc` FAIL → PASS. Prose for the closer:
-   `chorus-items-answered` (whole once this leg lands),
-   `three-platform-claims-sourced`, `free-tools-three-platforms` and
-   `no-medical-claim`. Item-8 scope: `docs/study/original-system.md` § The
-   records read, and `docs/study/radio-and-location.md` where it names the
-   link.
-
-After the sprint, `tiered-cost-doc` (Story 2.1.6) and `rebuild-spec-approved`
-(Story 2.1.7) stay RED.
-
-**Decisions (step 5) — no decision currently blocks execution on Omid.** Each
-is the executor's at its default unless Omid says otherwise at the approval.
-
-- **D1 — A study chooses; the sitting decides.** Each document names its
-  choice with its reasons and its rejected options, and that choice is the
-  sitting's default (Story 2.1.7).
-  - A number Omid set or accepted in `docs/study/requirements.md` changes
-    only by his word.
-  - A study that replaces an ASSUMED or INFERRED input there carries the new
-    figure and its source. `requirements.md` gains a dated pointer line
-    beside the old figure, and its text stays otherwise unchanged.
-- **D2 — [3] against [2].** Leg 2 answers first whether one reader takes
-  1,000 replies a second and still hears a worn tag 30 m away.
-  - If no legal option meets [3], the leg puts the closest option, its
-    figure and its cost to Omid first-hand in its terminal, and records his
-    words.
-  - If he cannot be reached in the leg, it files ASK-OMID A2 with that
-    question. Its default: [3] stands unchanged and the study's choice is the
-    closest option. The leg proceeds on the default.
-- **D3 — One core or three, and the sealTag.** Leg 3 weighs §3.7's question,
-  with milestone 1's sealTag as a new design inside it (the 2012 seal has no
-  active radio), and names its recommendation. The sitting decides. No board
-  is drawn this sprint.
-- **D4 — [27], the warehouse item tag.** Leg 3 chooses between a slower wake
-  and a CR2450-size cell, and states what each costs [27]'s five years. It
-  goes to Omid only if neither choice keeps five years.
-- **D5 — The seal's HF interface.** Leg 2 states the radio side (whether it
-  needs a transmitter of its own, and the rule if so). Leg 4 states what a
-  phone reading it would give the software, and records the recommendation.
-  The sitting decides it with the seal's design.
-- **D6 — The legality reads come before any radio is named** (spec C9). Leg 2
-  reads and cites each text below, by URL and the version date the text
-  prints, and names it as read before it compares radios. Where the list came
-  from: spec C9 names the four US sections the tooth reads. The proposer added
-  the rest from its own knowledge, not read at proposal, so the leg confirms
-  each one exists and applies before citing it, and says so where one does
-  not.
-  - **US, 47 CFR Part 15:**
-    - §15.231, periodic operation at 433 MHz;
-    - §15.249 and §15.247, 902–928 MHz and 2.4 GHz;
-    - §15.23, home-built devices;
-    - §15.212, modular transmitters: what a pre-certified module's grant
-      lets a beginner build without authorisation of their own;
-    - Subpart F, if UWB is compared.
-
-    A dated URL (the eCFR's point-in-time view, where the leg finds it)
-    pins each version. The tooth `legality-rules-cited` reads the first four
-    section numbers.
-  - **EU:**
-    - the Radio Equipment Directive, 2014/53/EU;
-    - the short-range-device harmonisation, Decision 2006/771/EC in its
-      current consolidated version;
-    - CEPT ERC Recommendation 70-03;
-    - the harmonised standards for the bands compared: ETSI EN 300 220
-      (sub-GHz), EN 300 328 (2.4 GHz) and EN 302 065 (UWB, if compared).
-
-    Each is cited at the version the leg reads, and a text found superseded
-    is cited at its successor.
-  - **Limits on the reads:** public pages only (reading rule 3). A standard
-    behind a paywall is cited by its number and edition, with the
-    regulation's own summary in its place, and marked so.
-- **D7 — Serial, not parallel.** Leg 3's radio parts follow leg 2's
-  architecture, and leg 4's reader abstraction follows leg 2's link. A
-  parallel 2.1.4 would weigh chips for an architecture 2.1.3 might decline.
-- **D8 — Sources: pinned when a choice rests on them.** A datasheet,
-  application note or reference design a choice rests on is pinned in the
-  reference corpus under one folder, `sources/`, by the rules of
-  `docs/reference-repos.md` § Adding to the corpus: its row, its sha256, its
-  URL and licence, and its research-log entry with a verdict, in the leg's PR.
-  - A law text is cited by its dated URL and its own version date, not
-    pinned: the version date is its pin.
-  - Pages read without a choice resting on them are cited by URL and fetch
-    date.
-  - The other machine fetches a new row from its URL, and it counts once its
-    bytes match; otherwise it is copied from the machine that pinned it.
-- **D9 — A leg is a session.** The tripwire: an executor's plan above eight
-  tasks stops before its first task, narrows the leg in story order, splits
-  the remainder off as a new story under the same step, and logs the miss
-  against this proposal. Two seams are named now, so a split is not
-  improvised:
-  - **Leg 2:** the Chorus radio items and the "does ActiveWave's approach
-    still win" answers become the remainder. They gate nothing in leg 3.
-  - **Leg 4:** the Chorus software items become the remainder. The original
-    host source stays in the leg, because the stack is chosen against it.
-
-  A session limit mid-leg pushes the branch and leaves a notes DRAFT, and the
-  resumed sitting re-runs the re-verify set first.
-- **D10 — Every claim is sourced or marked.** The house style of Sprint 1's
-  two documents holds:
-  - every number and every "the rule allows" or "the part supports" sentence
-    names its source (the law's section and version date, the datasheet's
-    title, revision and page), is MEASURED with the read, or is INFERRED with
-    its arithmetic;
-  - an install on a platform is MEASURED (the box's OS, the date and the
-    version the tool prints) or cited from the vendor's documentation (URL
-    and fetch date). It is never stated as run where no session ran it
-    (`three-platform-claims-sourced`).
-  - **Also binding:**
-    - no figure from the 2005/2017 datasheets becomes a requirement (spec
-      Appendix B);
-    - no medical claim (spec C8);
-    - no third-party text, figure or file is copied into the repo (the
-      licence lane);
-    - nothing from the reference folder is committed;
-    - the Outlook message stays unread (reading rule 7).
-- **D11 — Merges.** Every leg is docs-only (`docs/**` alone). Each merges by
-  `gh pr merge --auto --squash --match-head-commit <full sha>` under the
-  session's merge delegation as it stands, or by Omid's word. None is assumed.
-
-**Checks per leg:**
-- the flip map, through `node <hub>/scripts/close/close-epic.mjs --epic 2.1
-  --repo <F> --only <ids>`;
-- `node scripts/close-lint.mjs` and `npm test` (the `test` job's commands),
-  unpiped, on every leg;
-- `node scripts/reference-check.mjs` on every leg that adds corpus rows.
-
-**Gate line (every leg):** the required set is `scope` + `test` (the
-`protect-main` ruleset, read between this session's `date -u` reads of
-17:22:25Z and 17:22:56Z).
-- **`test` runs in full on every leg.** Each leg ticks its story in
-  `docs/project-plan.md` and edits `docs/close/2.1.json`, which the docs-only
-  classifier never counts as documentation, so no leg is predicted to skip
-  it.
-- **`scope` also gates the tick and secrets.** It runs
-  `check-tick-merge-claim.mjs` (a tick never claims its own PR's merge) and
-  the secret scan.
-
-**Merge-loop line:** each leg's PR:
-1. ticks its story in place: the heading gains `— ✅ DONE (date)`, with
-   `**Completed:**` (the date, `tigerfid #N` and the branch, never the merge)
-   and `**Outcome:**` directly under it;
-2. appends its `reviewedFor` line to `docs/close/2.1.json` in the same PR
-   (lockstep);
-3. runs the item-8 anchor grep, `grep -n "Story 2.1.<K>"
-   docs/project-plan.md docs/close/2.1.json`, and the document-name grep,
-   `grep -rn "<document>.md" docs/`, naming each hit's disposition in the PR
-   body (refreshed, current, or frozen in a DONE story);
-4. runs the C8 grep, `grep -n -i -E 'medical|vital' docs/study/<document>.md`
-   (each hit a negation), and reads the diff for a hostname, an IP address, a
-   machine name, a private path, or any person beyond those `readme.md`
-   names;
-5. carries a CLAIMS AUDIT in its body: every number and every rule or part
-   claim beside its source, its measurement or its INFERRED arithmetic (D10);
-6. runs `node scripts/close-lint.mjs` and `npm test` unpiped, gated by `&&`
-   all the way to `git commit`;
-7. rebases on the fetched `main` and merges per D11.
-
-No CHANGELOG.
-
-**Kickoff (step 6, baked):** a FRESH executor session per leg, on either box:
-1. **Fetch:** `cd <hub> && git pull --ff-only && cd projects/tigerfid && git
-   pull --ff-only`.
-2. **Open:** `node <hub>/scripts/fleet-view.mjs --start "tigerfid Sprint 2
-   leg <N> — Story 2.1.<K>" --role executor --repos tigerfid` (the marker
-   goes to the hub's origin by itself).
-3. **Clocks:** `date -u` before every clock written.
-4. **Read, before any search:**
-   - this block and the leg's story, with its checks in
-     `docs/close/2.1.json`;
-   - `docs/reference-repos.md`, for the reading rules, and
-     `docs/reference-research.md`, for § 4's search ideas;
-   - the study documents the story cites;
-   - `CLAUDE.md` § Writing in public;
-   - the previous leg's PR body and this sprint's friction log.
-5. **Re-verify first:** the set below.
-6. **Branch:** `story-2.1.<K>-<slug>`, from the fetched, fast-forwarded
-   `main`.
-
-Paths and habits:
-- `<hub>` is the hub root's absolute path on the executor's box, `<F>` is
-  `<hub>/projects/tigerfid`, and `<SCRATCH>` is the session scratchpad
-  (`mkdir -p` first).
-- Checkers run unpiped; long files are written with the Write tool; `git -C`
-  takes the literal path. `npm test` here is light and takes no battery lock.
-- On the Mac, the lid stays open while any fleet job runs (KB
-  `mac-standby-sleep-abandons-jobs`); before a long wait, `caffeinate -i -t
-  <seconds>` covers the sitting, and the lid rule still holds.
-- CI runs on GitHub-hosted runners only. No leg edits `.github/` or
-  `scripts/`. A stranger's PR is never checked out.
-
-**Friction log:** `docs/friction-log-sprint2-the-study-makes-its-choices.md`.
-Each leg appends its section, written for a stranger:
-- its context checkpoint: the plan's task count, compactions, forced
-  re-reads and lost-context defects;
-- each piece of friction it met.
-
-**Re-verify at execution** (each leg, before its first edit):
-- `git -C <F> log --oneline -3 origin/main` shows the previous leg's merge;
-- `git -C <F> config user.email` is Omid's GitHub noreply address;
-- `node scripts/close-lint.mjs` exits 0 and `npm test` is green on `main`;
-- `node scripts/reference-check.mjs` exits 0 on this box. A `MISSING file`
-  from a row an earlier leg pinned is fetched from its URL or copied (D8);
-- the flip map's teeth read FAIL through the close runner before the work;
-- the ASK-OMID register: any row an earlier leg filed, with its answer if any.
-
-**Verified-live at proposal** (2026-10-27, the session above):
-- **The close runner.** The baseline, at `831db91`, is the verdicts above.
-- **`legality-rules-cited`, executed against real files.** It ran through
-  the close runner (shell: Git Bash) in a scratch worktree of `831db91`, with
-  three fixture documents written for it:
-  - all four sections cited: PASS (exit 0);
-  - §15.23 absent, the other three present: FAIL (exit 1);
-  - §15.23 as the file's last token: PASS (exit 0).
-
-  This PR adds no run line and changes none.
-- **The parser.** `node <hub>/scripts/fleet-view/check-sprint-block.mjs
-  <hub> <plan> 2` read this block as proposed, exit 0:
-  `{"found":true,"approvedDate":null,"executed":false,"reviewed":false,"declaredLegs":4,"legs":["2.1.9","2.1.3","2.1.4","2.1.5"],"legsSource":"structured","ambiguous":false,"sweptDate":"2026-10-27","problems":[]}`.
-  - It read the plan as git stores it, with LF line endings.
-  - This proposal's checkout converts to CRLF (`core.autocrlf=true`). Over
-    that working-tree file the parser printed `{"found":false,"problems":[]}`
-    and exit 1, because its heading pattern does not match a line that ends in
-    a carriage return. That is friction F4 in the log.
-- **The parser, as approved:** the same command over a scratch copy with the
-  approval pasted into the heading and the label line. It read the same four
-  legs, `problems: []`, exit 0; the PR body quotes its line.
-- **`close-lint`:** `close-lint: ok (adopted 2026-10-26)`, exit 0.
-
-**After the sprint:** the last leg's executor stamps the block as executed:
-the heading's stamp, the Executed record, and a line saying the review is
-pending. It then wraps. Then, in order:
-1. the Sprint 2 reviewer pass (FRESH);
-2. the Sprint 3 proposal: Story 2.1.6 and any remainder D9 split off, from
-   the plan as it stands after the review;
-3. the decision sitting (Story 2.1.7);
-4. Epic 2.1's close (Story 2.1.8, a FRESH closer).
-
 ## Initiative 2: The design study
 
 **Objective:** turn spec D1–D7 into a design a builder can execute, decided
@@ -531,6 +86,9 @@ of spec §3, then the decision sitting and the approved rebuild spec.
 2.1.5 (Sprint 2) → 2.1.6 (proposed after Sprint 2's review) → 2.1.7 → 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
+The Sprint 2 review (2026-10-28) routes a fix-up of the three studies to the
+Sprint 3 proposal, ahead of 2.1.6: its findings can move a cell and the tags'
+listening budget (the archive's § Executed sprints › Sprint 2).
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
@@ -795,6 +353,15 @@ software study (Story 2.1.5, 2026-10-28): the host software costs nothing
 (Python, pyserial, SQLite and the browsers), and a USB barcode scanner for
 scan-and-scan pairing is an optional bench item to price
 (`docs/study/software-stack.md` § What the choice leaves to later stories).
+From the radio and parts studies (the Sprint 2 review, 2026-10-28): the
+build routes price the module's 0.5 mm-pitch land grid, which favours an
+assembled board, and one board in larger quantity for the assembly service;
+the advanced tool tier carries the vector network analyser
+(`docs/study/radio-and-location.md` and `docs/study/parts-and-toolchains.md`,
+each § What the choice leaves to later stories). A price page that refuses a
+plain request, as the FCC's, FTDI's and Microchip's pages did for the study
+(friction F8 and F13 of Sprint 2), is put to Omid early in the leg for a
+browser read, or written as not read.
 **Done when:** `docs/study/tiered-cost.md` carries the tables with a date on
 every price and a total per tier.
 
@@ -817,8 +384,10 @@ of it**, first-hand in the terminal of the session "tigerfid Sprint 2 leg 4",
 between its `date -u` reads of 00:39:20Z and 00:42:52Z: "I like all those
 recommendations, let's go with those."
 - **The host is Python.** Node.js, the runner-up, is declined.
-- **Milestone 1's seal has no HF interface** for a phone (D5), and the core
-  reserves no space for one.
+- **Milestone 1's seal has no HF interface** for a phone (D5). Its core
+  reserves an unfitted footprint for one, with the coil off the core, by
+  Omid's later word below; #39 had recorded "the core reserves no space for
+  one".
 - **Raw check-ins are kept 7 days by default.** The history (zone moves,
   alarms and their acknowledgements, sensor readings) is kept until the owner
   deletes it, and the setting sits on screen beside the disk use.
@@ -826,6 +395,28 @@ recommendations, let's go with those."
 The sitting carries the three into the rebuild spec. The study records them
 with their basis (`docs/study/software-stack.md` § Decided ahead of the
 sitting).
+
+From the Sprint 2 review (2026-10-28):
+- **The seal's HF footprint, decided by Omid** first-hand in the terminal of
+  the session "tigerfid Sprint 2 review", between its `date -u` reads of
+  10:01:36Z and 10:27:02Z: "Reserve footprint, coil off-core
+  (Recommended)". The core keeps an unfitted footprint for an NFC memory, its
+  I²C link and two antenna pads at the board's edge. The coil lives in the
+  enclosure, away from the module's antenna and its ground plane (SWRA797
+  §3.1.2). Milestone 1 fits none of it. The study's Decided line still reads
+  "no space reserved" until the Sprint 3 fix-up corrects it.
+- **The FCC grant read is the sitting's,** by Omid's hand in a browser: the
+  grant pages of both FCC IDs in TI's documents, ZAT-1312PSIP-2 and -3,
+  before the spec names an FCC ID or any part is bought
+  (`docs/study/parts-and-toolchains.md` § What was read, and what could not
+  be).
+- **The parts study's open items are the sitting's too:** the item tag's
+  cell, the nursery tag's cell if the measurement falls short, and the
+  sensor's accuracy (`docs/study/parts-and-toolchains.md` § What the choice
+  leaves to later stories).
+- **The spec carries each study's build-initiative items** from its § What
+  the choice leaves to later stories, so that the close (Story 2.1.8) files
+  them.
 **Done when:** the spec exists at that path and carries `**Approved by:** Omid`
 with the date.
 
