@@ -12,7 +12,8 @@
     "Story 2.1.4 DONE (PR #33, 2026-10-27): docs/study/parts-and-toolchains.md names each device's parts around the CC1312PSIP module (the Reader's certified whip, CDC-class USB bridge, regulator and I/O; the Field Generator on a USB adapter; the tags' certified chip antenna, four-layer board, CR2032 with a buffer capacitor, TMP117 and tamper wake pin), each tool's install on Windows, macOS and Linux cited from the vendor's page with its fetch date (none run), the LP-XDS110ET debugger, the reference designs' and the SDK's licences (TI's terms, nothing copied), and Part 15 Subpart B for the Reader. It replaces the requirements' ASSUMED cell, reply and listening figures with the datasheets' (four dated pointer lines in requirements.md), chooses for [27] the slower wake (a listen every 12 s, five years on a CR2032 on paper; a CR2450 alone does not keep five years) with the CR2450 recommended for margin and no ASK-OMID row, and recommends one core in three enclosures with the sealTag as a new design inside it. The module's FCC grant record is not read (HTTP 403; Omid answered 'Write it as not read'), and TI's two IDs, ZAT-1312PSIP-2 and -3, are left for a browser read before purchase. parts-and-toolchains-doc now passes; three-platform-claims-sourced, free-tools-three-platforms and no-medical-claim stay prose checks for the closer. Five sources are pinned under sources/ (299 rows). No run, expect or prose changed.",
     "Story 2.1.5 DONE (PR #36, 2026-10-28): docs/study/software-stack.md reads the original host programs at the tag activewave-2018 (Smart Tracker, C# on .NET Framework 4.0 with MySQL through ODBC; the Programming Station, C++Builder; both Windows only; the Outlook message unread under reading rule 7). It chooses a small local Python program (the standard library's sqlite3 and HTTP server, pyserial for the Reader's USB CDC port) whose screen is the user's own browser, with Node.js the runner-up, and Go, a desktop shell, Web Serial alone and the original's stack declined. It sketches the event schema (tag, reader, via, rssi_dbm, time in UTC from the Reader's frame clock, seq, payload), a binary frame on the Reader's wire (INFERRED from the UART's rate) and an HTTP and JSON API with a live stream. It answers the five Chorus software items (ADOPTED, share links for the LAN tier) and both not-to-copy items (DECLINED), says owned infrastructure with no subscription and pairing people with things still win, and recommends no HF interface on milestone 1's seal (D5). macOS is MEASURED (macOS 26.6.2: Python 3.12.15, SQLite 3.54.1, a standard-library probe); Windows and Linux are cited. software-stack-doc now passes; chorus-items-answered (whole with Story 2.1.3's radio half), three-platform-claims-sourced, free-tools-three-platforms and no-medical-claim stay prose checks for the closer. Dated Context sentences hand Stories 2.1.6 and 2.1.7 their items. No pin is added (299 rows). No run, expect or prose changed.",
     "Omid's three decisions ahead of the sitting (PR #39, 2026-10-28): Story 2.1.7's Context records, first-hand from the terminal of the session 'tigerfid Sprint 2 leg 4' between its date -u reads of 00:39:20Z and 00:42:52Z ('I like all those recommendations, let's go with those.'), the software study's three items decided: the host is Python (Node.js declined); milestone 1's seal has no HF interface and its core reserves no space for one (D5); raw check-ins are kept 7 days by default, with the history kept until the owner deletes it. docs/study/software-stack.md gains a section, Decided ahead of the sitting, with the retention sizing (62.6 bytes a row MEASURED in the probe's database, 150-200 INFERRED). Story 2.1.7's Done-when is unchanged; rebuild-spec-approved stays RED until the spec lands. No run, expect or prose changed.",
-    "Sprint 2 review (2026-10-28, PR #41): on Air Traffic Control's grant, the Sprint 2 block is cut to the archive's Executed sprints with its Reviewed record, and three story-text edits land. (1) Story 2.1.6's Context gains one dated sentence: the radio and parts studies' pricing items (the module's 0.5 mm-pitch land grid on the assembled routes, one board in quantity for the assembly service, the vector network analyser in the advanced tier) and the browser-only price pages (friction F8, F13). (2) Story 2.1.7's Context records Omid's word in this pass on the seal's HF footprint (reserved and unfitted, the coil off the core), which replaces #39's 'no space reserved', and gives the sitting the FCC grant read of both IDs by Omid's hand, the parts study's open items and the three studies' build-initiative items. (3) The epic's Ordering line names the fix-up of the three studies that the review routes to the Sprint 3 proposal, ahead of 2.1.6. No Done-when moved; no run, expect or prose changed; tiered-cost-doc and rebuild-spec-approved stay RED."
+    "Sprint 2 review (2026-10-28, PR #41): on Air Traffic Control's grant, the Sprint 2 block is cut to the archive's Executed sprints with its Reviewed record, and three story-text edits land. (1) Story 2.1.6's Context gains one dated sentence: the radio and parts studies' pricing items (the module's 0.5 mm-pitch land grid on the assembled routes, one board in quantity for the assembly service, the vector network analyser in the advanced tier) and the browser-only price pages (friction F8, F13). (2) Story 2.1.7's Context records Omid's word in this pass on the seal's HF footprint (reserved and unfitted, the coil off the core), which replaces #39's 'no space reserved', and gives the sitting the FCC grant read of both IDs by Omid's hand, the parts study's open items and the three studies' build-initiative items. (3) The epic's Ordering line names the fix-up of the three studies that the review routes to the Sprint 3 proposal, ahead of 2.1.6. No Done-when moved; no run, expect or prose changed; tiered-cost-doc and rebuild-spec-approved stay RED.",
+    "Sprint 3 proposal (2026-10-28, the proposal PR): two stories are born and join stories. Story 2.1.10 carries the Sprint 2 review's findings 1-5 and five nits into the three studies (Sprint 3's leg 1), with the new tooth fcc-ids-both-named (finding 2: docs/study/radio-and-location.md names ZAT-1312PSIP-3 beside -2; born RED, MEASURED by grep -c 0 on 9cb0127) and the prose check studies-review-fixes. Story 2.1.11 carries Sprint 2's friction F11 and F18 (the reference check's copy-only message for sources/; Sprint 3's leg 3), with the prose check reference-check-sources-route. tiers-dated (Story 2.1.6, Sprint 3's leg 2) is widened by the block's D5-D7: each price names its seller's page and read date, an unread price is marked not read and its tier's total names what it lacks, an unnamed part is priced as a representative part marked so, and both cells are priced where the sitting chooses; nothing else in it changed. Story 2.1.6 gains one dated Context sentence carrying D5-D8, and Story 2.1.7's Context names Story 2.1.10 for the fix-up it awaited. No other run, expect or prose changed; tiered-cost-doc and rebuild-spec-approved stay RED."
   ],
   "stories": [
     "2.1.1",
@@ -22,7 +23,9 @@
     "2.1.5",
     "2.1.6",
     "2.1.7",
-    "2.1.9"
+    "2.1.9",
+    "2.1.10",
+    "2.1.11"
   ],
   "checks": [
     {
@@ -89,6 +92,14 @@
       "note": "Story 2.1.3 (spec C9): the US rules verified before any radio is chosen — 47 CFR §15.231, §15.247, §15.249 and §15.23. The EU equivalent and the pre-certified-module preference are legality-and-modules' (prose)."
     },
     {
+      "id": "fcc-ids-both-named",
+      "run": "node -e \"const t=require('fs').readFileSync('docs/study/radio-and-location.md','utf8');process.exit(t.includes('ZAT-1312PSIP-2')&&t.includes('ZAT-1312PSIP-3')?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 2.1.10 (the Sprint 2 review's finding 2): the radio study names both FCC IDs in TI's documents, ZAT-1312PSIP-2 and -3 (SWRA797 p14, p17). Born RED on 2026-10-28: the study names -2 alone."
+    },
+    {
       "id": "rebuild-spec-approved",
       "run": "node -e \"const f=require('fs');const p=require('path');const d=p.join('docs','superpowers','specs');const hit=(f.existsSync(d)?f.readdirSync(d):[]).filter((n)=>n.endsWith('-rebuild-design.md')).some((n)=>/[*][*]Approved by:[*][*] Omid[^\\n]*\\d{4}-\\d{2}-\\d{2}/.test(f.readFileSync(p.join(d,n),'utf8')));process.exit(hit?0:1)\"",
       "expect": {
@@ -119,7 +130,7 @@
     },
     {
       "id": "tiers-dated",
-      "prose": "Story 2.1.6 (spec D7, D9): confirm docs/study/tiered-cost.md prices milestone 1 per device, per build route (hand-solder, partly assembled, fully assembled) and per tool tier (starter, advanced, pro), with a date on every price, and includes D9's bench (a tool tier plus a cheap radio receiver)."
+      "prose": "Story 2.1.6 (spec D7, D9): confirm docs/study/tiered-cost.md prices milestone 1 per device, per build route (hand-solder, partly assembled, fully assembled) and per tool tier (starter, advanced, pro), with a date on every price, and includes D9's bench (a tool tier plus a cheap radio receiver). Sprint 3's D5-D7 (an environment-dependent arm: a price as it stood on the day it was read): confirm every price names its seller's page and the date it was read; that a price no session could read is marked not read and its tier's total names what it lacks, never counting it as zero; that a part the studies leave unnamed is priced as a representative part, marked so; and that both cells are priced wherever the sitting chooses between them."
     },
     {
       "id": "build-initiatives-filed",
@@ -145,6 +156,14 @@
     {
       "id": "three-platform-claims-sourced",
       "prose": "Stories 2.1.4 and 2.1.5 (spec D5; KB plan-authoring-for-cold-execution item 10, an environment-dependent arm: the platforms Windows, macOS and Linux): confirm every install or runs-on claim in docs/study/parts-and-toolchains.md and docs/study/software-stack.md is either MEASURED, with the machine's operating system, the date and the version the tool printed, or cited from the vendor's documentation, with its URL and fetch date. No claim may say a tool was run on a platform no session ran it on. List the platforms each document measured and the ones it cited."
+    },
+    {
+      "id": "studies-review-fixes",
+      "prose": "Story 2.1.10 (the Sprint 2 review's findings 1-5 and its five nits, tigerfid #41): confirm, item by item against the review record's list, that each is corrected in its document or its sentence shown correct with its source; that docs/study/software-stack.md carries Omid's HF ruling (an unfitted footprint reserved on the core, the coil off it) and no study line says no space is reserved; that docs/study/radio-and-location.md states how a tag hears a Field Generator it has not heard before, and that its listening cost is carried into every battery figure it moves in docs/study/parts-and-toolchains.md, each re-priced margin reproducing from the study's own inputs; that every changed figure is sourced, MEASURED or INFERRED with its arithmetic; that no requirement number moved; and that the leg's PR body quotes the story's greps with each hit's disposition."
+    },
+    {
+      "id": "reference-check-sources-route",
+      "prose": "Story 2.1.11 (Sprint 2's friction F11 and F18): confirm scripts/reference-check.mjs names the fetch route (the row's URL, the file counting only once its sha256 matches the pin) with the copy route as the alternative, for a missing sources/ file and for an absent sources/ folder; that every other file row keeps its copy-only line; that the tool still never fetches; and that scripts/reference-check.test.mjs pins each case, the leg's PR body quoting the tests' red run against the script before the fix."
     }
   ]
 }
