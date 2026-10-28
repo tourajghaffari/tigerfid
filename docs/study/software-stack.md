@@ -82,7 +82,11 @@ zones, assign Field Generators to Readers, and more".
 - **The event it received.** `rfTagEvent_t`, from the API. Counted over the
   source folder, its fields in use are the tag's ID, status bits and type,
   the Reader, the Field Generator, the signal strength (`RSSI`), the host,
-  the event type and a packet ID. **It carries no time.**
+  the event type and a packet ID. The struct also has a `logTimestamp`
+  member, a date and time to the second from the tag's own log
+  (`activewave-2018:api/c-plus-plus-dot-net/example/AWI_API.h`), which
+  Smart Tracker never reads (MEASURED: none of `Source/`'s 103 `.cs` files
+  names it). **What the host lacked was a time of hearing.**
 - **The time was the host's, and local.** Each event was stamped when it
   arrived, by `DateTime.Now`: 263 uses in the C# source and none of
   `DateTime.UtcNow` (MEASURED: a count over `Source/`). Its tables store
@@ -344,9 +348,10 @@ and its screen is a page in the user's own browser.**
   - **The stream:** `ThreadingHTTPServer` sent 1,000 Server-Sent Events to a
     client on the same machine, and the client read all 1,000 in 16 ms.
   - **What it shows:** on this box, the database and the stream are not
-    where the host's time goes. INFERRED: against [3]'s 1,363 replies a
-    second, a laptop a hundred times slower would still keep a margin of
-    eight. SQLite's own FAQ gives "50,000 or more INSERT statements per
+    where the host's time goes. INFERRED: against 1,363 replies a second,
+    the radio study's slot capacity on one channel and more than [3]'s
+    1,000 tags a second, a laptop a hundred times slower would still keep a
+    margin of eight. SQLite's own FAQ gives "50,000 or more INSERT statements per
     second on an average desktop computer" but "only ... a few dozen
     transactions per second" on a spinning disk (SQLITE-FAQ, item 19). The
     host therefore writes one transaction per frame, never one per reply.
@@ -467,19 +472,27 @@ The Reader's host link is a UART behind a USB bridge of the CDC class
 second it can carry. The module's UART runs at up to 3 MBaud (PSIP §8.14.5.1,
 p26).
 
-INFERRED, at 10 bits a byte on the line and [3]'s worst case of 1,363
-replies a second:
+INFERRED, at 10 bits a byte on the line and the worst case of 1,363 replies
+a second: the radio study's slot capacity on one channel
+(`radio-and-location.md` § Anti-collision), above [3]'s 1,000 tags a
+second. The line runs at the lower of two rates: the module's UART, up to
+3 MBaud, and the USB bridge's, which is unread because the bridge is the
+build initiative's choice. **ASSUMED: 921,600 baud for the bridge.** Story
+2.1.5 used that figure with no source and no mark (the Sprint 2 review's
+finding 5), and it stays here as a stand-in for the bridge's datasheet.
 
-| Form on the wire | Bytes a reply | Line rate needed | Against 921,600 baud |
-|---|---|---|---|
-| A binary frame with the packet's CRC (ASSUMED 32 bytes) | 32 | 436,160 bit/s | 47 % |
-| The JSON event above (ASSUMED 150 bytes) | 150 | 2,044,500 bit/s | 222 %, so over the line |
+| Form on the wire | Bytes a reply | Line rate needed | Against 921,600 baud (ASSUMED) | Against the module's 3 MBaud (PSIP p26) |
+|---|---|---|---|---|
+| A binary frame with the packet's CRC (ASSUMED 32 bytes) | 32 | 436,160 bit/s | 47 % | 15 % |
+| The JSON event above (ASSUMED 150 bytes) | 150 | 2,044,500 bit/s | 222 %, so over the line | 68 % |
 
 - **The choice:** the Reader sends compact binary frames, each closed by a
   CRC, as the original's one packet format was (`original-system.md` § The
   packet). The host's reader adapter turns them into the JSON events above.
-- **JSON at full rate** would need 68 % of the module's 3 MBaud maximum,
-  and the bridge's own limit is unread: the part is the build initiative's.
+- **The binary frame still wins without the ASSUMED rate.** INFERRED: JSON
+  fits the module's 3 MBaud at 68 %, but only behind a bridge good for
+  more than 2 Mbit/s. The binary frame fits any bridge from 436,160 baud
+  up, so the bridge's unread limit cannot break it.
 - **The schema is the API's,** not the wire's. A reader on another link (a
   later Ethernet Reader, or another maker's device) sends JSON straight to
   the API.
@@ -585,9 +598,13 @@ fitting option on the core.
 - a second path to a tamper record, for a seal out of the Reader's range.
 
 **What it would cost:**
-- **A web page reads NFC in one browser only.** Web NFC is in Chrome on
-  Android from version 89 and in no desktop browser and no Safari, and it is
-  still marked experimental (MEASURED from BCD, `api.NDEFReader`).
+- **A web page reads NFC on Android only.** MDN's data lists Web NFC in
+  Chrome on Android from version 89. It marks Opera, Samsung Internet and
+  WebView on Android, and the Quest Browser, as mirroring Chrome on
+  Android. No desktop browser has it, nor Safari or Firefox on
+  any platform, and it is still marked experimental (MEASURED from BCD,
+  `api.NDEFReader`, and each mirroring browser's upstream, read again
+  2026-10-28 by Story 2.1.10).
 - **An iPhone would need a native app.** INFERRED, not read: that is one
   program per phone platform, outside the three-platform host and a
   beginner's build.
@@ -605,11 +622,15 @@ add a part and a phone-side program, for a hand read that no requirement
 asks for. The HF memory stays a fitting option on the core, for a later tier
 whose scenario needs it. The sitting decides it with the seal's design.
 
-**Decided, 2026-10-28:** no HF interface on milestone 1's seal, and no space
-reserved for one on its core, by Omid ahead of the sitting (§ Decided ahead
-of the sitting). INFERRED, the reason for reserving no space: a coil antenna
-beside the module's would sit inside the layout its certification rests on
-(`parts-and-toolchains.md` § One core or three).
+**Decided, 2026-10-28:** no HF interface fitted on milestone 1's seal, by
+Omid ahead of the sitting. Its core keeps an unfitted footprint for one: an
+NFC memory, its I²C link and two antenna pads at the board's edge. The coil
+lives in the enclosure, off the core (§ Decided ahead of the sitting, which
+records both of his answers). INFERRED, the reason the coil stays off the
+core: beside the module's antenna it would sit inside the layout the
+module's certification rests on (`parts-and-toolchains.md` § One core or
+three), and "The antenna must see as large as possible GND plane for best
+antenna efficiency" (SWRA797 §3.1.2, p9).
 
 ## The Chorus comparison, software side
 
@@ -664,7 +685,11 @@ zones, relay outputs and wake-on-command, is `radio-and-location.md`'s.
   sitting carries them into the rebuild spec.
 - **The build initiatives:**
   - the JSON Schema file, and the binary frame on the Reader's wire;
-  - the USB bridge's own baud limit, from its datasheet;
+  - the USB bridge's own baud limit, from its datasheet, in place of the
+    ASSUMED 921,600 baud;
+  - the seal core's unfitted NFC footprint, its I²C link and antenna pads
+    at the board's edge, and the coil's place in the enclosure (§ Decided
+    ahead of the sitting);
   - the host's first measurements on Windows and Linux, and with a Reader on
     all three platforms;
   - the guides' install steps for each platform, checked on each;
@@ -683,8 +708,26 @@ go with those."
 | Item | Decided | Its basis |
 |---|---|---|
 | The host's language | **Python** (option A). Node.js, the runner-up, is declined. | § The choice: no compiler anywhere. What would have changed it is Node's serial add-on shown to ship a ready build for every machine the builders use. |
-| The seal's HF interface (D5) | **None on milestone 1's seal, and no space reserved for one on its core** | § The seal's HF interface: a phone reads NFC from a web page in one browser only, and the printed QR code and the radio's tamper alarm cover what it would add. |
+| The seal's HF interface (D5) | **None fitted on milestone 1's seal. Its core keeps an unfitted footprint for one, the coil off the core** (amended in the Sprint 2 review, below) | § The seal's HF interface: a phone reads NFC from a web page on Android only, and the printed QR code and the radio's tamper alarm cover what it would add. |
 | How long raw check-ins are kept | **7 days by default.** The history (zone moves, alarms and their acknowledgements, sensor readings) is kept until the owner deletes it. The setting sits on screen beside the disk use. | The sizing below |
+
+**The HF item, amended the same day.** The record of the answer above first
+read "no space reserved for one on its core", which said more than the
+recommendation it answered: that recommendation kept the HF memory "a
+fitting option on the core" (§ The seal's HF interface). The Sprint 2 review
+put the difference to Omid first-hand in the terminal of the session
+"tigerfid Sprint 2 review", and his answer came between that terminal's
+`date -u` reads of 10:01:36Z and 10:27:02Z: "Reserve footprint, coil
+off-core (Recommended)". The core keeps an unfitted footprint for an NFC
+memory, its I²C link and two antenna pads at the board's edge. The coil
+lives in the enclosure, away from the module's antenna and its ground
+plane. Milestone 1 fits none of it (plan Story 2.1.7). Story 2.1.10 carried
+the amendment into this study.
+
+- **Open for the build, INFERRED:** whether a passive NFC coil counts as
+  "any other antenna" under the module's condition that it "must not be
+  co-located or operating with any other antenna or transmitter" (PSIP
+  p54) is unread. A passive tag sends nothing of its own, so it should not.
 
 **The sizing for the retention default:**
 - **The probe's database** (§ The stack on three platforms) held 400,000
@@ -721,12 +764,17 @@ reading rule 2), all under `software/`:
 - `programming-station/Programing Station 191/Programming Station 191/`:
   `ProgStationUnit.cpp`, `Commands.h`, `ComConfigPage.cpp` and `TCPIPUnit.cpp`.
 
+And, outside `software/`, the API's header
+`api/c-plus-plus-dot-net/example/AWI_API.h` (read by Story 2.1.10 for
+`rfTagEvent_t`).
+
 **Pinned in the reference corpus** (`docs/reference-corpus.tsv`, folder
 `sources/`, licence `third-party`, study only):
 
 | Short name | Document | Pin (sha256, first 12) | URL |
 |---|---|---|---|
 | PSIP | TI, "CC1312PSIP SimpleLink Sub-1-GHz Wireless System-in-Package", SWRS293, November 2023 (pinned by Story 2.1.3) | `da5eb47438cf` | `https://www.ti.com/lit/ds/symlink/cc1312psip.pdf` |
+| SWRA797 | TI, "Design Considerations for CC1312PSIP FCC and IC Certified RF Module", SWRA797, September 2024 (pinned by Story 2.1.3; cited here by Story 2.1.10) | `2fbe59c4ae3f` | `https://www.ti.com/lit/an/swra797/swra797.pdf` |
 
 **Cited by URL and fetch date** (fetched 2026-10-28; none pinned, plan D8):
 
@@ -747,7 +795,11 @@ reading rule 2), all under `software/`:
 - **BCD:** MDN's browser compatibility data, read 2026-10-28 at 00:19:22Z
   and 00:24:28Z: `https://raw.githubusercontent.com/mdn/browser-compat-data/main/`
   `api/Serial.json`, `api/NDEFReader.json`, `api/EventSource.json` and
-  `svg/elements/svg.json`.
+  `svg/elements/svg.json`. Story 2.1.10 read `api/NDEFReader.json` again
+  between its clock reads of 11:33:27Z and 11:33:28Z, and each mirroring
+  browser's `browsers/<name>.json` for its upstream between 11:33:28Z and
+  11:33:50Z (`browsers/oculus.json`'s name once more after that, time not
+  read).
 - **MCHP-CDC:** cited through `parts-and-toolchains.md` § Sources, not
   fetched again.
 

@@ -1009,8 +1009,10 @@ From the Sprint 2 review (2026-10-28):
   (Recommended)". The core keeps an unfitted footprint for an NFC memory, its
   I²C link and two antenna pads at the board's edge. The coil lives in the
   enclosure, away from the module's antenna and its ground plane (SWRA797
-  §3.1.2). Milestone 1 fits none of it. The study's Decided line still reads
-  "no space reserved" until Story 2.1.10 corrects it.
+  §3.1.2). Milestone 1 fits none of it. Story 2.1.10 carried the ruling into
+  the study's Decided line and its table row (2026-10-28;
+  `docs/study/software-stack.md` § The seal's HF interface and § Decided
+  ahead of the sitting).
 - **The FCC grant read is the sitting's,** by Omid's hand in a browser: the
   grant pages of both FCC IDs in TI's documents, ZAT-1312PSIP-2 and -3,
   before the spec names an FCC ID or any part is bought

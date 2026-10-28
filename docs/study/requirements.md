@@ -128,6 +128,11 @@ Story 2.1.4 replaces each with the chosen parts' datasheet figures.
   *Replaced 2026-10-27 by Story 2.1.4:* 13.9 µA at a listen every 1 s,
   7.3 µA every 2 s and 1.8 µA every 12 s
   (`docs/study/parts-and-toolchains.md` § The battery).
+  *Re-priced 2026-10-28 by Story 2.1.10:* those figures are for the
+  Reader's beacon and two Field Generator slots. A tag now listens to its
+  zone's slot and its neighbours', and each more slot adds 2.3 µA at a 1 s
+  listen (`docs/study/radio-and-location.md` § Zones;
+  `docs/study/parts-and-toolchains.md` § The battery).
 - **INFERRED: a channel's capacity at 250 kbit/s.** A short reply of
   about 30 bytes, preamble included, lasts about 1 ms on air. A scheme
   where the reader assigns reply slots can carry a few hundred replies a
@@ -264,6 +269,11 @@ arithmetic, listening takes about 70 mAh a year and 4,320 check-ins a day
 about 32 mAh. That is about 100 mAh a year, or around 1.5 years from
 150 mAh. The tags are reused across many stays and cleaned between them,
 so the battery is changed at a planned yearly service, never mid-stay.
+*Priced 2026-10-28 by Story 2.1.10:* a tag that stays in the rooms holds
+the year on paper by 1.8 %. One that walks the corridor more than about
+37 minutes a day does not, and the parts study names the routes, measuring
+first and then a CR2450 (`docs/study/parts-and-toolchains.md` § Each worn
+tag's year). The number is unchanged.
 **Omid's answer:** as recommended.
 
 ## Scenario 3 — the warehouse
@@ -322,6 +332,10 @@ chooses between them.
 *Chosen 2026-10-27 by Story 2.1.4:* the slower wake, a listen every 12 s,
 which keeps five years on a CR2032 on paper; a CR2450 alone does not. The
 CR2450 is recommended as well, for margin
+(`docs/study/parts-and-toolchains.md` § [27]). The number is unchanged.
+*Re-priced 2026-10-28 by Story 2.1.10:* the 12 s wake keeps five years on
+a CR2032 for the plain item tag, by 4 %, and not for the cold-chain one
+(0.96 of five years), on which the CR2450 is recommended
 (`docs/study/parts-and-toolchains.md` § [27]). The number is unchanged.
 **Omid's answer:** as recommended.
 

@@ -289,7 +289,7 @@ original's family) at about half that. Only slots the reader assigns reach
 |---|---|---|---|---|
 | A: 433 MHz wake + sub-GHz reply | the reply side as B | as B | **no**: the 433 MHz wake fails §15.231 for [13] | declined |
 | B: one sub-GHz band, 300 kbit/s, reader-assigned slots | **yes**: 1,363 slots/s | **yes on paper**, 21.8 dB before fading at the worst body loss | **yes**, on a certified module (§ The radio chosen) | **chosen** |
-| B at 500 kbit/s or 1 Mbit/s | yes, with more margin | no worse by the tables: −95 and −97 dBm, though measured under other conditions than the module's −94 dBm | only as five home-built devices: no module this leg read is certified at these rates (SWRA797 Table 2-1) | declined |
+| B at 500 kbit/s or 1 Mbit/s | yes, with more margin | worse on the chosen module's own sheet: −90 dBm at 500 kbit/s (916 MHz, 1 % PER, 127-byte payload) and −93 dBm at 1 Mbit/s (915 MHz, BER 10⁻²), against its −94 dBm at 300 kbit/s (PSIP p16, p17, p19). The CC1312R7's sheet prints −95 and −97 dBm (R7 p13, p14) | only as five home-built devices: no module this leg read is certified at these rates (SWRA797 Table 2-1) | declined |
 | B with several channels per reader | yes | as B | the module's grant: "This transmitter must not be co-located or operating with any other antenna or transmitter" (PSIP p54) | declined for milestone 1 |
 | C: dual-band, Bluetooth for setup | as B, on its sub-GHz half | as B | yes on paper; this leg found no certified module of it (research log) | not chosen; the sitting's option (§ The seal's HF interface) |
 | D: Bluetooth Long Range | **no**: under 976 a second even with perfect slots | 8.5 dB more path loss at 2,440 MHz than at 915 MHz (INFERRED, the frequency ratio), against 10 dB better sensitivity | yes (§15.247; SRD 57c) | declined |
@@ -365,6 +365,11 @@ record states):
   - FCC ID ZAT-1312PSIP-2, "15.247 Operation within the 902-928 MHz band",
     certified "as a single-modular transmitter" that "carries a modular
     grant";
+  - a second ID in TI's own certification note: its FCC filings, the
+    modular approval letter among them, are listed under ZAT-1312PSIP-3,
+    and "all the files are available on the https://fccid.io/ZAT-1312PSIP-3
+    homepage" (SWRA797 p14, p17). Which of the two grants covers the chosen
+    PHY is unread (below);
   - ISED 451H-1312PSIP2;
   - for Europe, the table names EN 300 220 (863–870 MHz), EN 303 204 and
     EN 303 659, with no certificate ID;
@@ -387,7 +392,12 @@ record states):
   search, and a public mirror of it, refused a plain request (HTTP 403). So
   the grant's equipment class is unread: frequency hopping, or digital
   transmission 500 kHz wide. The design below hops (§ Channels), which
-  holds under either. Leg 3 reads the grant before any part is bought.
+  holds under either. Story 2.1.4's requests were refused the same way, and
+  Omid answered "Write it as not read" (`parts-and-toolchains.md` § What was
+  read). The read is now the decision sitting's, by Omid's hand in a
+  browser: the grant pages of both IDs, ZAT-1312PSIP-2 and ZAT-1312PSIP-3,
+  before the rebuild spec names an FCC ID or any part is bought (plan Story
+  2.1.7).
 
 **For a beginner's hands:** the module is a 0.5 mm-pitch package (PSIP p9)
 with a reflow profile (PSIP p65). INFERRED: it is not hand-soldered. Its
@@ -474,9 +484,9 @@ single band:
   power set for its room. The power is the zone's size, as the original's
   field strength was.
 - **A tag wakes on its own timer** for the Reader's beacon and the slots of
-  the Field Generators it last heard. It reports the Field Generators it
-  hears, with their signal strength, when the strongest one changes, and
-  with every check-in.
+  its listen set (§ How a tag hears a Field Generator it has not heard
+  before, below). It reports the Field Generators it hears, with their
+  signal strength, when the strongest one changes, and with every check-in.
 - **The server decides the zone** from those reports, with hysteresis at
   doorways (Chorus's "smart server", § The Chorus comparison).
 - **An exit's Field Generator also listens.** A tag that hears an exit's
@@ -484,7 +494,81 @@ single band:
   pairing alarm ([17], 5 s) and the exit test ([13], 100 of 100) are
   therefore decided where the radio is busiest.
 
-**The timing, for the nursery's [13]** (INFERRED):
+#### How a tag hears a Field Generator it has not heard before
+
+Added by plan Story 2.1.10, from the Sprint 2 review's finding 4. A tag that
+listened only to the Field Generators it last heard would never listen in
+the slot of a room it had not entered before, so a move into that room would
+never be noticed. The rebuild names the slots for it:
+
+- **The floorplan draws each zone's neighbours:** the zones a tag can be
+  carried into from it. The host's zones already hold them
+  (`software-stack.md` § The API).
+- **A tag's listen set** is the slot of its zone's Field Generator and the
+  slots of that zone's neighbours. When the host places a tag in a zone, the
+  Reader names the set to it in a downlink slot of its next frame, which a
+  tag that has just reported a change listens for. INFERRED: that is one
+  more short listen per zone change, beside the 86,400 listens of a day at a
+  1 s listen, so this study does not price it.
+- **A tag with no set listens to every slot.** A tag that has just joined,
+  or that has heard none of its set in two listens, listens to every Field
+  Generator's slot until the host places it. A tag still unplaced after a
+  minute slows that search to one listen every 12 s, so a tag shut in a
+  drawer does not drain its cell. INFERRED: 6.6 µA while it stays lost
+  among the ward's 27 Field Generators, against 13.9 µA in a room.
+- **The slots sit in one block after the Reader's beacon.** ASSUMED: the
+  beacon lasts 1.0 ms and each Field Generator's slot 0.4 ms, which together
+  reproduce this study's 1.8 ms for the beacon and two slots. ASSUMED as
+  well: the host orders the block along the floorplan, so that a tag hears
+  its set in one window. The build measures both lengths.
+- **The block takes frame time.** INFERRED, for the ward's 27: the slots
+  and the beacon take 11.8 ms of each 0.25 s frame, which leaves 324 reply
+  slots a frame, 1,296 a second. That is still above [3]'s 1,000, the most
+  any scenario asks of one Reader.
+
+**The neighbours, ASSUMED from each scenario's size** (`requirements.md`
+items [1], [10] and [19]):
+- **The nursery:** the corridor is covered in five stretches, each with a
+  Field Generator of its own at the doors of about four rooms. A room then
+  has one neighbour, its stretch. A stretch has six: its four rooms, and the
+  stretch or the exit at each end. The ward has 27 Field Generators: 20
+  rooms, two exits and five stretches.
+- **The conference:** a room has two neighbours. An area of the main hall
+  has at most eight: a 40 m × 30 m hall in areas of about 10 m, the inner
+  ones with eight around them.
+- **The warehouse:** an item at rest in a bay has two, the bays either side
+  of it along its aisle.
+
+**Weighed against the other two ways** (plan Sprint 3's D3). INFERRED, for
+the nursery's tag at its 1 s listen and for the warehouse item tag at its
+12 s listen, with `parts-and-toolchains.md` § The battery's figures and the
+lengths above:
+
+| Mechanism | What a tag listens to | [13]'s move | [22]'s move | Listening, the nursery's tag in a room | Its cost |
+|---|---|---|---|---|---|
+| **The neighbours named (chosen)** | its zone's slot and its neighbours' | 3.0 s | 25 s | 13.9 µA, unchanged: its own slot and its stretch's | a tag in a zone with many neighbours listens to more slots; a link the floorplan misses (below) |
+| The whole block at every listen | every Field Generator's slot | 3.0 s | 25 s | 71.9 µA, the ward's 27 slots | 630 mAh a year of listening: 0.23 years for [18] |
+| A wider listen every second time | the slots it last heard, and the whole block every second listen | 4.0 s (2 + 1 + 1.0) | 37 s (24 + 12 + 1) | 42.9 µA | 376 mAh a year of listening: 0.37 years for [18] |
+
+**The choice: the neighbours named.** It is the only one of the three that
+keeps a room's tag at the 13.9 µA this study priced, and it meets [13] and
+[22] as the design did before. Its cost falls on a tag in a zone with many
+neighbours, and `parts-and-toolchains.md` prices it (§ Each worn tag's year,
+§ [27]). One mechanism serves the three scenarios, so the tags keep one
+firmware (`parts-and-toolchains.md` § One core or three).
+
+**A link the floorplan misses** (INFERRED). A tag carried along it hears
+none of its set once its old zone fades. Two missed listens, a listen to the
+whole block and a second hearing then put the move on screen in 5.0 s at a
+1 s listen (2 + 1 + 1, then 1.0 s for the slot, the Reader and the host), at
+[13]'s limit. While the old zone's Field Generator is still heard, the move
+is not seen at all. The links are therefore part of setting up the zones.
+INFERRED: the guides' setup walk carries a tag through every doorway in a
+setup mode that listens to the whole block, and the host records each pair
+of zones a step of the walk joins.
+
+**The timing, for the nursery's [13]**, a move into a zone the floorplan
+draws as a neighbour (INFERRED):
 
 | Step | Time, at most |
 |---|---|
@@ -501,20 +585,16 @@ hearing. A pass is missed once in 8,000, so 100 of 100 passes succeed with
 98.8 % probability. That is the strictest test in the study, and the build
 measures it.
 
-**The battery this costs** (INFERRED, for Story 2.1.4 to replace with the
-datasheet's start-up energies):
-- listening 1.8 ms a second (the beacon and two Field Generator slots) at
-  the module's 5.8 mA receive current (PSIP p1, at 868 MHz): 91.5 mAh a
-  year;
-- [18]'s check-in every 20 s, a 0.733 ms reply at 28.7 mA (PSIP p1, at
-  +14 dBm): 9.2 mAh;
-- standby at 0.9 µA (PSIP p1): 7.9 mAh;
-- in all, 108.6 mAh a year: 1.38 years from the requirements' usable
-  150 mAh, against [18]'s one year.
+**The battery this costs** is priced in `parts-and-toolchains.md` § Each
+worn tag's year and § [27]: Story 2.1.4 replaced this study's ASSUMED
+inputs with the datasheets' figures, and Story 2.1.10 priced the listen set
+above. This study's own first estimate, 108.6 mAh a year for [18]'s tag
+from its ASSUMED inputs, is superseded by those figures.
 
 The listening dominates, as the requirements predicted (`requirements.md`
-§ The arithmetic). If Story 2.1.4's figures break [18], the fallback keeps
-the zones: the Field Generators listen and the tags only transmit.
+§ The arithmetic). Where the figures break a battery number, the parts
+study names the routes. One of them keeps the zones another way: the Field
+Generators listen and the tags only transmit.
 
 ### Legality of the choice
 
@@ -531,7 +611,9 @@ their own:**
   used only at a certified PHY with the SDK's default settings, at the
   powers above, with a listed antenna type of at most 2.69 dBi, and never
   beside a second transmitter (SWRA797; PSIP p54). The device outside
-  carries "Contains FCC ID: ZAT-1312PSIP-2" (§15.212(a)(1)(vi)(A)).
+  carries "Contains FCC ID: ZAT-1312PSIP-2" (§15.212(a)(1)(vi)(A)), or
+  ZAT-1312PSIP-3 if the sitting's read of both grants finds that one
+  covering the chosen PHY (§ The radio chosen).
 - **Not read:** the Reader's USB or Ethernet electronics are a digital
   device under Part 15's Subpart B (§15.3(k)), which this leg did not read.
   Story 2.1.4 reads it with the Reader's parts.
@@ -560,7 +642,12 @@ their own:**
   Generators report: tag, reader or Field Generator, signal strength, time
   and payload.
 - **Story 2.1.6** prices the module's assembled-board routes.
-- **Story 2.1.7** decides, with this document's choice as its default.
+- **Story 2.1.7** decides, with this document's choice as its default. Its
+  sitting reads both FCC grant pages, ZAT-1312PSIP-2 and -3, in a browser
+  (§ The radio chosen).
+- **The build initiatives** (added by Story 2.1.10): the beacon's and a
+  Field Generator slot's lengths, measured; the floorplan's neighbour
+  links; and the guides' setup walk that checks them (§ Zones).
 
 ## The Chorus comparison, radio side
 
