@@ -230,3 +230,77 @@ defect.
   reference folder for a PDF conversion. The shell was reset, and every
   later repo command used absolute paths. Every commit ran behind
   `close-lint && npm test &&`.
+
+## Leg 4 — Story 2.1.5 (2026-10-28)
+
+Run by the repo-rooted session "tigerfid Sprint 2 leg 4" (session
+`a60005ee-b36d-474f-9f59-b2624330eb37`), fresh by launch, on the fleet's
+macOS machine. Its background-task path id is its own session id, so no
+`/clear` preceded it and no earlier session's process was cleared. Not
+elevated.
+
+**Context checkpoint:** a plan of eight tasks, at D9's tripwire and not
+above it:
+1. the original host source at the tag;
+2. the stack's options and sources;
+3. the event schema;
+4. the alarms, pairing and D5;
+5. the Chorus items;
+6. the document;
+7. the tick, the manifest line, the research-log entry and this section;
+8. the checks and the merge.
+
+No split was needed. No compaction, no forced re-read, no lost-context
+defect.
+
+- **F18 — This machine's corpus had no `sources/`.** Legs 2 and 3 pinned
+  their eight `sources/` files on the other machine.
+  - **What happened:** `node scripts/reference-check.mjs` read `MISSING
+    folder sources/ — 8 files`. Its message still says "copy-only" (F11).
+  - **How it was met:** each file was fetched from its row's URL into a
+    scratch folder, and copied in only where its sha256 matched the pin.
+    All 8 matched, and the check then read 299 rows verified.
+  - **Cost:** about a minute. D8's fetch route worked as written.
+- **F19 — An empty search over a source file meant "unread", not
+  "absent".** This machine's shell `grep` printed nothing, not even a `-c`
+  count, over the Programming Station's main source file, which `file`
+  calls "Non-ISO extended-ASCII text". The system `grep -a` read it and
+  found 23 includes.
+  - **Cost:** one retry. Read as an absence, the empty result would have
+    let the study say the file includes nothing.
+  - **Suggested fix:** a search that prints no count at all is re-run in
+    text mode before any finding rests on it.
+- **F20 — MDN's compatibility tables render by script.** The web-reading
+  tool returned the Web Serial and Web NFC pages without their tables.
+  - **How it was met:** the support entries were read from MDN's own
+    browser-compatibility data, the JSON the tables are drawn from, with a
+    small script.
+  - **Cost:** a few minutes. The study cites the data with its fetch time.
+- **F21 — The orders' grant list missed the research log.** Legs 2 and 3
+  each added a § 4 entry to `docs/reference-research.md`, but this leg's
+  path grants did not name the file.
+  - **How it was met:** a CLAIM to the coordinator. The GRANT came at
+    00:28:48Z by the coordinator's clock, while the leg worked on.
+  - **Cost:** none to the leg.
+  - **Suggested fix:** the leg template's grants carry the research log
+    wherever a leg reads or searches.
+- **F22 — Two first readings of the original's source were wrong.** The
+  claims check, run against the source before the commit, caught both:
+  - a second key position cited inside a commented-out block;
+  - a cipher named only in that block's comment.
+
+  Both were corrected in the document. **Suggested fix:** a claim about
+  source code is checked against live code, not a comment.
+- **Reading hazards in the original, not quoted.** Its source carries a
+  credential-shaped connection string, compiled-in encryption keys, and
+  developers' names in comments. The study cites where the keys sit and
+  quotes none of them (CLAUDE.md § Writing in public).
+- **Guard events, each a read and not a proof.**
+  - A shell-guard denial: a bare `===` separator, which this machine's
+    shell reads as a command lookup. It was refused before it ran, and the
+    command was re-issued with `---`.
+  - The piped-checker guard warned once, on the close runner piped into
+    `sed`. The PR body's flip map is an unpiped run.
+  - The cwd-drift guard warned once, on a `cd` into this repo.
+
+  Every commit ran behind `close-lint && npm test &&`.
