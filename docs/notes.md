@@ -7,6 +7,42 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-28 — Sprint 3 leg 3 (Story 2.1.11, the sources' fetch route) and the sprint executed
+
+- **Landed:**
+  - #50 → `780d1483` (GitHub's merge stamp 23:11:36Z), squash on green,
+    `--match-head-commit 23b26c7d…`. `scripts/reference-check.mjs` names
+    the fetch route for a missing `sources/` file or folder. Story 2.1.11 is
+    ticked, `docs/close/2.1.json` carries its `reviewedFor` line, and the
+    friction log's § Leg 3 holds F17–F20 and the fresh-session read.
+  - #51 → `cf55d27c` (GitHub's merge stamp 23:13:47Z), auto-merged: the
+    Sprint 3 block is stamped EXECUTED, with its Executed record and
+    `**Review:** PENDING`.
+- **Next:**
+  1. **The Sprint 3 review,** in a FRESH seat. The block's § Independent
+     checks name leg 3's tests run against `main`'s script before the leg:
+     two of the three are red there, and the third pins the unchanged lines
+     (F18).
+  2. Then Story 2.1.7's decision sitting (Omid's) and Epic 2.1's close
+     (Story 2.1.8, a FRESH closer).
+- **Surprises / decisions:**
+  - **Omid's first-hand word came at the leg's start, so the merge did not
+    hold.** He wrote in this terminal, after its UTC read of 23:02:01Z and
+    before its `date -u` read of 23:03:44Z: "Please merge any PRs you open
+    during this session when ready and in the riught order". The `gh pr
+    merge --squash --match-head-commit` that held in legs 1 and 2 passed
+    at once.
+  - **The folder README's stub is stale** (F17). It still says "the other
+    two folders travel by copy only", though Story 2.1.3 added `sources/`.
+    It is left for the review with its cost: editing the stub makes every
+    machine's folder README a finding until `--write-stub` runs there.
+  - **A `sources/` file fetched at a newer revision** reads only `DRIFT
+    file` (F20). Recommended for the build initiatives' first story that
+    adds `sources/` rows.
+- **Provenance:** Session id `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, the
+  hub-rooted executor seat "Windows 4", fresh by launch (the friction log's
+  fresh-session read).
+
 ## Session: 2026-10-28 — Sprint 3 leg 2 (Story 2.1.6, the tiered cost)
 
 - **Landed:** #48 → `3d27bb01` (GitHub's merge stamp 21:39:52Z), squash on
@@ -74,34 +110,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `0082985c-c964-4b27-a5c7-4592056265f0`, the
   executor seat that followed a `/clear` of the Sprint 3 proposer's process
   (the friction log's fresh-session read).
-
-## Session: 2026-10-28 — the Sprint 3 proposal (approved, three legs)
-
-- **Landed:** #43 → `88d54034` (GitHub's merge stamp 11:02:31Z), squash by
-  hand on green under the session's merge delegation, `--match-head-commit
-  10906b17…`. The Sprint 3 block is the state: `docs/project-plan.md`
-  § Sprint 3, approved by Omid first-hand between this terminal's `date -u`
-  reads of 10:59:30Z and 11:00:38Z ("Approve as proposed (Recommended)").
-- **Next:**
-  1. **Leg 1, Story 2.1.10**, the Sprint 2 review's fixes to the three
-     studies, in a FRESH executor seat. The block's kickoff is baked; read
-     the touched-file ledger for the grants.
-  2. **Leg 2, Story 2.1.6**, the tiered cost, after leg 1 merges. Its D7
-     message to Omid (the refused price pages) comes early in the leg.
-  3. **Leg 3, Story 2.1.11**, the reference check's `sources/` message. It
-     touches `scripts/`, so it merges by Omid's word.
-  4. Then the Sprint 3 review, Story 2.1.7's sitting and Epic 2.1's close.
-- **Surprises / decisions:**
-  - **`close-lint` lints the repo it is run from.** Run by absolute path
-    from the hub root, it linted the hub ("adopted 2026-07-06"). `npm
-    --prefix <F> test` linted this repo. The block's § Paths and habits says
-    so (friction F4).
-  - **The commit guard cannot resolve `git -C "$VAR"`** and judged the hub's
-    `main`; a literal path committed.
-  - **The close runner prints "REVIEW SEATING MISSING" for Sprint 2's
-    review.** It is the closer's census (Story 2.1.8), noted in the block.
-  - **The fresh-session read:** session
-    `4ef9427a-246a-42f9-98aa-be892d938900`. Its background-task path id,
-    `2a0782f7-…`, was the Sprint 2 reviewer pass's process, so a `/clear`
-    came before it. It ran without elevation.
 
