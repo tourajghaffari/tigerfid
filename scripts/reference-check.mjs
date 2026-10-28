@@ -12,8 +12,12 @@
 //   --folder <path>                                override the sibling folder (tests only)
 // Exit 0 when every row is ok, no sidecar, README the stub; 1 on any finding;
 // 2 when the folder is absent (without --recreate) or the usage is wrong.
-// File rows are copy-only: the tool never fetches one, because the pages they
-// were captured from change. It never modifies or deletes a present file and
+// File rows are copy-only, except under sources/: a study source may be
+// fetched again by hand from its row's URL, and counts only once its sha256
+// matches the pin (the header of docs/reference-corpus.tsv), so a missing one's
+// line names that route first and the copy second (plan Story 2.1.11). The
+// tool itself never fetches a file row, because the pages they were captured
+// from change. It never modifies or deletes a present file and
 // writes nothing without --recreate / --write-stub. --recreate first fetches
 // the pin's missing blobs in ONE batch (a blobless clone would otherwise fetch
 // them one by one), then extracts `git archive` with core.autocrlf off into
@@ -37,6 +41,10 @@ const SIDECAR_RE = /^(\._.*|\.DS_Store)$/s;
 const HEX40 = /^[0-9a-f]{40}$/;
 const HEX64 = /^[0-9a-f]{64}$/;
 const norm = (t) => t.replace(/\r\n/g, '\n');
+// The one folder whose file rows may be fetched again from their URL (the
+// header of TSV; docs/reference-repos.md § sources/). Every other is copy-only.
+const FETCHABLE = 'sources';
+const fetchUrl = (row) => (row.name.split('/')[0] === FETCHABLE && /^https?:\/\//.test(row.url ?? '') ? row.url : null);
 
 export function parseTsv(text) {
   const [head, ...rows] = text.split(/\r?\n/).filter((l) => l.length && !l.startsWith('#'));
@@ -136,7 +144,7 @@ function verifyTree(row, folder, root, log, findings, missingTrees) {
 export function verify({ folder, rows, root = REPO_ROOT, stubText, log = console.log }) {
   const findings = [];
   const missingTrees = [];
-  const pinned = new Map(); // top folder → Set of file-row names under it
+  const pinned = new Map(); // top folder → its file rows by name
   const counts = new Map(); // top folder → { ok, total }
   for (const r of rows) {
     const unsafe = nameProblem(r.name);
@@ -147,19 +155,30 @@ export function verify({ folder, rows, root = REPO_ROOT, stubText, log = console
     } else if (r.kind === 'file') {
       if (!HEX64.test(r.pin ?? '')) { log(`BADPIN  file   ${r.name} — a file pin is a 64-hex sha256`); findings.push(r.name); continue; }
       const top = r.name.split('/')[0];
-      if (!pinned.has(top)) { pinned.set(top, new Set()); counts.set(top, { ok: 0, total: 0 }); }
-      pinned.get(top).add(r.name);
+      if (!pinned.has(top)) { pinned.set(top, new Map()); counts.set(top, { ok: 0, total: 0 }); }
+      pinned.get(top).set(r.name, r);
       counts.get(top).total++;
       const p = join(folder, r.name);
       if (!existsSync(join(folder, top))) { findings.push(r.name); continue; } // one line per absent folder, below
-      if (!existsSync(p) || !statSync(p).isFile()) { log(`MISSING file   ${r.name} (copy-only — copy it, never move it, from a machine whose folder verifies)`); findings.push(r.name); }
+      if (!existsSync(p) || !statSync(p).isFile()) {
+        const url = fetchUrl(r);
+        log(url
+          ? `MISSING file   ${r.name} — fetch it from its row's URL, ${url}; it counts only once its sha256 matches the pin. Or copy it, never move it, from a machine whose folder verifies`
+          : `MISSING file   ${r.name} (copy-only — copy it, never move it, from a machine whose folder verifies)`);
+        findings.push(r.name);
+      }
       else if (sha256(p) !== r.pin) { log(`DRIFT   file   ${r.name} — its sha256 is not the pin`); findings.push(r.name); }
       else counts.get(top).ok++;
     } else { log(`UNKNOWN kind   ${JSON.stringify(r.kind)} for ${r.name}`); findings.push(r.name); }
   }
   for (const [top, names] of pinned) {
     const c = counts.get(top);
-    if (!existsSync(join(folder, top))) { log(`MISSING folder ${top}/ — ${c.total} files, copy-only: copy the folder whole, never move it, from a machine whose folder verifies`); continue; }
+    if (!existsSync(join(folder, top))) {
+      if (top !== FETCHABLE) { log(`MISSING folder ${top}/ — ${c.total} files, copy-only: copy the folder whole, never move it, from a machine whose folder verifies`); continue; }
+      log(`MISSING folder ${top}/ — ${c.total} files; fetch each from its row's URL (below); a file counts only once its sha256 matches the pin. Or copy the folder whole, never move it, from a machine whose folder verifies`);
+      for (const [name, row] of names) log(`          ${name}  ${fetchUrl(row) ?? 'no URL in its row: copy it'}`);
+      continue;
+    }
     const unpinned = walkFiles(join(folder, top), top).filter((p) => !names.has(p) && !SIDECAR_RE.test(p.split('/').at(-1)));
     for (const p of unpinned) log(`UNPINNED file  ${p} — in the folder, not in ${TSV}`);
     findings.push(...unpinned.map((p) => `unpinned:${p}`));
