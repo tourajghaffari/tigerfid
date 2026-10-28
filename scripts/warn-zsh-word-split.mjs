@@ -320,10 +320,17 @@ export function findWordSplits(command) {
   const arrays = new Set();
   for (const m of text.matchAll(ARRAY_RE)) arrays.add(m[1]);
   const found = [];
+  // Story 244.1.33 (register class zsh-word-split-guard-denies-separate-variable-prefixed-items):
+  // the `for` arm reads a variable only when it is a WHOLE whitespace item — a bare `$VAR` or
+  // `${VAR}`. A word built around one (`$D/a.log`, `$a-$b`) is ONE word in every shell, so a
+  // list of them is a list, never the trap; `for d in $P $P/x` still denies by its whole `$P`.
+  // The `set --` face keeps reading every reference in an item (D10: unchanged).
+  const WHOLE_REF = new RegExp(`^${REF_RE.source}$`);
   const judge = (form, head, list) => {
     const vars = [];
     for (const item of list.split(/\s+/)) {
       if (!item || SPLIT_ITEM_RE.test(item)) continue;
+      if (form === 'for' && !WHOLE_REF.test(item)) continue;
       for (const r of item.matchAll(REF_RE)) {
         const name = r[1] ?? r[2];
         if (!arrays.has(name) && !vars.includes(name)) vars.push(name);
@@ -882,13 +889,14 @@ export function render(found) {
     `word, whatever whitespace ${one ? 'it holds' : 'they hold'}. ` +
     (hasFor ? 'The `for` loop runs ONCE with the whole string as its item. ' : '') +
     (hasSet ? '`set --` hands `$1` the whole string and leaves `$2`, `$3`… EMPTY. ' : '') +
-    "Every one of this class's seven seats read nothing for its whole budget — usually silently, under `2>/dev/null` or a " +
-    'watcher that kept polling; the seventh ran with the warning already beside it, which is why this is a deny. ' +
+    (hasFor ? 'Only a variable that is a WHOLE item of the list is read here (`$VAR` or `${VAR}`): a word built around one (`$D/a.log`) is one word in every shell and passes (hub Story 244.1.33). ' : '') +
+    "This class's seats read nothing for their whole budget — usually silently, under `2>/dev/null` or a " +
+    'watcher that kept polling; one ran with the warning already beside it, which is why this is a deny. ' +
     `Re-issue the command in a splitting form. Remedies: (1) force the split — \`\${=${v0}}\`; (2) an array — \`${v0}=(a b c)\` then ` +
     `\`for x in $${v0}\` or \`"\${${v0}[@]}"\`; (3) explicit per-item commands, or \`while read -r a b c; do …; done <<'REC'\` ` +
     'for records. A glob, a command substitution `$(…)`, and `"$@"` split or expand as you expect; a double-quoted `"$var"` ' +
     "is one item by design. Read the FIRST iteration's output before trusting the loop. KB `zsh-harness-shell-no-word-split`; " +
-    'register class `zsh-word-split` (seven seats, 2026-09-01 → 2026-09-14; the ≥2× decision `hook` — hub Story 90.1.1, warn-level; ' +
+    'register class `zsh-word-split` (its seats from 2026-09-01; the ≥2× decision `hook` — hub Story 90.1.1, warn-level; ' +
     'escalated to this deny by hub Story 99.1.1 after seat 7 landed inside the predicate).';
   return { hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: 'deny', permissionDecisionReason } };
 }
