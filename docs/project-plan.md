@@ -44,7 +44,69 @@ into the archive's `## Executed sprints` section, newest first, the heading
 stamped `— ✅ EXECUTED (date)` plus an **Executed:**/**Reviewed:** record.
 Keep that section above the first `## Initiative` block in the archive.
 
-## Sprint 3 — "Ready for the sitting: the three studies corrected, milestone 1 priced in three tiers, and a new machine told it may fetch the sources" (proposed 2026-10-28; 3 legs, serial) — ✅ APPROVED (2026-10-28)
+## Sprint 3 — "Ready for the sitting: the three studies corrected, milestone 1 priced in three tiers, and a new machine told it may fetch the sources" (proposed 2026-10-28; 3 legs, serial) — ✅ APPROVED (2026-10-28) — ✅ EXECUTED (2026-10-28)
+
+**Executed:** 2026-10-28, 3/3 legs serial, each by a fresh hub-rooted
+Windows executor seat. None was elevated.
+- **The seats** (each leg's friction-log section has its fresh-session read):
+  - **leg 1:** "tigerfid Sprint 3 leg 1" `0082985c-…`, on Air Traffic
+    Control's orders 24;
+  - **leg 2:** "tigerfid Sprint 3 leg 2" `293fce01-…`, on its orders 28.
+
+    Each of these two was a `/clear` of the process `2a0782f7-…`.
+  - **leg 3:** "Windows 4" `13efb2b1-…`, fresh by launch, on the Mac
+    coordinator's orders 4.
+- **The legs,** each with its full merge sha and GitHub's merge stamp, read
+  from the API in one call between leg 3's `date -u` reads of 23:11:40Z and
+  23:11:48Z:
+  - **Leg 1, Story 2.1.10 — #45 → `4bd9694a3dcf9acbb802c040c0bb2221d1ae9af2`
+    (13:35:25Z):** the Sprint 2 review's findings 1–5 and five nits are
+    corrected in the three studies. Finding 4's mechanism is the neighbours
+    named; its listening cost and finding 3's sensor averages move the
+    battery figures.
+    - [18] for a corridor tag and [27] for a cold-chain item tag on a
+      CR2032 are unmet on paper, each with a recommended route (D2, no
+      ASK-OMID row). The sitting reads both.
+  - **Leg 2, Story 2.1.6 — #48 → `3d27bb01b2da1a55436715491483e5bba3489c42`
+    (21:39:52Z):** `docs/study/tiered-cost.md` prices milestone 1 per
+    device, per route and per tool tier, with the bench: 538.83, 1,343.04
+    and 1,916.23 US dollars for the starter, advanced and pro tiers.
+    - Five prices are written not read, on Omid's first-hand word (D7).
+  - **Leg 3, Story 2.1.11 — #50 → `780d148390c58c374fddc07b9db5cc8823205a0c`
+    (23:11:36Z):** the reference check names the fetch route for a missing
+    `sources/` file or folder, with the sha256 rule and the copy as the
+    alternative. The tool still never fetches (D11).
+- **The merges** (D12), each by Omid's first-hand word in the leg's own
+  terminal. Legs 1 and 2 held when the auto-mode classifier refused the
+  relayed delegation at `gh pr merge`, then merged on his word. Leg 3's word
+  came at the leg's start, and its merge did not hold.
+- **The manifest,** `docs/close/2.1.json`, flipped as mapped:
+  - leg 1 flipped `fcc-ids-both-named`;
+  - leg 2 flipped `tiered-cost-doc`;
+  - leg 3 flipped no tooth.
+
+  `rebuild-spec-approved` stays RED until Story 2.1.7, as the block said.
+- **No ASK-OMID row** was filed by any leg. **No D9 split:** the legs
+  planned 8, 8 and 5 tasks.
+- **The record:** `docs/friction-log-sprint3-ready-for-the-sitting.md`
+  (F1–F20), each leg's guard events written with the class id beside
+  "seat".
+- **Open for the review** (each a deferred Minor or a routed item):
+  - **Leg 1:** F5, orders that quoted a decision's split seam as the leg;
+    F6, the Windows route to a PDF's pages (`pdftotext`); F7, a predicate
+    grep that a line break can split; F10, line endings read by a grep for
+    a carriage return.
+  - **Leg 2:** F12, the D7 message's 78-minute hold, with the eight sellers
+    that refuse a plain request (F13) to list in a future proposal; F15, the
+    RTL-SDR V4L's range not read; F16, a rule that each price is read from
+    the seller's own page.
+  - **Leg 3:** F17, the folder README's stub still counts two copied
+    folders; F18, a red-first line that names its regression pins; F20, the
+    `DRIFT file` line after a fetch that does not match.
+  - **The register seats:** each leg's § Guard events in the friction log.
+    Leg 3 also caught a `truncated-read-taken-as-source-extent` seat (F19).
+
+**Review:** PENDING: the Sprint 3 reviewer pass, a FRESH seat.
 
 **Approval:** approved 2026-10-28 (Omid, first-hand in the proposer's
 terminal "tigerfid Sprint 3 proposal", between its `date -u` reads of
