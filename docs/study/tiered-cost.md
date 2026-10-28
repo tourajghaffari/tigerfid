@@ -413,62 +413,62 @@ Every page was read 2026-10-28, between 14:30:15Z and 14:42:01Z, as
 
 **Parts:**
 
-| Short name | Seller and item | Page |
-|---|---|---|
-| TI-PSIP | TI, CC1312PSIP: CC1312PSIPMOTR, 1–99 at 10.732, 100–249 at 9.374, 250–999 at 7.228, 1,000 and up at 6.465 | `https://www.ti.com/product/CC1312PSIP` |
-| TI-TMP117 | TI, TMP117: TMP117AIDRVR, 1–99 at 5.757 | `https://www.ti.com/product/TMP117` |
-| TI-TLV755P | TI, TLV755P: TLV75533PDBVR, 1–99 at 0.374 | `https://www.ti.com/product/TLV755P` |
-| TI-TPL7407L | TI, TPL7407L: TPL7407LDR, 1–99 at 0.731 | `https://www.ti.com/product/TPL7407L` |
-| LCSC-ANT | LCSC C17443637, Johanson 0915AT43A0026001E: 1+ at 1.1947, 10+ at 0.9784 | `https://www.lcsc.com/product-detail/C17443637.html` |
-| LCSC-SMA | LCSC C5356059, RF Solutions CON-SMA-EDGE-S: 1+ at 1.9861 | `https://www.lcsc.com/product-detail/C5356059.html` |
-| LCSC-MCP2200 | LCSC C220000, Microchip MCP2200-I/SS: 1+ at 3.7563 | `https://www.lcsc.com/product-detail/C220000.html` |
-| LCSC-USBC | LCSC C165948, Hroparts TYPE-C-31-M-12: 5+ at 0.1886, sold 5 at least | `https://www.lcsc.com/product-detail/C165948.html` |
-| LCSC-RELAY | LCSC C2976854, HONGFA HF46F-G/005-HS1: 1+ at 1.1947 | `https://www.lcsc.com/product-detail/C2976854.html` |
-| LCSC-HEADER | LCSC C41376037, hanxia HX PZ1.27-2x5P TP: 5+ at 0.0983, sold 5 at least | `https://www.lcsc.com/product-detail/C41376037.html` |
-| LCSC-H2032 | LCSC C964792, MYOUNG BS-08-B2AA016: 1+ at 0.4331 | `https://www.lcsc.com/product-detail/C964792.html` |
-| LCSC-H2450 | LCSC C964845, MYOUNG MY-2450-01: 5+ at 0.1982, sold 5 at least | `https://www.lcsc.com/product-detail/C964845.html` |
-| LCSC-C15008 | LCSC C15008, Samsung CL31A107MQHNNNE, 100 µF 1206: 10+ at 0.1100, sold 10 at least | `https://www.lcsc.com/product-detail/C15008.html` |
-| LCSC-C1525 | LCSC C1525, Samsung CL05B104KO5NNNC, 100 nF 0402: 100+ at 0.0032, sold 100 at least | `https://www.lcsc.com/product-detail/C1525.html` |
-| LCSC-C25744 | LCSC C25744, UNI-ROYAL 0402WGF1002TCE, 10 kΩ 0402: 100+ at 0.0024, sold 100 at least | `https://www.lcsc.com/product-detail/C25744.html` |
-| ADA-654 | Adafruit 654, CR2032 lithium coin cell: 0.95 | `https://www.adafruit.com/product/654` |
-| ADA-2850 | Adafruit 2850, CR2450 lithium coin cell: 0.75 | `https://www.adafruit.com/product/2850` |
-| ADA-3931 | Adafruit 3931, flanged weatherproof enclosure with PG-7 cable glands: 9.95 | `https://www.adafruit.com/product/3931` |
-| ADA-4199 | Adafruit 4199, USB-C to USB-C cable, 1 m: 9.95 | `https://www.adafruit.com/search?q=usb+c+cable` |
-| ADA-5801 | Adafruit 5801, vertical wall supply with USB-C, 5 V 3 A: 5.95 | `https://www.adafruit.com/search?q=usb+power+supply` |
+| Short name | Seller and item | Page | Read |
+|---|---|---|---|
+| TI-PSIP | TI, CC1312PSIP: CC1312PSIPMOTR, 1–99 at 10.732, 100–249 at 9.374, 250–999 at 7.228, 1,000 and up at 6.465 | `https://www.ti.com/product/CC1312PSIP` | 2026-10-28 |
+| TI-TMP117 | TI, TMP117: TMP117AIDRVR, 1–99 at 5.757 | `https://www.ti.com/product/TMP117` | 2026-10-28 |
+| TI-TLV755P | TI, TLV755P: TLV75533PDBVR, 1–99 at 0.374 | `https://www.ti.com/product/TLV755P` | 2026-10-28 |
+| TI-TPL7407L | TI, TPL7407L: TPL7407LDR, 1–99 at 0.731 | `https://www.ti.com/product/TPL7407L` | 2026-10-28 |
+| LCSC-ANT | LCSC C17443637, Johanson 0915AT43A0026001E: 1+ at 1.1947, 10+ at 0.9784 | `https://www.lcsc.com/product-detail/C17443637.html` | 2026-10-28 |
+| LCSC-SMA | LCSC C5356059, RF Solutions CON-SMA-EDGE-S: 1+ at 1.9861 | `https://www.lcsc.com/product-detail/C5356059.html` | 2026-10-28 |
+| LCSC-MCP2200 | LCSC C220000, Microchip MCP2200-I/SS: 1+ at 3.7563 | `https://www.lcsc.com/product-detail/C220000.html` | 2026-10-28 |
+| LCSC-USBC | LCSC C165948, Hroparts TYPE-C-31-M-12: 5+ at 0.1886, sold 5 at least | `https://www.lcsc.com/product-detail/C165948.html` | 2026-10-28 |
+| LCSC-RELAY | LCSC C2976854, HONGFA HF46F-G/005-HS1: 1+ at 1.1947 | `https://www.lcsc.com/product-detail/C2976854.html` | 2026-10-28 |
+| LCSC-HEADER | LCSC C41376037, hanxia HX PZ1.27-2x5P TP: 5+ at 0.0983, sold 5 at least | `https://www.lcsc.com/product-detail/C41376037.html` | 2026-10-28 |
+| LCSC-H2032 | LCSC C964792, MYOUNG BS-08-B2AA016: 1+ at 0.4331 | `https://www.lcsc.com/product-detail/C964792.html` | 2026-10-28 |
+| LCSC-H2450 | LCSC C964845, MYOUNG MY-2450-01: 5+ at 0.1982, sold 5 at least | `https://www.lcsc.com/product-detail/C964845.html` | 2026-10-28 |
+| LCSC-C15008 | LCSC C15008, Samsung CL31A107MQHNNNE, 100 µF 1206: 10+ at 0.1100, sold 10 at least | `https://www.lcsc.com/product-detail/C15008.html` | 2026-10-28 |
+| LCSC-C1525 | LCSC C1525, Samsung CL05B104KO5NNNC, 100 nF 0402: 100+ at 0.0032, sold 100 at least | `https://www.lcsc.com/product-detail/C1525.html` | 2026-10-28 |
+| LCSC-C25744 | LCSC C25744, UNI-ROYAL 0402WGF1002TCE, 10 kΩ 0402: 100+ at 0.0024, sold 100 at least | `https://www.lcsc.com/product-detail/C25744.html` | 2026-10-28 |
+| ADA-654 | Adafruit 654, CR2032 lithium coin cell: 0.95 | `https://www.adafruit.com/product/654` | 2026-10-28 |
+| ADA-2850 | Adafruit 2850, CR2450 lithium coin cell: 0.75 | `https://www.adafruit.com/product/2850` | 2026-10-28 |
+| ADA-3931 | Adafruit 3931, flanged weatherproof enclosure with PG-7 cable glands: 9.95 | `https://www.adafruit.com/product/3931` | 2026-10-28 |
+| ADA-4199 | Adafruit 4199, USB-C to USB-C cable, 1 m: 9.95 | `https://www.adafruit.com/search?q=usb+c+cable` | 2026-10-28 |
+| ADA-5801 | Adafruit 5801, vertical wall supply with USB-C, 5 V 3 A: 5.95 | `https://www.adafruit.com/search?q=usb+power+supply` | 2026-10-28 |
 
 **Boards and assembly:**
 
-| Short name | Seller and item | Page |
-|---|---|---|
-| OSH-4L | OSH Park, 4 Layer Prototype Service: $10 a square inch, three copies | `https://docs.oshpark.com/services/four-layer/` |
-| JLC-PCBA | JLCPCB, "PCB Assembly Cost: What Does the Price Include?", last updated Oct 22, 2026 | `https://jlcpcb.com/help/article/pcb-assembly-price` |
-| JLC-FAQ | JLCPCB, "PCB Assembly FAQs", item 10 | `https://jlcpcb.com/help/article/pcb-assembly-faqs` |
+| Short name | Seller and item | Page | Read |
+|---|---|---|---|
+| OSH-4L | OSH Park, 4 Layer Prototype Service: $10 a square inch, three copies | `https://docs.oshpark.com/services/four-layer/` | 2026-10-28 |
+| JLC-PCBA | JLCPCB, "PCB Assembly Cost: What Does the Price Include?", last updated Oct 22, 2026 | `https://jlcpcb.com/help/article/pcb-assembly-price` | 2026-10-28 |
+| JLC-FAQ | JLCPCB, "PCB Assembly FAQs", item 10 | `https://jlcpcb.com/help/article/pcb-assembly-faqs` | 2026-10-28 |
 
 **Tools and the bench:**
 
-| Short name | Seller and item | Page |
-|---|---|---|
-| PINE64 | PINE64, Pinecil V2: community price 25.99 | `https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/` |
-| ADA-6320 | Adafruit 6320, Raspberry Pi 45 W USB-C supply: 16.50 | `https://www.adafruit.com/search?q=usb+power+supply` |
-| ADA-2473, ADA-1930 | Adafruit, lead-free solder wire 0.5 mm 50 g: 12.50; SAC305 0.5 mm 50 g: 27.50 | `https://www.adafruit.com/search?q=solder` |
-| ADA-4456 | Adafruit 4456, solder wick 0.8 mm: 2.95 | `https://www.adafruit.com/search?q=solder` |
-| ADA-3468, ADA-2667 | Adafruit, Chip Quik CQ4LF flux pen: 7.95; Chip Quik SMD291 tack flux: 15.95 | `https://www.adafruit.com/search?q=flux` |
-| ADA-SEARCH-PASTE, ADA-3217 | Adafruit 3217, "Maker Paste - Low Temperature Lead-Free Prototyping Solder Paste": 9.95 | `https://www.adafruit.com/search?q=solder+paste` |
-| ADA-152 | Adafruit 152, flush diagonal cutters CHP170: 7.25 | `https://www.adafruit.com/search?q=flush+cutters` |
-| ADA-421, ADA-5950 | Adafruit, fine-tip ESD tweezers: 3.95; ceramic sharp-point tweezers: 8.95 | `https://www.adafruit.com/search?q=tweezers` |
-| ADA-850 | Adafruit 850, pocket autoranging multimeter: 24.95, out of stock | `https://www.adafruit.com/search?q=multimeter` |
-| ADA-291 | Adafruit 291, helping-hands magnifier MZ101: 6.95 | `https://www.adafruit.com/search?q=magnifier` |
-| ADA-4921 | Adafruit 4921, ATTEN ST-2090D 80 W station: 59.95, out of stock | `https://www.adafruit.com/search?q=soldering+iron` |
-| ADA-5903, ADA-5238 | Adafruit, Miniware MHP50-B5 hot plate: 99.95; ATTEN ST-862D hot air station: 279.95 | `https://www.adafruit.com/search?q=hot+air` |
-| AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99 | `https://amscope.com/products/se400-z` |
-| FLUKE-117 | Fluke, 117: 304.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117` |
-| FLUKE-87V | Fluke, 87V: 579.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v` |
-| RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` |
-| RL-TINYSA | R&L Electronics, tinySA: 89.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75243` |
-| RL-TINYSAULTRAPLUS | R&L Electronics, tinySA Ultra Plus: 169.95, out of stock | `https://www.randl.com/index.php?main_page=product_info&products_id=76222` |
-| RTLSDR | RTL-SDR Blog, V4L dongle: 37.95; dipole antenna kit: 17.95 | `https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/` |
-| TI-XDS110ET | TI, LP-XDS110ET: 59.29 | `https://www.ti.com/tool/LP-XDS110ET` |
-| TI-LPEM | TI, LP-EM-CC1312PSIP: 47.19 | `https://www.ti.com/tool/LP-EM-CC1312PSIP` |
+| Short name | Seller and item | Page | Read |
+|---|---|---|---|
+| PINE64 | PINE64, Pinecil V2: community price 25.99 | `https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/` | 2026-10-28 |
+| ADA-6320 | Adafruit 6320, Raspberry Pi 45 W USB-C supply: 16.50 | `https://www.adafruit.com/search?q=usb+power+supply` | 2026-10-28 |
+| ADA-2473, ADA-1930 | Adafruit, lead-free solder wire 0.5 mm 50 g: 12.50; SAC305 0.5 mm 50 g: 27.50 | `https://www.adafruit.com/search?q=solder` | 2026-10-28 |
+| ADA-4456 | Adafruit 4456, solder wick 0.8 mm: 2.95 | `https://www.adafruit.com/search?q=solder` | 2026-10-28 |
+| ADA-3468, ADA-2667 | Adafruit, Chip Quik CQ4LF flux pen: 7.95; Chip Quik SMD291 tack flux: 15.95 | `https://www.adafruit.com/search?q=flux` | 2026-10-28 |
+| ADA-SEARCH-PASTE, ADA-3217 | Adafruit 3217, "Maker Paste - Low Temperature Lead-Free Prototyping Solder Paste": 9.95 | `https://www.adafruit.com/search?q=solder+paste` | 2026-10-28 |
+| ADA-152 | Adafruit 152, flush diagonal cutters CHP170: 7.25 | `https://www.adafruit.com/search?q=flush+cutters` | 2026-10-28 |
+| ADA-421, ADA-5950 | Adafruit, fine-tip ESD tweezers: 3.95; ceramic sharp-point tweezers: 8.95 | `https://www.adafruit.com/search?q=tweezers` | 2026-10-28 |
+| ADA-850 | Adafruit 850, pocket autoranging multimeter: 24.95, out of stock | `https://www.adafruit.com/search?q=multimeter` | 2026-10-28 |
+| ADA-291 | Adafruit 291, helping-hands magnifier MZ101: 6.95 | `https://www.adafruit.com/search?q=magnifier` | 2026-10-28 |
+| ADA-4921 | Adafruit 4921, ATTEN ST-2090D 80 W station: 59.95, out of stock | `https://www.adafruit.com/search?q=soldering+iron` | 2026-10-28 |
+| ADA-5903, ADA-5238 | Adafruit, Miniware MHP50-B5 hot plate: 99.95; ATTEN ST-862D hot air station: 279.95 | `https://www.adafruit.com/search?q=hot+air` | 2026-10-28 |
+| AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99 | `https://amscope.com/products/se400-z` | 2026-10-28 |
+| FLUKE-117 | Fluke, 117: 304.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117` | 2026-10-28 |
+| FLUKE-87V | Fluke, 87V: 579.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v` | 2026-10-28 |
+| RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` | 2026-10-28 |
+| RL-TINYSA | R&L Electronics, tinySA: 89.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75243` | 2026-10-28 |
+| RL-TINYSAULTRAPLUS | R&L Electronics, tinySA Ultra Plus: 169.95, out of stock | `https://www.randl.com/index.php?main_page=product_info&products_id=76222` | 2026-10-28 |
+| RTLSDR | RTL-SDR Blog, V4L dongle: 37.95; dipole antenna kit: 17.95 | `https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/` | 2026-10-28 |
+| TI-XDS110ET | TI, LP-XDS110ET: 59.29 | `https://www.ti.com/tool/LP-XDS110ET` | 2026-10-28 |
+| TI-LPEM | TI, LP-EM-CC1312PSIP: 47.19 | `https://www.ti.com/tool/LP-EM-CC1312PSIP` | 2026-10-28 |
 
 **Not read** (§ What was read):
 - Digi-Key, W5017: `https://www.digikey.com/en/products/detail/pulse-electronics/W5017/3025810`;
