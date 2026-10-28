@@ -289,6 +289,36 @@ session reads before searching again.
   probe of the chosen stack is recorded in the study. Windows and Linux were
   not measured.
 
+### Story 2.1.10 — the Sprint 2 review's fixes to the three studies (2026-10-28)
+
+What was read is cited in the three studies it corrects
+(`docs/study/radio-and-location.md`, `docs/study/parts-and-toolchains.md`
+and `docs/study/software-stack.md`).
+
+- **The pinned sources, read again as text** (`sources/`, no new pin): the
+  TMP117 datasheet's pages 6 and 12, for the accuracy's averaging condition
+  and the eight averages' 124 ms; SWRA797's pages 9, 14 and 17, for the
+  ground plane and the ZAT-1312PSIP-3 filings; the CC1312PSIP datasheet's
+  pages 16, 17, 26 and 54, for the faster PHYs' sensitivities, the UART and
+  the co-location condition.
+- **The original, at the tag:** `api/c-plus-plus-dot-net/example/AWI_API.h`,
+  for `rfTagEvent_t`'s `logTimestamp`, and a count over Smart Tracker's 103
+  `.cs` files in the reference folder, none of which names it.
+- **The law: READ, cited by dated URL, not pinned.** 47 CFR §2.803 at the
+  eCFR's point in time of 2026-10-23, for its notice's last clause.
+- **KEPT, cited by URL and fetch date, not pinned:**
+  - MDN's browser-compatibility data for Web NFC (`api/NDEFReader.json`)
+    and the mirroring browsers' upstreams (`browsers/<name>.json`), read as
+    JSON;
+  - CMake's download and licensing pages;
+  - GNU make 4.4.1's release list on a GNU mirror, and its `README` and
+    `COPYING` from the release;
+  - TI's SysConfig and TI Arm Clang pages, read again: neither states a
+    price or a licence;
+  - the SDK's README, § Resources, read again.
+- **Refused, not read:** GNU's own make page (the connection reset twice;
+  the mirror stood in), and Arm's GNU toolchain page (HTTP 403).
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -324,3 +354,6 @@ a verdict here.
   for an existing open host (§ 4, above). The search ideas for 2.1.5 above
   are answered there: no open host was found to adopt, the floorplan view is
   written fresh, and the event schema is the study's own.
+- **2026-10-28:** Story 2.1.10's reads for the Sprint 2 review's fixes
+  (§ 4, above). No search was run: each read went to a source a finding
+  cited, or to the maker's page of a tool a finding named.

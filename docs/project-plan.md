@@ -802,7 +802,27 @@ means for the study).
 sketches the event schema the readers report (tag, reader, signal strength,
 time, payload), and answers its Chorus items one by one.
 
-#### Story 2.1.10: The Sprint 2 review's fixes to the three studies
+#### Story 2.1.10: The Sprint 2 review's fixes to the three studies — ✅ DONE (2026-10-28)
+
+**Completed:** 2026-10-28 — tigerfid #45 (branch `story-2.1.10-studies-review-fixes`, pre-tick head `d1923d05`), with the research log's Story 2.1.10 entry (`docs/reference-research.md` § 4).
+**Outcome:** each of the Sprint 2 review's findings 1–5 and its five nits is corrected in its study, and every changed figure reproduces from the study's own inputs. No requirement number moved (D1).
+- **Finding 4, the mechanism (D3): the neighbours named.** `radio-and-location.md` § Zones gains § How a tag hears a Field Generator it has not heard before:
+  - the floorplan draws each zone's neighbours, and the Reader names a placed tag's listen set: its zone's slot and its neighbours';
+  - a tag with no set listens to every slot until it is placed;
+  - weighed against the whole block at every listen (71.9 µA in a room) and a wider listen every second time (42.9 µA). The chosen way keeps a room's tag at 13.9 µA.
+  - [13]'s move stays 3.0 s for a drawn neighbour. A link the floorplan misses is shown in 5.0 s, or not while the old zone is still heard, so the guides' setup walk checks the links.
+  - ASSUMED, new: a 1.0 ms beacon and a 0.4 ms slot (together the 1.8 ms the study had), and each scenario's neighbours.
+- **Findings 3 and 4 in the battery (D2),** `parts-and-toolchains.md`. The sensor is charged at the eight averages its ±0.1 °C is specified at (124 ms, TMP117 p6, p12), and each tag at its listen set. These figures supersede Story 2.1.4's:
+  - **[18]:** a room's tag holds by 1.8 % (it was 6 %). A tag in the corridor more than about 37 minutes a day is **unmet on paper** (0.96 years at 2 hours a day). Recommended: measure first, then the CR2450 (2.54 years).
+  - **[9]:** it holds in every zone, by 2.3 % in an area of the hall with eight neighbours. A 3 s listen is the route if the measurement falls short.
+  - **[27]:** the plain item tag keeps five years on a CR2032 at 12 s, by 4 % (it was 11 %). The cold-chain tag is **unmet on paper** (0.96 of five years; it was 1.05), and the CR2450 is recommended on it (2.25 times the need).
+  - Each failure has a route that meets it, so no ASK-OMID row was filed.
+  - `requirements.md` gains three dated pointer lines (listening, [18], [27]).
+- **Finding 1,** `software-stack.md`: the Decided line and its table row carry Omid's HF ruling (an unfitted footprint on the core, the coil off it), with an amendment paragraph that records both of his answers. Web NFC reads "on Android only": Chrome, with Opera, Samsung Internet, WebView and the Quest Browser mirroring it (MDN's data, read again).
+- **Finding 2:** `radio-and-location.md` names ZAT-1312PSIP-3 beside -2 (SWRA797 p14, p17) and gives the grants' read to the sitting. `fcc-ids-both-named` FAIL → PASS.
+- **Finding 5:** CMake 4.4.5 (BSD-3-Clause) and GNU make 4.4.1 (GPL-3.0-or-later, from its own licence text) gain their platform and licence cells. SysConfig's and TI Arm Clang's licences are marked not read (their pages state none). The 921,600 baud is ASSUMED beside the module's 3 MBaud, and the binary frame still wins: it fits any bridge from 436,160 baud up.
+- **The five nits:** `logTimestamp` (`AWI_API.h` at the tag; none of Smart Tracker's 103 `.cs` files names it); §2.803's last clause; −90 and −93 dBm on the module's own sheet (PSIP p16, p17); the radio study counted the Reader's +2 dBi; 1,363 named as the slot capacity, not [3].
+- Story 2.1.7's HF sentence is refreshed. The Item-8 grep refreshed two cross-references: the radio study's § Anti-collision names the Field Generators' block (1,296 reply slots a second with the nursery's 27), and the software study's Chorus row names the CR2450. The friction log has its leg 1 section.
 
 **Story:** As the decision sitting, I want the three technical studies to
 carry the Sprint 2 review's corrections, so that I decide on figures that
@@ -1009,8 +1029,10 @@ From the Sprint 2 review (2026-10-28):
   (Recommended)". The core keeps an unfitted footprint for an NFC memory, its
   I²C link and two antenna pads at the board's edge. The coil lives in the
   enclosure, away from the module's antenna and its ground plane (SWRA797
-  §3.1.2). Milestone 1 fits none of it. The study's Decided line still reads
-  "no space reserved" until Story 2.1.10 corrects it.
+  §3.1.2). Milestone 1 fits none of it. Story 2.1.10 carried the ruling into
+  the study's Decided line and its table row (2026-10-28;
+  `docs/study/software-stack.md` § The seal's HF interface and § Decided
+  ahead of the sitting).
 - **The FCC grant read is the sitting's,** by Omid's hand in a browser: the
   grant pages of both FCC IDs in TI's documents, ZAT-1312PSIP-2 and -3,
   before the spec names an FCC ID or any part is bought

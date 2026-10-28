@@ -66,7 +66,8 @@ now answers only a request that accepts a compressed reply (friction F14).
 - **What stays open.** The two IDs, the PHY each grant covers, and the
   grant's equipment class: frequency hopping, or digital transmission
   500 kHz wide. `radio-and-location.md` labels the device "Contains FCC ID:
-  ZAT-1312PSIP-2", from the datasheet. The design hops channels, which holds
+  ZAT-1312PSIP-2", from the datasheet, or -3 if the grants' read finds that
+  one covering the PHY (Story 2.1.10). The design hops channels, which holds
   under either class (`radio-and-location.md` § Channels).
 - **The read before any part is bought:** both grant pages, in a browser.
   It decides the label's ID and confirms that the chosen PHY is on the
@@ -164,7 +165,7 @@ requirements' words:
 | Cell | a CR2032 (Energizer: 235 mAh, 20.0 mm × 3.2 mm); a CR2450 for the item tag (620 mAh, 24.5 mm × 5.0 mm) | § The battery; § [27] |
 | Buffer capacitor | across the cell | A capacitor beside a CR2032 "is the most effective choice a designer can make to maximize battery capacity utilization in low power RF applications" (SWRA349 p1) |
 | Cell compartment | opened with a tool | The cell maker's safety note: "battery compartments should be designed with one of the following methods: a) a tool such as screwdriver or coin is required to open battery compartment" or two independent movements (Energizer CR2032) |
-| Temperature sensor | TI TMP117, on the nursery's tags and the cold-chain item tags; a fitting option on the others | ±0.1 °C from −20 to 50 °C; I²C; 1.7–5.5 V; a one-shot conversion of 15.5 ms at 135 µA; 0.15 µA in shutdown; a 2 mm × 2 mm package (TMP117 p1, p6). The module's own sensor reads to ±3.5 °C at 2 °C resolution (PSIP p32). INFERRED: that is too coarse for a cold-chain limit a few degrees wide, and it measures the chip, not the item |
+| Temperature sensor | TI TMP117, on the nursery's tags and the cold-chain item tags; a fitting option on the others | ±0.1 °C from −20 to 50 °C, specified at "8 averages, 1-Hz conversion cycle"; I²C; 1.7–5.5 V; 135 µA during a conversion; 0.15 µA in shutdown; a 2 mm × 2 mm package (TMP117 p1, p6). One conversion takes 15.5 ms, and eight averages take 124 ms, which is also the factory setting (TMP117 p12). The battery is charged at eight averages (§ Each worn tag's year). The module's own sensor reads to ±3.5 °C at 2 °C resolution (PSIP p32). INFERRED: that is too coarse for a cold-chain limit a few degrees wide, and it measures the chip, not the item |
 | Tamper input | the band's or seal's loop, wired to a pin that wakes the module on either edge | Wake on a pin edge from standby (PSIP p51). The 2012 seal woke on its band's input the same way (`original-system.md` § The sealTag) |
 | Debug | pads for the debugger's 10-pin connector, through an adapter or a pogo-pin fixture | INFERRED: a 10-pin connector does not fit a fob. The 2012 seal carried pogo pins (`original-system.md` § The sealTag) |
 
@@ -239,16 +240,24 @@ on any platform (§ The Reader). Every board is planned in KiCad 10 (spec
 D4). The table cites each install. None was run.
 
 **Platforms measured: none. Platforms cited: Windows, macOS and Linux,**
-for every tool except the Arm GNU Toolchain, whose platforms were not read.
+for every tool except two. The Arm GNU Toolchain's platforms were not read:
+its page renders by script (§ What was read), and it answered Story
+2.1.10's request with HTTP 403. The SDK is a public Git repository of
+source (SDK-GH), which the tools below build on each platform. CMake, GNU
+make, SysConfig and TI Arm Clang
+were read again on 2026-10-28, between Story 2.1.10's clock reads of
+11:33:59Z and 11:36:39Z: CMake's and GNU make's rows were empty before, and
+SysConfig's and TI Arm Clang's licences were not stated.
 
 | Tool | What it is for | Windows | macOS | Linux | Licence and price | Source |
 |---|---|---|---|---|---|---|
 | KiCad 10.0.7 | every board: the Reader, the Field Generator, the tag core | Windows 10 and 11 | macOS 12 and newer | an AppImage for x86-64 | GPL-3.0-or-later; no price. Its libraries' licence is in `THIRD_PARTY_NOTICES.md` | KICAD-DL; KICAD-LIC |
 | SimpleLink Low Power F2 SDK 8.33.00.16 | the module's drivers, its RF driver and the certified PHY settings | — | — | — | TI's limited licence, "royalty-free" and for "use only with TI Devices"; no price (§ The licences) | SDK-GH; SDK-LIC |
-| SysConfig 1.28.2 | the module's configuration, and the SDK's default PHY settings that the certification requires | installer | installer | installer | no price stated on the page | TI-SYSCONFIG |
-| TI Arm Clang 5.1.1.LTS | the compiler | x64 installer | x64 and arm64 installers; the x86 build is "known to work with MacOS version 13.6" | x64 and arm64 installers | no price stated on the page | TI-CGT |
+| SysConfig 1.28.2 | the module's configuration, and the SDK's default PHY settings that the certification requires | installer | installer | installer | **not read:** the page offers its installers with no price and no licence text (read 2026-10-28). The licence is in the installer, which no session ran. CCS includes SysConfig (SDK-GH) | TI-SYSCONFIG |
+| TI Arm Clang 5.1.1.LTS | the compiler | x64 installer | x64 and arm64 installers; the x86 build is "known to work with MacOS version 13.6" | x64 and arm64 installers | **not read:** the page offers its installers with no price and no licence text (read 2026-10-28). The licence is in the installer, which no session ran | TI-CGT |
 | Arm GNU Toolchain | the open compiler the SDK also builds with ("ARM Gnu Toolchain (GCC_ARMCOMPILER)") | not read | not read | not read | not read | SDK-GH. Arm's page renders by script and was not read |
-| CMake, GNU make | the SDK's build ("run GNU `make`") | — | — | — | — | SDK-GH |
+| CMake 4.4.5 | a build tool the SDK names among its dependencies | x64 and ARM64 installers (`.msi`) | a universal disk image, for macOS 12 or later | x86-64 and aarch64 installers (`.sh`) | "distributed under the OSI-approved BSD 3-clause License"; no price | CMAKE-DL; CMAKE-LIC; SDK-GH |
+| GNU make 4.4.1 | the SDK's build ("run GNU `make`") | GNU releases source only. CCS ships it as `gmake` in `ccs/utils/bin/` (SDK-GH); INFERRED, on each platform CCS installs on | the same | the same | GPL-3.0-or-later, read from its own licence text: "either version 3 of the License, or (at your option) any later version"; no price | GNU-MAKE; SDK-GH |
 | Code Composer Studio 21.0.1 | an optional IDE and debugger | Windows 11 and 10, 64-bit | macOS 26, 15 and 14 | Ubuntu 26.04, 24.04 and 22.04 (it "will run on other distributions", untested there); after installing, `install_drivers.sh` with `sudo` for the debug probes ("DO NOT SKIP THIS STEP") | "There is no license fee associated with CCStudio IDE" | CCS-GUIDE § 2.1, § 2.3, § 3.1.4, § 3.2.3.7; TI-CCS |
 | UniFlash 9.7.0 | writes a firmware image to a board, with no IDE | installer | installer | installer | "available free of charge" | TI-UNIFLASH; PSIP p68 |
 
@@ -272,9 +281,12 @@ public Git repository (SDK-GH).
 - **IAR Embedded Workbench:** "A 30-day evaluation or a 32 KB size-limited
   version" (PSIP p67), so a paid tool beyond it.
 
-**Not read:** the TI download pages' login terms, and the GCC route's
-platforms. INFERRED: the GCC route matters only if TI's free compiler is
-ever withdrawn.
+**Not read:** the TI download pages' login terms, SysConfig's and TI Arm
+Clang's licences, and the GCC route's platforms. INFERRED: TI offers both
+for download with no price, and the SDK names the GCC route beside TI's
+compiler (SDK-GH), so the build does not rest on TI's compiler alone. The
+epic close's `free-tools-three-platforms` check (plan Story 2.1.8) reads
+these two licences as unread.
 
 ## The debugger
 
@@ -321,7 +333,10 @@ before their own boards exist. It is never part of a device:
   "product developers, software developers, and system integrators", with
   a notice that ends: "Unless the assembled kit is designed to operate under
   part 15, part 18 or part 95 of this chapter, the operator of the kit must
-  operate under the authority of an FCC license holder" (§2.803(d)(2)(iv)).
+  operate under the authority of an FCC license holder or must secure an
+  experimental authorization under part 5 of this chapter"
+  (§2.803(d)(2)(iv); its last clause re-read by Story 2.1.10 at the same
+  point in time, 2026-10-23).
   INFERRED: the board is designed to operate under Part 15, so a builder
   needs no licence to run it on the bench.
 
@@ -362,7 +377,7 @@ tag antenna, the slot guard and the receive start-up to it as well.
 | The cell, usable | 150 mAh, ASSUMED | **Still ASSUMED: 150 mAh** (64 % of 235), on a branded cell with a buffer capacitor. The floor beside it is 117.5 mAh (50 %) | "Some vendors, including some branded name vendors, only achieve app. 50% of rated capacity for both 15mA and 30mA peak current" (SWRA349 p4); a capacitor gives "a solid >40% improvement" on such cells (SWRA349 p7). No datasheet read states a usable figure, so the planning figure stays an assumption, now bounded |
 | One reply | 25 mA for 3 ms, about 0.02 µAh | **18.09 µC (0.0050 µAh):** a start-up of 2.795 µC, then 0.533 ms at 28.7 mA | Start-up below; 28.7 mA at +14 dBm (PSIP p14), an upper bound for the 12.0 dBm the tag sends; the 0.533 ms airtime from `radio-and-location.md` (INFERRED there) |
 | A wake's start-up | not stated (`radio-and-location.md`: the datasheet's start-up energies) | **2.795 µC:** 165 µs + 200 µs at 2.89 mA, then 0.3 ms at 5.8 mA | 165 µs standby to active and 200 µs crystal start-up (PSIP p23); 2.89 mA (PSIP p13). **ASSUMED:** the 0.3 ms for the radio's set-up and synthesizer calibration, which no datasheet read states. INFERRED: the two times are added, not overlapped |
-| Listening | about 8 µA "so that it answers within about a second" | **13.9 µA** at a listen every 1 s; **7.3 µA** every 2 s; **1.8 µA** every 12 s | Each listen is the start-up plus a window at 5.8 mA (PSIP p14). The window is the 1.8 ms of `radio-and-location.md` (ASSUMED there), widened by 2 × 60 ppm of the interval for clock drift: 0.12 ms at 1 s, 1.44 ms at 12 s (INFERRED: the tag's RTC ±50 ppm, PSIP p24, plus the Reader's ±10 ppm, PSIP p23) |
+| Listening | about 8 µA "so that it answers within about a second" | **13.9 µA** at a listen every 1 s; **7.3 µA** every 2 s; **1.8 µA** every 12 s, each for the beacon and two slots. **Each more slot adds 2.3 µA at a 1 s listen** (Story 2.1.10) | Each listen is the start-up plus a window at 5.8 mA (PSIP p14). The window is the Reader's beacon, 1.0 ms, and 0.4 ms for each Field Generator slot in the tag's listen set (both ASSUMED in `radio-and-location.md` § Zones; two slots give the 1.8 ms it first assumed). It is widened by 2 × 60 ppm of the interval for clock drift: 0.12 ms at 1 s, 1.44 ms at 12 s (INFERRED: the tag's RTC ±50 ppm, PSIP p24, plus the Reader's ±10 ppm, PSIP p23) |
 | Standby | 0.9 µA (`radio-and-location.md`) | **1.0 µA**, since a tag keeps its slots on the 32 kHz crystal | PSIP p13 |
 | Tag antenna | −5 dBi, ASSUMED | **Still −5 dBi:** the certified chip antenna's +1.0 dBi, less 6 dB ASSUMED for a small ground plane and the body | +1.0 dBi (SWRA797 Table 3-2). "GND planes that are less than this distance [8.2 cm] have a reduced efficiency and bandwidth" (SWRA797 p9) |
 | Reader antenna | +2 dBi, ASSUMED | **+0.90 dBi**, the W5017 | SWRA797 Table 3-2 |
@@ -381,39 +396,83 @@ free-space loss of 61.2 dB at 915 MHz and [2]'s 10–20 dB body loss as
 - **the EU's worst case,** at 868 MHz with 20 dB of body loss: 21.1 dB up
   and 24.3 dB down.
 
-`radio-and-location.md` counted only the sending antenna, so its 21.8 dB at
-the worst body loss becomes 20.7 dB here. [2] stays met on paper, with the
-crowded hall still the unmeasured risk.
+`radio-and-location.md` counted the Reader's antenna as +2 dBi, ASSUMED. The
+W5017's +0.90 dBi therefore takes its 21.8 dB at the worst body loss to
+20.7 dB here. [2] stays met on paper, with the crowded hall still the
+unmeasured risk.
 
 ### Each worn tag's year
 
-INFERRED, from the figures above (mAh a year; the listen interval in
-brackets):
+INFERRED, from the figures above (mAh a year; the listen interval and the
+zone's neighbours in brackets). Re-priced by Story 2.1.10 for the Sprint 2
+review's findings 3 and 4:
+- **the sensor at eight averages,** the setting its ±0.1 °C is specified
+  at (TMP117 p6). A reading is 124 ms at 135 µA (TMP117 p12), 16.74 µC, so
+  one every 20 s takes 7.3 mAh a year. Shutdown adds 0.15 µA, 1.3 mAh. The
+  study had charged one 15.5 ms conversion, 2.2 mAh in all;
+- **the listen set,** a tag's zone and its neighbours
+  (`radio-and-location.md` § Zones), with the neighbours that section
+  assumes for each scenario.
 
 | Tag | Listening | Check-ins | Sensor | Standby | Total | Years from 150 mAh | From the 117.5 mAh floor |
 |---|---|---|---|---|---|---|---|
-| Conference badge (every 2 s), a check-in a minute ([9]) | 64.1 | 2.6 | — | 8.8 | 75.5 | 1.99 | 1.56 |
-| Nursery tag (every 1 s), a check-in and a reading every 20 s ([18]) | 122.0 | 7.9 | 2.2 | 8.8 | 140.9 | 1.06 | 0.83 |
+| Conference badge in a room (every 2 s; 2 neighbours), a check-in a minute ([9]) | 74.2 | 2.6 | — | 8.8 | 85.6 | 1.75 | 1.37 |
+| Conference badge in an area of the hall (every 2 s; 8 neighbours) | 135.2 | 2.6 | — | 8.8 | 146.6 | 1.02 | 0.80 |
+| Nursery tag in a room (every 1 s; 1 neighbour), a check-in and a reading every 20 s ([18]) | 122.0 | 7.9 | 8.6 | 8.8 | 147.4 | 1.02 | 0.80 |
+| Nursery tag in a stretch of the corridor (every 1 s; 6 neighbours) | 223.7 | 7.9 | 8.6 | 8.8 | 249.0 | 0.60 | 0.47 |
+
+Each total is summed before rounding. Before Story 2.1.10 the table had one
+row for each tag: the badge at 75.5 mAh, 1.99 years, and the nursery tag at
+140.9 mAh, 1.06 years.
 
 - **The conference listens every 2 s.** Its tightest latency is [8]'s
   15 s pairing alarm. Two hearings 2 s apart, a slot, the Reader and the
   host take about 5 s (INFERRED: 2 × 2 + 0.25 + 0.25 + 0.5). [9]'s year
-  then holds with margin.
+  holds on paper in every zone: with margin in a room, and by 2.3 % in an
+  area of the hall, which listens to nine slots. If the measurement falls
+  short, a 3 s listen in the hall is the route: 1.45 years, and [8] in
+  about 7 s (INFERRED: 2 × 3 + 1). Its cost is fewer hearings of an exit's
+  beacon: at least one in the 4 s a walker spends in an exit's field,
+  against two at 2 s (`radio-and-location.md` § Zones).
 - **The nursery must listen every 1 s.** [13]'s 5 s takes 3.0 s at a 1 s
   listen (`radio-and-location.md` § Zones). At 2 s it would take 5.0 s, with
-  no margin. So [18]'s year holds on paper by 6 %, at the planning
-  capacity, and fails at the floor. The study does not lower the number
-  (`requirements.md` § Ground rules). It names three routes for the
-  sitting:
-  - measure first: the LP-XDS110ET reads the tag's current, and the
-    ASSUMED 0.3 ms set-up and 1.8 ms window are the inputs to measure;
-  - a CR2450 in the nursery's band housing, if the housing allows: about
-    2.8 years (INFERRED: 396 ÷ 140.9);
-  - `radio-and-location.md`'s fallback, in which the Field Generators
-    listen and the tags only transmit.
+  no margin. **[18] on paper** (plan Sprint 3's D2):
+  - a tag that stays in the rooms holds its year by 1.8 % at the planning
+    capacity, and fails at the floor;
+  - a stretch of the corridor costs 11.6 µA more than a room, while the tag
+    is in it. INFERRED: a tag holds [18] if it spends at most 227 hours a
+    year in the corridor's stretches, about 37 minutes a day. A tag that
+    walks the corridor 2 hours a day lasts 0.96 years: **[18] is unmet on
+    paper for it.**
 
-  The study recommends measuring first, then the larger cell if the
-  measurement falls short.
+  The study does not lower the number (`requirements.md` § Ground rules).
+  The routes, each with its cost:
+  - **measure first.** The LP-XDS110ET reads the tag's current, and the
+    ASSUMED 0.3 ms set-up, 1.0 ms beacon and 0.4 ms slot are the inputs to
+    measure. It costs a bench session, and its answer can go either way;
+  - **a CR2450,** where the housing allows: 2.54 years for the tag that
+    walks the corridor 2 hours a day, and 1.59 years for one that never
+    leaves it (INFERRED: 396 ÷ 155.8 and 396 ÷ 249.0). Its cost is the
+    larger cell (§ [27]): an adult's fob can take it, and a baby's band may
+    not;
+  - **shorter stretches:** each neighbour fewer saves 2.3 µA while a tag is
+    in that stretch, at the cost of more Field Generators;
+  - **one conversion per reading** in place of eight averages: it saves
+    6.4 mAh a year, so a room's tag needs 140.9 mAh, 1.06 years. Its cost:
+    the ±0.1 °C is specified at eight averages only (TMP117 p6). One
+    conversion repeats to about ±3 LSB, ±0.023 °C, against ±1 LSB at eight
+    (TMP117 p6, p12). The requirements set no accuracy, so the sitting
+    chooses (§ The tags);
+  - **`radio-and-location.md`'s fallback,** in which the Field Generators
+    listen and the tags only transmit. No tag keeps a listen set, but every
+    Field Generator listens in every frame and relays what it hears, which
+    the radio study has not designed.
+
+  **Recommended: measure first, then the CR2450 for any tag the measurement
+  leaves short.** INFERRED: the tags that walk the corridor are the
+  adults', whose fobs take the larger cell. A route meets [18] without
+  lowering it, so nothing goes to Omid ahead of the sitting (plan Sprint 3's
+  D2). The sitting decides the nursery tag's cell.
 - **The +14 dBm boost mode needs 2.1 V** (PSIP p12), and the cell is rated
   to 2.0 V. The tag sends 12.0 dBm. Whether TI's 12 dBm setting uses boost
   mode is not read. If it does, the cell's last tenth of a volt is lost to
@@ -425,24 +484,31 @@ brackets):
 15 min and a temperature reading every 2 min on cold-chain tags. INFERRED,
 over five years, including the cell's ~1 % a year of self-discharge (mAh;
 the usable capacity in brackets: 150 for a CR2032, and 396 for a CR2450 at
-the same 64 %):
+the same 64 %). Re-priced by Story 2.1.10: an item at rest listens to its
+bay's slot and its two neighbours' (`radio-and-location.md` § Zones), and
+the cold-chain reading is taken at eight averages (§ Each worn tag's year).
 
 | Listen every | CR2032: needs (150) | CR2032, cold chain | CR2450: needs (396) | CR2450, cold chain |
 |---|---|---|---|---|
-| 1 s | 666.6: 0.23 of five years | 673.9 | 685.9: 0.58 | 693.2 |
-| 4 s | 231.8: 0.65 | 239.2 | 251.1: 1.58 | 258.4 |
-| 8 s | 159.4: 0.94 | 166.7 | 178.6: 2.22 | 186.0 |
-| 12 s | **135.2: 1.11** | **142.6: 1.05** | 154.5: 2.56 | 161.8: 2.45 |
-| 16 s | 123.2: 1.22 | 130.5: 1.15 | 142.4: 2.78 | 149.7: 2.64 |
+| 1 s | 768.2: 0.20 of five years | 780.9: 0.19 | 787.5: 0.50 | 800.2: 0.49 |
+| 4 s | 257.3: 0.58 | 269.9: 0.56 | 276.5: 1.43 | 289.2: 1.37 |
+| 8 s | 172.1: 0.87 | 184.8: 0.81 | 191.3: 2.07 | 204.0: 1.94 |
+| 12 s | **143.7: 1.04** | **156.4: 0.96** | 162.9: 2.43 | 175.6: 2.25 |
+| 14 s | 135.6: 1.11 | 148.3: 1.01 | 154.8: 2.56 | 167.5: 2.36 |
+| 16 s | 129.5: 1.16 | 142.2: 1.05 | 148.8: 2.66 | 161.4: 2.45 |
+
+Before Story 2.1.10, the 12 s row read 135.2 (1.11) and 142.6 (1.05) on a
+CR2032, and 154.5 (2.56) and 161.8 (2.45) on a CR2450.
 
 - **A CR2450 alone does not keep five years.** At a 1 s listen it lasts
-  about 2.9 years (0.58 × 5). Its rated 620 mAh is less than the 686 mAh
-  that five years of listening every second take.
-- **A slower wake alone does.** A CR2032 keeps five years from a listen
-  every 9.1 s, or every 10.3 s for cold-chain tags. The pairing alarm at a
-  dock door ([26], 30 s) bounds the interval from above. Two hearings plus
-  1 s for the slot, the Reader and the host take 2T + 1 s, so T may be
-  14.5 s at most. A 12 s listen takes 25 s.
+  about 2.5 years (0.50 × 5). Its rated 620 mAh is less than the 788 mAh
+  that five years at a listen every second take.
+- **A slower wake alone does, though for the cold-chain tag only close to
+  [26]'s bound.** A CR2032 keeps five years from a listen every 10.8 s, or
+  every 13.5 s for cold-chain tags. The pairing alarm at a dock door
+  ([26], 30 s) bounds the interval from above. Two hearings plus 1 s for
+  the slot, the Reader and the host take 2T + 1 s, so T may be 14.5 s at
+  most. A 12 s listen takes 25 s.
   - Tamper ([23], 30 s) and temperature ([24], 5 min) start at the tag, so
     the listen interval does not bound them. INFERRED: a tag woken by its
     tamper input or a reading over its limit listens until the next beacon,
@@ -450,23 +516,39 @@ the same 64 %):
   - A missed check-in ([25], 1 h) and a zone move ([22], 5 min) are far
     looser.
 
-**The choice: the slower wake, a listen every 12 s.** It keeps five years
-on a CR2032 on paper:
-- **its cost:** a margin of 11 %, or 5 % on cold-chain tags, at the planning
-  capacity; a zone change shown in up to about 25 s; and [26] met with 5 s
+**The choice: the slower wake, a listen every 12 s,** unchanged by Story
+2.1.10. It keeps five years on a CR2032 on paper for the plain item tag:
+- **its cost:** a margin of 4 % at the planning capacity (11 % before Story
+  2.1.10); a zone change shown in up to about 25 s; and [26] met with 5 s
   to spare;
 - **the CR2450's cost, beside it:** 4.5 mm wider and 1.8 mm thicker, for
   2.64 times the rated capacity (Energizer).
 
+**The cold-chain item tag is unmet on paper on a CR2032 at 12 s:** 0.96 of
+five years (plan Sprint 3's D2). The routes, each with its cost:
+- **measure first:** the same three ASSUMED inputs as the worn tags'. It
+  costs a bench session, and its answer can go either way;
+- **the CR2450:** 2.25 times the need at 12 s, for the larger cell;
+- **a slower listen:** at 14 s it holds by 1 %, with [26] met at 29 s of
+  its 30, so neither margin is worth the name;
+- **one conversion per reading:** 151.0 mAh, still 0.99 of five years at
+  12 s;
+- **the fallback** in which the Field Generators listen (§ Each worn tag's
+  year).
+
+**Recommended: the CR2450 on every cold-chain item tag.** It meets [27]
+with more than twice the need, at the wake the plain tag keeps.
+
 **Recommended on top of the choice: the CR2450 as well, wherever the item
-takes the larger tag.** With the slower wake it gives about 2.5 times the
-need: 2.56, or 2.45 on cold chain. INFERRED: that margin counts at 100,000
+takes the larger tag.** With the slower wake it gives about 2.4 times the
+need: 2.43, or 2.25 on cold chain. INFERRED: that margin counts at 100,000
 tags. [27]'s own reasoning is the battery-change workload, and a thin margin
 turns a poor cell or a cold warehouse into early changes.
 
-The slower wake keeps five years, so D4's condition for putting [27] to
-Omid ("only if neither choice keeps five years") is not met, and no
-ASK-OMID row is filed. The sitting decides between the two cells.
+Sprint 2's D4 put [27] to Omid only if neither choice kept five years, and
+Sprint 3's D2 only if no route meets the number. The slower wake keeps five
+years for the plain item tag and the CR2450 for the cold-chain one, so no
+ASK-OMID row is filed. The sitting decides the cells.
 
 ## One core or three (spec §3.7), with the sealTag inside it (D3)
 
@@ -535,7 +617,10 @@ module's conditions bind it (SWRA797 §3.1). The decision sitting (Story
 **Whether the seal keeps an HF interface** for a phone to read is Story
 2.1.5's and the sitting's (plan D5). INFERRED: an HF memory would be one
 more fitting option on the same core. It needs no transmitter of its own
-(`radio-and-location.md` § The seal's HF interface).
+(`radio-and-location.md` § The seal's HF interface). Omid has since
+decided that milestone 1 fits none, and that the core keeps an unfitted
+footprint for one with the coil off the core (`software-stack.md`
+§ Decided ahead of the sitting).
 
 ## What the choice leaves to later stories
 
@@ -548,16 +633,19 @@ more fitting option on the same core. It needs no transmitter of its own
   the tool tiers, the vector network analyser among them.
 - **Story 2.1.7:** the sitting decides:
   - one core or three;
-  - the item tag's cell;
-  - the nursery tag's cell, if the measurement falls short;
-  - the sensor's accuracy, if it wants one.
+  - the item tag's cell: the CR2450 recommended on cold-chain tags, where a
+    CR2032 at 12 s is unmet on paper (§ [27]);
+  - the nursery tag's cell, if the measurement falls short (§ Each worn
+    tag's year);
+  - the sensor's accuracy, if it wants one, and with it the setting: eight
+    averages as priced, or one conversion (§ Each worn tag's year).
 - **The build initiatives:**
   - the USB bridge part, and the chip antenna's land pattern, each from its
     maker's datasheet;
   - the boards in KiCad 10;
   - the first battery measurements on the LP-XDS110ET, which replace this
-    document's two remaining ASSUMED inputs, the 0.3 ms set-up and the
-    1.8 ms window.
+    document's remaining ASSUMED inputs: the 0.3 ms set-up, and the window's
+    1.0 ms beacon and 0.4 ms slot (`radio-and-location.md` § Zones).
 
 ## Sources
 
@@ -596,11 +684,19 @@ them alone):
 - **TI-UNIFLASH:** `https://www.ti.com/tool/UNIFLASH` (version 9.7.0,
   released Oct 5, 2026).
 - **TI-SYSCONFIG:** `https://www.ti.com/tool/SYSCONFIG` (version
-  1.28.2.4845, released Oct 20, 2026).
+  1.28.2.4845, released Oct 20, 2026; read again 2026-10-28).
 - **TI-CGT:** `https://www.ti.com/tool/ARM-CGT` (TI Arm Clang 5.1.1.LTS,
-  released May 18, 2026).
+  released May 18, 2026; read again 2026-10-28).
 - **SDK-GH:** `https://github.com/TexasInstruments/simplelink-lowpower-f2-sdk`,
-  its README at tag `lpf2-8.33.00.16`.
+  its README at tag `lpf2-8.33.00.16` (its § Resources read again
+  2026-10-28).
+- **CMAKE-DL:** `https://cmake.org/download/` (the latest release 4.4.5,
+  read 2026-10-28).
+- **CMAKE-LIC:** `https://cmake.org/licensing/` (read 2026-10-28).
+- **GNU-MAKE:** GNU make 4.4.1, from the GNU mirror
+  `https://mirrors.kernel.org/gnu/make/` (dated 26-Feb-2023 there), its
+  `README` and `COPYING` read 2026-10-28. GNU's own page,
+  `https://www.gnu.org/software/make/`, reset the connection twice.
 - **SDK-LIC:** that repository's
   `license_simplelink_cc13xx_cc26xx_sdk_8_33_00_16.txt`.
 - **KICAD-DL:** `https://www.kicad.org/download/windows/`, `.../macos/` and
