@@ -304,3 +304,13 @@ defect.
   - The cwd-drift guard warned once, on a `cd` into this repo.
 
   Every commit ran behind `close-lint && npm test &&`.
+- **Merged:** #36 → `bbc791d7` (2026-10-28T00:35:02Z), squash by hand
+  with `--match-head-commit b8f7608b…`, green on CI's first attempt.
+
+## The stamp (2026-10-28)
+
+- **The block is stamped** `— ✅ EXECUTED (2026-10-28)`, with its
+  **Executed:** record (the fields as fields) and `**Review:** PENDING`, in
+  a facts-only docs PR by leg 4's seat.
+- **The checkpoint for the execution:** no compaction, no forced re-read
+  and no lost-context defect across the four legs.

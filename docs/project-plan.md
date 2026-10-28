@@ -49,7 +49,84 @@ Keep that section above the first `## Initiative` block in the archive.
 No open rows. A1, answered, moved to the archive with Initiative 1 (KB
 `register-relocation-at-close`, 2026-10-27).
 
-## Sprint 2 — "The study makes its choices: a radio a beginner may legally run, the parts and free tools to build it, and host software for any laptop" (proposed 2026-10-27; 4 legs, serial) — ✅ APPROVED (2026-10-27)
+## Sprint 2 — "The study makes its choices: a radio a beginner may legally run, the parts and free tools to build it, and host software for any laptop" (proposed 2026-10-27; 4 legs, serial) — ✅ APPROVED (2026-10-27) — ✅ EXECUTED (2026-10-28)
+
+**Executed:** 2026-10-28, 4/4 legs strictly serial (D7), each by a fresh
+repo-rooted executor seat on Air Traffic Control's orders. None was elevated.
+- **The seats** (each leg's friction-log section has its fresh-session read):
+  - **leg 1:** "tigerfid Sprint 2 Executor" `014c145a-…`;
+  - **leg 2:** "tigerfid Sprint 2 leg 2" `f367e3c4-…`;
+  - **leg 3:** "tigerfid Sprint 2 leg 3" `326f43fb-…`.
+
+    Each of these three was a `/clear` of the process `c59c545c-…`.
+  - **leg 4:** "tigerfid Sprint 2 leg 4" `a60005ee-…`, fresh by launch.
+- **The legs,** each clock GitHub's merge stamp:
+  - **Before leg 1, its own PR — #28 → `fc86cd14` (2026-10-27,
+    18:09:01Z):** the root `.gitattributes` pins LF line endings (F4, F5).
+  - **Leg 1, Story 2.1.9 — #29 → `bdd23c4f` (18:16:19Z):** the
+    original-system study lists its three corrections to the onboarding
+    spec. The Outlook message's three mentions say why it stays closed.
+  - **Leg 2, Story 2.1.3 — #31 → `ef5c2895` (18:55:56Z):** the law read and
+    dated first, then one sub-GHz band on TI's certified CC1312PSIP module,
+    reader-assigned slots and zones from Field Generators.
+    - [3] against [2] was met with no ASK-OMID row (D2).
+    - Three sources were pinned (294 rows).
+  - **Leg 3, Story 2.1.4 — #33 → `3068168d` (19:39:32Z):** each device's
+    parts and the free tools on three platforms (cited, none run), the
+    LP-XDS110ET, a 12 s wake for [27] (D4, no row), and one core recommended
+    (D3).
+    - The FCC grant record is written as not read, on Omid's first-hand
+      "Write it as not read".
+    - Five sources were pinned (299 rows).
+  - **Leg 4, Story 2.1.5 — #36 → `bbc791d7` (2026-10-28, 00:35:02Z):** the
+    original host programs read at the tag, a local Python host with Node.js
+    the runner-up, the event schema, the Chorus software items, and no HF
+    interface recommended for milestone 1's seal (D5). macOS was measured,
+    and Windows and Linux cited.
+- **The manifest,** `docs/close/2.1.json`, flipped as mapped:
+  - leg 1 flipped no tooth;
+  - leg 2 flipped `radio-and-location-doc` and `legality-rules-cited`;
+  - leg 3 flipped `parts-and-toolchains-doc`;
+  - leg 4 flipped `software-stack-doc`.
+
+  `tiered-cost-doc` and `rebuild-spec-approved` stay RED, as the block said.
+- **No ASK-OMID row** was filed by any leg. **No D9 split:** the legs
+  planned 6, 8, 8 and 8 tasks.
+- **The record:** `docs/friction-log-sprint2-the-study-makes-its-choices.md`
+  (F1–F22).
+- **Open for the review** (each a deferred Minor or a routed item):
+  - **Leg 1:** none recorded.
+  - **Leg 2:**
+    - F11: `scripts/reference-check.mjs` still prints "copy-only" for a
+      missing `sources/` file, where D8 lets it be fetched from its row's
+      URL. The script was outside every leg's grant, and leg 4 met the
+      message again (F18).
+    - F9: the block's "the law before the radios" did not say whether it
+      binds the reading order or the document's order.
+  - **Leg 3:**
+    - the FCC grant pages for ZAT-1312PSIP-2 and -3, a browser read before
+      any part is bought (F13, F15);
+    - the hub's `CLAUDE.md` still says "291 pins" for this corpus. It is
+      hub-owned (#33's body).
+  - **Leg 4:**
+    - legs 1–3's Completed lines name no pre-tick head, which KB
+      `sprint-proposal-standard` § Roles asks for; leg 4's does;
+    - F19: a search that prints no count at all is re-run in text mode
+      before a finding rests on it;
+    - F21: the orders' path grants for leg 4 omitted the research log.
+  - **The register seats,** sent to Air Traffic Control as text with leg 4's
+    DONE line, each caught:
+    - `zsh-equals-face`;
+    - a new face, class id not known: the harness `grep` silent over a
+      non-UTF-8 file;
+    - two `piped-checker-exit` reads;
+    - a `ugrep-bounded-repetition-exceeds-complexity-limit` warning;
+    - a cwd-drift warning;
+    - close-lint's reviewed-date face;
+    - the grant-list omission;
+    - a comment read as live code.
+
+**Review:** PENDING
 
 **Approval:** approved 2026-10-27 (Omid, first-hand in the proposer's
 terminal "tigerfid Sprint 2 Proposal", between its `date -u` reads of
