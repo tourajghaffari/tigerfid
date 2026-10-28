@@ -417,7 +417,9 @@ spectrum analyzer (`original-system.md` § What this means for the study).
 - **The figures.** 1,363 slots a second on one channel: 1,000 tags in
   0.73 s with 0.27 s left for retries ([3]). The same scheme gives
   [21]'s 200 a second per channel with large margin. A frame of 0.25 s holds
-  340 slots (INFERRED, § [3] against [2] first).
+  340 slots (INFERRED, § [3] against [2] first). The beacon and the Field
+  Generators' slots take some of each frame: with the nursery's 27, 1,296
+  reply slots a second remain (§ Zones, added by Story 2.1.10).
 - **The original's ideas kept:** one packet format and a CRC on every
   reply, and group replies by tag type, now addressed in the beacon
   (`original-system.md` § Three ways to address).

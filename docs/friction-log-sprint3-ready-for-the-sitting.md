@@ -149,3 +149,11 @@ defect.
   (swept 2026-10-28). Your edit may decay its pre-verified facts —
   re-verify or annotate the block (KB sprint-proposal-standard step 2)."
   The edits were the leg's own, each finding's anchor re-read before it.
+- `semicolon-chained-checker-does-not-gate-commit` seat: the tick commit's
+  first chain ran the push after a `;`, outside the gate, and was refused
+  before it ran: "piped-checker guard (BLOCKED — this command did not run):
+  `close-lint.mjs` ends its clause at a `;` (or a newline), so its exit code
+  is read and discarded — it does not gate the `git push` after it, which
+  runs even on a red, and the harness prints the red and the new state in
+  the same result." Re-issued with the push inside the `&&` chain, it
+  committed and pushed on a green gate.

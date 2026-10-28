@@ -822,7 +822,7 @@ time, payload), and answers its Chorus items one by one.
 - **Finding 2:** `radio-and-location.md` names ZAT-1312PSIP-3 beside -2 (SWRA797 p14, p17) and gives the grants' read to the sitting. `fcc-ids-both-named` FAIL → PASS.
 - **Finding 5:** CMake 4.4.5 (BSD-3-Clause) and GNU make 4.4.1 (GPL-3.0-or-later, from its own licence text) gain their platform and licence cells. SysConfig's and TI Arm Clang's licences are marked not read (their pages state none). The 921,600 baud is ASSUMED beside the module's 3 MBaud, and the binary frame still wins: it fits any bridge from 436,160 baud up.
 - **The five nits:** `logTimestamp` (`AWI_API.h` at the tag; none of Smart Tracker's 103 `.cs` files names it); §2.803's last clause; −90 and −93 dBm on the module's own sheet (PSIP p16, p17); the radio study counted the Reader's +2 dBi; 1,363 named as the slot capacity, not [3].
-- Story 2.1.7's HF sentence is refreshed. The friction log has its leg 1 section.
+- Story 2.1.7's HF sentence is refreshed. The Item-8 grep refreshed two cross-references: the radio study's § Anti-collision names the Field Generators' block (1,296 reply slots a second with the nursery's 27), and the software study's Chorus row names the CR2450. The friction log has its leg 1 section.
 
 **Story:** As the decision sitting, I want the three technical studies to
 carry the Sprint 2 review's corrections, so that I decide on figures that
