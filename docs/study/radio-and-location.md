@@ -271,7 +271,9 @@ what anti-collision.
 - **At 300 kbit/s,** 20 bytes last 0.533 ms on air. ASSUMED: 0.2 ms of
   guard and turnaround per slot, so a slot is 0.733 ms. That is 1,363 slots
   a second on one channel, and 1,000 tags take 0.73 s with 0.27 s left for
-  retries. With 16 bytes: 1,595 slots a second.
+  retries, before the Reader's beacon and the Field Generators' slots take
+  their share of each frame (§ Anti-collision computes each scenario's).
+  With 16 bytes: 1,595 slots a second.
 - **At 200 kbit/s,** the same 20 bytes make a 1.00 ms slot: 1,000 a second,
   with no time left for retries.
 - **At 125 kbit/s (Bluetooth LE Coded),** 16 bytes of payload alone last
@@ -383,7 +385,8 @@ record states):
   - and, from PSIP p54, "This transmitter must not be co-located or
     operating with any other antenna or transmitter".
 - **The wake signal's form:** a short beacon, sent at a time the tag already
-  knows, on the network's current channel (§ Zones). For a tag that has
+  knows, on the network's current channel; on most listens a tag hears its
+  Field Generators' slots in its place (§ Zones). For a tag that has
   lost its timing, the radio's "Carrier Sense and Preamble Detection can be
   used to implement sniff modes where the radio is duty cycled to save
   power" (R7 Table 8-1, note 2). INFERRED that the PSIP's radio has the
@@ -411,15 +414,29 @@ spectrum analyzer (`original-system.md` § What this means for the study).
 - **Joining.** A tag joins a Reader once, in a short contention window of
   each frame, and is given a slot number. New tags arrive a few at a time,
   so random access is enough for joining (INFERRED).
-- **Roll calls.** The Reader's beacon opens a roll call, and every joined
-  tag answers in its own slot. A tag's missing reply is retried in the next
-  frame's spare slots.
-- **The figures.** 1,363 slots a second on one channel: 1,000 tags in
-  0.73 s with 0.27 s left for retries ([3]). The same scheme gives
-  [21]'s 200 a second per channel with large margin. A frame of 0.25 s holds
-  340 slots (INFERRED, § [3] against [2] first). The beacon and the Field
-  Generators' slots take some of each frame: with the nursery's 27, 1,296
-  reply slots a second remain (§ Zones, added by Story 2.1.10).
+- **Roll calls.** The Reader's beacon opens a roll call, which the Field
+  Generators' slots flag to the tags that skip the beacon (§ Zones), and
+  every joined tag answers in its own slot. A tag's missing reply is retried
+  in the next frame's spare slots.
+- **The figures.** The channel carries 1,363 slots a second, and a frame of
+  0.25 s holds 340 of them, before the Reader's beacon and the Field
+  Generators' block take their share (INFERRED, § [3] against [2] first).
+  The beacon takes 1.0 ms of each frame and each Field Generator 0.4 ms
+  (both ASSUMED, § Zones); the layout of a tag's listen adds none (§ Zones,
+  The layout of a listen). INFERRED, each scenario's block (added by plan
+  Story 2.1.12, from the Sprint 3 review's nit):
+  - **the conference:** 23 Field Generators, ASSUMED from [1]: the main
+    hall's twelve areas (§ Zones), the other nine rooms and two exits, as
+    many exits as the ward's. The block takes 10.2 ms of each frame, which
+    leaves 327 reply slots a frame, 1,308 a second. A hall of 1,000 tags
+    then takes about 0.76 s, with 0.24 s left for retries ([3]);
+  - **the ward:** 27 Field Generators (§ Zones), 11.8 ms, which leaves 324
+    reply slots a frame, 1,296 a second. Its 100 tags take 0.08 s ([12]);
+  - **any one Reader:** its block can hold up to 164 Field Generators before
+    [3]'s 1,000 a second is lost (250 ms, less 250 reply slots of 0.733 ms
+    and the 1.0 ms beacon, leaves 65.7 ms, at 0.4 ms a Field Generator).
+    The warehouse's Readers stay far inside it, since [21] asks 200 a
+    second.
 - **The original's ideas kept:** one packet format and a CRC on every
   reply, and group replies by tag type, now addressed in the beacon
   (`original-system.md` § Three ways to address).
@@ -455,8 +472,11 @@ of 10–20 dB.
 ### Channels
 
 - **United States: the network hops.** The Reader's network changes channel
-  every 0.25 s frame, in a pseudo-random order over the 42 channels, and the
-  tags and Field Generators follow it from the beacon. A full cycle takes
+  every 0.25 s frame, in a pseudo-random order over the 42 channels. The
+  Field Generators follow it from the beacon. A tag is given the order when
+  it joins, counts frames on its crystal between the beacons it hears, and
+  reads the frame's number in each one (§ Zones, The layout of a listen).
+  A full cycle takes
   10.5 s, so no channel is used for more than 0.25 s in any 10 s (INFERRED).
   That meets §15.247(a)(1)(i)'s 25 channels and 0.4 s, and §15.247(g)'s
   spreading of short bursts. It is harmless if the grant turns out to be the
@@ -485,9 +505,10 @@ single band:
   sends a short beacon carrying its ID in its own slot of every frame, at a
   power set for its room. The power is the zone's size, as the original's
   field strength was.
-- **A tag wakes on its own timer** for the Reader's beacon and the slots of
-  its listen set (§ How a tag hears a Field Generator it has not heard
-  before, below). It reports the Field Generators it hears, with their
+- **A tag wakes on its own timer** for the slots of its listen set, and for
+  the Reader's beacon when it needs it (§ How a tag hears a Field Generator
+  it has not heard before, and its § The layout of a listen, below). It
+  reports the Field Generators it hears, with their
   signal strength, when the strongest one changes, and with every check-in.
 - **The server decides the zone** from those reports, with hysteresis at
   doorways (Chorus's "smart server", § The Chorus comparison).
@@ -516,17 +537,20 @@ never be noticed. The rebuild names the slots for it:
   or that has heard none of its set in two listens, listens to every Field
   Generator's slot until the host places it. A tag still unplaced after a
   minute slows that search to one listen every 12 s, so a tag shut in a
-  drawer does not drain its cell. INFERRED: 6.6 µA while it stays lost
-  among the ward's 27 Field Generators, against 13.9 µA in a room.
+  drawer does not drain its cell. Such a tag hears the beacon and the whole
+  block in one window. INFERRED: 6.6 µA while it stays lost among the
+  ward's 27 Field Generators, against 10.45 µA at most in a room (§ The
+  layout of a listen, below).
 - **The slots sit in one block after the Reader's beacon.** ASSUMED: the
   beacon lasts 1.0 ms and each Field Generator's slot 0.4 ms, which together
-  reproduce this study's 1.8 ms for the beacon and two slots. ASSUMED as
-  well: the host orders the block along the floorplan, so that a tag hears
-  its set in one window. The build measures both lengths.
+  reproduce this study's 1.8 ms for the beacon and two slots. The build
+  measures both lengths. The host orders the block along the floorplan
+  (§ The layout of a listen, below).
 - **The block takes frame time.** INFERRED, for the ward's 27: the slots
   and the beacon take 11.8 ms of each 0.25 s frame, which leaves 324 reply
   slots a frame, 1,296 a second. That is still above [3]'s 1,000, the most
-  any scenario asks of one Reader.
+  any scenario asks of one Reader. § Anti-collision computes the
+  conference's block beside it.
 
 **The neighbours, ASSUMED from each scenario's size** (`requirements.md`
 items [1], [10] and [19]):
@@ -548,12 +572,19 @@ lengths above:
 
 | Mechanism | What a tag listens to | [13]'s move | [22]'s move | Listening, the nursery's tag in a room | Its cost |
 |---|---|---|---|---|---|
-| **The neighbours named (chosen)** | its zone's slot and its neighbours' | 3.0 s | 25 s | 13.9 µA, unchanged: its own slot and its stretch's | a tag in a zone with many neighbours listens to more slots; a link the floorplan misses (below) |
+| **The neighbours named (chosen)** | its zone's slot and its neighbours' | 3.0 s | 25 s | 13.9 µA as weighed: its own slot and its stretch's | a tag in a zone with many neighbours listens to more slots; a link the floorplan misses (below) |
 | The whole block at every listen | every Field Generator's slot | 3.0 s | 25 s | 71.9 µA, the ward's 27 slots | 630 mAh a year of listening: 0.23 years for [18] |
 | A wider listen every second time | the slots it last heard, and the whole block every second listen | 4.0 s (2 + 1 + 1.0) | 37 s (24 + 12 + 1) | 42.9 µA | 376 mAh a year of listening: 0.37 years for [18] |
 
+The three rows are priced as Story 2.1.10 weighed them, with the Reader's
+beacon in every listen. The layout below takes the beacon out of most
+listens (added by plan Story 2.1.12). The beacon's 5.8 µA at a 1 s listen
+then comes off each row alike, so the ranking stands (INFERRED). With the
+block's order counted as well, the chosen row's room tag listens for
+8.13 µA beside its stretch in the block and 10.45 µA one room away from it.
+
 **The choice: the neighbours named.** It is the only one of the three that
-keeps a room's tag at the 13.9 µA this study priced, and it meets [13] and
+keeps a room's tag at the figure this study priced, and it meets [13] and
 [22] as the design did before. Its cost falls on a tag in a zone with many
 neighbours, and `parts-and-toolchains.md` prices it (§ Each worn tag's year,
 § [27]). One mechanism serves the three scenarios, so the tags keep one
@@ -587,10 +618,89 @@ hearing. A pass is missed once in 8,000, so 100 of 100 passes succeed with
 98.8 % probability. That is the strictest test in the study, and the build
 measures it.
 
+**The layout of a listen: the beacon skipped on most listens** (added by
+plan Story 2.1.12, from the Sprint 3 review's finding 1). One block of slots
+after one beacon can put only one zone's set next to the beacon. Every other
+tag must wake twice, once for the beacon and once for its set, or listen
+across the slots between them. With the second wake, the nursery's room tag
+listens for 16.73 µA, not 13.9 µA, and [18] fails on paper (the review's
+figure, reproduced here). So the rebuild takes the beacon out of most
+listens:
+- **A tag listens to its set's slots alone.** It keeps the frame's time on
+  its 32 kHz crystal between listens, and each Field Generator's slot it
+  hears sets that time again. The Field Generators time their slots from the
+  Reader's beacon, which they hear in every frame, so their slots carry the
+  Reader's time. The window is widened for drift as before, by 2 × 60 ppm of
+  the time since the tag last heard a slot: the tag's RTC to ±50 ppm (PSIP
+  p24) and the Reader's crystal to ±10 ppm (PSIP p23).
+- **The host orders the block along the floorplan, and a tag wakes once for
+  each run of its set.** A single slot between two of the set's slots is
+  listened across: 0.4 ms at 5.8 mA (2.32 µC) costs less than a second
+  start-up (2.795 µC, `parts-and-toolchains.md` § The battery). Across two
+  slots or more the tag sleeps and wakes again, which costs less, and the
+  start-up's 0.665 ms (165 µs and 200 µs, PSIP p23, then the 0.3 ms set-up)
+  fits in two slots' 0.8 ms. INFERRED, each scenario's order:
+  - **the ward:** one exit, then each stretch with two of its rooms either
+    side of it (room, room, stretch, room, room), stretch by stretch along
+    the corridor, then the other exit. A room's set is one run: two slots
+    beside its stretch, or three one room away. A stretch's set is two runs
+    at an end of the corridor and three in its middle (its own group, and
+    the stretch on each side);
+  - **the main hall:** its twelve areas, 4 × 3 of about 10 m, column by
+    column, three areas to a column. An inner area's set, the three columns
+    around it, is one run of nine slots. Every other area's is one run of at
+    most eight, the areas between included;
+  - **the conference's other rooms:** each room's set, its slot and its two
+    neighbours', is priced as three wakes, the most three slots can need
+    wherever they sit, so its figure needs no order;
+  - **the warehouse:** the bays aisle by aisle, in order along each aisle,
+    so an item's set (its bay and the bay on either side) is one run of
+    three.
+- **The tag hears the Reader's beacon when it needs it:**
+  - **after each check-in.** A check-in follows a listen, in that frame's
+    reply slot, and the tag then hears the next frame's beacon for its
+    reply's acknowledgement and anything addressed to it. That is one more
+    wake for each check-in, priced in `parts-and-toolchains.md` § The
+    battery;
+  - **when the beacon carries news.** Each Field Generator's slot repeats a
+    count, which the Reader steps whenever its beacon carries a command (for
+    a tag, a type or all tags: `original-system.md` § Three ways to
+    address) or a change to the hop order. A tag that sees the count change
+    hears the next beacon, at most 0.25 s later. ASSUMED: the count is one
+    byte, 27 µs at 300 kbit/s, inside the slot's ASSUMED 0.4 ms. INFERRED:
+    commands are rare beside a day's 86,400 listens, so this study does not
+    price them. The downlink that names a listen set needs no count, since a
+    tag that has just reported a change listens for it (above);
+  - **when it has lost its way.** A tag with no set, or one that has heard
+    none of its set in two listens, hears the beacon and the whole block in
+    one window (above).
+- **In the United States,** a tag follows the hop without the beacon
+  (§ Channels).
+- **What it costs:**
+  - a command reaches a tag at its next listen and the beacon after it: at
+    most 1.25 s at a 1 s listen, where the old layout took 1 s (§ Does
+    ActiveWave's approach still win);
+  - one more wake for each check-in;
+  - no frame time: the block keeps its length (§ Anti-collision).
+- **What it leaves unchanged:** [13]'s 3.0 s, [17]'s pairing and [22]'s
+  25 s, since a tag still hears its whole set at every listen. The exit's
+  answer in every frame ([13], [17]) is unchanged too.
+
+**Weighed against the review's two ways** (plan Sprint 4's D3). INFERRED,
+for the nursery's room tag at its 1 s listen, with its one neighbour, its
+stretch:
+
+| Layout | Listening | [18], one room away from its stretch | The ward's frame time | Its cost |
+|---|---|---|---|---|
+| **The beacon skipped (chosen)** | 8.13 µA beside its stretch; 10.45 µA one room away | 1.24 years (`parts-and-toolchains.md` § Each worn tag's year) | none added | a command waits up to 0.25 s more for the beacon; one more wake for each check-in |
+| A short sync before each group of slots | 9.29 µA and 11.61 µA (a sync of 0.2 ms, ASSUMED) | 1.15 years | 1.4 ms more: seven groups, its five stretches and two exits | the sync tells a tag nothing a Field Generator's slot does not, so it costs listening and frame time for no gain |
+| The second wake, charged | 16.73 µA (the review's) | 0.87 years: **unmet** | none added | [18] unmet on paper for every room's tag |
+
 **The battery this costs** is priced in `parts-and-toolchains.md` § Each
 worn tag's year and § [27]: Story 2.1.4 replaced this study's ASSUMED
-inputs with the datasheets' figures, and Story 2.1.10 priced the listen set
-above. This study's own first estimate, 108.6 mAh a year for [18]'s tag
+inputs with the datasheets' figures, Story 2.1.10 priced the listen set
+above, and Story 2.1.12 the layout of a listen. This study's own first
+estimate, 108.6 mAh a year for [18]'s tag
 from its ASSUMED inputs, is superseded by those figures.
 
 The listening dominates, as the requirements predicted (`requirements.md`
@@ -650,7 +760,10 @@ their own:**
   (§ The radio chosen).
 - **The build initiatives** (added by Story 2.1.10): the beacon's and a
   Field Generator slot's lengths, measured; the floorplan's neighbour
-  links; and the guides' setup walk that checks them (§ Zones).
+  links; and the guides' setup walk that checks them (§ Zones). Added by
+  Story 2.1.12: the block's order along each floorplan, the count each
+  Field Generator's slot repeats, and the hop order a tag is given when it
+  joins (§ Zones, The layout of a listen).
 
 ## The Chorus comparison, radio side
 
@@ -683,8 +796,10 @@ subscription, and pairing people with things, are Story 2.1.5's.
   door's output need not wait on the host.
 - **Wake-on-command: it still wins, and is kept in a new form.** A command
   for a tag, a type or all tags (`original-system.md` § Three ways to
-  address) rides in the Reader's beacon. A tag acts on it at its next
-  listen, at most 1 s later. Tags that send on their own timers, Chorus's
+  address) rides in the Reader's beacon, and the Field Generators' slots
+  flag it (§ Zones, The layout of a listen). A tag acts on it at its next
+  listen and the beacon after it, at most 1.25 s later at a 1 s listen
+  (1 s before plan Story 2.1.12). Tags that send on their own timers, Chorus's
   way, spend battery on every send whether anyone listens or not. Waking on
   command spends it on listening that the slots keep short (§ Zones).
 

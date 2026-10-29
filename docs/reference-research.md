@@ -350,6 +350,22 @@ rests on a price page (plan Sprint 2's D8).
 - **Searched, not found:** a seller's page that prices a USB barcode
   scanner (Adafruit's search lists none).
 
+### Story 2.1.12 — the Sprint 3 review's fixes to the listening window (2026-10-29)
+
+What was read is cited in the two studies it corrects
+(`docs/study/radio-and-location.md` and `docs/study/parts-and-toolchains.md`).
+
+- **A pinned source, read again as text** (`sources/`, no new pin): the
+  CC1312PSIP datasheet's pages 23 and 24, through `pdftotext -layout`, for
+  the wake-up from standby (165 µs), the 48 MHz crystal's start-up (200 µs)
+  and its RF accuracy (±10 ppm, −40 to 65 °C), and the RTC's accuracy with
+  temperature compensation (±50 ppm over the same range). The layout of a
+  listen rests on these figures, and each reads as the studies cite it.
+- **Refused, not read:** GNU's own make page (`https://www.gnu.org/software/make/`)
+  reset the connection to a plain request again on 2026-10-29, as it did
+  twice for Story 2.1.10. So GNU make's platforms are named among the tools
+  not cited, the default of the Sprint 4 block's D4.
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -393,3 +409,6 @@ a verdict here.
   itself, never from a search result. The search ideas for 2.1.6 above are
   answered there: a dated price for each part, the board and assembly
   services, each tool tier and the bench's receiver.
+- **2026-10-29:** Story 2.1.12's reads for the listening window (§ 4,
+  above). No search was run: one read went to a pinned source the studies
+  already cite, and one to the maker's page of a tool the review named.
