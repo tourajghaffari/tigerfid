@@ -7,6 +7,42 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-29 — Sprint 4 leg 2 (Story 2.1.14, the tiers)
+
+- **Landed:** #60 → `b707bf1a` (GitHub's merge stamp 10:44:46Z), squash
+  with `--match-head-commit 6c6e8ded…` once `watch-pr.mjs` read it GREEN
+  (10:44:30Z).
+  - Every tier prices what its tools need to run: the hot plate's 100 W
+    supply (advanced, pro), and the debugger's cable and the tags'
+    pogo-pin clip (every tier). Three box contents no page settles are
+    named in the Lacks.
+  - JLCPCB's minimum is read, two boards a design, so each assembled route
+    buys a second Reader and Field Generator. Three boards by hand cost
+    34.88. The four nits are fixed, and the totals are 602.25, 1,449.92
+    and 1,996.03.
+  - The tick, the manifest's `reviewedFor` line and the friction log's
+    leg 2 section ride the same PR.
+- **Next:**
+  1. **Sprint 4 leg 3, Story 2.1.13,** in a FRESH executor seat, by the
+     block's kickoff. It touches `scripts/` and merges by Omid's word.
+  2. Then the Sprint 4 review, Story 2.1.7's sitting and Story 2.1.8's
+     close.
+- **Surprises / decisions:**
+  - **A CLAIM, granted.** The parts study's "not read" cable sentence
+    stays verbatim, with a dated clause appended, on the coordinator's
+    GRANT (friction T7).
+  - **The merge word:** Omid, first-hand in this terminal between its
+    reads of 10:33:39Z and 10:34:03Z: "Yes, push/edit/ready/merge
+    (Recommended)".
+  - **For the reviewer:** reproduce the fees from the stated fully
+    assembled joints (T2). The leg's script is in #60's body.
+  - **A box chore mid-leg** (friction T6): the tool manager's updater held
+    its version, under a 24 h minimum release age. No repo file was
+    touched.
+- **Provenance:** Session id `7a8f4e54-9463-4a25-b0d2-718feceb0236`, the
+  hub-rooted executor seat "tigerfid Sprint 4 leg 2", fresh by `/clear` of
+  "Windows 4"'s process (the friction log's fresh-session read).
+
 ## Session: 2026-10-29 — Sprint 4 leg 1 (Story 2.1.12, the listening window)
 
 - **Landed:** #58 → `cf580b05` (GitHub's merge stamp 10:05:48Z), squash
@@ -73,40 +109,5 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
     proposal ran origin/main's copy from its scratchpad (F1).
 - **Provenance:** Session id `cb189c7f-0ffb-4dea-bea2-8485d49ee215`, the
   hub-rooted proposer seat "tigerfid Sprint 4 proposal", fresh by `/clear` of
-  "Windows 4"'s process (the friction log's fresh-session read).
-
-## Session: 2026-10-29 — Sprint 3 review (PASS WITH FINDINGS; Stories 2.1.12 and 2.1.13 filed)
-
-- **Landed:** #53 → `5570ecee` (GitHub's merge stamp 00:14:32Z), squash on
-  green, `--match-head-commit 8f6f15a0…`.
-  - The Sprint 3 block is in the archive's § Executed sprints, with its
-    `**Reviewed:**` record.
-  - The plan files Stories 2.1.12 and 2.1.13. `docs/close/2.1.json` carries
-    both, with the new tooth `stub-names-sources` (born RED) and two prose
-    checks.
-  - The friction log has § Reviewer pass (R1–R5).
-- **Next:**
-  1. **Story 2.1.12, the Sprint 3 review's fixes to the studies,** before
-     Omid's sitting: a Sprint 4 proposal, in a FRESH seat.
-     - Its finding 1, the listening window, moves the [9], [18] and [27]
-       margins that Sprint 3's D2 judged.
-     - D2 may need Omid's word if no route meets [18] in a baby's band.
-  2. Then Story 2.1.7's sitting (Omid's), and Story 2.1.8, Epic 2.1's close
-     (a FRESH closer). Story 2.1.13, the reference folder's `sources/` route,
-     touches `scripts/` and goes any time before the close.
-- **Surprises / decisions:**
-  - **The sitting waits for Story 2.1.12, by the review's routing.** Omid
-    may sit first. The cost: he would decide the cells on margins that do
-    not hold as printed.
-  - **The register seats went to the Mac coordinator as text** (the friction
-    log's § Reviewer pass). Until a pen seats them as the reviewer pass's,
-    the close runner prints "REVIEW SEATING MISSING" for Sprint 3. Its
-    Sprint 2 line is a stale read of the hub checkout (R5).
-  - **The hub's Item-8 reader reads a table as empty** (R3). A reviewer
-    reads a table-form section by eye.
-  - **For this repo's logs, `check-register-seats.mjs` needs
-    `--sprint 'tigerfid — Sprint N'`** (R4).
-- **Provenance:** Session id `f050a5d6-6c6f-403f-878d-a9c23140108a`, the
-  hub-rooted reviewer seat "tigerfid Sprint 3 review", fresh by `/clear` of
   "Windows 4"'s process (the friction log's fresh-session read).
 
