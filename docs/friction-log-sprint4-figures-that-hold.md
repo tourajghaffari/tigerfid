@@ -93,3 +93,87 @@ question laid out the one call a reader might change, the split of Story
   `git push`. The guard refused it before it ran: "piped-checker guard
   (BLOCKED — this command did not run)". It was re-issued as one `&&` chain
   to the push, with the exit read after it.
+
+## Leg 1 — Story 2.1.12 (2026-10-29)
+
+Run by the hub-rooted Windows session "tigerfid Sprint 4 leg 1" (session
+`6fb033a2-2fc2-4f7a-8d61-8918850b976e`), on the Mac coordinator's orders 24.
+**The fresh-session read:** fresh by `/clear`. The background-task path id
+is `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, the session id of "Windows 4",
+Sprint 3's leg 3 executor. That process last held the Sprint 4 proposal
+(`cb189c7f-…`, wrapped at #57, its tombstone on the hub's origin), which
+this `/clear` ended. Not elevated: a Windows administrator-role read,
+`False`, at 07:43:02Z.
+
+**Context checkpoint:** seven tasks, as the block estimated. No compaction,
+no forced re-read, no lost-context defect.
+
+**Re-verify, before the first edit** (between the `date -u` reads of
+07:31:22Z and 07:31:38Z): `main` at #57; `user.email` the noreply address;
+`close-lint` ok and `npm test` 20 of 20; `reference-check` "299 rows
+verified, README the stub"; the close runner over the eleven teeth, nine
+PASS, with `stub-names-sources` and `rebuild-spec-approved` FAIL, as the
+block says; no ASK-OMID row; each anchor in § Inputs swept read as quoted.
+
+- **L1 — The block's order was a second assumption.** The review's finding
+  named the beacon. The study also ASSUMED the host could order the block
+  "so that a tag hears its set in one window". In a corridor, a stretch's
+  set of seven (its four rooms and the stretch on each side) cannot be one
+  run beside its neighbours' sets, and two of every four rooms sit one slot
+  away from their stretch. The leg therefore states each scenario's order
+  and prices runs: one wake for each run of a set, a single slot between
+  listened across. Every figure now rests on an order the reviewer's script
+  can rebuild. Cost: the order and one rule in the study. No fix needed.
+- **L2 — A rounded slot length moves a frame's count.** The study writes a
+  reply slot as 0.733 ms. It is 0.7333 ms (20 bytes at 300 kbit/s, 0.5333
+  ms, and 0.2 ms of guard), and its "1,363 a second" floors 1,000 ÷ 0.7333.
+  The conference's 327 reply slots a frame fit with nothing to spare at
+  0.7333 ms. A reproduction at 0.733 ms gives the same counts, but only by
+  luck. Cost: one re-run of the leg's script. Suggested fix, for the
+  reviewer: reproduce slot counts at 11/15 ms.
+- **L3 — The old [27] table sat 0.1 above this leg's script in four
+  cells.** At the last digit, the script reads 257.24 for the 4 s row's
+  257.3, 800.15 for 800.2, 148.75 for 148.8, and 1.055 for 1.05. Every
+  other old cell reproduced, and every row is superseded by this leg. Cost:
+  none. It is named so the reviewer does not chase it.
+- **L4 — GNU's make page reset the connection again** (between the reads of
+  07:34:07Z and 07:34:27Z, curl exit 35). D4's default holds: GNU make is
+  named among the tools whose platforms are not cited.
+- **L5 — `software-stack.md` quotes the raw slot capacity.** Its burst row
+  reads "up to 1,363 a second, a hall of 1,000 in 0.73 s". It is outside
+  this leg's ledger, and it stays true as the host's worst case: the
+  beacon and the block only lower the rate a host must take. Dispositioned
+  current in the PR body, not edited.
+- **For leg 2:** `tiered-cost.md` § Both cells reads true as it stands. The
+  item tag's cell is still the sitting's, now for margin rather than need,
+  and the nursery tag's is still its cell "if the measurement falls short".
+  No sentence of it moves.
+
+**Guard events:**
+- `cwd-drift` seat: the leg's first `cd` into this repo, in a call of its
+  own after the read of 07:22:42Z, drew "cwd-drift guard (warn, not a
+  block): this command cds into `<F>` — the shell cwd PERSISTS across later
+  tool calls whether this compound succeeds or fails, so a later repo
+  command can silently run in the wrong repository." (the repo's path
+  written here as `<F>`), and every call after it drew the guard's second
+  arm. Every git command carried `git -C` with the literal path, and none
+  ran in the wrong repository.
+- `swept-surface-guard-warns-on-the-legs-own-planned-edits` seat: every edit
+  to the leg's four study and research files drew "This file was verified
+  by Sprint 4's staleness sweep (swept 2026-10-29). Your edit may decay its
+  pre-verified facts — re-verify or annotate the block (KB
+  sprint-proposal-standard step 2)." Each was the leg's own planned edit,
+  and its anchors were read again before the work (above).
+- `truncated-read-taken-as-source-extent` seat, caught: the PR body's greps
+  were first printed through `cut -c1-140`, each count beside its matches,
+  after the read of 07:44:55Z. No guard drew it. They were run again with
+  every match whole after the read of 07:45:31Z, and the PR body quotes that
+  run.
+- `piped-checker-exit` seat, flagged: the privacy read of the diff's added
+  lines piped `git diff` into three `grep`s and read `$?`. The guard drew
+  "piped-checker guard (warn, not a block): this command reads `$?` right
+  after the pipeline". The last stage was the read meant (exit 1, no match),
+  and the diff's own exit was not the proof.
+- The marker hook's "Widen the marker" line, which met the proposal's seat
+  on a marker opened with `--repos tigerfid`, did not fire on any of this
+  leg's edits.

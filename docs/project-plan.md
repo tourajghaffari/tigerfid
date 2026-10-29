@@ -1160,7 +1160,21 @@ copy route as the alternative; every other file row's line is unchanged; and
 the tests above pass in `npm test` after failing before the fix, the PR body
 quoting the red run (manifest prose check `reference-check-sources-route`).
 
-#### Story 2.1.12: The Sprint 3 review's fixes to the listening window
+#### Story 2.1.12: The Sprint 3 review's fixes to the listening window — ✅ DONE (2026-10-29)
+
+**Completed:** 2026-10-29 — tigerfid #58 (branch `story-2.1.12-listening-window`, pre-tick head `f09c8d97`), with the research log's Story 2.1.12 entry (`docs/reference-research.md` § 4).
+**Outcome:** finding 1's layout is stated, its cost carried into every battery figure it moves, and Sprint 3's D2 re-run for [9], [18] and [27]: each is met on paper. No requirement number moved (D1). These figures supersede Story 2.1.10's:
+- **The layout (D3): the beacon skipped on most listens** (`radio-and-location.md` § Zones, The layout of a listen):
+  - a tag listens to its set's slots alone, keeping time on its crystal, with each Field Generator slot it hears setting it again;
+  - it wakes once for each run of its set in a block ordered along each floorplan;
+  - it hears the Reader's beacon after each check-in, when its Field Generators' slots flag news, and when it is lost.
+  - Weighed against a sync before each group (no gain for its cost) and the review's second wake (16.73 µA, [18] unmet).
+- **[18]:** a room's tag holds by 24 % (it was 1.8 %). A tag in the corridor more than about 5.4 hours a day is unmet on paper (it was 37 minutes). The routes stand. D2's clause for a baby's band does not fire.
+- **[9]:** the hall's badge holds by 22 % (it was 2.3 %).
+- **[27] at 12 s on a CR2032:** the plain item tag holds by 22 % (it was 4 %), and the cold-chain tag by 11 % (it was 0.96 of five years). The CR2450 stays recommended for margin, cold chain first. No ASK-OMID row is filed.
+- **The anti-collision nit:** the conference's block of 23 Field Generators (10.2 ms) leaves 1,308 reply slots a second: 1,000 tags in about 0.76 s, beside the ward's 1,296. Any Reader keeps [3] with up to 164.
+- **Finding 6 (D4):** GNU's make page reset the connection again. So the sentence above the toolchains table names GNU make, with the Arm GNU Toolchain and the SDK, among the tools whose platforms are not cited.
+- `requirements.md` gains three dated pointer lines (listening, [18], [27]). A command now reaches a tag in at most 1.25 s at a 1 s listen (§ Does ActiveWave's approach still win). `tiered-cost.md` § Both cells reads true as it stands, so no sentence of it moves for leg 2. The friction log has its leg 1 section.
 
 **Story:** As the decision sitting, I want the tags' battery figures to rest
 on a listening layout that every tag can keep, so that I decide the cells

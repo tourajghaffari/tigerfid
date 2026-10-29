@@ -240,10 +240,15 @@ on any platform (§ The Reader). Every board is planned in KiCad 10 (spec
 D4). The table cites each install. None was run.
 
 **Platforms measured: none. Platforms cited: Windows, macOS and Linux,**
-for every tool except two. The Arm GNU Toolchain's platforms were not read:
-its page renders by script (§ What was read), and it answered Story
-2.1.10's request with HTTP 403. The SDK is a public Git repository of
-source (SDK-GH), which the tools below build on each platform. CMake, GNU
+for every tool except three: the Arm GNU Toolchain, the SDK and GNU make.
+The Arm GNU Toolchain's platforms were not read: its page renders by script
+(§ What was read), and it answered Story 2.1.10's request with HTTP 403.
+The SDK is a public Git repository of source (SDK-GH), which the tools below
+build on each platform. GNU make's are not cited either: GNU releases its
+source only, so its row's platforms are INFERRED from CCS, which ships it.
+GNU's own make page reset the connection when Story 2.1.10 asked
+(2026-10-28) and when Story 2.1.12 asked again (2026-10-29; § 4 of
+`docs/reference-research.md`). CMake, GNU
 make, SysConfig and TI Arm Clang
 were read again on 2026-10-28, between Story 2.1.10's clock reads of
 11:33:59Z and 11:36:39Z: CMake's and GNU make's rows were empty before, and
@@ -282,8 +287,9 @@ public Git repository (SDK-GH).
   version" (PSIP p67), so a paid tool beyond it.
 
 **Not read:** the TI download pages' login terms, SysConfig's and TI Arm
-Clang's licences, and the GCC route's platforms. INFERRED: TI offers both
-for download with no price, and the SDK names the GCC route beside TI's
+Clang's licences, the GCC route's platforms, and a page that states GNU
+make's (its row's are INFERRED). INFERRED: TI offers SysConfig and TI Arm
+Clang for download with no price, and the SDK names the GCC route beside TI's
 compiler (SDK-GH), so the build does not rest on TI's compiler alone. The
 epic close's `free-tools-three-platforms` check (plan Story 2.1.8) reads
 these two licences as unread.
@@ -378,7 +384,7 @@ tag antenna, the slot guard and the receive start-up to it as well.
 | The cell, usable | 150 mAh, ASSUMED | **Still ASSUMED: 150 mAh** (64 % of 235), on a branded cell with a buffer capacitor. The floor beside it is 117.5 mAh (50 %) | "Some vendors, including some branded name vendors, only achieve app. 50% of rated capacity for both 15mA and 30mA peak current" (SWRA349 p4); a capacitor gives "a solid >40% improvement" on such cells (SWRA349 p7). No datasheet read states a usable figure, so the planning figure stays an assumption, now bounded |
 | One reply | 25 mA for 3 ms, about 0.02 µAh | **18.09 µC (0.0050 µAh):** a start-up of 2.795 µC, then 0.533 ms at 28.7 mA | Start-up below; 28.7 mA at +14 dBm (PSIP p14), an upper bound for the 12.0 dBm the tag sends; the 0.533 ms airtime from `radio-and-location.md` (INFERRED there) |
 | A wake's start-up | not stated (`radio-and-location.md`: the datasheet's start-up energies) | **2.795 µC:** 165 µs + 200 µs at 2.89 mA, then 0.3 ms at 5.8 mA | 165 µs standby to active and 200 µs crystal start-up (PSIP p23); 2.89 mA (PSIP p13). **ASSUMED:** the 0.3 ms for the radio's set-up and synthesizer calibration, which no datasheet read states. INFERRED: the two times are added, not overlapped |
-| Listening | about 8 µA "so that it answers within about a second" | **13.9 µA** at a listen every 1 s; **7.3 µA** every 2 s; **1.8 µA** every 12 s, each for the beacon and two slots. **Each more slot adds 2.3 µA at a 1 s listen** (Story 2.1.10) | Each listen is the start-up plus a window at 5.8 mA (PSIP p14). The window is the Reader's beacon, 1.0 ms, and 0.4 ms for each Field Generator slot in the tag's listen set (both ASSUMED in `radio-and-location.md` § Zones; two slots give the 1.8 ms it first assumed). It is widened by 2 × 60 ppm of the interval for clock drift: 0.12 ms at 1 s, 1.44 ms at 12 s (INFERRED: the tag's RTC ±50 ppm, PSIP p24, plus the Reader's ±10 ppm, PSIP p23) |
+| Listening | about 8 µA "so that it answers within about a second" | **8.13 µA** at a listen every 1 s; **4.41 µA** every 2 s; **1.32 µA** every 12 s, each for two slots in one run. **Each more slot in the run adds 2.3 µA at a 1 s listen, and each more run 2.8 µA.** A check-in adds one wake for the Reader's beacon, 8.77 µC (Story 2.1.12). Stories 2.1.4 and 2.1.10 charged the beacon at every listen: 13.9, 7.3 and 1.8 µA | Each listen is a start-up for each run of the tag's set in the Field Generators' block, then a window at 5.8 mA (PSIP p14) of 0.4 ms for each slot heard or listened across (ASSUMED in `radio-and-location.md` § Zones; the runs in its § The layout of a listen). Most listens leave out the Reader's beacon, 1.0 ms (ASSUMED there), which the tag hears after each check-in. The window is widened by 2 × 60 ppm of the time since the tag last heard a slot, for clock drift: 0.12 ms at 1 s, 1.44 ms at 12 s, and 0.03 ms for the beacon after a check-in (INFERRED: the tag's RTC ±50 ppm, PSIP p24, plus the Reader's ±10 ppm, PSIP p23) |
 | Standby | 0.9 µA (`radio-and-location.md`) | **1.0 µA**, since a tag keeps its slots on the 32 kHz crystal | PSIP p13 |
 | Tag antenna | −5 dBi, ASSUMED | **Still −5 dBi:** the certified chip antenna's +1.0 dBi, less 6 dB ASSUMED for a small ground plane and the body | +1.0 dBi (SWRA797 Table 3-2). "GND planes that are less than this distance [8.2 cm] have a reduced efficiency and bandwidth" (SWRA797 p9) |
 | Reader antenna | +2 dBi, ASSUMED | **+0.90 dBi**, the W5017 | SWRA797 Table 3-2 |
@@ -415,51 +421,66 @@ review's findings 3 and 4:
   (`radio-and-location.md` § Zones), with the neighbours that section
   assumes for each scenario.
 
+Re-priced again by Story 2.1.12, for the Sprint 3 review's finding 1: a tag
+hears the Reader's beacon after each check-in, not at every listen, and
+wakes once for each run of its set in its scenario's block order
+(`radio-and-location.md` § Zones, The layout of a listen). Each row is the
+costliest zone of its kind in that order. The check-ins column holds each
+reply and the beacon after it.
+
 | Tag | Listening | Check-ins | Sensor | Standby | Total | Years from 150 mAh | From the 117.5 mAh floor |
 |---|---|---|---|---|---|---|---|
-| Conference badge in a room (every 2 s; 2 neighbours), a check-in a minute ([9]) | 74.2 | 2.6 | — | 8.8 | 85.6 | 1.75 | 1.37 |
-| Conference badge in an area of the hall (every 2 s; 8 neighbours) | 135.2 | 2.6 | — | 8.8 | 146.6 | 1.02 | 0.80 |
-| Nursery tag in a room (every 1 s; 1 neighbour), a check-in and a reading every 20 s ([18]) | 122.0 | 7.9 | 8.6 | 8.8 | 147.4 | 1.02 | 0.80 |
-| Nursery tag in a stretch of the corridor (every 1 s; 6 neighbours) | 223.7 | 7.9 | 8.6 | 8.8 | 249.0 | 0.60 | 0.47 |
+| Conference badge in a room (every 2 s; 2 neighbours, three wakes at most), a check-in a minute ([9]) | 73.3 | 3.9 | — | 8.8 | 86.0 | 1.74 | 1.37 |
+| Conference badge in an area of the hall (every 2 s; 8 neighbours, one run of nine) | 109.8 | 3.9 | — | 8.8 | 122.5 | 1.22 | 0.96 |
+| Nursery tag in a room (every 1 s; 1 neighbour, one run of three, one room away from its stretch), a check-in and a reading every 20 s ([18]) | 91.5 | 11.8 | 8.6 | 8.8 | 120.7 | 1.24 | 0.97 |
+| Nursery tag in a stretch of the corridor (every 1 s; 6 neighbours, three runs of seven) | 221.8 | 11.8 | 8.6 | 8.8 | 251.0 | 0.60 | 0.47 |
 
-Each total is summed before rounding. Before Story 2.1.10 the table had one
-row for each tag: the badge at 75.5 mAh, 1.99 years, and the nursery tag at
-140.9 mAh, 1.06 years.
+Each total is summed before rounding. A room's tag beside its stretch in the
+block listens for 71.2 mAh a year: 100.4 mAh in all, 1.49 years. Before
+Story 2.1.12, with the beacon at every listen, the four rows read 85.6,
+146.6, 147.4 and 249.0 mAh (1.75, 1.02, 1.02 and 0.60 years). Before Story
+2.1.10 the table had one row for each tag: the badge at 75.5 mAh, 1.99
+years, and the nursery tag at 140.9 mAh, 1.06 years.
 
 - **The conference listens every 2 s.** Its tightest latency is [8]'s
   15 s pairing alarm. Two hearings 2 s apart, a slot, the Reader and the
   host take about 5 s (INFERRED: 2 × 2 + 0.25 + 0.25 + 0.5). [9]'s year
-  holds on paper in every zone: with margin in a room, and by 2.3 % in an
-  area of the hall, which listens to nine slots. If the measurement falls
-  short, a 3 s listen in the hall is the route: 1.45 years, and [8] in
-  about 7 s (INFERRED: 2 × 3 + 1). Its cost is fewer hearings of an exit's
+  holds on paper in every zone (plan Sprint 3's D2, re-run by Story 2.1.12):
+  with margin in a room, and by 22 % in an area of the hall, which listens
+  to nine slots (2.3 % before Story 2.1.12). At the floor the hall's badge
+  falls short, 0.96 years. If the measurement falls short, a 3 s listen in
+  the hall is the route: 1.71 years, and [8] in about 7 s (INFERRED:
+  2 × 3 + 1). Its cost is fewer hearings of an exit's
   beacon: at least one in the 4 s a walker spends in an exit's field,
   against two at 2 s (`radio-and-location.md` § Zones).
 - **The nursery must listen every 1 s.** [13]'s 5 s takes 3.0 s at a 1 s
   listen (`radio-and-location.md` § Zones). At 2 s it would take 5.0 s, with
-  no margin. **[18] on paper** (plan Sprint 3's D2):
-  - a tag that stays in the rooms holds its year by 1.8 % at the planning
-    capacity, and fails at the floor;
-  - a stretch of the corridor costs 11.6 µA more than a room, while the tag
-    is in it. INFERRED: a tag holds [18] if it spends at most 227 hours a
-    year in the corridor's stretches, about 37 minutes a day. A tag that
-    walks the corridor 2 hours a day lasts 0.96 years: **[18] is unmet on
-    paper for it.**
+  no margin. **[18] on paper** (plan Sprint 3's D2, re-run by Story 2.1.12
+  under Sprint 4's D2):
+  - a tag that stays in the rooms holds its year by 24 % at the planning
+    capacity (1.8 % before Story 2.1.12), even one room away from its
+    stretch in the block, and falls short at the floor, 0.97 years;
+  - a stretch of the corridor costs 14.9 µA more than such a room, while
+    the tag is in it. INFERRED: a tag holds [18] if it spends at most 1,969
+    hours a year in the corridor's stretches, about 5.4 hours a day (227
+    hours, about 37 minutes a day, before Story 2.1.12). A tag that walks
+    the corridor 2 hours a day now lasts 1.14 years, and one that never
+    leaves it 0.60 years: **[18] is unmet on paper for a tag in the corridor
+    more than about 5.4 hours a day.**
 
   The study does not lower the number (`requirements.md` § Ground rules).
   The routes, each with its cost:
   - **measure first.** The LP-XDS110ET reads the tag's current, and the
     ASSUMED 0.3 ms set-up, 1.0 ms beacon and 0.4 ms slot are the inputs to
     measure. It costs a bench session, and its answer can go either way;
-  - **a CR2450,** where the housing allows: 2.54 years for the tag that
-    walks the corridor 2 hours a day, and 1.59 years for one that never
-    leaves it (INFERRED: 396 ÷ 155.8 and 396 ÷ 249.0). Its cost is the
-    larger cell (§ [27]): an adult's fob can take it, and a baby's band may
-    not;
+  - **a CR2450,** where the housing allows: 1.58 years for a tag that never
+    leaves the corridor, and 3.01 years for one that walks it 2 hours a day
+    (INFERRED: 396 ÷ 251.0 and 396 ÷ 131.6). Its cost is the larger cell
+    (§ [27]): an adult's fob can take it, and a baby's band may not;
   - **shorter stretches:** each neighbour fewer saves 2.3 µA while a tag is
     in that stretch, at the cost of more Field Generators;
   - **one conversion per reading** in place of eight averages: it saves
-    6.4 mAh a year, so a room's tag needs 140.9 mAh, 1.06 years. Its cost:
+    6.4 mAh a year, so a room's tag needs 114.3 mAh, 1.31 years. Its cost:
     the ±0.1 °C is specified at eight averages only (TMP117 p6). One
     conversion repeats to about ±3 LSB, ±0.023 °C, against ±1 LSB at eight
     (TMP117 p6, p12). The requirements set no accuracy, so the sitting
@@ -470,10 +491,14 @@ row for each tag: the badge at 75.5 mAh, 1.99 years, and the nursery tag at
     the radio study has not designed.
 
   **Recommended: measure first, then the CR2450 for any tag the measurement
-  leaves short.** INFERRED: the tags that walk the corridor are the
-  adults', whose fobs take the larger cell. A route meets [18] without
+  leaves short.** INFERRED: the tags that spend hours in the corridor are
+  the adults', whose fobs take the larger cell. A route meets [18] without
   lowering it, so nothing goes to Omid ahead of the sitting (plan Sprint 3's
-  D2). The sitting decides the nursery tag's cell.
+  D2). INFERRED as well: a baby's tag spends its stay in the rooms, and its
+  passes along the corridor take far less than 5.4 hours a day. So it holds
+  [18] on its CR2032 on paper, and Sprint 4's D2 clause for a baby's band
+  does not fire: no tag that needs the larger cell is a baby's. The sitting
+  decides the nursery tag's cell.
 - **The +14 dBm boost mode needs 2.1 V** (PSIP p12), and the cell is rated
   to 2.0 V. The tag sends 12.0 dBm. Whether TI's 12 dBm setting uses boost
   mode is not read. If it does, the cell's last tenth of a volt is lost to
@@ -488,25 +513,34 @@ the usable capacity in brackets: 150 for a CR2032, and 396 for a CR2450 at
 the same 64 %). Re-priced by Story 2.1.10: an item at rest listens to its
 bay's slot and its two neighbours' (`radio-and-location.md` § Zones), and
 the cold-chain reading is taken at eight averages (§ Each worn tag's year).
+Re-priced again by Story 2.1.12: the three slots are one run in the
+warehouse's block order, and the tag hears the Reader's beacon after each
+check-in and for the day's inventory, not at every listen
+(`radio-and-location.md` § Zones, The layout of a listen). Those beacons
+and the inventory's reply add 0.44 mAh over five years.
 
 | Listen every | CR2032: needs (150) | CR2032, cold chain | CR2450: needs (396) | CR2450, cold chain |
 |---|---|---|---|---|
-| 1 s | 768.2: 0.20 of five years | 780.9: 0.19 | 787.5: 0.50 | 800.2: 0.49 |
-| 4 s | 257.3: 0.58 | 269.9: 0.56 | 276.5: 1.43 | 289.2: 1.37 |
-| 8 s | 172.1: 0.87 | 184.8: 0.81 | 191.3: 2.07 | 204.0: 1.94 |
-| 12 s | **143.7: 1.04** | **156.4: 0.96** | 162.9: 2.43 | 175.6: 2.25 |
-| 14 s | 135.6: 1.11 | 148.3: 1.01 | 154.8: 2.56 | 167.5: 2.36 |
-| 16 s | 129.5: 1.16 | 142.2: 1.05 | 148.8: 2.66 | 161.4: 2.45 |
+| 1 s | 514.6: 0.29 of five years | 527.3: 0.28 | 533.9: 0.74 | 546.5: 0.72 |
+| 4 s | 194.2: 0.77 | 206.9: 0.73 | 213.4: 1.85 | 226.1: 1.75 |
+| 8 s | 140.8: 1.07 | 153.4: 0.98 | 160.0: 2.47 | 172.7: 2.29 |
+| 12 s | **123.0: 1.22** | **135.6: 1.11** | 142.2: 2.78 | 154.9: 2.55 |
+| 14 s | 117.9: 1.27 | 130.6: 1.15 | 137.1: 2.89 | 149.8: 2.64 |
+| 16 s | 114.1: 1.32 | 126.7: 1.18 | 133.3: 2.97 | 146.0: 2.71 |
 
-Before Story 2.1.10, the 12 s row read 135.2 (1.11) and 142.6 (1.05) on a
-CR2032, and 154.5 (2.56) and 161.8 (2.45) on a CR2450.
+Before Story 2.1.12, the 12 s row read 143.7 (1.04) and 156.4 (0.96) on a
+CR2032, and 162.9 (2.43) and 175.6 (2.25) on a CR2450. Before Story 2.1.10
+it read 135.2 (1.11) and 142.6 (1.05) on a CR2032, and 154.5 (2.56) and
+161.8 (2.45) on a CR2450.
 
 - **A CR2450 alone does not keep five years.** At a 1 s listen it lasts
-  about 2.5 years (0.50 × 5). Its rated 620 mAh is less than the 788 mAh
-  that five years at a listen every second take.
-- **A slower wake alone does, though for the cold-chain tag only close to
-  [26]'s bound.** A CR2032 keeps five years from a listen every 10.8 s, or
-  every 13.5 s for cold-chain tags. The pairing alarm at a dock door
+  about 3.7 years (0.74 × 5): five years at a listen every second take
+  534 mAh, less than its rated 620 mAh but more than the 396 mAh this study
+  plans on.
+- **A slower wake alone does, for the plain and the cold-chain tag alike,
+  well inside [26]'s bound.** A CR2032 keeps five years from a listen every
+  6.8 s, or every 8.6 s for cold-chain tags (10.8 s and 13.5 s before Story
+  2.1.12). The pairing alarm at a dock door
   ([26], 30 s) bounds the interval from above. Two hearings plus 1 s for
   the slot, the Reader and the host take 2T + 1 s, so T may be 14.5 s at
   most. A 12 s listen takes 25 s.
@@ -517,39 +551,39 @@ CR2032, and 154.5 (2.56) and 161.8 (2.45) on a CR2450.
   - A missed check-in ([25], 1 h) and a zone move ([22], 5 min) are far
     looser.
 
-**The choice: the slower wake, a listen every 12 s,** unchanged by Story
-2.1.10. It keeps five years on a CR2032 on paper for the plain item tag:
-- **its cost:** a margin of 4 % at the planning capacity (11 % before Story
-  2.1.10); a zone change shown in up to about 25 s; and [26] met with 5 s
-  to spare;
+**The choice: the slower wake, a listen every 12 s,** unchanged by Stories
+2.1.10 and 2.1.12. It keeps five years on a CR2032 on paper for both item
+tags:
+- **its cost:** a margin of 22 % at the planning capacity for the plain
+  item tag, and 11 % for the cold-chain tag (4 % and 0.96 of five years
+  before Story 2.1.12; 11 % for the plain tag before Story 2.1.10); a zone
+  change shown in up to about 25 s; and [26] met with 5 s to spare;
 - **the CR2450's cost, beside it:** 4.5 mm wider and 1.8 mm thicker, for
   2.64 times the rated capacity (Energizer).
 
-**The cold-chain item tag is unmet on paper on a CR2032 at 12 s:** 0.96 of
-five years (plan Sprint 3's D2). The routes, each with its cost:
+**The cold-chain item tag now holds on a CR2032 at 12 s:** 1.11 of five
+years, where it was 0.96 (plan Sprint 3's D2, re-run by Story 2.1.12 under
+Sprint 4's D2). The routes this section named for it stay open, for margin:
 - **measure first:** the same three ASSUMED inputs as the worn tags'. It
   costs a bench session, and its answer can go either way;
-- **the CR2450:** 2.25 times the need at 12 s, for the larger cell;
-- **a slower listen:** at 14 s it holds by 1 %, with [26] met at 29 s of
-  its 30, so neither margin is worth the name;
-- **one conversion per reading:** 151.0 mAh, still 0.99 of five years at
-  12 s;
+- **the CR2450:** 2.55 times the need at 12 s, for the larger cell;
+- **one conversion per reading:** 130.3 mAh, 1.15 of five years at 12 s,
+  at the cost of the accuracy the sensor is specified at (§ Each worn tag's
+  year);
 - **the fallback** in which the Field Generators listen (§ Each worn tag's
   year).
 
-**Recommended: the CR2450 on every cold-chain item tag.** It meets [27]
-with more than twice the need, at the wake the plain tag keeps.
-
-**Recommended on top of the choice: the CR2450 as well, wherever the item
-takes the larger tag.** With the slower wake it gives about 2.4 times the
-need: 2.43, or 2.25 on cold chain. INFERRED: that margin counts at 100,000
-tags. [27]'s own reasoning is the battery-change workload, and a thin margin
-turns a poor cell or a cold warehouse into early changes.
+**Recommended on top of the choice: the CR2450 wherever the item takes the
+larger tag, the cold-chain tags first.** Their 11 % is the thinner margin.
+With the slower wake it gives 2.78 times the need, or 2.55 on cold chain.
+INFERRED: that margin counts at 100,000 tags. [27]'s own reasoning is the
+battery-change workload, and a thin margin turns a poor cell or a cold
+warehouse into early changes.
 
 Sprint 2's D4 put [27] to Omid only if neither choice kept five years, and
 Sprint 3's D2 only if no route meets the number. The slower wake keeps five
-years for the plain item tag and the CR2450 for the cold-chain one, so no
-ASK-OMID row is filed. The sitting decides the cells.
+years for both item tags on a CR2032 on paper, so no ASK-OMID row is filed
+(Sprint 4's D2). The sitting decides the cells.
 
 ## One core or three (spec §3.7), with the sealTag inside it (D3)
 
@@ -635,8 +669,9 @@ footprint for one with the coil off the core (`software-stack.md`
   `tiered-cost.md` (2026-10-28), where the W5017's price is not read.
 - **Story 2.1.7:** the sitting decides:
   - one core or three;
-  - the item tag's cell: the CR2450 recommended on cold-chain tags, where a
-    CR2032 at 12 s is unmet on paper (§ [27]);
+  - the item tag's cell: a CR2032 at 12 s keeps five years on paper, by
+    22 %, or 11 % on cold chain, and the CR2450 is recommended for margin
+    wherever the item takes it, the cold-chain tags first (§ [27]);
   - the nursery tag's cell, if the measurement falls short (§ Each worn
     tag's year);
   - the sensor's accuracy, if it wants one, and with it the setting: eight
