@@ -1274,7 +1274,17 @@ session, the other box's README left to the check's own prompt there
 (manifest tooth `stub-names-sources` and prose check
 `reference-folder-sources-route`).
 
-#### Story 2.1.14: The Sprint 3 review's fixes to the tiered cost
+#### Story 2.1.14: The Sprint 3 review's fixes to the tiered cost — ✅ DONE (2026-10-29)
+
+**Completed:** 2026-10-29 — tigerfid #60 (branch `story-2.1.14-tier-fixes`, pre-tick head `11f55d14`), with the research log's Story 2.1.14 entry (`docs/reference-research.md` § 4).
+**Outcome:** findings 2–5 and the four nits are corrected in `docs/study/tiered-cost.md`, and in `parts-and-toolchains.md` § The debugger for the LP-XDS110 nit. Every total is summed again, each figure reproducing from the study's rows by a script. No requirement number moved (D1). These figures supersede Story 2.1.6's:
+- **Finding 2, the hot plate's supply:** a 100 W USB-C PD supply, 50.00 (Acroname, representative), in the advanced and pro tiers. The plate's kit holds its 5 A cable and no supply (Adafruit's page, read 2026-10-29).
+- **Finding 3, the debugger's connection:** 29.80 in every tier, each part representative: a 10-pin 1.27 mm cable to the Reader's and the Field Generator's headers, and for the tags' pads a pogo-pin clip, an SWD breakout board and jumper wires. TI's box list holds no cable for the 10-pin connector. The parts study's Debug row names the clip, and Story 2.1.4's "not read" sentence gains the read on the coordinator's GRANT (the sentence lay outside the ledger's pointer line).
+- **Finding 4, JLCPCB's minimum:** two assembled boards a design (its capabilities page, read 2026-10-29). Each assembled route buys a second Reader and Field Generator, 27.08 partly and 33.62 fully assembled.
+- **Finding 5, three tag boards:** 34.88 by hand, 23.25 more than one core (the study said "about the same"). On the assembled routes, at the minimum, they cost 109.67 and 117.12 more (it said 56.50 and 62.65).
+- **The tiers:** 198.08, 1,071.42 and 1,581.42 without the pro iron (were 168.28, 991.62 and 1,501.62). **The totals:** 602.25, 1,449.92 and 1,996.03 (were 538.83, 1,343.04 and 1,916.23), with the route-by-tier matrix summed again.
+- **The nits:** partly assembled boards save 25.66, the fees' 19.12 (it said 19.13) and the minimum's 6.54. "Fetched once" now names LCSC's second reads. The ceramic tweezers and the SAC305 wire read "in place of". The LP-XDS110, 35.09, is in the study, and the parts study's pointer line names what each story dated.
+- **Named in the Lacks, not priced:** the Fluke 117's battery and the plain tinySA's antenna if not in their boxes, and the VNA's cable to a board. Two pages refused and were not needed (Tag-Connect, USBGear), so no D7 message went and no ASK-OMID row is filed. § Both cells reads true, as leg 1 found. The friction log has its leg 2 section.
 
 **Story:** As the decision sitting, I want each tier's total to rest on a
 budget that can build what it lists, so that I choose a tier from totals

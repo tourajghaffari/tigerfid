@@ -177,3 +177,130 @@ block says; no ASK-OMID row; each anchor in § Inputs swept read as quoted.
 - The marker hook's "Widen the marker" line, which met the proposal's seat
   on a marker opened with `--repos tigerfid`, did not fire on any of this
   leg's edits.
+
+## Leg 2 — Story 2.1.14 (2026-10-29)
+
+Run by the hub-rooted Windows session "tigerfid Sprint 4 leg 2" (session
+`7a8f4e54-9463-4a25-b0d2-718feceb0236`), on the Mac coordinator's orders 28.
+**The fresh-session read:** fresh by `/clear`. The background-task path id
+is `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, not the session id: the process
+of "Windows 4", which hosted the Sprint 4 proposal and leg 1 before this
+leg. The orders name the cleared session as leg 1's (`6fb033a2-…`, wrapped
+at #59, its tombstone on the hub's origin). Not elevated: a Windows
+administrator-role read, `False`, at 10:17:13Z.
+
+**Context checkpoint:** seven tasks, as the block estimated. No compaction,
+no forced re-read, no lost-context defect.
+
+**Re-verify, before the first edit** (between the `date -u` reads of
+10:17:13Z and 10:17:35Z): `main` at #59 after #58; `user.email` the
+noreply address; `close-lint` ok and `npm test` 20 of 20; `reference-check`
+"299 rows verified, README the stub"; the close runner over the eleven
+teeth, nine PASS, with `stub-names-sources` and `rebuild-spec-approved`
+FAIL, as the block says; no ASK-OMID row. Each `tiered-cost.md` anchor in
+§ Inputs swept read as quoted (the file is unchanged since `cf580b05`), with
+`grep -c -i 'USB.PD'` and `grep -c -i 'pogo'` each 0. The parts study's
+anchors were read by heading: § The tags' Debug row still at l.170; § The
+debugger's pointer line now at l.307–308 and its "10-pin XDS110 out
+connector" at l.301 and l.315–316, moved by leg 1's edits. § Both cells
+reads true, as leg 1 found: no sentence of it moves.
+
+**The merge word:** Omid, first-hand in this terminal between its `date -u`
+reads of 10:33:39Z and 10:34:03Z: "Yes, push/edit/ready/merge
+(Recommended)". The option read: "Please push, edit, mark ready and merge
+any PRs you open during this session when ready and in the right order."
+
+- **T1 — JLCPCB's minimum moves more than the review inferred.** The review
+  INFERRED that a minimum above one board "adds a module" to the Reader's
+  and the Field Generator's orders. JLCPCB's page gives two boards a design,
+  and an assembled order places the same parts on every board of a design.
+  So each second board carries its other parts too: 27.08 partly assembled
+  and 33.62 fully assembled, against two modules' 21.46. The minimum also
+  moves the three-board estimate on the assembled routes, six tag boards
+  where one core makes three: 109.67 and 117.12, where the study printed
+  56.50 and 62.65. Cost: one table and the three-board bullet. No fix
+  needed.
+- **T2 — The fully assembled joints were never printed.** The study printed
+  the partly assembled joints alone, and its fully assembled fees reproduce
+  only from pin counts it never wrote down. Nit 1 turns on them: at a cell
+  holder of 3 pins the fees differ by 19.12, and at 4 pins by 19.13. The leg
+  states the counts as ASSUMED (the SMA connector 5, the header 10, the
+  holder 3), and every printed fee reproduces from them. Cost: one sentence.
+  Suggested fix, for the reviewer: reproduce the fees from the stated
+  counts.
+- **T3 — The pogo-pin clip does not plug into the debugger's cable.**
+  Adafruit's clip brings its pins out at 0.1", and the debugger's cable ends
+  at 1.27 mm. A breakout board and jumper wires close the gap. The
+  breakout's page does not say its header is 0.1", so that is INFERRED.
+  Tag-Connect's cable, which plugs in directly, refused a plain request.
+  Cost: two more parts priced. No fix needed: the bench story chooses.
+- **T4 — The Done-when reaches past the review's three parts.** "Every tier
+  that lists a tool which needs another part to run" sent the leg to read
+  each powered tool's box. It found two more gaps (the Fluke 117's battery,
+  the VNA's cable to a board) and one unknown (the plain tinySA's antenna).
+  Each is named in the Lacks rather than priced, since a price would count
+  a part that may already be in the box. Cost: twelve page reads, none
+  refused.
+- **T5 — Two pages refused, and neither was needed.** Tag-Connect answered
+  with a bot check and USBGear with HTTP 403. Each had a stand-in whose page
+  answered, so no price is unread and D7's message never went. Sprint 3's
+  78-minute wait (its F12) did not recur.
+- **T6 — An interrupt mid-leg.** After the study's commit, the
+  coordinator's orders 32, on Omid's word, sent a box chore ahead of the
+  leg's PR: bring the Windows box's WSL tool manager (mise) level with the
+  Mac's. Another seat's test battery held the box's lock, so the leg queued
+  for it in the background and drafted this section meanwhile. It held the
+  lock from 10:35:33Z to 10:37:55Z. The auto-mode classifier refused the
+  updater, and Omid ran it by hand. The version did not move: the updater
+  printed "minimum release age: 24h", and the Mac's newer release is younger
+  than that. The chore touched no file in this repo. Cost: about four
+  minutes and one command for Omid.
+- **T7 — A CLAIM outside the ledger.** The ledger gave the leg § The
+  debugger's pointer line alone, but Story 2.1.4's sentence "Whether a cable
+  for that connector comes in the box was not read." would then contradict
+  it a paragraph away. The leg sent the coordinator a CLAIM. The GRANT,
+  which arrived between this terminal's reads of 10:29:52Z and 10:32:22Z,
+  kept the sentence verbatim and appended its dated clause. The item-8 grep
+  dispositions it "amended".
+
+**Guard events:**
+- `cwd-drift` seat: the leg's first `cd` into this repo, in a call of its
+  own after the read of 10:17:13Z, drew "cwd-drift guard (warn, not a
+  block): this command cds into `<F>` — the shell cwd PERSISTS across later
+  tool calls whether this compound succeeds or fails, so a later repo
+  command can silently run in the wrong repository." (the repo's path
+  written here as `<F>`), and most calls after it drew the guard's second
+  arm. Every git command carried `git -C` with the literal path, and none
+  ran in the wrong repository.
+- `swept-surface-guard-warns-on-the-legs-own-planned-edits` seat: every edit
+  to the study, the parts study's two lines and the research log drew "This
+  file was verified by Sprint 4's staleness sweep (swept 2026-10-29). Your
+  edit may decay its pre-verified facts — re-verify or annotate the block
+  (KB sprint-proposal-standard step 2)." Each was the leg's own planned
+  edit, and its anchors were read again before the work (above).
+- The marker hook, class id not known (the face hub Story 247.1.11 files):
+  the leg's first edit, after the read of 10:24:44Z, drew "Widen the marker
+  so concurrent sessions can see this work. Run from <hub>: node
+  scripts/fleet-view.mjs --declare tigerfid" (the hub's path written here as
+  `<hub>`), on a marker opened with `--repos tigerfid`. The command ran and
+  printed "marker declared: … repos: tigerfid" before the read of
+  10:29:52Z.
+- `truncated-read-taken-as-source-extent` seat, caught: the first scan of
+  the tool pages for what comes in each box printed each page's matches
+  through `head -12`, with each page's count beside it. Every box list the
+  study quotes was then read whole, by line range, before it was written.
+- A missing-file read, class id not known: the leg's check of its quotes
+  against the saved pages read the clip page's text file before it was
+  written, and printed "0" beside "No such file or directory". The file was
+  written and the check run again: each quote matched (1, 2, 2). An error
+  line beside a zero is an unread file, not an absent quote.
+- `piped-checker-exit` seat, flagged: T6's first read of the tool manager
+  was piped into a file-writing stage and read `$LASTEXITCODE` after it. The
+  guard drew "piped-checker guard (warn, not a block): this command reads
+  `$LASTEXITCODE` right after the pipeline". The read was run again
+  unpiped, exit 0, before any line used it.
+- The auto-mode classifier, class id not known: T6's updater command was
+  refused, "Permission for this action was denied by the Claude Code auto
+  mode classifier. Reason: [Code from External]." The leg took no other
+  route, as its orders said, and handed Omid the command, which he ran
+  himself.
