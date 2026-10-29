@@ -164,6 +164,16 @@ block says; no ASK-OMID row; each anchor in § Inputs swept read as quoted.
   pre-verified facts — re-verify or annotate the block (KB
   sprint-proposal-standard step 2)." Each was the leg's own planned edit,
   and its anchors were read again before the work (above).
+- `truncated-read-taken-as-source-extent` seat, caught: the PR body's greps
+  were first printed through `cut -c1-140`, each count beside its matches,
+  after the read of 07:44:55Z. No guard drew it. They were run again with
+  every match whole after the read of 07:45:31Z, and the PR body quotes that
+  run.
+- `piped-checker-exit` seat, flagged: the privacy read of the diff's added
+  lines piped `git diff` into three `grep`s and read `$?`. The guard drew
+  "piped-checker guard (warn, not a block): this command reads `$?` right
+  after the pipeline". The last stage was the read meant (exit 1, no match),
+  and the diff's own exit was not the proof.
 - The marker hook's "Widen the marker" line, which met the proposal's seat
   on a marker opened with `--repos tigerfid`, did not fire on any of this
   leg's edits.
