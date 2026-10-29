@@ -1,7 +1,7 @@
 {
   "epic": "2.1",
   "planRef": "docs/project-plan.md",
-  "reviewed": "2026-10-28",
+  "reviewed": "2026-10-29",
   "reviewedFor": [
     "Story 2.1.1 DONE (PR #14, 2026-10-27): docs/study/requirements.md carries the 27 numbers (five measures per scenario plus each scenario's size), each with its reasoning and Omid's answer recorded first-hand beside it — 24 as recommended, [3], [12] and [13] set by him; the requirements-doc tooth now passes, and requirements-put-to-omid and no-medical-claim stay prose checks for the closer. No run, expect or prose changed.",
     "Story 2.1.2 DONE (PR #16, 2026-10-27): docs/study/original-system.md describes the radio link, the anti-collision scheme, the zone mechanism, the alarms and I/O, and each milestone device's hardware, from the records at the tag activewave-2018, each claim cited to its file or marked INFERRED; the original-system-doc tooth now passes, and original-claims-cited and no-medical-claim stay prose checks for the closer. No run, expect or prose changed.",
@@ -16,7 +16,8 @@
     "Sprint 3 proposal (2026-10-28, the proposal PR): two stories are born and join stories. Story 2.1.10 carries the Sprint 2 review's findings 1-5 and five nits into the three studies (Sprint 3's leg 1), with the new tooth fcc-ids-both-named (finding 2: docs/study/radio-and-location.md names ZAT-1312PSIP-3 beside -2; born RED, MEASURED by grep -c 0 on 9cb0127) and the prose check studies-review-fixes. Story 2.1.11 carries Sprint 2's friction F11 and F18 (the reference check's copy-only message for sources/; Sprint 3's leg 3), with the prose check reference-check-sources-route. tiers-dated (Story 2.1.6, Sprint 3's leg 2) is widened by the block's D5-D7: each price names its seller's page and read date, an unread price is marked not read and its tier's total names what it lacks, an unnamed part is priced as a representative part marked so, and both cells are priced where the sitting chooses; nothing else in it changed. Story 2.1.6 gains one dated Context sentence carrying D5-D8, and Story 2.1.7's Context names Story 2.1.10 for the fix-up it awaited. No other run, expect or prose changed; tiered-cost-doc and rebuild-spec-approved stay RED.",
     "Story 2.1.10 DONE (PR #45, 2026-10-28): the Sprint 2 review's findings 1-5 and five nits are corrected in the three studies. Finding 4's mechanism is the neighbours named (radio-and-location.md, How a tag hears a Field Generator it has not heard before: the Reader names a placed tag's listen set, its zone's slot and its neighbours'; a tag with no set listens to every slot), weighed against the whole block and a periodic wider listen. Its listening cost and finding 3's eight sensor averages are carried into parts-and-toolchains.md's battery figures: [18] holds by 1.8 percent for a room's tag and is unmet on paper for a tag in the corridor beyond about 37 minutes a day (measure first, then a CR2450, recommended); [9] holds; [27]'s plain item tag keeps five years at 12 s on a CR2032 and the cold-chain tag does not (the CR2450 recommended). No ASK-OMID row: each has a route. requirements.md gains three dated pointer lines; no requirement number moved. software-stack.md carries Omid's HF ruling (an unfitted footprint, the coil off the core). radio-and-location.md names ZAT-1312PSIP-3 beside -2, so fcc-ids-both-named flips FAIL to PASS; the four study teeth stay PASS. CMake and GNU make gain their platform and licence cells, SysConfig's and TI Arm Clang's licences are marked not read, and the wire frame's 921,600 baud is ASSUMED beside the module's 3 MBaud. Story 2.1.7's HF sentence is refreshed. studies-review-fixes stays a prose check for the closer, with the PR body's greps as its evidence. No run, expect or prose changed.",
     "Story 2.1.6 DONE (PR #48, 2026-10-28): docs/study/tiered-cost.md prices milestone 1 per device (the Reader, the Field Generator and three tags on one core), per build route (hand-solder on OSH Park's boards; partly and fully assembled at JLCPCB's Economic fees) and per tool tier (starter, advanced, pro), with D9's bench (a tinySA receiver and the development board) and a total per tier: 538.83, 1,343.04 and 1,916.23 US dollars, shipping and tax left out. Every price was read on 2026-10-28 from a seller's public page and is dated. Five prices are written not read, on Omid's first-hand word ('Write all as not read (Recommended)'): the W5017 whips, JLCPCB's boards, the module's sourcing at JLCPCB, the pro tier's iron and the tag enclosures. Each total names what it lacks and none counts them as zero; representative parts are marked; both cells are priced. tiered-cost-doc flips FAIL to PASS; tiers-dated and no-medical-claim stay prose checks for the closer. No pin is added (299 rows). No run, expect or prose changed.",
-    "Story 2.1.11 DONE (PR #50, 2026-10-28): scripts/reference-check.mjs names the fetch route for the study's sources. A missing sources/ file's line names its row's URL, that the file counts only once its sha256 matches the pin, and the copy as the alternative; an absent sources/ folder's line names the same route and lists each file with its URL. Every other folder keeps its copy-only line, as does a sources/ row with no URL, and the tool still never fetches a file row (Sprint 3's D11). Three tests in scripts/reference-check.test.mjs pin the cases: the first two failed against main's script, and the third, which pins the unchanged lines, passed there by design; npm test reads 20 of 20. docs/reference-repos.md's Verifying a transfer names the route. reference-check-sources-route stays a prose check for the closer, with the PR body's red run as its evidence. No pin is added (299 rows). No run, expect or prose changed."
+    "Story 2.1.11 DONE (PR #50, 2026-10-28): scripts/reference-check.mjs names the fetch route for the study's sources. A missing sources/ file's line names its row's URL, that the file counts only once its sha256 matches the pin, and the copy as the alternative; an absent sources/ folder's line names the same route and lists each file with its URL. Every other folder keeps its copy-only line, as does a sources/ row with no URL, and the tool still never fetches a file row (Sprint 3's D11). Three tests in scripts/reference-check.test.mjs pin the cases: the first two failed against main's script, and the third, which pins the unchanged lines, passed there by design; npm test reads 20 of 20. docs/reference-repos.md's Verifying a transfer names the route. reference-check-sources-route stays a prose check for the closer, with the PR body's red run as its evidence. No pin is added (299 rows). No run, expect or prose changed.",
+    "Sprint 3 review (2026-10-29, the review PR): the Sprint 3 block is cut to the archive's Executed sprints with its Reviewed record (each leg meets its Done-when; findings filed). Two stories are born and join stories. Story 2.1.12 carries the review's findings 1-6 and five nits into the studies, ahead of Story 2.1.7: the listening window that one block of slots after one beacon cannot give every tag; the hot plate's USB-PD supply, the debugger's cable to the boards and the tags' fixture, none of them in a tier or its Lacks; JLCPCB's minimum assembled quantity missing from the Lacks; the three-board estimate on the hand-solder route; GNU make's platforms. Its prose check is sprint3-review-fixes. Story 2.1.13 carries friction F17, F20 and F6: the reference folder's README stub names sources/, a drifted sources/ file's line names the newer revision, and the reading rules name pdftotext on Windows. Its new tooth stub-names-sources is born RED, MEASURED through the close runner on this tree (exit 1), and its decoded run string was run through Git Bash over three fixture stubs: a fixed stub exit 0, sources/ named with the old sentence kept exit 1, the real stub exit 1. Its prose check is reference-folder-sources-route. Epic 2.1's Ordering line names both stories. No other run, expect or prose changed; rebuild-spec-approved stays RED."
   ],
   "stories": [
     "2.1.1",
@@ -28,7 +29,9 @@
     "2.1.7",
     "2.1.9",
     "2.1.10",
-    "2.1.11"
+    "2.1.11",
+    "2.1.12",
+    "2.1.13"
   ],
   "checks": [
     {
@@ -103,6 +106,14 @@
       "note": "Story 2.1.10 (the Sprint 2 review's finding 2): the radio study names both FCC IDs in TI's documents, ZAT-1312PSIP-2 and -3 (SWRA797 p14, p17). Born RED on 2026-10-28: the study names -2 alone."
     },
     {
+      "id": "stub-names-sources",
+      "run": "node -e \"const t=require('fs').readFileSync('docs/reference-readme-stub.md','utf8');process.exit(t.includes('sources/')&&!/other two[^a-z]+folders/.test(t)?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 2.1.13 (Sprint 3's friction F17): the reference folder's README stub names sources/ and no longer says the other two folders travel by copy only. The phrase is matched across a line break, since the stub wraps it. Born RED on 2026-10-29: the stub names three folders, not sources/."
+    },
+    {
       "id": "rebuild-spec-approved",
       "run": "node -e \"const f=require('fs');const p=require('path');const d=p.join('docs','superpowers','specs');const hit=(f.existsSync(d)?f.readdirSync(d):[]).filter((n)=>n.endsWith('-rebuild-design.md')).some((n)=>/[*][*]Approved by:[*][*] Omid[^\\n]*\\d{4}-\\d{2}-\\d{2}/.test(f.readFileSync(p.join(d,n),'utf8')));process.exit(hit?0:1)\"",
       "expect": {
@@ -167,6 +178,14 @@
     {
       "id": "reference-check-sources-route",
       "prose": "Story 2.1.11 (Sprint 2's friction F11 and F18): confirm scripts/reference-check.mjs names the fetch route (the row's URL, the file counting only once its sha256 matches the pin) with the copy route as the alternative, for a missing sources/ file and for an absent sources/ folder; that every other file row keeps its copy-only line; that the tool still never fetches; and that scripts/reference-check.test.mjs pins each case, the leg's PR body quoting the tests' red run against the script before the fix."
+    },
+    {
+      "id": "sprint3-review-fixes",
+      "prose": "Story 2.1.12 (the Sprint 3 review's findings 1-6 and its five nits): confirm, item by item against the review record's list, that each is corrected in its document or its sentence shown correct with its source; that docs/study/radio-and-location.md states how a tag hears its listen set when the set's slots do not follow the Reader's beacon, and that the cost is carried into every battery figure it moves in docs/study/parts-and-toolchains.md, each margin reproducing from the study's own inputs and Sprint 3's D2 re-run for each that fails on paper; that docs/study/tiered-cost.md prices, or names in its tier's Lacks, every part a listed tool needs to run (the hot plate's USB-PD supply, the debugger's cable to the boards, the tags' adapter or fixture) and JLCPCB's minimum assembled quantity; that every changed figure is sourced, MEASURED or INFERRED with its arithmetic; that no requirement number moved; and that the leg's PR body quotes each finding's grep with each hit's disposition."
+    },
+    {
+      "id": "reference-folder-sources-route",
+      "prose": "Story 2.1.13 (Sprint 3's friction F17, F20 and F6): confirm docs/reference-readme-stub.md names sources/ and its route (fetched from its rows' URLs, counting only once its sha256 matches the pin, or copied); that scripts/reference-check.mjs's DRIFT line for a sources/ file names the newer revision behind its URL and the copy route, every other folder's DRIFT line unchanged; that scripts/reference-check.test.mjs pins both, the leg's PR body quoting the red run; that the tool still never fetches; that docs/reference-repos.md's reading rules name pdftotext -layout as the Windows route to a PDF's pages; and that --write-stub ran on the story's machine, the other box's README left to the check's own prompt."
     }
   ]
 }
