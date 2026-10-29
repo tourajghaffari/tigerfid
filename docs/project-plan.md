@@ -1231,7 +1231,15 @@ conference's block of Field Generator slots is computed beside the ward's;
 and the PR body quotes each finding's grep with each hit's disposition
 (manifest prose check `sprint3-review-fixes`).
 
-#### Story 2.1.13: The reference folder gives the `sources/` route
+#### Story 2.1.13: The reference folder gives the `sources/` route — ✅ DONE (2026-10-29)
+
+**Completed:** 2026-10-29 — tigerfid #62 (branch `story-2.1.13-sources-route`, pre-tick head `325aec17`).
+**Outcome:** the reference folder's README stub, the check's drift line and the reading rules give the `sources/` route. The tool still never fetches a file row (Sprint 3's D11).
+- **The stub** (`docs/reference-readme-stub.md`) lists `sources/` under "What is here" and says how each folder travels: `activewave-2018/` by `--recreate`; `activewaveinc/` and `chorus/` by copy only; each `sources/` file fetched from its row's URL, counting only once its sha256 matches the pin, or copied. "The other two folders" is gone, and `stub-names-sources` flips FAIL → PASS.
+- **The drift line:** a `sources/` file with a URL whose bytes are not the pin reads "its sha256 is not the pin. If it was fetched from its row's URL, <the URL>, that URL now serves a newer revision: copy the pinned bytes instead, never move them, from a machine whose folder verifies". Every other folder's line, and a `sources/` row with no URL, is unchanged.
+- **Two tests** in `scripts/reference-check.test.mjs` pin it. The drift test failed against `main`'s script; the pin (the other lines unchanged) passed there by design (Sprint 3's F18). `npm test` reads 22 of 22.
+- **Reading rule 8** in `docs/reference-repos.md` names `pdftotext -layout -enc UTF-8 -f <first> -l <last> <file> -` as the Windows route to a PDF's pages. Git for Windows 2.56.0 ships `pdftotext` 4.06 and no `pdftoppm` (MEASURED 2026-10-29). § `sources/` and § Verifying a transfer name the new drift line.
+- **`--write-stub` ran on this leg's machine:** the check read `README stale-stub` and printed "next: node scripts/reference-check.mjs --write-stub"; after the command, "299 rows verified, README the stub". The other machine's README reads `stale-stub` until that command runs there (D13). The friction log has its leg 3 section.
 
 **Story:** As a builder setting up the reference folder on a new machine, I
 want the folder's README, the check's drift line and the reading rules to

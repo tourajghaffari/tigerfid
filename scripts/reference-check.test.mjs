@@ -168,6 +168,33 @@ test('a missing file elsewhere, or a sources/ row with no URL, keeps the copy-on
   assert.equal(lineOf(gone.out, 'MISSING folder media/'), 'MISSING folder media/ — 1 files, copy-only: copy the folder whole, never move it, from a machine whose folder verifies');
 });
 
+// Story 2.1.13: a vendor revises a document behind the same URL, so a
+// sources/ file fetched from its row's URL can come back as a newer revision.
+// Its drift line says so and names the copy route.
+test('a drifted sources/ file names the newer revision behind its row\'s URL and the copy route', async () => {
+  const f = fixture();
+  withSource(f);
+  writeFileSync(join(f.folder, 'sources', 'datasheet.pdf'), 'the revised bytes\n');
+  const r = await run(['--folder', f.folder], f.repo);
+  assert.equal(r.code, 1);
+  const line = lineOf(r.out, 'DRIFT   file   sources/datasheet.pdf');
+  assert.ok(line, r.out);
+  assert.match(line, /its sha256 is not the pin/);
+  assert.match(line, /https:\/\/example\.invalid\/datasheet\.pdf, that URL now serves a newer revision/);
+  assert.match(line, /copy the pinned bytes instead, never move them, from a machine whose folder verifies/);
+});
+
+test('a drifted file elsewhere, or a sources/ row with no URL, keeps its drift line', async () => {
+  const f = fixture();
+  withSource(f, 'sources/unlinked.pdf', '-');
+  writeFileSync(join(f.folder, 'media', 'page.html'), '<p>changed</p>\n');
+  writeFileSync(join(f.folder, 'sources', 'unlinked.pdf'), 'changed\n');
+  const r = await run(['--folder', f.folder], f.repo);
+  assert.equal(r.code, 1);
+  assert.equal(lineOf(r.out, 'media/page.html'), 'DRIFT   file   media/page.html — its sha256 is not the pin');
+  assert.equal(lineOf(r.out, 'sources/unlinked.pdf'), 'DRIFT   file   sources/unlinked.pdf — its sha256 is not the pin');
+});
+
 test('the usage and an absent folder exit 2', async () => {
   const { repo, folder } = fixture();
   assert.equal((await run(['--nope'], repo)).code, 2);
