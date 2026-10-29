@@ -345,8 +345,12 @@ session when ready and in the right order."
   own `-f` and `-l` print only the pages asked for: on pages 23 and 24 of
   the module's datasheet, the two footers read "Submit Document Feedback
   23" and "24 Submit Document Feedback", each page ending in one form feed.
-  The same read printed ± and © as replacement characters until `-enc
-  UTF-8` was added. Rule 8 names both flags. Cost: two reads. No fix needed.
+  On the terminal the same read showed ± and µ as replacement characters.
+  The file itself held Latin-1 bytes (0xB1 and 0xB5 on 19 lines, no
+  replacement character), `pdftotext`'s default, and `-enc UTF-8` gave ±, µ,
+  © and ° whole. Rule 8's first wording, in `325aec17`, said the tool
+  printed replacement characters; the byte count corrected it before the
+  merge. Rule 8 names both flags. Cost: three reads. No fix needed.
 - **R2 — The folder README changes before `main` does.** `--write-stub`
   ran on the leg's branch at 22:55:39Z. From then until #62 merges, a check
   run from `main` on this machine reads `README stale-stub`, since the
@@ -395,3 +399,8 @@ session when ready and in the right order."
 - The marker hook's "Widen the marker" line did not fire: the leg ran
   `fleet-view.mjs --declare tigerfid` at its open, before any edit, as its
   orders said.
+- `inferred-cause-recorded-as-measured` seat, caught (R1): the terminal's
+  replacement characters were first written into rule 8 as the tool's
+  output. No guard drew it. The leg's byte count, after the read of
+  22:59:08Z, found Latin-1 bytes in the file, and the rule was corrected in
+  this PR.

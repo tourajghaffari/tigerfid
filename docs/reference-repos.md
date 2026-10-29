@@ -81,8 +81,9 @@ Each source class has its own rule:
    images needs `pdftoppm`, which Git for Windows does not ship. It does
    ship `pdftotext` (4.06, the xpdf build), which prints a page range as
    text: `pdftotext -layout -enc UTF-8 -f <first> -l <last> <file> -`. Each
-   page ends in a form feed. Without `-enc UTF-8`, signs such as ± and µ
-   print as replacement characters. Measured 2026-10-29 with Git for
+   page ends in a form feed. Without `-enc UTF-8` it writes Latin-1, so a
+   UTF-8 reader shows signs such as ± and µ as replacement characters.
+   Measured 2026-10-29 with Git for
    Windows 2.56.0, on pages 23 and 24 of `sources/ti-cc1312psip-swrs293.pdf`
    (plan Story 2.1.13).
 
