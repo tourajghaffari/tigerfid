@@ -313,3 +313,85 @@ any PRs you open during this session when ready and in the right order."
   mode classifier. Reason: [Code from External]." The leg took no other
   route, as its orders said, and handed Omid the command, which he ran
   himself.
+
+## Leg 3 — Story 2.1.13 (2026-10-29)
+
+Run by the hub-rooted Windows session "Windows 3" (session
+`70fda9ed-a4c9-427f-ab17-caed0a9261a1`), on the Mac coordinator's orders 7.
+**The fresh-session read:** fresh by launch. The background-task path id
+equals the session id, and no `/clear` record sits atop the context, so no
+earlier process was cleared. Not elevated: a Windows administrator-role
+read, `False`, at 22:57:17Z.
+
+**Context checkpoint:** six tasks, the block's five and the EXECUTED stamp.
+No compaction, no forced re-read, no lost-context defect.
+
+**Re-verify, before the first edit** (between the `date -u` reads of
+22:51:57Z and 22:52:13Z, the close runner after the second): `main` at #61
+after #60; `user.email` the noreply address; `close-lint` ok and `npm test`
+20 of 20; `reference-check` "299 rows verified, README the stub"; the close
+runner over the eleven teeth, nine PASS, with `stub-names-sources` and
+`rebuild-spec-approved` FAIL, as the block says; no ASK-OMID row. The
+story's anchors read as quoted: the stub's "the other two" wrapping to
+"folders" at its end, the script's `DRIFT   file` line, and the reading
+rules with no `pdftotext`.
+
+**The merge word:** Omid, first-hand in this terminal between its `date -u`
+reads of 22:50:12Z and 22:51:23Z: "Please merge PRs you open during this
+session when ready and in the right order."
+
+- **R1 — The page flags spare the form-feed count.** Sprint 3's F6 found a
+  page by counting form feeds in the whole document's text. `pdftotext`'s
+  own `-f` and `-l` print only the pages asked for: on pages 23 and 24 of
+  the module's datasheet, the two footers read "Submit Document Feedback
+  23" and "24 Submit Document Feedback", each page ending in one form feed.
+  The same read printed ± and © as replacement characters until `-enc
+  UTF-8` was added. Rule 8 names both flags. Cost: two reads. No fix needed.
+- **R2 — The folder README changes before `main` does.** `--write-stub`
+  ran on the leg's branch at 22:55:39Z. From then until #62 merges, a check
+  run from `main` on this machine reads `README stale-stub`, since the
+  folder now holds the branch's stub. At the leg's open, fleet-view's
+  markers named no other seat in this repo. Cost: none. Suggested fix: none, since D13 puts the
+  command in the leg; a later story that changes the stub can run it after
+  its merge instead.
+- **R3 — The grant and the ledger name different sections.** The
+  coordinator's grant named `docs/reference-repos.md` with § `sources/`,
+  "what the leg line and the story name". The story names the reading
+  rules, and the block's ledger names them with § Verifying a transfer and
+  § `sources/`. The leg edited those three and nothing else in the file, so
+  it sent no CLAIM. Cost: one read of the ledger. Suggested fix: a grant
+  quotes the ledger's line for the file.
+- **R4 — The EXECUTED stamp rides its own PR.** The stamp's record names
+  each leg's merge commit, and this leg's PR cannot name its own merge (the
+  `scope` job's `check-tick-merge-claim.mjs`). The stamp therefore goes in
+  a docs-only PR after #62 merges, as Sprint 3's did (#51). Cost: one more
+  PR. No fix needed.
+
+**Guard events:**
+- `cwd-drift` seat: the leg's first `cd` into this repo, in the fetch's own
+  call after the read of 22:50:12Z, drew "cwd-drift guard (warn, not a
+  block): this command cds into `<F>` — the shell cwd PERSISTS across later
+  tool calls whether this compound succeeds or fails, so a later repo
+  command can silently run in the wrong repository." (the repo's path
+  written here as `<F>`), and most calls after it drew the guard's second
+  arm. Every git command carried `git -C` with the literal path, or ran
+  after a `cd` into this repo in the same call; none ran in the wrong
+  repository.
+- `swept-surface-guard-warns-on-the-legs-own-planned-edits` seat: every edit
+  to the test file, the script, the stub, `docs/reference-repos.md`, the
+  plan, the manifest and this log drew "This file was verified by Sprint 4's
+  staleness sweep (swept 2026-10-29). Your edit may decay its pre-verified
+  facts — re-verify or annotate the block (KB sprint-proposal-standard step
+  2)." Each was the leg's own planned edit, and its anchors were read again
+  before the work (above).
+- `piped-checker-exit` seat, flagged: the branch's first push was piped into
+  `tail -3`. The guard drew "piped-checker guard (warn, not a block): this
+  command pipes `git push` — a state-changing git command — into another
+  command, so a refusal it prints (`! [rejected]`, `non-fast-forward`, a
+  remote hook's refusal) is hidden behind the filter, and the compound's
+  exit is the LAST stage's whether or not `$?` is read after it." The call
+  read the push's own exit, `${PIPESTATUS[0]}` (0), and `git ls-remote
+  --heads origin` then read the branch at `325aec17` before the PR opened.
+- The marker hook's "Widen the marker" line did not fire: the leg ran
+  `fleet-view.mjs --declare tigerfid` at its open, before any edit, as its
+  orders said.
