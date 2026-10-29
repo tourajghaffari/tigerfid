@@ -34,14 +34,16 @@ This document recommends; the decision sitting (Story 2.1.7) decides.
 
 ## What was read, and what could not be
 
-Every price was read on **2026-10-28**, between this leg's clock reads of
-14:30:15Z and 14:42:01Z. Each page was fetched once, by a plain request
-with a generic user agent. Each price below is the one the page printed for
-the quantity this build buys.
+Every price was read on **2026-10-28**, between Story 2.1.6's clock reads of
+14:30:15Z and 14:42:01Z, except those Story 2.1.14 added on **2026-10-29**
+(§ Read on 2026-10-29). Each page was fetched by a plain request with a
+generic user agent: once, except LCSC's, which were read a second time 15 s
+apart (below). Each price below is the one the page printed for the
+quantity this build buys.
 
 **Five prices are not read, by Omid's word.** Five pages refused a plain
 request, or price only through a script that runs in a browser. They were
-put to Omid first-hand in this leg's terminal, in one message, between its
+put to Omid first-hand in Story 2.1.6's terminal, in one message, between its
 clock reads of 14:42:21Z and 15:59:59Z (plan Sprint 3's D7). He answered
 "Write all as not read (Recommended)". The five:
 
@@ -66,6 +68,38 @@ search lists none. SparkFun's search page carried no results in the text
 read. The scanner is the software study's optional bench item, so it sits
 outside every total (§ The bench).
 
+### Read on 2026-10-29
+
+Story 2.1.14 read what three tools need to run and JLCPCB's minimum, the
+Sprint 3 review's findings 2–4. It read these pages on **2026-10-29**,
+between its clock reads of 10:18:16Z and 10:24:44Z, each by a plain
+request:
+- the hot plate's page (ADA-5903), for its kit list and its supply note;
+- a 100 W USB-C supply (ACRONAME-R470), and the parts that connect the
+  debugger to the boards (ADA-1675, ADA-5434, ADA-2743, ADA-266);
+- TI's pages for both debuggers (TI-XDS110ET, TI-XDS110), for their box
+  lists and prices;
+- JLCPCB's assembly capabilities (JLC-CAP), for its minimum, and its FAQ
+  again (JLC-FAQ), which names none;
+- the pages of the other tools that run on power or connect to a board,
+  for what comes in each box (§ What each tool needs to run): the Pinecil
+  and its supply, both stations, the magnifier, the microscope, the three
+  meters, the VNA and both receivers. The hand tools and the solder need
+  nothing to run, and were not read again. The development board plugs
+  into the LP-XDS110ET (`parts-and-toolchains.md` § The debugger), which
+  every tier carries.
+
+Every price that story read again matched the one printed here, so no
+row's price changed. The prices it added are dated 2026-10-29 in § Sources.
+
+**Refused, but not needed:**
+- Tag-Connect's page for its TC2050-IDC-NL cable, a pogo-pin cable for a
+  board's debug pads: a bot check ("Please wait while your request is being
+  verified..."). Adafruit's pogo-pin clip stands in;
+- USBGear's 100 W supply (HTTP 403). Acroname's stands in.
+
+No price this story needs is unread.
+
 ## How the build is counted
 
 - **The quantities are milestone 1's:** one Reader, one Field Generator and
@@ -74,11 +108,18 @@ outside every total (§ The bench).
   is shared across the devices (§ Shared buys).
 - **One core in three enclosures,** as `parts-and-toolchains.md` recommends:
   the three tags share one board design. The sitting decides between one
-  core and three boards. INFERRED for three boards: the hand-solder route's
-  boards cost about the same, since OSH Park prices by area. An assembled
-  route pays two more designs' fees: about 56.50 partly assembled and 62.65
-  fully assembled (2 × 28.25 and 2 × 31.32, a one-board tag design's fees
-  by § The build routes' arithmetic).
+  core and three boards. INFERRED for three boards, each at the core's
+  ASSUMED size below:
+  - **hand-solder:** OSH Park's price "includes three copies of your
+    design" (OSH-4L), so each design is paid for. Three designs cost 34.88
+    (3 × 11.63), 23.25 more than one core;
+  - **an assembled route** pays two more designs' fees. JLCPCB's minimum of
+    two boards a design (§ The build routes) then makes six tag boards where
+    one core makes three. Partly assembled, that is 109.67 more: 56.62 in
+    fees (three designs at two boards, against one at three) and 53.05 for
+    the three more boards' modules, chip antennas and sensors. Fully
+    assembled, it is 117.12 more: 62.77 in fees and 54.35 in parts, the
+    cell holders included. The shared packs still cover the capacitors.
 - **ASSUMED board sizes**, since no board is drawn (plan D3): the tag core
   30 × 25 mm, the Reader 60 × 40 mm and the Field Generator 50 × 40 mm. All
   three have four layers, the route `parts-and-toolchains.md` § The tags
@@ -241,12 +282,19 @@ assembly, one side):
   basic. The fees below are the upper bound.
 - **ASSUMED: the joints,** from the parts' pin counts: the module's 48
   (TI-PSIP), and 2 per passive. They come to 145 on the Reader, 93 on the
-  Field Generator and 74 on each tag core, partly assembled. At 0.0016 a
-  joint they cost cents.
-- Economic assembly takes up to 30 boards an order, unless the boards are
-  panelled (JLC-FAQ, item 10). The build assembles what milestone 1 uses:
-  one Reader, one Field Generator, three tag cores. JLCPCB's minimum
-  assembled quantity is not read.
+  Field Generator and 74 on each tag core, partly assembled. Fully
+  assembled adds what the builder would solder, ASSUMED at the SMA
+  connector's 5 pins, the debug header's 10 and the cell holder's 3: 160,
+  108 and 77. At 0.0016 a joint they cost cents.
+- **JLCPCB assembles two boards of a design at the least.** Its
+  capabilities page gives the order volume as "2 - 50 pcs" for Economic
+  assembly and "2 - 80000 pcs" for Standard (JLC-CAP). Its FAQ caps an
+  Economic order at 30 boards unless they are panelled (JLC-FAQ, item 10).
+  The tag core, three boards, meets the minimum. INFERRED: the Reader and
+  the Field Generator, one board each, are assembled two at a time, with
+  the same parts on both boards of a design (§ The tags). So each assembled
+  route buys a second Reader and a second Field Generator (§ The minimum's
+  second boards). They are spares, and need no antenna, enclosure or cable.
 
 | Fees per design | Partly assembled | Fully assembled |
 |---|---|---|
@@ -255,13 +303,25 @@ assembly, one side):
 | The tag core, three boards | 28.49 (6 types) | 31.57 (7 types) |
 | **The fees** | **85.13** | **104.25** |
 
+**The minimum's second boards** (INFERRED, from the rows above):
+
+| The second boards | Partly assembled | Fully assembled |
+|---|---|---|
+| The second Reader | 15.59 (the module, the regulator, the USB bridge and the relay driver) | 19.97 (the same, the SMA connector and two relays) |
+| The second Field Generator | 11.11 (the module and the regulator) | 13.09 (the same and the SMA connector) |
+| Their joints | 0.38 (145 + 93 at 0.0016) | 0.56 (160 + 108 at 0.0016, and the relays' 8 by hand at 0.0164) |
+| **The minimum's second boards** | **27.08** | **33.62** |
+
+The shared packs cover the rest: four of the five USB-C receptacles, four
+of the five headers, and about 88 of the 200 passives.
+
 **The routes:**
 
-| Route | The parts | The boards | Assembly | The route | Lacks |
-|---|---|---|---|---|---|
-| Hand-solder | 117.64 | 79.83 (OSH Park: the tag core 11.63, the Reader 37.20, the Field Generator 31.00; 1.16, 3.72 and 3.10 square inches) | — | **197.47** | two W5017 whips; three tag enclosures |
-| Partly assembled | 129.16 | **not read** (JLCPCB) | 85.13 | **214.28** | the same, the boards, and the module's sourcing at JLCPCB |
-| Fully assembled | 129.16 | **not read** (JLCPCB) | 104.25 | **233.41** | the same as partly assembled |
+| Route | The parts | The boards | Assembly | The minimum's second boards | The route | Lacks |
+|---|---|---|---|---|---|---|
+| Hand-solder | 117.64 | 79.83 (OSH Park: the tag core 11.63, the Reader 37.20, the Field Generator 31.00; 1.16, 3.72 and 3.10 square inches) | — | — | **197.47** | two W5017 whips; three tag enclosures |
+| Partly assembled | 129.16 | **not read** (JLCPCB) | 85.13 | 27.08 | **241.36** | the same, the boards, and the module's sourcing at JLCPCB |
+| Fully assembled | 129.16 | **not read** (JLCPCB) | 104.25 | 33.62 | **267.03** | the same as partly assembled |
 
 The module's sourcing: if JLCPCB does not stock the CC1312PSIP, the module
 is bought from TI (priced above) and sent to the service. That service's
@@ -270,21 +330,25 @@ fee, and the shipping to it, are not read.
 ## The tool tiers
 
 Three ways to the same jobs. Each tier holds what its route needs (§ The
-totals), and every tier carries the LP-XDS110ET. `parts-and-toolchains.md`
-recommends one per builder, since it measures the tag's current. The
-wall-powered tools are a US seller's: the ST-2090D is named a 110 V model,
-and the ST-862D's voltage is not read.
+totals), with the parts its tools need to run (§ What each tool needs to
+run). Every tier carries the LP-XDS110ET, its cable to the boards and the
+tags' clip, and the advanced and pro tiers carry the hot plate's supply.
+`parts-and-toolchains.md` recommends one LP-XDS110ET per builder, since it
+measures the tag's current. The wall-powered tools are a US seller's: the
+ST-2090D is named a 110 V model, and the ST-862D's voltage is not read.
 
 | Job | Starter | Advanced | Pro |
 |---|---|---|---|
 | Soldering iron | Pinecil V2, 25.99, and a USB-C supply for it, 16.50 | ATTEN ST-2090D 80 W station, 59.95 | Hakko FX-971 station, **not read** |
 | Placing the module | — (the boards come assembled) | Miniware MHP50-B5 hot plate, 99.95; low-temperature paste, 9.95; tack flux, 15.95 | the same hot plate, paste and flux; ATTEN ST-862D hot air station, 279.95 |
-| Solder and its helpers | lead-free solder wire 0.5 mm, 12.50; flux pen, 7.95; solder wick, 2.95; flush cutters, 7.25; ESD tweezers, 3.95 | the same, with ceramic tweezers, 8.95 | the same, with SAC305 lead-free wire, 27.50, and the ceramic tweezers |
+| Powering the hot plate | — | a 100 W USB-C PD supply, 50.00 | the same supply |
+| Solder and its helpers | lead-free solder wire 0.5 mm, 12.50; flux pen, 7.95; solder wick, 2.95; flush cutters, 7.25; ESD tweezers, 3.95 | the same, with ceramic tweezers, 8.95, in place of the ESD pair | the same, with SAC305 lead-free wire, 27.50, in place of the lead-free wire, and the ceramic tweezers in place of the ESD pair |
 | Seeing the joints | a magnifier on helping hands, 6.95 | AmScope SE400-Z stereo microscope, 291.99 | the same microscope |
 | Measuring | a pocket autoranging meter, 24.95 | Fluke 117, 304.99 | Fluke 87V, 579.99 |
 | The antenna match | — (the range test decides, `parts-and-toolchains.md` § The tags) | NanoVNA-H4, 10 kHz to 1.5 GHz, 109.95 | the same VNA |
 | Programming and current | LP-XDS110ET, 59.29 | the same | the same |
-| **The tier** | **168.28** | **991.62** | **1,501.62, without its iron** |
+| Connecting the debugger to the boards | a 10-pin 1.27 mm cable, 2.95, to the Reader's and the Field Generator's headers; for the tags, a pogo-pin clip, 19.95, an SWD breakout board, 2.95, and jumper wires, 3.95 | the same | the same |
+| **The tier** | **198.08** | **1,071.42** | **1,581.42, without its iron** |
 
 Each price and its page (§ Sources):
 - **Starter:** Pinecil V2 at its "Community price" (PINE64; its retail price
@@ -299,8 +363,70 @@ Each price and its page (§ Sources):
   the VNA RL-NANOVNAH4.
 - **Pro:** the hot air station ADA-5238; the SAC305 wire ADA-1930; the
   meter FLUKE-87V. No costlier VNA was read, so the pro tier keeps the H4.
+- **The parts the tools need, in every tier that needs them:** the
+  supply ACRONAME-R470; the cable ADA-1675; the clip ADA-5434, the
+  breakout board ADA-2743 and the jumper wires ADA-266. Each is
+  **representative, for pricing**: the studies name none of them, and the
+  build initiatives' bench story chooses them.
 - **Out of stock on the day** (the price stands as the page printed it): the
-  pocket meter ADA-850 and the ATTEN ST-2090D ADA-4921.
+  pocket meter ADA-850 and the ATTEN ST-2090D ADA-4921, on 2026-10-28 and
+  again on 2026-10-29.
+- **A cheaper debugger, not in the totals:** the LP-XDS110, 35.09
+  (TI-XDS110, read 2026-10-29). It is the same debugger without the current
+  measurement for which `parts-and-toolchains.md` § The debugger recommends
+  the LP-XDS110ET.
+
+### What each tool needs to run
+
+Each tool's page was read on 2026-10-29 for what comes in its box (§ Read
+on 2026-10-29). Three tools need a part they do not come with, and each
+part is priced above:
+- **The hot plate.** Its kit holds the "MHP50 Controller and Hot Plate" and
+  a "Silicone USB C Cable (20V 5A)", and its page says: "Note that a 20V 5A
+  USB PD power supply is not included! You'll need to pick up a 100W
+  'laptop' power supply with USB type C PD support" (ADA-5903). The supply
+  priced is Acroname's R470-TYPEC-PS-1. It gives "up to 20V at 5A" through
+  "a captive USB-C (69") cable", from 100–240 V (ACRONAME-R470).
+- **The debugger.** TI's LP-XDS110ET page lists "LaunchPad development
+  kit", "USB-A to USB-C cable" and "Quick start guide", and no cable for
+  its "10-pin XDS110 out connector" (TI-XDS110ET). ASSUMED: that connector
+  takes the 1.27 mm 2 × 5 layout of the boards' representative header
+  (§ The Reader), since TI's page gives no pitch. So:
+  - the Reader and the Field Generator take a socket-to-socket cable whose
+    "connector is a 1.27mm (0.05") pitch 2x5 box" (ADA-1675);
+  - the tags carry pads, not a connector (`parts-and-toolchains.md`
+    § The tags). They take a pogo-pin clip with "2x5 0.05" pitch SWD
+    spacing" (ADA-5434). Its pins come out on "a 2x5 0.1" header", so the
+    cable reaches it through an SWD breakout board, made for "tiny boards
+    that use the 10-pin SWD programming connector" (ADA-2743), and
+    female-to-female jumper wires with "0.1" sockets on either end"
+    (ADA-266). INFERRED: the breakout's header is 0.1", the clip's pitch;
+    its page says only "the breakout board and some header".
+  - The clip reaches "25mm" from a board's edge (ADA-5434). INFERRED: the
+    tag core's debug pads sit within 25 mm of an edge, for the build
+    initiatives to keep.
+- **The others:**
+  - the Pinecil V2's package holds the iron and one tip (PINE64). The
+    starter supply's "1.5m 17AWG captive cable" ends in a "USB-C output
+    connector" (ADA-6320);
+  - the pocket meter "Runs on two AA batteries that are included!"
+    (ADA-850). The Fluke 87V's box holds a "9V Battery (Installed)"
+    (FLUKE-87V);
+  - **the Fluke 117's box list names no battery,** though the meter takes
+    a "9 volt Alkaline" (FLUKE-117). So the advanced tier's Lacks name it;
+  - the ATTEN station includes its "Station/receptacle" and "Soldering
+    iron" (ADA-4921). The hot air station "Comes with a nice stand and four
+    different nozzles" (ADA-5238). The microscope carries its LED light on
+    a 110 V supply (AMSCOPE-SE400Z);
+  - **the NanoVNA-H4's page lists its battery and its "LOAD KIT
+    (SUPPLIED)", and no cable to a board** (RL-NANOVNAH4). How a board
+    meets the VNA, a coaxial pigtail or a test connector, is the bench
+    story's choice. The advanced and pro tiers' Lacks name it;
+  - the tinySA Ultra Plus includes an "Antenna with SMA connector" and two
+    SMA cables (RL-TINYSAULTRAPLUS). **The plain tinySA's page lists no box
+    contents.** It sells a "REPLACEMENT ANTENNA" at 9.95 (RL-TINYSA), so
+    the starter and advanced tiers' Lacks name its antenna, if one is not
+    in the box.
 
 ## The bench (spec D9)
 
@@ -315,6 +441,8 @@ boards transmit", for C9. The bench is the tier above plus:
 
 - **The receivers** (RL-TINYSA, RL-TINYSAULTRAPLUS). The tinySA covers the
   902–928 MHz band the US build sends in, by the range its page prints.
+  Whether its antenna comes with it is not read (§ What each tool needs to
+  run).
 - **A cheaper receiver, not in the totals:** the RTL-SDR Blog V4L dongle,
   37.95, and the maker's dipole antenna kit, 17.95, together 55.90 (RTLSDR).
   The page read gives no upper end of its tuning range, only that "the
@@ -340,35 +468,38 @@ pro builds everything by hand.
 
 | Tier | Its route | The devices | The tools | The bench | **The total** | Lacks |
 |---|---|---|---|---|---|---|
-| Starter | fully assembled | 233.41 | 168.28 | 137.14 | **538.83** | two W5017 whips; three tag enclosures; the JLCPCB boards; the module's sourcing at JLCPCB |
-| Advanced | partly assembled | 214.28 | 991.62 | 137.14 | **1,343.04** | the same as starter |
-| Pro | hand-solder | 197.47 | 1,501.62 | 217.14 | **1,916.23** | two W5017 whips; three tag enclosures; the pro iron |
+| Starter | fully assembled | 267.03 | 198.08 | 137.14 | **602.25** | two W5017 whips; three tag enclosures; the JLCPCB boards; the module's sourcing at JLCPCB; the tinySA's antenna, if not in its box |
+| Advanced | partly assembled | 241.36 | 1,071.42 | 137.14 | **1,449.92** | the same as starter; the Fluke 117's battery, if not in its box; the VNA's cable to a board |
+| Pro | hand-solder | 197.47 | 1,581.42 | 217.14 | **1,996.03** | two W5017 whips; three tag enclosures; the pro iron; the VNA's cable to a board |
 
 **Any route with any tier** (the devices, the tier's tools and its bench;
 each lacks what its route and its tier lack above):
 
 | Route | Starter | Advanced | Pro |
 |---|---|---|---|
-| Hand-solder | — (no tool to place the module) | 1,326.23 | 1,916.23 |
-| Partly assembled | 519.70 | 1,343.04 | 1,933.04 |
-| Fully assembled | 538.83 | 1,362.17 | 1,952.17 |
+| Hand-solder | — (no tool to place the module) | 1,406.03 | 1,996.03 |
+| Partly assembled | 576.58 | 1,449.92 | 2,039.92 |
+| Fully assembled | 602.25 | 1,475.59 | 2,065.59 |
 
 **What the totals say** (INFERRED, from the tables above):
 - **The tools and the bench set the tiers apart, not the devices.** The
-  devices run from 197.47 to 233.41 on any route, before the unread prices.
-  The tools run from 168.28 to 1,501.62.
-- **The routes differ little in money.** Assembly costs 16.81 to 35.94 more
+  devices run from 197.47 to 267.03 on any route, before the unread prices.
+  The tools run from 198.08 to 1,581.42.
+- **The routes differ little in money.** Assembly costs 43.89 to 69.56 more
   than the hand-solder route's parts and boards, before JLCPCB's boards and
-  the module's sourcing. What a route changes is the skill and the tools it
-  needs.
+  the module's sourcing. JLCPCB's minimum, the second Reader and Field
+  Generator, is 27.08 and 33.62 of that. What a route changes is the skill
+  and the tools it needs.
 - **The module is the largest part:** five of them, 53.66, 46 % of the
-  hand-solder route's parts.
+  hand-solder route's parts. An assembled route buys seven, 75.12, the
+  minimum's two included.
 - **Recommended for a first build: the starter tier with fully assembled
-  boards,** 538.83 before its unread prices. It asks the least skill of a
+  boards,** 602.25 before its unread prices. It asks the least skill of a
   beginner (spec anti-goals), with the least spent on tools. Its costs:
-  - partly assembled boards would save 19.13 (519.70), for four parts by
-    iron per board: the relays, the SMA connector, the cell holder and the
-    debug header;
+  - partly assembled boards would save 25.66 (576.58): 19.12 in fees and
+    6.54 in the minimum's second boards. The builder then solders four
+    parts by iron on each board: the relays, the SMA connector, the cell
+    holder and the debug header;
   - the builder cannot rework the module without hot air;
   - the builder cannot tune the antenna match without a VNA. Whether the
     match needs tuning is the range test's to show ([2],
@@ -392,24 +523,30 @@ module's datasheet gives its figures at 868 MHz and 915 MHz (PSIP p14).
 ## What the choice leaves to later stories
 
 - **Story 2.1.7, the sitting:** it reads the totals. It decides one core or
-  three, and the item and nursery tags' cells, neither of which price
-  decides. If it wants the five unread prices, it reads them in a browser
+  three, where three boards cost 23.25 to 117.12 more by route (§ How the
+  build is counted), and the item and nursery tags' cells, which price does
+  not decide. If it wants the five unread prices, it reads them in a browser
   (§ What was read).
 - **The build initiatives:**
   - the bench story, first (spec D9): the receiver (the tinySA, or the
     RTL-SDR once its range is read), a stencil for the hand-solder route,
-    and the paste against the module's reflow profile;
+    the paste against the module's reflow profile, and how a board meets
+    the VNA;
   - every part marked representative, chosen from its datasheet, and the
     boards' real sizes, which re-price the boards;
   - the JLCPCB quote for the drawn boards and the module's sourcing, before
     an assembled route is ordered;
-  - prices read again before anything is bought. These are 2026-10-28's.
+  - prices read again before anything is bought. These are 2026-10-28's
+    and 2026-10-29's.
 
 ## Sources
 
 Every page was read 2026-10-28, between 14:30:15Z and 14:42:01Z, as
-§ What was read says. None is pinned in the corpus. The cited datasheets
-(PSIP, SWRA797, SWRA349) are `parts-and-toolchains.md`'s, pinned there.
+§ What was read says. A page dated 2026-10-29 was read by Story 2.1.14,
+between 10:18:16Z and 10:24:44Z (§ Read on 2026-10-29), and a page dated
+both was read again then at the same price. None is pinned in the corpus.
+The cited datasheets (PSIP, SWRA797, SWRA349) are `parts-and-toolchains.md`'s,
+pinned there.
 
 **Parts:**
 
@@ -442,32 +579,39 @@ Every page was read 2026-10-28, between 14:30:15Z and 14:42:01Z, as
 |---|---|---|---|
 | OSH-4L | OSH Park, 4 Layer Prototype Service: $10 a square inch, three copies | `https://docs.oshpark.com/services/four-layer/` | 2026-10-28 |
 | JLC-PCBA | JLCPCB, "PCB Assembly Cost: What Does the Price Include?", last updated Oct 22, 2026 | `https://jlcpcb.com/help/article/pcb-assembly-price` | 2026-10-28 |
-| JLC-FAQ | JLCPCB, "PCB Assembly FAQs", item 10 | `https://jlcpcb.com/help/article/pcb-assembly-faqs` | 2026-10-28 |
+| JLC-FAQ | JLCPCB, "PCB Assembly FAQs", item 10; "Last updated on Sep 09, 2026" on the second read, which found no minimum | `https://jlcpcb.com/help/article/pcb-assembly-faqs` | 2026-10-28; 2026-10-29 |
+| JLC-CAP | JLCPCB, "PCB Assembly Technical Capabilities": order volume "2 - 50 pcs" (Economic), "2 - 80000 pcs" (Standard) | `https://jlcpcb.com/capabilities/pcb-assembly-capabilities` | 2026-10-29 |
 
 **Tools and the bench:**
 
 | Short name | Seller and item | Page | Read |
 |---|---|---|---|
-| PINE64 | PINE64, Pinecil V2: community price 25.99 | `https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/` | 2026-10-28 |
-| ADA-6320 | Adafruit 6320, Raspberry Pi 45 W USB-C supply: 16.50 | `https://www.adafruit.com/search?q=usb+power+supply` | 2026-10-28 |
+| PINE64 | PINE64, Pinecil V2: community price 25.99 | `https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/` | 2026-10-28; 2026-10-29 |
+| ADA-6320 | Adafruit 6320, Raspberry Pi 45 W USB-C supply: 16.50 | `https://www.adafruit.com/search?q=usb+power+supply`; on 2026-10-29, `https://www.adafruit.com/product/6320` | 2026-10-28; 2026-10-29 |
 | ADA-2473, ADA-1930 | Adafruit, lead-free solder wire 0.5 mm 50 g: 12.50; SAC305 0.5 mm 50 g: 27.50 | `https://www.adafruit.com/search?q=solder` | 2026-10-28 |
 | ADA-4456 | Adafruit 4456, solder wick 0.8 mm: 2.95 | `https://www.adafruit.com/search?q=solder` | 2026-10-28 |
 | ADA-3468, ADA-2667 | Adafruit, Chip Quik CQ4LF flux pen: 7.95; Chip Quik SMD291 tack flux: 15.95 | `https://www.adafruit.com/search?q=flux` | 2026-10-28 |
 | ADA-SEARCH-PASTE, ADA-3217 | Adafruit 3217, "Maker Paste - Low Temperature Lead-Free Prototyping Solder Paste": 9.95 | `https://www.adafruit.com/search?q=solder+paste` | 2026-10-28 |
 | ADA-152 | Adafruit 152, flush diagonal cutters CHP170: 7.25 | `https://www.adafruit.com/search?q=flush+cutters` | 2026-10-28 |
 | ADA-421, ADA-5950 | Adafruit, fine-tip ESD tweezers: 3.95; ceramic sharp-point tweezers: 8.95 | `https://www.adafruit.com/search?q=tweezers` | 2026-10-28 |
-| ADA-850 | Adafruit 850, pocket autoranging multimeter: 24.95, out of stock | `https://www.adafruit.com/search?q=multimeter` | 2026-10-28 |
-| ADA-291 | Adafruit 291, helping-hands magnifier MZ101: 6.95 | `https://www.adafruit.com/search?q=magnifier` | 2026-10-28 |
-| ADA-4921 | Adafruit 4921, ATTEN ST-2090D 80 W station: 59.95, out of stock | `https://www.adafruit.com/search?q=soldering+iron` | 2026-10-28 |
-| ADA-5903, ADA-5238 | Adafruit, Miniware MHP50-B5 hot plate: 99.95; ATTEN ST-862D hot air station: 279.95 | `https://www.adafruit.com/search?q=hot+air` | 2026-10-28 |
-| AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99 | `https://amscope.com/products/se400-z` | 2026-10-28 |
-| FLUKE-117 | Fluke, 117: 304.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117` | 2026-10-28 |
-| FLUKE-87V | Fluke, 87V: 579.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v` | 2026-10-28 |
-| RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` | 2026-10-28 |
-| RL-TINYSA | R&L Electronics, tinySA: 89.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75243` | 2026-10-28 |
-| RL-TINYSAULTRAPLUS | R&L Electronics, tinySA Ultra Plus: 169.95, out of stock | `https://www.randl.com/index.php?main_page=product_info&products_id=76222` | 2026-10-28 |
+| ADA-850 | Adafruit 850, pocket autoranging multimeter: 24.95, out of stock | `https://www.adafruit.com/search?q=multimeter`; on 2026-10-29, `https://www.adafruit.com/product/850` | 2026-10-28; 2026-10-29 |
+| ADA-291 | Adafruit 291, helping-hands magnifier MZ101: 6.95 | `https://www.adafruit.com/search?q=magnifier`; on 2026-10-29, `https://www.adafruit.com/product/291` | 2026-10-28; 2026-10-29 |
+| ADA-4921 | Adafruit 4921, ATTEN ST-2090D 80 W station: 59.95, out of stock | `https://www.adafruit.com/search?q=soldering+iron`; on 2026-10-29, `https://www.adafruit.com/product/4921` | 2026-10-28; 2026-10-29 |
+| ADA-5903, ADA-5238 | Adafruit, Miniware MHP50-B5 hot plate: 99.95, its kit list and its supply note; ATTEN ST-862D hot air station: 279.95 | `https://www.adafruit.com/search?q=hot+air`; on 2026-10-29, `https://www.adafruit.com/product/5903` and `https://www.adafruit.com/product/5238` | 2026-10-28; 2026-10-29 |
+| ACRONAME-R470 | Acroname, R470-TYPEC-PS-1, 100 W USB-C Power Delivery charger, up to 20 V at 5 A: 50.00 | `https://acroname.com/store/r470-typec-ps-1` | 2026-10-29 |
+| ADA-1675 | Adafruit 1675, 10-pin 2 × 5 socket-to-socket 1.27 mm IDC (SWD) cable, 150 mm: 2.95 | `https://www.adafruit.com/product/1675` | 2026-10-29 |
+| ADA-5434 | Adafruit 5434, pogo pin probe clip, 2 × 5 1.27 mm pitch SWD: 19.95 | `https://www.adafruit.com/product/5434` | 2026-10-29 |
+| ADA-2743 | Adafruit 2743, SWD (2 × 5 1.27 mm) cable breakout board: 2.95 | `https://www.adafruit.com/product/2743` | 2026-10-29 |
+| ADA-266 | Adafruit 266, premium female/female jumper wires, 40 × 6": 3.95 | `https://www.adafruit.com/product/266` | 2026-10-29 |
+| AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99 | `https://amscope.com/products/se400-z` | 2026-10-28; 2026-10-29 |
+| FLUKE-117 | Fluke, 117: 304.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117` | 2026-10-28; 2026-10-29 |
+| FLUKE-87V | Fluke, 87V: 579.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v` | 2026-10-28; 2026-10-29 |
+| RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` | 2026-10-28; 2026-10-29 |
+| RL-TINYSA | R&L Electronics, tinySA: 89.95; its replacement antenna: 9.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75243` | 2026-10-28; 2026-10-29 |
+| RL-TINYSAULTRAPLUS | R&L Electronics, tinySA Ultra Plus: 169.95, out of stock | `https://www.randl.com/index.php?main_page=product_info&products_id=76222` | 2026-10-28; 2026-10-29 |
 | RTLSDR | RTL-SDR Blog, V4L dongle: 37.95; dipole antenna kit: 17.95 | `https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/` | 2026-10-28 |
-| TI-XDS110ET | TI, LP-XDS110ET: 59.29 | `https://www.ti.com/tool/LP-XDS110ET` | 2026-10-28 |
+| TI-XDS110ET | TI, LP-XDS110ET: 59.29, and its box list | `https://www.ti.com/tool/LP-XDS110ET` | 2026-10-28; 2026-10-29 |
+| TI-XDS110 | TI, LP-XDS110: 35.09, and its box list | `https://www.ti.com/tool/LP-XDS110` | 2026-10-29 |
 | TI-LPEM | TI, LP-EM-CC1312PSIP: 47.19 | `https://www.ti.com/tool/LP-EM-CC1312PSIP` | 2026-10-28 |
 
 **Not read** (§ What was read):
@@ -478,6 +622,11 @@ Every page was read 2026-10-28, between 14:30:15Z and 14:42:01Z, as
 - Hakko USA, FX-971: `https://hakkousa.com/fx-971-soldering-station.html`;
 - Jameco, Hammond 1551HRGY:
   `https://www.jameco.com/z/1551HRGY-Hammond-Manufacturing-Gray-Plastic-Enclosure-with-Key-Ring-2-36-x-1-38-x-0-79-Inch-Light-Gray_2550951.html`.
+
+**Refused on 2026-10-29, not needed** (§ Read on 2026-10-29):
+- Tag-Connect, TC2050-IDC-NL:
+  `https://www.tag-connect.com/product/tc2050-idc-nl-10-pin-no-legs-cable-with-ribbon-connector`;
+- USBGear, CG-PD100C: `https://www.usbgear.com/CG-PD100C.html`.
 
 TI's prices are the pages' own price lists, in US dollars by their
 `priceCurrency`. LCSC's are its pages' US-dollar price ladders. A

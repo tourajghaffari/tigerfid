@@ -366,6 +366,29 @@ What was read is cited in the two studies it corrects
   twice for Story 2.1.10. So GNU make's platforms are named among the tools
   not cited, the default of the Sprint 4 block's D4.
 
+### Story 2.1.14 — the Sprint 3 review's fixes to the tiered cost (2026-10-29)
+
+What was read is cited in `docs/study/tiered-cost.md` § Sources (its rows
+dated 2026-10-29) and § Read on 2026-10-29. No source is pinned: no choice
+rests on a price page (plan Sprint 2's D8).
+
+- **KEPT, cited by URL and read date, not pinned:**
+  - the hot plate's product page at Adafruit, for its kit list and its
+    note that no supply comes with it;
+  - Acroname's page for a 100 W USB-C supply, and Adafruit's product pages
+    for a 10-pin 1.27 mm cable, a pogo-pin clip, an SWD breakout board and
+    jumper wires, each priced as representative;
+  - TI's pages for both XDS110 debuggers, for their prices and box lists;
+  - JLCPCB's assembly capabilities page, for its minimum of two boards, and
+    its assembly FAQ again, which names no minimum;
+  - the pages of the tools that run on power or connect to a board (PINE64,
+    Adafruit, AmScope, Fluke, R&L Electronics), for what comes in each box.
+    Each price on them matched the one Story 2.1.6 read.
+- **Refused, not needed:** Tag-Connect's TC2050-IDC-NL page (a bot check)
+  and USBGear's 100 W supply page (HTTP 403). Each had a stand-in whose page
+  answered, so no price is written not read and no question went to Omid
+  (the Sprint 4 block's D7).
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -412,3 +435,8 @@ a verdict here.
 - **2026-10-29:** Story 2.1.12's reads for the listening window (§ 4,
   above). No search was run: one read went to a pinned source the studies
   already cite, and one to the maker's page of a tool the review named.
+- **2026-10-29:** Story 2.1.14's reads for the tiers (§ 4, above). Two web
+  searches found pages: one for JLCPCB's minimum assembled quantity, and
+  one for a 100 W USB-C supply. Each figure was then read from the page
+  itself, never from a search result. Adafruit's own search found the
+  pogo-pin clip.
