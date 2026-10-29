@@ -24,7 +24,7 @@
 // compound command* (`git add x && git commit`) isn't visible yet; and it only
 // covers Claude Code sessions. The unbypassable complements are a native git
 // pre-commit hook (covers every commit) and GitHub push protection (server-side).
-// `findSecrets`/`scanDiff` are exported so a pre-commit shim can reuse the core.
+// `findSecrets`/`scanDiff`/`scanStaged` are exported so a pre-commit shim can reuse the core.
 //
 // Three modes: PreToolUse stdin hook (default), `--pre-commit` (native git
 // hook; fails CLOSED on git failure — Story 26.1.1), and `--repo-scan` (CI
@@ -142,8 +142,13 @@ export function scanStaged(cwd, includeUnstagedTracked, { failClosed = false, ma
       return '';
     }
   };
-  let diff = git(['diff', '--cached', '--unified=0', '--diff-filter=d']);
-  if (includeUnstagedTracked) diff += '\n' + git(['diff', '--unified=0', '--diff-filter=d']);
+  // Story 244.1.39: the diff git prints with no colour, no external driver and no textconv —
+  // under `color.ui=always` (or `color.diff=always`) every added line read `\u001b[32m+…`, so
+  // scanDiff's `+`-line read matched none and a staged credential passed (the Hub Sprint 70
+  // review's finding 1, MEASURED). One dotfile line must never turn the scan off.
+  const plain = ['--no-color', '--no-ext-diff', '--no-textconv'];
+  let diff = git(['diff', ...plain, '--cached', '--unified=0', '--diff-filter=d']);
+  if (includeUnstagedTracked) diff += '\n' + git(['diff', ...plain, '--unified=0', '--diff-filter=d']);
   return scanDiff(diff);
 }
 

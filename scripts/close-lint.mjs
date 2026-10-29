@@ -793,7 +793,10 @@ export function gitDiffInputs(repoRoot) {
       changedFiles.push(f);
     }
     if (!changedFiles.includes('docs/project-plan.md')) return { changedFiles, planDiffText: '', oldPlanText: '' };
-    const planDiffText = git('diff', '--unified=0', base, '--', 'docs/project-plan.md');
+    // Story 244.1.39 (the Hub Sprint 71 proposal's finding 6, MEASURED): under `color.ui=always`
+    // parseHunks read 0 added and 0 removed lines and the lockstep arm went blind, fail-open —
+    // so the content read asks for no colour, no external driver and no textconv.
+    const planDiffText = git('diff', '--no-color', '--no-ext-diff', '--no-textconv', '--unified=0', base, '--', 'docs/project-plan.md');
     let oldPlanText = '';
     try { oldPlanText = git('show', `${base}:docs/project-plan.md`); } catch { /* plan new at base */ }
     return { changedFiles, planDiffText, oldPlanText };
