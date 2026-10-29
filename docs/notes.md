@@ -7,6 +7,39 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-29 — Sprint 4 proposal (approved, three legs; Story 2.1.12 split, Story 2.1.14 born)
+
+- **Landed:** #55 → `bfead197` (GitHub's merge stamp 06:27:28Z), squash by
+  auto-merge armed with `--match-head-commit 432aaa00…` once `watch-pr.mjs`
+  read it GREEN.
+  - `docs/project-plan.md` § Sprint 4, three legs, serial: 2.1.12 (the
+    listening window), 2.1.14 (the tiers) and 2.1.13 (the folder's
+    `sources/` route). Omid approved it first-hand in this terminal, between
+    its `date -u` reads of 00:50:57Z and 06:25:22Z: "Approve as proposed
+    (Recommended)".
+  - Story 2.1.12 is narrowed and Story 2.1.14 born, with
+    `docs/close/2.1.json` in lockstep (`sprint3-review-tier-fixes` born).
+  - The sprint's friction log, `docs/friction-log-sprint4-figures-that-hold.md`,
+    has § The proposal (F1–F4 and the guard events).
+- **Next:**
+  1. **Sprint 4 leg 1, Story 2.1.12,** in a FRESH executor seat, by the
+     block's kickoff. D2's clause for a baby's band may need Omid's
+     first-hand word in that leg's terminal.
+  2. Then leg 2 (Story 2.1.14) and leg 3 (Story 2.1.13, merged by Omid's
+     word). After them come the Sprint 4 review, Story 2.1.7's sitting and
+     Story 2.1.8's close.
+- **Surprises / decisions:**
+  - **The split.** As filed, Story 2.1.12 would plan ten or eleven tasks,
+    above the eight-task tripwire. It was split along its own two clauses
+    by the session-fit test (the block's § The sprint's shape).
+  - **`main` moved while the approval waited:** #56, a fleet sync round,
+    merged into the branch (F4).
+  - **The hub checkout's sprint parser is behind origin/main.** The
+    proposal ran origin/main's copy from its scratchpad (F1).
+- **Provenance:** Session id `cb189c7f-0ffb-4dea-bea2-8485d49ee215`, the
+  hub-rooted proposer seat "tigerfid Sprint 4 proposal", fresh by `/clear` of
+  "Windows 4"'s process (the friction log's fresh-session read).
+
 ## Session: 2026-10-29 — Sprint 3 review (PASS WITH FINDINGS; Stories 2.1.12 and 2.1.13 filed)
 
 - **Landed:** #53 → `5570ecee` (GitHub's merge stamp 00:14:32Z), squash on
@@ -77,42 +110,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, the
   hub-rooted executor seat "Windows 4", fresh by launch (the friction log's
   fresh-session read).
-
-## Session: 2026-10-28 — Sprint 3 leg 2 (Story 2.1.6, the tiered cost)
-
-- **Landed:** #48 → `3d27bb01` (GitHub's merge stamp 21:39:52Z), squash on
-  green, `--match-head-commit 208db34e…`. `docs/study/tiered-cost.md` is the
-  state: Story 2.1.6 is ticked in the plan, `docs/close/2.1.json` carries its
-  `reviewedFor` line, and the friction log's § Leg 2 holds F12–F16 and the
-  fresh-session read.
-- **Next:**
-  1. **Leg 3, Story 2.1.11**, the reference check's `sources/` message, in a
-     FRESH executor seat. It touches `scripts/` and merges by Omid's word.
-     As the last leg, it stamps the sprint EXECUTED.
-  2. Then the Sprint 3 review, Story 2.1.7's sitting and Epic 2.1's close.
-- **Surprises / decisions:**
-  - **Five prices are not read, by Omid's word.** First-hand in this
-    terminal, between its `date -u` reads of 14:42:21Z and 15:59:59Z: "Write
-    all as not read (Recommended)". They are the W5017 whips, JLCPCB's
-    boards, the module's sourcing at JLCPCB, the pro iron and the tag
-    enclosures. Every total names them, and the sitting may read them in a
-    browser.
-  - **Eight sellers refuse a plain request** (MEASURED, HTTP 403): Digi-Key,
-    Mouser, Arrow, Newark, Hakko USA, Jameco, Chip Quik and JBC. LCSC
-    answered a quick run with a challenge page, and every page at 15 s
-    apart. A later price read can start from those two facts (friction F12,
-    F14).
-  - **The relayed merge delegation was refused again; a first-hand word
-    passed.** The auto-mode classifier refused `gh pr merge` [Merge Without
-    Review] at the 16:14:10Z read. The leg held and told Air Traffic Control.
-    Omid answered "Merge it now (Recommended)" between this terminal's reads
-    of 16:14:30Z and 21:39:50Z, and the same command merged. MEASURED twice
-    now (legs 1 and 2), so leg 3's Omid-word merge needs his line in its own
-    terminal.
-  - **The bench's receiver is the tinySA.** RTL-SDR Blog's store page no
-    longer lists the plain V4, and the V4L's page prints no upper range
-    (F15).
-- **Provenance:** Session id `293fce01-04ef-47ce-b16f-5288623c6019`, the
-  executor seat that followed a `/clear` of the leg-1 executor's process
-  (the friction log's fresh-session read).
 
