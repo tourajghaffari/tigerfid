@@ -46,10 +46,15 @@ into the archive's `## Executed sprints` section, newest first, the heading
 stamped `— ✅ EXECUTED (date)` plus an **Executed:**/**Reviewed:** record.
 Keep that section above the first `## Initiative` block in the archive.
 
-## Sprint 4 — "Figures that hold for the sitting: a listen every tag can keep, tiers that run what they buy, and a reference folder that names the sources' route" (proposed 2026-10-29; 3 legs, serial)
+## Sprint 4 — "Figures that hold for the sitting: a listen every tag can keep, tiers that run what they buy, and a reference folder that names the sources' route" (proposed 2026-10-29; 3 legs, serial) — ✅ APPROVED (2026-10-29)
 
-**Approval:** PENDING — Omid signs first-hand in the proposer's terminal;
-the sign-off edit is the proposer's, on the proposal PR's branch.
+**Approval:** approved 2026-10-29 (Omid, first-hand in the proposer's
+terminal "tigerfid Sprint 4 proposal", between its `date -u` reads of
+00:50:57Z and 06:25:22Z: "Approve as proposed (Recommended)"): the block as
+proposed, three legs with Story 2.1.12 split, D1–D13 at their defaults. The
+question laid out the split with its cost, and D2's clause for a baby's
+band. The sign-off edit is the proposer's, on the proposal PR's branch
+(tigerfid #55).
 
 **Proposed:** 2026-10-29 by the hub-rooted Windows session "tigerfid Sprint 4
 proposal" (session `cb189c7f-0ffb-4dea-bea2-8485d49ee215`), on the Mac

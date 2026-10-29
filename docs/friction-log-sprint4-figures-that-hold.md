@@ -31,7 +31,10 @@ the Sprint 3 reviewer pass (`f050a5d6-…`, wrapped at #54), which this
 **Context checkpoint:** no compaction, no forced re-read, no lost-context
 defect.
 
-**The approval:** PENDING — Omid answers first-hand in this terminal.
+**The approval:** Omid, first-hand in this terminal between its `date -u`
+reads of 00:50:57Z and 06:25:22Z: "Approve as proposed (Recommended)". The
+question laid out the one call a reader might change, the split of Story
+2.1.12, with its cost, and D2's clause for a baby's band.
 
 - **F1 — The hub checkout's sprint parser is not origin/main's.** The close
   runner printed "hub tooling differs from origin/main:
@@ -59,6 +62,13 @@ defect.
   before the block cited it. The block's merge-loop line carries Sprint 3's
   F7 rule (the shortest needle a line break cannot split).
   `wrapped-sentence-needle-undercount` seat, caught.
+- **F4 — `main` moved while the approval waited.** The question went out
+  after the read of 00:50:57Z, and the answer came before the read of
+  06:25:22Z. In between, `main` took a fleet sync round (#56: the
+  `block-secrets`, `close-lint` and `check-tick-merge-claim` canonicals). The
+  branch took `main` by a merge, not a rebase, so its push stays a fast
+  forward, and the sign-off commit re-ran the synced `close-lint`. Cost: one
+  merge. No fix needed: the squash merge flattens it.
 
 **Guard events:**
 - `cwd-drift` seat: the calls that opened with a `cd` into this repo drew
@@ -69,3 +79,17 @@ defect.
   verdict lines on this PR's tree were first printed through `cut -c1-90`,
   with their count (5) beside them. The output file was read again whole
   before the block recorded the verdicts, and they matched.
+- The marker hook, class id not known: the sign-off's first edit, after the
+  read of 06:25:22Z, drew "Widen the marker so concurrent sessions can see
+  this work. Run from <hub>: node scripts/fleet-view.mjs --declare tigerfid"
+  (the hub's path written here as `<hub>`), on a marker opened with
+  `--repos tigerfid`, the face Sprint 3's reviewer pass recorded on its legs
+  2 and 3. The command ran and printed "marker declared: … repos: tigerfid"
+  before the read of 06:26:05Z. The proposal's earlier edits, between the
+  reads of 00:42:54Z and 00:48:58Z, drew no such line.
+- `semicolon-chained-checker-does-not-gate-commit` seat, the guard's
+  refusal: the sign-off's first commit command ran `close-lint` and `npm
+  test` in an `&&` chain to `git commit`, then an `echo` after a `;`, then
+  `git push`. The guard refused it before it ran: "piped-checker guard
+  (BLOCKED — this command did not run)". It was re-issued as one `&&` chain
+  to the push, with the exit read after it.
