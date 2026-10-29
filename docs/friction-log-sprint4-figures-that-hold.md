@@ -370,6 +370,16 @@ session when ready and in the right order."
   `scope` job's `check-tick-merge-claim.mjs`). The stamp therefore goes in
   a docs-only PR after #62 merges, as Sprint 3's did (#51). Cost: one more
   PR. No fix needed.
+- **R5 — The sprint parser's relative plan path reads the hub's plan.** The
+  stamp's check, run from inside this clone as Sprint 3's #51 recorded it
+  (`check-sprint-block.mjs <hub> docs/project-plan.md 4`), printed
+  `{"found":false,"problems":[]}`, exit 1, after the read of 23:03:53Z. The
+  parser's header says a relative plan path is "resolved against the hub
+  root argument, never the shell's cwd" (since hub #4543), so it read the
+  hub's own plan. The plan's absolute path read the block, after the read
+  of 23:04:01Z: `found:true`, `executed:true`, `reviewed:false`, three
+  legs, no problems, exit 0. Cost: one re-run. Suggested fix: a proposal's
+  and a stamp's command lines give the plan as `<F>/docs/project-plan.md`.
 
 **Guard events:**
 - `cwd-drift` seat: the leg's first `cd` into this repo, in the fetch's own

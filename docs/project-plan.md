@@ -46,7 +46,72 @@ into the archive's `## Executed sprints` section, newest first, the heading
 stamped `— ✅ EXECUTED (date)` plus an **Executed:**/**Reviewed:** record.
 Keep that section above the first `## Initiative` block in the archive.
 
-## Sprint 4 — "Figures that hold for the sitting: a listen every tag can keep, tiers that run what they buy, and a reference folder that names the sources' route" (proposed 2026-10-29; 3 legs, serial) — ✅ APPROVED (2026-10-29)
+## Sprint 4 — "Figures that hold for the sitting: a listen every tag can keep, tiers that run what they buy, and a reference folder that names the sources' route" (proposed 2026-10-29; 3 legs, serial) — ✅ APPROVED (2026-10-29) — ✅ EXECUTED (2026-10-29)
+
+**Executed:** 2026-10-29, 3/3 legs serial, each by a fresh hub-rooted
+Windows executor seat. None was elevated.
+- **The seats** (each leg's friction-log section has its fresh-session read):
+  - **leg 1:** "tigerfid Sprint 4 leg 1" `6fb033a2-…`, on the Mac
+    coordinator's orders 24;
+  - **leg 2:** "tigerfid Sprint 4 leg 2" `7a8f4e54-…`, on its orders 28.
+
+    Each of these two was a `/clear` of the process `13efb2b1-…`.
+  - **leg 3:** "Windows 3" `70fda9ed-…`, fresh by launch, on the Mac
+    coordinator's orders 7.
+- **The legs,** each with its full merge sha and GitHub's merge stamp, read
+  from the API in one call between leg 3's `date -u` reads of 23:03:13Z and
+  23:03:14Z:
+  - **Leg 1, Story 2.1.12 — #58 → `cf580b05b9f596a2106897f1456f42c2275ad991`
+    (10:05:48Z):** the listening window. A tag skips the Reader's beacon on
+    most listens and hears its set's slots alone. Every battery figure is
+    re-priced and Sprint 3's D2 re-run: [18] holds by 24 % for a room's
+    tag, [9] by 22 %, and [27] by 22 %, or 11 % on cold chain.
+    - D2's clause for a baby's band did not fire, and no ASK-OMID row was
+      filed. The conference's block of Field Generator slots is computed,
+      and GNU make is named among the tools not cited.
+  - **Leg 2, Story 2.1.14 — #60 → `b707bf1a6042aa8bebd380e23be1e4059f0d601f`
+    (10:44:46Z):** the tiers run what they buy: the hot plate's supply, the
+    debugger's cable and the tags' clip, with JLCPCB's minimum of two boards
+    a design. The totals are 602.25, 1,449.92 and 1,996.03 US dollars for
+    the starter, advanced and pro tiers.
+    - No price is written not read, and no D7 message went.
+  - **Leg 3, Story 2.1.13 — #62 → `d149ade61144989f58fa0d0624a408efba78cd4c`
+    (23:02:54Z):** the reference folder gives the `sources/` route: the
+    stub names `sources/`, a drifted `sources/` file's line names the newer
+    revision and the copy route, and reading rule 8 names `pdftotext
+    -layout`. The tool still never fetches (D11).
+    - `--write-stub` ran on leg 3's machine. The other machine's folder
+      README reads `README stale-stub` until that command runs there (D13).
+- **The merges** (D12), each by Omid's first-hand word in the leg's own
+  terminal. Leg 1 held when the auto-mode classifier refused the relayed
+  delegation at `gh pr merge`, then merged on his "Merge #58
+  (Recommended)". The words for legs 2 and 3 came early in each leg, and
+  neither merge held.
+- **The manifest,** `docs/close/2.1.json`, flipped as mapped:
+  - legs 1 and 2 flipped no tooth;
+  - leg 3 flipped `stub-names-sources`.
+
+  `rebuild-spec-approved` stays RED until Story 2.1.7, as the block said.
+- **No ASK-OMID row** was filed by any leg. **No D9 split:** the legs
+  planned 7, 7 and 6 tasks (leg 3's sixth is this stamp).
+- **The record:** `docs/friction-log-sprint4-figures-that-hold.md` (the
+  proposal's F1–F4, leg 1's L1–L5, leg 2's T1–T8 and leg 3's R1–R4), each
+  leg's guard events written with the class id beside "seat".
+- **Open for the review** (each a deferred Minor or a routed item):
+  - **The proposal:** F1, a parser command that runs origin/main's copy of
+    the hub's sprint parser; F2, a `--paths` flag for the test-arming read.
+  - **Leg 1:** L2, reproduce slot counts at 11/15 ms; L3, the old [27]
+    table's four cells 0.1 above the script; L5, `software-stack.md`'s raw
+    slot capacity, dispositioned current.
+  - **Leg 2:** T2, reproduce the fees from the stated fully assembled
+    joints; T3, the breakout's 0.1" header INFERRED; T7, a CLAIM outside
+    the ledger, granted.
+  - **Leg 3:** R2, the folder README changed on its branch before `main`;
+    R3, a grant that named one of the ledger's three sections.
+  - **The register seats:** each leg's § Guard events in the friction log.
+    Leg 3 also caught an `inferred-cause-recorded-as-measured` seat (R1).
+
+**Review:** PENDING: the Sprint 4 reviewer pass, a FRESH seat.
 
 **Approval:** approved 2026-10-29 (Omid, first-hand in the proposer's
 terminal "tigerfid Sprint 4 proposal", between its `date -u` reads of
