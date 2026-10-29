@@ -262,6 +262,11 @@ any PRs you open during this session when ready and in the right order."
   which arrived between this terminal's reads of 10:29:52Z and 10:32:22Z,
   kept the sentence verbatim and appended its dated clause. The item-8 grep
   dispositions it "amended".
+- **T8 — A count borrowed, caught.** The PR body's first draft said the
+  script reproduces "52" of the study's figures, the Sprint 3 review
+  reader's count. A count of the script's own labelled checks read 47, all
+  matching, and the body says 47. Cost: one line. No fix needed: a count
+  written into a record is the leg's own read.
 
 **Guard events:**
 - `cwd-drift` seat: the leg's first `cd` into this repo, in a call of its
@@ -289,6 +294,10 @@ any PRs you open during this session when ready and in the right order."
   the tool pages for what comes in each box printed each page's matches
   through `head -12`, with each page's count beside it. Every box list the
   study quotes was then read whole, by line range, before it was written.
+  The item-8 census was first printed through `cut -c1-400` and `cut
+  -c1-300`, its counts beside it, after the read of 10:39:11Z. No guard drew
+  it. It was run again with every match whole before the read of
+  10:39:36Z, and the PR body quotes that run.
 - A missing-file read, class id not known: the leg's check of its quotes
   against the saved pages read the clip page's text file before it was
   written, and printed "0" beside "No such file or directory". The file was
