@@ -7,6 +7,40 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-29 — Sprint 4 leg 3 (Story 2.1.13, the sources/ route) and the sprint executed
+
+- **Landed:**
+  - #62 → `d149ade6` (GitHub's merge stamp 23:02:54Z), squash with
+    `--match-head-commit 53a5f270…` once `watch-pr.mjs` read it GREEN
+    (by 23:02:41Z).
+    - The folder's README stub names `sources/` and how each folder
+      travels. A drifted `sources/` file's line names the newer revision
+      behind its URL and the copy route. Reading rule 8 names `pdftotext
+      -layout -enc UTF-8 -f <first> -l <last> <file> -`.
+    - `stub-names-sources` flipped FAIL → PASS; `npm test` reads 22 of 22.
+      `--write-stub` ran on this leg's machine.
+  - #63 → `ad5808eb` (23:06:10Z): the Sprint 4 block is stamped EXECUTED,
+    with its Executed record and `**Review:** PENDING`; the friction log
+    gains R5.
+- **Next:**
+  1. **The other machine's reference folder** reads `README stale-stub`
+     until `node scripts/reference-check.mjs --write-stub` runs there
+     (D13). The next session there runs it when the check prints it.
+  2. **The Sprint 4 reviewer pass,** a FRESH seat. Then Story 2.1.7's
+     sitting (Omid's), then Story 2.1.8's close (a FRESH closer).
+- **Surprises / decisions:**
+  - **The merge word:** Omid, first-hand in this terminal between its
+    reads of 22:50:12Z and 22:51:23Z: "Please merge PRs you open during
+    this session when ready and in the right order." Neither merge held.
+  - **For the reviewer:** R5, `check-sprint-block.mjs` resolves a relative
+    plan path against the hub argument (since hub #4543), so give it the
+    plan's absolute path. R1, `pdftotext` writes Latin-1 without `-enc
+    UTF-8`: a byte count settled it, not the terminal. R3, the grant named
+    one of the three `reference-repos.md` sections the ledger names.
+- **Provenance:** Session id `70fda9ed-a4c9-427f-ab17-caed0a9261a1`, the
+  hub-rooted executor seat "Windows 3", fresh by launch (the friction log's
+  fresh-session read).
+
 ## Session: 2026-10-29 — Sprint 4 leg 2 (Story 2.1.14, the tiers)
 
 - **Landed:** #60 → `b707bf1a` (GitHub's merge stamp 10:44:46Z), squash
@@ -77,37 +111,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   hub-rooted executor seat "tigerfid Sprint 4 leg 1", fresh by `/clear` of
   "Windows 4"'s process, which last held the Sprint 4 proposal (the friction
   log's fresh-session read).
-
-## Session: 2026-10-29 — Sprint 4 proposal (approved, three legs; Story 2.1.12 split, Story 2.1.14 born)
-
-- **Landed:** #55 → `bfead197` (GitHub's merge stamp 06:27:28Z), squash by
-  auto-merge armed with `--match-head-commit 432aaa00…` once `watch-pr.mjs`
-  read it GREEN.
-  - `docs/project-plan.md` § Sprint 4, three legs, serial: 2.1.12 (the
-    listening window), 2.1.14 (the tiers) and 2.1.13 (the folder's
-    `sources/` route). Omid approved it first-hand in this terminal, between
-    its `date -u` reads of 00:50:57Z and 06:25:22Z: "Approve as proposed
-    (Recommended)".
-  - Story 2.1.12 is narrowed and Story 2.1.14 born, with
-    `docs/close/2.1.json` in lockstep (`sprint3-review-tier-fixes` born).
-  - The sprint's friction log, `docs/friction-log-sprint4-figures-that-hold.md`,
-    has § The proposal (F1–F4 and the guard events).
-- **Next:**
-  1. **Sprint 4 leg 1, Story 2.1.12,** in a FRESH executor seat, by the
-     block's kickoff. D2's clause for a baby's band may need Omid's
-     first-hand word in that leg's terminal.
-  2. Then leg 2 (Story 2.1.14) and leg 3 (Story 2.1.13, merged by Omid's
-     word). After them come the Sprint 4 review, Story 2.1.7's sitting and
-     Story 2.1.8's close.
-- **Surprises / decisions:**
-  - **The split.** As filed, Story 2.1.12 would plan ten or eleven tasks,
-    above the eight-task tripwire. It was split along its own two clauses
-    by the session-fit test (the block's § The sprint's shape).
-  - **`main` moved while the approval waited:** #56, a fleet sync round,
-    merged into the branch (F4).
-  - **The hub checkout's sprint parser is behind origin/main.** The
-    proposal ran origin/main's copy from its scratchpad (F1).
-- **Provenance:** Session id `cb189c7f-0ffb-4dea-bea2-8485d49ee215`, the
-  hub-rooted proposer seat "tigerfid Sprint 4 proposal", fresh by `/clear` of
-  "Windows 4"'s process (the friction log's fresh-session read).
 
