@@ -15,7 +15,9 @@
 // File rows are copy-only, except under sources/: a study source may be
 // fetched again by hand from its row's URL, and counts only once its sha256
 // matches the pin (the header of docs/reference-corpus.tsv), so a missing one's
-// line names that route first and the copy second (plan Story 2.1.11). The
+// line names that route first and the copy second (plan Story 2.1.11). A
+// vendor revises a document behind the same URL, so a drifted one's line
+// names that newer revision and the copy route (plan Story 2.1.13). The
 // tool itself never fetches a file row, because the pages they were captured
 // from change. It never modifies or deletes a present file and
 // writes nothing without --recreate / --write-stub. --recreate first fetches
@@ -167,7 +169,13 @@ export function verify({ folder, rows, root = REPO_ROOT, stubText, log = console
           : `MISSING file   ${r.name} (copy-only — copy it, never move it, from a machine whose folder verifies)`);
         findings.push(r.name);
       }
-      else if (sha256(p) !== r.pin) { log(`DRIFT   file   ${r.name} — its sha256 is not the pin`); findings.push(r.name); }
+      else if (sha256(p) !== r.pin) {
+        const url = fetchUrl(r);
+        log(url
+          ? `DRIFT   file   ${r.name} — its sha256 is not the pin. If it was fetched from its row's URL, ${url}, that URL now serves a newer revision: copy the pinned bytes instead, never move them, from a machine whose folder verifies`
+          : `DRIFT   file   ${r.name} — its sha256 is not the pin`);
+        findings.push(r.name);
+      }
       else counts.get(top).ok++;
     } else { log(`UNKNOWN kind   ${JSON.stringify(r.kind)} for ${r.name}`); findings.push(r.name); }
   }

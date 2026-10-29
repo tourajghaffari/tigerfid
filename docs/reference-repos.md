@@ -77,6 +77,14 @@ Each source class has its own rule:
    plan's ASK-OMID A1 "Keep the default" at #7 (the row is in the plan's
    archive): the file left the current tree unread and stays at the tag. A
    session that needs it files a new ASK-OMID row first.
+8. **A PDF's pages, on Windows.** A reader that shows a PDF's pages as
+   images needs `pdftoppm`, which Git for Windows does not ship. It does
+   ship `pdftotext` (4.06, the xpdf build), which prints a page range as
+   text: `pdftotext -layout -enc UTF-8 -f <first> -l <last> <file> -`. Each
+   page ends in a form feed. Without `-enc UTF-8`, signs such as ± and µ
+   print as replacement characters. Measured 2026-10-29 with Git for
+   Windows 2.56.0, on pages 23 and 24 of `sources/ti-cc1312psip-swrs293.pdf`
+   (plan Story 2.1.13).
 
 ## Licence audit
 
@@ -149,6 +157,8 @@ Each source class has its own rule:
   from a machine whose folder verifies. A fetched file counts only once its
   bytes match the pin. Vendors revise a document behind the same URL, so a
   mismatch means a newer revision, and the pinned bytes are copied instead.
+  The check's `DRIFT file` line for a `sources/` file says so, with its
+  row's URL (plan Story 2.1.13).
 
 ## Recreating the folder on a new machine
 
@@ -214,6 +224,9 @@ and 2 when the folder is absent or the usage is wrong.
   row, and the copy second (§ `sources/`).
 - `DRIFT tree` lists each path `missing`, `changed` or `extra`. `DRIFT file`
   means the bytes are not the pin's. Never edit a corpus file; copy it again.
+  For `sources/`, the line names the file's row URL: a file fetched from it
+  that does not match is a newer revision behind that URL, so copy the
+  pinned bytes instead (§ `sources/`).
 - `UNPINNED file` — a file is in a pinned folder without a row. Add the row
   (and its research-log entry) or remove the file.
 - `MOVED tag` — the local tag no longer peels to the pin. Stop and ask: the
