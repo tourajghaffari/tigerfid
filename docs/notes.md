@@ -7,6 +7,41 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-29 — Sprint 4 leg 1 (Story 2.1.12, the listening window)
+
+- **Landed:** #58 → `cf580b05` (GitHub's merge stamp 10:05:48Z), squash
+  with `--match-head-commit 64c09fb0…` once `watch-pr.mjs` read it GREEN
+  (07:50:38Z).
+  - The radio study states the layout of a listen: the beacon skipped on
+    most listens. Every battery figure is re-priced, and Sprint 3's D2 is
+    re-run: [18] by 24 %, [9] by 22 %, [27] by 22 % and 11 % on cold
+    chain. All are met on paper, and no ASK-OMID row is filed.
+  - The conference's block is computed (1,308 reply slots a second), and
+    GNU make is named among the tools not cited (D4's default).
+  - The tick, the manifest's `reviewedFor` line and the friction log's
+    leg 1 section ride the same PR.
+- **Next:**
+  1. **Sprint 4 leg 2, Story 2.1.14,** in a FRESH executor seat, by the
+     block's kickoff. It reads `tiered-cost.md` anchors at `cf580b05`.
+     `tiered-cost.md` § Both cells needs no sentence moved (#58's body,
+     § For leg 2).
+  2. Then leg 3 (Story 2.1.13, merged by Omid's word), the Sprint 4
+     review, Story 2.1.7's sitting and Story 2.1.8's close.
+- **Surprises / decisions:**
+  - **The classifier refused the relayed merge delegation** ("Merge
+    Without Review"), before the read of 07:51:08Z. Omid answered
+    first-hand in this terminal, "Merge #58 (Recommended)", between that
+    read and 10:05:45Z. He then gave this session its own delegation:
+    "Please merge any PRs you open during this session when ready and in
+    the right order."
+  - **For the reviewer:** the block's order was a second hidden
+    assumption (friction L1); reproduce slot counts at 11/15 ms (L2). The
+    leg's script is in #58's body.
+- **Provenance:** Session id `6fb033a2-2fc2-4f7a-8d61-8918850b976e`, the
+  hub-rooted executor seat "tigerfid Sprint 4 leg 1", fresh by `/clear` of
+  "Windows 4"'s process, which last held the Sprint 4 proposal (the friction
+  log's fresh-session read).
+
 ## Session: 2026-10-29 — Sprint 4 proposal (approved, three legs; Story 2.1.12 split, Story 2.1.14 born)
 
 - **Landed:** #55 → `bfead197` (GitHub's merge stamp 06:27:28Z), squash by
@@ -74,40 +109,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `f050a5d6-6c6f-403f-878d-a9c23140108a`, the
   hub-rooted reviewer seat "tigerfid Sprint 3 review", fresh by `/clear` of
   "Windows 4"'s process (the friction log's fresh-session read).
-
-## Session: 2026-10-28 — Sprint 3 leg 3 (Story 2.1.11, the sources' fetch route) and the sprint executed
-
-- **Landed:**
-  - #50 → `780d1483` (GitHub's merge stamp 23:11:36Z), squash on green,
-    `--match-head-commit 23b26c7d…`. `scripts/reference-check.mjs` names
-    the fetch route for a missing `sources/` file or folder. Story 2.1.11 is
-    ticked, `docs/close/2.1.json` carries its `reviewedFor` line, and the
-    friction log's § Leg 3 holds F17–F20 and the fresh-session read.
-  - #51 → `cf55d27c` (GitHub's merge stamp 23:13:47Z), auto-merged: the
-    Sprint 3 block is stamped EXECUTED, with its Executed record and
-    `**Review:** PENDING`.
-- **Next:**
-  1. **The Sprint 3 review,** in a FRESH seat. The block's § Independent
-     checks name leg 3's tests run against `main`'s script before the leg:
-     two of the three are red there, and the third pins the unchanged lines
-     (F18).
-  2. Then Story 2.1.7's decision sitting (Omid's) and Epic 2.1's close
-     (Story 2.1.8, a FRESH closer).
-- **Surprises / decisions:**
-  - **Omid's first-hand word came at the leg's start, so the merge did not
-    hold.** He wrote in this terminal, after its UTC read of 23:02:01Z and
-    before its `date -u` read of 23:03:44Z: "Please merge any PRs you open
-    during this session when ready and in the riught order". The `gh pr
-    merge --squash --match-head-commit` that held in legs 1 and 2 passed
-    at once.
-  - **The folder README's stub is stale** (F17). It still says "the other
-    two folders travel by copy only", though Story 2.1.3 added `sources/`.
-    It is left for the review with its cost: editing the stub makes every
-    machine's folder README a finding until `--write-stub` runs there.
-  - **A `sources/` file fetched at a newer revision** reads only `DRIFT
-    file` (F20). Recommended for the build initiatives' first story that
-    adds `sources/` rows.
-- **Provenance:** Session id `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, the
-  hub-rooted executor seat "Windows 4", fresh by launch (the friction log's
-  fresh-session read).
 
