@@ -68,7 +68,7 @@ Windows executor seat. None was elevated.
   - **The register seats:** each leg's § Guard events in the friction log.
     Leg 3 also caught a `truncated-read-taken-as-source-extent` seat (F19).
 
-**Reviewed:** 2026-10-29, by the Sprint 3 reviewer pass (tigerfid #PRNUM).
+**Reviewed:** 2026-10-29, by the Sprint 3 reviewer pass (tigerfid #53).
 - **The pass:** the hub-rooted Windows session "tigerfid Sprint 3 review"
   (session `f050a5d6-6c6f-403f-878d-a9c23140108a`), on the Mac
   coordinator's orders 9. It was fresh by `/clear`. Its background-task

@@ -394,4 +394,8 @@ from the tigerfid Sprint 3 reviewer pass:
   - `cwd-drift`: most of the pass's calls after its first `cd` drew the
     guard's first or second arm. Every git command carried `git -C` with the
     literal path, and none ran in the wrong repository;
+  - `piped-checker-exit`: the pass's first push of its branch was piped into
+    `grep -v`, between its `date -u` reads of 00:11:53Z and 00:12:15Z, and
+    the guard flagged it. The branch was read on origin at once with
+    `git ls-remote --heads`, the same head as the local one;
   - a new face, class id not known: R1.
