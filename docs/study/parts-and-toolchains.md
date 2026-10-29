@@ -167,7 +167,7 @@ requirements' words:
 | Cell compartment | opened with a tool | The cell maker's safety note: "battery compartments should be designed with one of the following methods: a) a tool such as screwdriver or coin is required to open battery compartment" or two independent movements (Energizer CR2032) |
 | Temperature sensor | TI TMP117, on the nursery's tags and the cold-chain item tags; a fitting option on the others | ±0.1 °C from −20 to 50 °C, specified at "8 averages, 1-Hz conversion cycle"; I²C; 1.7–5.5 V; 135 µA during a conversion; 0.15 µA in shutdown; a 2 mm × 2 mm package (TMP117 p1, p6). One conversion takes 15.5 ms, and eight averages take 124 ms, which is also the factory setting (TMP117 p12). The battery is charged at eight averages (§ Each worn tag's year). The module's own sensor reads to ±3.5 °C at 2 °C resolution (PSIP p32). INFERRED: that is too coarse for a cold-chain limit a few degrees wide, and it measures the chip, not the item |
 | Tamper input | the band's or seal's loop, wired to a pin that wakes the module on either edge | Wake on a pin edge from standby (PSIP p51). The 2012 seal woke on its band's input the same way (`original-system.md` § The sealTag) |
-| Debug | pads for the debugger's 10-pin connector, through an adapter or a pogo-pin fixture | INFERRED: a 10-pin connector does not fit a fob. The 2012 seal carried pogo pins (`original-system.md` § The sealTag) |
+| Debug | pads for the debugger's 10-pin connector, through an adapter or a pogo-pin fixture (`tiered-cost.md` prices a 2 × 5 1.27 mm pogo-pin clip, representative) | INFERRED: a 10-pin connector does not fit a fob. The 2012 seal carried pogo pins (`original-system.md` § The sealTag) |
 
 **The nursery tag reads its temperature sensor against a limit set on
 screen.** It is not a medical device and not a monitor of vital signs (spec
@@ -304,8 +304,10 @@ these two licences as unread.
 
 The prices are the pages' `data-price` values. INFERRED: they are US
 dollars, since the pages' exchange-rate table is quoted against the dollar.
-Story 2.1.6 prices the rest and dates every price again. It read these
-three again on 2026-10-28 at the same prices (`tiered-cost.md`).
+Story 2.1.6 prices the rest, and dates the LP-XDS110ET and the development
+board again on 2026-10-28, at the same prices. Story 2.1.14 dates the
+LP-XDS110 and the LP-XDS110ET on 2026-10-29, again at the same prices
+(`tiered-cost.md` carries all three).
 
 **Recommended: the LP-XDS110ET**, one per builder. INFERRED: the
 requirements test battery life by "the tag's measured average current
@@ -315,6 +317,8 @@ figures below measurable by the first builder, for 24.20 more than the
 plain debugger. It reaches the rebuild's boards through its "10-pin XDS110
 out connector" (TI-XDS110ET). The module debugs over cJTAG (PSIP p50).
 Whether a cable for that connector comes in the box was not read.
+Story 2.1.14 read the box list (TI's LP-XDS110ET page, 2026-10-29): none
+does, and `tiered-cost.md` prices one.
 
 **The development board** is a bench tool for a builder's first firmware,
 before their own boards exist. It is never part of a device:
