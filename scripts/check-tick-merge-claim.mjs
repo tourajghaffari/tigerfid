@@ -618,8 +618,11 @@ export function bodyFrom(args, payload, readFile = (f) => readFileSync(f, 'utf8'
 // Every content-bearing git exec names its maxBuffer AT THE CALL SITE — the Story
 // 97.1.4 census (test/git-exec-census.test.mjs) reads the literal options object,
 // so a spread constant reads as "no maxBuffer" (this story's battery, 12:29Z).
+// Story 244.1.39 (the Hub Sprint 71 proposal's finding 6): the plan files' patch is read with no
+// colour, no external driver and no textconv — under `color.ui=always` every added line read
+// `\u001b[32m+…` and addedCompletedLines matched none (MEASURED at Hub Sprint 71 leg 7).
 export function readDiff(base, head, cwd = process.cwd()) {
-  return execFileSync('git', ['diff', `${base}...${head}`, '--', ...PLAN_FILES], {
+  return execFileSync('git', ['diff', '--no-color', '--no-ext-diff', '--no-textconv', `${base}...${head}`, '--', ...PLAN_FILES], {
     cwd,
     encoding: 'utf8',
     maxBuffer: 64 * 1024 * 1024,
