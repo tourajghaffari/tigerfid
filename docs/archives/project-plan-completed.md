@@ -68,7 +68,201 @@ Windows executor seat. None was elevated.
   - **The register seats:** each leg's § Guard events in the friction log.
     Leg 3 also caught a `truncated-read-taken-as-source-extent` seat (F19).
 
-**Review:** PENDING: the Sprint 3 reviewer pass, a FRESH seat.
+**Reviewed:** 2026-10-29, by the Sprint 3 reviewer pass (tigerfid #PRNUM).
+- **The pass:** the hub-rooted Windows session "tigerfid Sprint 3 review"
+  (session `f050a5d6-6c6f-403f-878d-a9c23140108a`), on the Mac
+  coordinator's orders 9. It was fresh by `/clear`. Its background-task
+  path id, `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, is the session id of
+  "Windows 4", leg 3's executor, whose process the clear ended. It was not
+  elevated (a Windows administrator-role read, `False`, at 00:10:06Z) and
+  held no other role in this sprint.
+- **Verdict: PASS WITH FINDINGS.** Each leg meets its story's Done-when and
+  its gate. Three findings are Important, all in the studies the sitting
+  decides from. They go with three Minors and five nits to Story 2.1.12,
+  ahead of Story 2.1.7. The reference folder's frictions go to
+  Story 2.1.13.
+
+- **The method** (hub KB `parallel-per-leg-reviewers-then-re-measure`):
+  - two fresh, read-only readers, one each for legs 1 and 2;
+  - leg 3, the merges, the battery and the hub's two checks by the pass
+    itself;
+  - every Important candidate re-measured at its source by the pass (the
+    studies' own text and inputs, Adafruit's and TI's pages) before it was
+    accepted.
+
+  Each finding says what was MEASURED and what is INFERRED.
+- **The merges:** the five PRs' merge shas and stamps match the Executed
+  record. They were read from the API in one call between this pass's
+  `date -u` reads of 23:54:27Z and 23:54:29Z (2026-10-28):
+  - #45 → `4bd9694a…` 13:35:25Z;
+  - #48 → `3d27bb01…` 21:39:52Z;
+  - #50 → `780d1483…` 23:11:36Z;
+  - #51 → `cf55d27c…` 23:13:47Z;
+  - #52 → `dbc2c1c0…` 23:15:53Z.
+
+  Each tick's pre-tick head (`d1923d05`, `c799d0aa`, `e663b8fd`) is its PR's
+  commit before the tick commit.
+- **Leg 1 (#45; Story 2.1.10): MET.**
+  - Findings 1–4 and the five nits are corrected as the Sprint 2 review
+    listed them. Its reader re-read each source at its page:
+    - MDN's Web NFC data: Chrome on Android from 89; Opera, Samsung
+      Internet, WebView and the Quest Browser mirroring it; no desktop
+      browser;
+    - SWRA797 p14 and p17 for -3; TMP117 p6 and p12; PSIP p16, p17 and p26;
+    - the eCFR's §2.803 as of 2026-10-23;
+    - `logTimestamp` at the tag's `AWI_API.h` line 184. None of Smart
+      Tracker's 103 `.cs` files names it, with comments stripped.
+  - Finding 5 is met for CMake, SysConfig, TI Arm Clang and the wire frame.
+    GNU make's platforms are INFERRED, under a sentence that calls every
+    tool's platforms cited but two's (finding 6).
+  - Every re-priced figure reproduces from the study's own inputs, by the
+    reader's script. The pass reproduced the nursery room tag's 13.93 µA and
+    122.0 mAh itself.
+  - No requirement number moved. `requirements.md` gains three dated pointer
+    lines and nothing else (14 insertions, 0 deletions).
+  - The Chorus lists: the radio study's is unchanged byte for byte. The
+    software study's changed one Basis cell (the CR2450s), its verdict
+    still DECLINED, and the tick says why.
+  - The story's six greps, re-run on `main`, read as the PR body disposes
+    them. Some `current` hits are described rather than quoted (the block's
+    and the story's own lines), and none is misjudged.
+- **Leg 2 (#48; Story 2.1.6): MET, with findings 2–5.**
+  - The document prices milestone 1 per device, per route and per tier,
+    with D9's bench and a total per tier.
+    - Every price is dated, with its page.
+    - The five unread prices are marked and named in the Lacks, and none is
+      counted as zero.
+    - The representative parts are marked, and both cells are priced.
+    - Shipping and tax are left out, and the EU build is named.
+  - 52 of the document's 53 figures reproduce by the reader's script. The
+    53rd is nit 1.
+  - **The price sample.** The reader re-read eighteen rows at their sellers'
+    pages, its last read at 00:00:26Z, and each matches the document: TI,
+    LCSC (15 s apart), Adafruit, PINE64, R&L, Fluke, AmScope, OSH Park,
+    JLCPCB's fee page and RTL-SDR Blog. The pass re-read the hot plate's
+    page itself (99.95).
+- **Leg 3 (#50; Story 2.1.11): MET.**
+  - **The block's independent check, MEASURED by the pass.** The leg's test
+    file, beside the script before the leg (`932b548a`), reads 10 pass and
+    2 fail. The two that fail are the route tests, each on the old
+    copy-only line. The third pins the unchanged lines and passes there by
+    design (F18). Beside the leg's script it reads 12 of 12, as the PR
+    body's red run says.
+  - **The diff.** `fetchUrl()` reads only the row's `url` text. No import or
+    network call is added, so the tool still never fetches (D11). The header
+    comment and `docs/reference-repos.md` § Verifying a transfer describe the
+    new lines, and the rest of the item-8 scope reads current.
+- **#51, the stamp, and #52, the wrap:** every fact the Executed record
+  holds matches the API and the tree.
+- **The battery** at `dbc2c1c0`, under the Windows box's lock (held
+  23:58:28Z–23:58:30Z):
+  - `npm test`: exit 0, with `close-lint: ok (adopted 2026-10-26)`,
+    `check-licenses: ok` and 20 of 20;
+  - `node scripts/reference-check.mjs`: "299 rows verified, README the
+    stub", exit 0;
+  - the close runner over the ten teeth: nine PASS, and
+    `rebuild-spec-approved` FAIL (exit 1), as the block said.
+- **The hub's two checks** (§ Roles), each quoted whole in the friction
+  log's § Reviewer pass:
+  - **`check-register-seats.mjs`**, given the register's own wording
+    (`--sprint 'tigerfid — Sprint 3'`), paired 9 of 12 banner lines. The 3
+    unpaired are leg 3's two events, sent as text.
+  - **`check-item8-dispositions.mjs`** read #45's 30 dispositions (0 named)
+    and none in #48 or #50, whose tables it does not read. The pass read
+    both tables by eye: every `current` row quotes its line.
+- **Findings, Important** (each to Story 2.1.12, ahead of the sitting):
+  1. **The listening window holds for one zone's tags, not for every tag.**
+     - **MEASURED, the studies' text:** each listen is charged one start-up
+       and one window, "the Reader's beacon, 1.0 ms, and 0.4 ms for each
+       Field Generator slot in the tag's listen set". The slots "sit in one
+       block after the Reader's beacon", ASSUMED ordered "so that a tag
+       hears its set in one window".
+     - **INFERRED, the failure:** one block after one beacon can place only
+       one zone's set next to the beacon. Every other tag wakes twice, or
+       listens across the slots between them.
+     - **INFERRED, its cost, reproduced by the pass from the study's
+       inputs:** with the second wake timed from the beacon just heard, the
+       nursery's room tag needs 16.73 µA, not 13.93. Its year needs
+       171.9 mAh, 0.87 years from 150 mAh, so [18]'s "holds by 1.8 %" does
+       not hold. The reader's script finds the hall's badge ([9], 2.3 %) and
+       the plain item tag ([27], 4 %) losing their margins the same way.
+     - **Why Important:** Sprint 3's D2 judged these margins, and the
+       sitting decides the cells from them. A design that keeps one window
+       a listen may exist (a tag that skips the beacon on most listens; a
+       short sync before each group of slots), but the study states none.
+  2. **The advanced and pro tiers buy a hot plate they cannot power.**
+     MEASURED at Adafruit's page (ADA-5903, read 2026-10-29): "Note that a
+     20V 5A USB PD power supply is not included!" and "You'll need to pick
+     up a 100W 'laptop' power supply with USB type C PD support". Neither
+     tier prices one or names it in its Lacks. That falsifies the document's
+     "Each tier holds what its route needs".
+  3. **No tier connects the debugger to the boards.** MEASURED at TI's
+     LP-XDS110ET page (read 2026-10-29): it ships a "LaunchPad development
+     kit", a "USB-A to USB-C cable" and a "Quick start guide". No cable for
+     its "10-pin XDS110 out connector" comes with it. The parts study left
+     that cable "not read". No tier prices it, or the tags' adapter or
+     pogo-pin fixture, and no Lacks column names either.
+- **Findings, Minor:**
+  4. **JLCPCB's minimum assembled quantity** is written not read, and is in
+     no Lacks column. INFERRED: a minimum above one board adds a module to
+     each of the Reader's and the Field Generator's orders. To
+     Story 2.1.12.
+  5. **Three tag boards by hand "cost about the same"** is wrong by the
+     document's own quote of OSH Park ("includes three copies of your
+     design"). INFERRED: three designs cost 3 × 11.63 = 34.88. To
+     Story 2.1.12.
+  6. **GNU make's platforms** are INFERRED in its row, under a sentence
+     saying every tool's platforms are cited but two's. MEASURED; the
+     closer's `three-platform-claims-sourced` reads that sentence. To
+     Story 2.1.12.
+  7. **The reference folder's README stub** omits `sources/` and still says
+     "the other two folders travel by copy only" (F17, MEASURED). A drifted
+     `sources/` file's line does not name the newer revision (F20). To
+     Story 2.1.13, with F6, and its new tooth `stub-names-sources` (born
+     RED).
+- **Nits** (five, the cap; each MEASURED; to Story 2.1.12):
+  - "would save 19.13", where the fees differ by 19.12;
+  - "Each page was fetched once", beside LCSC's pages read twice;
+  - the advanced tier's ceramic tweezers "with" the ESD pair, where 991.62
+    reproduces only if they replace it;
+  - the parts study's pointer says Story 2.1.6 read all three TI tools
+    again, and `tiered-cost.md` carries no LP-XDS110 price;
+  - § Anti-collision's "1,000 tags in 0.73 s" on 1,363 slots, with the
+    conference's own block of Field Generator slots never computed.
+- **The block's "Open for the review" list, each item's disposition:**
+  - **F5,** orders that quoted a decision's split seam: the coordinator's
+    lesson. No repo change.
+  - **F6,** the Windows route to a PDF's pages: Story 2.1.13. The pass
+    MEASURED `pdftoppm` absent and `pdftotext` 4.06 present on this box.
+  - **F7,** a predicate grep split by a line break: the next proposal's
+    predicate greps use the shortest needle a line break cannot split. The
+    pass met the same face in its own tooth (friction R2).
+  - **F10,** a carriage-return grep: a Git Bash face, the hub KB
+    `windows-git-bash-cli-gotchas`'. No repo change.
+  - **F12 and F13:** the research log's § 4 entry names the eight sellers
+    that refuse a plain request and LCSC's pace, so Story 2.1.12's D7
+    message can go in its first minutes.
+  - **F15,** the RTL-SDR's range: the build initiatives' bench story, as
+    `tiered-cost.md` § What the choice leaves to later stories names it.
+  - **F16:** D5's own rule, a seller's public page. No change.
+  - **F17 and F20:** Story 2.1.13.
+  - **F18:** advice to the next proposal, to name the pin tests in a
+    red-first line. No repo change.
+  - **F19 and the legs' register seats:** sent to the Mac coordinator as
+    text (the friction log's § Reviewer pass).
+  - **The proposal's F3,** the close runner's "REVIEW SEATING MISSING" for
+    Sprint 2: MEASURED stale. The runner's own check, run against
+    origin/main's register, finds no gap for Sprint 2. The hub checkout it
+    read was four commits behind.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its `date -u` reads of 23:51:37Z and 23:52:23Z (2026-10-28): "Please merge
+  PRs you open during this session when ready and in the right order."
+- **Routed, in order:**
+  1. Story 2.1.12, a Sprint 4 proposal's leg, before the sitting;
+  2. Story 2.1.7, Omid's sitting;
+  3. Story 2.1.8, Epic 2.1's close.
+
+  Story 2.1.13 goes any time before the close.
 
 **Approval:** approved 2026-10-28 (Omid, first-hand in the proposer's
 terminal "tigerfid Sprint 3 proposal", between its `date -u` reads of

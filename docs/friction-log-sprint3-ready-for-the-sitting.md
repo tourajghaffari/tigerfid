@@ -289,3 +289,109 @@ compaction, no forced re-read, no lost-context defect.
   scripts/fleet-view.mjs --declare tigerfid" (the hub's path written here as
   `<hub>`). The command ran and printed "marker declared: … repos:
   tigerfid".
+
+## Reviewer pass (2026-10-29)
+
+Run by the hub-rooted Windows session "tigerfid Sprint 3 review" (session
+`f050a5d6-6c6f-403f-878d-a9c23140108a`), on the Mac coordinator's orders 9.
+**The fresh-session read:** fresh by `/clear`. The background-task path id
+is `13efb2b1-ddbf-4cd6-824f-74b58f5302ce`, which is the session id of
+"Windows 4", leg 3's executor; the orders name that process as the one this
+`/clear` ended. Not elevated: a Windows administrator-role read, `False`, at
+00:10:06Z. The verdict and findings are in the archive's Sprint 3
+`**Reviewed:**` record.
+
+**Context checkpoint:** two read-only readers (legs 1 and 2). No
+compaction, no forced re-read, no lost-context defect.
+
+- **R1 — The pass edited the tree its readers were reading.** The readers'
+  briefs named plan lines (the block at l.47–569, each story's range) in the
+  working tree. The pass then moved the block to the archive in the same
+  tree, shifting every one of them. It told both readers within a minute
+  to read the plan at `dbc2c1c0`, and each re-read its anchors there. No
+  finding rested on a moved line. Suggested fix: a reader's brief names each
+  repo file as `git show <sha>:<path>`, never a working-tree path, whenever
+  the reviewer will edit while the readers run (hub-owned: hub KB
+  `parallel-per-leg-reviewers-then-re-measure`'s brief).
+- **R2 — The pass's own tooth missed a wrapped phrase.** The first draft of
+  `stub-names-sources` asked that the stub not include "other two folders".
+  The stub wraps that phrase across two lines, so the clause could never
+  match. The real stub failed only on its other clause. A fixture that named
+  `sources/` and kept the old sentence read exit 0, against the 1 wanted. The
+  tooth now matches across the break (`/other two[^a-z]+folders/`), and the
+  three fixtures read as designed. Suggested fix, for any tooth with a
+  negative clause: test it on a fixture that keeps the old text and passes
+  every other clause.
+- **R3 — The Item-8 reader reads no table.** `check-item8-dispositions.mjs`
+  reads bullet dispositions only. #48 and #50 wrote theirs as tables, and it
+  printed "0 disposition(s), 0 current, 0 named": an empty read in a clean
+  read's words. The pass read both tables by eye. Hub-owned: the reader
+  could count table rows, or print an empty-read line.
+- **R4 — The seat check's default name paired nothing.** By the log's H1,
+  `check-register-seats.mjs` names this sprint `Sprint 3, "Ready for the
+  sitting"`, and it paired 0 of 12 lines. The register writes these seats as
+  "tigerfid — Sprint 3 leg N". With `--sprint 'tigerfid — Sprint 3'` it
+  paired 9. The script's header names this limit. Suggested fix: the next
+  sprint's block names the `--sprint` value for its reviewer.
+- **R5 — The close runner read a stale register.** It printed "REVIEW
+  SEATING MISSING" for Sprint 2. Its own `reviewSeatingGaps()`, run by the
+  pass over the plan and archive at `dbc2c1c0`, reads that gap against the
+  hub checkout's register and no gap against origin/main's: the checkout was
+  four commits behind, held by sibling sessions. Hub-owned: the runner reads
+  the register at origin/main.
+
+**The register-seat check,** from the hub root, quoted whole (the
+register's path written here as `<scratch>`):
+
+```
+register-seats: tigerfid — Sprint 3 — projects/tigerfid/docs/friction-log-sprint3-ready-for-the-sitting.md against <scratch>\recurrences.origin.json (634 classes)
+UNPAIRED leg 3 line 264: and read in full. `truncated-read-taken-as-source-extent` seat. [seat]
+UNPAIRED leg 3 line 277: - `cwd-drift` seat: the calls that opened with a `cd` into this repo drew [seat]
+UNPAIRED leg 3 line 278: "cwd-drift guard (warn, not a block)", and the calls after them drew its [warn, not a block]
+register-seats: 12 banner line(s) read in 3 section(s) (leg 1, leg 2, leg 3); 9 paired, 3 UNPAIRED — WARN — never a failure
+```
+
+Each UNPAIRED line, judged:
+- line 264: F19's seat, not yet in the register. A seat to send.
+- lines 277–278: one event, leg 3's cwd-drift seat. A seat to send.
+
+**The Item-8 check,** from the hub root, quoted whole:
+
+```
+item8-dispositions: tourajghaffari/tigerfid#45 — 30 disposition(s), 17 current, 0 named
+item8-dispositions: tourajghaffari/tigerfid#48 — 0 disposition(s), 0 current, 0 named
+item8-dispositions: tourajghaffari/tigerfid#50 — 0 disposition(s), 0 current, 0 named
+item8-dispositions: 3 body reads, 0 named — WARN, never a failure
+```
+
+#45 names none. #48's and #50's zeros are R3's empty read. Read by eye,
+every `current` row in their tables quotes its line, so no line is a seat of
+`item-8-anchor-grep-misses-falsified-claims`.
+
+**Register seats,** each sent to the Mac coordinator as text by class id,
+from the tigerfid Sprint 3 reviewer pass:
+- from the legs' events with no register seat:
+  - `truncated-read-taken-as-source-extent`: leg 3 (#50), F19, caught;
+  - `cwd-drift`: leg 3 (#50);
+  - `swept-surface-guard-warns-on-the-legs-own-planned-edits`: leg 2 (#48),
+    and leg 3 (#50);
+  - `wrapped-sentence-needle-undercount`: leg 1 (#45), F7, caught;
+  - a face near `pdf-text-layer-reader-gap`: leg 1 (#45), F6. The harness's
+    PDF reader needs `pdftoppm`, absent here; `pdftotext` read the pages;
+  - a new face, class id not known: the marker hook's "Widen the marker"
+    line on legs 2 (#48) and 3 (#50), whose markers were opened with
+    `--repos tigerfid`. It did not fire on this pass's first edit in this
+    repo, between its `date -u` reads of 00:01:14Z and 00:02:57Z;
+- from this pass:
+  - `shape-pinned-reader-passes-a-face-outside-its-pin-silently`: R3;
+  - `stale-local-refs-phantom-findings`: R5;
+  - `wrapped-sentence-needle-undercount`: R2, caught by a fixture at the
+    `date -u` read of 00:03:23Z;
+  - `msys-excl-blocks-posix-c-path`: the pass's first read of a hub KB entry
+    by `git show` with a `/c/…` path under `MSYS2_ARG_CONV_EXCL='*'`, between
+    its reads of 23:52:23Z and 23:54:27Z (2026-10-28). The guard warned, git
+    printed "cannot change to", and the re-run took the `C:/` form;
+  - `cwd-drift`: most of the pass's calls after its first `cd` drew the
+    guard's first or second arm. Every git command carried `git -C` with the
+    literal path, and none ran in the wrong repository;
+  - a new face, class id not known: R1.
