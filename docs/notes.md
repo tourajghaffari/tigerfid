@@ -7,6 +7,36 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.20 reviewed (PASS); Epic 2.1 close-ready
+
+- **Landed:**
+  - #95 → `2c954988` (GitHub's merge stamp 23:01:10Z), squash with
+    `--match-head-commit 6e7a7863…` once `watch-pr.mjs` read it GREEN.
+    - Story 2.1.20 carries its `**Reviewed:**` record: PASS. The wide
+      search now starts on a whole-block listen that hears none of the
+      network's Field Generators, beacon or not, and the tag joins the
+      network whose Field Generator it hears. #93's figures, needle census
+      and numbers census reproduce, and the manifest parses with 32
+      `reviewedFor` entries, none empty.
+- **Next:**
+  1. Story 2.1.8, Epic 2.1's close, by a FRESH closer (Windows Closer):
+     every story before it is done and reviewed.
+- **Surprises / decisions:**
+  - **One observation for the build initiatives** (in the record, not a
+    finding): the two wide searches re-arm, by the cost bound's "for each
+    carry", when the tag next hears a Field Generator, not at each
+    whole-block listen.
+  - **This pass filed Story 2.1.20** (as the Story 2.1.18 review) and
+    reviewed it, so it held #93 to the written Done-when and its prose
+    check, and re-measured every figure and count.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open during this
+    session when ready and in the right order."
+- **Provenance:** Session id `86ac7523-9bad-4199-8c93-a5a8b64ce65b`, "Mac
+  Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
+  launch: its background-task path id equals its session id. Not elevated.
+  It did none of Story 2.1.20's work.
+
 ## Session: 2026-10-30 — Story 2.1.20: the wide search starts when a tag hears none of its Field Generators (#93)
 
 **(A hub-rooted executor session on the Mac, "Mac 3", session `7d281368-21e6-410c-982e-c3db4c0cac0d`, in a scratch worktree of
@@ -57,40 +87,4 @@ in the right order.")**
   Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
   launch: its background-task path id equals its session id. Not elevated.
   It did none of Story 2.1.19's work.
-
-## Session: 2026-10-30 — Story 2.1.18 reviewed (PASS WITH FINDINGS); Story 2.1.20 filed
-
-- **Landed:**
-  - #89 → `e0fae75d` (GitHub's merge stamp 22:40:34Z), squash with
-    `--match-head-commit ff0a9d61…` once `watch-pr.mjs` read it GREEN.
-    - Story 2.1.18 carries its `**Reviewed:**` record: PASS WITH FINDINGS.
-      #85's 48 figures reproduce from the studies' inputs, no requirement
-      number or printed figure moved, and its greps reproduce. It writes
-      the rebuild spec's 3b and 3c into the study as § 5.3 states them.
-    - Story 2.1.20 is filed with the review's Minor H, and the manifest
-      gains its `reviewedFor` line, `2.1.20` in `stories` and the prose
-      check `story2118-review-fixes`.
-- **Next:**
-  1. Story 2.1.20, before Story 2.1.8: what starts the wide search, and
-     which network a carried tag joins. On the study's own budget a tag
-     carried one or two bays past its Reader's edge likely still hears its
-     old Reader's beacon but none of its Field Generators, so it stays
-     unplaced and the wide search never runs (INFERRED).
-  2. The Story 2.1.19 review (Mac Reviewer's next order).
-  3. Story 2.1.8, a FRESH closer, once Stories 2.1.19 and 2.1.20 are done
-     and reviewed.
-- **Surprises / decisions:**
-  - **This pass filed Story 2.1.18** (as the Story 2.1.17 review) and
-    reviewed it, so it held #85 to the written Done-when and § 5.3 and
-    re-measured every figure.
-  - **The register seats** (#85's four wrapped hits, each correct; this
-    pass's one, a reading `node -e` that also wrote the manifest, caught
-    before the commit) go to the coordinator as text in #89's body.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open during this
-    session when ready and in the right order."
-- **Provenance:** Session id `86ac7523-9bad-4199-8c93-a5a8b64ce65b`, "Mac
-  Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
-  launch: its background-task path id equals its session id. Not elevated.
-  It did none of Story 2.1.18's work.
 
