@@ -7,6 +7,18 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.7's decision brief (draft PR #76, for Omid's sitting)
+
+- **The branch:** `story-2.1.7/brief`, draft PR #76.
+- **The file:** `docs/study/2.1.7-decision-brief.md`, the sitting's input:
+  the ten decisions in order, each with its options, the studies' figures,
+  its default and the strongest case against. It decides nothing.
+- **Who merges it:** the sitting (plan Story 2.1.7), which lands #76 with
+  this block. Nothing merges before it.
+- **What the sitting reads first:** the brief's § The order of the sitting,
+  then decision 1, the FCC grant read in a browser, which can reopen
+  decision 2.
+
 ## Session: 2026-10-30 — Story 2.1.16 reviewed (PASS WITH FINDINGS); Story 2.1.17 filed
 
 - **Landed:**
