@@ -62,10 +62,19 @@ export const DOCS_GLOBS = ['docs/**', '**/*.md'];
 // full suite (fail-closed); a repo with no such paths is unchanged.
 export const ALWAYS_FULL_GLOBS = ['docs/project-plan.md', 'docs/close/**', 'docs/provenance/**'];
 
+// A changed path under the root `test/` or `spec/` is never documentation (hub
+// Story 249.1.5): a fixture there (`test/fixtures/x.md`) is a test input, so a
+// fixture-only PR runs the suite that reads it. A constant beside the docs
+// globs, never ALWAYS_FULL_GLOBS (those route to a validator job).
+export const NEVER_DOCS_GLOBS = ['test/**', 'spec/**'];
+
 // Per-repo build inputs that match a docs glob but are BUILD INPUTS, not docs
 // — the risk Story 19.1.3 pre-named. Verified per repo at execution
-// (2026-07-25); repos absent from this table were confirmed to have no
-// markdown build inputs. Repos born AFTER a verification date need their own
+// (2026-07-25); repos absent from this table were confirmed then to have no
+// markdown build inputs. Since hub Story 249.1.5 (2026-10-30) the table also
+// covers each committed docs-glob file a repo's TESTS read — the fleet census
+// scripts/fleet/check-test-docs-inputs.mjs names any new one, and its baseline
+// holds only the reads judged not to be reads. Repos born AFTER a verification date need their own
 // entry assessed at birth — the 2026-08-03 first audits of the two repos born
 // 2026-07-31/2026-08-01 found exactly that gap (ghaffaritabrizi.com PR #39,
 // bridgetandomid.com PR #17: both CONFIRMED medium, reproduced via classify()).
@@ -99,8 +108,9 @@ export const REPO_BUILD_INPUTS = {
   // Born 2026-10-11 (hub Story 196.1.1; assessed at birth per KB
   // new-repo-standard item 11): njk pages and the vendored payload's READMEs
   // under src/ are build inputs. Same class as ghaffaritabrizi.com /
-  // bridgetandomid.com.
-  'gtllclaw.com': ['src/**'],
+  // bridgetandomid.com. docs/inventory/legacy/** joined 2026-10-30 (hub Story
+  // 249.1.5): its site test reads the frozen legacy favicon there.
+  'gtllclaw.com': ['src/**', 'docs/inventory/legacy/**'],
   // Born 2026-10-27 (hub Story 245.1.1; assessed at birth per KB
   // new-repo-standard item 11, 2026-10-26 — spec § 1): njk pages and the
   // vendored payload's READMEs under src/ are build inputs. Same class as
@@ -109,14 +119,22 @@ export const REPO_BUILD_INPUTS = {
   // (test/legacy-map.test.mjs, docs/inventory/legacy-addresses.md), so a
   // census-only PR must run `test` — the build OR the test suite (KB
   // new-repo-standard item 11; the fleet census is
-  // scripts/fleet/check-test-docs-inputs.mjs, its drain hub Story 248.1.8).
+  // scripts/fleet/check-test-docs-inputs.mjs, its drain hub Story 249.1.5).
   'activewaveinc.com': ['src/**', 'docs/inventory/**'],
   // Born 2026-09-05 (hub Story 75.1.2; spec 2026-09-05-tigerdash-design §7.2):
   // src/ IS the Eleventy input dir, and the vendored @fgl/vituno payload lands
   // READMEs under src/ (gates/, icons/, fonts/) — a payload edit classified
   // docs-only would skip the required test job's egress gate and payload
-  // re-hash. Same class as ghaffaritabrizi.com / bridgetandomid.com.
-  tigerdash: ['src/**'],
+  // re-hash. Same class as ghaffaritabrizi.com / bridgetandomid.com. The
+  // reference corpus files and one committed probe joined 2026-10-30 (hub Story
+  // 249.1.5): its tests read them (the corpus by `join(root, 'docs', …)`).
+  tigerdash: [
+    'src/**',
+    'docs/reference-corpus.tsv',
+    'docs/reference-repos.md',
+    'docs/reference-readme-stub.md',
+    'docs/probes/2026-10-26-sprint23-prototypes/git-census-2.56.0.json',
+  ],
   // tigerian returned 2026-10-12 with a different shape (the successor repo,
   // born 2026-09-15 — hub CLAUDE.md § projects/): no markdown feeds its
   // build, but its two root `*_NOTICES.md` files are VALIDATED OUTPUTS of
@@ -140,8 +158,10 @@ export const REPO_BUILD_INPUTS = {
   // every tracked file under `assets/`, so a kit's LICENSE.md (or the
   // manifest itself) is a build input — `**` crosses segments, and the
   // gate's own exemptions (the manifest, `assets/README.md`) are not the
-  // classifier's: an edit there must run the gate (Story 201.1.1).
-  tigerian: ['*_NOTICES.md', 'assets/**'],
+  // classifier's: an edit there must run the gate (Story 201.1.1). The
+  // reference corpus files joined 2026-10-30 (hub Story 249.1.5): its
+  // reference-corpus test reads them.
+  tigerian: ['*_NOTICES.md', 'assets/**', 'docs/reference-corpus.tsv', 'docs/reference-repos.md', 'docs/reference-readme-stub.md'],
   // tigerfid (adopted 2026-10-26, hub Initiative 243) has no build, but its
   // root third-party notices file is a VALIDATED OUTPUT of the licence gate
   // its `test` job runs (`scripts/check-licenses.mjs`, tigerfid Story 1.1.4,
@@ -151,6 +171,19 @@ export const REPO_BUILD_INPUTS = {
   // scans this synced canonical). Hub inbox #4410, triaged by hub Story
   // 245.1.2's PR on Air Traffic Control's addendum.
   tigerfid: ['*_NOTICES.md'],
+  // The drain of hub Story 249.1.5 (2026-10-30): each committed docs-glob file
+  // these repos' tests read, the narrowest entry that covers it (the Hub Sprint
+  // 73 proposal's measured forms; a fixture under test/ or spec/ is covered by
+  // NEVER_DOCS_GLOBS instead). src/** is deccentral.com's and expeal.com's
+  // Eleventy input dir, whose vendored payload READMEs their tests re-hash.
+  'deccentral.com': ['src/**', 'docs/seam-contract.md'],
+  'expeal-app': ['app/assets/**'],
+  // docs/qa/*.json and docs/close/1.10.json are read by expeal.com's tests; as a
+  // build input the manifest runs the full suite, never only the `lint`
+  // validator job (classify reads build inputs first).
+  'expeal.com': ['src/**', 'docs/qa/*.json', 'docs/design/design-direction.md', 'docs/design/drift-log.md', 'docs/close/1.10.json'],
+  // The hub, keyed by its origin's basename as main() keys it.
+  'fields-ghaffari-labs': ['docs/compliance/MANIFEST.tsv', 'docs/security/vdp.md'],
 };
 
 // The third tier's per-repo validator job (Story 19.2.1): the ONE workflow
@@ -234,7 +267,7 @@ export function classify(changedPaths, { docsGlobs = DOCS_GLOBS, alwaysFull = AL
   if (build.length) {
     return full('changed a markdown BUILD INPUT for this repo, not documentation', build);
   }
-  const nonDocs = changedPaths.filter((p) => !matchesAny(p, docsGlobs));
+  const nonDocs = changedPaths.filter((p) => !matchesAny(p, docsGlobs) || matchesAny(p, NEVER_DOCS_GLOBS));
   if (nonDocs.length) {
     return full('changed non-documentation paths', nonDocs);
   }

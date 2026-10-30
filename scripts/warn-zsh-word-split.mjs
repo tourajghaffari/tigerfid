@@ -35,7 +35,7 @@
 // WARN_ZSH_WORD_SPLIT_SHELL=zsh|other so the tests pin both faces on any box
 // (the warn-piped-checker.mjs WARN_PIPED_CHECKER_PLATFORM shape). The command
 // is NEUTRALIZED first: heredoc bodies, single-quoted spans, double-quoted
-// spans, and comments are data — a double-quoted `"$var"` list item is exactly
+// spans (read in one linear pass; an escaped `\"` outside a span opens none — Story 249.1.11), and comments are data — a double-quoted `"$var"` list item is exactly
 // the quoted-and-silent form, and a loop inside `bash -c "…"` runs under a
 // shell that splits. Then every `for <name> in <list>` head and every
 // `set -- <list>` is read: it fires when a list ITEM carries an unquoted
@@ -228,7 +228,37 @@ const SPLIT_ITEM_RE = /\$\{=|\$\{\(|\[[@*]\]|\$[@*]|\$\(|`|[*?[]/;
 // Command text that turns splitting on, or leaves zsh, for the whole command.
 const SPLIT_ON_RE = /\b(?:setopt\s+sh_?word_?split|set\s+-y\b|emulate\s+(?:-[LR]+\s+)?(?:sh|bash|ksh)\b)/i;
 // Story 247.1.6: the list continues across a backslash-newline (`for f in a \` then `$B`).
-const FOR_RE = new RegExp(`\\bfor\\s+(${NAME})\\s+in\\s+((?:[^;\\n\\\\]|\\\\\\r?\\n|\\\\[^\\n])*)`, 'g');
+// Story 249.1.11: the head is this pattern; its list is read by forHeads' loop, never by a starred
+// alternation (`(?:[^;\n\\]|\\\r?\n|\\[^\n])*` took a stack frame per character and threw RangeError
+// at 12,000,000 characters — the hook's unawaited main() then exited 1: fail-open).
+const FOR_HEAD_RE = new RegExp(`\\bfor\\s+(${NAME})\\s+in\\s+`, 'g');
+
+// Every `for NAME in LIST` head, in order: { head, list }. The list runs to the first `;` or newline
+// outside an escape; a backslash-newline (or backslash-CR-LF) continues it, any other backslash escape
+// is consumed whole, and a lone trailing backslash ends it — FOR_RE's own reading, in one pass.
+function forHeads(text) {
+  const out = [];
+  const re = new RegExp(FOR_HEAD_RE.source, 'g');
+  let m;
+  while ((m = re.exec(text))) {
+    const start = re.lastIndex;
+    let j = start;
+    while (j < text.length) {
+      const c = text[j];
+      if (c === ';' || c === '\n') break;
+      if (c === '\\') {
+        if (text[j + 1] === '\r' && text[j + 2] === '\n') j += 3;
+        else if (j + 1 < text.length) j += 2;
+        else break;
+        continue;
+      }
+      j++;
+    }
+    out.push({ head: text.slice(m.index, j), list: text.slice(start, j) });
+    re.lastIndex = j;
+  }
+  return out;
+}
 const SET_RE = /\bset\s+--\s+([^;\n|&]*)/g;
 const ARRAY_RE = new RegExp(`(?:^|[\\s;&|(])(${NAME})=\\(`, 'g');
 
@@ -280,8 +310,55 @@ function dropSubstitutions(text) {
 // double-quoted escape may be a backslash-newline (Story 248.1.20: `.` never
 // matched the newline, so `"a \` + newline + ` $B "` stayed an open quote and
 // its `$B` read as a `for` item — one quoted item to the shell).
-const QUOTED_SPAN_RE = /'[^']*'|"(?:[^"\\]|\\[\s\S])*"/g;
+// Story 249.1.11: the spans are read by replaceQuotedSpans' one pass, never by the pattern
+// `'[^']*'|"(?:[^"\\]|\\[\s\S])*"` — at every `"` it re-scanned to the text's end when no quote
+// closed, so an escaped quote across continuations (`echo "` then `\`, a newline and `\"`,
+// repeated) read in time quadratic in its length (160 KB: 1638 ms).
 const COMMENT_RE = /(^|\s)#[^\n]*/g;
+
+// Each quoted span of `text` replaced by fn(span), in one pass: a single-quoted span to its closing
+// quote; a double-quoted span through its backslash escapes (a backslash-newline among them) to its
+// closing quote. Outside a span a backslash escapes the next character, so `\"` opens no span — the
+// shell's reading (bash reads `for f in \"x\" \` + newline + ` "$B"` as the items `"x"` and `$B`
+// quoted, one each; the pattern opened a span at the escaped quote and read `$B` bare, a false DENY).
+// A quote no partner closes is left as written, as the pattern left it; and once one quote kind is
+// unclosed no later quote of that kind can close either (every later `"` was escaped in the failed
+// scan, whose reading from there is the later quote's own), so the tail is never read twice.
+function replaceQuotedSpans(text, fn) {
+  let out = '';
+  let i = 0;
+  let singleOpen = false;
+  let doubleOpen = false;
+  while (i < text.length) {
+    const ch = text[i];
+    if (ch === '\\') {
+      out += text.slice(i, i + 2);
+      i += 2;
+      continue;
+    }
+    if (ch === "'" && !singleOpen) {
+      const j = text.indexOf("'", i + 1);
+      if (j !== -1) {
+        out += fn(text.slice(i, j + 1));
+        i = j + 1;
+        continue;
+      }
+      singleOpen = true;
+    } else if (ch === '"' && !doubleOpen) {
+      let j = i + 1;
+      while (j < text.length && text[j] !== '"') j += text[j] === '\\' ? 2 : 1;
+      if (j < text.length) {
+        out += fn(text.slice(i, j + 1));
+        i = j + 1;
+        continue;
+      }
+      doubleOpen = true;
+    }
+    out += ch;
+    i++;
+  }
+  return out;
+}
 
 // Heredoc bodies dropped (each body and its terminator line). Shared by
 // neutralizeSpans and the literal read (Story 161.1.1), so both see the same
@@ -303,7 +380,7 @@ function stripHeredocs(command) {
 
 export function neutralizeSpans(command) {
   let text = stripHeredocs(command);
-  text = text.replace(QUOTED_SPAN_RE, (m) => (/\\n|\n/.test(m) ? ' "\\n" ' : ' "" '));
+  text = replaceQuotedSpans(text, (m) => (/\\n|\n/.test(m) ? ' "\\n" ' : ' "" '));
   // Comments go BEFORE the substitution scan (Sprint 33 N-2): a `# note (`
   // on the first line of a multi-line `$(…)` is data to the shell too, and
   // its unbalanced paren would otherwise leave the substitution unclosed —
@@ -315,6 +392,30 @@ export function neutralizeSpans(command) {
 
 export function neutralize(command) {
   return dropSubstitutions(neutralizeSpans(command));
+}
+
+// A brace-list item's inner text — `{` … `}` around text holding no other brace but whole `${…}`
+// references, with at least one comma outside them — or null. Story 249.1.11: one pass, where the
+// pattern `^\{(P,P)\}$` (P = `(?:[^{}]|\$\{[^{}]*\})*`) backtracked over every comma: an unclosed or
+// affixed list of `${a}` parts at 200 KB read in 4–5 s. The same items match; the caller splits the
+// inner text at every comma, as before (Story 248.1.20).
+function braceListInner(item) {
+  if (item.length < 3 || item[0] !== '{' || item[item.length - 1] !== '}') return null;
+  const end = item.length - 1;
+  let comma = false;
+  for (let i = 1; i < end; i++) {
+    const c = item[i];
+    if (c === '$' && item[i + 1] === '{') {
+      let j = i + 2;
+      while (j < end && item[j] !== '{' && item[j] !== '}') j++;
+      if (j >= end || item[j] !== '}') return null;
+      i = j;
+      continue;
+    }
+    if (c === '{' || c === '}') return null;
+    if (c === ',') comma = true;
+  }
+  return comma ? item.slice(1, end) : null;
 }
 
 // Every `for … in <list>` head and `set -- <list>` whose list carries an
@@ -340,15 +441,14 @@ export function findWordSplits(command) {
   // be a whole `${VAR}` (`{a,${B}}`, `{${A},${B}}`) — its inner braces are read as a reference's,
   // never as a nested list, which stays silent (`{$A,{b,c}}`).
   const WHOLE_REF = new RegExp(`^${REF_RE.source}$`);
-  const BRACE_PART = String.raw`(?:[^{}]|\$\{[^{}]*\})*`;
-  const BRACE_LIST = new RegExp(`^\\{(${BRACE_PART},${BRACE_PART})\\}$`);
   const judge = (form, head, list) => {
     const vars = [];
     const items = form === 'for' ? list.replace(/\\\r?\n/g, '').split(/\s+/) : list.split(/\s+/);
     for (const item of items) {
       if (!item || SPLIT_ITEM_RE.test(item)) continue;
-      if (form === 'for' && BRACE_LIST.test(item)) {
-        for (const part of BRACE_LIST.exec(item)[1].split(',')) {
+      const inner = form === 'for' ? braceListInner(item) : null;
+      if (inner !== null) {
+        for (const part of inner.split(',')) {
           const r = new RegExp(`^${REF_RE.source}$`).exec(part);
           if (!r) continue;
           const name = r[1] ?? r[2];
@@ -364,7 +464,7 @@ export function findWordSplits(command) {
     }
     if (vars.length) found.push({ form, head: head.trim(), vars });
   };
-  for (const m of text.matchAll(FOR_RE)) judge('for', m[0], m[2]);
+  for (const h of forHeads(text)) judge('for', h.head, h.list);
   for (const m of text.matchAll(SET_RE)) judge('set', m[0], m[1]);
   return found;
 }
@@ -584,7 +684,7 @@ const NOT_PLAIN = new Set(['$', '`', String.fromCharCode(92)]);
 
 export function findLiteralFaces(command) {
   const spans = [];
-  let text = stripHeredocs(command).replace(QUOTED_SPAN_RE, (m) => {
+  let text = replaceQuotedSpans(stripHeredocs(command), (m) => {
     spans.push(m);
     return `@@${spans.length - 1}@@`;
   });
