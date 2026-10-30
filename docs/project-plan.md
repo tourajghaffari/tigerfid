@@ -1751,6 +1751,82 @@ with the date.
 - **Omid's word:** the four refused prices were put to him first-hand in this story's terminal, in one message, between its clock reads of 22:23:33Z and 22:24:17Z: "Write all as not read (Recommended)".
 - **The EU totals,** each lacking parts the US totals count: starter fully assembled 598.18, advanced partly assembled 1,387.85, pro hand-solder 2,144.08, and the spec's first build, advanced fully assembled, 1,413.52.
 
+**Reviewed:** 2026-10-30, by the Story 2.1.19 reviewer pass (tigerfid #91).
+- **The pass:** "Mac Reviewer", a reviewer session on the Mac, on the fleet
+  coordinator's orders, launched in the Mac's home folder and working from
+  the hub checkout. It was a fresh launch: its background-task path id
+  equals its session id, `86ac7523-9bad-4199-8c93-a5a8b64ce65b`. It was not
+  elevated (uid 501) and did none of this story's work.
+- **Verdict: PASS.** The story meets its Done-when as the decision sitting
+  filed it (#83). No finding is owed. One PATCH rides this PR: the research
+  log's entry for the story's reads.
+- **The method:** the pass read the repo at `bfb2b15` and #86's diff from
+  `c46efb83` (#85's merge, its base). #86 merged `origin/main` once and kept
+  both `reviewedFor` lines in `docs/close/2.1.json`: the manifest at
+  `97d1ae40` holds Story 2.1.18's and Story 2.1.19's DONE lines and parses.
+  One script rebuilt every EU figure #86 adds from the US figures and the
+  read prices, and censused the numbers on the lines #86 removed.
+- **The merge:** #86 → `97d1ae40ed7c20e4e83b20611e54bc1431f95658`, GitHub's
+  stamp 22:32:30Z, read from the API between this pass's `date -u` reads of
+  22:42:59Z and 22:45:21Z.
+- **Each part the EU build changes: MET.** `tiered-cost.md` § The EU build
+  prices or marks each, from a seller's or maker's page with its currency
+  and read date, each with its § Sources row:
+  - the 868 MHz chip antenna is named from its maker's page (Johanson
+    0868AT43A0020001E, 858–878 MHz), its price not read;
+  - the W5017's gain at 868 MHz is read (0.90, 0.89 and 0.93 dBi), so the
+    EU build keeps the whip, unread as in the US build;
+  - the 230 V parts: the Field Generator's supply, 7,90 € (7.42); the
+    starter iron's supply, 15,50 € (14.55); the FX-971, 458,15 € with VAT,
+    385.00 € net (430.12); the two ATTEN stations' 230 V models not read;
+    the hot plate's EU plug and the microscope light's 230 V supply named
+    as lacking.
+  - The four unread prices are written not read on Omid's word, first-hand
+    in that story's terminal between its reads of 22:23:33Z and 22:24:17Z:
+    "Write all as not read (Recommended)" (plan Sprint 3's D7).
+- **The EU totals: MET**, each summed before rounding, with its Lacks. All
+  32 figures reproduce:
+  - 7.90 ÷ 1.19 × 1.1172 = 7.42 and 15.50 ÷ 1.19 × 1.1172 = 14.55;
+    458.15 ÷ 1.19 = 385.00, and 385.00 × 1.1172 = 430.12;
+  - the devices 2.12 less on each route (−3 × 1.1947 + 7.42 − 5.95):
+    264.91, 239.24 and 195.35;
+  - the tools: 198.08 − 16.50 + 14.55 = 196.13; 1,071.42 − 59.95 =
+    1,011.47; 1,581.42 − 279.95 + 430.12 = 1,731.59;
+  - the totals 598.18, 1,387.85, 2,144.08 and the first build's 1,413.52,
+    with 535.43, 1,242.26, 1,919.16 and 1,265.23 €;
+  - the radio: 13.98 + 2.15 − 0.93 = 15.20 dBm conducted, the tag's 7.35
+    and 10.85 dBm e.r.p., and the datasheet gain's 17.6 and 20.8 dB.
+- **No US figure moved: MET.** Every number on a line #86 removed (26
+  distinct) is on a line it added. The removed lines are the old "named,
+  not priced" section, a footnote and two re-dated § Sources rows, none of
+  them a US table's row. `requirements.md` and the five other study
+  documents keep their blobs from `c46efb83`.
+- **The section's grep: MET.** #86's grep reproduces, its 11 hits on the
+  lines its table names. It was run in node here, since its `[0-9]{2}` is
+  the Mac shell's refused bounded repetition.
+- **The battery** at `bfb2b15`, under the Mac's lock (GO 22:45:21Z, END
+  22:45:25Z): `npm test` exit 0, 22 of 22; `node scripts/reference-check.mjs`
+  "reference-check: ok — 299 rows verified, README the stub"; the close
+  runner over the eleven teeth, eleven PASS, `eu-build-priced` listed for
+  the closer.
+- **The PATCH** (in this PR): `docs/reference-research.md` had no Story
+  2.1.19 entry in § 4 or § Searches already run, though the story read some
+  ten pages and ran a web search (the convention of Stories 2.1.6, 2.1.14
+  and 2.1.15). The entry and its line are written from the story's own
+  `tiered-cost.md` § Read on 2026-10-30, for the EU build, with nothing
+  added.
+- **An observation, not a finding:** the research log has no line either
+  for Stories 2.1.17 and 2.1.18, each of whose PRs states that no source was
+  read and no search run, nor for Story 2.1.7's reads of the two FCC grants,
+  which the rebuild spec cites by URL and SHA-256 (its § 11, call 7). The
+  close's prose checks read the log.
+- **The recurrence triage:** this pass's one seat is a `piped-checker-exit`:
+  the Story 2.1.18 review's notes PR merge was piped into `grep`, then read
+  unpiped by `gh pr view` (MERGED). The register holds the class decided.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its reads of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open
+  during this session when ready and in the right order."
+
 **Story:** As a beginner in the European Union, I want the EU build's parts
 priced beside the US build's, so that the guides' shopping lists serve me
 too.
