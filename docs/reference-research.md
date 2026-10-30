@@ -389,6 +389,21 @@ rests on a price page (plan Sprint 2's D8).
   answered, so no price is written not read and no question went to Omid
   (the Sprint 4 block's D7).
 
+### Story 2.1.15 — the Sprint 4 review's fixes (2026-10-30)
+
+Recorded by Story 2.1.16, from the Story 2.1.15 review's nit. What was read
+is cited in `docs/study/tiered-cost.md` § Read on 2026-10-30 and its
+§ Sources row RL-NANOVNAH4. No source is pinned: no choice rests on a price
+page (plan Sprint 2's D8).
+
+- **KEPT, cited by URL and read date, not pinned:** R&L Electronics' page
+  for the NanoVNA-H4, read again for its box list (the Sprint 4 review's
+  Minor 4), by one plain request between two clock reads that both read
+  08:31:29Z. Its price read 109.95, as Story 2.1.6 read it, so no total
+  changed.
+- **Nothing else was read.** The story's PR (#67) names no other read:
+  every other figure it changed rests on the studies' own stated inputs.
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -440,3 +455,8 @@ a verdict here.
   one for a 100 W USB-C supply. Each figure was then read from the page
   itself, never from a search result. Adafruit's own search found the
   pogo-pin clip.
+- **2026-10-30:** Story 2.1.15's one read, R&L's NanoVNA-H4 page (§ 4,
+  above). No search was run: the read went to a page the tiers already
+  cite.
+- **2026-10-30:** Story 2.1.16 read no source and ran no search: each of
+  its fixes rests on the studies' own stated inputs.

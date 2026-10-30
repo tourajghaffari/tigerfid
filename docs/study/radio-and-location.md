@@ -433,9 +433,12 @@ spectrum analyzer (`original-system.md` § What this means for the study).
   review's Minor 3):
   - **the conference:** 23 Field Generators, ASSUMED from [1]: the main
     hall's twelve areas (§ Zones), the other nine rooms and two exits, as
-    many exits as the ward's. The block takes 10.2 ms of each frame, which
-    leaves 324 reply slots a frame, 1,296 a second. A hall of 1,000 tags
-    then takes about 0.77 s, with 0.23 s left for retries ([3]);
+    many exits as the ward's. [2]'s second Reader in the main hall adds no
+    block of its own, since it listens on the first Reader's network
+    (§ Zones, The conference hall's second Reader). The block takes 10.2 ms
+    of each frame, which leaves 324 reply slots a frame, 1,296 a second. A
+    hall of 1,000 tags then takes about 0.77 s, with 0.23 s left for
+    retries ([3]);
   - **the ward:** 27 Field Generators (§ Zones), 11.8 ms, which leaves 321
     reply slots a frame, 1,284 a second. Its 100 tags take 0.08 s ([12]);
   - **any one Reader:** its block can hold up to 158 Field Generators before
@@ -478,7 +481,9 @@ of 10–20 dB.
   10–20 dB for both together. That leaves 1.8–11.8 dB at the worst body
   loss. [2] is therefore met on paper, not with confidence. Its mitigations
   are known: a Reader antenna mounted high, and [2]'s second Reader per
-  hall. The build's range test ([2], 100 reads at each step) decides.
+  hall, which listens on the first Reader's network (§ Zones, The
+  conference hall's second Reader). The build's range test ([2], 100 reads
+  at each step) decides.
 - **The EU Reader** stays at 25 mW e.r.p. INFERRED: 17 dBm with a 2 dBi
   antenna would be 48.4 mW e.r.p., over band 47's limit.
 
@@ -510,6 +515,32 @@ of 10–20 dB.
 
   The band carries five 600 kHz channels (INFERRED), and band 47's row
   sets no bandwidth limit. Hopping is not required there.
+- **In the European Union, each Reader keeps one channel, and Readers
+  beside each other take different ones** (added by plan Story 2.1.16, from
+  the Story 2.1.15 review's Minor A). INFERRED:
+  - **the warehouse is where it matters.** Its 9–12 Readers ([20]) sit in a
+    grid, each with up to eight around it. Four channels in a repeating
+    2 × 2 pattern give each Reader a channel that no Reader around it uses,
+    and leave one of the five spare. The ward and the conference each keep
+    one block of slots (§ Anti-collision; § Zones, The conference hall's
+    second Reader), one network, so one channel serves each;
+  - **one channel for every Reader is declined.** A bay at a Reader's edge
+    holds a Field Generator of each network (§ Zones, A Reader's edge). On
+    one channel their 0.4 ms slots would meet whenever their starts lay
+    within 0.4 ms of each other: 0.8 ms of each 250 ms frame, 0.32 % of the
+    time. The two Readers' crystals, each ±10 ppm (PSIP p23), slide by up
+    to 20 µs a second. So at their worst a meeting lasts 0.8 ms ÷ 20 µs =
+    40 s, once in 250 ms ÷ 20 µs = 12,500 s, about 3.5 hours. Crystals that
+    agree more closely meet less often and for longer, without bound, as in
+    the declined row of § A Reader's edge;
+  - **a tag that moves to another Reader** learns that Reader's channel
+    from the downlink that places it (§ Zones, A Reader's edge), and listens
+    there for at most a frame. A lost tag tries the next channel at each
+    search, so it meets the Reader whose area it lies in within four
+    searches. Once its window is a frame, that is about 15 minutes: each
+    search listens a frame, 2.795 µC + 5.8 mA × 250 ms = 1.45 mC, which
+    takes 220 s at 6.6 µA (§ Zones, How a tag hears a Field Generator it has
+    not heard before), and 4 × 220 s is 14.7 minutes.
 
 ### Zones: how a move is noticed within 5 s
 
@@ -565,18 +596,25 @@ never be noticed. The rebuild names the slots for it:
   frame's window after about 35 minutes. At a search every 12 s it would
   then listen a whole frame each time, about 121 µA. So:
   - **the window stops growing** where a listen is sure to meet the
-    network: at one frame in the EU, where a network keeps its channel, and
-    at one hop cycle, 10.5 s, in the US, where a tag on one channel meets
-    the network once a cycle (§ Channels). The US window reaches the cycle
-    after about 24 hours lost;
+    network: at one frame in the EU, where a network keeps its channel (a
+    tag lost in another Reader's area tries the next channel at each
+    search, § Channels), and at one hop cycle, 10.5 s, in the US, where a
+    tag on one channel meets the network once a cycle (§ Channels). The US
+    window reaches the cycle after about 24 hours lost;
   - **each search waits for its own charge over 6.6 µA.** A search that
     listens longer comes later, so a lost tag listens for 6.6 µA however
     long it is lost, the figure it started at.
-  - **Its cost** is the time to be found again: one search in about 4
-    minutes once the window reaches a frame, about 6.5 minutes after an
-    hour lost, and in the US at most about 2.6 hours once the window
-    reaches the cycle. The build initiatives may restart the search at
-    once on a pin edge, a seal's loop or a badge's button (INFERRED).
+  - **Its cost** is the time to be found again, which differs by region:
+    - **in the EU,** one search in about 4 minutes once the window reaches
+      a frame, after about 35 minutes lost, however long the tag then
+      stays lost (four searches, about 15 minutes, for a tag lost in
+      another Reader's area, § Channels);
+    - **in the US,** where the window keeps widening, the same at about 35
+      minutes, then one search in about 6.5 minutes after an hour lost, and
+      at most about 2.6 hours once the window reaches the cycle.
+
+    The build initiatives may restart the search at once on a pin edge, a
+    seal's loop or a badge's button (INFERRED).
 - **The slots sit in one block after the Reader's beacon.** ASSUMED: the
   beacon lasts 1.0 ms and each Field Generator's slot 0.4 ms, which together
   reproduce this study's 1.8 ms for the beacon and two slots. The build
@@ -685,7 +723,8 @@ listens:
   - **the main hall:** its twelve areas, 4 × 3 of about 10 m, column by
     column, three areas to a column. An inner area's set, the three columns
     around it, is one run of nine slots. Every other area's is one run of at
-    most eight, the areas between included;
+    most eight, the areas between included. [2]'s second Reader keeps the
+    hall one block (§ The conference hall's second Reader, below);
   - **the conference's other rooms:** each room's set, its slot and its two
     neighbours', is priced as three wakes, the most three slots can need
     wherever they sit, so its figure needs no order;
@@ -721,7 +760,17 @@ listens:
       next step: it reaches a tag within about 5 minutes and 12 s.
       `parts-and-toolchains.md` § [27] prices that bound, 288 wakes a day.
       A step a minute would cost 6.4 mAh over five years, and leave the
-      cold-chain tag 1.06 of them.
+      cold-chain tag 1.06 of them;
+    - **the day's inventory waits for the step too,** since a roll call is
+      a command (§ Anti-collision), and it still finishes inside [21]'s
+      10 minutes (added by plan Story 2.1.16, from the Story 2.1.15 review's
+      Minor B). The step comes within 300 s. Each tag hears it at its next
+      listen, within 12 s, and the next beacon within 0.25 s. Each Reader's
+      share of [19]'s 100,000 items, 8,333 to 11,111 among [20]'s 9–12
+      Readers, then answers at [21]'s 200 a second in 42–56 s. That is
+      354–368 s, about 5.9–6.1 minutes. A reply missed in the pass is
+      retried in a later frame's spare slots of the same roll call
+      (§ Anti-collision), so it waits for no second step.
 
     The downlink that names a listen set needs no count, since a tag that
     has just reported a change listens for it (above);
@@ -734,8 +783,9 @@ listens:
   - a command reaches a tag at its next listen and the beacon after it: at
     most 1.25 s at a 1 s listen, where the old layout took 1 s (§ Does
     ActiveWave's approach still win). In the warehouse it waits for the
-    count's next step as well, so it takes up to about 5 minutes and 12 s
-    (above);
+    count's next step as well, so it takes up to about 5 minutes and 12 s,
+    and the day's inventory finishes in about 6.1 minutes at most, inside
+    [21]'s 10 (above);
   - one more wake for each check-in;
   - no frame time: the block keeps its length (§ Anti-collision).
 - **What it leaves unchanged:** [13]'s 3.0 s, [17]'s pairing and [22]'s
@@ -762,8 +812,10 @@ side** (added by plan Story 2.1.15, from the Sprint 4 review's finding 1).
   10 m bays ([19], [22]), with a Reader for every 30–33 m, the aisle
   crosses two or three Readers' edges, so four or six of its ten bays sit
   beside a bay of another Reader. An item there has a neighbour whose slot
-  follows another beacon, at another time and, in the US, on another
-  channel. Its set cannot be one run in its own Reader's block.
+  follows another beacon, at another time and on another channel: in the
+  US by its own hop, and in the EU because Readers beside each other take
+  different channels (§ Channels). Its set cannot be one run in its own
+  Reader's block.
 - **The choice: a second Field Generator in the bay across each edge.** It
   follows this Reader's network, as any of its Field Generators does, at a
   power set for that bay, and its slot sits in this Reader's block next to
@@ -779,9 +831,11 @@ side** (added by plan Story 2.1.15, from the Sprint 4 review's finding 1).
   - **a slot in the block for each:** two for each aisle a Reader covers.
     A block may hold 525 at [21]'s 200 a second (§ Anti-collision);
   - **an item carried across the edge** joins the next Reader once the
-    host places it in the far bay, as a new tag joins: at most one hop
-    cycle, 10.5 s, of listening at 5.8 mA, 0.017 mAh. Items at rest rarely
-    move, so this study does not price it.
+    host places it in the far bay, as a new tag joins: in the US, at most
+    one hop cycle, 10.5 s, of listening at 5.8 mA, 0.017 mAh. In the EU the
+    downlink that places it names the next Reader's channel, and it listens
+    there for at most a frame, 0.0004 mAh (§ Channels). Items at rest
+    rarely move, so this study does not price it.
 - **Where more Field Generators are not wanted,** the items at the edge
   take the second row below: five years on a CR2032 still holds on paper
   for both item tags.
@@ -798,28 +852,88 @@ their bound (above):
 | A second wake at every listen | 1.99 µA | 1.03 and 0.95: **cold chain unmet** | 25 s | as the second row, with five times its wakes |
 | The review's second wake, widened as the first (2 × 60 ppm × 12 s) | 2.44 µA | 0.91 and 0.84: **both unmet** | 25 s | as the row above |
 
-- **The second wake's window** (the second and fourth rows) is timed from
-  the slot the tag has just heard in its own Reader's block. So it widens
-  for the two Readers' crystals, each ±10 ppm (PSIP p23): 2 × 20 ppm of the
-  time since the tag last heard the far slot. It widens as well for the
-  tag's own RTC across the gap between the two slots, at most a frame
-  (2 × 50 ppm × 0.25 s). That is 0.505 ms at 12 s and 2.43 ms at 60 s.
+- **The second wake's window** (the second and fourth rows; INFERRED) is
+  timed from the slot the tag has just heard in its own Reader's block. So
+  it widens for the two Readers' crystals, each ±10 ppm (PSIP p23): 2 ×
+  20 ppm of the time since the tag last heard the far slot. It widens as
+  well for the tag's own RTC across the gap between the two slots, at most a
+  frame (2 × 50 ppm × 0.25 s = 0.025 ms). That is 0.48 + 0.025 = 0.505 ms
+  at 12 s, the fourth row's, and 2.4 + 0.025 = 2.43 ms at 60 s, the
+  second's.
   When the far slot falls inside the tag's own run, the tag hears it in the
   next frame. The review's figures (163.8 and 176.4 mAh; 138.3 and 151.0)
   leave out the count's wakes and count years of 365.25 days, where
   § [27] counts 365. Its second pair widened the window for 20 ppm × 12 s
   on one side only.
-- **One Field Generator in both blocks is declined.** It would send its
-  slot in each block, but the two networks' frames slide against each other
-  by up to 5 µs a frame. Its two slots, with the 0.3 ms retune between them
-  (the ASSUMED set-up, `parts-and-toolchains.md` § The battery), then meet
-  for 0.56 % of the time: at the crystals' worst, about 70 s once in about
-  3.5 hours. Two crystals that agree more closely meet less often and for
+- **One Field Generator in both blocks is declined** (INFERRED). It would
+  send its slot in each block, but the two networks' frames slide against
+  each other by up to 5 µs a frame (20 ppm × 0.25 s). Its two slots, with
+  the 0.3 ms retune between them (the ASSUMED set-up,
+  `parts-and-toolchains.md` § The battery), then meet while their starts
+  lie within 0.4 + 0.3 = 0.7 ms either way: 1.4 ms of each 250 ms frame,
+  0.56 % of the time. At the crystals' worst, 20 µs a second, that is
+  1.4 ms ÷ 20 µs = 70 s, once in 250 ms ÷ 20 µs = 12,500 s, about 3.5
+  hours. Two crystals that agree more closely meet less often and for
   longer, and two that agree exactly may meet for good. While they meet,
   the far items lose that neighbour, and a move across the edge goes
   unseen. Nothing bounds that.
 - **A CR2450 at the edge** meets [27] by any of the five: 2.01 times the
-  need on cold chain even with the review's second wake.
+  need on cold chain even with the review's second wake (INFERRED). That
+  wake adds 2.44 − 1.51 = 0.93 µA over 43,800 hours, 40.7 mAh, to the
+  cold-chain tag's 156.2 mAh on a CR2450 (`parts-and-toolchains.md`
+  § [27]), and 396 ÷ 196.9 = 2.01.
+
+**The conference hall's second Reader: on the first Reader's network**
+(added by plan Story 2.1.16, from the Story 2.1.15 review's Minor C). [2]
+places "a second reader" in the main hall to cover the part the first does
+not reach (`requirements.md` [2]; § Range).
+- **The choice: it listens on the first Reader's network.** It times its
+  frame from the first Reader's beacon, as a Field Generator does, sends
+  no beacon and has no block, and passes every reply it hears to the host.
+  The host keeps one copy of each by the tag's `seq`
+  (`software-stack.md` § The fields), as it does for a reply heard by both
+  the Reader and a Field Generator. The hall stays one block on one
+  channel, so an inner area's set stays one run of nine, and [9] holds by
+  22 % as priced (`parts-and-toolchains.md` § Each worn tag's year).
+- **It serves [2] where [2] is weak** (INFERRED). A tag's reply is the
+  weaker path, by 5 dB in the US and 2.2 dB in the EU (§ Range), and the
+  second Reader is a second receiver for it. The first Reader's beacon
+  still reaches the whole hall. From the middle of a wall, no point of a
+  40 m × 30 m hall is more than √(40² + 15²) = 42.7 m away, 3.1 dB more
+  loss than at 30 m (20·log₁₀(42.7 ÷ 30)). In the US the beacon's 5 dB
+  covers that. In the EU it leaves the far corner 24.4 − 3.1 = 21.3 dB of
+  margin against a reply's 22.2 dB at 30 m, so [2]'s range test decides
+  there, as it does for the reply.
+- **What it costs** (INFERRED):
+  - **one more role for the Reader:** the Field Generator's timing beside
+    the Reader's receive path, on the same module (§ Zones);
+  - **the acknowledgement's path.** A reply that only the second Reader
+    hears is acknowledged in the first Reader's next beacon once the host
+    passes it on. If it comes too late, the tag retries in the next frame's
+    spare slots (§ Anti-collision). If every check-in of a badge were
+    retried once, its year would rise by the check-ins' 3.9 mAh: 126.4 mAh,
+    1.19 years in an area of the hall. The build measures the path.
+- **Its own network is declined** (INFERRED). It would put a Reader's edge
+  across the hall:
+  - **with no Field Generator added,** an area beside the edge hears six
+    slots in its own block and, at a second wake, three in the other's:
+    (2.795 + 5.8 × (2.4 + 0.24)) + (2.795 + 5.8 × (1.2 + 0.105)) =
+    18.107 + 10.364 µC every 2 s, 14.24 µA against the run of nine's
+    12.53. The second wake's window is 2 × 20 ppm × 2 s + 0.025 ms =
+    0.105 ms (§ A Reader's edge). That is 137.4 mAh a year: 1.09 years, so
+    [9] holds by 9 %, not 22 %, and 0.86 years at the 117.5 mAh floor, not
+    0.96. The warehouse's route keeps the 22 % with six more Field
+    Generators, three in each column beside the edge;
+  - **a badge that crosses the edge** joins the other Reader each time, as a
+    new tag joins: in the US up to one hop cycle, 0.017 mAh. At ten
+    crossings a day (ASSUMED), that is up to 61.7 mAh a year, half the hall
+    badge's year again: 184.2 mAh even on the warehouse's route, 0.81
+    years, and [9] unmet. Items at rest rarely cross an edge; people at a
+    conference do;
+  - **in the EU, a second channel** (§ Channels).
+
+  It would add reply slots the hall does not need: one network gives 1,296
+  a second against [3]'s 1,000 (§ Anti-collision).
 
 **The battery this costs** is priced in `parts-and-toolchains.md` § Each
 worn tag's year and § [27]: Story 2.1.4 replaced this study's ASSUMED
