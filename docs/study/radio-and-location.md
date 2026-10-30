@@ -524,6 +524,27 @@ of 10–20 dB.
     and leave one of the five spare. The ward and the conference each keep
     one block of slots (§ Anti-collision; § Zones, The conference hall's
     second Reader), one network, so one channel serves each;
+  - **Readers that share a channel roll call at once** (added by plan Story
+    2.1.17, from the Story 2.1.16 review's Minor E). The pattern repeats a
+    channel two Readers along: a 3 × 3 grid puts four of its nine Readers
+    on one channel, and a 3 × 4 grid four of its twelve on each of two.
+    [21] counts its 200 a second per channel, "because readers that share a
+    channel share its airtime" (`requirements.md` [21]). Readers on one
+    channel here stand two bays apart, about 60 m, twice the 30 m at which
+    bays rarely hear each other in the United States (above):
+    20·log₁₀(60 ÷ 30) = 6.0 dB more loss in free space, before the racking
+    between them. So each runs its own roll call at [21]'s 200 a second,
+    and the day's inventory keeps its 5.9–6.1 minutes (§ Zones, The layout
+    of a listen). The build measures it, running [21]'s test on two Readers
+    that share a channel. If they hear each other there, they take turns:
+    the beacon that opens a roll call names its Reader's turn, so each tag
+    still hears one beacon and sends one reply, and
+    `parts-and-toolchains.md` § [27] is unchanged. The busiest channel's
+    four shares, 4 × 100,000 ÷ 9 = 44,444 items or 4 × 100,000 ÷ 12 =
+    33,333, then take 222 s or 167 s at 200 a second, after the count's
+    wait of 300 + 12 + 0.25 = 312.25 s (§ Zones, The layout of a listen).
+    The inventory then takes 534.5 s or 478.9 s, about 8.9 or 8.0 minutes,
+    still inside [21]'s 10;
   - **one channel for every Reader is declined.** A bay at a Reader's edge
     holds a Field Generator of each network (§ Zones, A Reader's edge). On
     one channel their 0.4 ms slots would meet whenever their starts lay
@@ -535,12 +556,30 @@ of 10–20 dB.
     the declined row of § A Reader's edge;
   - **a tag that moves to another Reader** learns that Reader's channel
     from the downlink that places it (§ Zones, A Reader's edge), and listens
-    there for at most a frame. A lost tag tries the next channel at each
-    search, so it meets the Reader whose area it lies in within four
-    searches. Once its window is a frame, that is about 15 minutes: each
-    search listens a frame, 2.795 µC + 5.8 mA × 250 ms = 1.45 mC, which
-    takes 220 s at 6.6 µA (§ Zones, How a tag hears a Field Generator it has
-    not heard before), and 4 × 220 s is 14.7 minutes.
+    there for at most a frame;
+  - **a lost tag searches its site's channels** (added by plan Story
+    2.1.17, from the Story 2.1.16 review's Minor D): the channels the site's
+    Readers use, which a Reader names to a tag when it joins, as a US tag is
+    given the hop order. Until its window reaches a frame, after about 35
+    minutes lost (0.25 s ÷ (2 × 60 ppm) = 2,083 s; § Zones, How a tag hears a
+    Field Generator it has not heard before), each search keeps its own
+    Reader's channel. A narrower window is timed on its own network's
+    frame, and another network keeps its own time, so it would meet that
+    network only by chance. After that, the tag tries the next of its
+    site's channels at each search. A tag that hears nothing cannot tell
+    whose area it lies in, so it cycles wherever it lies. Each search then
+    listens a frame, 2.795 µC + 5.8 mA × 250 ms = 1.45 mC, which takes 220 s
+    at 6.6 µA (there). So a tag lost in its own Reader's area is found:
+    - **in its first 35 minutes lost,** at its next search, on its own
+      channel, within 220 s, about 4 minutes, at any site. A search's
+      window is then narrower than a frame, so it costs less and comes
+      sooner;
+    - **after that, at the ward and the conference,** one channel each
+      (above), at its next search, within 220 s, about 4 minutes;
+    - **after that, in the warehouse,** within four searches, 4 × 220 s =
+      14.7 minutes, as is a tag lost in another Reader's area once its
+      window reaches a frame. The spare channel stays out of the cycle:
+      over all five, it would take up to 5 × 220 s = 18.3 minutes.
 
 ### Zones: how a move is noticed within 5 s
 
@@ -597,18 +636,21 @@ never be noticed. The rebuild names the slots for it:
   then listen a whole frame each time, about 121 µA. So:
   - **the window stops growing** where a listen is sure to meet the
     network: at one frame in the EU, where a network keeps its channel (a
-    tag lost in another Reader's area tries the next channel at each
-    search, § Channels), and at one hop cycle, 10.5 s, in the US, where a
-    tag on one channel meets the network once a cycle (§ Channels). The US
-    window reaches the cycle after about 24 hours lost;
+    lost tag then tries its site's channels in turn, § Channels), and at
+    one hop cycle, 10.5 s, in the US, where a tag on one channel meets the
+    network once a cycle (§ Channels). The US window reaches the cycle
+    after about 24 hours lost;
   - **each search waits for its own charge over 6.6 µA.** A search that
     listens longer comes later, so a lost tag listens for 6.6 µA however
     long it is lost, the figure it started at.
   - **Its cost** is the time to be found again, which differs by region:
     - **in the EU,** one search in about 4 minutes once the window reaches
       a frame, after about 35 minutes lost, however long the tag then
-      stays lost (four searches, about 15 minutes, for a tag lost in
-      another Reader's area, § Channels);
+      stays lost. The ward and the conference search their one channel, so
+      that is their time to be found. In the warehouse a lost tag then
+      tries its site's four channels in turn, so it is found within four
+      searches, about 15 minutes, in its own Reader's area as in another's
+      (§ Channels);
     - **in the US,** where the window keeps widening, the same at about 35
       minutes, then one search in about 6.5 minutes after an hour lost, and
       at most about 2.6 hours once the window reaches the cycle.
@@ -767,8 +809,10 @@ listens:
       Minor B). The step comes within 300 s. Each tag hears it at its next
       listen, within 12 s, and the next beacon within 0.25 s. Each Reader's
       share of [19]'s 100,000 items, 8,333 to 11,111 among [20]'s 9–12
-      Readers, then answers at [21]'s 200 a second in 42–56 s. That is
-      354–368 s, about 5.9–6.1 minutes. A reply missed in the pass is
+      Readers, then answers at [21]'s 200 a second in 42–56 s, every
+      Reader's roll call at once, those that share an EU channel included
+      (§ Channels gives the time if they take turns). That is 354–368 s,
+      about 5.9–6.1 minutes. A reply missed in the pass is
       retried in a later frame's spare slots of the same roll call
       (§ Anti-collision), so it waits for no second step.
 
@@ -784,8 +828,9 @@ listens:
     most 1.25 s at a 1 s listen, where the old layout took 1 s (§ Does
     ActiveWave's approach still win). In the warehouse it waits for the
     count's next step as well, so it takes up to about 5 minutes and 12 s,
-    and the day's inventory finishes in about 6.1 minutes at most, inside
-    [21]'s 10 (above);
+    and the day's inventory finishes in about 6.1 minutes at most, or 8.9
+    if Readers on one EU channel must take turns, inside [21]'s 10 (above;
+    § Channels);
   - one more wake for each check-in;
   - no frame time: the block keeps its length (§ Anti-collision).
 - **What it leaves unchanged:** [13]'s 3.0 s, [17]'s pairing and [22]'s

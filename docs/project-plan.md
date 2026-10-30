@@ -1279,7 +1279,12 @@ figure is sourced, MEASURED or INFERRED with its arithmetic; no requirement
 number moved; and the PR body quotes each item's grep with each hit's
 disposition (manifest prose check `story2115-review-fixes`).
 
-#### Story 2.1.17: The Story 2.1.16 review's fixes: a lost EU tag's channel search, and the inventory on shared channels
+#### Story 2.1.17: The Story 2.1.16 review's fixes: a lost EU tag's channel search, and the inventory on shared channels — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #79 (branch `story-2.1.17-review-fixes`, pre-tick head `e9232732`).
+**Outcome:** the review's two Minors are corrected in `radio-and-location.md`. No requirement number moved, and no printed figure changed: every figure added reproduces from the studies' inputs by a script, and `requirements.md` is unchanged, since none of its six dated pointer lines quotes a figure this story adds. The sitting had not run, so the study writes its own answers, for the sitting to confirm or overrule:
+- **Minor D** (§ Channels; § Zones, the lost tag's window and cost): a lost EU tag searches its site's channels, which a Reader names when the tag joins, the spare left out (five would take 18.3 minutes). Until its window reaches a frame, after about 35 minutes lost, each search keeps its own Reader's channel, since a narrower window meets another network only by chance. After that it tries the next at each search, wherever it lies. A tag lost in its own Reader's area is found within about 4 minutes in its first 35 minutes lost, at any site. After that, it is found within about 4 minutes at the ward and the conference, and within four searches, 14.7 minutes, in the warehouse.
+- **Minor E** (§ Channels; § Zones, the day's inventory): EU Readers that share a channel under the 2 × 2 pattern run their roll calls at once. They stand two bays apart, about 60 m, twice the 30 m at which bays rarely hear each other in the US (6.0 dB more free-space loss), so the inventory keeps its 5.9–6.1 minutes. If the build finds that they hear each other, they take turns (each tag still hears one beacon and sends one reply), and the inventory takes about 8.9 or 8.0 minutes, inside [21]'s 10.
 
 **Story:** As a stranger reading the study, I want a lost EU tag's channel
 search and the EU inventory's shared channels stated where the study is
