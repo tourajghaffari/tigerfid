@@ -521,30 +521,44 @@ Re-priced again by Story 2.1.12: the three slots are one run in the
 warehouse's block order, and the tag hears the Reader's beacon after each
 check-in and for the day's inventory, not at every listen
 (`radio-and-location.md` § Zones, The layout of a listen). Those beacons
-and the inventory's reply add 0.44 mAh over five years.
+and the inventory's reply add 0.44 mAh over five years. Re-priced again by
+Story 2.1.15, for the Sprint 4 review's finding 1 and its Minor 2:
+- **every bay, a Reader's edge included.** An item at a Reader's edge
+  listens as one at any other bay, since a Field Generator of its own
+  Reader's network sits in the bay across the edge
+  (`radio-and-location.md` § Zones, A Reader's edge). Each row is therefore
+  the costliest bay's: a run of three, where a bay at an aisle's end has
+  two;
+- **the count's beacon wakes, at their bound.** The warehouse's Reader
+  steps the count at most once in 5 minutes (`radio-and-location.md`
+  § Zones, The layout of a listen), so a tag hears at most 288 more beacons
+  a day, 8.77 µC each: 1.28 mAh over five years.
 
 | Listen every | CR2032: needs (150) | CR2032, cold chain | CR2450: needs (396) | CR2450, cold chain |
 |---|---|---|---|---|
-| 1 s | 514.6: 0.29 of five years | 527.3: 0.28 | 533.9: 0.74 | 546.5: 0.72 |
-| 4 s | 194.2: 0.77 | 206.9: 0.73 | 213.4: 1.85 | 226.1: 1.75 |
-| 8 s | 140.8: 1.07 | 153.4: 0.98 | 160.0: 2.47 | 172.7: 2.29 |
-| 12 s | **123.0: 1.22** | **135.6: 1.11** | 142.2: 2.78 | 154.9: 2.55 |
-| 14 s | 117.9: 1.27 | 130.6: 1.15 | 137.1: 2.89 | 149.8: 2.64 |
-| 16 s | 114.1: 1.32 | 126.7: 1.18 | 133.3: 2.97 | 146.0: 2.71 |
+| 1 s | 515.9: 0.29 of five years | 528.6: 0.28 | 535.2: 0.74 | 547.8: 0.72 |
+| 4 s | 195.5: 0.77 | 208.1: 0.72 | 214.7: 1.84 | 227.4: 1.74 |
+| 8 s | 142.0: 1.06 | 154.7: 0.97 | 161.3: 2.46 | 174.0: 2.28 |
+| 12 s | **124.2: 1.21** | **136.9: 1.10** | 143.5: 2.76 | 156.2: 2.54 |
+| 14 s | 119.2: 1.26 | 131.8: 1.14 | 138.4: 2.86 | 151.1: 2.62 |
+| 16 s | 115.3: 1.30 | 128.0: 1.17 | 134.6: 2.94 | 147.3: 2.69 |
 
-Before Story 2.1.12, the 12 s row read 143.7 (1.04) and 156.4 (0.96) on a
-CR2032, and 162.9 (2.43) and 175.6 (2.25) on a CR2450. Before Story 2.1.10
+Each figure counts years of 365 days. Before Story 2.1.15, the 12 s row
+read 123.0 (1.22) and 135.6 (1.11) on a CR2032, and 142.2 (2.78) and 154.9
+(2.55) on a CR2450. Before Story 2.1.12 it read 143.7 (1.04) and 156.4
+(0.96) on a CR2032, and 162.9 (2.43) and 175.6 (2.25) on a CR2450. Before
+Story 2.1.10
 it read 135.2 (1.11) and 142.6 (1.05) on a CR2032, and 154.5 (2.56) and
 161.8 (2.45) on a CR2450.
 
 - **A CR2450 alone does not keep five years.** At a 1 s listen it lasts
   about 3.7 years (0.74 × 5): five years at a listen every second take
-  534 mAh, less than its rated 620 mAh but more than the 396 mAh this study
+  535 mAh, less than its rated 620 mAh but more than the 396 mAh this study
   plans on.
 - **A slower wake alone does, for the plain and the cold-chain tag alike,
   well inside [26]'s bound.** A CR2032 keeps five years from a listen every
-  6.8 s, or every 8.6 s for cold-chain tags (10.8 s and 13.5 s before Story
-  2.1.12). The pairing alarm at a dock door
+  7.0 s, or every 8.8 s for cold-chain tags (6.8 s and 8.6 s before Story
+  2.1.15; 10.8 s and 13.5 s before Story 2.1.12). The pairing alarm at a dock door
   ([26], 30 s) bounds the interval from above. Two hearings plus 1 s for
   the slot, the Reader and the host take 2T + 1 s, so T may be 14.5 s at
   most. A 12 s listen takes 25 s.
@@ -556,38 +570,45 @@ it read 135.2 (1.11) and 142.6 (1.05) on a CR2032, and 154.5 (2.56) and
     looser.
 
 **The choice: the slower wake, a listen every 12 s,** unchanged by Stories
-2.1.10 and 2.1.12. It keeps five years on a CR2032 on paper for both item
-tags:
-- **its cost:** a margin of 22 % at the planning capacity for the plain
-  item tag, and 11 % for the cold-chain tag (4 % and 0.96 of five years
-  before Story 2.1.12; 11 % for the plain tag before Story 2.1.10); a zone
-  change shown in up to about 25 s; and [26] met with 5 s to spare;
+2.1.10, 2.1.12 and 2.1.15. It keeps five years on a CR2032 on paper for
+both item tags, at every bay, a Reader's edge included:
+- **its cost:** a margin of 21 % at the planning capacity for the plain
+  item tag, and 10 % for the cold-chain tag (22 % and 11 % before Story
+  2.1.15, which prices the count; 4 % and 0.96 of five years before Story
+  2.1.12; 11 % for the plain tag before Story 2.1.10); a zone change shown
+  in up to about 25 s; and [26] met with 5 s to spare;
 - **the CR2450's cost, beside it:** 4.5 mm wider and 1.8 mm thicker, for
   2.64 times the rated capacity (Energizer).
 
-**The cold-chain item tag now holds on a CR2032 at 12 s:** 1.11 of five
-years, where it was 0.96 (plan Sprint 3's D2, re-run by Story 2.1.12 under
-Sprint 4's D2). The routes this section named for it stay open, for margin:
+**The cold-chain item tag holds on a CR2032 at 12 s:** 1.10 of five years
+at every bay, a Reader's edge included (Sprint 4's D2, re-run there by
+Story 2.1.15). It was 1.11 before that story priced the count, and 0.96
+before Story 2.1.12. The routes this section named for it stay open, for
+margin:
 - **measure first:** the same three ASSUMED inputs as the worn tags'. It
   costs a bench session, and its answer can go either way;
-- **the CR2450:** 2.55 times the need at 12 s, for the larger cell;
-- **one conversion per reading:** 130.3 mAh, 1.15 of five years at 12 s,
+- **the CR2450:** 2.54 times the need at 12 s, for the larger cell;
+- **one conversion per reading:** 131.6 mAh, 1.14 of five years at 12 s,
   at the cost of the accuracy the sensor is specified at (§ Each worn tag's
   year);
 - **the fallback** in which the Field Generators listen (§ Each worn tag's
   year).
 
 **Recommended on top of the choice: the CR2450 wherever the item takes the
-larger tag, the cold-chain tags first.** Their 11 % is the thinner margin.
-With the slower wake it gives 2.78 times the need, or 2.55 on cold chain.
+larger tag, the cold-chain tags first.** Their 10 % is the thinner margin.
+With the slower wake it gives 2.76 times the need, or 2.54 on cold chain.
 INFERRED: that margin counts at 100,000 tags. [27]'s own reasoning is the
 battery-change workload, and a thin margin turns a poor cell or a cold
 warehouse into early changes.
 
 Sprint 2's D4 put [27] to Omid only if neither choice kept five years, and
 Sprint 3's D2 only if no route meets the number. The slower wake keeps five
-years for both item tags on a CR2032 on paper, so no ASK-OMID row is filed
-(Sprint 4's D2). The sitting decides the cells.
+years for both item tags on a CR2032 on paper, at every bay, a Reader's
+edge included, so no ASK-OMID row is filed (Sprint 4's D2). A warehouse
+that takes no second Field Generators at its Readers' edges has a route
+too: a second wake every fifth listen for the far neighbour's slot keeps
+1.16 and 1.05 of five years there (`radio-and-location.md` § Zones, A
+Reader's edge). The sitting decides the cells.
 
 ## One core or three (spec §3.7), with the sealTag inside it (D3)
 
@@ -673,9 +694,10 @@ footprint for one with the coil off the core (`software-stack.md`
   `tiered-cost.md` (2026-10-28), where the W5017's price is not read.
 - **Story 2.1.7:** the sitting decides:
   - one core or three;
-  - the item tag's cell: a CR2032 at 12 s keeps five years on paper, by
-    22 %, or 11 % on cold chain, and the CR2450 is recommended for margin
-    wherever the item takes it, the cold-chain tags first (§ [27]);
+  - the item tag's cell: a CR2032 at 12 s keeps five years on paper at
+    every bay, a Reader's edge included, by 21 %, or 10 % on cold chain,
+    and the CR2450 is recommended for margin wherever the item takes it,
+    the cold-chain tags first (§ [27]);
   - the nursery tag's cell, if the measurement falls short (§ Each worn
     tag's year);
   - the sensor's accuracy, if it wants one, and with it the setting: eight
@@ -737,7 +759,8 @@ them alone):
 - **GNU-MAKE:** GNU make 4.4.1, from the GNU mirror
   `https://mirrors.kernel.org/gnu/make/` (dated 26-Feb-2023 there), its
   `README` and `COPYING` read 2026-10-28. GNU's own page,
-  `https://www.gnu.org/software/make/`, reset the connection twice.
+  `https://www.gnu.org/software/make/`, reset the connection three times:
+  twice for Story 2.1.10 and once for Story 2.1.12.
 - **SDK-LIC:** that repository's
   `license_simplelink_cc13xx_cc26xx_sdk_8_33_00_16.txt`.
 - **KICAD-DL:** `https://www.kicad.org/download/windows/`, `.../macos/` and

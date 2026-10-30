@@ -209,7 +209,7 @@ Nothing here is ported as code. The rebuild's protocol is new
 
 | Need | The number | Source |
 |---|---|---|
-| Replies from one Reader in a burst | up to 1,363 a second, a hall of 1,000 in 0.73 s | [3]; `radio-and-location.md` § Anti-collision |
+| Replies from one Reader in a burst | up to 1,363 a second on the channel; a hall of 1,000 in about 0.77 s, with the frame's beacon, slots, joining window and downlink slot counted | [3]; `radio-and-location.md` § [3] against [2] first and § Anti-collision |
 | The host's share of a move shown | 0.25 s from the Reader, 0.5 s to draw (both ASSUMED) | `radio-and-location.md` § Zones |
 | Alarm latency, strictest | tamper 5 s, temperature 60 s, missed check-in 60 s, pairing 5 s | [14]–[17], `requirements.md` § What binds the design |
 | Check-ins in a day, warehouse | 9.6 million (INFERRED: 100,000 tags × 96 a day at one every 15 min) | [19], [25] |

@@ -100,6 +100,13 @@ row's price changed. The prices it added are dated 2026-10-29 in § Sources.
 
 No price this story needs is unread.
 
+### Read on 2026-10-30
+
+Story 2.1.15 read one page again, R&L's NanoVNA-H4 (RL-NANOVNAH4), for its
+box list (the Sprint 4 review's Minor 4), by one plain request between two
+clock reads that both read 08:31:29Z. The page printed 109.95, the price
+below, so no price changed (§ What each tool needs to run).
+
 ## How the build is counted
 
 - **The quantities are milestone 1's:** one Reader, one Field Generator and
@@ -112,7 +119,8 @@ No price this story needs is unread.
   ASSUMED size below:
   - **hand-solder:** OSH Park's price "includes three copies of your
     design" (OSH-4L), so each design is paid for. Three designs cost 34.88
-    (3 × 11.63), 23.25 more than one core;
+    (3 × 11.625, the board's price before rounding), 23.25 more than one
+    core;
   - **an assembled route** pays two more designs' fees. JLCPCB's minimum of
     two boards a design (§ The build routes) then makes six tag boards where
     one core makes three. Partly assembled, that is 109.67 more: 56.62 in
@@ -418,10 +426,19 @@ part is priced above:
     iron" (ADA-4921). The hot air station "Comes with a nice stand and four
     different nozzles" (ADA-5238). The microscope carries its LED light on
     a 110 V supply (AMSCOPE-SE400Z);
-  - **the NanoVNA-H4's page lists its battery and its "LOAD KIT
-    (SUPPLIED)", and no cable to a board** (RL-NANOVNAH4). How a board
-    meets the VNA, a coaxial pigtail or a test connector, is the bench
-    story's choice. The advanced and pro tiers' Lacks name it;
+  - **the NanoVNA-H4's box holds its cables, and a tag's board has no
+    connector for them.** Its page's "Packing list" names the VNA "with
+    1950mAh battery", two "15cm SMA male to male RG316RF cable", "SMA
+    female to female connector x1", an SMA male calibration kit (open,
+    short and load) and two USB-C cables (RL-NANOVNAH4, read 2026-10-30).
+    "LOAD KIT (SUPPLIED)", at 12.95, and a "TEST JIG FOR TESTING YOUR OWN
+    CIRCUIT", at 9.95, are among the page's paid accessories. INFERRED: the
+    cables meet the Reader's and the Field Generator's SMA connector, and a
+    tag's board, with its chip antenna, has none. How a tag's board meets
+    the VNA, a coaxial pigtail or a test connector, is the bench story's
+    choice. The advanced and pro tiers' Lacks name it. The Sprint 4 review
+    found the page's box list first (2026-10-29), where this line had said
+    the page lists no cable to a board;
   - the tinySA Ultra Plus includes an "Antenna with SMA connector" and two
     SMA cables (RL-TINYSAULTRAPLUS). **The plain tinySA's page lists no box
     contents.** It sells a "REPLACEMENT ANTENNA" at 9.95 (RL-TINYSA), so
@@ -469,8 +486,8 @@ pro builds everything by hand.
 | Tier | Its route | The devices | The tools | The bench | **The total** | Lacks |
 |---|---|---|---|---|---|---|
 | Starter | fully assembled | 267.03 | 198.08 | 137.14 | **602.25** | two W5017 whips; three tag enclosures; the JLCPCB boards; the module's sourcing at JLCPCB; the tinySA's antenna, if not in its box |
-| Advanced | partly assembled | 241.36 | 1,071.42 | 137.14 | **1,449.92** | the same as starter; the Fluke 117's battery, if not in its box; the VNA's cable to a board |
-| Pro | hand-solder | 197.47 | 1,581.42 | 217.14 | **1,996.03** | two W5017 whips; three tag enclosures; the pro iron; the VNA's cable to a board |
+| Advanced | partly assembled | 241.36 | 1,071.42 | 137.14 | **1,449.92** | the same as starter; the Fluke 117's battery, if not in its box; a tag board's connection to the VNA |
+| Pro | hand-solder | 197.47 | 1,581.42 | 217.14 | **1,996.03** | two W5017 whips; three tag enclosures; the pro iron; a tag board's connection to the VNA |
 
 **Any route with any tier** (the devices, the tier's tools and its bench;
 each lacks what its route and its tier lack above):
@@ -606,7 +623,7 @@ pinned there.
 | AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99 | `https://amscope.com/products/se400-z` | 2026-10-28; 2026-10-29 |
 | FLUKE-117 | Fluke, 117: 304.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117` | 2026-10-28; 2026-10-29 |
 | FLUKE-87V | Fluke, 87V: 579.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v` | 2026-10-28; 2026-10-29 |
-| RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` | 2026-10-28; 2026-10-29 |
+| RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` | 2026-10-28; 2026-10-29; 2026-10-30 |
 | RL-TINYSA | R&L Electronics, tinySA: 89.95; its replacement antenna: 9.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75243` | 2026-10-28; 2026-10-29 |
 | RL-TINYSAULTRAPLUS | R&L Electronics, tinySA Ultra Plus: 169.95, out of stock | `https://www.randl.com/index.php?main_page=product_info&products_id=76222` | 2026-10-28; 2026-10-29 |
 | RTLSDR | RTL-SDR Blog, V4L dongle: 37.95; dipole antenna kit: 17.95 | `https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/` | 2026-10-28 |
@@ -628,7 +645,9 @@ pinned there.
   `https://www.tag-connect.com/product/tc2050-idc-nl-10-pin-no-legs-cable-with-ribbon-connector`;
 - USBGear, CG-PD100C: `https://www.usbgear.com/CG-PD100C.html`.
 
-TI's prices are the pages' own price lists, in US dollars by their
-`priceCurrency`. LCSC's are its pages' US-dollar price ladders. A
+TI's prices are the pages' `data-price` values. They name no currency, and
+INFERRED, they are US dollars, since the pages' exchange-rate table is
+quoted against the dollar (`parts-and-toolchains.md` § The debugger).
+LCSC's are its pages' US-dollar price ladders. A
 search-page source is the Adafruit search the item was read from, its
 product number in the short name.

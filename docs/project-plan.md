@@ -756,7 +756,17 @@ quantity is read, or named in the Lacks of each assembled route; and the PR
 body quotes each finding's grep with each hit's disposition (manifest prose
 check `sprint3-review-tier-fixes`).
 
-#### Story 2.1.15: The Sprint 4 review's fixes: the warehouse at a Reader's edge, and the figures beside it
+#### Story 2.1.15: The Sprint 4 review's fixes: the warehouse at a Reader's edge, and the figures beside it — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #67 (branch `story-2.1.15-reader-edge`, pre-tick head `22533913`).
+**Outcome:** finding 1's edge is stated with its cost, § [27] is priced for the costliest bay, and Sprint 4's D2 is re-run there: the 12 s listen keeps five years on a CR2032 for both item tags at every bay, a Reader's edge included. No requirement number moved (D1). These figures supersede Story 2.1.12's and Story 2.1.14's:
+- **The edge** (`radio-and-location.md` § Zones, A Reader's edge): a second Field Generator in the bay across each edge follows the near Reader's network, so every item's set is one run of three in its own Reader's block. Its cost: four or six more Field Generators along a 100 m aisle, and no firmware change. A second wake every fifth listen is the route without new hardware (1.16 and 1.05 of five years). One Field Generator in both blocks is declined, since its two slots can meet without bound.
+- **[27] at 12 s:** 124.2 mAh (1.21 of five years) and 136.9 (1.10) on a CR2032, and 143.5 (2.76) and 156.2 (2.54) on a CR2450; they were 123.0 (1.22), 135.6 (1.11), 142.2 (2.78) and 154.9 (2.55). The margins are 21 % and 10 % (were 22 % and 11 %). A CR2032 keeps five years from a 7.0 s or 8.8 s listen (were 6.8 s and 8.6 s), and one conversion per reading gives 131.6 mAh, 1.14 (was 130.3, 1.15). The CR2450 stays recommended for margin, and no ASK-OMID row is filed.
+- **Minor 2:** the warehouse's Reader steps the count at most once in 5 minutes, priced at 288 wakes a day, 1.28 mAh over five years.
+- **Minor 3:** the joining window and the downlink slot are counted (2.2 ms, ASSUMED). The conference has 324 reply slots a frame, 1,296 a second and 1,000 tags in about 0.77 s (were 327, 1,308 and 0.76 s); the ward 321 and 1,284 (were 324 and 1,296); and any one Reader up to 158 Field Generators (was 164).
+- **Minor 4:** the VNA's box list was read 2026-10-30 (two SMA cables, an adapter, a calibration kit). The Lacks name a tag board's connection to the VNA.
+- **Minor 5:** a lost tag's window stops at a frame (EU) or a hop cycle (US), and its searches space out to hold 6.6 µA.
+- **The five nits** are corrected, and `requirements.md` [27] gains a dated pointer line. Every figure reproduces from the studies' inputs by a script, which first reproduced the printed figures it replaces.
 
 **Story:** As the decision sitting, I want the warehouse item tag's margin
 to hold at every bay, a Reader's edge included, so that I choose the item

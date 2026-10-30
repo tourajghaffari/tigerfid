@@ -269,10 +269,11 @@ what anti-collision.
   length byte and a lead-in (preamble and sync word) of 8–12 bytes.
   ASSUMED: 16–20 bytes in all.
 - **At 300 kbit/s,** 20 bytes last 0.533 ms on air. ASSUMED: 0.2 ms of
-  guard and turnaround per slot, so a slot is 0.733 ms. That is 1,363 slots
-  a second on one channel, and 1,000 tags take 0.73 s with 0.27 s left for
-  retries, before the Reader's beacon and the Field Generators' slots take
-  their share of each frame (§ Anti-collision computes each scenario's).
+  guard and turnaround per slot, so a slot is 0.7333 ms (11/15 ms). That is
+  1,363 slots a second on one channel, and 1,000 tags take 0.73 s with
+  0.27 s left for retries, before the Reader's beacon, the Field Generators'
+  slots, the joining window and the downlink slot take their share of each
+  frame (§ Anti-collision computes each scenario's).
   With 16 bytes: 1,595 slots a second.
 - **At 200 kbit/s,** the same 20 bytes make a 1.00 ms slot: 1,000 a second,
   with no time left for retries.
@@ -419,24 +420,36 @@ spectrum analyzer (`original-system.md` § What this means for the study).
   every joined tag answers in its own slot. A tag's missing reply is retried
   in the next frame's spare slots.
 - **The figures.** The channel carries 1,363 slots a second, and a frame of
-  0.25 s holds 340 of them, before the Reader's beacon and the Field
-  Generators' block take their share (INFERRED, § [3] against [2] first).
-  The beacon takes 1.0 ms of each frame and each Field Generator 0.4 ms
-  (both ASSUMED, § Zones); the layout of a tag's listen adds none (§ Zones,
-  The layout of a listen). INFERRED, each scenario's block (added by plan
-  Story 2.1.12, from the Sprint 3 review's nit):
+  0.25 s holds 340 of them, before the Reader's beacon, the Field
+  Generators' block, the joining window and the downlink slot take their
+  share (INFERRED, § [3] against [2] first). The beacon takes 1.0 ms of each
+  frame and each Field Generator 0.4 ms (both ASSUMED, § Zones); the layout
+  of a tag's listen adds none (§ Zones, The layout of a listen). The joining
+  window and the downlink slot that names a set take three reply slots of
+  each frame, 2.2 ms (ASSUMED: two for joining, one for the downlink; the
+  build measures both). INFERRED, each scenario's block (added by plan
+  Story 2.1.12, from the Sprint 3 review's nit), with the joining window and
+  the downlink slot counted (added by plan Story 2.1.15, from the Sprint 4
+  review's Minor 3):
   - **the conference:** 23 Field Generators, ASSUMED from [1]: the main
     hall's twelve areas (§ Zones), the other nine rooms and two exits, as
     many exits as the ward's. The block takes 10.2 ms of each frame, which
-    leaves 327 reply slots a frame, 1,308 a second. A hall of 1,000 tags
-    then takes about 0.76 s, with 0.24 s left for retries ([3]);
-  - **the ward:** 27 Field Generators (§ Zones), 11.8 ms, which leaves 324
-    reply slots a frame, 1,296 a second. Its 100 tags take 0.08 s ([12]);
-  - **any one Reader:** its block can hold up to 164 Field Generators before
-    [3]'s 1,000 a second is lost (250 ms, less 250 reply slots of 0.733 ms
-    and the 1.0 ms beacon, leaves 65.7 ms, at 0.4 ms a Field Generator).
-    The warehouse's Readers stay far inside it, since [21] asks 200 a
-    second.
+    leaves 324 reply slots a frame, 1,296 a second. A hall of 1,000 tags
+    then takes about 0.77 s, with 0.23 s left for retries ([3]);
+  - **the ward:** 27 Field Generators (§ Zones), 11.8 ms, which leaves 321
+    reply slots a frame, 1,284 a second. Its 100 tags take 0.08 s ([12]);
+  - **any one Reader:** its block can hold up to 158 Field Generators before
+    [3]'s 1,000 a second is lost (250 ms, less 250 reply slots of 11/15 ms,
+    the 1.0 ms beacon and the 2.2 ms for joining and the downlink, leaves
+    63.5 ms, at 0.4 ms a Field Generator). The warehouse's Readers stay far
+    inside it, since [21] asks 200 a second: at that rate a block may hold
+    525, its edge Field Generators' slots included (§ Zones, A Reader's
+    edge).
+
+  Before Story 2.1.15 these figures left out the joining window and the
+  downlink slot, so they were upper bounds: 327 reply slots a frame and
+  1,308 a second for the conference (0.76 s), 324 and 1,296 for the ward,
+  and up to 164 Field Generators for any one Reader.
 - **The original's ideas kept:** one packet format and a CRC on every
   reply, and group replies by tag type, now addressed in the beacon
   (`original-system.md` § Three ways to address).
@@ -485,6 +498,10 @@ of 10–20 dB.
   in the warehouse, another reader shares a given reader's channel in about
   23 % of frames (1 − (41/42)¹¹). Bays 30 m apart rarely hear each other.
   Even a 23 % loss leaves about 1,050 slots a second, far above [21]'s 200.
+  A bay at a Reader's edge has a neighbour in the next Reader's network, on
+  that network's time and channel. So each network keeps a Field Generator
+  of its own in the bay across each of its edges (§ Zones, A Reader's
+  edge).
 - **European Union: one band, 865–868 MHz** (SRD band 47), 25 mW e.r.p.,
   within the 1 % duty cycle. INFERRED duty cycles:
   - a Reader beacon of about 1 ms every 0.25 s is 0.40 %;
@@ -541,16 +558,35 @@ never be noticed. The rebuild names the slots for it:
   block in one window. INFERRED: 6.6 µA while it stays lost among the
   ward's 27 Field Generators, against 10.45 µA at most in a room (§ The
   layout of a listen, below).
+- **A lost tag's window has a bound, and its searches space out** (added by
+  plan Story 2.1.15, from the Sprint 4 review's Minor 5). INFERRED: the
+  window widens by 2 × 60 ppm of the time since the tag last heard a slot
+  (§ The layout of a listen), so a tag that hears nothing passes a 0.25 s
+  frame's window after about 35 minutes. At a search every 12 s it would
+  then listen a whole frame each time, about 121 µA. So:
+  - **the window stops growing** where a listen is sure to meet the
+    network: at one frame in the EU, where a network keeps its channel, and
+    at one hop cycle, 10.5 s, in the US, where a tag on one channel meets
+    the network once a cycle (§ Channels). The US window reaches the cycle
+    after about 24 hours lost;
+  - **each search waits for its own charge over 6.6 µA.** A search that
+    listens longer comes later, so a lost tag listens for 6.6 µA however
+    long it is lost, the figure it started at.
+  - **Its cost** is the time to be found again: one search in about 4
+    minutes once the window reaches a frame, about 6.5 minutes after an
+    hour lost, and in the US at most about 2.6 hours once the window
+    reaches the cycle. The build initiatives may restart the search at
+    once on a pin edge, a seal's loop or a badge's button (INFERRED).
 - **The slots sit in one block after the Reader's beacon.** ASSUMED: the
   beacon lasts 1.0 ms and each Field Generator's slot 0.4 ms, which together
   reproduce this study's 1.8 ms for the beacon and two slots. The build
   measures both lengths. The host orders the block along the floorplan
   (§ The layout of a listen, below).
 - **The block takes frame time.** INFERRED, for the ward's 27: the slots
-  and the beacon take 11.8 ms of each 0.25 s frame, which leaves 324 reply
-  slots a frame, 1,296 a second. That is still above [3]'s 1,000, the most
-  any scenario asks of one Reader. § Anti-collision computes the
-  conference's block beside it.
+  and the beacon take 11.8 ms of each 0.25 s frame, which leaves, with the
+  joining window and the downlink slot, 321 reply slots a frame, 1,284 a
+  second. That is still above [3]'s 1,000, the most any scenario asks of
+  one Reader. § Anti-collision computes the conference's block beside it.
 
 **The neighbours, ASSUMED from each scenario's size** (`requirements.md`
 items [1], [10] and [19]):
@@ -655,7 +691,10 @@ listens:
     wherever they sit, so its figure needs no order;
   - **the warehouse:** the bays aisle by aisle, in order along each aisle,
     so an item's set (its bay and the bay on either side) is one run of
-    three.
+    three. At a Reader's edge the bay across it belongs to the next
+    Reader's network, so a second Field Generator in that bay follows this
+    Reader's network, its slot next to the edge bay's, and the run of three
+    holds there too (§ A Reader's edge, below).
 - **The tag hears the Reader's beacon when it needs it:**
   - **after each check-in.** A check-in follows a listen, in that frame's
     reply slot, and the tag then hears the next frame's beacon for its
@@ -667,10 +706,25 @@ listens:
     a tag, a type or all tags: `original-system.md` § Three ways to
     address) or a change to the hop order. A tag that sees the count change
     hears the next beacon, at most 0.25 s later. ASSUMED: the count is one
-    byte, 27 µs at 300 kbit/s, inside the slot's ASSUMED 0.4 ms. INFERRED:
-    commands are rare beside a day's 86,400 listens, so this study does not
-    price them. The downlink that names a listen set needs no count, since a
-    tag that has just reported a change listens for it (above);
+    byte, 27 µs at 300 kbit/s, inside the slot's ASSUMED 0.4 ms. Each step
+    costs every tag under that Reader one wake for the beacon, 8.77 µC, at
+    its next listen (`parts-and-toolchains.md` § The battery). INFERRED,
+    what that allows (added by plan Story 2.1.15, from the Sprint 4
+    review's Minor 2):
+    - **at the worn tags' 1 s and 2 s listens,** a step every 2.6 s would
+      use the whole of the nursery room tag's margin, and every 2.8 s the
+      hall badge's. Commands come far less often, so this study does not
+      price them there;
+    - **in the warehouse,** a tag listens 7,200 times a day, not 86,400,
+      and the cold-chain tag's margin is the thinnest. Its Reader therefore
+      steps the count at most once in 5 minutes, and a command waits for the
+      next step: it reaches a tag within about 5 minutes and 12 s.
+      `parts-and-toolchains.md` § [27] prices that bound, 288 wakes a day.
+      A step a minute would cost 6.4 mAh over five years, and leave the
+      cold-chain tag 1.06 of them.
+
+    The downlink that names a listen set needs no count, since a tag that
+    has just reported a change listens for it (above);
   - **when it has lost its way.** A tag with no set, or one that has heard
     none of its set in two listens, hears the beacon and the whole block in
     one window (above).
@@ -679,7 +733,9 @@ listens:
 - **What it costs:**
   - a command reaches a tag at its next listen and the beacon after it: at
     most 1.25 s at a 1 s listen, where the old layout took 1 s (§ Does
-    ActiveWave's approach still win);
+    ActiveWave's approach still win). In the warehouse it waits for the
+    count's next step as well, so it takes up to about 5 minutes and 12 s
+    (above);
   - one more wake for each check-in;
   - no frame time: the block keeps its length (§ Anti-collision).
 - **What it leaves unchanged:** [13]'s 3.0 s, [17]'s pairing and [22]'s
@@ -695,6 +751,75 @@ stretch:
 | **The beacon skipped (chosen)** | 8.13 µA beside its stretch; 10.45 µA one room away | 1.24 years (`parts-and-toolchains.md` § Each worn tag's year) | none added | a command waits up to 0.25 s more for the beacon; one more wake for each check-in |
 | A short sync before each group of slots | 9.29 µA and 11.61 µA (a sync of 0.2 ms, ASSUMED) | 1.15 years | 1.4 ms more: seven groups, its five stretches and two exits | the sync tells a tag nothing a Field Generator's slot does not, so it costs listening and frame time for no gain |
 | The second wake, charged | 16.73 µA (the review's) | 0.87 years: **unmet** | none added | [18] unmet on paper for every room's tag |
+
+**A Reader's edge: a Field Generator of each network in the bays either
+side** (added by plan Story 2.1.15, from the Sprint 4 review's finding 1).
+- **The edge.** The warehouse has 9–12 Readers ([20]), each at its own
+  frame time and, in the United States, on its own hop (§ Channels). Each
+  Reader's Field Generators time their slots from its beacon, in a block
+  after it (above). An item's set is its bay and the bay on either side
+  along its aisle (the neighbours, above). INFERRED: along a 100 m aisle of
+  10 m bays ([19], [22]), with a Reader for every 30–33 m, the aisle
+  crosses two or three Readers' edges, so four or six of its ten bays sit
+  beside a bay of another Reader. An item there has a neighbour whose slot
+  follows another beacon, at another time and, in the US, on another
+  channel. Its set cannot be one run in its own Reader's block.
+- **The choice: a second Field Generator in the bay across each edge.** It
+  follows this Reader's network, as any of its Field Generators does, at a
+  power set for that bay, and its slot sits in this Reader's block next to
+  the edge bay's. The bay's own Field Generator follows the next Reader's.
+  The host draws the two as one zone (INFERRED). Every item's set is then
+  one run of three in its own Reader's block, at a Reader's edge as at any
+  other bay. No device's firmware changes: the tag, the Field Generator and
+  the Reader each keep one network.
+- **What it costs** (INFERRED):
+  - **more Field Generators:** two at each edge, one in the bay on each
+    side. A 100 m aisle with two or three edges takes four or six beside
+    its ten, about half as many again;
+  - **a slot in the block for each:** two for each aisle a Reader covers.
+    A block may hold 525 at [21]'s 200 a second (§ Anti-collision);
+  - **an item carried across the edge** joins the next Reader once the
+    host places it in the far bay, as a new tag joins: at most one hop
+    cycle, 10.5 s, of listening at 5.8 mA, 0.017 mAh. Items at rest rarely
+    move, so this study does not price it.
+- **Where more Field Generators are not wanted,** the items at the edge
+  take the second row below: five years on a CR2032 still holds on paper
+  for both item tags.
+
+INFERRED, for the warehouse item tag at its 12 s listen, with
+`parts-and-toolchains.md` § [27]'s inputs and the count's beacon wakes at
+their bound (above):
+
+| Way | The edge item tag's listening | [27] on a CR2032: plain, cold chain | A move across the edge | Its cost |
+|---|---|---|---|---|
+| **A Field Generator of each network at the edge (chosen)** | 1.51 µA, one run of three | 1.21 and 1.10 of five years, as at every bay | 25 s | four or six more Field Generators along a 100 m aisle, each a slot in its block |
+| A second wake every fifth listen, for the far neighbour | 1.64 µA | 1.16 and 1.05 | about 2 minutes (2 × 60 s + 1 s) | the tag keeps the next network's time and hop order, which the downlink that names its set must carry |
+| The edge's own Field Generator in both blocks | 1.51 µA | 1.21 and 1.10 | 25 s, and none while its two slots meet | it follows two networks, and its two slots slide over each other: declined (below) |
+| A second wake at every listen | 1.99 µA | 1.03 and 0.95: **cold chain unmet** | 25 s | as the second row, with five times its wakes |
+| The review's second wake, widened as the first (2 × 60 ppm × 12 s) | 2.44 µA | 0.91 and 0.84: **both unmet** | 25 s | as the row above |
+
+- **The second wake's window** (the second and fourth rows) is timed from
+  the slot the tag has just heard in its own Reader's block. So it widens
+  for the two Readers' crystals, each ±10 ppm (PSIP p23): 2 × 20 ppm of the
+  time since the tag last heard the far slot. It widens as well for the
+  tag's own RTC across the gap between the two slots, at most a frame
+  (2 × 50 ppm × 0.25 s). That is 0.505 ms at 12 s and 2.43 ms at 60 s.
+  When the far slot falls inside the tag's own run, the tag hears it in the
+  next frame. The review's figures (163.8 and 176.4 mAh; 138.3 and 151.0)
+  leave out the count's wakes and count years of 365.25 days, where
+  § [27] counts 365. Its second pair widened the window for 20 ppm × 12 s
+  on one side only.
+- **One Field Generator in both blocks is declined.** It would send its
+  slot in each block, but the two networks' frames slide against each other
+  by up to 5 µs a frame. Its two slots, with the 0.3 ms retune between them
+  (the ASSUMED set-up, `parts-and-toolchains.md` § The battery), then meet
+  for 0.56 % of the time: at the crystals' worst, about 70 s once in about
+  3.5 hours. Two crystals that agree more closely meet less often and for
+  longer, and two that agree exactly may meet for good. While they meet,
+  the far items lose that neighbour, and a move across the edge goes
+  unseen. Nothing bounds that.
+- **A CR2450 at the edge** meets [27] by any of the five: 2.01 times the
+  need on cold chain even with the review's second wake.
 
 **The battery this costs** is priced in `parts-and-toolchains.md` § Each
 worn tag's year and § [27]: Story 2.1.4 replaced this study's ASSUMED
