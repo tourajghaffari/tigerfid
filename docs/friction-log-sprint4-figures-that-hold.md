@@ -414,3 +414,140 @@ session when ready and in the right order."
   output. No guard drew it. The leg's byte count, after the read of
   22:59:08Z, found Latin-1 bytes in the file, and the rule was corrected in
   this PR.
+
+## Reviewer pass (2026-10-29)
+
+Run by the hub-rooted Mac session "Mac 3" (session
+`6c5fdfae-3e60-414d-bac8-80781e57d20e`), on the Mac coordinator's orders 10.
+**The fresh-session read:** fresh by `/clear`. The background-task path id
+is `5c057329-d206-4863-b7ca-b3d7f18d269e`, the session id of the earlier
+"Mac 3", a reviewer seat in another fleet repo, whose process this `/clear`
+ended (that repo's notes; its wrap tombstone on the hub's origin). Not
+elevated. The verdict and findings are in the archive's Sprint 4
+`**Reviewed:**` record.
+
+**Context checkpoint:** two read-only readers (legs 1 and 2). No
+compaction, no forced re-read, no lost-context defect.
+
+- **V1 — D13 and the orders read the README step two ways.** D13 leaves the
+  other box's README "to the check's own prompt … and the next session there
+  runs it when the check prints it". The orders said to run `--write-stub`
+  only if Story 2.1.13's Done-when named that run as the review's, and
+  otherwise to record the prompt as the designed state. The Done-when names
+  no session, so the pass recorded the prompt and left the README stale on
+  the Mac. The next tigerfid session there runs the command. Cost: none to
+  the review. Suggested fix: a decision that leaves a step to the other box
+  names the session that takes it.
+- **V2 — The finding came from outside the leg's diff.** Finding 1's gap
+  dates from Story 2.1.10's neighbour sets, which the Sprint 3 review read
+  too. The leg's sentence restated it, and leg 1's reader found it because
+  its brief handed it the whole layout and the scenarios' sizes, not the
+  diff alone. Cost: none. Suggested fix: none beyond the method.
+- **V3 — The Mac's Node.** The battery ran on Node v24.15.0: the PATH this
+  process inherited from before the box's default moved to v24.22.1. Hub KB
+  `dev-machine-parity-matrix` records the same face. This process was a
+  `/clear`, not a new launch, so it does not answer the matrix's open
+  question about a new launch. Cost: none; the battery is light and green.
+- **V4 — A reader `cd`'d despite its brief.** Leg 2's reader moved the
+  shell into its own scratch folder once, and said so. No repository command
+  depended on it: every call of the pass used absolute paths or `git -C`.
+  This is hub KB `parallel-per-leg-reviewers-then-re-measure`'s face (c)
+  again.
+
+**Guard events:**
+- `cwd-drift` seat: the pass's first `cd` into this repo, after the read of
+  23:31:40Z, drew "cwd-drift guard (warn, not a block): this command cds
+  into `<F>` — the shell cwd PERSISTS across later tool calls whether this
+  compound succeeds or fails, so a later repo command can silently run in
+  the wrong repository." (the repo's path written here as `<F>`), and most
+  calls after it drew the guard's second arm. Every git command carried
+  `git -C` with the literal path, and none ran in the wrong repository.
+- `piped-checker-exit` seat, flagged: the pass's fast-forward of this clone
+  piped `git merge --ff-only origin/main` into `tail -3`. The guard drew
+  "piped-checker guard (warn, not a block): this command pipes `git merge` —
+  a state-changing git command — into another command, so a refusal it
+  prints (`Not possible to fast-forward`, a conflict, `would be overwritten`)
+  is hidden behind the filter, and the compound's exit is the LAST stage's
+  whether or not `$?` is read after it." The next call read `git rev-parse
+  HEAD origin/main`, both `0e51c546…`, before any read relied on the tree.
+- `ugrep-bounded-repetition-exceeds-complexity-limit` seat, flagged: the
+  privacy read's IP-address pattern carried `[0-9]{1,3}`. The guard drew
+  "ugrep guard (warn, not a block): the Mac's harness `grep` is ugrep, and a
+  pattern carrying a bounded repetition (`{m,n}` or `{m,}` …) over a dot, a
+  class or a group … fails `ugrep: error: … exceeds complexity limits` and
+  prints NOTHING else, so an extraction reads as EMPTY, never as failed". The
+  read was run again with `[0-9]+`: exit 1, 0 matches, 0 bytes on stderr.
+- The marker hook's "Widen the marker" line did not fire: the pass ran
+  `fleet-view.mjs --declare tigerfid` at its open, before any edit.
+
+**The register-seat check,** from the hub root, against the register at the
+hub's origin/main (`53633e4f`), quoted whole (the register's path written
+here as `<scratch>`):
+
+```
+register-seats: tigerfid — Sprint 4 — projects/tigerfid/docs/friction-log-sprint4-figures-that-hold.md against <scratch>/recurrences.origin.json (642 classes)
+UNPAIRED leg 2 line 272: - `cwd-drift` seat: the leg's first `cd` into this repo, in a call of its [seat]
+UNPAIRED leg 2 line 280: - `swept-surface-guard-warns-on-the-legs-own-planned-edits` seat: every edit [seat]
+UNPAIRED leg 2 line 293: - `truncated-read-taken-as-source-extent` seat, caught: the first scan of [seat]
+UNPAIRED leg 2 line 306: - `piped-checker-exit` seat, flagged: T6's first read of the tool manager [seat]
+UNPAIRED leg 2 line 308: guard drew "piped-checker guard (warn, not a block): this command reads [warn, not a block]
+UNPAIRED leg 3 line 385: - `cwd-drift` seat: the leg's first `cd` into this repo, in the fetch's own [seat]
+UNPAIRED leg 3 line 394: - `swept-surface-guard-warns-on-the-legs-own-planned-edits` seat: every edit [seat]
+UNPAIRED leg 3 line 401: - `piped-checker-exit` seat, flagged: the branch's first push was piped into [seat]
+UNPAIRED leg 3 line 402: `tail -3`. The guard drew "piped-checker guard (warn, not a block): this [warn, not a block]
+UNPAIRED leg 3 line 412: - `inferred-cause-recorded-as-measured` seat, caught (R1): the terminal's [seat]
+register-seats: 15 banner line(s) read in 3 section(s) (leg 1, leg 2, leg 3); 5 paired, 10 UNPAIRED — WARN — never a failure
+```
+
+Each UNPAIRED line, judged:
+- leg 2, lines 272, 280, 293 and 306–308: four events (306 and 308 are one).
+  Four seats to send.
+- leg 3, lines 385, 394, 401–402 and 412: four events (401 and 402 are one).
+  Four seats to send.
+
+Leg 2's three events with no class id (the marker hook, the missing-file
+read and the classifier's refusal) carry no line the check reads. They go
+to the coordinator as text, with their faces.
+
+**The Item-8 check,** from the hub root, quoted whole:
+
+```
+item8-dispositions: tourajghaffari/tigerfid#58 — 30 disposition(s), 24 current, 2 named
+  NAMED (no quoted line): **Story 2.1.12** (`:1163`–`:1233`): refreshed, the tick at `:1167` and `:1177`. Its Context lines (`:1191`, `:1193`, `:1211`, `:1216`, `:1222`) are **current**, for example `:1191`, "`docs/study/radio-and-location.md`", the finding's location.
+  NAMED (no quoted line): `software-stack.md:212`, `:351` and `:475`: **current**, the worst case (g3);
+item8-dispositions: tourajghaffari/tigerfid#60 — 17 disposition(s), 11 current, 1 named
+  NAMED (no quoted line): **Current, the Sprint 4 block:** `project-plan.md:99`, `:139`, `:142`, `:145`, `:146`, `:149`, `:156`, `:160`, `:192`, `:218`, `:249`, `:251`, `:415`, `:589`, the leg's own specification, for example `:415`, "  - `docs/study/tiered-cost.md`;".
+item8-dispositions: tourajghaffari/tigerfid#62 — 45 disposition(s), 30 current, 0 named
+item8-dispositions: 3 body reads, 3 named — WARN, never a failure
+```
+
+Each named line was read at `0e51c546` and holds as disposed: the story's
+own Context lines and the block's own lines are the specification itself,
+and `software-stack.md`'s three lines state 1,363 a second as the host's
+worst case. l.212's 0.73 s beside the 0.76 s it cites is the record's
+second nit. No `current` line is a seat of
+`item-8-anchor-grep-misses-falsified-claims`.
+
+**Register seats,** each sent to the Mac coordinator as text by class id,
+from the tigerfid Sprint 4 reviewer pass:
+- from the legs' events with no register seat:
+  - leg 2 (#60): `cwd-drift`;
+    `swept-surface-guard-warns-on-the-legs-own-planned-edits`;
+    `truncated-read-taken-as-source-extent`, caught; `piped-checker-exit`,
+    flagged;
+  - leg 3 (#62): `cwd-drift`;
+    `swept-surface-guard-warns-on-the-legs-own-planned-edits`;
+    `piped-checker-exit`, flagged; `inferred-cause-recorded-as-measured`,
+    caught (R1);
+  - leg 2 (#60), each with its class id not known: the marker hook's "Widen
+    the marker" line on a marker opened with `--repos tigerfid` (the face
+    hub Story 247.1.11 files); a missing-file read printed "0" beside "No
+    such file or directory"; the auto-mode classifier's "[Code from
+    External]" refusal of T6's updater;
+- from this pass:
+  - `cwd-drift`, `piped-checker-exit` (flagged) and
+    `ugrep-bounded-repetition-exceeds-complexity-limit` (flagged), as
+    above;
+  - the face of hub KB `parallel-per-leg-reviewers-then-re-measure` (c),
+    class id not known: V4;
+  - a new face, class id not known: V1.
