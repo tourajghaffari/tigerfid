@@ -758,6 +758,8 @@ function sweepStrandedWrapPrs() {
 // (Pillar A): when the session happens to be ON main with a quiet tree, a
 // plain ff-pull; otherwise fast-forward the ref directly (fails harmlessly if
 // main is in use elsewhere or has diverged — fetch-before-trust covers readers).
+// The refusal's line, shared with fastForwardPlan's preview of a diverged main (Story 248.1.5).
+const NOT_FAST_FORWARDED = 'note: local main not fast-forwarded — `git pull --ff-only origin main` when convenient.';
 function refreshLocalMain() {
   try {
     const before = git(['rev-parse', 'main']);
@@ -776,7 +778,7 @@ function refreshLocalMain() {
     // would be invisible.
     if (git(['rev-parse', 'main']) !== before) console.log('local main fast-forwarded to origin/main.');
   } catch {
-    console.log('note: local main not fast-forwarded — `git pull --ff-only origin main` when convenient.');
+    console.log(NOT_FAST_FORWARDED);
   }
 }
 
@@ -909,18 +911,27 @@ function reconcilePreview(v) {
 }
 
 // What refreshLocalMain would do now, as one line (read-only). The tree is judged as it
-// would stand after the notes restore, so a dry run reports the real run's step.
+// would stand after the notes restore, so a dry run reports the real run's step. Story
+// 248.1.5: a main AHEAD of origin/main as well as behind cannot fast-forward — the real
+// run's pull --ff-only (or fetch origin main:main) refuses and prints NOT_FAST_FORWARDED,
+// so the preview prints that line, never a pull it cannot make. A main that is only ahead
+// is not behind, and the real run's pull is a no-op.
 function fastForwardPlan({ notesRestored }) {
   try {
     const behind = Number(git(['rev-list', '--count', 'main..refs/remotes/origin/main']));
     if (!behind) return 'would run: nothing more — local main is not behind origin/main.';
     const n = `${behind} commit(s) behind origin/main`;
-    if (git(['rev-parse', '--abbrev-ref', 'HEAD']) !== 'main') return `would run: git fetch origin main:main (local main is ${n})`;
-    const others = execFileSync('git', ['status', '--porcelain'], { cwd: repoRoot, encoding: 'utf8' })
-      .split('\n').filter(Boolean).filter((l) => !(notesRestored && l.slice(3) === notesRel));
-    return others.length
-      ? `would run: no fast-forward — local main is ${n}, and the tree is not quiet (${others.length} other change(s)); pull when it is.`
-      : `would run: git pull --ff-only origin main (local main is ${n})`;
+    const onMain = git(['rev-parse', '--abbrev-ref', 'HEAD']) === 'main';
+    if (onMain) {
+      const others = execFileSync('git', ['status', '--porcelain'], { cwd: repoRoot, encoding: 'utf8' })
+        .split('\n').filter(Boolean).filter((l) => !(notesRestored && l.slice(3) === notesRel));
+      if (others.length) return `would run: no fast-forward — local main is ${n}, and the tree is not quiet (${others.length} other change(s)); pull when it is.`;
+    }
+    const ahead = Number(git(['rev-list', '--count', 'refs/remotes/origin/main..main']));
+    if (ahead) {
+      return `would print: ${NOT_FAST_FORWARDED} — local main is ${ahead} commit(s) ahead of and ${behind} behind origin/main (diverged), so the real run's ${onMain ? 'git pull --ff-only origin main' : 'git fetch origin main:main'} refuses.`;
+    }
+    return onMain ? `would run: git pull --ff-only origin main (local main is ${n})` : `would run: git fetch origin main:main (local main is ${n})`;
   } catch {
     return 'would run: the fast-forward, if it can — local main\'s distance from origin/main could not be read.';
   }
@@ -929,7 +940,10 @@ function fastForwardPlan({ notesRestored }) {
 // Story 244.1.5 (register class cli-ignores-an-unknown-flag-and-exits-0, form (a)): each
 // subcommand's own flags — the census of the fleet's invocations (the Hub Sprint 70
 // block's finding 4): wrap's eight, reconcile's --dry-run, recall none. A value flag
-// consumes the next word (a missing or flag-like value is the dispatcher's own exit 1).
+// consumes the next word (a missing or flag-like value is the dispatcher's own exit 1) —
+// unless that word is one of the subcommand's OWN flags (Story 248.1.5): then the flag is
+// left to be read, and the dispatcher names the value flag's missing value, never the
+// word after the flag it would have swallowed (`wrap --marker -m "my message"`).
 export const SUBCOMMAND_FLAGS = {
   wrap: { bool: ['--dry-run', '--merge', '--amend', '--carry-siblings', '--tombstone-only'], value: ['-m', '--marker', '--session-id'] },
   reconcile: { bool: ['--dry-run'], value: [] },
@@ -942,9 +956,10 @@ export function unknownFlags(command, args) {
   const spec = Object.hasOwn(SUBCOMMAND_FLAGS, command) ? SUBCOMMAND_FLAGS[command] : null;
   if (!spec) return null;
   const bad = [];
+  const own = (w) => spec.bool.includes(w) || spec.value.includes(w);
   for (let i = 0; i < args.length; i++) {
     if (spec.bool.includes(args[i])) continue;
-    if (spec.value.includes(args[i])) { i++; continue; }
+    if (spec.value.includes(args[i])) { if (!own(args[i + 1])) i++; continue; }
     bad.push(args[i]);
   }
   return bad;
@@ -1373,20 +1388,31 @@ export function tombstoneSessionMarker({ repoRoot, gitDir = null, registry, gitF
     : mine.length === 1 && (mine[0].sessionId ?? null) === null ? mine[0] : null;
   if (!own) {
     if (namedRef !== null) return { tombstoned: false, reason: `no registry entry ${namedRef} for this repo` };
-    if (mine.length === 0) return { tombstoned: false, reason: 'no registry entry for this repo' };
+    // Story 248.1.9 (Hub Sprint 73 leg 4): a refusal carries each candidate row's session id beside the unchanged
+    // refs (`candidateRows`), so the banner offers a command only for this session's row or an id-less one; and,
+    // when no row here is this session's, the rows carrying its id keyed to ANOTHER checkout (`elsewhere`, each
+    // with its repoRoot — a hub-rooted seat's site wrap, whose own row is keyed to the hub checkout). `elsewhere`
+    // rides only a refusal and only when non-empty, so no other result changes shape.
+    const rowsOf = (ms) => ms.map((m) => ({ ref: m.ref, sessionId: m.sessionId ?? null }));
+    const away = sessionId !== null && sidMine.length === 0
+      ? registry.markers.filter((m) => (m.sessionId ?? null) === sessionId && !markerMatchesKey(m, { repoRoot, gitDir }))
+        .map((m) => ({ ref: m.ref, repoRoot: m.repoRoot ?? null }))
+      : [];
+    const elsewhere = away.length ? { elsewhere: away } : {};
+    if (mine.length === 0) return { tombstoned: false, reason: 'no registry entry for this repo', ...elsewhere };
     if (mine.length === 1 && sessionId === null && (mine[0].sessionId ?? null) !== null) {
-      return { tombstoned: false, candidates: [mine[0].ref],
+      return { tombstoned: false, candidates: [mine[0].ref], candidateRows: rowsOf(mine),
         reason: `the one row on this checkout is session ${mine[0].sessionId}'s and this wrap knows no session id — pass --session-id <uuid> or name yours with --marker <ref>` };
     }
     if (mine.length === 1 && sessionId !== null && sidMine.length === 0) {
       const other = mine[0].sessionId ?? null;
-      return { tombstoned: false, candidates: [mine[0].ref],
+      return { tombstoned: false, candidates: [mine[0].ref], candidateRows: rowsOf(mine), ...elsewhere,
         reason: other === null
           ? `the one row on this checkout carries no session id and this session has one (${sessionId}) — name yours with --marker <ref>`
           : `the one row on this checkout is session ${other}'s, not this session's — name yours with --marker <ref>` };
     }
     return { tombstoned: false, reason: 'multiple session markers registered on this checkout — name yours with --marker <ref>',
-      candidates: mine.map((m) => m.ref) };
+      candidates: mine.map((m) => m.ref), candidateRows: rowsOf(mine), ...elsewhere };
   }
   const ref = own.ref;
   const doneRef = ref.replace(/^session\//, 'session-done/');
@@ -1412,16 +1438,44 @@ export function tombstoneSessionMarker({ repoRoot, gitDir = null, registry, gitF
 // with its exact re-run command.
 // Story 212.1.1: `flags` prefixes each re-run command (the --tombstone-only arm
 // names itself, so the printed command is the one to re-run).
-export function markerRefusalBanner({ reason, candidates }, flags = '') {
+// Story 248.1.9 (register class wrap-banner-names-a-siblings-marker-for-the-tombstone): a
+// command is offered only for a row whose session id is this session's (`sessionId`) or
+// unknown; a row carrying ANOTHER id is named as a sibling's, with no command — five seats in
+// one night pasted or met a command that was not theirs. With no id known, a row carrying
+// one keeps its command and names its id (the caller cannot tell — the implementer's call,
+// named). The session's rows keyed to another checkout (`elsewhere`) print with their
+// checkout and the --tombstone-only command to run there. A result without `candidateRows`
+// (the pre-248.1.9 shape) reads every candidate as id-less.
+export function markerRefusalBanner({ reason, candidates, candidateRows = null, elsewhere = [] }, flags = '', { sessionId = null } = {}) {
+  const rows = candidateRows ?? candidates.map((ref) => ({ ref, sessionId: null }));
+  const yours = [];
+  const siblings = [];
+  for (const r of rows) {
+    const id = r.sessionId ?? null;
+    const cmd = `    node scripts/wrap-session.mjs wrap ${flags}--marker ${r.ref}`;
+    if (id === null) yours.push(`${cmd}\n`);
+    else if (sessionId === null) yours.push(`${cmd}   (session ${id}'s row — yours only if this session is ${id})\n`);
+    else if (id === sessionId) yours.push(`${cmd}   (this session's row)\n`);
+    else siblings.push(`    ${r.ref} — session ${id}'s row, a sibling's: never name it\n`);
+  }
   return (
     '\n============================================================\n' +
     '  MARKER NOT TOMBSTONED\n' +
     `  ${reason}\n` +
-    '  This session\'s marker stays LIVE until you name yours:\n' +
-    candidates.map((c) => `    node scripts/wrap-session.mjs wrap ${flags}--marker ${c}\n`).join('') +
+    (yours.length ? '  This session\'s marker stays LIVE until you name yours:\n' + yours.join('') : '') +
+    (siblings.length ? '  Not this session\'s (no command):\n' + siblings.join('') : '') +
+    (elsewhere.length
+      ? '  This session\'s row on another checkout — run there:\n' +
+        elsewhere.map((e) => `    (in ${e.repoRoot ?? 'another checkout'}) node scripts/wrap-session.mjs wrap --tombstone-only --marker ${e.ref}\n`).join('')
+      : '') +
+    (!yours.length && !elsewhere.length ? '  No row here is this session\'s: its marker may already be tombstoned, or registered under another key.\n' : '') +
     '============================================================\n'
   );
 }
+
+// Story 248.1.9: the reason-only path's line for a session row keyed to another checkout.
+export const elsewhereLine = (e) =>
+  `elsewhere: this session's row ${e.ref} is keyed to ${e.repoRoot ?? 'another checkout'} — run there: node scripts/wrap-session.mjs wrap --tombstone-only --marker ${e.ref}`;
 
 // Story 216.1.7: the marker arm's lines — one pure helper for the full wrap's
 // arm and its dry run, so a reason-only result is never silent. tombstoned →
@@ -1433,9 +1487,10 @@ export function markerRefusalBanner({ reason, candidates }, flags = '') {
 // sites print; the exit stays the handoff's (a wrap never fails on its marker).
 export function markerCleanupLines(res, { namedRef = null, registeredRefs = [], sessionId = null, dryRun = false } = {}) {
   if (res.tombstoned) return [`session marker → tombstone: ${res.doneRef}`];
-  if (res.candidates) return [markerRefusalBanner(res)];
+  if (res.candidates) return [markerRefusalBanner(res, '', { sessionId })];
   if (res.dryRun) return [`would tombstone ${res.ref} → ${res.doneRef}${res.home ? ` in ${res.home}'s origin` : ''} and remove its registry row`];
   const lines = [`marker not tombstoned: ${res.reason}`];
+  for (const e of res.elsewhere ?? []) lines.push(elsewhereLine(e)); // Story 248.1.9: the --repos face
   if (namedRef !== null) {
     // Story 220.1.2 (Hub Sprint 59 leg 1, D4 — the two Sprint 57 arm nits): a row is a ref
     // string (the pre-220.1.2 shape) or { ref, sessionId }; the row whose sessionId is this
@@ -1763,8 +1818,10 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
       console.log(`[dry-run] would tombstone ${res.ref} → ${res.doneRef}${res.home ? ` in ${res.home}'s origin` : ''} and remove its registry row — nothing else (no note, no heartbeat, no fetch, no sweep, no PR)`);
       return;
     }
-    if (res.candidates) console.error(markerRefusalBanner(res, '--tombstone-only '));
-    else console.error(`marker not tombstoned: ${res.reason}`);
+    // Story 248.1.9: the banner offers only this session's rows; the reason-only line is followed by
+    // this session's rows keyed to another checkout, each with its --tombstone-only command, run there.
+    if (res.candidates) console.error(markerRefusalBanner(res, '--tombstone-only ', { sessionId }));
+    else for (const line of markerCleanupLines(res, { sessionId })) console.error(line);
     process.exit(1);
   }
 
@@ -1827,7 +1884,9 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
     try {
       const gitDir = markerGitDir(repoRoot, (argv) => git(argv));
       const registry = readMarkerRegistry();
-      const res = tombstoneSessionMarker({ repoRoot, gitDir, registry, gitFn: (argv) => git(argv), ref: marker, dryRun: true });
+      // Story 248.1.9: the session id rides here and in retireMarker as it does in the
+      // --tombstone-only arm, so the refusal's `--session-id` advice names a flag the wrap reads.
+      const res = tombstoneSessionMarker({ repoRoot, gitDir, registry, gitFn: (argv) => git(argv), ref: marker, sessionId, dryRun: true });
       const registeredRefs = registry.markers.filter((m) => markerMatchesKey(m, { repoRoot, gitDir })).map((m) => ({ ref: m.ref, sessionId: m.sessionId ?? null }));
       for (const line of markerCleanupLines(res, { namedRef: marker, registeredRefs, sessionId, dryRun: true })) console.log(`[dry-run] ${line}`);
     } catch (err) {
@@ -2090,7 +2149,7 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
     try {
       const gitDir = markerGitDir(repoRoot, (argv) => git(argv));
       const registry = readMarkerRegistry();
-      const res = tombstoneSessionMarker({ repoRoot, gitDir, registry, gitFn: (argv) => git(argv), ref: marker });
+      const res = tombstoneSessionMarker({ repoRoot, gitDir, registry, gitFn: (argv) => git(argv), ref: marker, sessionId });
       const registeredRefs = registry.markers.filter((m) => markerMatchesKey(m, { repoRoot, gitDir })).map((m) => ({ ref: m.ref, sessionId: m.sessionId ?? null }));
       const lines = markerCleanupLines(res, { namedRef: marker, registeredRefs, sessionId });
       if (res.tombstoned) { removeMarkerFromRegistry(repoRoot, res.ref, { gitDir }); console.log(lines.join('\n')); }

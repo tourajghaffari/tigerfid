@@ -276,8 +276,11 @@ function dropSubstitutions(text) {
 // assignment scan reads substitution BODIES there.
 // A quoted span (single, or double with its escapes) and a comment, as the
 // shell reads them: neutralizeSpans blanks them, the literal read (Story
-// 161.1.1) tokenizes the spans and drops the comments the same way.
-const QUOTED_SPAN_RE = /'[^']*'|"(?:[^"\\]|\\.)*"/g;
+// 161.1.1) tokenizes the spans and drops the comments the same way. A
+// double-quoted escape may be a backslash-newline (Story 248.1.20: `.` never
+// matched the newline, so `"a \` + newline + ` $B "` stayed an open quote and
+// its `$B` read as a `for` item — one quoted item to the shell).
+const QUOTED_SPAN_RE = /'[^']*'|"(?:[^"\\]|\\[\s\S])*"/g;
 const COMMENT_RE = /(^|\s)#[^\n]*/g;
 
 // Heredoc bodies dropped (each body and its terminator line). Shared by
@@ -333,9 +336,12 @@ export function findWordSplits(command) {
   // (`{$A,$B}`) denies by each whole-variable part, and a backslash-newline is removed before
   // the items are read (the shell joins the lines there), so a whole item glued to it
   // (`$A\` then `b`) or on the continued line (`a \` then `$B`) is read. The `set --` face keeps
-  // reading every reference in an item (D10: unchanged).
+  // reading every reference in an item (D10: unchanged). Story 248.1.20: a brace list's part may
+  // be a whole `${VAR}` (`{a,${B}}`, `{${A},${B}}`) — its inner braces are read as a reference's,
+  // never as a nested list, which stays silent (`{$A,{b,c}}`).
   const WHOLE_REF = new RegExp(`^${REF_RE.source}$`);
-  const BRACE_LIST = /^\{([^{}]*,[^{}]*)\}$/;
+  const BRACE_PART = String.raw`(?:[^{}]|\$\{[^{}]*\})*`;
+  const BRACE_LIST = new RegExp(`^\\{(${BRACE_PART},${BRACE_PART})\\}$`);
   const judge = (form, head, list) => {
     const vars = [];
     const items = form === 'for' ? list.replace(/\\\r?\n/g, '').split(/\s+/) : list.split(/\s+/);

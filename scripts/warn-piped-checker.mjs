@@ -978,12 +978,17 @@ function dollarQAfterPipe(command) {
   // into the same simple command after the `)` (`x=$(… | …) node run.mjs`) makes `$?` that
   // command's, so the substitution's pipeline is never the producer. Redirections (`2>…`,
   // `> FILE`) and further assignments are not command words.
+  // Story 248.1.19 — only a command word (the Hub Sprint 72 review's finding 2): a word glued to
+  // the `)` with no whitespace before it (`x=$(…).log`) is the assignment's own suffix; a word
+  // opening `#` begins a comment; the text is read NEUTRALIZED, so a quoted value (`y="a b"`)
+  // stays one word; and an append (`y+=1`) or a subscript (`arr[0]=1`) is an assignment.
   const frames = [];
-  const ASSIGNMENT = /^[A-Za-z_][A-Za-z0-9_]*=/;
+  const ASSIGNMENT = /^[A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]*\])?\+?=/;
   const BODY_OPENERS = new Set(['do', 'then', 'else', '{', '!']);
   const hasCommandWord = (s) => {
     const ws = s.split(/\s+/).filter(Boolean);
-    for (let i = 0; i < ws.length; i++) {
+    for (let i = /^\s/.test(s) ? 0 : 1; i < ws.length; i++) {
+      if (ws[i].startsWith('#')) return false; // a comment to the line's end
       if (/^\d*[<>]+$/.test(ws[i])) { i++; continue; } // a redirection and its target
       if (/^\d*[<>]/.test(ws[i]) || ASSIGNMENT.test(ws[i])) continue;
       return true;
@@ -1043,7 +1048,8 @@ function dollarQAfterPipe(command) {
       pipeline[pipeline.length - 1] += ` ${stage}`;
       joinNext = false;
       // Story 247.1.5: a command word after a bare assignment's substitution owns `$?`.
-      if (after && afterFromSub && hasCommandWord(expands(stage))) after = null;
+      // Story 248.1.19: the raw part (its leading whitespace kept, its quoted values still placeholders).
+      if (after && afterFromSub && hasCommandWord(parts[k])) after = null;
       continue;
     }
     joinNext = false;
