@@ -87,7 +87,7 @@ of spec §3, then the decision sitting and the approved rebuild spec.
 **Ordering:** 2.1.1 → 2.1.2 (Sprint 1 legs 4–5) → 2.1.9 → 2.1.3 → 2.1.4 →
 2.1.5 (Sprint 2) → 2.1.10 → 2.1.6 → 2.1.11 (Sprint 3) → 2.1.12 → 2.1.14
 (Sprint 4 legs 1–2) → 2.1.15 → 2.1.7 → 2.1.8, with 2.1.13 (Sprint 4 leg 3)
-anywhere before 2.1.8.
+and 2.1.16 anywhere before 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
 The Sprint 2 review (2026-10-28) routes a fix-up of the three studies,
@@ -106,6 +106,9 @@ The Sprint 4 review (2026-10-29) routes a third fix-up, Story 2.1.15, ahead
 of the sitting: its Important finding moves the warehouse item tag's
 margin at a Reader's edge, from which the sitting chooses the item tag's
 cell (the archive's § Executed sprints › Sprint 4).
+The Story 2.1.15 review (2026-10-30) files a fourth fix-up, Story 2.1.16,
+which gates nothing in the sitting: none of its items moves a margin the
+sitting chooses a cell from (Story 2.1.15's `**Reviewed:**` record).
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
@@ -768,6 +771,209 @@ check `sprint3-review-tier-fixes`).
 - **Minor 5:** a lost tag's window stops at a frame (EU) or a hop cycle (US), and its searches space out to hold 6.6 µA.
 - **The five nits** are corrected, and `requirements.md` [27] gains a dated pointer line. Every figure reproduces from the studies' inputs by a script, which first reproduced the printed figures it replaces.
 
+**Reviewed:** 2026-10-30, by the Story 2.1.15 reviewer pass (tigerfid #69).
+- **The pass:** the hub-rooted Mac session "Mac 2" (session
+  `26c5a341-81ee-4645-b03a-779448772d5d`), on Windows Coordinator's orders
+  20. It was fresh by `/clear`. Its background-task path id,
+  `8cac88a9-9a28-4d13-8e6f-fca07bf925f5`, is the session id of an earlier
+  Mac session, which proposed an expeal-app initiative and sprint and had
+  wrapped (its tombstone on the hub's origin), whose process the clear
+  ended. It was not elevated (uid 501) and did none of this story's work.
+- **Verdict: PASS WITH FINDINGS.** The story meets its Done-when. No finding
+  is Important, and none moves a margin the sitting chooses a cell from.
+  The item tag's 1.21 and 1.10 of five years on a CR2032, at every bay,
+  reproduce. Three Minors and three nits go to Story 2.1.16, which gates
+  nothing in the sitting.
+- **The method:** the pass read the repo at `18075a1` (#67 → `ce56ceeb`,
+  then its wrap, #68) and #67's diff from `3feecef`. It rebuilt every figure
+  #67 prints with one script, from the studies' stated inputs alone. It
+  re-ran #67's fourteen greps at `3feecef` and censused the superseded
+  figures at `18075a1`. It re-read the two pages that two items rest on.
+  Each finding says what was MEASURED and what is INFERRED.
+- **The merge:** #67 → `ce56ceeb2661844839fa9fa5ef1bad1936105c6b`, GitHub's
+  stamp 08:46:54Z, read from the API between this pass's `date -u` reads of
+  09:09:46Z and 09:18:03Z. The tick's pre-tick head, `22533913`, is #67's
+  fourth commit, the one before the tick commit.
+- **The inputs the script used,** each as the studies state it: a wake's
+  start-up 2.795 µC; listening 5.8 mA; a Field Generator's slot 0.4 ms; the
+  beacon 1.0 ms; drift 2 × 60 ppm of the time since a slot was heard; a reply
+  18.09 µC; a reading 16.74 µC; standby 1.0 µA and the sensor's shutdown
+  0.15 µA; 1 % a year of the rated 235 or 620 mAh; years of 365 days. The
+  script checked 110 printed figures, and none differs.
+- **Finding 1, a Reader's edge: MET.**
+  - **[27] at 12 s:** a listen to a run of three is 2.795 + 5.8 × (1.2 +
+    1.44) = 18.107 µC, 1.509 µA, so 66.09 mAh over five years. Beside it are
+    standby 43.80; the check-ins and their beacons 1.31 (96 a day ×
+    (18.09 + 8.769) µC); the inventory 0.01; the count's bound 1.28 (288 a
+    day × 8.769 µC); and the cell's own loss 11.75. That is 124.24 mAh, and
+    150 ÷ 124.24 = 1.21. Cold chain adds 6.11 for 720 readings a day and
+    6.57 of shutdown: 136.92 mAh, 1.10. On a CR2450, with 31.00 of loss,
+    143.49 (2.76) and 156.17 (2.54).
+  - **The rest of § [27] reproduces:** all 48 cells of its table; the four
+    superseded 12 s cells, without the count (123.0, 135.6, 142.2, 154.9);
+    the 7.0 s and 8.8 s break-even listens; one conversion's 131.6 mAh
+    (1.14); and the 535 mAh at a 1 s listen.
+  - **The edge table:** the second wake's window is 2 × 20 ppm of the time
+    since the far slot was heard, plus 2 × 50 ppm × 0.25 s. That is 0.505 ms
+    at 12 s and 2.425 ms at 60 s. Each row adds its wake to the own run of
+    two, 1.316 µA:
+    - every fifth listen adds (2.795 + 5.8 × 2.825) ÷ 60 = 0.320 µA, giving
+      1.64 µA, 1.16 and 1.05;
+    - every listen adds 0.670, giving 1.99 µA, 1.03 and 0.95;
+    - the review's wake, widened as the first, adds 1.122, giving 2.44 µA,
+      0.91 and 0.84. A CR2450 then gives 2.01 on cold chain.
+
+    The review's own four figures reproduce, as the study says, once the
+    count is left out and years are 365.25 days, its second pair at
+    20 ppm × 12 s: 163.8, 176.4, 138.3 and 151.0.
+  - **The decline:** two Readers' crystals slide 20 ppm × 0.25 s = 5 µs a
+    frame. Two 0.4 ms slots with a 0.3 ms retune between them meet while
+    their starts lie within 0.7 ms: 1.4 ÷ 250 = 0.56 % of the time. That is
+    1.4 ms ÷ 20 µs a second = 70 s, once in 250 ms ÷ 20 µs a second = 3.5
+    hours.
+  - **The geometry** follows [19], [20] and [22]: a 100 m × 100 m
+    building, 9–12 Readers (one for each 29–33 m) and 10 m bays. Three or
+    four Readers along an aisle make two or three edges, each with a bay on
+    either side.
+  - **Sprint 4's D2, re-run:** [27] holds at every bay on a CR2032, by 21 %
+    and 10 % (9.55 % before rounding). No CR2450 route is needed, and the
+    study keeps it recommended for margin. No ASK-OMID row is owed.
+- **Minor 2, the count: MET.** 288 × 8.769 µC × 1,825 days is 1.28 mAh,
+  and a step a minute is 6.40 mAh, 1.06 of five years on cold chain. The
+  worn tags' 2.6 s and 2.8 s are the step rates that spend the nursery room
+  tag's 29.3 mAh a year and the hall badge's 27.5. The bound's effect on
+  [21] is Minor B.
+- **Minor 3, the frame: MET.** The conference has (250 − 10.2 − 2.2) ÷
+  11/15 = 324 reply slots a frame, 1,296 a second, and 1,000 tags in
+  0.77 s. The ward has 321 and 1,284. Any Reader holds (250 − 183.3 − 1.0 −
+  2.2) ÷ 0.4 = 158 Field Generators, and a warehouse block holds 525 at
+  [21]'s 200 a second.
+- **Minor 4, the VNA's box: MET.** MEASURED by one plain request to R&L's
+  page between this pass's reads of 09:18:03Z and 09:18:04Z:
+  - its "Packing list" names "NanoVNA host (with 1950mAh battery) x 1",
+    "15cm SMA male to male RG316RF cable x2", an "SMA male calibration kit"
+    (OPEN, SHORT and LOAD), "SMA female to female connector x1" and two
+    USB-C cables;
+  - its accessories list "LOAD KIT (SUPPLIED) 12.95" and "TEST JIG FOR
+    TESTING YOUR OWN CIRCUIT 9.95", and the price reads $109.95.
+
+  The Field Generator's antenna is "as the Reader's", a W5017 "on an SMA
+  connector" (`parts-and-toolchains.md` § The Reader, § The Field
+  Generator), so the study's INFERRED holds.
+- **Minor 5, a lost tag: MET,** with nit 2.
+  - The 6.6 µA is the ward's beacon and 27 slots, at a search every 12 s.
+  - The window passes a frame after 0.25 s ÷ 120 ppm = 35 minutes, and a
+    whole frame every 12 s is 121 µA. The US window reaches 10.5 s after
+    24 hours.
+  - A search comes every 3.65 minutes once the window is a frame, every
+    6.5 minutes after an hour lost in the US, and every 2.6 hours once the
+    window is the hop cycle.
+- **The five nits: MET.**
+  - TI's LP-XDS110 page, read in the same window, carries
+    `data-price="35.09"` twice, with neither `priceCurrency` nor `USD`. Its
+    exchange-rate table lists 22 currencies and not the dollar (EUR 0.893,
+    JPY 157.4), as the parts study's INFERRED says.
+  - The other four read as #67 corrected them: 1,363 a second and 0.77 s,
+    each with its citation; "three times", with the research log's l.319
+    and l.364–366; 3 × 11.625 = 34.875; and 11/15 ms at both lines.
+- **The greps:**
+  - #67's fourteen reproduce at `3feecef`, each with the count and the
+    lines the PR gives.
+  - A census at `18075a1` of each superseded figure (123.0, 135.6, 142.2,
+    154.9, 2.78, 2.55, 1,308, 1,296, "up to 164", 327, 0.76 s, 6.8 s, 8.6 s,
+    130.3, 0.733, 22 % and 11 %) finds each only in a record, a dated
+    "before" line or a figure that is correct as it stands. The records are
+    a story's Outcome or Context and the manifest.
+  - The hub's `check-item8-dispositions.mjs` read nothing, because #67
+    titles its section "Each item's grep". This pass read the dispositions
+    by hand.
+- **The battery** at `18075a1`, on the Mac, between the reads of 09:24:25Z
+  and 09:24:27Z:
+  - `close-lint: ok (adopted 2026-10-26)`;
+  - `npm test`: exit 0, with `check-licenses: ok` and 22 of 22;
+  - the close runner over the eleven teeth: ten PASS, and
+    `rebuild-spec-approved` FAIL (exit 1), as the plan expects until Story
+    2.1.7.
+- **Findings, Minor** (to Story 2.1.16):
+  - **A. In the EU, a Reader's edge may put two networks on one channel.**
+    - MEASURED, the text: in the US each network hops on its own
+      (`radio-and-location.md` l.497–500). In the EU "The band carries five
+      600 kHz channels" and hopping is not required (l.511–512), "where a
+      network keeps its channel" (l.568). The edge section places the far
+      neighbour "in the US, on another channel" (l.765–766). No line says
+      which channel each EU Reader takes.
+    - INFERRED, the failure: two neighbouring Readers on one EU channel put
+      the edge bay's two Field Generators on it too, unsynchronised. Their
+      0.4 ms slots meet while their starts lie within 0.4 ms, 0.32 % of the
+      time: about 40 s once in 3.5 hours at the crystals' worst, and longer
+      as the crystals agree. That is the reason the study declines one
+      Field Generator in both blocks.
+    - The answer is one sentence: neighbouring EU Readers take different
+      channels of the five (INFERRED: a grid of Readers, each with eight
+      around it, needs four).
+  - **B. The count's 5-minute wait is not checked against [21].**
+    - MEASURED, the text: the warehouse's Reader "steps the count at most
+      once in 5 minutes, and a command waits for the next step" (l.719–721).
+      The day's inventory is a roll call, a command (§ Anti-collision,
+      l.418–421). [21] asks for "100,000 items inventoried in at most 10
+      minutes". "What it leaves unchanged" names [13], [17] and [22]
+      (l.741–743), not [21].
+    - INFERRED, it holds: 312 s for the step and a listen, then a Reader's
+      share of 8,333–11,111 items at [21]'s own 200 a second, 42–56 s. That
+      is about 5.9–6.1 minutes. One sentence states it.
+  - **C. The conference hall's second Reader is on no stated network.**
+    - MEASURED, the text: [2] puts "a second reader" in the main hall, and
+      the radio study names it among [2]'s mitigations (l.479–481). § Anti-
+      collision counts the conference as one block of 23 (l.434–438), and an
+      inner area's set is "one run of nine slots" (l.686–687). No line says
+      whether that Reader listens on the first's network, which keeps one
+      block, or keeps its own, which puts a Reader's edge across the hall.
+    - INFERRED, at such an edge between two columns with no Field Generator
+      added: an area beside it hears six slots in its own block and three in
+      the other's, (18.107 + 2.795 + 5.8 × 1.305) µC every 2 s. That is
+      14.24 µA against 12.53, or 137.4 mAh a year: 1.09 years, so [9] holds
+      by 9 % where the study prints 22 %. It is 0.86 years at the 117.5 mAh
+      floor, where 0.96 is printed.
+    - The warehouse's route would keep the 22 %, with six more Field
+      Generators in the hall. One sentence chooses.
+- **Nits** (each MEASURED; to Story 2.1.16):
+  1. **The research log has no Story 2.1.15 entry.** #67 re-read R&L's
+     page and left `docs/reference-research.md` unchanged. Every study story
+     that read a source before it, 2.1.2 to 2.1.14, logged its reads there
+     (`git log -- docs/reference-research.md`). Only `tiered-cost.md` records
+     this read.
+  2. **"about 6.5 minutes after an hour lost" is the US figure**
+     (`radio-and-location.md` l.575–578). In the EU the window stops at a
+     frame after about 35 minutes, so a tag lost an hour still searches
+     every 3.65 minutes. The sentence names the US only in its third
+     clause.
+  3. **Three reasoned bullets under the edge table carry no mark**
+     (l.801–822): the window's 0.505 and 2.43 ms; the decline's 5 µs,
+     0.56 %, 70 s and 3.5 hours; and the CR2450's 2.01. The study's preamble
+     reads "A claim marked **INFERRED** was reasoned, not read" and
+     "Everything else cites the text it was read from" (l.13–16).
+- **The recurrence triage** (hub KB `epic-close-protocol`): each text seat
+  falls in a decided class, so none qualifies for a new decision.
+  - #67's four seats are two `piped-checker-exit`, one `cwd-drift` and one
+    `wrapped-sentence-needle-undercount`.
+  - This pass's four are one `zsh-equals-face` deny, two `cwd-drift`
+    warnings and one `ugrep-bounded-repetition-exceeds-complexity-limit`
+    warning.
+
+  The register at the hub's `94e7c1a7` holds none of the eight yet, so they
+  go to the coordinator as text.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its reads of 09:09:46Z and 09:18:03Z: "Please merge PRs you open during
+  this session when ready and in the right order."
+- **Routed, in order:**
+  1. Story 2.1.7, Omid's sitting, which need not wait for Story 2.1.16;
+  2. Story 2.1.16, anywhere before Story 2.1.8;
+  3. Story 2.1.8, Epic 2.1's close.
+
+  The cost of sitting first is no margin: the sitting would decide from
+  figures this pass reproduced. If it decides Minor A or C in the rebuild
+  spec, Story 2.1.16 writes the spec's answer into the study.
+
 **Story:** As the decision sitting, I want the warehouse item tag's margin
 to hold at every bay, a Reader's edge included, so that I choose the item
 tag's cell from a margin that holds.
@@ -830,6 +1036,57 @@ corrected in its document, or its sentence shown correct with its source;
 § [27] is priced for the costliest bay, a Reader's edge included, with
 Sprint 4's D2 re-run there; and the PR body quotes each item's grep with
 each hit's disposition (manifest prose check `sprint4-review-fixes`).
+
+#### Story 2.1.16: The Story 2.1.15 review's fixes: the EU edge, the inventory's wait and the hall's second Reader
+
+**Story:** As a stranger reading the study, I want a Reader's edge, the
+count's wait and the conference hall's second Reader stated where the study
+is silent, so that the design reads whole before Epic 2.1 closes.
+**Context:** born 2026-10-30 by the Story 2.1.15 reviewer pass (tigerfid
+#69), from its three Minors and three nits (Story 2.1.15's `**Reviewed:**`
+record). It gates nothing in the sitting. No item moves a margin the
+sitting chooses a cell from, and each is one sentence or a mark. It goes
+anywhere before Story 2.1.8. If the sitting runs first and decides Minor A
+or C in the rebuild spec, this story writes the spec's answer into the
+study. Each item says what the review MEASURED and what is INFERRED.
+- **Minor A, the EU at a Reader's edge** (`docs/study/radio-and-location.md`
+  § Channels; § Zones, A Reader's edge). MEASURED: the EU's band "carries
+  five 600 kHz channels", a network keeps its channel, and no line says
+  which channel each EU Reader takes. INFERRED: on one channel, the edge
+  bay's two Field Generators meet 0.32 % of the time, unbounded as their
+  crystals agree. The study says which channel each EU Reader takes, or that
+  neighbouring Readers take different channels of the five.
+- **Minor B, [21] against the count's wait** (`radio-and-location.md`
+  § Zones, The layout of a listen). MEASURED: the warehouse's count steps at
+  most once in 5 minutes, and "What it leaves unchanged" does not name [21].
+  INFERRED: the day's inventory still finishes in about 5.9–6.1 of [21]'s 10
+  minutes. The study states the inventory against [21], with the wait
+  counted.
+- **Minor C, the conference hall's second Reader** (`radio-and-location.md`
+  § Range, § Anti-collision, § Zones). MEASURED: [2] puts a second Reader in
+  the hall, and the study counts the conference as one block, an inner
+  area's set as one run of nine. INFERRED: if that Reader keeps its own
+  network, an area beside the edge holds [9] by 9 %, not 22 %, unless the
+  warehouse's route adds six Field Generators. The study says whether that
+  Reader listens on the first's network or keeps its own. If its own, it
+  says how an area beside the edge hears its set, and re-runs [9] there.
+- **The three nits,** each MEASURED:
+  - `docs/reference-research.md` has no Story 2.1.15 entry for its read of
+    R&L's page, in § 4 or § Searches already run;
+  - "about 6.5 minutes after an hour lost" (`radio-and-location.md`
+    l.575–578) is the US figure, and the sentence names the US only in its
+    third clause;
+  - the three reasoned bullets under the edge table (l.801–822) carry no
+    INFERRED mark.
+- **What stays.** No requirement number moves (Sprint 4's D1). A figure
+  that a dated pointer line in `requirements.md` quotes, and that this story
+  changes, gets a new dated pointer line. Story 2.1.15's Outcome and its
+  `**Reviewed:**` record are records and are not edited.
+**Done when:** each of Minors A–C and the three nits is corrected in its
+document, or its sentence shown correct with its source; every changed
+figure is sourced, MEASURED or INFERRED with its arithmetic; no requirement
+number moved; and the PR body quotes each item's grep with each hit's
+disposition (manifest prose check `story2115-review-fixes`).
 
 #### Story 2.1.7: The decision sitting and the rebuild spec
 
