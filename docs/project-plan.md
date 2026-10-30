@@ -1037,7 +1037,14 @@ corrected in its document, or its sentence shown correct with its source;
 Sprint 4's D2 re-run there; and the PR body quotes each item's grep with
 each hit's disposition (manifest prose check `sprint4-review-fixes`).
 
-#### Story 2.1.16: The Story 2.1.15 review's fixes: the EU edge, the inventory's wait and the hall's second Reader
+#### Story 2.1.16: The Story 2.1.15 review's fixes: the EU edge, the inventory's wait and the hall's second Reader — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #72 (branch `story-2.1.16-review-fixes`, pre-tick head `d98a2621`).
+**Outcome:** the review's three Minors and three nits are corrected in their documents. No requirement number moved, and no printed figure changed: each figure added reproduces from the studies' inputs by a script. The sitting had not run, so the study writes its own answers to Minors A and C, for the sitting to confirm or overrule:
+- **Minor A** (`radio-and-location.md` § Channels): in the EU each Reader keeps one channel, and Readers beside each other take different ones, four of the five in a 2 × 2 pattern. One channel for all is declined: the edge bay's two Field Generators would meet 0.32 % of the time, about 40 s once in 3.5 hours, without bound. A tag moving to another Reader learns its channel from the downlink that places it; a lost EU tag tries the next channel at each search, found within four, about 15 minutes.
+- **Minor B** (§ Zones, The layout of a listen): the day's inventory waits for the count's step and finishes in about 5.9–6.1 of [21]'s 10 minutes.
+- **Minor C** (§ Zones, The conference hall's second Reader): [2]'s second Reader listens on the first Reader's network, so the hall stays one block and [9] holds by 22 % as priced. Its own network is declined: [9] by 9 % beside the edge with no Field Generator added (137.4 mAh, 1.09 years), and a badge rejoining at each crossing (up to 61.7 mAh a year at ten a day, ASSUMED; 0.81 years).
+- **The nits:** `reference-research.md` records Story 2.1.15's read of R&L's page; the lost tag's search times are split by region, the hour's 6.5 minutes under the US; the three bullets under the edge table carry INFERRED with their arithmetic.
 
 **Story:** As a stranger reading the study, I want a Reader's edge, the
 count's wait and the conference hall's second Reader stated where the study
