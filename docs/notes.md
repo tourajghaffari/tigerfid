@@ -7,6 +7,53 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.15: the warehouse at a Reader's edge, and the figures beside it
+
+- **Landed:**
+  - #67 → `ce56ceeb` (GitHub's merge stamp 08:46:54Z), squash with
+    `--match-head-commit c8a9d558…` once `watch-pr.mjs` read it GREEN.
+    Story 2.1.15 is ticked; the manifest gains its `reviewedFor` line and
+    `reviewed` reads 2026-10-30.
+    - Finding 1: a second Field Generator in the bay across each Reader's
+      edge follows the near Reader's network, so [27] holds at every bay:
+      1.21 and 1.10 of five years on a CR2032 at 12 s, with the count's
+      wakes priced at their bound (one step in 5 minutes). The route
+      without new hardware is a second wake every fifth listen (1.16 and
+      1.05).
+- **Next:**
+  1. The review of Story 2.1.15 (Mac Reviewer's, a FRESH pass), then
+     Story 2.1.7, Omid's sitting, then Story 2.1.8, a FRESH closer, who also
+     adjudicates GNU make's INFERRED chain under
+     `three-platform-claims-sourced`.
+  2. The close runner prints "REVIEW SEATING MISSING" for Sprint 4 until
+     the coordinator's register fold lands. The seats went as text in #65's
+     and #67's bodies.
+- **Surprises / decisions:**
+  - **The 2026-10-29 note's Next 3 is closed, MEASURED.** The Mac's
+    reference check exited 1 (`README stale-stub`) between this terminal's
+    reads of 08:42:43Z and 08:47:00Z. `--write-stub` (exit 0) and the
+    re-check (exit 0, "299 rows verified, README the stub") ran between
+    08:47:15Z and 08:47:22Z, on the coordinator's GRANT.
+  - **Declined in the study: one Field Generator in both Readers' blocks.**
+    Two unsynchronised frames slide past each other, and two crystals that
+    agree closely keep its two slots overlapping for as long as they agree,
+    so nothing bounds the loss. It was this seat's first pick, caught on
+    re-reading the slide arithmetic before the first commit.
+  - **§ [27] counts 365-day years;** the Sprint 4 review's edge figures
+    counted 365.25. A script that reproduced the printed table (22 of 24
+    cells exactly) set the convention before any new figure was written.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 08:31:29Z and 08:42:43Z: "Yes, push/edit/ready/merge (Recommended)".
+  - **The guard events** went as text in #67's body: two
+    `piped-checker-exit` warnings, the cwd-drift arm, and a needle split by
+    a line wrap.
+  - **The orders' wrap path:** `node ../../scripts/wrap-session.mjs` (the
+    hub's copy) refuses from the clone, exit 1, and names the clone's own
+    `scripts/wrap-session.mjs`, which this wrap ran.
+- **Provenance:** Session id `ba5a50fc-7f22-4257-944a-a4b3b875897c`, the
+  hub-rooted executor seat "Mac 3", fresh by launch: its background-task
+  path id equals the session id. Not elevated.
+
 ## Session: 2026-10-29 — Sprint 4 reviewed (PASS WITH FINDINGS); Story 2.1.15 filed
 
 - **Landed:**
@@ -77,40 +124,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `70fda9ed-a4c9-427f-ab17-caed0a9261a1`, the
   hub-rooted executor seat "Windows 3", fresh by launch (the friction log's
   fresh-session read).
-
-## Session: 2026-10-29 — Sprint 4 leg 2 (Story 2.1.14, the tiers)
-
-- **Landed:** #60 → `b707bf1a` (GitHub's merge stamp 10:44:46Z), squash
-  with `--match-head-commit 6c6e8ded…` once `watch-pr.mjs` read it GREEN
-  (10:44:30Z).
-  - Every tier prices what its tools need to run: the hot plate's 100 W
-    supply (advanced, pro), and the debugger's cable and the tags'
-    pogo-pin clip (every tier). Three box contents no page settles are
-    named in the Lacks.
-  - JLCPCB's minimum is read, two boards a design, so each assembled route
-    buys a second Reader and Field Generator. Three boards by hand cost
-    34.88. The four nits are fixed, and the totals are 602.25, 1,449.92
-    and 1,996.03.
-  - The tick, the manifest's `reviewedFor` line and the friction log's
-    leg 2 section ride the same PR.
-- **Next:**
-  1. **Sprint 4 leg 3, Story 2.1.13,** in a FRESH executor seat, by the
-     block's kickoff. It touches `scripts/` and merges by Omid's word.
-  2. Then the Sprint 4 review, Story 2.1.7's sitting and Story 2.1.8's
-     close.
-- **Surprises / decisions:**
-  - **A CLAIM, granted.** The parts study's "not read" cable sentence
-    stays verbatim, with a dated clause appended, on the coordinator's
-    GRANT (friction T7).
-  - **The merge word:** Omid, first-hand in this terminal between its
-    reads of 10:33:39Z and 10:34:03Z: "Yes, push/edit/ready/merge
-    (Recommended)".
-  - **For the reviewer:** reproduce the fees from the stated fully
-    assembled joints (T2). The leg's script is in #60's body.
-  - **A box chore mid-leg** (friction T6): the tool manager's updater held
-    its version, under a 24 h minimum release age. No repo file was
-    touched.
-- **Provenance:** Session id `7a8f4e54-9463-4a25-b0d2-718feceb0236`, the
-  hub-rooted executor seat "tigerfid Sprint 4 leg 2", fresh by `/clear` of
-  "Windows 4"'s process (the friction log's fresh-session read).
 
