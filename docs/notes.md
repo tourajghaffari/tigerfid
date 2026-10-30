@@ -7,6 +7,47 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.7: Omid's decision sitting, and the rebuild spec approved
+
+- **Landed:**
+  - #83 → `168bebb8` (GitHub's merge stamp 22:09:30Z), squash with
+    `--match-head-commit 5178d624…` once `watch-pr.mjs` read it GREEN. Omid's
+    merge word, first-hand in this terminal between its reads of 22:01:09Z
+    and 22:09:27Z: "Please merge".
+    - The spec, `docs/superpowers/specs/2026-10-30-rebuild-design.md`, with
+      Omid's approval ("Approved", between the reads of 22:00:40Z and
+      22:01:09Z); `rebuild-spec-approved` passes, eleven of eleven teeth.
+    - The brief lands as `docs/study/2.1.7-decision-brief.md`. Draft #76 is
+      closed in its favour by Omid's hand (GitHub's stamp 22:10:12Z), with a
+      comment pointing at #83; auto mode refused this session the close.
+    - Story 2.1.19 born (the EU build priced), with the prose check
+      `eu-build-priced`; Story 2.1.8 waits on 2.1.18 and 2.1.19.
+- **Next:**
+  1. Omid sends TI the question in the spec's § 5.2. TI's written answer
+     is gate G1, before any board is drawn; with no clear answer by the
+     bench story's end, it comes back to him.
+  2. Story 2.1.18 (the spec's § 5.3: the EU inventory planned on turns, and
+     a search that finds a carried tag within [22]'s 5 minutes) and Story
+     2.1.19 (§ 6.3), both before the close.
+  3. Story 2.1.8, a FRESH closer, after both.
+- **Surprises / decisions:**
+  - **No public FCC record shows the 300 kbit/s PHY** the design rests on
+    (MEASURED: four test reports, each PDF's SHA-256 matching its page).
+    -3's Wi-SUN report tests mode #2a at 100 kbps; TI's SWRA797 Table 2-1
+    lists Mode #5 as certified. Omid kept 300 kbit/s and asks TI (decision 2).
+  - **fccid.io's pages refuse a plain request (HTTP 403), but its PDF store
+    answers** at `https://fccid.io/m/<SHA-256>.pdf`; each document page's
+    source names the address (`data-pdf-url`).
+  - **The grants carry conditions no study read:** a mobile RF-exposure
+    condition (20 cm), co-location, and, on -3, a "trace reference design"
+    (the spec's gate G2).
+  - **One inference withdrawn in the sitting:** "19 dBm is out" compared a
+    setting with a measured output; -3's report tested 19.0 dBm. The design
+    keeps 17 dBm either way.
+  - **This terminal was a `/clear`** of process `1a792865-…`, Story 2.1.17's
+    executor (task-output path id against session id
+    `98adb3c6-9f4f-4420-a168-a93826056c78`).
+
 ## Session: 2026-10-30 — Story 2.1.17 reviewed (PASS WITH FINDINGS); Story 2.1.18 filed
 
 - **Landed:**
@@ -92,49 +133,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `1a792865-c18c-4244-828d-b27c1fc8206b`, a
   hub-rooted executor seat on the fleet coordinator's orders, a fresh
   launch: its background-task path id equals its session id. Not elevated.
-
-## Session: 2026-10-30 — Story 2.1.16 reviewed (PASS WITH FINDINGS); Story 2.1.17 filed
-
-- **Landed:**
-  - #74 → `f373440e` (GitHub's merge stamp 15:52:42Z), squash with
-    `--match-head-commit 7fa56213…` once `watch-pr.mjs` read it GREEN.
-    - Story 2.1.16 carries its `**Reviewed:**` record: PASS WITH FINDINGS,
-      none Important. One script rebuilt 58 figures from the studies'
-      inputs, #72's and the sitting's, and none differs. #72's eight greps
-      reproduce, and PSIP p23 reads as the new text cites it.
-    - Story 2.1.17 is filed, anywhere before 2.1.8, with two Minors: which
-      channels a lost EU tag's search covers (a tag lost in its own
-      Reader's area may wait four searches, not one), and whether EU
-      Readers sharing a channel under the 2 × 2 pattern roll call at once
-      (if they take turns, about 8.0–8.9 minutes, still inside [21]'s 10).
-      The manifest gains `2.1.17` and the prose check
-      `story2116-review-fixes`.
-- **Next:**
-  1. Story 2.1.7, Omid's sitting. Nothing in this review holds it: every
-     figure it reads is unchanged and reproduces.
-  2. Story 2.1.17 (a fresh executor), anywhere before 2.1.8. If the sitting
-     decides a lost tag's channel search or the EU channel plan in the
-     rebuild spec first, the story writes the spec's answer into the study.
-  3. Story 2.1.8, a FRESH closer.
-- **Surprises / decisions:**
-  - **Both Minors come from fixes meeting each other.** Minor A's channel
-    rule changes the lost tag's time to be found, which the nit-2 sentence
-    prints, and its 2 × 2 reuse meets [21]'s "readers that share a channel
-    share its airtime" under Minor B's arithmetic. Each fix read alone is
-    correct.
-  - **A census across line breaks** found one hit #72's Minor A grep could
-    not see (l.895–896, correct as it stands). A grep for a two-word phrase
-    misses it where the phrase wraps.
-  - **The register seats** (two `piped-checker-exit`, one
-    `block-commit-hook-denies-a-variable-c-path-commit`, the `cwd-drift`
-    warnings, and #72's one `wrapped-sentence-needle-undercount`) go to the
-    coordinator as text. This wrap's own `cd` into the clone draws the
-    cwd-drift arm once more.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 15:50:00Z and 15:50:09Z: "Yes, merge when green (Recommended)", to
-    push, open, merge on green and land the session's two wraps.
-- **Provenance:** Session id `8e92bdb3-93a0-4e1c-8cf5-f688876287c4`, a
-  hub-rooted reviewer seat on the fleet coordinator's orders, fresh by
-  `/clear`: its background-task path id, `ee8b7871-…`, names an earlier
-  session, a wrapped lawcuments-app Sprint 16 review. Not elevated.
 
