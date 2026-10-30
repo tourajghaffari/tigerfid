@@ -7,6 +7,51 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.17: a lost EU tag's channel search, and the inventory on shared channels
+
+- **Landed:**
+  - #79 → `185dc2db` (GitHub's merge stamp 20:28:35Z), squash with
+    `--match-head-commit dbb3e7fc…` once `watch-pr.mjs` read it GREEN.
+    - Story 2.1.17 is ticked, and the manifest gains its `reviewedFor` line.
+      `radio-and-location.md` answers both Minors of the Story 2.1.16
+      review. Minor D: a lost EU tag searches its site's channels, staying
+      on its own Reader's channel until its window reaches a frame. A tag
+      lost in its own Reader's area is then found within about 4 minutes in
+      its first 35 minutes lost, and after that within 4 minutes at the ward
+      and the conference and within 14.7 minutes in the warehouse. Minor E:
+      EU Readers that share a channel run their roll calls at once, and take
+      turns (8.0–8.9 minutes) if the build finds that they hear each other.
+    - No requirement number or printed figure moved; `requirements.md` is
+      unchanged. `npm test` 22 of 22; the close runner ten PASS and
+      `rebuild-spec-approved` FAIL, as expected until Story 2.1.7.
+- **Next:**
+  1. Story 2.1.7, Omid's sitting, from the open draft #76 (its brief). The
+     study now carries two more answers the sitting may confirm or overrule
+     in the rebuild spec: the lost EU tag's channel search, and roll calls
+     at once on a shared EU channel (#79's body, § For Story 2.1.7).
+  2. Story 2.1.8, a FRESH closer, once the spec is approved.
+- **Surprises / decisions:**
+  - **The search's start is set by the window, not chosen.** A window
+    narrower than a frame is timed on the tag's own network, so a search on
+    another channel would meet that network only by chance. Cycling channels
+    therefore starts when the window reaches a frame (INFERRED from the
+    study's own drift figures; the review had not named it). That is what
+    splits the own-area answer into two time regimes.
+  - **Turn-taking keeps the battery** only if the beacon that opens a roll
+    call names each Reader's turn, so a tag still hears one beacon and sends
+    one reply. The study says so, and `parts-and-toolchains.md` § [27] is
+    unchanged.
+  - **The register seats** (one `piped-checker-exit`: the tick's push was
+    piped into `grep`, then read unpiped by `git ls-remote`, head
+    `dbb3e7fc`; the `cwd-drift` warnings of a hub-rooted seat working in the
+    clone) go to the coordinator as text.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 20:15:12Z and 20:20:45Z: "Please merge any PRs you open during this
+    session when ready and in the right order."
+- **Provenance:** Session id `1a792865-c18c-4244-828d-b27c1fc8206b`, a
+  hub-rooted executor seat on the fleet coordinator's orders, a fresh
+  launch: its background-task path id equals its session id. Not elevated.
+
 ## Session: 2026-10-30 — Story 2.1.16 reviewed (PASS WITH FINDINGS); Story 2.1.17 filed
 
 - **Landed:**
@@ -91,44 +136,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   equals its session id. Not elevated. The merge word is Omid's in-session
   delegation, relayed by the coordinator's orders: "Please merge any PRs
   you open during this session when ready and in the right order."
-
-## Session: 2026-10-30 — Story 2.1.15 reviewed (PASS WITH FINDINGS); Story 2.1.16 filed
-
-- **Landed:**
-  - #69 → `0baa9e4f` (GitHub's merge stamp 09:34:37Z), squash with
-    `--match-head-commit ba9ae489…` once `watch-pr.mjs` read it GREEN.
-    - Story 2.1.15 carries its `**Reviewed:**` record: PASS WITH FINDINGS,
-      none Important. One script rebuilt 110 figures #67 prints from the
-      studies' inputs, and none differs. #67's fourteen greps reproduce, and
-      R&L's and TI's pages read as the studies quote them.
-    - Story 2.1.16 is filed, anywhere before 2.1.8: three Minors (the EU's
-      channel at a Reader's edge; [21] against the count's 5-minute wait;
-      the conference hall's second Reader's network) and three nits. The
-      manifest gains `2.1.16` and the prose check `story2115-review-fixes`.
-- **Next:**
-  1. Story 2.1.7, Omid's sitting. Nothing in this review holds it: no
-     finding moves a margin it chooses a cell from.
-  2. Story 2.1.16 (a fresh executor), anywhere before 2.1.8. If the sitting
-     decides Minor A or C in the rebuild spec first, the story writes the
-     spec's answer into the study.
-  3. Story 2.1.8, a FRESH closer, who also adjudicates GNU make's INFERRED
-     chain under `three-platform-claims-sourced`.
-- **Surprises / decisions:**
-  - **The record's place:** 2.1.15 ran as a lone story, with no sprint
-    block, so its `**Reviewed:**` record sits under its Outcome in the plan.
-    The epic close cuts it with the story.
-  - **The hub's Item-8 check read nothing on #67.** #67's grep section is
-    titled "Each item's grep", not "Item-8 anchor grep", so this pass read
-    the dispositions by hand. A PR that wants the check to read it uses the
-    check's heading.
-  - **The register seats** went as text in #69's body: #67's four and this
-    pass's four. This wrap's own `cd` into the clone, which the wrap needs,
-    draws the cwd-drift arm once more.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 09:09:46Z and 09:18:03Z: "Please merge PRs you open during this
-    session when ready and in the right order."
-- **Provenance:** Session id `26c5a341-81ee-4645-b03a-779448772d5d`, the
-  hub-rooted reviewer seat "Mac 2", fresh by `/clear`: its background-task
-  path id, `8cac88a9-…`, is an earlier Mac session's, which had wrapped. Not
-  elevated.
 
