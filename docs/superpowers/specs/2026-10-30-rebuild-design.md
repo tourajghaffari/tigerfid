@@ -1,7 +1,6 @@
 # The TigeRFID rebuild: design
 
-**Status:** written for Omid's approval (plan Story 2.1.7). The approval line
-replaces this one when he has read it.
+**Approved by:** Omid, 2026-10-30, first-hand in the terminal of the session "Windows 5", between its `date -u` reads of 22:00:40Z and 22:01:09Z: "Approved".
 
 The rebuild's design, decided in one sitting from the six study documents under
 `docs/study/` (plan Story 2.1.7). A builder plans the build initiatives from it,

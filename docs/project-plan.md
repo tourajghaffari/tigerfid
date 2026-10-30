@@ -1559,7 +1559,13 @@ MEASURED or INFERRED with its arithmetic; no requirement number moved; and
 the PR body quotes each item's grep with each hit's disposition (manifest
 prose check `story2117-review-fixes`).
 
-#### Story 2.1.7: The decision sitting and the rebuild spec
+#### Story 2.1.7: The decision sitting and the rebuild spec — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #83 (branch `story-2.1.7-rebuild-spec`, pre-tick head `40eaa802`).
+**Outcome:** the rebuild's design spec, `docs/superpowers/specs/2026-10-30-rebuild-design.md`, carries Omid's approval, first-hand in the terminal of the session "Windows 5" between its `date -u` reads of 22:00:40Z and 22:01:09Z: "Approved". The sitting ran there from 20:45:34Z to 21:41:39Z on the six studies and the brief, `docs/study/2.1.7-decision-brief.md`, which lands here as its input (#76 closed in its favour).
+- **The FCC grant read** (decision 1): both grants, ZAT-1312PSIP-2 and -3, are single modular approvals of the frequency-hopping class, and no public test report shows the 300 kbit/s PHY the design rests on; -3's Wi-SUN report tests 100 kbit/s only (MEASURED, each PDF's SHA-256 matching its page). Omid kept 300 kbit/s, and TI is asked in writing which grant covers it; TI's written answer gates every board (decisions 2 and 12; the spec's gate G1).
+- **The other decisions:** the hall's second Reader on the first Reader's network; the EU's 2 × 2 channel pattern, the inventory planned on Readers taking turns; [22] binding a tag carried past a Reader's edge, which Story 2.1.18 designs; one tag core with a card-sized variant only if the range test needs it; the item tag at 12 s on the CR2450 variant; Energizer cells; the worn tags' rule after the bench measures them; no sensor accuracy as a requirement; Omid's first build on the advanced tools with fully assembled boards, the spare boards unpowered; the EU build priced and guided (Story 2.1.19, born here); customers' devices left out of the spec; the starting layout; a host for several Readers and a network-link footprint on the Reader.
+- **For Stories 2.1.18 and 2.1.19:** the spec's § 5.3 holds 3b's and 3c's answers, which Story 2.1.18 writes into the study; § 6.3 asks for 2.1.19. Story 2.1.8 waits on both (the spec's gate G5).
 
 **Story:** As Omid, I want to decide the design in one sitting from the
 study's documents, so that the rebuild has an approved spec to build from.
