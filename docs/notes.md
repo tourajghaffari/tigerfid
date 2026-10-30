@@ -7,6 +7,52 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.19: the EU build, priced
+
+- **Landed:**
+  - #86 → `97d1ae40` (GitHub's merge stamp 22:32:30Z), squash with
+    `--match-head-commit cfd5fdd1…` once `gh pr checks` read it GREEN (run
+    41138721800). Omid's merge word, first-hand in this terminal: "Please
+    merge PRs you open when ready and in the right order."
+    - `docs/study/tiered-cost.md` § The EU build prices each part the EU
+      build changes, from pages read 2026-10-30 between 22:13:25Z and
+      22:23:01Z, in euros net of Germany's 19 % VAT, at the ECB's rate of the
+      day (1 EUR = 1.1172 USD). Each tier's EU total, with its Lacks: starter
+      598.18, advanced 1,387.85, pro 2,144.08, the spec's first build
+      1,413.52. No US figure moved: a script rebuilt all 20 US figures from
+      their unrounded lines, none differing.
+    - Story 2.1.19 is ticked, with its line in `docs/close/2.1.json`; the
+      prose check `eu-build-priced` is the closer's.
+  - One `git merge origin/main` before landing, over Story 2.1.18's #85
+    (`c46efb83`): the manifest's two new `reviewedFor` lines met, and both
+    are kept, 2.1.18's first.
+- **Next:**
+  1. Mac Reviewer reviews #86, after Story 2.1.18's review, as Story
+     2.1.19's `**Reviewed:**` record.
+  2. Story 2.1.8, a FRESH closer, after the reviews (the spec's gate G5).
+- **Surprises / decisions:**
+  - **The W5017 serves 868 MHz.** Pulse's datasheet gives it 868–928 MHz and
+    0.89–0.93 dBi at 868 MHz, so the EU build keeps the US build's whip and
+    the Reader's 15.2 dBm EU ceiling stands.
+  - **Johanson prints the 868 MHz antenna's gain two ways:** "Peak Gain 1.0"
+    on its page, "-2.5 Typ." on its datasheet. At the datasheet's figure the
+    EU link at 30 m keeps 17.6 dB up and 20.8 dB down (INFERRED); the build's
+    range test measures it.
+  - **Omid's ruling, this session (plan Sprint 3's D7):** four prices stay
+    not read, "Write all as not read (Recommended)", first-hand between this
+    terminal's reads of 22:23:33Z and 22:24:17Z: the 868 MHz antenna, both
+    ATTEN stations' 230 V models, and the W5017 at EU sellers.
+  - **For the reviewer:** the D7 message named TME for the two stations
+    before their TME pages were requested; they answered HTTP 403 after his
+    answer (22:26:44Z), and the study says so. The FX-971's 230 V is
+    INFERRED from a German seller's page that names no voltage.
+  - **The register seats:** two `zsh-equals-face` (an `echo "=====…"` label
+    and a `==` label in read-only commands; caught, nothing written), and the
+    D7 message's claim before its read (above), caught and recorded.
+  - **The seat:** "Mac 4", a `/clear` of the process `ab15bb49-…` (the
+    background-task path id); this conversation is
+    `28d2be54-66c1-4303-b696-2b48c0bc788c`.
+
 ## Session: 2026-10-30 — Story 2.1.18: the EU inventory planned on turns, and the wide search for a carried tag
 
 - **Landed:**
@@ -83,45 +129,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **This terminal was a `/clear`** of process `1a792865-…`, Story 2.1.17's
     executor (task-output path id against session id
     `98adb3c6-9f4f-4420-a168-a93826056c78`).
-
-## Session: 2026-10-30 — Story 2.1.17 reviewed (PASS WITH FINDINGS); Story 2.1.18 filed
-
-- **Landed:**
-  - #81 → `8ddc1519` (GitHub's merge stamp 20:48:11Z), squash with
-    `--match-head-commit 9100bb44…` once `watch-pr.mjs` read it GREEN.
-    - Story 2.1.17 carries its `**Reviewed:**` record: PASS WITH FINDINGS.
-      #79's 23 figures reproduce from the studies' inputs, no requirement
-      number or printed figure moved, and its two greps reproduce.
-    - Story 2.1.18 is filed with the review's two Minors, and the manifest
-      gains its `reviewedFor` line, `2.1.18` in `stories` and the prose
-      check `story2117-review-fixes`.
-- **Next:**
-  1. Story 2.1.7, Omid's sitting, from the open draft #76 (its brief). It
-     need not wait for Story 2.1.18; if the sitting decides the EU channel
-     plan, a lost tag's search or [25]'s alarm rule in the rebuild spec,
-     Story 2.1.18 writes the spec's answer into the study.
-  2. Story 2.1.18, anywhere before Story 2.1.8.
-  3. Story 2.1.8, a FRESH closer, once the spec is approved.
-- **Surprises / decisions:**
-  - **Minor F's premise came from the review chain itself.** The Story
-    2.1.16 review suggested "the US bullet's reason at twice its distance";
-    #79 followed it, and that US sentence ("Bays 30 m apart rarely hear each
-    other") reads against [20]'s 30 m read range and § Range's 22.2 dB
-    (INFERRED: 16.2 dB left at 60 m in free space).
-  - **Minor G follows from #79's correct own-channel start.** A tag carried
-    past a Reader's edge bay is found up to about 49 minutes after it is
-    lost in an EU warehouse (INFERRED), unweighed against [22]'s 5 minutes
-    and [25]'s hour.
-  - **The register seats** (two `piped-checker-exit`, one
-    `zsh-equals-face`, one `zsh-word-split`, all caught; #79's one
-    `item-8-anchor-grep-misses-falsified-claims`) go to the coordinator as
-    text in #81's body. No hub guard fired in this session: it was launched
-    in the home folder, not the hub.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open during this
-    session when ready and in the right order."
-- **Provenance:** Session id `86ac7523-9bad-4199-8c93-a5a8b64ce65b`, "Mac
-  Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
-  launch: its background-task path id equals its session id. Not elevated.
-  It did none of Story 2.1.17's work.
 
