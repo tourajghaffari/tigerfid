@@ -1869,6 +1869,86 @@ section's grep (manifest prose check `eu-build-priced`).
 - **Which network it joins:** the one whose Field Generator it hears, never one whose beacon alone it hears: in the EU on the first of the site's channels, its own first, whose frame carries one; in the US at the first such frame on its channel, the old Reader's beacon passed over within the same 10.5 s bound. ASSUMED: the joining window follows the block, or the join comes one frame (0.25 s) later.
 - **[22] and [25]:** the times stand (50.25 s EU, 59.75 s US) for a tag that still hears its old beacon, and a carry delays at most one check-in, so [25] raises no alarm. The PR body quotes the item's grep with each hit's disposition (manifest prose check `story2118-review-fixes`).
 
+**Reviewed:** 2026-10-30, by the Story 2.1.20 reviewer pass (tigerfid #95).
+- **The pass:** "Mac Reviewer", a reviewer session on the Mac, on the fleet
+  coordinator's orders, launched in the Mac's home folder and working from
+  the hub checkout. It was a fresh launch: its background-task path id
+  equals its session id, `86ac7523-9bad-4199-8c93-a5a8b64ce65b`. It was not
+  elevated (uid 501) and did none of this story's work. It is the pass that
+  filed this story (the Story 2.1.18 review, #89), so it held #93 to the
+  story's written Done-when and its prose check `story2118-review-fixes`,
+  clause by clause, and re-measured every figure and count.
+- **Verdict: PASS.** Minor H is corrected in `radio-and-location.md`, and
+  no finding is owed.
+- **The method:** the pass read the repo at `c2c91d0` (#93 → `c2eb62be`,
+  then its wrap, #94) and #93's diff from `7b1534f1`.
+- **The merge:** #93 → `c2eb62be73e2602ee44bd4fe878ad570c3d41cec`,
+  GitHub's stamp 22:54:52Z, read from the API between this pass's `date -u`
+  reads of 22:56:42Z and 22:58:03Z.
+- **What starts the wide search: MET.** "They start once a listen to its
+  own network's whole block hears none of that network's Field Generators,
+  whether or not it hears the beacon" (§ Channels, l.575–578; § Zones, A
+  tag carried past a Reader's edge, l.993–1000), so a carried tag that
+  still hears its old Reader's beacon makes it.
+- **Which network the tag joins: MET**, in the EU and the US. It joins "the
+  network whose Field Generator it hears, never one whose beacon alone it
+  hears" (l.1015–1023; the US listen, l.1006–1010). In the EU that is the
+  first of the site's channels,
+  its own first, whose frame carries one. In the US the listen "passes over
+  a beacon whose block carries none, its old Reader's among them", within
+  the same 10.5 s hop cycle, since every network visits every channel once
+  a cycle.
+- **[22] and [25]: MET.** The times stand for that tag, since its wide
+  search starts at the same listen: 50.25 s in the EU and 59.75 s in the US,
+  or 63 s and 82 s if only the second search hears a Field Generator. It
+  checks in through the Reader it joins, so [25] raises no alarm. A tag
+  that hears no Field Generator anywhere but still its old Reader lies
+  beyond every Field Generator's bay and keeps checking in there.
+- **The figures: MET.**
+  - 30 ÷ 2 = 15 m and 33 ÷ 2 = 16.5 m to a Reader's edge;
+  - 15 + 10 = 25 m to 16.5 + 20 = 36.5 m to the carried tag;
+  - 20·log₁₀(36.5 ÷ 30) = 1.70 dB, so 24.4 − 1.70 = 22.7 dB before the
+    racking;
+  - the US row's 26.8 dB at 20 dB body loss is § Range's own (l.471).
+  - The search's cost (5.81 and 60.9 mC a search) and the carries table
+    are unchanged. The ASSUMED joining window after the block follows
+    § Anti-collision's order, and the other order costs one frame.
+- **What stays.**
+  - No requirement number moved: `requirements.md` and the four other
+    study documents keep their blobs from `7b1534f1`.
+  - No printed figure changed: #93 removed 14 lines and added 52, and the 6
+    distinct numbers on the removed lines are all on added ones.
+  - The spec's decision 3c stays cited by path and sha in the section's
+    header (`docs/superpowers/specs/2026-10-30-rebuild-design.md` § 5.3 at
+    `168bebb8`, l.959–962). Story 2.1.18's records are untouched: #93's plan
+    diff is Story 2.1.20's tick alone.
+- **The grep: MET.** #93's joined-text census reproduces needle by needle:
+  "hears nothing" 4 → 2, "hear nothing" 1 → 0, "first beacon" 1 → 0,
+  "network it hears" 1 → 0, "hears a network" 2 → 0, "heard no network"
+  1 → 0, "wide search" 17 → 18. Its two kept "hears nothing" hits are the
+  § Channels search and the window's growth, neither the trigger.
+- **The manifest:** `docs/close/2.1.json` at `c2eb62be` parses, with 32
+  `reviewedFor` entries, none empty, and `2.1.20` in `stories`.
+- **The battery** at `c2c91d0`, under the Mac's lock (GO 22:58:03Z, END
+  22:58:07Z): `npm test` exit 0, 22 of 22; `node scripts/reference-check.mjs`
+  "reference-check: ok — 299 rows verified, README the stub"; the close
+  runner over the eleven teeth, eleven PASS.
+- **An observation for the build initiatives, not a finding:** the cost
+  bound is "at most two wide searches for each carry that loses a tag".
+  The text does not say in so many words what re-arms the two searches for
+  a tag that stays unplaced beside its old Reader. INFERRED from "for each
+  carry": they re-arm when the tag next hears a Field Generator, not at each
+  whole-block listen. Otherwise an unplaced tag would repeat them. The build
+  list's wide-search item (§ What the choice leaves to later stories)
+  carries it.
+- **The recurrence triage:** this pass's seats are none. #93's body names
+  none, and none was measured here.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its reads of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open
+  during this session when ready and in the right order."
+- **Routed:** Story 2.1.8, Epic 2.1's close, by a fresh closer: every story
+  before it is done and reviewed.
+
 **Story:** As a stranger reading the study, I want a tag carried past a
 Reader's edge found even where it still hears its old Reader, so that
 [22]'s 5 minutes hold for every carry, as the rebuild spec's decision 3c
