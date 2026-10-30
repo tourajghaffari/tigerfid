@@ -20,6 +20,8 @@ the parts this document marks representative.
 - Every price is in US dollars, from a seller's public page, with the date
   it was read, the quantity it is for, and the page in § Sources. Prices are
   cited, never pinned: no choice rests on a price page (plan Sprint 2's D8).
+  The EU build's euro prices are converted to dollars at a dated rate, and
+  shown in both (§ The EU build).
 - **Shipping and tax are left out** of every figure.
 - A part marked **representative, for pricing** stands in for a part the
   studies leave unnamed (plan Sprint 3's D6). It is not a choice.
@@ -107,6 +109,52 @@ box list (the Sprint 4 review's Minor 4), by one plain request between two
 clock reads that both read 08:31:29Z. The page printed 109.95, the price
 below, so no price changed (§ What each tool needs to run).
 
+### Read on 2026-10-30, for the EU build
+
+Story 2.1.19 read the EU build's pages on **2026-10-30**, between its clock
+reads of 22:13:25Z and 22:23:01Z, each by a plain request with a generic
+user agent. A web search found the sellers' pages, and each price below is
+the page's own:
+- the makers' documents for the parts that change: Johanson's antenna list,
+  its product page and its datasheet for the 868 MHz chip antenna; Pulse's
+  datasheet for the W5017, as Farnell hosts it, since Pulse's own pages now
+  render by script (its owner YAGEO's part search) or answer a page that is
+  not the datasheet;
+- Berrybase's pages for the two Raspberry Pi supplies and TBK's for the
+  Hakko FX-971, each a seller in Germany;
+- Acroname's and AmScope's pages again, for the supply's input and the
+  microscope's power;
+- the European Central Bank's reference rates.
+
+**Four prices are not read, by Omid's word.** Their pages refused a plain
+request, or price by quote only. They were put to Omid first-hand in this
+story's terminal, in one message, between its clock reads of 22:23:33Z and
+22:24:17Z (plan Sprint 3's D7). He answered "Write all as not read
+(Recommended)". The four:
+
+| Price | What it is for | The pages | Why it is unread |
+|---|---|---|---|
+| Johanson 0868AT43A0020001E | the tags' 868 MHz chip antenna, three | the four its maker's page lists: Mouser, Digi-Key, RFMW and JTI | Mouser answered a captcha page and Digi-Key HTTP 403; RFMW prints "Call for Availability"; JTI's link is a contact form |
+| ATTEN ST-2090D, its 230 V model | the advanced tier's iron | eleshop.eu's ST-2090D page; TME's | HTTP 403, a bot check |
+| ATTEN ST-862D, its 230 V model | the pro tier's hot air station | eleshop.eu's ST-862D page; TME's | HTTP 403, a bot check |
+| Pulse W5017 | both whips, the US build's part | Farnell's EU pages, TME's and RS's search | HTTP 403, a bot check; two brokers print it for a quote only (§ The EU build) |
+
+The message named TME for the two stations before their TME pages were
+requested. They were requested after his answer, between the clock reads of
+22:26:44Z and 22:26:45Z, and answered HTTP 403. The harness's web-reading
+tool was refused the same way by eleshop.eu's, Watterott's and Kiwi
+Electronics' pages.
+
+**Refused, but not needed:**
+- Kiwi Electronics (HTTP 403): Berrybase prices the 45 W supply;
+- Watterott (HTTP 403): TBK prices the FX-971;
+- LCSC's search renders by script, and its search interface answered HTTP
+  403; Reichelt's search renders its results by script.
+
+**Not found:** a 230 V supply for the microscope's light, and the plug of
+Acroname's supply. AmScope's page gives the SE400-Z "Power Supply:
+110V/60Hz", and Acroname's names no plug.
+
 ## How the build is counted
 
 - **The quantities are milestone 1's:** one Reader, one Field Generator and
@@ -134,7 +182,7 @@ below, so no price changed (§ What each tool needs to run).
   takes for a beginner's first board. The Reader and the Field Generator
   take the same layout rules (SWRA797 §3.1, cited there).
 - **The US build** (915 MHz parts), since Omid builds milestone 1 there
-  (spec D9). § The EU build names what differs.
+  (spec D9). § The EU build prices what differs.
 
 ## The devices
 
@@ -522,20 +570,98 @@ each lacks what its route and its tier lack above):
     match needs tuning is the range test's to show ([2],
     `parts-and-toolchains.md` § The tags).
 
-## The EU build: named, not priced (plan Sprint 3's D8)
+## The EU build (plan Story 2.1.19)
 
-Spec D9's first builder builds in the US. An EU build differs in:
-- **the tag's chip antenna:** the 0915AT43A0026001E is a 915 MHz part. The
-  EU's 868 MHz part is the build initiatives' to name;
-- **the whips:** whether the W5017 serves 868 MHz is not read, since its
-  seller pages refused;
-- **the plugs:** the Field Generator's wall supply and the wall-powered
-  tools are the 230 V models;
-- **the settings, which cost nothing:** the Reader's 25 mW e.r.p.
-  (`parts-and-toolchains.md` § The Reader).
+Spec D9's first builder builds in the US. The decision sitting asked for the
+EU build priced and guided too (the rebuild spec's § 6.3, decision 9a), so
+this section prices it: milestone 1 at 868 MHz, the US build's parts except
+the ones below. The module, the boards, the cells and the bench are the
+same parts. The module's datasheet gives its figures at 868 MHz and 915 MHz
+(PSIP p14). The EU build's legality is the builder's own compliance
+(`radio-and-location.md` § Legality of the choice). This section prices
+parts and decides nothing about the law.
 
-The module, the boards, the cells and the bench are the same parts. The
-module's datasheet gives its figures at 868 MHz and 915 MHz (PSIP p14).
+**How it is priced:**
+- **Each EU price is a seller's in Germany, in euros,** read on 2026-10-30
+  (§ Read on 2026-10-30, for the EU build). Those pages print their prices
+  with VAT. INFERRED: each is taken net at Germany's standard 19 % (TBK's
+  page prints "inkl. 19 % MwSt."), since the US prices leave sales tax out.
+- **The rate is the European Central Bank's reference rate for 2026-10-30:**
+  1 EUR = 1.1172 USD (ECB-FX). INFERRED: each net euro price is converted at
+  it, so the EU totals sit beside the US ones in dollars. They are given in
+  euros too, at the same rate.
+- **Every other part is the US build's, at its US price.**
+
+### What changes
+
+| Part | The US build | The EU build | Its price |
+|---|---|---|---|
+| The tags' chip antenna, three | Johanson 0915AT43A0026001E, a 915 MHz part, 1.1947 each | **Johanson 0868AT43A0020001E** (legacy number 0868AT43A0020), "Frequency (MHz) 858-878", named from its maker's page (JTI-0868-PAGE, JTI-0868) | **not read** |
+| The whips, two | Pulse W5017 | **the same W5017.** Its datasheet gives "868-928 MHz", and at 868 MHz a peak gain of 0.90 dBi in its XY plane, 0.89 in ZX and 0.93 in YZ (PULSE-W5017) | **not read**, as in the US build |
+| The Field Generator's wall supply | Adafruit 5801, 5 V 3 A, 5.95 | Raspberry Pi's 15 W USB-C supply, 5.1 V 3.0 A, EU plug: **representative, for pricing** (BB-RPI15) | 7,90 € with VAT; 6.6387 € net; **7.42** |
+| The starter tier's supply for its iron | the Raspberry Pi 45 W USB-C supply, US plug, 16.50 (ADA-6320) | the same supply with an EU plug (BB-RPI45) | 15,50 € with VAT; 13.0252 € net; **14.55** |
+| The advanced tier's iron | ATTEN ST-2090D, named a 110 V model, 59.95 | its 230 V model | **not read** |
+| The pro tier's hot air station | ATTEN ST-862D, 279.95 | its 230 V model | **not read** |
+| The pro tier's iron | Hakko FX-971, **not read** | the FX-971 a seller in Germany prices. INFERRED: its 230 V model, as a German seller's; the page names no voltage. It is supplied "auf Anfrage" (on request) (TBK-FX971) | 458,15 € with 19 % VAT; 385.00 € net, the page's own; **430.12** |
+| The hot plate's supply | Acroname R470, 50.00 | **the same supply:** "Universal AC input 100-240VAC 50-60Hz" (ACRONAME-R470) | 50.00; an EU plug for it **not read**, since the page names no plug |
+| The microscope's light | AmScope SE400-Z, 291.99, "Power Supply: 110V/60Hz" (AMSCOPE-SE400Z) | **the same microscope,** with a 230 V supply for its light that no page read names | 291.99; the 230 V supply **not read** |
+| The Reader's power | 17 dBm | 25 mW e.r.p.: at most 15.2 dBm conducted with the W5017. INFERRED, at its highest 868 MHz peak: 13.98 + 2.15 − 0.93 = 15.20 | a setting, 0 |
+
+- **The 868 MHz antenna's gain is printed two ways by its maker.** Its
+  product page gives "Peak Gain 1.0". Its datasheet (revision 2.0) gives
+  "Peak Gain (dBi) -2.5 Typ." and "Average Gain (dBi) -6.0 Typ.", measured
+  on Johanson's evaluation board. INFERRED, at the datasheet's figure:
+  `parts-and-toolchains.md` counts the tag's antenna at +1.0 dBi less 6 dB
+  ASSUMED (§ The battery), so at −2.5 dBi it counts −8.5 dBi. The EU's worst
+  case at 30 m there, 21.1 dB up and 24.3 dB down, becomes 17.6 and 20.8 dB,
+  and [2] stays met on paper. The tag's 12.0 dBm stays inside 25 mW e.r.p.
+  at either gain: 7.35 dBm e.r.p. at −2.5 dBi and 10.85 at +1.0 (12.0 + the
+  gain − 2.15). The build's range test measures it.
+- **The EU tag core is the same board with the 868 MHz part's land pattern
+  and matching,** each from its datasheet. The datasheet asks for room for a
+  pi network, whose values on the builder's board "will be different" from
+  its evaluation board's (JTI-0868). ASSUMED: the part takes the 915 MHz
+  part's place one for one, so the boards' sizes, JLCPCB's fees and its
+  joints stay the US build's.
+- **The bench is the same.** INFERRED: the tinySA's 100 kHz to 960 MHz covers
+  the EU's 863–870 MHz, by the range its page prints (RL-TINYSA).
+- **The starter supply's open question stands:** whether the 45 W supply
+  gives the iron its full power is not read (§ The tool tiers).
+- **Two brokers print the W5017 for a quote:** Cytech Systems, "Quote Only"
+  with a "Reference Price (USD) 1+ $9.2520", and Novapart, 3.94 € a unit
+  with 1,000 units a pack and "Add to quotation". Neither is a sale at this
+  build's two, so neither is counted.
+
+### The EU totals
+
+Each tier with the route § The totals pairs it with: the devices, the
+tier's tools and its bench. Each total is summed before rounding.
+
+| Tier | Its route | The devices | The tools | The bench | **The EU total** | In euros | Lacks |
+|---|---|---|---|---|---|---|---|
+| Starter | fully assembled | 264.91 | 196.13 | 137.14 | **598.18** | 535.43 | three 868 MHz chip antennas; two W5017 whips; three tag enclosures; the JLCPCB boards; the module's sourcing at JLCPCB; the tinySA's antenna, if not in its box |
+| Advanced | partly assembled | 239.24 | 1,011.47 | 137.14 | **1,387.85** | 1,242.26 | the same as starter; the ST-2090D's 230 V model; an EU plug for the hot plate's supply; a 230 V supply for the microscope's light; the Fluke 117's battery, if not in its box; a tag board's connection to the VNA |
+| Pro | hand-solder | 195.35 | 1,731.59 | 217.14 | **2,144.08** | 1,919.16 | three 868 MHz chip antennas; two W5017 whips; three tag enclosures; the ST-862D's 230 V model; an EU plug for the hot plate's supply; a 230 V supply for the microscope's light; a tag board's connection to the VNA |
+
+**Omid's first build's tier and route** (the rebuild spec's § 6.2), the
+advanced tools with fully assembled boards: 264.91 + 1,011.47 + 137.14 =
+**1,413.52** (1,265.23 €), lacking what the advanced tier and the fully
+assembled route lack above.
+
+**How each column moves from the US build's** (INFERRED, from the rows
+above):
+- **The devices, 2.12 less on every route:** the three 915 MHz antennas
+  leave, 3.58 (3 × 1.1947), with no price in their place; the EU supply
+  costs 1.47 more than the US one (7.42 against 5.95).
+- **The tools:** starter 1.95 less, the EU supply for its iron in place of
+  the US one (14.55 against 16.50); advanced 59.95 less, the ST-2090D out
+  with no price in its place; pro 150.17 more, the FX-971 in at 430.12 and
+  the ST-862D out at 279.95.
+
+**What the EU totals say** (INFERRED): they are not cheaper builds. Each
+lacks parts the US totals count, the chip antennas in every tier and a
+230 V station in the advanced and pro tiers. The pro tier's total counts
+the iron that the US total lacks.
 
 ## What the choice leaves to later stories
 
@@ -553,17 +679,24 @@ module's datasheet gives its figures at 868 MHz and 915 MHz (PSIP p14).
     boards' real sizes, which re-price the boards;
   - the JLCPCB quote for the drawn boards and the module's sourcing, before
     an assembled route is ordered;
+  - for the EU build: the 868 MHz antenna's land pattern and matching from
+    its datasheet, the gain its maker prints two ways measured on the
+    builder's board, and the EU build's unread prices (§ The EU build);
   - prices read again before anything is bought. These are 2026-10-28's
-    and 2026-10-29's.
+    and 2026-10-29's, and the EU build's 2026-10-30's.
 
 ## Sources
 
 Every page was read 2026-10-28, between 14:30:15Z and 14:42:01Z, as
 § What was read says. A page dated 2026-10-29 was read by Story 2.1.14,
 between 10:18:16Z and 10:24:44Z (§ Read on 2026-10-29), and a page dated
-both was read again then at the same price. None is pinned in the corpus.
-The cited datasheets (PSIP, SWRA797, SWRA349) are `parts-and-toolchains.md`'s,
-pinned there.
+both was read again then at the same price. A page dated 2026-10-30 was read
+by Story 2.1.19, between 22:13:25Z and 22:23:01Z (§ Read on 2026-10-30, for
+the EU build), except RL-NANOVNAH4's, read by Story 2.1.15. None is pinned
+in the corpus. The cited datasheets (PSIP, SWRA797, SWRA349) are
+`parts-and-toolchains.md`'s, pinned there. The EU build's two antenna
+datasheets are cited by URL and SHA-256, not pinned, since no choice rests
+on them: the build initiatives choose the parts.
 
 **Parts:**
 
@@ -615,12 +748,12 @@ pinned there.
 | ADA-291 | Adafruit 291, helping-hands magnifier MZ101: 6.95 | `https://www.adafruit.com/search?q=magnifier`; on 2026-10-29, `https://www.adafruit.com/product/291` | 2026-10-28; 2026-10-29 |
 | ADA-4921 | Adafruit 4921, ATTEN ST-2090D 80 W station: 59.95, out of stock | `https://www.adafruit.com/search?q=soldering+iron`; on 2026-10-29, `https://www.adafruit.com/product/4921` | 2026-10-28; 2026-10-29 |
 | ADA-5903, ADA-5238 | Adafruit, Miniware MHP50-B5 hot plate: 99.95, its kit list and its supply note; ATTEN ST-862D hot air station: 279.95 | `https://www.adafruit.com/search?q=hot+air`; on 2026-10-29, `https://www.adafruit.com/product/5903` and `https://www.adafruit.com/product/5238` | 2026-10-28; 2026-10-29 |
-| ACRONAME-R470 | Acroname, R470-TYPEC-PS-1, 100 W USB-C Power Delivery charger, up to 20 V at 5 A: 50.00 | `https://acroname.com/store/r470-typec-ps-1` | 2026-10-29 |
+| ACRONAME-R470 | Acroname, R470-TYPEC-PS-1, 100 W USB-C Power Delivery charger, up to 20 V at 5 A: 50.00; on 2026-10-30, "Universal AC input 100-240VAC 50-60Hz" | `https://acroname.com/store/r470-typec-ps-1` | 2026-10-29; 2026-10-30 |
 | ADA-1675 | Adafruit 1675, 10-pin 2 × 5 socket-to-socket 1.27 mm IDC (SWD) cable, 150 mm: 2.95 | `https://www.adafruit.com/product/1675` | 2026-10-29 |
 | ADA-5434 | Adafruit 5434, pogo pin probe clip, 2 × 5 1.27 mm pitch SWD: 19.95 | `https://www.adafruit.com/product/5434` | 2026-10-29 |
 | ADA-2743 | Adafruit 2743, SWD (2 × 5 1.27 mm) cable breakout board: 2.95 | `https://www.adafruit.com/product/2743` | 2026-10-29 |
 | ADA-266 | Adafruit 266, premium female/female jumper wires, 40 × 6": 3.95 | `https://www.adafruit.com/product/266` | 2026-10-29 |
-| AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99 | `https://amscope.com/products/se400-z` | 2026-10-28; 2026-10-29 |
+| AMSCOPE-SE400Z | AmScope, SE400-Z stereo microscope: 291.99; on 2026-10-30, "Power Supply: 110V/60Hz" | `https://amscope.com/products/se400-z` | 2026-10-28; 2026-10-29; 2026-10-30 |
 | FLUKE-117 | Fluke, 117: 304.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117` | 2026-10-28; 2026-10-29 |
 | FLUKE-87V | Fluke, 87V: 579.99 | `https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v` | 2026-10-28; 2026-10-29 |
 | RL-NANOVNAH4 | R&L Electronics, NanoVNA-H4: 109.95 | `https://www.randl.com/index.php?main_page=product_info&products_id=75145` | 2026-10-28; 2026-10-29; 2026-10-30 |
@@ -631,6 +764,19 @@ pinned there.
 | TI-XDS110 | TI, LP-XDS110: 35.09, and its box list | `https://www.ti.com/tool/LP-XDS110` | 2026-10-29 |
 | TI-LPEM | TI, LP-EM-CC1312PSIP: 47.19 | `https://www.ti.com/tool/LP-EM-CC1312PSIP` | 2026-10-28 |
 
+**The EU build** (§ The EU build):
+
+| Short name | Maker or seller, and item | Page | Read |
+|---|---|---|---|
+| JTI-0868 | Johanson Technology, datasheet "868 MHz RF Chip Antenna", P/N 0868AT43A0020001E, legacy P/N 0868AT43A0020, Doc# 36S00210, revision 2.0 (SHA-256 `605993428cf1a745facbc2d1d149ac762045a1a314fedb31e4ca8f5bb3809a97`) | `https://www.johansontechnology.com/datasheets/0868AT43A0020/0868AT43A0020.pdf` | 2026-10-30 |
+| JTI-0868-PAGE | Johanson Technology, its product page for 0868AT43A0020001E: "Frequency (MHz) 858-878", "Peak Gain 1.0", and its distribution partners JTI, Mouser, Digikey and Rfmw; its antenna list gives the same part number and band | `https://www.johansontechnology.com/products/antennas/rf-antennas/0868at43a0020001e/`; the list, `https://www.johansontechnology.com/antennas` | 2026-10-30 |
+| PULSE-W5017 | Pulse Electronics, "868-928MHz Dipole Antenna", part number W5017, Issue 1723, as Farnell hosts it: "Peak Gain 0.9 dBi +/- 1 dB", and its gain plots at 868 MHz (SHA-256 `cb3e1d296fdf643ef24c11a2dd8f27425a4a5f88f9bb182a919f28125657f6a8`) | `https://www.farnell.com/datasheets/2614700.pdf` | 2026-10-30 |
+| BB-RPI15 | Berrybase RPI4NT3AB, "offizielles Raspberry Pi USB-C Netzteil 5,1V / 3,0A, EU, schwarz": 7,90 €, "Preise inkl. MwSt." | `https://www.berrybase.de/offizielles-raspberry-pi-usb-c-netzteil-5-1v-3-0a-eu-schwarz` | 2026-10-30 |
+| BB-RPI45 | Berrybase RPI5NT45W, "Raspberry Pi 45W USB-C Power Supply, Netzteil, weiß": €15.50, "Prices incl. VAT" | `https://www.berrybase.de/en/raspberry-pi-45w-usb-c-power-supply-netzteil-weiss` | 2026-10-30 |
+| TBK-FX971 | TBK (Technisches Büro Kullik), "HAKKO FX-971 - 1-Port Lötstation": "458,15 € inkl. 19 % MwSt.", 385.00 EUR in the page's product data, "auf Anfrage lieferbar" | `https://tbk-onlineshop.de/produkt/loetstationen/hakko-fx-971/` | 2026-10-30 |
+| ECB-FX | European Central Bank, euro foreign exchange reference rates for 2026-10-30: USD 1.1172 | `https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml` | 2026-10-30 |
+| CYTECH-W5017, NOVAPART-W5017 | the two brokers' pages for the W5017, quote only, not counted | `https://www.cytechsystems.com/product/w5017`; `https://novapart.co/products/W5017/whip-antenna-868-928mhz-09dbi/` | 2026-10-30 |
+
 **Not read** (§ What was read):
 - Digi-Key, W5017: `https://www.digikey.com/en/products/detail/pulse-electronics/W5017/3025810`;
 - JLCPCB's instant quote: `https://cart.jlcpcb.com/quote`;
@@ -639,6 +785,19 @@ pinned there.
 - Hakko USA, FX-971: `https://hakkousa.com/fx-971-soldering-station.html`;
 - Jameco, Hammond 1551HRGY:
   `https://www.jameco.com/z/1551HRGY-Hammond-Manufacturing-Gray-Plastic-Enclosure-with-Key-Ring-2-36-x-1-38-x-0-79-Inch-Light-Gray_2550951.html`.
+
+**Not read, the EU build** (§ Read on 2026-10-30, for the EU build):
+- the 868 MHz chip antenna: Mouser, `https://www.mouser.com/c/?q=0868AT43A0020`;
+  Digi-Key, `https://www.digikey.com/en/products/result?keywords=0868AT43A0020001E`;
+  RFMW, `https://www.rfmw.com/PortalPartSearch.aspx?txtSearch=0868AT43A0020`;
+- the ATTEN ST-2090D: `https://eleshop.eu/atten-st-2090d-soldering-station.html`;
+  `https://www.tme.eu/en/details/st-2090d/soldering-stations/atten/`;
+- the ATTEN ST-862D: `https://eleshop.eu/atten-st-862d-hot-air-soldering-station.html`;
+  `https://www.tme.eu/en/details/st-862d/hot-air-stations/atten/`;
+- the W5017: Farnell,
+  `https://de.farnell.com/pulse-electronics/w5017/rf-antenna-whip-868-928mhz-0-9dbi/dp/4134326`;
+  TME, `https://www.tme.eu/en/details/w5017/antennas/pulse/`; RS,
+  `https://uk.rs-online.com/web/c/?searchTerm=W5017`.
 
 **Refused on 2026-10-29, not needed** (§ Read on 2026-10-29):
 - Tag-Connect, TC2050-IDC-NL:

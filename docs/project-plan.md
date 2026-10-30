@@ -1628,7 +1628,13 @@ From the Sprint 2 review (2026-10-28):
 **Done when:** the spec exists at that path and carries `**Approved by:** Omid`
 with the date.
 
-#### Story 2.1.19: The EU build, priced
+#### Story 2.1.19: The EU build, priced — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #86 (branch `story-2.1.19-eu-build-priced`, pre-tick head `ea612be2`).
+**Outcome:** `docs/study/tiered-cost.md` § The EU build prices each part the EU build changes, from pages read 2026-10-30 between this story's clock reads of 22:13:25Z and 22:23:01Z, in euros, taken net of Germany's 19 % VAT and converted at the ECB's reference rate of the day, 1 EUR = 1.1172 USD. No US figure, total or requirement number moved: a script rebuilt all 20 US figures from their unrounded lines, none differing.
+- **The parts:** the 868 MHz chip antenna is Johanson's 0868AT43A0020001E, named from its maker's page; its price is not read. Pulse's datasheet gives the W5017 868–928 MHz and 0.89–0.93 dBi at 868 MHz, so the EU build keeps the US build's whip, unread as before. The Field Generator's and the starter iron's supplies are priced with EU plugs (7.42 and 14.55), and the pro tier's Hakko FX-971 at 430.12 (unread in the US build). The two ATTEN stations' 230 V models are not read; the hot plate's supply takes 100–240 V and lacks only its plug; the microscope's light, on 110 V, lacks a 230 V supply.
+- **Omid's word:** the four refused prices were put to him first-hand in this story's terminal, in one message, between its clock reads of 22:23:33Z and 22:24:17Z: "Write all as not read (Recommended)".
+- **The EU totals,** each lacking parts the US totals count: starter fully assembled 598.18, advanced partly assembled 1,387.85, pro hand-solder 2,144.08, and the spec's first build, advanced fully assembled, 1,413.52.
 
 **Story:** As a beginner in the European Union, I want the EU build's parts
 priced beside the US build's, so that the guides' shopping lists serve me
