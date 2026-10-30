@@ -501,8 +501,11 @@ of 10–20 dB.
   wide digital class.
 - **Each Reader hops independently** (§15.247(h)). INFERRED: with 12 readers
   in the warehouse, another reader shares a given reader's channel in about
-  23 % of frames (1 − (41/42)¹¹). Bays 30 m apart rarely hear each other.
-  Even a 23 % loss leaves about 1,050 slots a second, far above [21]'s 200.
+  23 % of frames (1 − (41/42)¹¹). Even a 23 % loss leaves about 1,050 slots
+  a second, far above [21]'s 200. That bound counts every shared frame as
+  lost, as if each Reader heard all the others, so it rests on no claim
+  about how far apart two Readers hear each other (plan Story 2.1.18, from
+  the Story 2.1.17 review's Minor F).
   A bay at a Reader's edge has a neighbour in the next Reader's network, on
   that network's time and channel. So each network keeps a Field Generator
   of its own in the bay across each of its edges (§ Zones, A Reader's
@@ -524,27 +527,32 @@ of 10–20 dB.
     and leave one of the five spare. The ward and the conference each keep
     one block of slots (§ Anti-collision; § Zones, The conference hall's
     second Reader), one network, so one channel serves each;
-  - **Readers that share a channel roll call at once** (added by plan Story
-    2.1.17, from the Story 2.1.16 review's Minor E). The pattern repeats a
-    channel two Readers along: a 3 × 3 grid puts four of its nine Readers
-    on one channel, and a 3 × 4 grid four of its twelve on each of two.
-    [21] counts its 200 a second per channel, "because readers that share a
-    channel share its airtime" (`requirements.md` [21]). Readers on one
-    channel here stand two bays apart, about 60 m, twice the 30 m at which
-    bays rarely hear each other in the United States (above):
-    20·log₁₀(60 ÷ 30) = 6.0 dB more loss in free space, before the racking
-    between them. So each runs its own roll call at [21]'s 200 a second,
-    and the day's inventory keeps its 5.9–6.1 minutes (§ Zones, The layout
-    of a listen). The build measures it, running [21]'s test on two Readers
-    that share a channel. If they hear each other there, they take turns:
-    the beacon that opens a roll call names its Reader's turn, so each tag
-    still hears one beacon and sends one reply, and
-    `parts-and-toolchains.md` § [27] is unchanged. The busiest channel's
-    four shares, 4 × 100,000 ÷ 9 = 44,444 items or 4 × 100,000 ÷ 12 =
-    33,333, then take 222 s or 167 s at 200 a second, after the count's
+  - **Readers that share a channel take turns at the day's roll call**
+    (added by plan Story 2.1.17, from the Story 2.1.16 review's Minor E;
+    planned on turns by the rebuild spec's decision 3b,
+    `docs/superpowers/specs/2026-10-30-rebuild-design.md` § 5.3 at
+    `168bebb8`, and written in by plan Story 2.1.18, from the Story 2.1.17
+    review's Minor F). The pattern repeats a channel two Readers along: a
+    3 × 3 grid puts four of its nine Readers on one channel, and a 3 × 4
+    grid four of its twelve on each of two. [21] counts its 200 a second per
+    channel, "because readers that share a channel share its airtime"
+    (`requirements.md` [21]). The beacon that opens a roll call names its
+    Reader's turn, so each tag still hears one beacon and sends one reply,
+    and `parts-and-toolchains.md` § [27] is unchanged. The busiest
+    channel's four shares, 4 × 100,000 ÷ 9 = 44,444 items or 4 × 100,000 ÷
+    12 = 33,333, take 222 s or 167 s at 200 a second, after the count's
     wait of 300 + 12 + 0.25 = 312.25 s (§ Zones, The layout of a listen).
     The inventory then takes 534.5 s or 478.9 s, about 8.9 or 8.0 minutes,
-    still inside [21]'s 10;
+    inside [21]'s 10. That is the EU warehouse's planning figure.
+    INFERRED, why not at once: Readers on one channel stand two bays apart,
+    about 60 m. § Range's EU tag-to-Reader row closes at 30 m with 22.2 dB
+    to spare, and 60 m takes 20·log₁₀(60 ÷ 30) = 6.0 dB more in free space,
+    which leaves 16.2 dB before the racking between them, which this study
+    does not price. A tag in the other Reader's bay can stand nearer, about
+    45 m with each Reader mid-bay: 3.5 dB more, 18.7 dB left. So two
+    Readers on one channel can hear each other's tags. They roll call at
+    once, and the inventory keeps 5.9–6.1 minutes, only if the build's [21]
+    test on two Readers that share a channel shows that they do not;
   - **one channel for every Reader is declined.** A bay at a Reader's edge
     holds a Field Generator of each network (§ Zones, A Reader's edge). On
     one channel their 0.4 ms slots would meet whenever their starts lay
@@ -560,7 +568,12 @@ of 10–20 dB.
   - **a lost tag searches its site's channels** (added by plan Story
     2.1.17, from the Story 2.1.16 review's Minor D): the channels the site's
     Readers use, which a Reader names to a tag when it joins, as a US tag is
-    given the hop order. Until its window reaches a frame, after about 35
+    given the hop order. At a site of more than one channel, its first two
+    searches are wide: a whole frame on each of the site's channels, its own
+    first, which meets any network in reach whatever its time (added by plan
+    Story 2.1.18, from the rebuild spec's decision 3c; § Zones, A tag
+    carried past a Reader's edge). What follows is the search after two
+    wide searches hear nothing. Until its window reaches a frame, after about 35
     minutes lost (0.25 s ÷ (2 × 60 ppm) = 2,083 s; § Zones, How a tag hears a
     Field Generator it has not heard before), each search keeps its own
     Reader's channel. A narrower window is timed on its own network's
@@ -654,6 +667,11 @@ never be noticed. The rebuild names the slots for it:
     - **in the US,** where the window keeps widening, the same at about 35
       minutes, then one search in about 6.5 minutes after an hour lost, and
       at most about 2.6 hours once the window reaches the cycle.
+
+    These are the times for a tag that the wide search has not found. At a
+    site of more than one network, it finds a tag carried into another
+    Reader's area within about a minute (§ A tag carried past a Reader's
+    edge, below; added by plan Story 2.1.18).
 
     The build initiatives may restart the search at once on a pin edge, a
     seal's loop or a badge's button (INFERRED).
@@ -810,9 +828,11 @@ listens:
       listen, within 12 s, and the next beacon within 0.25 s. Each Reader's
       share of [19]'s 100,000 items, 8,333 to 11,111 among [20]'s 9–12
       Readers, then answers at [21]'s 200 a second in 42–56 s, every
-      Reader's roll call at once, those that share an EU channel included
-      (§ Channels gives the time if they take turns). That is 354–368 s,
-      about 5.9–6.1 minutes. A reply missed in the pass is
+      Reader's roll call at once in the US. That is 354–368 s, about
+      5.9–6.1 minutes. In the EU, Readers that share a channel take turns,
+      and the inventory takes 478.9–534.5 s, about 8.0–8.9 minutes, the
+      planning figure (§ Channels; the rebuild spec's decision 3b, written in
+      by plan Story 2.1.18). A reply missed in the pass is
       retried in a later frame's spare slots of the same roll call
       (§ Anti-collision), so it waits for no second step.
 
@@ -828,9 +848,9 @@ listens:
     most 1.25 s at a 1 s listen, where the old layout took 1 s (§ Does
     ActiveWave's approach still win). In the warehouse it waits for the
     count's next step as well, so it takes up to about 5 minutes and 12 s,
-    and the day's inventory finishes in about 6.1 minutes at most, or 8.9
-    if Readers on one EU channel must take turns, inside [21]'s 10 (above;
-    § Channels);
+    and the day's inventory finishes in about 6.1 minutes at most in the
+    US, and 8.9 in the EU, where Readers that share a channel take turns,
+    inside [21]'s 10 (above; § Channels);
   - one more wake for each check-in;
   - no frame time: the block keeps its length (§ Anti-collision).
 - **What it leaves unchanged:** [13]'s 3.0 s, [17]'s pairing and [22]'s
@@ -880,7 +900,11 @@ side** (added by plan Story 2.1.15, from the Sprint 4 review's finding 1).
     one hop cycle, 10.5 s, of listening at 5.8 mA, 0.017 mAh. In the EU the
     downlink that places it names the next Reader's channel, and it listens
     there for at most a frame, 0.0004 mAh (§ Channels). Items at rest
-    rarely move, so this study does not price it.
+    rarely move, so this study does not price it on its own: the wide
+    search's bound for each carry covers it (below). An item carried beyond
+    the far bay between two listens never hears that bay's Field Generator
+    of its own network, and finds the next Reader by the wide search
+    (§ A tag carried past a Reader's edge, below).
 - **Where more Field Generators are not wanted,** the items at the edge
   take the second row below: five years on a CR2032 still holds on paper
   for both item tags.
@@ -927,6 +951,112 @@ their bound (above):
   wake adds 2.44 − 1.51 = 0.93 µA over 43,800 hours, 40.7 mAh, to the
   cold-chain tag's 156.2 mAh on a CR2450 (`parts-and-toolchains.md`
   § [27]), and 396 ÷ 196.9 = 2.01.
+
+**A tag carried past a Reader's edge: the wide search** (added by plan Story
+2.1.18, from the Story 2.1.17 review's Minor G, on the rebuild spec's
+decision 3c, `docs/superpowers/specs/2026-10-30-rebuild-design.md` § 5.3 at
+`168bebb8`: [22] binds a tag carried past a Reader's edge, and with it no
+false [25] alarm, and this story designs and prices the search that meets
+it).
+- **The case.** ASSUMED: a forklift moves at a few metres a second, so in
+  the 12 s between an item tag's listens it can carry the item more than a
+  bay past its Reader's edge. The item then never hears the second Field
+  Generator in the bay across the edge (§ A Reader's edge, above). It hears
+  none of its set, so after two missed listens it is lost (§ How a tag hears
+  a Field Generator it has not heard before), and its next listen, to its
+  own network's whole block, hears nothing either. As the study stood, it
+  then searched as § Channels states. In the EU it was found up to 2,083 s +
+  4 × 220.1 s = 2,964 s, about 49 minutes, after the loss. In the US it met
+  another network only by chance until its window reached the hop cycle,
+  about 24 hours. [22] asks a move shown within 5 minutes. [25] alarms at
+  the fourth missed 15-minute check-in, 60 minutes after the last one made,
+  so a loss that began more than 60 − 49.4 = 10.6 minutes after a check-in
+  could alarm before the EU tag was found (INFERRED, the review's
+  arithmetic, reproduced here).
+- **The choice: at a site of more than one network, a lost tag's first two
+  searches are wide.** Each listens long enough to meet any network in
+  reach, whatever that network's time (INFERRED):
+  - **in the EU,** a whole frame on each of the site's four channels, its
+    own first: 4 × (2.795 µC + 5.8 mA × 250 ms) = 5.81 mC, 0.0016 mAh, in
+    about 1 s. A network keeps its channel and sends its beacon and its
+    block in every frame, so a frame's listen on its channel hears it
+    (§ Channels);
+  - **in the US,** one channel for up to one hop cycle: 2.795 µC + 5.8 mA ×
+    10.5 s = 60.9 mC, 0.0169 mAh. Every network visits every channel once a
+    cycle (§ Channels), and the listen stops at the first beacon it hears.
+    The Reader tells a tag when it joins whether its site has other
+    networks, beside the hop order, and the second wide search takes
+    another channel.
+
+  The tag joins the network it hears in that frame's joining window, as a
+  new tag joins, and the host places it. If neither wide search hears a
+  network, the tag searches as § Channels states, at 6.6 µA. The ward and
+  the conference keep one network each (§ Channels), so their lost tags
+  make no wide search, and the worn tags' years are unchanged.
+- **Its time** (INFERRED, at the worst): two missed listens, 24 s; the
+  whole-block listen that hears nothing, 12 s; the wide search, about 1 s
+  in the EU and at most 10.5 s in the US; joining in that frame, 0.25 s; a
+  second hearing at the next listen, 12 s; then 1 s for the slot, the
+  Reader and the host. That is about 50 s in the EU and 60 s in the US
+  (24 + 12 + 1 + 0.25 + 12 + 1 = 50.25; 24 + 12 + 10.5 + 0.25 + 12 + 1 =
+  59.75), inside [22]'s 5 minutes, or 63 s and 82 s if only the second wide
+  search hears a network. The tag makes its next check-in through the
+  Reader it has joined, so a carry delays at most one check-in, and [25]
+  raises no alarm for it. A tag that neither wide search finds heard no
+  network on any channel: it has left the Readers' reach or lies shielded,
+  which is [25]'s case.
+- **Its cost** (INFERRED): at most two wide searches for each carry that
+  loses a tag, 11.6 mC, 0.0032 mAh, in the EU and 121.8 mC, 0.0338 mAh, in
+  the US. That bound covers the join of an item carried into the far bay as
+  well (§ A Reader's edge, above). [27] counts no carries, and items at rest
+  rarely move, so this study gives the carries each cell allows over five
+  years, from `parts-and-toolchains.md` § [27]'s needs at a 12 s listen
+  (five years of 365 days, 1,825 days):
+
+  | Cell, at a 12 s listen | Five years' need: margin (mAh) | Carries a tag may lose, EU | Carries, US |
+  |---|---|---|---|
+  | CR2450 variant, plain | 143.5 of 396: 252.5 | 78,211, about 43 a day | 7,463, about 4.1 a day |
+  | CR2450 variant, cold chain | 156.2 of 396: 239.8 | 74,278, about 41 a day | 7,087, about 3.9 a day |
+  | CR2032 core, plain | 124.2 of 150: 25.8 | 7,991, about 4.4 a day | 763, one every 2.4 days |
+  | CR2032 core, cold chain | 136.9 of 150: 13.1 | 4,058, about 2.2 a day | 387, one every 4.7 days |
+
+  Each count is the margin divided by the carry's bound, unrounded, for
+  example 252.5 ÷ 0.033835 = 7,463. At a carry a day for five years, the CR2450
+  variant needs 205.2 mAh in the US, 1.93 of five years, or 217.9 mAh, 1.82,
+  on cold chain. The CR2032 core needs 185.9 and 198.6 mAh there, 0.81 and
+  0.76 of five years, short. In the EU a carry a day leaves the CR2032 core
+  1.15 and 1.05 of five years.
+- **The CR2032's limit, decided by Omid** first-hand in the terminal of the
+  session "Mac Closer", between its `date -u` reads of 22:11:39Z and
+  22:24:12Z: "State the limit; CR2450 if carried". The item tag is the
+  CR2450 variant (the rebuild spec's decision 5a). The CR2032 core, kept for
+  items that cannot take the larger tag, keeps five years on paper in a US
+  warehouse while its item is carried and lost at most once every 2.4 days,
+  or 4.7 days on cold chain. An item carried more often takes the CR2450
+  variant. One that cannot, and is carried that often in a US warehouse,
+  keeps fewer than five years on paper: 0.81 of them, or 0.76 on cold chain,
+  at a carry a day. No requirement number moves.
+- **Weighed against the other ways** (INFERRED):
+  - **an aimed search, the rebuild spec's example:** the downlink that
+    places a tag at an edge bay hands it the next Reader's channel, or in
+    the US its hop order and frame offset, so the search listens where that
+    network will be. For that one carry it costs less: a frame on one
+    channel, 1.45 mC, in the EU, and in the US a window of about 36 ms where
+    the wide search listens for up to 10.5 s. But it serves only a carry
+    into the next Reader along the aisle, not one to another aisle or a dock
+    door, which still needs the wide search. In the US the offset also ages,
+    by up to 20 µs a second between two Readers' crystals (each ±10 ppm,
+    PSIP p23): past a frame's 0.25 s within 12,500 s, about 3.5 hours, and
+    by ±18 ms over a 15-minute check-in. So it would be renewed after each
+    check-in, from a host that reads both Readers' frame clocks to a few
+    milliseconds, which no study has measured. Not chosen. The build may add
+    it ahead of the wide search at edge bays, to save the US carry's cost;
+  - **holding [25]'s alarm while a carried tag may still be searching:** no
+    battery cost, but the move stays off the screen for up to 49 minutes in
+    the EU and a day in the US, where [22] binds. Declined;
+  - **a wide search at every site:** at the ward and the conference, a lost
+    tag's whole-block listen already meets its own network, the only one
+    there. Not needed.
 
 **The conference hall's second Reader: on the first Reader's network**
 (added by plan Story 2.1.16, from the Story 2.1.15 review's Minor C). [2]
@@ -1047,7 +1177,12 @@ their own:**
   links; and the guides' setup walk that checks them (§ Zones). Added by
   Story 2.1.12: the block's order along each floorplan, the count each
   Field Generator's slot repeats, and the hop order a tag is given when it
-  joins (§ Zones, The layout of a listen).
+  joins (§ Zones, The layout of a listen). Added by Story 2.1.18: the wide
+  search a lost tag makes at a site of more than one network, and, in the
+  US, the word a tag is given when it joins that its site has other
+  networks (§ Zones, A tag carried past a Reader's edge); and the [21] test
+  on two EU Readers that share a channel, which decides whether they roll
+  call at once (§ Channels).
 
 ## The Chorus comparison, radio side
 
