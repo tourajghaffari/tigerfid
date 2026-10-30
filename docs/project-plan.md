@@ -1515,7 +1515,13 @@ MEASURED or INFERRED with its arithmetic; no requirement number moved; and
 the PR body quotes each item's grep with each hit's disposition (manifest
 prose check `story2116-review-fixes`).
 
-#### Story 2.1.18: The Story 2.1.17 review's fixes: the EU inventory's at-once premise, and a carried tag's time to be found
+#### Story 2.1.18: The Story 2.1.17 review's fixes: the EU inventory's at-once premise, and a carried tag's time to be found — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #85 (branch `story-2.1.18-review-fixes`, pre-tick head `2911c2af`).
+**Outcome:** the review's two Minors are corrected in `radio-and-location.md`, with the rebuild spec's answers written in (`docs/superpowers/specs/2026-10-30-rebuild-design.md` § 5.3 at `168bebb8`, decisions 3b and 3c). No requirement number moved, and `requirements.md` is unchanged. Every figure added reproduces from the studies' inputs by a script, and every number on a removed line is on an added one.
+- **Minor F** (§ Channels; § Zones, the day's inventory): the US bullet's 23 % bound counts every shared frame as lost, so "Bays 30 m apart rarely hear each other" goes. EU Readers that share a channel take turns, 534.5 s or 478.9 s, about 8.9 or 8.0 minutes: the planning figure (3b). The study's own budget leaves 16.2 dB at 60 m and 18.7 dB at 45 m before the racking, so they roll call at once (5.9–6.1 minutes) only if the build's [21] test shows they do not hear each other.
+- **Minor G** (§ Zones, A tag carried past a Reader's edge; § Channels): at a site of more than one network, a lost tag's first two searches are wide: a frame on each of the site's four channels in the EU (5.81 mC), and one channel for a hop cycle in the US (60.9 mC). A tag carried past a Reader's edge is then shown in about 50 s in the EU and 60 s in the US, inside [22]'s 5 minutes, with no [25] alarm (3c). At most two wide searches a carry, 0.0032 and 0.0338 mAh, the CR2450 variant allows about 41–43 carries a day in the EU and 3.9–4.1 in the US over five years.
+- **The CR2032 core's US limit**, one carry every 2.4 days (4.7 on cold chain), went to Omid as the spec's 3c asks. His answer, first-hand in the terminal of the session "Mac Closer" between its `date -u` reads of 22:11:39Z and 22:24:12Z: "State the limit; CR2450 if carried". The aimed search, the spec's example, is weighed and not chosen; the build may add it.
 
 **Story:** As a stranger reading the study, I want the shared EU channel's
 roll calls argued from the study's own link budget, and a tag carried past
