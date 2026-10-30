@@ -404,6 +404,37 @@ page (plan Sprint 2's D8).
 - **Nothing else was read.** The story's PR (#67) names no other read:
   every other figure it changed rests on the studies' own stated inputs.
 
+### Story 2.1.19 — the EU build, priced (2026-10-30)
+
+Recorded by the Story 2.1.19 review, from the story's own record. What was
+read is cited in `docs/study/tiered-cost.md` § Read on 2026-10-30, for the
+EU build, and its § Sources rows (JTI-0868-PAGE, JTI-0868, PULSE-W5017,
+BB-RPI15, BB-RPI45, TBK-FX971, ACRONAME-R470, AMSCOPE-SE400Z, ECB-FX). No
+source is pinned: no choice rests on a price page (plan Sprint 2's D8).
+
+- **KEPT, cited by URL and read date, not pinned:** each page read once by
+  a plain request, between the story's clock reads of 22:13:25Z and
+  22:23:01Z:
+  - Johanson's antenna list, its product page and its datasheet for the
+    868 MHz chip antenna;
+  - Pulse's datasheet for the W5017, as Farnell hosts it;
+  - Berrybase's pages for the two Raspberry Pi supplies, and TBK's for the
+    Hakko FX-971, each a seller in Germany;
+  - Acroname's and AmScope's pages again, for the supply's input and the
+    microscope's power;
+  - the European Central Bank's reference rates.
+- **Refused, or priced by quote only, and written not read** by Omid's
+  word, first-hand in the story's terminal between its reads of 22:23:33Z
+  and 22:24:17Z ("Write all as not read (Recommended)"): the 868 MHz chip
+  antenna at Mouser, Digi-Key, RFMW and JTI; the ATTEN ST-2090D's and
+  ST-862D's 230 V models at eleshop.eu and TME; and the W5017 at Farnell's
+  EU pages, TME and RS.
+- **Refused, not needed:** Kiwi Electronics and Watterott (HTTP 403), each
+  with a seller that answered. LCSC's and Reichelt's searches render by
+  script.
+- **Not found:** a 230 V supply for the microscope's light, and the plug of
+  Acroname's supply.
+
 **Search ideas, by study story.** These come FROM THE PLAN AND FROM MEMORY,
 UNVERIFIED: a list to start from, not research. Each is searched, then given
 a verdict here.
@@ -460,3 +491,8 @@ a verdict here.
   cite.
 - **2026-10-30:** Story 2.1.16 read no source and ran no search: each of
   its fixes rests on the studies' own stated inputs.
+- **2026-10-30:** Story 2.1.19's price reads for the EU build (§ 4, above;
+  recorded by the Story 2.1.19 review). A web search found the sellers'
+  pages, and each price was then read from the page itself, never from a
+  search result (`docs/study/tiered-cost.md` § Read on 2026-10-30, for the
+  EU build).
