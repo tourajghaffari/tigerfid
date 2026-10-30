@@ -7,6 +7,27 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.20: the wide search starts when a tag hears none of its Field Generators (#93)
+
+**(A hub-rooted executor session on the Mac, "Mac 3", session `7d281368-21e6-410c-982e-c3db4c0cac0d`, in a scratch worktree of
+this clone. A `/clear` of the process `c5a37a49-…`, whose earlier contexts did other repos' work and none of Epic 2.1's. Seated
+by the fleet coordinator's orders; Omid's merge sentence first-hand in this terminal: "Please merge PRs you open when ready and
+in the right order.")**
+
+- **In flight:** nothing. #93 merged → `c2eb62be73e2602ee44bd4fe878ad570c3d41cec` (2026-10-30T22:54:52Z, squashed pinned to head `5bfa3ac2` after CI run 41141155014 read green).
+- **Read first, next session:** Story 2.1.20's tick in `docs/project-plan.md`, and `docs/study/radio-and-location.md` § Zones, A
+  tag carried past a Reader's edge.
+- **Next (pointers — re-verify after a fetch):** Story 2.1.8, Epic 2.1's close, by a fresh closer: every work story is ticked.
+  Its prose check `story2118-review-fixes` reads #93's body for the item's grep.
+- **Surprises / decisions:**
+  - The fix touched two sentences beyond the trigger, since they described the old rule: the US wide listen "stops at the
+    first beacon it hears" now stops at the first frame whose block carries a Field Generator it hears, and a tag neither wide
+    search finds is split by whether it still hears a beacon ([25]'s case or not).
+  - The same-frame join rests on one ASSUMED order: a frame's joining window follows the block, as § Anti-collision lists a
+    frame's shares. Were it before, the join comes one frame (0.25 s) later, still inside [22]. The build measures the frame.
+  - The review's Minor H priced the old beacon at 35 m (about 23 dB). The study takes the far end of one or two bays past the
+    edge, 36.5 m (22.7 dB), so the figure holds for the whole span.
+
 ## Session: 2026-10-30 — Story 2.1.19 reviewed (PASS); the research log's entry for its reads
 
 - **Landed:**
@@ -72,50 +93,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
   launch: its background-task path id equals its session id. Not elevated.
   It did none of Story 2.1.18's work.
-
-## Session: 2026-10-30 — Story 2.1.19: the EU build, priced
-
-- **Landed:**
-  - #86 → `97d1ae40` (GitHub's merge stamp 22:32:30Z), squash with
-    `--match-head-commit cfd5fdd1…` once `gh pr checks` read it GREEN (run
-    41138721800). Omid's merge word, first-hand in this terminal: "Please
-    merge PRs you open when ready and in the right order."
-    - `docs/study/tiered-cost.md` § The EU build prices each part the EU
-      build changes, from pages read 2026-10-30 between 22:13:25Z and
-      22:23:01Z, in euros net of Germany's 19 % VAT, at the ECB's rate of the
-      day (1 EUR = 1.1172 USD). Each tier's EU total, with its Lacks: starter
-      598.18, advanced 1,387.85, pro 2,144.08, the spec's first build
-      1,413.52. No US figure moved: a script rebuilt all 20 US figures from
-      their unrounded lines, none differing.
-    - Story 2.1.19 is ticked, with its line in `docs/close/2.1.json`; the
-      prose check `eu-build-priced` is the closer's.
-  - One `git merge origin/main` before landing, over Story 2.1.18's #85
-    (`c46efb83`): the manifest's two new `reviewedFor` lines met, and both
-    are kept, 2.1.18's first.
-- **Next:**
-  1. Mac Reviewer reviews #86, after Story 2.1.18's review, as Story
-     2.1.19's `**Reviewed:**` record.
-  2. Story 2.1.8, a FRESH closer, after the reviews (the spec's gate G5).
-- **Surprises / decisions:**
-  - **The W5017 serves 868 MHz.** Pulse's datasheet gives it 868–928 MHz and
-    0.89–0.93 dBi at 868 MHz, so the EU build keeps the US build's whip and
-    the Reader's 15.2 dBm EU ceiling stands.
-  - **Johanson prints the 868 MHz antenna's gain two ways:** "Peak Gain 1.0"
-    on its page, "-2.5 Typ." on its datasheet. At the datasheet's figure the
-    EU link at 30 m keeps 17.6 dB up and 20.8 dB down (INFERRED); the build's
-    range test measures it.
-  - **Omid's ruling, this session (plan Sprint 3's D7):** four prices stay
-    not read, "Write all as not read (Recommended)", first-hand between this
-    terminal's reads of 22:23:33Z and 22:24:17Z: the 868 MHz antenna, both
-    ATTEN stations' 230 V models, and the W5017 at EU sellers.
-  - **For the reviewer:** the D7 message named TME for the two stations
-    before their TME pages were requested; they answered HTTP 403 after his
-    answer (22:26:44Z), and the study says so. The FX-971's 230 V is
-    INFERRED from a German seller's page that names no voltage.
-  - **The register seats:** two `zsh-equals-face` (an `echo "=====…"` label
-    and a `==` label in read-only commands; caught, nothing written), and the
-    D7 message's claim before its read (above), caught and recorded.
-  - **The seat:** "Mac 4", a `/clear` of the process `ab15bb49-…` (the
-    background-task path id); this conversation is
-    `28d2be54-66c1-4303-b696-2b48c0bc788c`.
 
