@@ -7,6 +7,46 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.16: the EU edge's channels, the inventory's wait and the hall's second Reader
+
+- **Landed:**
+  - #72 → `f59888ff` (GitHub's merge stamp 12:15:14Z), squash with
+    `--match-head-commit 807ab911…` once `watch-pr.mjs` read it GREEN.
+    - Story 2.1.16 is ticked, and the manifest gains its `reviewedFor` line.
+      The Story 2.1.15 review's three Minors and three nits are corrected in
+      `radio-and-location.md` and `reference-research.md`. No requirement
+      number moved, and no printed figure changed: each figure added
+      reproduces from the studies' inputs by a script.
+    - The sitting had not run, so the study writes its own answers to Minors
+      A and C. In the EU, Readers beside each other take different channels,
+      four of the five in a 2 × 2 pattern. [2]'s second Reader in the hall
+      listens on the first Reader's network, so the hall stays one block and
+      [9] keeps its 22 %.
+- **Next:**
+  1. Story 2.1.7, Omid's sitting. Story 2.1.16 moved no figure it reads. It
+     gains two answers to confirm or overrule in the rebuild spec: the EU
+     channel rule (Minor A) and the hall's second Reader (Minor C).
+  2. A review of Story 2.1.16 by a FRESH seat, as Story 2.1.15 had, if the
+     coordinator orders one.
+  3. Story 2.1.8, Epic 2.1's close, by a FRESH closer.
+- **Surprises / decisions:**
+  - **What declines the hall's own network** is a cost the review did not
+    name. A worn badge that crosses a Reader's edge in the hall rejoins the
+    other Reader each time, up to one hop cycle in the US: 61.7 mAh a year
+    at ten crossings a day (ASSUMED), 0.81 years even with six more Field
+    Generators. The review's 9 % margin beside the edge is the second
+    reason.
+  - **A lost tag in the EU** must now try the other channels, one per
+    search: four searches, about 15 minutes. This follows from Minor A's
+    rule, and the study says so.
+  - **The hub's Item-8 check read this PR** because its grep section uses
+    the check's heading: 29 dispositions, 14 current, none named.
+- **Provenance:** Session id `fbb2b4f5-d3b5-43b1-a0d4-180396d4e44f`, a
+  hub-rooted executor seat, freshly launched: its background-task path id
+  equals its session id. Not elevated. The merge word is Omid's in-session
+  delegation, relayed by the coordinator's orders: "Please merge any PRs
+  you open during this session when ready and in the right order."
+
 ## Session: 2026-10-30 — Story 2.1.15 reviewed (PASS WITH FINDINGS); Story 2.1.16 filed
 
 - **Landed:**
@@ -93,41 +133,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `ba5a50fc-7f22-4257-944a-a4b3b875897c`, the
   hub-rooted executor seat "Mac 3", fresh by launch: its background-task
   path id equals the session id. Not elevated.
-
-## Session: 2026-10-29 — Sprint 4 reviewed (PASS WITH FINDINGS); Story 2.1.15 filed
-
-- **Landed:**
-  - #65 → `9940597e` (GitHub's merge stamp 00:00:55Z, 2026-10-30), squash
-    with `--match-head-commit 82e2ca46…` once `watch-pr.mjs` read it GREEN.
-    - The Sprint 4 block is cut whole to the archive's § Executed sprints,
-      with its `**Reviewed:**` record: PASS WITH FINDINGS, each leg MET.
-    - Story 2.1.15 is filed ahead of Story 2.1.7. It carries finding 1,
-      Important: the warehouse's "one run of three" does not hold at a
-      Reader's edge. INFERRED: a CR2032 lasts 0.92 of five years there, and
-      the cold-chain tag 0.85, while the recommended CR2450 still meets
-      [27]. It also carries four Minors and five nits.
-    - The manifest gains `2.1.15` and the prose check
-      `sprint4-review-fixes`.
-- **Next:**
-  1. **A Sprint 5 proposal for Story 2.1.15** (a FRESH proposer), then its
-     leg and its review. Omid may sit first, at the cost the record names:
-     choosing the item tag's cell from a CR2032 margin that does not hold at
-     a Reader's edge.
-  2. Story 2.1.7, Omid's sitting; then Story 2.1.8, a FRESH closer, who
-     also adjudicates GNU make's INFERRED chain under
-     `three-platform-claims-sourced` (the record's note for the closer).
-  3. **The Mac's reference folder** still reads `README stale-stub`. MEASURED
-     by this pass: it is byte for byte the stub before leg 3. The next
-     tigerfid session on the Mac runs `node scripts/reference-check.mjs
-     --write-stub` (D13; the friction log's V1).
-- **Surprises / decisions:**
-  - **The register seats** of legs 2 and 3, and this pass's own, went as
-    text in #65's body for the coordinator's fold. Until that fold lands,
-    the close runner prints "REVIEW SEATING MISSING" for Sprint 4.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 23:36:35Z and 23:40:19Z: "Yes, push/edit/ready/merge
-    (Recommended)". The merge did not hold.
-- **Provenance:** Session id `6c5fdfae-3e60-414d-bac8-80781e57d20e`, the
-  hub-rooted reviewer seat "Mac 3", fresh by `/clear` of the process
-  `5c057329-…` (the friction log's fresh-session read).
 
