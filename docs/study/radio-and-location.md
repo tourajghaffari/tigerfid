@@ -572,8 +572,12 @@ of 10–20 dB.
     searches are wide: a whole frame on each of the site's channels, its own
     first, which meets any network in reach whatever its time (added by plan
     Story 2.1.18, from the rebuild spec's decision 3c; § Zones, A tag
-    carried past a Reader's edge). What follows is the search after two
-    wide searches hear nothing. Until its window reaches a frame, after about 35
+    carried past a Reader's edge). They start once a listen to its own
+    network's whole block hears none of that network's Field Generators,
+    whether or not it hears the beacon, and the tag joins the network whose
+    Field Generator it hears (added by plan Story 2.1.20, from the Story
+    2.1.18 review's Minor H). What follows is the search after two wide
+    searches hear no Field Generator. Until its window reaches a frame, after about 35
     minutes lost (0.25 s ÷ (2 × 60 ppm) = 2,083 s; § Zones, How a tag hears a
     Field Generator it has not heard before), each search keeps its own
     Reader's channel. A narrower window is timed on its own network's
@@ -964,7 +968,8 @@ it).
   Generator in the bay across the edge (§ A Reader's edge, above). It hears
   none of its set, so after two missed listens it is lost (§ How a tag hears
   a Field Generator it has not heard before), and its next listen, to its
-  own network's whole block, hears nothing either. As the study stood, it
+  own network's whole block, hears none of that network's Field Generators
+  either. As the study stood, it
   then searched as § Channels states. In the EU it was found up to 2,083 s +
   4 × 220.1 s = 2,964 s, about 49 minutes, after the loss. In the US it met
   another network only by chance until its window reached the hop cycle,
@@ -973,9 +978,25 @@ it).
   so a loss that began more than 60 − 49.4 = 10.6 minutes after a check-in
   could alarm before the EU tag was found (INFERRED, the review's
   arithmetic, reproduced here).
+
+  Such a tag may still hear its old Reader's beacon (INFERRED, added by
+  plan Story 2.1.20, from the Story 2.1.18 review's Minor H). A Reader's
+  edge lies 15–16.5 m from that Reader, half of the 30–33 m between
+  Readers (§ A Reader's edge, above), so a tag one or two 10 m bays past the
+  edge stands 25–36.5 m from its old Reader. § Range's EU Reader-to-tag row
+  closes at 30 m with 24.4 dB to spare; at 36.5 m that is
+  20·log₁₀(36.5 ÷ 30) = 1.7 dB less, 22.7 dB left before the racking,
+  which this study does not price. The US row leaves 26.8 dB at 30 m at the
+  same 20 dB body loss, more again. Each of that network's Field Generators
+  sends at a power set for its own bay, so the tag hears none of them.
 - **The choice: at a site of more than one network, a lost tag's first two
-  searches are wide.** Each listens long enough to meet any network in
-  reach, whatever that network's time (INFERRED):
+  searches are wide.** They start once its listen to its own network's
+  whole block hears none of that network's Field Generators, whether or not
+  it hears the beacon (plan Story 2.1.20). A beacon heard alone names no
+  zone, so a tag that waited for silence would stay an unplaced tag of its
+  old network, with no zone for the host to show and [22] unmet for that
+  carry. Each listens long enough to meet any network in reach, whatever
+  that network's time (INFERRED):
   - **in the EU,** a whole frame on each of the site's four channels, its
     own first: 4 × (2.795 µC + 5.8 mA × 250 ms) = 5.81 mC, 0.0016 mAh, in
     about 1 s. A network keeps its channel and sends its beacon and its
@@ -983,28 +1004,42 @@ it).
     (§ Channels);
   - **in the US,** one channel for up to one hop cycle: 2.795 µC + 5.8 mA ×
     10.5 s = 60.9 mC, 0.0169 mAh. Every network visits every channel once a
-    cycle (§ Channels), and the listen stops at the first beacon it hears.
+    cycle (§ Channels), and the listen stops at the first frame whose block
+    carries a Field Generator it hears. It passes over a beacon whose block
+    carries none, its old Reader's among them; every other network in reach
+    still visits within the cycle, so the bound stands (plan Story 2.1.20).
     The Reader tells a tag when it joins whether its site has other
     networks, beside the hop order, and the second wide search takes
     another channel.
 
-  The tag joins the network it hears in that frame's joining window, as a
-  new tag joins, and the host places it. If neither wide search hears a
-  network, the tag searches as § Channels states, at 6.6 µA. The ward and
+  The tag joins the network whose Field Generator it hears, never one whose
+  beacon alone it hears (plan Story 2.1.20): in the EU, on the first of the
+  site's channels, its own first, whose frame carries one; in the US, at the
+  first such frame on its channel. It joins in that frame's joining window
+  (ASSUMED: the window follows the block, in the order § Anti-collision
+  lists a frame's shares; were it before the block, the tag would join a
+  frame later, 0.25 s), as a new tag joins, and the host places it. If
+  neither wide search hears a Field Generator, the tag searches as
+  § Channels states, at 6.6 µA. The ward and
   the conference keep one network each (§ Channels), so their lost tags
   make no wide search, and the worn tags' years are unchanged.
 - **Its time** (INFERRED, at the worst): two missed listens, 24 s; the
-  whole-block listen that hears nothing, 12 s; the wide search, about 1 s
+  whole-block listen that hears none of its network's Field Generators,
+  12 s; the wide search, about 1 s
   in the EU and at most 10.5 s in the US; joining in that frame, 0.25 s; a
   second hearing at the next listen, 12 s; then 1 s for the slot, the
   Reader and the host. That is about 50 s in the EU and 60 s in the US
   (24 + 12 + 1 + 0.25 + 12 + 1 = 50.25; 24 + 12 + 10.5 + 0.25 + 12 + 1 =
   59.75), inside [22]'s 5 minutes, or 63 s and 82 s if only the second wide
-  search hears a network. The tag makes its next check-in through the
+  search hears a Field Generator. They hold as well for a tag that still
+  hears its old Reader's beacon, whose wide search starts at the same
+  listen (plan Story 2.1.20). The tag makes its next check-in through the
   Reader it has joined, so a carry delays at most one check-in, and [25]
   raises no alarm for it. A tag that neither wide search finds heard no
-  network on any channel: it has left the Readers' reach or lies shielded,
-  which is [25]'s case.
+  Field Generator on any channel. If it hears no beacon either, it has left
+  the Readers' reach or lies shielded, which is [25]'s case; if it still
+  hears its old Reader, it lies beyond every Field Generator's bay and keeps
+  checking in through that Reader, so [25] stays silent for it.
 - **Its cost** (INFERRED): at most two wide searches for each carry that
   loses a tag, 11.6 mC, 0.0032 mAh, in the EU and 121.8 mC, 0.0338 mAh, in
   the US. That bound covers the join of an item carried into the far bay as
@@ -1180,7 +1215,10 @@ their own:**
   joins (§ Zones, The layout of a listen). Added by Story 2.1.18: the wide
   search a lost tag makes at a site of more than one network, and, in the
   US, the word a tag is given when it joins that its site has other
-  networks (§ Zones, A tag carried past a Reader's edge); and the [21] test
+  networks (§ Zones, A tag carried past a Reader's edge). Added by Story
+  2.1.20: the search's start, a whole-block listen that hears none of the
+  tag's network's Field Generators, beacon or not, and the join to the
+  network whose Field Generator it hears (the same section); and the [21] test
   on two EU Readers that share a channel, which decides whether they roll
   call at once (§ Channels).
 

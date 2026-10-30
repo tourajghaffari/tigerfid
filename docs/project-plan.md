@@ -1861,7 +1861,13 @@ gain at 868 MHz read; gives each tier's EU total, summed before rounding,
 with its Lacks; leaves every US figure unchanged; and the PR body quotes the
 section's grep (manifest prose check `eu-build-priced`).
 
-#### Story 2.1.20: The Story 2.1.18 review's fix: the wide search starts when a tag hears none of its Field Generators
+#### Story 2.1.20: The Story 2.1.18 review's fix: the wide search starts when a tag hears none of its Field Generators — ✅ DONE (2026-10-30)
+
+**Completed:** 2026-10-30 — tigerfid #93 (branch `story-2.1.20-wide-search-trigger`, pre-tick head `e6d9d478`).
+**Outcome:** Minor H is corrected in `radio-and-location.md` (§ Zones, A tag carried past a Reader's edge; § Channels, a lost tag's search; § What the choice leaves to later stories). No requirement number moved, and no printed figure: the six numbers on the removed lines are all on the added ones.
+- **What starts the wide search:** a whole-block listen that hears none of the tag's network's Field Generators, beacon or not. The case now says why (INFERRED): a tag one or two 10 m bays past its Reader's edge stands 25–36.5 m from that Reader, where § Range's EU downlink keeps 22.7 dB before the racking (24.4 − 20·log₁₀(36.5 ÷ 30)), so it likely still hears the old beacon though none of that network's Field Generators.
+- **Which network it joins:** the one whose Field Generator it hears, never one whose beacon alone it hears: in the EU on the first of the site's channels, its own first, whose frame carries one; in the US at the first such frame on its channel, the old Reader's beacon passed over within the same 10.5 s bound. ASSUMED: the joining window follows the block, or the join comes one frame (0.25 s) later.
+- **[22] and [25]:** the times stand (50.25 s EU, 59.75 s US) for a tag that still hears its old beacon, and a carry delays at most one check-in, so [25] raises no alarm. The PR body quotes the item's grep with each hit's disposition (manifest prose check `story2118-review-fixes`).
 
 **Story:** As a stranger reading the study, I want a tag carried past a
 Reader's edge found even where it still hears its old Reader, so that
