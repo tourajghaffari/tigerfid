@@ -92,7 +92,7 @@ of spec §3, then the decision sitting and the approved rebuild spec.
 **Ordering:** 2.1.1 → 2.1.2 (Sprint 1 legs 4–5) → 2.1.9 → 2.1.3 → 2.1.4 →
 2.1.5 (Sprint 2) → 2.1.10 → 2.1.6 → 2.1.11 (Sprint 3) → 2.1.12 → 2.1.14
 (Sprint 4 legs 1–2) → 2.1.15 → 2.1.7 → 2.1.8, with 2.1.13 (Sprint 4 leg 3),
-2.1.16 and 2.1.17 anywhere before 2.1.8.
+2.1.16, 2.1.17 and 2.1.18 anywhere before 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
 The Sprint 2 review (2026-10-28) routes a fix-up of the three studies,
@@ -116,6 +116,9 @@ which gates nothing in the sitting: none of its items moves a margin the
 sitting chooses a cell from (Story 2.1.15's `**Reviewed:**` record).
 The Story 2.1.16 review (2026-10-30) files a fifth, Story 2.1.17, which
 gates nothing in the sitting either (Story 2.1.16's `**Reviewed:**`
+record).
+The Story 2.1.17 review (2026-10-30) files a sixth, Story 2.1.18, which
+gates nothing in the sitting either (Story 2.1.17's `**Reviewed:**`
 record).
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
@@ -1286,6 +1289,188 @@ disposition (manifest prose check `story2115-review-fixes`).
 - **Minor D** (§ Channels; § Zones, the lost tag's window and cost): a lost EU tag searches its site's channels, which a Reader names when the tag joins, the spare left out (five would take 18.3 minutes). Until its window reaches a frame, after about 35 minutes lost, each search keeps its own Reader's channel, since a narrower window meets another network only by chance. After that it tries the next at each search, wherever it lies. A tag lost in its own Reader's area is found within about 4 minutes in its first 35 minutes lost, at any site. After that, it is found within about 4 minutes at the ward and the conference, and within four searches, 14.7 minutes, in the warehouse.
 - **Minor E** (§ Channels; § Zones, the day's inventory): EU Readers that share a channel under the 2 × 2 pattern run their roll calls at once. They stand two bays apart, about 60 m, twice the 30 m at which bays rarely hear each other in the US (6.0 dB more free-space loss), so the inventory keeps its 5.9–6.1 minutes. If the build finds that they hear each other, they take turns (each tag still hears one beacon and sends one reply), and the inventory takes about 8.9 or 8.0 minutes, inside [21]'s 10.
 
+**Reviewed:** 2026-10-30, by the Story 2.1.17 reviewer pass (tigerfid #81).
+- **The pass:** a reviewer session on the Mac, "Mac Reviewer", on the fleet
+  coordinator's orders, launched in the Mac's home folder and working from
+  the hub checkout. It was a fresh launch: its background-task path id
+  equals its session id, `86ac7523-9bad-4199-8c93-a5a8b64ce65b`. It was not
+  elevated (uid 501) and did none of this story's work.
+- **Verdict: PASS WITH FINDINGS.** The story meets its Done-when. No finding
+  is Important, and none moves a figure the sitting chooses a cell from:
+  [9]'s 22 % in the hall, [27]'s 1.21 and 1.10 of five years and every
+  tier's total are unchanged, since the five other study documents keep
+  their blobs. Two Minors go to Story 2.1.18, which gates nothing in the
+  sitting. **Story 2.1.7's sitting can proceed.**
+- **The method:** the pass read the repo at `6e6b6cb` (#79 → `185dc2db`,
+  then its wrap, #80) and #79's diff from `9e81b48`. The leg's study
+  commit, `e9232732`, read from the PR's head ref, holds the study exactly
+  as merged, and the merge's tree is the PR head's (`dbb3e7fc`). One script
+  rebuilt every figure #79 adds from the studies' stated inputs alone,
+  censused the numbers on the lines #79 removed, re-ran #79's two greps and
+  censused their needles across line breaks.
+- **The merge:** #79 → `185dc2dba512861eb54417b6ba2cba1c28ffa0cd`, GitHub's
+  stamp 20:28:35Z, read from the API between this pass's `date -u` reads of
+  20:32:49Z and 20:40:41Z.
+- **The inputs the script used,** each as the studies state it: a wake's
+  start-up 2.795 µC; listening 5.8 mA; a frame 250 ms; the lost tag's
+  6.6 µA; drift 2 × 60 ppm; [19]'s 100,000 items, [20]'s 9–12 Readers and
+  [21]'s 200 a second; the count's wait, 300 + 12 + 0.25 s; § Range's
+  margins and its free-space formula. It checked 23 printed figures, and
+  none differs.
+- **Minor D, a lost EU tag's channel search: MET.**
+  - The search covers the site's channels, named by a Reader when the tag
+    joins (`radio-and-location.md` l.560–563), as a US tag "is given the
+    order when it joins" (l.494–495). The spare stays out (l.581–582).
+  - The figures reproduce: 2.795 µC + 5.8 mA × 250 ms = 1.4528 mC, 220.1 s
+    at 6.6 µA; 4 × 220.1 s = 14.67 minutes; 5 × 220.1 s = 18.34 minutes;
+    0.25 s ÷ (2 × 60 ppm) = 2,083 s, 34.7 minutes.
+  - The own-channel start holds: a tag times its window on its own
+    network's slots (l.745–751), so a search narrower than a frame meets
+    another network only by chance. In its first 35 minutes a search costs
+    less and comes sooner (l.643–645), so "within 220 s" bounds it. What
+    this leaves for a tag carried into another Reader's area is Minor G.
+- **Minor E, the EU inventory on shared channels: MET.** The study says the
+  Readers roll call at once and gives the time if they take turns
+  (l.527–547, l.811–815, l.831–833).
+  - The grid reproduces: under (row mod 2, column mod 2), a 3 × 3 grid
+    puts 4, 2, 2 and 1 Readers on its four channels, and a 3 × 4 grid 4, 4,
+    2 and 2. No two-dimensional grid of 9–12 Readers puts more than four
+    on one channel (2 × 5 and 2 × 6 put three), and four on a channel take
+    8.5 minutes among 10 Readers and 8.2 among 11, inside the range.
+  - The times reproduce: 4 × 100,000 ÷ 9 = 44,444 items, 222.2 s, and
+    312.25 + 222.2 = 534.5 s, 8.91 minutes; 4 × 100,000 ÷ 12 = 33,333,
+    166.7 s, 478.9 s, 7.98 minutes; at once, 353.9–367.8 s, 5.90–6.13
+    minutes; 20·log₁₀(60 ÷ 30) = 6.02 dB.
+  - Taking turns keeps one beacon and one reply: a tag keeps the Reader's
+    time on its set's slots at every listen (l.745–751), so a turn up to
+    222 s after the step needs no second beacon, and § [27] stands.
+  - The at-once choice's premise is Minor F.
+- **What stays.**
+  - No requirement number moved. `requirements.md`,
+    `parts-and-toolchains.md`, `tiered-cost.md`, `software-stack.md` and
+    `original-system.md` have the same blob at `cdaa8e5` (the Story 2.1.16
+    review's reading), at `9e81b48` and at `185dc2db`.
+  - No printed figure changed: every number on a line #79 removed from the
+    study (20 distinct) is on a line it added.
+  - No dated pointer line is owed. An observation, not a finding:
+    `requirements.md` carries eleven dated lines, not the six #79 counts.
+    The five more (l.113, l.121, l.128, l.131, l.136) sit under § The
+    arithmetic behind the numbers and quote the cell, a reply and
+    listening, none of which #79 changes.
+  - Story 2.1.16's Outcome and `**Reviewed:**` record are untouched: #79's
+    plan diff is Story 2.1.17's heading, `**Completed:**` and
+    `**Outcome:**` alone.
+- **The greps:**
+  - #79's two reproduce at `185dc2db` with the counts its body gives:
+    Minor D 10 hits (6 at `9e81b48`), Minor E 14 (7 at the base).
+  - A census of the same needles across line breaks finds the two wrapped
+    hits #79 names, "four searches" at l.651–652 and "share a channel" at
+    l.531–532, and no other.
+  - The hub's `check-item8-dispositions.mjs` reads #79's body: 24
+    dispositions, 8 current, 1 named. The named one, "requirements l.309:
+    **current**", quotes nothing; the line reads "because readers that
+    share a channel share its airtime", current as judged.
+- **The battery** at `6e6b6cb`, under the Mac's lock (GO 20:40:41Z, END
+  20:40:45Z):
+  - `npm test`: exit 0, with `close-lint: ok (adopted 2026-10-26)`,
+    `check-licenses: ok` and 22 of 22;
+  - `node scripts/reference-check.mjs`: "reference-check: ok — 299 rows
+    verified, README the stub";
+  - the close runner over the eleven teeth: ten PASS, and
+    `rebuild-spec-approved` FAIL (exit 1), as the plan expects until Story
+    2.1.7.
+- **Findings, Minor** (to Story 2.1.18):
+  - **F. Minor E's at-once choice rests on a premise the study's own
+    figures read against.**
+    - MEASURED, the text: Readers on one EU channel "stand two bays apart,
+      about 60 m, twice the 30 m at which bays rarely hear each other in
+      the United States (above)", and "So each runs its own roll call at
+      [21]'s 200 a second" (`radio-and-location.md` l.532–537). The US
+      sentence is one line with no figure: "Bays 30 m apart rarely hear
+      each other" (l.504). Against it, [20] asks a Reader to read a tag at
+      30 m among metal racking (`requirements.md` l.298–302), and § Range's
+      EU tag-to-Reader row closes at 30 m with 22.2 dB to spare at 20 dB of
+      body loss (l.472).
+    - INFERRED: at 60 m, free space takes 6.0 dB of that margin and leaves
+      16.2 dB, before whatever the racking beyond [20]'s 30 m costs, which
+      the study does not price. A tag in the other Reader's bay can stand
+      nearer, about 45 m with each Reader mid-bay: 3.5 dB, 18.7 dB left. So
+      on the study's own budget two Readers on one EU channel can hear each
+      other's tags, and whether their roll calls collide is a question for
+      the build's test, not a conclusion. The premise was the Story 2.1.16
+      review's own suggested answer ("by the US bullet's reason at twice its
+      distance"), and #79 followed it.
+    - The answer is one sentence: the study drops the premise and states
+      the at-once choice as the build's to confirm, with 8.0–8.9 minutes as
+      the EU warehouse's planning figure until [21]'s test on two Readers
+      that share a channel reads otherwise, both inside [21]'s 10; or it
+      prices the racking between them. The US sentence gains its basis or
+      goes: that bullet's conclusion rests on its 23 % arithmetic, which
+      reproduces (1 − (41/42)¹¹ = 23.3 %). No requirement number and no
+      battery figure moves.
+  - **G. A tag carried past a Reader's edge bay: its time to be found,
+    counted from the loss, is unstated and unweighed.**
+    - MEASURED, the text: an item carried across an edge joins the next
+      Reader once the host places it in the far bay, from its own network's
+      second Field Generator there (`radio-and-location.md` l.864–882). A
+      tag that hears none of its set in two listens is lost (l.623–625).
+      Its search keeps its own Reader's channel until its window reaches a
+      frame, after about 35 minutes (l.563–568), and it is then found
+      "within four searches" (l.579–581). [22] asks "a move shown within
+      5 min" and lets the next inventory pass find a missed one
+      (`requirements.md` l.317–320). [25] alarms after four missed
+      check-ins at one every 15 minutes.
+    - INFERRED: a tag carried more than a bay past the edge before a
+      listen places it hears nothing of its own network there. In an EU
+      warehouse it is then found up to 2,083 s + 4 × 220.1 s = 2,964 s,
+      about 49 minutes, after it is lost. [25]'s fourth missed check-in
+      falls 60 minutes after the last one made, so a loss that begins more
+      than 10.6 minutes after a check-in can raise a missed-check-in alarm
+      before the tag is found, at the worst search order. #79's own-channel
+      start makes this explicit. Before it, "tries the next channel at each
+      search" read as about 15 minutes.
+    - The answer is one or two sentences: the time from the loss for a tag
+      carried past the edge bay, weighed against [22] and [25]. For
+      example, the first 35 minutes could interleave a frame's listen on
+      the site's other channels with the narrow own-channel searches,
+      inside the 6.6 µA, or the host could hold [25]'s alarm while a
+      carried tag may still be searching. The US face is the same question,
+      INFERRED: a lost US tag times its window on its own network's hop, so
+      it meets another Reader's network only by chance until its window
+      reaches the cycle, about 24 hours lost (l.637–642). The story states
+      it, or leaves it to the sitting with that reason.
+- **The recurrence triage** (hub KB `epic-close-protocol`): each text seat
+  falls in a decided class, so none qualifies for a new decision.
+  - #79's one seat is an `item-8-anchor-grep-misses-falsified-claims`: the
+    Item-8 reader's named disposition, above.
+  - The executor's two, read off #80's note and not measured here: a
+    `piped-checker-exit` (the tick's push piped into `grep`) and the
+    `cwd-drift` warnings of a hub-rooted seat in the clone.
+  - This pass's are two `piped-checker-exit` (the orders' pre-read piped a
+    fast-forward and four fetches into `tail`, and this pass piped its
+    fetch into `grep`, each then read unpiped by `git rev-parse`), one
+    `zsh-equals-face` (an `echo ==` separator, "= not found") and one
+    `zsh-word-split` (a `set -- $p` loop over quoted pairs, exit 128), all
+    caught.
+  - None of the hub's guards fired in this session, which was launched in
+    the home folder, not the hub. The `echo ==` face ran where the zsh
+    guard denies it since hub #3131.
+
+  The register at the hub's `53cb80a6` holds all five classes, so the
+  seats go to the coordinator as text.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its reads of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open
+  during this session when ready and in the right order."
+- **Routed, in order:**
+  1. Story 2.1.7, Omid's sitting, which need not wait for Story 2.1.18;
+  2. Story 2.1.18, anywhere before Story 2.1.8;
+  3. Story 2.1.8, Epic 2.1's close.
+
+  The cost of sitting first is no margin: every figure the sitting chooses
+  a cell from is unchanged and reproduces. If the sitting decides the EU
+  channel plan, a lost tag's search or [25]'s alarm rule in the rebuild
+  spec, Story 2.1.18 writes the spec's answer into the study.
+
 **Story:** As a stranger reading the study, I want a lost EU tag's channel
 search and the EU inventory's shared channels stated where the study is
 silent, so that the design reads whole before Epic 2.1 closes.
@@ -1326,6 +1511,50 @@ sentence shown correct with its source; every changed figure is sourced,
 MEASURED or INFERRED with its arithmetic; no requirement number moved; and
 the PR body quotes each item's grep with each hit's disposition (manifest
 prose check `story2116-review-fixes`).
+
+#### Story 2.1.18: The Story 2.1.17 review's fixes: the EU inventory's at-once premise, and a carried tag's time to be found
+
+**Story:** As a stranger reading the study, I want the shared EU channel's
+roll calls argued from the study's own link budget, and a tag carried past
+a Reader's edge given its time to be found, so that the design reads whole
+before Epic 2.1 closes.
+**Context:** born 2026-10-30 by the Story 2.1.17 reviewer pass (tigerfid
+#81), from its two Minors (Story 2.1.17's `**Reviewed:**` record). It gates
+nothing in the sitting: neither item moves a margin the sitting chooses a
+cell from. It goes anywhere before Story 2.1.8. If the sitting runs first
+and decides the EU channel plan, a lost tag's search or [25]'s alarm rule
+in the rebuild spec, this story writes the spec's answer into the study.
+Each item says what the review MEASURED and what is INFERRED.
+- **Minor F, the at-once premise** (`docs/study/radio-and-location.md`
+  § Channels, the US bullet and the shared-channel bullet; § Range;
+  `requirements.md` [20]). MEASURED: the at-once choice rests on "the 30 m
+  at which bays rarely hear each other in the United States", a sentence
+  with no figure, while [20] asks a Reader to read a tag at 30 m among
+  racking and § Range's EU uplink closes at 30 m with 22.2 dB to spare.
+  INFERRED: at 60 m, 16.2 dB is left in free space, before the racking
+  beyond 30 m. The study states the at-once choice as the build's to
+  confirm, with 8.0–8.9 minutes as the planning figure until then, or
+  prices the racking. The US sentence gains its basis or goes.
+- **Minor G, a carried tag's time to be found** (`radio-and-location.md`
+  § Channels; § Zones, How a tag hears a Field Generator it has not heard
+  before, and A Reader's edge; `requirements.md` [22], [25]). MEASURED: a
+  lost tag keeps its own channel until its window reaches a frame, about
+  35 minutes, then cycles; [22] asks a move shown within 5 minutes, and [25]
+  alarms after four missed 15-minute check-ins. INFERRED: a tag carried
+  more than a bay past a Reader's edge is found up to about 49 minutes
+  after it is lost in an EU warehouse, and a loss that begins more than
+  10.6 minutes after a check-in can alarm first. The study gives that time
+  from the loss and weighs it against [22] and [25]. It answers the US face
+  too, or leaves it to the sitting with its reason.
+- **What stays.** No requirement number moves (Sprint 4's D1). A figure
+  that a dated pointer line in `requirements.md` quotes, and that this story
+  changes, gets a new dated pointer line. Story 2.1.17's Outcome and its
+  `**Reviewed:**` record are records and are not edited.
+**Done when:** each of Minors F and G is corrected in its document, or its
+sentence shown correct with its source; every changed figure is sourced,
+MEASURED or INFERRED with its arithmetic; no requirement number moved; and
+the PR body quotes each item's grep with each hit's disposition (manifest
+prose check `story2117-review-fixes`).
 
 #### Story 2.1.7: The decision sitting and the rebuild spec
 
