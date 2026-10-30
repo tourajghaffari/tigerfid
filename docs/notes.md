@@ -7,6 +7,42 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.18 reviewed (PASS WITH FINDINGS); Story 2.1.20 filed
+
+- **Landed:**
+  - #89 → `e0fae75d` (GitHub's merge stamp 22:40:34Z), squash with
+    `--match-head-commit ff0a9d61…` once `watch-pr.mjs` read it GREEN.
+    - Story 2.1.18 carries its `**Reviewed:**` record: PASS WITH FINDINGS.
+      #85's 48 figures reproduce from the studies' inputs, no requirement
+      number or printed figure moved, and its greps reproduce. It writes
+      the rebuild spec's 3b and 3c into the study as § 5.3 states them.
+    - Story 2.1.20 is filed with the review's Minor H, and the manifest
+      gains its `reviewedFor` line, `2.1.20` in `stories` and the prose
+      check `story2118-review-fixes`.
+- **Next:**
+  1. Story 2.1.20, before Story 2.1.8: what starts the wide search, and
+     which network a carried tag joins. On the study's own budget a tag
+     carried one or two bays past its Reader's edge likely still hears its
+     old Reader's beacon but none of its Field Generators, so it stays
+     unplaced and the wide search never runs (INFERRED).
+  2. The Story 2.1.19 review (Mac Reviewer's next order).
+  3. Story 2.1.8, a FRESH closer, once Stories 2.1.19 and 2.1.20 are done
+     and reviewed.
+- **Surprises / decisions:**
+  - **This pass filed Story 2.1.18** (as the Story 2.1.17 review) and
+    reviewed it, so it held #85 to the written Done-when and § 5.3 and
+    re-measured every figure.
+  - **The register seats** (#85's four wrapped hits, each correct; this
+    pass's one, a reading `node -e` that also wrote the manifest, caught
+    before the commit) go to the coordinator as text in #89's body.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open during this
+    session when ready and in the right order."
+- **Provenance:** Session id `86ac7523-9bad-4199-8c93-a5a8b64ce65b`, "Mac
+  Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
+  launch: its background-task path id equals its session id. Not elevated.
+  It did none of Story 2.1.18's work.
+
 ## Session: 2026-10-30 — Story 2.1.19: the EU build, priced
 
 - **Landed:**
@@ -88,45 +124,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   - **The seat:** "Mac Closer", a `/clear` of the process `f9546ae8-…` (the
     background-task path id); this conversation is
     `a6bdd28f-d94a-4447-b476-2e883dfb76cf`.
-
-## Session: 2026-10-30 — Story 2.1.7: Omid's decision sitting, and the rebuild spec approved
-
-- **Landed:**
-  - #83 → `168bebb8` (GitHub's merge stamp 22:09:30Z), squash with
-    `--match-head-commit 5178d624…` once `watch-pr.mjs` read it GREEN. Omid's
-    merge word, first-hand in this terminal between its reads of 22:01:09Z
-    and 22:09:27Z: "Please merge".
-    - The spec, `docs/superpowers/specs/2026-10-30-rebuild-design.md`, with
-      Omid's approval ("Approved", between the reads of 22:00:40Z and
-      22:01:09Z); `rebuild-spec-approved` passes, eleven of eleven teeth.
-    - The brief lands as `docs/study/2.1.7-decision-brief.md`. Draft #76 is
-      closed in its favour by Omid's hand (GitHub's stamp 22:10:12Z), with a
-      comment pointing at #83; auto mode refused this session the close.
-    - Story 2.1.19 born (the EU build priced), with the prose check
-      `eu-build-priced`; Story 2.1.8 waits on 2.1.18 and 2.1.19.
-- **Next:**
-  1. Omid sends TI the question in the spec's § 5.2. TI's written answer
-     is gate G1, before any board is drawn; with no clear answer by the
-     bench story's end, it comes back to him.
-  2. Story 2.1.18 (the spec's § 5.3: the EU inventory planned on turns, and
-     a search that finds a carried tag within [22]'s 5 minutes) and Story
-     2.1.19 (§ 6.3), both before the close.
-  3. Story 2.1.8, a FRESH closer, after both.
-- **Surprises / decisions:**
-  - **No public FCC record shows the 300 kbit/s PHY** the design rests on
-    (MEASURED: four test reports, each PDF's SHA-256 matching its page).
-    -3's Wi-SUN report tests mode #2a at 100 kbps; TI's SWRA797 Table 2-1
-    lists Mode #5 as certified. Omid kept 300 kbit/s and asks TI (decision 2).
-  - **fccid.io's pages refuse a plain request (HTTP 403), but its PDF store
-    answers** at `https://fccid.io/m/<SHA-256>.pdf`; each document page's
-    source names the address (`data-pdf-url`).
-  - **The grants carry conditions no study read:** a mobile RF-exposure
-    condition (20 cm), co-location, and, on -3, a "trace reference design"
-    (the spec's gate G2).
-  - **One inference withdrawn in the sitting:** "19 dBm is out" compared a
-    setting with a measured output; -3's report tested 19.0 dBm. The design
-    keeps 17 dBm either way.
-  - **This terminal was a `/clear`** of process `1a792865-…`, Story 2.1.17's
-    executor (task-output path id against session id
-    `98adb3c6-9f4f-4420-a168-a93826056c78`).
 
