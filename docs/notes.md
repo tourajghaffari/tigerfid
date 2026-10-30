@@ -7,6 +7,47 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.17 reviewed (PASS WITH FINDINGS); Story 2.1.18 filed
+
+- **Landed:**
+  - #81 → `8ddc1519` (GitHub's merge stamp 20:48:11Z), squash with
+    `--match-head-commit 9100bb44…` once `watch-pr.mjs` read it GREEN.
+    - Story 2.1.17 carries its `**Reviewed:**` record: PASS WITH FINDINGS.
+      #79's 23 figures reproduce from the studies' inputs, no requirement
+      number or printed figure moved, and its two greps reproduce.
+    - Story 2.1.18 is filed with the review's two Minors, and the manifest
+      gains its `reviewedFor` line, `2.1.18` in `stories` and the prose
+      check `story2117-review-fixes`.
+- **Next:**
+  1. Story 2.1.7, Omid's sitting, from the open draft #76 (its brief). It
+     need not wait for Story 2.1.18; if the sitting decides the EU channel
+     plan, a lost tag's search or [25]'s alarm rule in the rebuild spec,
+     Story 2.1.18 writes the spec's answer into the study.
+  2. Story 2.1.18, anywhere before Story 2.1.8.
+  3. Story 2.1.8, a FRESH closer, once the spec is approved.
+- **Surprises / decisions:**
+  - **Minor F's premise came from the review chain itself.** The Story
+    2.1.16 review suggested "the US bullet's reason at twice its distance";
+    #79 followed it, and that US sentence ("Bays 30 m apart rarely hear each
+    other") reads against [20]'s 30 m read range and § Range's 22.2 dB
+    (INFERRED: 16.2 dB left at 60 m in free space).
+  - **Minor G follows from #79's correct own-channel start.** A tag carried
+    past a Reader's edge bay is found up to about 49 minutes after it is
+    lost in an EU warehouse (INFERRED), unweighed against [22]'s 5 minutes
+    and [25]'s hour.
+  - **The register seats** (two `piped-checker-exit`, one
+    `zsh-equals-face`, one `zsh-word-split`, all caught; #79's one
+    `item-8-anchor-grep-misses-falsified-claims`) go to the coordinator as
+    text in #81's body. No hub guard fired in this session: it was launched
+    in the home folder, not the hub.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open during this
+    session when ready and in the right order."
+- **Provenance:** Session id `86ac7523-9bad-4199-8c93-a5a8b64ce65b`, "Mac
+  Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
+  launch: its background-task path id equals its session id. Not elevated.
+  It did none of Story 2.1.17's work.
+
 ## Session: 2026-10-30 — Story 2.1.17: a lost EU tag's channel search, and the inventory on shared channels
 
 - **Landed:**
@@ -96,44 +137,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   hub-rooted reviewer seat on the fleet coordinator's orders, fresh by
   `/clear`: its background-task path id, `ee8b7871-…`, names an earlier
   session, a wrapped lawcuments-app Sprint 16 review. Not elevated.
-
-## Session: 2026-10-30 — Story 2.1.16: the EU edge's channels, the inventory's wait and the hall's second Reader
-
-- **Landed:**
-  - #72 → `f59888ff` (GitHub's merge stamp 12:15:14Z), squash with
-    `--match-head-commit 807ab911…` once `watch-pr.mjs` read it GREEN.
-    - Story 2.1.16 is ticked, and the manifest gains its `reviewedFor` line.
-      The Story 2.1.15 review's three Minors and three nits are corrected in
-      `radio-and-location.md` and `reference-research.md`. No requirement
-      number moved, and no printed figure changed: each figure added
-      reproduces from the studies' inputs by a script.
-    - The sitting had not run, so the study writes its own answers to Minors
-      A and C. In the EU, Readers beside each other take different channels,
-      four of the five in a 2 × 2 pattern. [2]'s second Reader in the hall
-      listens on the first Reader's network, so the hall stays one block and
-      [9] keeps its 22 %.
-- **Next:**
-  1. Story 2.1.7, Omid's sitting. Story 2.1.16 moved no figure it reads. It
-     gains two answers to confirm or overrule in the rebuild spec: the EU
-     channel rule (Minor A) and the hall's second Reader (Minor C).
-  2. A review of Story 2.1.16 by a FRESH seat, as Story 2.1.15 had, if the
-     coordinator orders one.
-  3. Story 2.1.8, Epic 2.1's close, by a FRESH closer.
-- **Surprises / decisions:**
-  - **What declines the hall's own network** is a cost the review did not
-    name. A worn badge that crosses a Reader's edge in the hall rejoins the
-    other Reader each time, up to one hop cycle in the US: 61.7 mAh a year
-    at ten crossings a day (ASSUMED), 0.81 years even with six more Field
-    Generators. The review's 9 % margin beside the edge is the second
-    reason.
-  - **A lost tag in the EU** must now try the other channels, one per
-    search: four searches, about 15 minutes. This follows from Minor A's
-    rule, and the study says so.
-  - **The hub's Item-8 check read this PR** because its grep section uses
-    the check's heading: 29 dispositions, 14 current, none named.
-- **Provenance:** Session id `fbb2b4f5-d3b5-43b1-a0d4-180396d4e44f`, a
-  hub-rooted executor seat, freshly launched: its background-task path id
-  equals its session id. Not elevated. The merge word is Omid's in-session
-  delegation, relayed by the coordinator's orders: "Please merge any PRs
-  you open during this session when ready and in the right order."
 
