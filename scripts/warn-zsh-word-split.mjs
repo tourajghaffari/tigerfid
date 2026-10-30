@@ -39,7 +39,10 @@
 // the quoted-and-silent form, and a loop inside `bash -c "…"` runs under a
 // shell that splits. Then every `for <name> in <list>` head and every
 // `set -- <list>` is read: it fires when a list ITEM carries an unquoted
-// `$name` / `${name}` and is none of the shapes zsh does split or expand —
+// `$name` / `${name}` and is none of the shapes zsh does split or expand
+// (the `for` arm, since Stories 244.1.33 and 247.1.6, only a WHOLE `$name`
+// item, a whole-variable part of a brace list, or one across a line
+// continuation — an affixed word is one word under zsh, though bash splits it) —
 // `${=name}` (the explicit split), a flag or subscript form (`${(f)name}`,
 // `${name[@]}`, `$name[@]`), a glob (zsh globs the literal pattern around
 // the value), a command substitution (`$(…)` at any nesting, backticks —
@@ -224,7 +227,8 @@ const REF_RE = new RegExp(`(?<!\\\\)\\$(?:\\{(${NAME})\\}|(${NAME}))(?!\\[)`, 'g
 const SPLIT_ITEM_RE = /\$\{=|\$\{\(|\[[@*]\]|\$[@*]|\$\(|`|[*?[]/;
 // Command text that turns splitting on, or leaves zsh, for the whole command.
 const SPLIT_ON_RE = /\b(?:setopt\s+sh_?word_?split|set\s+-y\b|emulate\s+(?:-[LR]+\s+)?(?:sh|bash|ksh)\b)/i;
-const FOR_RE = new RegExp(`\\bfor\\s+(${NAME})\\s+in\\s+([^;\\n]*)`, 'g');
+// Story 247.1.6: the list continues across a backslash-newline (`for f in a \` then `$B`).
+const FOR_RE = new RegExp(`\\bfor\\s+(${NAME})\\s+in\\s+((?:[^;\\n\\\\]|\\\\\\r?\\n|\\\\[^\\n])*)`, 'g');
 const SET_RE = /\bset\s+--\s+([^;\n|&]*)/g;
 const ARRAY_RE = new RegExp(`(?:^|[\\s;&|(])(${NAME})=\\(`, 'g');
 
@@ -322,14 +326,30 @@ export function findWordSplits(command) {
   const found = [];
   // Story 244.1.33 (register class zsh-word-split-guard-denies-separate-variable-prefixed-items):
   // the `for` arm reads a variable only when it is a WHOLE whitespace item — a bare `$VAR` or
-  // `${VAR}`. A word built around one (`$D/a.log`, `$a-$b`) is ONE word in every shell, so a
-  // list of them is a list, never the trap; `for d in $P $P/x` still denies by its whole `$P`.
-  // The `set --` face keeps reading every reference in an item (D10: unchanged).
+  // `${VAR}`. A word built around one (`$D/a.log`, `$a-$b`) is one word under zsh, the harness
+  // shell, which never splits a parameter (bash WOULD split it: with D="a b", bash's
+  // `for f in $D/x.log` loops over `a` and `b/x.log`), so a list of them is a list there, never
+  // the trap; `for d in $P $P/x` still denies by its whole `$P`. Story 247.1.6: a brace list
+  // (`{$A,$B}`) denies by each whole-variable part, and a backslash-newline is removed before
+  // the items are read (the shell joins the lines there), so a whole item glued to it
+  // (`$A\` then `b`) or on the continued line (`a \` then `$B`) is read. The `set --` face keeps
+  // reading every reference in an item (D10: unchanged).
   const WHOLE_REF = new RegExp(`^${REF_RE.source}$`);
+  const BRACE_LIST = /^\{([^{}]*,[^{}]*)\}$/;
   const judge = (form, head, list) => {
     const vars = [];
-    for (const item of list.split(/\s+/)) {
+    const items = form === 'for' ? list.replace(/\\\r?\n/g, '').split(/\s+/) : list.split(/\s+/);
+    for (const item of items) {
       if (!item || SPLIT_ITEM_RE.test(item)) continue;
+      if (form === 'for' && BRACE_LIST.test(item)) {
+        for (const part of BRACE_LIST.exec(item)[1].split(',')) {
+          const r = new RegExp(`^${REF_RE.source}$`).exec(part);
+          if (!r) continue;
+          const name = r[1] ?? r[2];
+          if (!arrays.has(name) && !vars.includes(name)) vars.push(name);
+        }
+        continue;
+      }
       if (form === 'for' && !WHOLE_REF.test(item)) continue;
       for (const r of item.matchAll(REF_RE)) {
         const name = r[1] ?? r[2];
@@ -889,7 +909,7 @@ export function render(found) {
     `word, whatever whitespace ${one ? 'it holds' : 'they hold'}. ` +
     (hasFor ? 'The `for` loop runs ONCE with the whole string as its item. ' : '') +
     (hasSet ? '`set --` hands `$1` the whole string and leaves `$2`, `$3`… EMPTY. ' : '') +
-    (hasFor ? 'Only a variable that is a WHOLE item of the list is read here (`$VAR` or `${VAR}`): a word built around one (`$D/a.log`) is one word in every shell and passes (hub Story 244.1.33). ' : '') +
+    (hasFor ? 'Only a variable that is a WHOLE item of the list is read here (`$VAR`, `${VAR}`, or a whole-variable part of a brace list `{$A,$B}`; a continued line is read with its list): a word built around one (`$D/a.log`) is one word under zsh, the harness shell, and passes — bash would split it, so the same line under bash is a different loop (hub Stories 244.1.33, 247.1.6). ' : '') +
     "This class's seats read nothing for their whole budget — usually silently, under `2>/dev/null` or a " +
     'watcher that kept polling; one ran with the warning already beside it, which is why this is a deny. ' +
     `Re-issue the command in a splitting form. Remedies: (1) force the split — \`\${=${v0}}\`; (2) an array — \`${v0}=(a b c)\` then ` +

@@ -104,8 +104,13 @@ export const REPO_BUILD_INPUTS = {
   // Born 2026-10-27 (hub Story 245.1.1; assessed at birth per KB
   // new-repo-standard item 11, 2026-10-26 — spec § 1): njk pages and the
   // vendored payload's READMEs under src/ are build inputs. Same class as
-  // ghaffaritabrizi.com / bridgetandomid.com / gtllclaw.com.
-  'activewaveinc.com': ['src/**'],
+  // ghaffaritabrizi.com / bridgetandomid.com / gtllclaw.com. docs/inventory/**
+  // joined 2026-10-30 (hub Story 247.1.12): its tests READ the census there
+  // (test/legacy-map.test.mjs, docs/inventory/legacy-addresses.md), so a
+  // census-only PR must run `test` — the build OR the test suite (KB
+  // new-repo-standard item 11; the fleet census is
+  // scripts/fleet/check-test-docs-inputs.mjs, its drain hub Story 248.1.8).
+  'activewaveinc.com': ['src/**', 'docs/inventory/**'],
   // Born 2026-09-05 (hub Story 75.1.2; spec 2026-09-05-tigerdash-design §7.2):
   // src/ IS the Eleventy input dir, and the vendored @fgl/vituno payload lands
   // READMEs under src/ (gates/, icons/, fonts/) — a payload edit classified
