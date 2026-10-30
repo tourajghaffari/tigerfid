@@ -1203,8 +1203,8 @@ each hit's disposition (manifest prose check `sprint4-review-fixes`).
   falls in a decided class, so none qualifies for a new decision.
   - #72's one seat is a `wrapped-sentence-needle-undercount`: the Minor A
     grep's l.895–896 hit, above.
-  - This pass's are one `piped-checker-exit` warning (a fast-forward piped
-    into `tail`, then read unpiped: level with `origin/main`), one
+  - This pass's are two `piped-checker-exit` warnings (a fast-forward and
+    this PR's first push, each piped into `tail`, then read unpiped), one
     `block-commit-hook-denies-a-variable-c-path-commit` deny (a commit
     through `cd` to a shell variable, re-run with the literal path), and the
     `cwd-drift` warnings of a hub-rooted seat working in the clone.
