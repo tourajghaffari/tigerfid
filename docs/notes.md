@@ -7,6 +7,42 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.18: the EU inventory planned on turns, and the wide search for a carried tag
+
+- **Landed:**
+  - #85 → `c46efb83` (GitHub's merge stamp 22:31:05Z), squash with
+    `--match-head-commit 0d491857…` once `watch-pr.mjs` read it GREEN (run
+    41138555413). Omid's merge word, first-hand in this terminal between its
+    reads of 20:53:09Z and 20:54:04Z: "Please merge any PRs you open during
+    this session when ready and in the right order."
+    - `docs/study/radio-and-location.md` carries the rebuild spec's 3b and 3c
+      (§ 5.3 at `168bebb8`). EU Readers that share a channel take turns:
+      8.0–8.9 minutes, the planning figure. The US sentence on bays 30 m apart
+      goes. A lost tag at a site of several networks makes two wide searches
+      first, so a carried tag is shown in about 50 s (EU) or 60 s (US).
+    - Story 2.1.18 is ticked, with its line in `docs/close/2.1.json`. The
+      close runner at the pre-tick head `2911c2af` read eleven PASS (exit 0).
+- **Next:**
+  1. Mac Reviewer reviews #85, as Story 2.1.18's `**Reviewed:**` record.
+  2. Story 2.1.19, the EU build priced (Mac 4), then Story 2.1.8, a FRESH
+     closer, after the reviews.
+- **Surprises / decisions:**
+  - **The spec's 3c widened the story past its filed text.** As filed, it
+    asked for a carried tag's time and a weighing. § 5.3 asks this story to
+    design and price the search that meets [22]. The study holds both (the
+    wide search, and the carries each cell allows), and the filed Done-when
+    is met with them.
+  - **Omid's ruling, this session:** the CR2032 core's US limit, one carry
+    every 2.4 days or 4.7 on cold chain. "State the limit; CR2450 if
+    carried", first-hand between this terminal's reads of 22:11:39Z and
+    22:24:12Z, recorded in the study and the tick.
+  - **For the reviewer:** the wide search's time counts a second hearing at
+    the next 12 s listen before the host places a newly joined tag (INFERRED).
+    The forklift's few metres a second is ASSUMED.
+  - **The seat:** "Mac Closer", a `/clear` of the process `f9546ae8-…` (the
+    background-task path id); this conversation is
+    `a6bdd28f-d94a-4447-b476-2e883dfb76cf`.
+
 ## Session: 2026-10-30 — Story 2.1.7: Omid's decision sitting, and the rebuild spec approved
 
 - **Landed:**
@@ -88,49 +124,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   Reviewer", a reviewer seat on the fleet coordinator's orders, a fresh
   launch: its background-task path id equals its session id. Not elevated.
   It did none of Story 2.1.17's work.
-
-## Session: 2026-10-30 — Story 2.1.17: a lost EU tag's channel search, and the inventory on shared channels
-
-- **Landed:**
-  - #79 → `185dc2db` (GitHub's merge stamp 20:28:35Z), squash with
-    `--match-head-commit dbb3e7fc…` once `watch-pr.mjs` read it GREEN.
-    - Story 2.1.17 is ticked, and the manifest gains its `reviewedFor` line.
-      `radio-and-location.md` answers both Minors of the Story 2.1.16
-      review. Minor D: a lost EU tag searches its site's channels, staying
-      on its own Reader's channel until its window reaches a frame. A tag
-      lost in its own Reader's area is then found within about 4 minutes in
-      its first 35 minutes lost, and after that within 4 minutes at the ward
-      and the conference and within 14.7 minutes in the warehouse. Minor E:
-      EU Readers that share a channel run their roll calls at once, and take
-      turns (8.0–8.9 minutes) if the build finds that they hear each other.
-    - No requirement number or printed figure moved; `requirements.md` is
-      unchanged. `npm test` 22 of 22; the close runner ten PASS and
-      `rebuild-spec-approved` FAIL, as expected until Story 2.1.7.
-- **Next:**
-  1. Story 2.1.7, Omid's sitting, from the open draft #76 (its brief). The
-     study now carries two more answers the sitting may confirm or overrule
-     in the rebuild spec: the lost EU tag's channel search, and roll calls
-     at once on a shared EU channel (#79's body, § For Story 2.1.7).
-  2. Story 2.1.8, a FRESH closer, once the spec is approved.
-- **Surprises / decisions:**
-  - **The search's start is set by the window, not chosen.** A window
-    narrower than a frame is timed on the tag's own network, so a search on
-    another channel would meet that network only by chance. Cycling channels
-    therefore starts when the window reaches a frame (INFERRED from the
-    study's own drift figures; the review had not named it). That is what
-    splits the own-area answer into two time regimes.
-  - **Turn-taking keeps the battery** only if the beacon that opens a roll
-    call names each Reader's turn, so a tag still hears one beacon and sends
-    one reply. The study says so, and `parts-and-toolchains.md` § [27] is
-    unchanged.
-  - **The register seats** (one `piped-checker-exit`: the tick's push was
-    piped into `grep`, then read unpiped by `git ls-remote`, head
-    `dbb3e7fc`; the `cwd-drift` warnings of a hub-rooted seat working in the
-    clone) go to the coordinator as text.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 20:15:12Z and 20:20:45Z: "Please merge any PRs you open during this
-    session when ready and in the right order."
-- **Provenance:** Session id `1a792865-c18c-4244-828d-b27c1fc8206b`, a
-  hub-rooted executor seat on the fleet coordinator's orders, a fresh
-  launch: its background-task path id equals its session id. Not elevated.
 
