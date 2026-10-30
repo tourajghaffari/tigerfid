@@ -86,8 +86,8 @@ Epic 2.1 is its only epic), and its close has filed the build initiatives.
 of spec §3, then the decision sitting and the approved rebuild spec.
 **Ordering:** 2.1.1 → 2.1.2 (Sprint 1 legs 4–5) → 2.1.9 → 2.1.3 → 2.1.4 →
 2.1.5 (Sprint 2) → 2.1.10 → 2.1.6 → 2.1.11 (Sprint 3) → 2.1.12 → 2.1.14
-(Sprint 4 legs 1–2) → 2.1.15 → 2.1.7 → 2.1.8, with 2.1.13 (Sprint 4 leg 3)
-and 2.1.16 anywhere before 2.1.8.
+(Sprint 4 legs 1–2) → 2.1.15 → 2.1.7 → 2.1.8, with 2.1.13 (Sprint 4 leg 3),
+2.1.16 and 2.1.17 anywhere before 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
 The Sprint 2 review (2026-10-28) routes a fix-up of the three studies,
@@ -109,6 +109,9 @@ cell (the archive's § Executed sprints › Sprint 4).
 The Story 2.1.15 review (2026-10-30) files a fourth fix-up, Story 2.1.16,
 which gates nothing in the sitting: none of its items moves a margin the
 sitting chooses a cell from (Story 2.1.15's `**Reviewed:**` record).
+The Story 2.1.16 review (2026-10-30) files a fifth, Story 2.1.17, which
+gates nothing in the sitting either (Story 2.1.16's `**Reviewed:**`
+record).
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
@@ -1046,6 +1049,182 @@ each hit's disposition (manifest prose check `sprint4-review-fixes`).
 - **Minor C** (§ Zones, The conference hall's second Reader): [2]'s second Reader listens on the first Reader's network, so the hall stays one block and [9] holds by 22 % as priced. Its own network is declined: [9] by 9 % beside the edge with no Field Generator added (137.4 mAh, 1.09 years), and a badge rejoining at each crossing (up to 61.7 mAh a year at ten a day, ASSUMED; 0.81 years).
 - **The nits:** `reference-research.md` records Story 2.1.15's read of R&L's page; the lost tag's search times are split by region, the hour's 6.5 minutes under the US; the three bullets under the edge table carry INFERRED with their arithmetic.
 
+**Reviewed:** 2026-10-30, by the Story 2.1.16 reviewer pass (tigerfid #74).
+- **The pass:** a hub-rooted reviewer session, on the fleet coordinator's
+  orders. It was fresh by `/clear`: its background-task path id differs
+  from its session id and names the earlier session whose process the
+  clear ended, a lawcuments-app Sprint 16 review that had wrapped (its
+  tombstone on the hub's origin). It was not elevated and did none of this
+  story's work.
+- **Verdict: PASS WITH FINDINGS.** The story meets its Done-when. No finding
+  is Important, and none moves a figure the sitting reads: [9]'s 22 % in
+  the hall, [27]'s 1.21 and 1.10 of five years and every tier's total are
+  unchanged, and they reproduce. Two Minors go to Story 2.1.17, which gates
+  nothing in the sitting. **Story 2.1.7's sitting can proceed.**
+- **The method:** the pass read the repo at `cdaa8e5` (#72 → `f59888ff`,
+  then its wrap, #73) and #72's diff from `b0d0ba7`. The leg's study
+  commit, `d98a2621`, read from the PR's head ref, holds the study and the
+  research log exactly as merged. One script rebuilt every figure #72 adds,
+  and the figures the sitting reads, from the studies' stated inputs alone.
+  The pass re-ran #72's eight greps, censused their needles across line
+  breaks, and read in the reference folder the one source the new text
+  cites. Each finding says what was MEASURED and what is INFERRED.
+- **The merge:** #72 → `f59888ff341fb07764e799fd8692b0a628014d31`, GitHub's
+  stamp 12:15:14Z, read from the API between this pass's `date -u` reads of
+  15:35:53Z and 15:37:46Z. The tick's pre-tick head, `d98a2621`, is #72's
+  first commit, the one before the tick commit.
+- **The sources:** `node scripts/reference-check.mjs`, read-only, between
+  the reads of 15:37:46Z and 15:37:49Z: "reference-check: ok — 299 rows
+  verified, README the stub".
+  - The new text cites one source, PSIP p23 (`sources/ti-cc1312psip-swrs293.pdf`,
+    a pinned row of `docs/reference-corpus.tsv`, its sha256 verified by that
+    run). Its table gives −10 to 10 ppm for "RF Frequency accuracy including
+    internal software compensated temperature drift, excluding aging, -40°
+    to 65°", as Minor A cites it.
+  - No pin was added. The research log's two new lines match
+    `tiered-cost.md` § Read on 2026-10-30: the two clock reads of 08:31:29Z,
+    and 109.95.
+- **The inputs the script used,** each as the studies state it: a wake's
+  start-up 2.795 µC; listening 5.8 mA; a slot 0.4 ms and a frame 250 ms;
+  drift 2 × 60 ppm, the Readers' crystals ±10 ppm each and the tag's RTC
+  ±50 ppm; a reply 18.09 µC, a beacon wake 8.769 µC and a reading
+  16.74 µC; standby 1.0 µA and the sensor's shutdown 0.15 µA; 1 % a year of
+  the rated 235 or 620 mAh, and 150 or 396 mAh usable; the hall badge's
+  122.5 mAh and its check-ins' 3.9 mAh; § Range's margins; years of 365
+  days. The script checked 58 printed figures, and none differs.
+- **Minor A, the EU at a Reader's edge: MET.**
+  - Readers beside each other take different channels, four of the five in
+    a 2 × 2 pattern (`radio-and-location.md` l.518–526), so no edge bay
+    holds two networks' Field Generators on one channel. Where a Reader has
+    up to eight around it, four is the fewest that works.
+  - The decline reproduces: 0.8 ms ÷ 250 ms = 0.32 %; 0.8 ms ÷ 20 µs a
+    second = 40 s; 250 ms ÷ 20 µs a second = 12,500 s, 3.47 hours.
+  - A tag moved to another Reader listens a frame there, 0.0004 mAh. A lost
+    tag's search is 2.795 µC + 5.8 mA × 250 ms = 1.453 mC, 220.1 s at
+    6.6 µA, and four of them take 14.7 minutes. What a lost tag's cycle
+    covers is Minor D.
+  - An observation, not a finding: PSIP p23's row excludes aging, which the
+    same table gives as −2 to 2 ppm over five years. With it, the worst
+    slide is 24 µs a second, a meeting of about 33 s once in about 2.9
+    hours. Nothing bounds a meeting either way, so the decline stands.
+- **Minor B, [21] against the count's wait: MET.** 300 + 12 + 0.25 =
+  312.25 s, then 8,333 or 11,111 items at 200 a second, 41.7 or 55.6 s:
+  353.9–367.8 s, 5.90–6.13 minutes. The sentence sits under the count
+  (l.764–773) and in "What it costs" (l.786–788). Its figures assume every
+  Reader's roll call at once, which is Minor E.
+- **Minor C, the hall's second Reader: MET.**
+  - On the first Reader's network the hall stays one block, an inner area's
+    set one run of nine, and [9]'s 1.22 years (22 %) stands as priced.
+  - The far corner: √(40² + 15²) = 42.72 m and 20·log₁₀(42.72 ÷ 30) =
+    3.07 dB. The reply is weaker by 36.8 − 31.8 = 5 dB in the US and by
+    24.4 − 22.2 = 2.2 dB in the EU, and the EU's corner keeps 24.4 − 3.1 =
+    21.3 dB.
+  - The declined own network reproduces: (18.107 + 10.364) µC every 2 s is
+    14.24 µA, against 25.067 µC every 2 s, 12.53 µA; 122.5 + 1.70 × 8.76 =
+    137.4 mAh, 1.09 years, and 0.86 at 117.5 mAh. Ten US crossings a day:
+    5.8 mA × 10.5 s = 0.0169 mAh, 61.7 mAh a year, then 184.2 mAh and 0.81
+    years. Every check-in retried once: 126.4 mAh, 1.19 years.
+- **The three nits: MET.**
+  1. `reference-research.md` § 4 has its Story 2.1.15 entry (l.392–405),
+     and § Searches already run its two lines (l.458–462).
+  2. The lost tag's cost is split by region (`radio-and-location.md`
+     l.607–614), the hour's 6.5 minutes under the US.
+  3. The three bullets under the edge table carry INFERRED (l.855, l.868,
+     l.881) with their arithmetic: 0.505 ms and 2.43 ms; 0.56 %, 70 s and
+     12,500 s; 40.7 mAh and 396 ÷ 196.9 = 2.01. The rows they name are the
+     table's second and fourth.
+- **No figure moved.**
+  - Every number on a line #72 removed from the study (31 distinct) is on a
+    line it added.
+  - `requirements.md`, `parts-and-toolchains.md`, `tiered-cost.md`,
+    `software-stack.md` and `original-system.md` have the same blob at
+    `18075a1`, the Story 2.1.15 review's reading, and at `cdaa8e5`. So no
+    requirement number, [27] figure or tier total has moved since that
+    review reproduced them.
+  - The script reproduces [27] again: 124.2 mAh (1.21) and 136.9 (1.10) on
+    a CR2032, and 143.5 (2.76) and 156.2 (2.54) on a CR2450.
+- **The greps:**
+  - #72's eight reproduce at `cdaa8e5`, each with the count and lines the
+    PR gives: 12, 6, 15, 5, 4, 1 and 3 hits, and 0 at `b0d0ba7` for nits 1
+    and 3.
+  - A census of the same needles across line breaks finds one more: "one
+    block on one / channel" at l.895–896, in the new Minor C paragraph,
+    correct as it stands.
+  - The hub's `check-item8-dispositions.mjs` reads #72's body: 29
+    dispositions, 14 current, 0 named.
+- **The battery** at `cdaa8e5`, between the reads of 15:38:10Z and 15:38:18Z:
+  - `npm test`: exit 0, with `close-lint: ok (adopted 2026-10-26)`,
+    `check-licenses: ok` and 22 of 22;
+  - the close runner over the eleven teeth: ten PASS, and
+    `rebuild-spec-approved` FAIL (exit 1), as the plan expects until Story
+    2.1.7.
+- **Findings, Minor** (to Story 2.1.17):
+  - **D. A lost EU tag's channel cycle is unstated, and so is its time to
+    be found in its own Reader's area.**
+    - MEASURED, the text: "A lost tag tries the next channel at each
+      search, so it meets the Reader whose area it lies in within four
+      searches" (`radio-and-location.md` l.538–540). The lost tag's cost
+      gives the EU "one search in about 4 minutes once the window reaches a
+      frame", and four searches, about 15 minutes, "for a tag lost in
+      another Reader's area" (l.608–611). No line says which channels the
+      cycle covers.
+    - INFERRED, the gap: a tag that hears nothing cannot tell whose area it
+      is in, so every lost EU tag cycles. One lost in its own Reader's area
+      then hears its own channel once in four searches: up to 14.7 minutes
+      to be found again, not one search of 3.7 minutes. A cycle over all
+      five channels, the spare included, needs up to five searches, 18.3
+      minutes. At the ward and the conference, one channel each, a cycle
+      over the warehouse's four would cost their tags the same.
+    - The answer is one sentence: what the cycle covers (for example, the
+      channels the site's Readers use, named when a tag joins, so the ward
+      and the conference keep their one channel and their 4 minutes), and
+      the warehouse's time to be found for every lost tag. The searches
+      stay at 6.6 µA however they are ordered, so no battery figure moves.
+  - **E. Minor B's 5.9–6.1 minutes assume every Reader's roll call at
+    once.**
+    - MEASURED, the text: [21] is "200 tags/s on one radio channel" because
+      "readers that share a channel share its airtime" (`requirements.md`
+      l.305–309). Minor B gives each Reader's share 200 a second at once
+      (`radio-and-location.md` l.768–771). Minor A's 2 × 2 pattern repeats
+      a channel two Readers along (l.522–524), so some EU Readers share
+      one. The US bullet says "Bays 30 m apart rarely hear each other"
+      (l.504). No line says whether EU Readers on one channel roll call at
+      once.
+    - INFERRED, the bound: a 3 × 3 grid puts four of its nine Readers on
+      one channel, and a 3 × 4 grid four of its twelve on each of two. Were
+      Readers on one channel to take turns, its 44,444 or 33,333 items
+      take 222 s or 167 s at 200 a second, and the inventory 534.5 s or
+      478.9 s: about 8.0–8.9 minutes, still inside [21]'s 10. Those Readers
+      stand two apart, about 60 m, twice [20]'s 30 m.
+    - The answer is one sentence: whether they roll call at once, by the US
+      bullet's reason at twice its distance, or the 8.0–8.9 minutes if they
+      take turns.
+- **The recurrence triage** (hub KB `epic-close-protocol`): each text seat
+  falls in a decided class, so none qualifies for a new decision.
+  - #72's one seat is a `wrapped-sentence-needle-undercount`: the Minor A
+    grep's l.895–896 hit, above.
+  - This pass's are two `piped-checker-exit` warnings (a fast-forward and
+    this PR's first push, each piped into `tail`, then read unpiped), one
+    `block-commit-hook-denies-a-variable-c-path-commit` deny (a commit
+    through `cd` to a shell variable, re-run with the literal path), and the
+    `cwd-drift` warnings of a hub-rooted seat working in the clone.
+
+  The register at the hub's `6af670df` holds all four classes, so the seats
+  go to the coordinator as text.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its reads of 15:50:00Z and 15:50:09Z, answering whether the pass may push,
+  open this docs-only PR, merge it on green and land its two wraps: "Yes,
+  merge when green (Recommended)".
+- **Routed, in order:**
+  1. Story 2.1.7, Omid's sitting, which need not wait for Story 2.1.17;
+  2. Story 2.1.17, anywhere before Story 2.1.8;
+  3. Story 2.1.8, Epic 2.1's close.
+
+  The cost of sitting first is no margin: every figure the sitting reads is
+  unchanged and reproduces. If the sitting decides a lost tag's channel
+  search or the EU channel plan in the rebuild spec, Story 2.1.17 writes
+  the spec's answer into the study.
+
 **Story:** As a stranger reading the study, I want a Reader's edge, the
 count's wait and the conference hall's second Reader stated where the study
 is silent, so that the design reads whole before Epic 2.1 closes.
@@ -1094,6 +1273,49 @@ document, or its sentence shown correct with its source; every changed
 figure is sourced, MEASURED or INFERRED with its arithmetic; no requirement
 number moved; and the PR body quotes each item's grep with each hit's
 disposition (manifest prose check `story2115-review-fixes`).
+
+#### Story 2.1.17: The Story 2.1.16 review's fixes: a lost EU tag's channel search, and the inventory on shared channels
+
+**Story:** As a stranger reading the study, I want a lost EU tag's channel
+search and the EU inventory's shared channels stated where the study is
+silent, so that the design reads whole before Epic 2.1 closes.
+**Context:** born 2026-10-30 by the Story 2.1.16 reviewer pass (tigerfid
+#74), from its two Minors (Story 2.1.16's `**Reviewed:**` record). It gates
+nothing in the sitting: neither item moves a margin the sitting chooses a
+cell from, and each is one sentence. It goes anywhere before Story 2.1.8.
+If the sitting runs first and decides a lost tag's channel search or the
+EU channel plan in the rebuild spec, this story writes the spec's answer
+into the study. Each item says what the review MEASURED and what is
+INFERRED.
+- **Minor D, a lost EU tag's channel search**
+  (`docs/study/radio-and-location.md` § Channels; § Zones, How a tag hears
+  a Field Generator it has not heard before). MEASURED: a lost tag "tries
+  the next channel at each search", and the EU's time to be found is one
+  search, about 4 minutes, or four searches, about 15 minutes, "for a tag
+  lost in another Reader's area". No line says which channels the cycle
+  covers. INFERRED: a lost tag cannot tell whose area it is in, so one lost
+  in its own Reader's area also waits up to four searches (14.7 minutes),
+  or five over all five channels (18.3 minutes). The study says which
+  channels a lost tag's search covers, and gives the EU's time to be found
+  for a tag lost in its own Reader's area.
+- **Minor E, the EU inventory on shared channels** (`radio-and-location.md`
+  § Channels; § Zones, The layout of a listen; `requirements.md` [21]).
+  MEASURED: [21]'s 200 a second is per channel, since "readers that share a
+  channel share its airtime". Minor B's 5.9–6.1 minutes give every Reader's
+  share 200 a second at once, while the EU's 2 × 2 pattern puts Readers two
+  apart on one channel. INFERRED: were those Readers to take turns, the
+  inventory would take about 8.0–8.9 minutes, still inside [21]'s 10. The
+  study says whether EU Readers on one channel roll call at once, or gives
+  the time if they take turns.
+- **What stays.** No requirement number moves (Sprint 4's D1). A figure
+  that a dated pointer line in `requirements.md` quotes, and that this story
+  changes, gets a new dated pointer line. Story 2.1.16's Outcome and its
+  `**Reviewed:**` record are records and are not edited.
+**Done when:** each of Minors D and E is corrected in its document, or its
+sentence shown correct with its source; every changed figure is sourced,
+MEASURED or INFERRED with its arithmetic; no requirement number moved; and
+the PR body quotes each item's grep with each hit's disposition (manifest
+prose check `story2116-review-fixes`).
 
 #### Story 2.1.7: The decision sitting and the rebuild spec
 

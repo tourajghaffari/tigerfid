@@ -7,6 +7,51 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-30 — Story 2.1.16 reviewed (PASS WITH FINDINGS); Story 2.1.17 filed
+
+- **Landed:**
+  - #74 → `f373440e` (GitHub's merge stamp 15:52:42Z), squash with
+    `--match-head-commit 7fa56213…` once `watch-pr.mjs` read it GREEN.
+    - Story 2.1.16 carries its `**Reviewed:**` record: PASS WITH FINDINGS,
+      none Important. One script rebuilt 58 figures from the studies'
+      inputs, #72's and the sitting's, and none differs. #72's eight greps
+      reproduce, and PSIP p23 reads as the new text cites it.
+    - Story 2.1.17 is filed, anywhere before 2.1.8, with two Minors: which
+      channels a lost EU tag's search covers (a tag lost in its own
+      Reader's area may wait four searches, not one), and whether EU
+      Readers sharing a channel under the 2 × 2 pattern roll call at once
+      (if they take turns, about 8.0–8.9 minutes, still inside [21]'s 10).
+      The manifest gains `2.1.17` and the prose check
+      `story2116-review-fixes`.
+- **Next:**
+  1. Story 2.1.7, Omid's sitting. Nothing in this review holds it: every
+     figure it reads is unchanged and reproduces.
+  2. Story 2.1.17 (a fresh executor), anywhere before 2.1.8. If the sitting
+     decides a lost tag's channel search or the EU channel plan in the
+     rebuild spec first, the story writes the spec's answer into the study.
+  3. Story 2.1.8, a FRESH closer.
+- **Surprises / decisions:**
+  - **Both Minors come from fixes meeting each other.** Minor A's channel
+    rule changes the lost tag's time to be found, which the nit-2 sentence
+    prints, and its 2 × 2 reuse meets [21]'s "readers that share a channel
+    share its airtime" under Minor B's arithmetic. Each fix read alone is
+    correct.
+  - **A census across line breaks** found one hit #72's Minor A grep could
+    not see (l.895–896, correct as it stands). A grep for a two-word phrase
+    misses it where the phrase wraps.
+  - **The register seats** (two `piped-checker-exit`, one
+    `block-commit-hook-denies-a-variable-c-path-commit`, the `cwd-drift`
+    warnings, and #72's one `wrapped-sentence-needle-undercount`) go to the
+    coordinator as text. This wrap's own `cd` into the clone draws the
+    cwd-drift arm once more.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 15:50:00Z and 15:50:09Z: "Yes, merge when green (Recommended)", to
+    push, open, merge on green and land the session's two wraps.
+- **Provenance:** Session id `8e92bdb3-93a0-4e1c-8cf5-f688876287c4`, a
+  hub-rooted reviewer seat on the fleet coordinator's orders, fresh by
+  `/clear`: its background-task path id, `ee8b7871-…`, names an earlier
+  session, a wrapped lawcuments-app Sprint 16 review. Not elevated.
+
 ## Session: 2026-10-30 — Story 2.1.16: the EU edge's channels, the inventory's wait and the hall's second Reader
 
 - **Landed:**
@@ -86,51 +131,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
   hub-rooted reviewer seat "Mac 2", fresh by `/clear`: its background-task
   path id, `8cac88a9-…`, is an earlier Mac session's, which had wrapped. Not
   elevated.
-
-## Session: 2026-10-30 — Story 2.1.15: the warehouse at a Reader's edge, and the figures beside it
-
-- **Landed:**
-  - #67 → `ce56ceeb` (GitHub's merge stamp 08:46:54Z), squash with
-    `--match-head-commit c8a9d558…` once `watch-pr.mjs` read it GREEN.
-    Story 2.1.15 is ticked; the manifest gains its `reviewedFor` line and
-    `reviewed` reads 2026-10-30.
-    - Finding 1: a second Field Generator in the bay across each Reader's
-      edge follows the near Reader's network, so [27] holds at every bay:
-      1.21 and 1.10 of five years on a CR2032 at 12 s, with the count's
-      wakes priced at their bound (one step in 5 minutes). The route
-      without new hardware is a second wake every fifth listen (1.16 and
-      1.05).
-- **Next:**
-  1. The review of Story 2.1.15 (Mac Reviewer's, a FRESH pass), then
-     Story 2.1.7, Omid's sitting, then Story 2.1.8, a FRESH closer, who also
-     adjudicates GNU make's INFERRED chain under
-     `three-platform-claims-sourced`.
-  2. The close runner prints "REVIEW SEATING MISSING" for Sprint 4 until
-     the coordinator's register fold lands. The seats went as text in #65's
-     and #67's bodies.
-- **Surprises / decisions:**
-  - **The 2026-10-29 note's Next 3 is closed, MEASURED.** The Mac's
-    reference check exited 1 (`README stale-stub`) between this terminal's
-    reads of 08:42:43Z and 08:47:00Z. `--write-stub` (exit 0) and the
-    re-check (exit 0, "299 rows verified, README the stub") ran between
-    08:47:15Z and 08:47:22Z, on the coordinator's GRANT.
-  - **Declined in the study: one Field Generator in both Readers' blocks.**
-    Two unsynchronised frames slide past each other, and two crystals that
-    agree closely keep its two slots overlapping for as long as they agree,
-    so nothing bounds the loss. It was this seat's first pick, caught on
-    re-reading the slide arithmetic before the first commit.
-  - **§ [27] counts 365-day years;** the Sprint 4 review's edge figures
-    counted 365.25. A script that reproduced the printed table (22 of 24
-    cells exactly) set the convention before any new figure was written.
-  - **The merge word:** Omid, first-hand in this terminal between its reads
-    of 08:31:29Z and 08:42:43Z: "Yes, push/edit/ready/merge (Recommended)".
-  - **The guard events** went as text in #67's body: two
-    `piped-checker-exit` warnings, the cwd-drift arm, and a needle split by
-    a line wrap.
-  - **The orders' wrap path:** `node ../../scripts/wrap-session.mjs` (the
-    hub's copy) refuses from the clone, exit 1, and names the clone's own
-    `scripts/wrap-session.mjs`, which this wrap ran.
-- **Provenance:** Session id `ba5a50fc-7f22-4257-944a-a4b3b875897c`, the
-  hub-rooted executor seat "Mac 3", fresh by launch: its background-task
-  path id equals the session id. Not elevated.
 
