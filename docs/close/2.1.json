@@ -47,7 +47,8 @@
     "2.1.15",
     "2.1.16",
     "2.1.17",
-    "2.1.18"
+    "2.1.18",
+    "2.1.19"
   ],
   "checks": [
     {
@@ -222,6 +223,10 @@
     {
       "id": "story2117-review-fixes",
       "prose": "Story 2.1.18 (the Story 2.1.17 review's two Minors, tigerfid #81): confirm, item by item against Story 2.1.17's Reviewed record, that each is corrected in its document or its sentence shown correct with its source; that docs/study/radio-and-location.md no longer rests the EU shared channel's at-once roll calls on bays 30 m apart rarely hearing each other, and either states the choice against the study's own link budget or gives the inventory's planning figure with turns until the build measures it, the US sentence given its basis or removed; that it gives the time from the loss for a tag carried past a Reader's edge and weighs it against requirements.md [22] and [25], the US face answered or left to the sitting with its reason; that every changed figure is sourced, MEASURED or INFERRED with its arithmetic; that no requirement number moved; and that the PR body quotes each item's grep with each hit's disposition."
+    },
+    {
+      "id": "eu-build-priced",
+      "prose": "Story 2.1.19 (the decision sitting's decision 9a; the rebuild spec's section 6.3 and gate G5): confirm docs/study/tiered-cost.md's section The EU build prices every part the EU build changes (the tag's 868 MHz chip antenna, named from its maker's page; a whip for 868 MHz, its gain read; the Field Generator's 230 V supply and the 230 V models of each tier's wall-powered tools), each price naming its seller's page, its currency and the date it was read; that a price no session could read is marked not read and named in its tier's Lacks, never counted as zero, and an unnamed part is priced as a representative part, marked so; that each tier has an EU total, summed before rounding; that no US figure, total or requirement number moved; and that the PR body quotes the section's grep. Born unmet on 2026-10-30: the section names the EU parts and prices none."
     }
   ]
 }

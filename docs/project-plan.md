@@ -92,7 +92,7 @@ of spec §3, then the decision sitting and the approved rebuild spec.
 **Ordering:** 2.1.1 → 2.1.2 (Sprint 1 legs 4–5) → 2.1.9 → 2.1.3 → 2.1.4 →
 2.1.5 (Sprint 2) → 2.1.10 → 2.1.6 → 2.1.11 (Sprint 3) → 2.1.12 → 2.1.14
 (Sprint 4 legs 1–2) → 2.1.15 → 2.1.7 → 2.1.8, with 2.1.13 (Sprint 4 leg 3),
-2.1.16, 2.1.17 and 2.1.18 anywhere before 2.1.8.
+2.1.16, 2.1.17, 2.1.18 and 2.1.19 anywhere before 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
 The Sprint 2 review (2026-10-28) routes a fix-up of the three studies,
@@ -120,6 +120,9 @@ record).
 The Story 2.1.17 review (2026-10-30) files a sixth, Story 2.1.18, which
 gates nothing in the sitting either (Story 2.1.17's `**Reviewed:**`
 record).
+The decision sitting (Story 2.1.7, 2026-10-30) files Story 2.1.19, the EU
+build priced, on Omid's decision 9a. It goes before the close, with 2.1.18
+(the rebuild spec's gate G5).
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
@@ -1613,6 +1616,42 @@ From the Sprint 2 review (2026-10-28):
 **Done when:** the spec exists at that path and carries `**Approved by:** Omid`
 with the date.
 
+#### Story 2.1.19: The EU build, priced
+
+**Story:** As a beginner in the European Union, I want the EU build's parts
+priced beside the US build's, so that the guides' shopping lists serve me
+too.
+**Context:** born 2026-10-30 by the decision sitting (Story 2.1.7), from
+Omid's decision 9a, first-hand in the terminal of the session "Windows 5":
+"Price and guide the EU too", between its `date -u` reads of 21:35:18Z and
+21:37:50Z, and, asked when, "A study story before this epic closes",
+between its reads of 21:37:50Z and 21:38:30Z. The rebuild spec's § 6.3 asks
+for it and its gate G5 puts it before Story 2.1.8. MEASURED, what the study
+holds: `docs/study/tiered-cost.md` § The EU build names, unpriced, the parts
+an EU build changes: the tag's 868 MHz chip antenna, which no study names
+(the 0915AT43A0026001E is a 915 MHz part); the whips at 868 MHz, since
+whether the W5017 serves 868 MHz is unread (its seller pages refused); the
+230 V plugs, the Field Generator's wall supply and the tiers' wall-powered
+tools (the ST-2090D is named a 110 V model, the ST-862D's voltage is unread,
+and the microscope's light runs on a 110 V supply); and the Reader's 25 mW
+e.r.p., a setting that costs nothing. The module, the boards, the cells and
+the bench are the same parts (the same section). INFERRED: the hot plate's
+supply runs from 100–240 V (§ What each tool needs to run), so it needs only
+its plug. Sprint 3's D5–D7 bind every price, as they bind the US build's: a
+seller's page and a read date on each, a price no session could read marked
+not read and named in its tier's Lacks, never counted as zero, and an
+unnamed part priced as a representative part, marked so.
+- **What stays.** No US figure, total or requirement number moves. The EU's
+  legality is the study's (`docs/study/radio-and-location.md` § Legality of
+  the choice), stated as the builder's own compliance; this story prices
+  parts, and decides nothing about the law.
+**Done when:** `docs/study/tiered-cost.md` § The EU build prices each part the
+EU build changes, each from its seller's page with its currency and read
+date, the 868 MHz chip antenna named from its maker's page and the whip's
+gain at 868 MHz read; gives each tier's EU total, summed before rounding,
+with its Lacks; leaves every US figure unchanged; and the PR body quotes the
+section's grep (manifest prose check `eu-build-priced`).
+
 #### Story 2.1.8: Close out Epic 2.1
 
 **Story:** As the fresh-session closer, I want Epic 2.1 closed per KB
@@ -1626,6 +1665,9 @@ demonstration — with D9's "set up the bench" story first (a tool tier plus
 a cheap radio receiver to see what the boards transmit). Every hardware
 story is proven by Omid's hand (D9): `requires: omid` teeth plus committed,
 public-safe evidence — photos, measurements and the receiver's captures.
+**Waits on:** Stories 2.1.18 and 2.1.19, which the rebuild spec's gate G5
+puts before the close (`docs/superpowers/specs/2026-10-30-rebuild-design.md`
+§ 8).
 **Done when:** every manifest check passes or is adjudicated, the archive
 entry carries the evidence block, Initiative 2 is cut whole, and the build
 initiatives are filed in the same PR.
