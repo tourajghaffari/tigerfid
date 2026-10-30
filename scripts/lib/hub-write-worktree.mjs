@@ -274,16 +274,25 @@ export function withWriteWorktree({ repoRoot, branch, base = 'origin/main' }, fn
 // consumes it and may only import from its synced companion — this lib.
 // hub-status re-exports from here. The IO recipe travels with the predicate:
 // feed parseAddedLines the output of
-//   git diff --no-ext-diff --no-color HEAD -- <path>
+//   git diff --no-ext-diff --no-color --no-textconv HEAD -- PATH
 // (external/colorized diff output is not unified format — it would parse as
-// zero additions and F3 would report false-'safe').
+// zero additions and F3 would report false-'safe'; and a `diff.X.textconv`
+// driver on the path rewrites the added lines themselves — hub Story 248.1.6,
+// MEASURED at the Hub Sprint 73 proposal: a line-dropping driver read a pause
+// DRAFT 'safe' with no added line, so a real reconcile would discard it).
 
 // Added lines of a `git diff` — the uncommitted delta. Blank additions are
-// noise for containment; trailing \r tolerates CRLF checkouts.
+// noise for containment; trailing \r tolerates CRLF checkouts. A `+++ ` line is
+// a file header only before a file's first `@@` hunk, whatever its prefix
+// (`b/`, none under diff.noprefix, `w/` or `i/` under diff.mnemonicPrefix,
+// /dev/null — Story 248.1.6); inside a hunk it is an added line that opens `++`.
 export function parseAddedLines(diffText) {
   const out = [];
+  let header = true;
   for (const line of (diffText ?? '').split('\n')) {
-    if (!line.startsWith('+') || /^\+\+\+ (b\/|\/dev\/null)/.test(line)) continue;
+    if (line.startsWith('diff --git ')) { header = true; continue; }
+    if (line.startsWith('@@')) { header = false; continue; }
+    if (!line.startsWith('+') || (header && line.startsWith('+++ '))) continue;
     const content = line.slice(1).replace(/\r$/, '');
     if (content.trim() === '') continue;
     out.push(content);
@@ -366,7 +375,7 @@ export function notesReconcileVerdict(repoRoot, notesRel, execOpts = {}) {
   // notes.md and would read as "absent on origin" → unsafe. 64 MiB, the
   // family's cap; a caller's execOpts may still override it.
   const raw = (args) => execFileSync('git', args, { maxBuffer: 64 * 1024 * 1024, ...execOpts, cwd: repoRoot, encoding: 'utf8' });
-  const diffArgs = ['diff', '--no-ext-diff', '--no-color'];
+  const diffArgs = ['diff', '--no-ext-diff', '--no-color', '--no-textconv']; // the stored bytes (Story 248.1.6)
   const worktreeDiff = raw([...diffArgs, 'HEAD', '--', notesRel]);
   const indexDiff = raw([...diffArgs, '--cached', 'HEAD', '--', notesRel]);
   const added = [...parseAddedLines(worktreeDiff), ...parseAddedLines(indexDiff)];
