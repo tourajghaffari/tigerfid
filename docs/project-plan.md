@@ -956,10 +956,11 @@ check `sprint3-review-tier-fixes`).
   falls in a decided class, so none qualifies for a new decision.
   - #67's four seats are two `piped-checker-exit`, one `cwd-drift` and one
     `wrapped-sentence-needle-undercount`.
-  - This pass's three are one `zsh-equals-face` deny, the `cwd-drift` arm
-    and one `ugrep-bounded-repetition-exceeds-complexity-limit` warning.
+  - This pass's four are one `zsh-equals-face` deny, two `cwd-drift`
+    warnings and one `ugrep-bounded-repetition-exceeds-complexity-limit`
+    warning.
 
-  The register at the hub's `94e7c1a7` holds none of the seven yet, so they
+  The register at the hub's `94e7c1a7` holds none of the eight yet, so they
   go to the coordinator as text.
 - **The merge word** for this pass: Omid, first-hand in its terminal between
   its reads of 09:09:46Z and 09:18:03Z: "Please merge PRs you open during
