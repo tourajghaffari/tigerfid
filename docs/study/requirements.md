@@ -350,6 +350,11 @@ a CR2032 for the plain item tag, by 4 %, and not for the cold-chain one
 CR2032 for both item tags, by 22 % and, on cold chain, by 11 %. The CR2450
 stays recommended for margin wherever the item takes it
 (`docs/study/parts-and-toolchains.md` § [27]). The number is unchanged.
+*Re-priced 2026-10-30 by Story 2.1.15:* at every bay, a Reader's edge
+included, the 12 s wake keeps five years on a CR2032 for both item tags, by
+21 % and, on cold chain, by 10 %, with the Reader's command count priced at
+its bound. The CR2450 stays recommended for margin wherever the item takes
+it (`docs/study/parts-and-toolchains.md` § [27]). The number is unchanged.
 **Omid's answer:** as recommended.
 
 ## What binds the design
