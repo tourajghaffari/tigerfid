@@ -698,9 +698,6 @@ footprint for one with the coil off the core (`software-stack.md`
     every bay, a Reader's edge included, by 21 %, or 10 % on cold chain,
     and the CR2450 is recommended for margin wherever the item takes it,
     the cold-chain tags first (§ [27]);
-  - the warehouse's Readers' edges: a second Field Generator in the bay
-    across each edge, or a second wake every fifth listen for the items
-    there (`radio-and-location.md` § Zones, A Reader's edge);
   - the nursery tag's cell, if the measurement falls short (§ Each worn
     tag's year);
   - the sensor's accuracy, if it wants one, and with it the setting: eight
