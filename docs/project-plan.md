@@ -92,7 +92,7 @@ of spec §3, then the decision sitting and the approved rebuild spec.
 **Ordering:** 2.1.1 → 2.1.2 (Sprint 1 legs 4–5) → 2.1.9 → 2.1.3 → 2.1.4 →
 2.1.5 (Sprint 2) → 2.1.10 → 2.1.6 → 2.1.11 (Sprint 3) → 2.1.12 → 2.1.14
 (Sprint 4 legs 1–2) → 2.1.15 → 2.1.7 → 2.1.8, with 2.1.13 (Sprint 4 leg 3),
-2.1.16, 2.1.17, 2.1.18 and 2.1.19 anywhere before 2.1.8.
+2.1.16, 2.1.17, 2.1.18, 2.1.19 and 2.1.20 anywhere before 2.1.8.
 Serial since the Sprint 2 proposal (2026-10-27): 2.1.4 names parts for the
 radio 2.1.3 chooses, and 2.1.5's reader abstraction follows 2.1.3's link.
 The Sprint 2 review (2026-10-28) routes a fix-up of the three studies,
@@ -123,6 +123,9 @@ record).
 The decision sitting (Story 2.1.7, 2026-10-30) files Story 2.1.19, the EU
 build priced, on Omid's decision 9a. It goes before the close, with 2.1.18
 (the rebuild spec's gate G5).
+The Story 2.1.18 review (2026-10-30) files Story 2.1.20, the wide search's
+trigger, before the close: the spec's 3c binds [22] for every carry (Story
+2.1.18's `**Reviewed:**` record).
 Manifest: `docs/close/2.1.json` (born FAILING; each study document's tooth
 stays RED until its document lands).
 **Done when:** every tooth in `docs/close/2.1.json` passes from the repo root
@@ -1523,6 +1526,118 @@ prose check `story2116-review-fixes`).
 - **Minor G** (§ Zones, A tag carried past a Reader's edge; § Channels): at a site of more than one network, a lost tag's first two searches are wide: a frame on each of the site's four channels in the EU (5.81 mC), and one channel for a hop cycle in the US (60.9 mC). A tag carried past a Reader's edge is then shown in about 50 s in the EU and 60 s in the US, inside [22]'s 5 minutes, with no [25] alarm (3c). At most two wide searches a carry, 0.0032 and 0.0338 mAh, the CR2450 variant allows about 41–43 carries a day in the EU and 3.9–4.1 in the US over five years.
 - **The CR2032 core's US limit**, one carry every 2.4 days (4.7 on cold chain), went to Omid as the spec's 3c asks. His answer, first-hand in the terminal of the session "Mac Closer" between its `date -u` reads of 22:11:39Z and 22:24:12Z: "State the limit; CR2450 if carried". The aimed search, the spec's example, is weighed and not chosen; the build may add it.
 
+**Reviewed:** 2026-10-30, by the Story 2.1.18 reviewer pass (tigerfid #89).
+- **The pass:** "Mac Reviewer", a reviewer session on the Mac, on the fleet
+  coordinator's orders, launched in the Mac's home folder and working from
+  the hub checkout. It was a fresh launch: its background-task path id
+  equals its session id, `86ac7523-9bad-4199-8c93-a5a8b64ce65b`. It was not
+  elevated (uid 501) and did none of this story's work. It is the pass that
+  filed this story (the Story 2.1.17 review, #81), so it held #85 to the
+  story's written Done-when and the rebuild spec's § 5.3, clause by clause,
+  and re-measured every figure.
+- **Verdict: PASS WITH FINDINGS.** The story meets its Done-when, and #85
+  writes the spec's decisions 3b and 3c into the study as § 5.3 states them.
+  One Minor goes to Story 2.1.20: the wide search starts only on silence.
+  No figure moves, and no requirement number.
+- **The method:** the pass read the repo at `97d1ae4` (#85 → `c46efb83`,
+  then #86, Story 2.1.19's) and #85's diff from `b629dc15`, with the spec at
+  `168bebb8`, the blob #85 cites (unchanged at `c46efb83`). One script
+  rebuilt every figure #85 adds from the studies' stated inputs, censused
+  the numbers on the lines #85 removed, re-ran #85's two greps and censused
+  their needles across line breaks.
+- **The merge:** #85 → `c46efb8344ac7b3c05fb48cc6f4d344b771289d0`, GitHub's
+  stamp 22:31:05Z, read from the API between this pass's `date -u` reads of
+  22:32:50Z and 22:36:17Z.
+- **Minor F, the at-once premise: MET** (the spec's 3b).
+  - The US sentence "Bays 30 m apart rarely hear each other" is gone, and
+    the bullet's 23 % now rests on counting every shared frame as lost:
+    1 − (41/42)¹¹ = 23.3 %.
+  - EU Readers that share a channel take turns: 534.5 s and 478.9 s, about
+    8.9 and 8.0 minutes, the planning figure. At once only if the build's
+    [21] test shows they do not hear each other, on the budget's 16.2 dB at
+    60 m and 18.7 dB at 45 m.
+- **Minor G, a carried tag's time to be found: MET** (the spec's 3c), with
+  Minor H below.
+  - The old times reproduce: 2,083 s + 4 × 220.1 s = 2,964 s, about 49
+    minutes, and [25]'s 60 − 49.4 = 10.6 minutes.
+  - The wide search reproduces: 4 × (2.795 µC + 5.8 mA × 250 ms) = 5.81 mC,
+    0.0016 mAh, in the EU; 2.795 µC + 5.8 mA × 10.5 s = 60.9 mC, 0.0169
+    mAh, in the US. Its times are 50.25 s and 59.75 s, or 63.25 s and 82.25
+    s if only the second search hears a network, inside [22]'s 5 minutes.
+  - Every carries count reproduces from the cells' margins (252.5, 239.8,
+    25.8 and 13.1 mAh) over 0.0032284 and 0.033835 mAh a carry, as do 205.2,
+    217.9, 185.9 and 198.6 mAh at a carry a day and 1.93, 1.82, 0.81, 0.76,
+    1.15 and 1.05 of five years. The aimed search's 12,500 s and ±18 ms
+    reproduce.
+  - Omid's ruling on the CR2032 core's US limit is quoted first-hand from
+    the session "Mac Closer", between its reads of 22:11:39Z and 22:24:12Z:
+    "State the limit; CR2450 if carried". The spec's 3c sends a limit the
+    battery cannot meet back to him, and the study states it.
+- **What stays.**
+  - No requirement number moved: `requirements.md`,
+    `parts-and-toolchains.md`, `tiered-cost.md`, `software-stack.md` and
+    `original-system.md` keep their blobs from `cdaa8e5` through `c46efb83`.
+    No dated pointer line is owed.
+  - No printed figure changed: every number on a line #85 removed (30
+    distinct) is on a line it added.
+  - Story 2.1.17's Outcome and `**Reviewed:**` record are untouched: #85's
+    plan diff is Story 2.1.18's heading, `**Completed:**` and `**Outcome:**`
+    alone.
+- **The greps:** #85's two reproduce with its counts: Minor F 8 hits at
+  `b629dc15` and 7 at `c46efb83`, Minor G 4 and 31. A census across line
+  breaks finds four wrapped hits the dispositions do not name, each in #85's
+  new text and correct as it stands: "at / once" at l.553–554, and "wide /
+  search" at l.903–904, l.1002–1003 and l.1180–1181.
+- **The battery** at `97d1ae4`, under the Mac's lock (GO 22:36:17Z, END
+  22:36:21Z): `npm test` exit 0, with `close-lint: ok (adopted 2026-10-26)`,
+  `check-licenses: ok` and 22 of 22; `node scripts/reference-check.mjs`
+  "reference-check: ok — 299 rows verified, README the stub"; the close
+  runner over the eleven teeth, eleven PASS.
+- **Findings, Minor** (to Story 2.1.20):
+  - **H. The wide search starts only on silence, and a carried tag is likely
+    to hear its old Reader.**
+    - MEASURED, the text: the case says the carried tag's "next listen, to
+      its own network's whole block, hears nothing either" (l.966–967), and
+      the wide search is a lost tag's first two searches (l.571–575,
+      l.976). A tag that hears its network's beacon but none of its set is
+      a tag with no set, which "listens to every Field Generator's slot
+      until the host places it" (l.636–638), hearing "the beacon and the
+      whole block" (l.841–842). The US wide listen "stops at the first beacon
+      it hears", the EU's takes its own channel first, and the tag "joins the
+      network it hears" (l.976–991).
+    - INFERRED: § Range's EU Reader-to-tag row closes at 30 m with 24.4 dB
+      to spare (l.473), and a Reader stands every 30–33 m along 10 m bays
+      (l.877). A tag carried one or two bays past its Reader's edge stands
+      about 25–35 m from its old Reader: at 35 m, 20·log₁₀(35 ÷ 30) = 1.3 dB
+      more, about 23 dB left before the racking, which the study does not
+      price. So it likely still hears its old Reader's beacon, though no
+      Field Generator of that network (each at a power set for its bay,
+      l.886). It is then an unplaced tag of its old network, not a lost
+      one: the wide search never runs, the host has no zone to show, and
+      [22]'s 5 minutes are unmet for that carry. Its check-ins still reach
+      the old Reader, so [25] stays silent. The case #85 prices, a carry
+      beyond the old beacon's reach, is the narrower one.
+    - The answer is one or two sentences: the wide search starts when a
+      tag's whole-block listen hears none of its network's Field
+      Generators, beacon or not, and the tag joins the network whose Field
+      Generator it hears, not the first beacon. The search, its times and
+      its cost stay as priced. No figure moves.
+- **The recurrence triage** (hub KB `epic-close-protocol`): each text seat
+  falls in a decided class, so none qualifies for a new decision.
+  - #85's: four `wrapped-sentence-needle-undercount` hits (above), each
+    correct; and, read off #85's body, three `piped-checker-exit` and a units
+    slip its own script caught.
+  - This pass's: one, caught before its commit. A `node -e` meant only to
+    read the manifest also wrote it back, with an empty `reviewedFor` entry
+    appended. The diff showed the one stray line, and this pass's own entry
+    replaced it.
+- **The merge word** for this pass: Omid, first-hand in its terminal between
+  its reads of 20:17:04Z and 20:20:02Z: "Please merge any PRs you open
+  during this session when ready and in the right order."
+- **Routed, in order:**
+  1. Story 2.1.20, the wide search's trigger, before Story 2.1.8;
+  2. Story 2.1.8, Epic 2.1's close, once Story 2.1.20 is ticked.
+
 **Story:** As a stranger reading the study, I want the shared EU channel's
 roll calls argued from the study's own link budget, and a tag carried past
 a Reader's edge given its time to be found, so that the design reads whole
@@ -1669,6 +1784,44 @@ date, the 868 MHz chip antenna named from its maker's page and the whip's
 gain at 868 MHz read; gives each tier's EU total, summed before rounding,
 with its Lacks; leaves every US figure unchanged; and the PR body quotes the
 section's grep (manifest prose check `eu-build-priced`).
+
+#### Story 2.1.20: The Story 2.1.18 review's fix: the wide search starts when a tag hears none of its Field Generators
+
+**Story:** As a stranger reading the study, I want a tag carried past a
+Reader's edge found even where it still hears its old Reader, so that
+[22]'s 5 minutes hold for every carry, as the rebuild spec's decision 3c
+asks.
+**Context:** born 2026-10-30 by the Story 2.1.18 reviewer pass (tigerfid
+#89), from its Minor H (Story 2.1.18's `**Reviewed:**` record). It goes
+before Story 2.1.8. The spec's 3c (`docs/superpowers/specs/2026-10-30-rebuild-design.md`
+§ 5.3 at `168bebb8`) binds [22] for a carried tag; this story completes the
+search Story 2.1.18 wrote in. It says what the review MEASURED and what is
+INFERRED.
+- **Minor H, the wide search's trigger** (`docs/study/radio-and-location.md`
+  § Zones, A tag carried past a Reader's edge; § Channels, a lost tag's
+  search; § Zones, How a tag hears a Field Generator it has not heard
+  before). MEASURED: the wide search runs after a whole-block listen that
+  "hears nothing either", and the tag joins the first network it hears, its
+  own channel first. A tag that hears its network's beacon but none of its
+  set listens to every slot until the host places it. INFERRED: on § Range's
+  budget (24.4 dB at 30 m, Reader to tag, EU) and a Reader every 30–33 m, a
+  tag carried one or two 10 m bays past its Reader's edge likely still hears
+  its old Reader's beacon but none of that network's Field Generators: it
+  stays an unplaced tag of its old network, the wide search never runs, and
+  [22] is unmet for that carry. The study says what starts the wide search
+  (for example, a whole-block listen that hears none of its network's Field
+  Generators, beacon or not) and which network the tag joins (for example,
+  the one whose Field Generator it hears), in the EU and the US.
+- **What stays.** No requirement number moves (Sprint 4's D1). The wide
+  search, its times and its cost stay as Story 2.1.18 priced them unless
+  this story's answer changes them, in which case each changed figure is
+  sourced with its arithmetic. Story 2.1.18's Outcome and its
+  `**Reviewed:**` record are records and are not edited.
+**Done when:** Minor H is corrected in its document, or its sentence shown
+correct with its source; every changed figure is sourced, MEASURED or
+INFERRED with its arithmetic; no requirement number moved; and the PR body
+quotes the item's grep with each hit's disposition (manifest prose check
+`story2118-review-fixes`).
 
 #### Story 2.1.8: Close out Epic 2.1
 
