@@ -41,16 +41,23 @@ the terminal of the session "Windows 5" between its `date -u` reads of
 of the old customers in particular, many of whom had dozens of readers, tens
 of dozens of field generators, and thousands if not tens of thousands of tags.
 They would want to upgrade their hardware and software right away if we come
-up with something good." That is why decision 2 asks TI its question now, and
-why its answer gates the first tag board (§ 5.2).
+up with something good." That is why decision 2 asks TI its question now, why
+its answer gates every board (§ 5.2), and why the first Reader keeps room
+for a network link (decision 11, § 5.4).
 
 ## 2. Goals, non-goals and anti-goals
 
 **Goals:**
 - milestone 1, as plan Initiative 2 states it (§ 6), accepted when Omid has
   built it from the guides (spec D9 of the onboarding spec);
-- the 27 requirements met on paper by this design, then by the build's tests
-  (`requirements.md` § The five measures, defined);
+- the 27 requirements met on paper by this design, then by measurement
+  (`requirements.md` § The five measures, defined). Milestone 1's bench
+  measures what five devices can: one worn tag's range, zone moves, the
+  alarms' latencies and the tags' currents. The tests that need a site's
+  scale ([3] at 1,000 tags, [12] at 100, [21] on Readers sharing a channel,
+  [2] in a crowded hall, and 3a's second Reader) need more than five devices,
+  so they run after milestone 1 and gate G1, under the module grant (§ 7,
+  § 9);
 - guides and tiered shopping lists for the US build and the EU build
   (decision 9a, § 6.3).
 
@@ -62,8 +69,8 @@ why its answer gates the first tag board (§ 5.2).
   studies and the sitting found about it, for whoever plans it;
 - the LAN tier: HTTPS, user accounts, share links and phone scanning
   (`software-stack.md` § What the choice leaves to later stories);
-- Ethernet on the Reader; an HF (NFC) interface fitted on the seal; location
-  finer than a zone (ultra-wideband stays a later comparison,
+- a network link fitted on the Reader (its footprint is reserved, decision
+  11); an HF (NFC) interface fitted on the seal; location finer than a zone (ultra-wideband stays a later comparison,
   `radio-and-location.md` § The other options, one by one).
 
 **Anti-goals** (plan Initiative 2), which bind every answer here:
@@ -115,6 +122,13 @@ why its answer gates the first tag board (§ 5.2).
 | 9b | Customers' devices | "Leave it out of this spec" | 21:35:18Z–21:37:50Z | § 2, § 7 |
 | 10 | The layout | "The starting shape (Recommended)" | 21:38:30Z–21:41:39Z | § 5.7 |
 | — | The study's unflagged choices, as a block | "Confirm all (Recommended)" | the same | § 5 |
+| 11 | The Reader's path to sites (after the builder's read) | "Host multi-Reader; network footprint (Recommended)" | 21:51:43Z–21:58:36Z | § 5.4, § 5.6 |
+| 12 | What clears gate G1 (after the builder's read) | "TI's written word; you at bench end (Recommended)" | the same | § 5.2, § 8 |
+
+Decisions 11 and 12 came after the sitting's ten. A fresh reader, asked to
+plan the build from this document, named the places a builder would have to
+guess; the two that change what gets built went to Omid, and the rest are
+this document's calls (§ 11).
 
 Before decision 8 he asked, between the reads of 21:30:38Z and 21:33:38Z:
 "Wouldn't it be easier for us to start at the Advanced tier and then create
@@ -152,7 +166,8 @@ studies state them:
    pseudo-randomly over 42 channels, 0.25 s a frame, a 10.5 s cycle
    (`radio-and-location.md` § Anti-collision, § Channels).
 6. **Each device's parts** (`parts-and-toolchains.md` § The parts, device by
-   device), with no Ethernet in milestone 1.
+   device), with no network link fitted in milestone 1 (its footprint is
+   reserved, decision 11).
 7. **The free toolchains:** KiCad 10, TI's SimpleLink Low Power F2 SDK,
    SysConfig, TI Arm Clang or the Arm GNU route, CMake, GNU make, Code
    Composer Studio (optional) and UniFlash; TI's cloud tools, SmartRF Studio
@@ -286,8 +301,13 @@ fits a public project):
 >
 > Context: an open-source (Apache-2.0) active-RFID rebuild on the CC1312PSIP.
 
-**TI's answer gates the first tag-core drawing** (gate G1, § 8). If TI cannot
-show Mode #5 on a grant, the choice returns to Omid before any board is drawn:
+**TI's answer gates every board's drawing** (gate G1, § 8), since one of the
+fallbacks below changes every board. It is cleared by TI's written answer
+naming the FCC ID whose grant covers Mode #5, from a TI employee on the E2E
+forum or through TI's support; the exhibit is asked for, and read if TI
+names one. If no clear answer has come by the end of the bench story, the
+gate comes back to Omid (decision 12). If TI cannot show Mode #5 on a grant,
+the choice returns to Omid before any board is drawn:
 - **mode #2a, 100 kbit/s,** the PHY on the record: about 555 slots a second on
   one channel, so [3]'s 1,000 is unmet (INFERRED: 20 bytes in 1.6 ms, plus the
   0.2 ms guard), 7 dB more range (−101 dBm against −94, SWRA797 Table 2-1),
@@ -297,8 +317,8 @@ show Mode #5 on a grant, the choice returns to Omid before any board is drawn:
   8.13 µA of listening becoming about 17.4);
 - **or a second vendor's certified module,** which the study never read.
 
-The bench story comes before the first tag board and is the same under either
-PHY, so the wait costs no time.
+The bench story comes before any board and is the same under either PHY, so
+the wait costs no time until it ends.
 
 ### 5.3 The conference hall, the EU's channels, and a carried tag (decision 3)
 
@@ -347,7 +367,20 @@ PHY, so the wait costs no time.
   the W5017 on an SMA connector, a USB-to-serial bridge of the CDC class (no
   driver on any of the three platforms), USB's 5 V through a 3.3 V regulator,
   two relays and two supervised inputs (the original's I/O), and a 10-pin
-  debug header. No Ethernet in milestone 1.
+  debug header. **It keeps an unfitted footprint for a wired network link**
+  (decision 11), as the seal's core keeps its NFC footprint, so the first
+  Reader can grow into a site's Reader without a new drawing; milestone 1
+  fits none of it and runs on USB. The footprint keeps clear of the module's
+  RF layout rules (SWRA797 §3.1), and fitting it later brings Part 15
+  Subpart B's emissions care (§ 7).
+- **The Reader is also milestone 1's second zone** (a call of this document,
+  § 11): it sends a zone slot of its own in its block, as a Field Generator
+  does, on the same module. Milestone 1 has one Field Generator, and a second
+  would be a sixth transmitter under §15.23 (§ 7). So the Reader's slot makes
+  the room zone and the Field Generator makes the exit zone, which also
+  listens, for the pairing alarm. A tag that hears the Reader's slot is
+  placed, not lost. The second Reader of 3a already keeps a Field
+  Generator's timing beside its receive path (§ 5.3).
 - **The Field Generator** (§ The Field Generator): the same module and whip at a
   power set for its room, on a USB wall supply and a 3.3 V regulator, with no
   host link. An exit relay and the original's motion input are options, not in
@@ -423,6 +456,10 @@ As `software-stack.md` states it:
   port. Its screen is a page in the owner's browser (SVG for the floorplan,
   Server-Sent Events for the live view), with no build step and nothing
   fetched from the internet. It works offline (§ The choice).
+- **More than one Reader from milestone 1** (decision 11): the host takes
+  events from several Readers, as 3a's second Reader and a site's Readers
+  need, keeping one copy of each reply by the tag's `seq`, and sets each
+  Reader's clock (§ Time, from the Reader's clock).
 - **The event schema** (`v`, `tag`, `reader`, `via`, `rssi_dbm`, `time` in UTC
   from the Reader's frame clock, `seq`, `payload`), published as a JSON Schema
   file. The Reader sends compact binary frames closed by a CRC, which the
@@ -468,7 +505,8 @@ Windows, macOS or Linux machine; all three tags read together
 (anti-collision); a tag carried between two zones, the move showing on the
 floorplan; a tamper alarm and a temperature reading arriving; and a tag paired
 with a person raising an alarm when it leaves without them. Every shopping
-list is tiered (D7). **It is accepted when Omid has built it from the guides**
+list is tiered (D7). Its two zones are the Reader's own zone and the Field
+Generator's, the exit (§ 5.4). **It is accepted when Omid has built it from the guides**
 (D9), and the guides are revised from what his build taught before anyone
 else is pointed at them. Its acceptance starts the product website's work
 (plan Initiative 2, "What its acceptance starts").
@@ -494,7 +532,11 @@ else is pointed at them. Its acceptance starts the product website's work
   five or less". The two are replacement parts, never a sixth device in
   service, and the bench story reads §15.23's count before the assembled
   order (`tiered-cost.md` § The build routes; `radio-and-location.md` § What
-  the law decides before any radio is compared).
+  the law decides before any radio is compared). **If the spares count** (a
+  call of this document, § 11), the Reader's and the Field Generator's boards
+  are ordered assembled without the module, and Omid places one module on
+  each with the advanced tier's hot plate, so the second boards never carry a
+  radio. The tag boards, three of one design, stay fully assembled.
 - **TI's terms for its evaluation boards** say they are "intended solely for use
   by technically qualified, professional electronics experts" (SSZZ027
   §4.3.2). The guides say so plainly, and the debugger and the development
@@ -542,9 +584,9 @@ else is pointed at them. Its acceptance starts the product website's work
 
 | # | Gate | Before | Source |
 |---|---|---|---|
-| G1 | TI's written answer on which grant covers Mode #5 at 300 kbit/s; if none, the choice back to Omid (§ 5.2) | the first tag-core drawing | decision 2 |
+| G1 | TI's written answer naming the FCC ID whose grant covers Mode #5 at 300 kbit/s; if none, or none by the end of the bench story, back to Omid (§ 5.2) | any board is drawn | decisions 2 and 12 |
 | G2 | TI's integration instructions for the -3 grant's "trace reference design" read; if they bind a board to TI's own geometry, publishing it here goes to the ASK-OMID register first, since TI's terms are not on the licence lane's allowlist | any board is drawn | § 11 |
-| G3 | §15.23's count for never-powered spare boards read | the assembled order | decision 8b |
+| G3 | §15.23's count for never-powered spare boards read; if they count, the Reader and Field Generator boards come without the module (§ 6.2) | the assembled order | decision 8b |
 | G4 | The JLCPCB quote for the drawn boards, the module's sourcing there, the five unread prices, and every price read again | anything is bought | `tiered-cost.md` § What the choice leaves to later stories |
 | G5 | Stories 2.1.18 (3b's planning figure, 3c's search) and 2.1.19 (the EU build priced) | Epic 2.1's close | decisions 3 and 9a |
 | G6 | TI's SDK licence ("for use only with TI Devices") taken to the ASK-OMID register | any firmware image is published | `parts-and-toolchains.md` § The licences of the reference designs read |
@@ -583,8 +625,13 @@ carries:
   NanoVNA-H4 (§ 6.2); Energizer cells (5b); the CR2450 item variant (5a) and
   the card-sized badge variant if [2]'s test needs it (decision 4); decision
   6's rule after the battery measurements; the averaging setting (decision 7);
-  the build's [21] test on two Readers sharing an EU channel (3b); the second
-  Reader's acknowledgement path (3a); and the guides for both regions (§ 6.3).
+  the Reader's zone slot, milestone 1's second zone (§ 5.4); the Reader's
+  unfitted network-link footprint and the host's several Readers (decision
+  11); and the guides for both regions (§ 6.3);
+- **after milestone 1 and gate G1:** the requirement tests at a site's scale
+  (§ 2), among them the build's [21] test on two Readers sharing an EU channel
+  (3b) and the second Reader's acknowledgement path (3a). They need more than
+  five devices, so they come after the module grant is settled.
 
 **Open for the build, as the studies mark them:** whether TI's 12 dBm setting
 uses the boost mode that needs 2.1 V (`parts-and-toolchains.md` § Each worn
@@ -626,6 +673,16 @@ written:
 7. **The FCC records are cited by URL and SHA-256, not pinned** in
    `docs/reference-corpus.tsv`. Whoever settles gate G1 may pin them (§ Sources).
 8. **The subfolders in § 5.7** are an example layout.
+9. **The Reader as milestone 1's second zone** (§ 5.4): no study says how one
+   Field Generator gives two zones, and a second Field Generator would be a
+   sixth transmitter. The Reader, the same module, sends a zone slot of its
+   own.
+10. **Which tests milestone 1 runs** (§ 2): what five devices can measure; the
+    tests that need a site's scale come after milestone 1 and gate G1.
+11. **The spares' fallback** (§ 6.2): if never-powered spares count, the
+    Reader's and the Field Generator's boards come without the module.
+12. **Gate G1 holds every board,** not only the tag core (§ 5.2, § 8), since a
+    second vendor's module would change every board.
 
 ## Sources
 
