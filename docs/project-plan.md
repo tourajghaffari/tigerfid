@@ -1204,11 +1204,13 @@ each hit's disposition (manifest prose check `sprint4-review-fixes`).
   - #72's one seat is a `wrapped-sentence-needle-undercount`: the Minor A
     grep's l.895–896 hit, above.
   - This pass's are one `piped-checker-exit` warning (a fast-forward piped
-    into `tail`, then read unpiped: level with `origin/main`) and the
+    into `tail`, then read unpiped: level with `origin/main`), one
+    `block-commit-hook-denies-a-variable-c-path-commit` deny (a commit
+    through `cd` to a shell variable, re-run with the literal path), and the
     `cwd-drift` warnings of a hub-rooted seat working in the clone.
 
-  The register at the hub's `6af670df` holds all three classes, so the
-  seats go to the coordinator as text.
+  The register at the hub's `6af670df` holds all four classes, so the seats
+  go to the coordinator as text.
 - **The merge word** for this pass: Omid, first-hand in its terminal between
   its reads of 15:50:00Z and 15:50:09Z, answering whether the pass may push,
   open this docs-only PR, merge it on green and land its two wraps: "Yes,
