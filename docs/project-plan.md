@@ -77,6 +77,11 @@ paired with a person raising an alarm when it leaves without them. Every
 shopping list is tiered (D7). Omid is the first builder (D9): milestone 1 is
 accepted when he has built it from the guides, and the guides are revised
 from what his build taught before anyone else is pointed at them.
+**What its acceptance starts (2026-10-30):** the product's website,
+activewaveinc.com, waits on it to lead with the rebuilt system. Its home page
+then leads with it, and its use cases become step-by-step recipes from these
+guides (fleet KB `activewaveinc-new-system-trigger`). Whoever records the
+acceptance here, or Omid, starts that work.
 **Done when:** Epic 2.1 is archived with close evidence (initiative-final —
 Epic 2.1 is its only epic), and its close has filed the build initiatives.
 
