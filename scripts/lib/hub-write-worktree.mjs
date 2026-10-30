@@ -274,12 +274,15 @@ export function withWriteWorktree({ repoRoot, branch, base = 'origin/main' }, fn
 // consumes it and may only import from its synced companion — this lib.
 // hub-status re-exports from here. The IO recipe travels with the predicate:
 // feed parseAddedLines the output of
-//   git diff --no-ext-diff --no-color --no-textconv HEAD -- PATH
+//   git diff --no-ext-diff --no-color --no-textconv --text HEAD -- PATH
 // (external/colorized diff output is not unified format — it would parse as
 // zero additions and F3 would report false-'safe'; and a `diff.X.textconv`
 // driver on the path rewrites the added lines themselves — hub Story 248.1.6,
 // MEASURED at the Hub Sprint 73 proposal: a line-dropping driver read a pause
-// DRAFT 'safe' with no added line, so a real reconcile would discard it).
+// DRAFT 'safe' with no added line, so a real reconcile would discard it; and a
+// LOCAL `-diff` or `binary` attribute on the path makes git print "Binary
+// files … differ" with no hunk — hub Story 249.1.10, MEASURED at the Hub Sprint
+// 73 review: the same false-'safe' — so `--text` reads the stored bytes as text).
 
 // Added lines of a `git diff` — the uncommitted delta. Blank additions are
 // noise for containment; trailing \r tolerates CRLF checkouts. A `+++ ` line is
@@ -375,7 +378,9 @@ export function notesReconcileVerdict(repoRoot, notesRel, execOpts = {}) {
   // notes.md and would read as "absent on origin" → unsafe. 64 MiB, the
   // family's cap; a caller's execOpts may still override it.
   const raw = (args) => execFileSync('git', args, { maxBuffer: 64 * 1024 * 1024, ...execOpts, cwd: repoRoot, encoding: 'utf8' });
-  const diffArgs = ['diff', '--no-ext-diff', '--no-color', '--no-textconv']; // the stored bytes (Story 248.1.6)
+  // The stored bytes, read as text (Stories 248.1.6, 249.1.10): no driver, no colour, no textconv, and no
+  // "Binary files … differ" under a local -diff or binary attribute.
+  const diffArgs = ['diff', '--no-ext-diff', '--no-color', '--no-textconv', '--text'];
   const worktreeDiff = raw([...diffArgs, 'HEAD', '--', notesRel]);
   const indexDiff = raw([...diffArgs, '--cached', 'HEAD', '--', notesRel]);
   const added = [...parseAddedLines(worktreeDiff), ...parseAddedLines(indexDiff)];

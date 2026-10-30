@@ -982,12 +982,19 @@ function dollarQAfterPipe(command) {
   // the `)` with no whitespace before it (`x=$(…).log`) is the assignment's own suffix; a word
   // opening `#` begins a comment; the text is read NEUTRALIZED, so a quoted value (`y="a b"`)
   // stays one word; and an append (`y+=1`) or a subscript (`arr[0]=1`) is an assignment.
+  // Story 249.1.12 — a REDIRECTION glued to the `)` (the Hub Sprint 73 review's finding 3): the glued word skipped
+  // above may be a `>`-family operator standing alone (`)> FILE`, `)>> FILE`, `)2> FILE`, `)&> FILE`), and then its
+  // target is the next word, never a command word. A glued `<` keeps the skip of its first word alone (a named limit:
+  // bash 5.3.15 prints `exit=0` after `x=$(true | false)< /dev/null`, so reading the target there would warn falsely).
   const frames = [];
   const ASSIGNMENT = /^[A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]*\])?\+?=/;
+  const GLUED_REDIRECT = /^(?:\d*>>?|&>>?)$/;
   const BODY_OPENERS = new Set(['do', 'then', 'else', '{', '!']);
   const hasCommandWord = (s) => {
     const ws = s.split(/\s+/).filter(Boolean);
-    for (let i = /^\s/.test(s) ? 0 : 1; i < ws.length; i++) {
+    let start = /^\s/.test(s) ? 0 : 1;
+    if (start === 1 && GLUED_REDIRECT.test(ws[0] ?? '')) start = 2; // the glued operator's target
+    for (let i = start; i < ws.length; i++) {
       if (ws[i].startsWith('#')) return false; // a comment to the line's end
       if (/^\d*[<>]+$/.test(ws[i])) { i++; continue; } // a redirection and its target
       if (/^\d*[<>]/.test(ws[i]) || ASSIGNMENT.test(ws[i])) continue;
