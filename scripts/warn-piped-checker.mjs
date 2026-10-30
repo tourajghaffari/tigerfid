@@ -110,7 +110,8 @@
 // 19:39:26Z) — the tail showed one line, not whether the checkout moved, and no
 // `$?` was read, so the shape arm above never saw it. So the guard also WARNS,
 // never denies, when a NON-FINAL pipe stage runs `git` whose verb is exactly
-// `merge`, `pull`, `checkout` or `rebase`, whether or not a `$?` follows — the
+// `merge`, `pull`, `checkout`, `rebase` or `push` (push joined at Story 244.1.34;
+// GIT_STATE_VERBS holds the five), whether or not a `$?` follows — the
 // remedy is to run it unpiped and read its exit. Global options before the verb
 // are read past: `-C PATH`, `-c KEY=VALUE`, `--git-dir[=]PATH`,
 // `--work-tree[=]PATH`, `--no-pager`; any other option there ends the read
@@ -120,8 +121,8 @@
 // --show-current-patch` is a read (silent); `git checkout -- PATH` is a write (it
 // warns). A `$?` read after such a pipe is named by this arm alone (the shape arm
 // folds in). Census (P74, the hub's docs/ at the leg's base): every recorded
-// command that pipes one of the four verbs is state-changing — no recorded read
-// pipes them.
+// command that pipes one of these verbs (four at that census; `push` joined at
+// Story 244.1.34) is state-changing — no recorded read pipes them.
 //
 // THE POWERSHELL TOOL (Story 73.1.1): the Windows box's primary shell is the
 // harness's PowerShell tool, a different tool name — register seat
@@ -971,8 +972,25 @@ function dollarQAfterPipe(command) {
   // command's exit. The outer pipeline resumes either way, so `echo $(…) | tail; echo $?`
   // names `echo … | tail`. A group keeps its old reading exactly. Accepted limit: a
   // backtick substitution is still split as before (the story names `$( )`, `<( )`, `>( )`).
+  // Story 247.1.5 — the WHOLE simple command (the Hub Sprint 70 review's finding 2): a
+  // reserved word that opens a body (`do`, `then`, `else`, `{`, `!`) is not a command word,
+  // so a loop or branch body's `x=$(… | …)` is a bare assignment; and a command word joined
+  // into the same simple command after the `)` (`x=$(… | …) node run.mjs`) makes `$?` that
+  // command's, so the substitution's pipeline is never the producer. Redirections (`2>…`,
+  // `> FILE`) and further assignments are not command words.
   const frames = [];
   const ASSIGNMENT = /^[A-Za-z_][A-Za-z0-9_]*=/;
+  const BODY_OPENERS = new Set(['do', 'then', 'else', '{', '!']);
+  const hasCommandWord = (s) => {
+    const ws = s.split(/\s+/).filter(Boolean);
+    for (let i = 0; i < ws.length; i++) {
+      if (/^\d*[<>]+$/.test(ws[i])) { i++; continue; } // a redirection and its target
+      if (/^\d*[<>]/.test(ws[i]) || ASSIGNMENT.test(ws[i])) continue;
+      return true;
+    }
+    return false;
+  };
+  let afterFromSub = false; // `after` is a bare assignment's substitution pipeline
   // After a substitution's `)`, the text up to the next separator is the SAME outer command
   // (`diff <(…) <(…)`'s second `<`), joined to its stage — never a stage of its own.
   let joinNext = false;
@@ -987,6 +1005,7 @@ function dollarQAfterPipe(command) {
         const before = (parts[k - 1] ?? '').replace(/\s+$/, '');
         const kind = before.endsWith('$') ? 'command' : /[<>]$/.test(before) ? 'process' : 'group';
         const words = kind === 'command' ? before.slice(0, -1).trim().split(/\s+/).filter(Boolean) : [];
+        while (words.length && BODY_OPENERS.has(words[0])) words.shift();
         const bareAssignment = words.length > 0 && words.every((w) => ASSIGNMENT.test(w));
         frames.push({ kind, bareAssignment, outer: pipeline });
         if (kind === 'group') {
@@ -1008,6 +1027,7 @@ function dollarQAfterPipe(command) {
           // A substitution: the outer command resumes; only a bare assignment's carries the exit.
           pipeline = f.outer;
           after = f.bareAssignment && inner ? inner : null;
+          afterFromSub = Boolean(after);
           joinNext = true;
         }
         continue;
@@ -1022,6 +1042,8 @@ function dollarQAfterPipe(command) {
     if (joinNext && pipeline.length) {
       pipeline[pipeline.length - 1] += ` ${stage}`;
       joinNext = false;
+      // Story 247.1.5: a command word after a bare assignment's substitution owns `$?`.
+      if (after && afterFromSub && hasCommandWord(expands(stage))) after = null;
       continue;
     }
     joinNext = false;
