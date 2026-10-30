@@ -7,6 +7,43 @@ lives in git). Written at wrap-up per the "Session handoff" section of
 CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 § Writing in public).
 
+## Session: 2026-10-29 — Sprint 4 reviewed (PASS WITH FINDINGS); Story 2.1.15 filed
+
+- **Landed:**
+  - #65 → `9940597e` (GitHub's merge stamp 00:00:55Z, 2026-10-30), squash
+    with `--match-head-commit 82e2ca46…` once `watch-pr.mjs` read it GREEN.
+    - The Sprint 4 block is cut whole to the archive's § Executed sprints,
+      with its `**Reviewed:**` record: PASS WITH FINDINGS, each leg MET.
+    - Story 2.1.15 is filed ahead of Story 2.1.7. It carries finding 1,
+      Important: the warehouse's "one run of three" does not hold at a
+      Reader's edge. INFERRED: a CR2032 lasts 0.92 of five years there, and
+      the cold-chain tag 0.85, while the recommended CR2450 still meets
+      [27]. It also carries four Minors and five nits.
+    - The manifest gains `2.1.15` and the prose check
+      `sprint4-review-fixes`.
+- **Next:**
+  1. **A Sprint 5 proposal for Story 2.1.15** (a FRESH proposer), then its
+     leg and its review. Omid may sit first, at the cost the record names:
+     choosing the item tag's cell from a CR2032 margin that does not hold at
+     a Reader's edge.
+  2. Story 2.1.7, Omid's sitting; then Story 2.1.8, a FRESH closer, who
+     also adjudicates GNU make's INFERRED chain under
+     `three-platform-claims-sourced` (the record's note for the closer).
+  3. **The Mac's reference folder** still reads `README stale-stub`. MEASURED
+     by this pass: it is byte for byte the stub before leg 3. The next
+     tigerfid session on the Mac runs `node scripts/reference-check.mjs
+     --write-stub` (D13; the friction log's V1).
+- **Surprises / decisions:**
+  - **The register seats** of legs 2 and 3, and this pass's own, went as
+    text in #65's body for the coordinator's fold. Until that fold lands,
+    the close runner prints "REVIEW SEATING MISSING" for Sprint 4.
+  - **The merge word:** Omid, first-hand in this terminal between its reads
+    of 23:36:35Z and 23:40:19Z: "Yes, push/edit/ready/merge
+    (Recommended)". The merge did not hold.
+- **Provenance:** Session id `6c5fdfae-3e60-414d-bac8-80781e57d20e`, the
+  hub-rooted reviewer seat "Mac 3", fresh by `/clear` of the process
+  `5c057329-…` (the friction log's fresh-session read).
+
 ## Session: 2026-10-29 — Sprint 4 leg 3 (Story 2.1.13, the sources/ route) and the sprint executed
 
 - **Landed:**
@@ -76,39 +113,4 @@ CLAUDE.md. These notes are public, like everything in this repo (CLAUDE.md
 - **Provenance:** Session id `7a8f4e54-9463-4a25-b0d2-718feceb0236`, the
   hub-rooted executor seat "tigerfid Sprint 4 leg 2", fresh by `/clear` of
   "Windows 4"'s process (the friction log's fresh-session read).
-
-## Session: 2026-10-29 — Sprint 4 leg 1 (Story 2.1.12, the listening window)
-
-- **Landed:** #58 → `cf580b05` (GitHub's merge stamp 10:05:48Z), squash
-  with `--match-head-commit 64c09fb0…` once `watch-pr.mjs` read it GREEN
-  (07:50:38Z).
-  - The radio study states the layout of a listen: the beacon skipped on
-    most listens. Every battery figure is re-priced, and Sprint 3's D2 is
-    re-run: [18] by 24 %, [9] by 22 %, [27] by 22 % and 11 % on cold
-    chain. All are met on paper, and no ASK-OMID row is filed.
-  - The conference's block is computed (1,308 reply slots a second), and
-    GNU make is named among the tools not cited (D4's default).
-  - The tick, the manifest's `reviewedFor` line and the friction log's
-    leg 1 section ride the same PR.
-- **Next:**
-  1. **Sprint 4 leg 2, Story 2.1.14,** in a FRESH executor seat, by the
-     block's kickoff. It reads `tiered-cost.md` anchors at `cf580b05`.
-     `tiered-cost.md` § Both cells needs no sentence moved (#58's body,
-     § For leg 2).
-  2. Then leg 3 (Story 2.1.13, merged by Omid's word), the Sprint 4
-     review, Story 2.1.7's sitting and Story 2.1.8's close.
-- **Surprises / decisions:**
-  - **The classifier refused the relayed merge delegation** ("Merge
-    Without Review"), before the read of 07:51:08Z. Omid answered
-    first-hand in this terminal, "Merge #58 (Recommended)", between that
-    read and 10:05:45Z. He then gave this session its own delegation:
-    "Please merge any PRs you open during this session when ready and in
-    the right order."
-  - **For the reviewer:** the block's order was a second hidden
-    assumption (friction L1); reproduce slot counts at 11/15 ms (L2). The
-    leg's script is in #58's body.
-- **Provenance:** Session id `6fb033a2-2fc2-4f7a-8d61-8918850b976e`, the
-  hub-rooted executor seat "tigerfid Sprint 4 leg 1", fresh by `/clear` of
-  "Windows 4"'s process, which last held the Sprint 4 proposal (the friction
-  log's fresh-session read).
 
