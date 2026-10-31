@@ -4384,7 +4384,7 @@ quotes the item's grep with each hit's disposition (manifest prose check
 
 #### Story 2.1.8: Close out Epic 2.1 — ✅ DONE (2026-10-31)
 
-**Completed:** 2026-10-31 — tigerfid #PRNUM (branch `close/epic-2.1`, pre-tick head `81deba5`; the close PR is the archival PR), by session `855e7ac0-8251-4a5c-8c32-b91a310b4834`, "Windows Closer": fresh by `/clear` (its background-task path id, `6fcced12-1dc8-43aa-9db7-2f53c68a80f5`, is the earlier session of the same terminal, whose process the clear ended), not elevated (Medium Mandatory Level), role closer, with none of the epic's work.
+**Completed:** 2026-10-31 — tigerfid #98 (branch `close/epic-2.1`, pre-tick head `81deba5`; the close PR is the archival PR), by session `855e7ac0-8251-4a5c-8c32-b91a310b4834`, "Windows Closer": fresh by `/clear` (its background-task path id, `6fcced12-1dc8-43aa-9db7-2f53c68a80f5`, is the earlier session of the same terminal, whose process the clear ended), not elevated (Medium Mandatory Level), role closer, with none of the epic's work.
 **Outcome:** the close evidence below — 11 machine checks PASS and 23 prose checks adjudicated, 3 of them by Omid — Initiative 2 archived whole, and the build filed as Initiatives 3–7: seven epics, 41 stories and seven close stories, seven manifests born FAILING, on Omid's word "(A)" for the full filing. The PR also lands the corrections the evidence names: `original-system.md`'s citations, the two studies' dated grant-read lines, and the README's and CLAUDE.md's tense.
 
 **Story:** As the fresh-session closer, I want Epic 2.1 closed per KB
