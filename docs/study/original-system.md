@@ -21,6 +21,16 @@ figures. The old website's pages are cited as the reference corpus's capture
 tag. Nothing here is copied into the rebuild: this is a description, and the
 rebuild's own design comes from Stories 2.1.3–2.1.7.
 
+**Citations added 2026-10-31** by Epic 2.1's close (plan Story 2.1.8), on
+Omid's verdict "Pass with correction": the Tag 102 tilt switch's file
+(§ Alarms and I/O), the BOM folder's readme (§ The Transceiver), the files
+behind "LF RX DATA" and the TLE4913 (§ What no record states), and the
+website captures behind its claims (§ The names: products and boards,
+§ Zones, § The Reader to the host, § The Reader, § Where the records and the
+website disagree). The zone phrase is now
+credited to the onboarding spec, since no captured page carries it. No claim
+changed.
+
 ## The records read
 
 Read on 2026-10-27 in the reference folder recreated from the tag (it
@@ -84,7 +94,7 @@ records map them as follows.
 | miniTag | Tag 103 | "Mini Tag REV18.0 Board" (`bom-files/tag/Tag-103 05-10-2011 REV 20-1.xls`); "miniTag, 103 Rev 20" (TUNE) |
 | jumboTag | Tag 105 | "Jumbo Tag REV18.3 Board", "Jumbo Tag REV20.0 Board" (`bom-files/tag/Tag-105 5-30-2012 REV 20.xls`); "jumboTag, 105 Rev 17" (TUNE) |
 | sealTag | Tag 201 | "TAG-201 Rev4" (T201-BOM) |
-| Standard Reader | Reader 103, the "Medium Reader" | "RDR-ASM-103" with "Medium Reader Rev. 6" (RDR-2012). INFERRED that the website's Standard Reader is this board: its I/O matches the datasheet's (four LEDs, two relays, two contact inputs, a motion input, Ethernet). |
+| Standard Reader | Reader 103, the "Medium Reader" | "RDR-ASM-103" with "Medium Reader Rev. 6" (RDR-2012). INFERRED that the website's Standard Reader is this board: its I/O matches the datasheet's (four LEDs, two relays, two contact inputs, a motion input, Ethernet; `activewaveinc/docroot/products_datasht_standardreader.php`). |
 | Standard Field Generator | FGN 101 | "FGN ASM-101", "Field Generator Rev 2.2NC" (`bom-files/field-generator/standard-fgen/FGN 101 089-02-10 REV2.3NC.xls`) |
 
 The Protel folders agree. `protel-files/tags/credit-card-tag/` holds
@@ -358,8 +368,9 @@ its result:
   Address" (P08 §3.5.4), and P06 §4.2.1's tag report carries "Field
   Generator ID".
 - INFERRED: the host maps each Field Generator's ID to a place. That place
-  is what the website calls a zone, "a Field Generator plus a motion
-  detector".
+  is what the onboarding spec's Context calls a zone, "a Field Generator
+  plus a motion detector"; no page of the website's capture carries the
+  phrase (MEASURED, 2026-10-31, a search of its HTML pages).
 
 **What switches a Field Generator on:**
 
@@ -405,7 +416,8 @@ TRX-SCH). No record gives its units or uses it for location.
     "activated" (an event). The records do not settle which the bit means.
   - The tags' boards carry the inputs: "TAMPER SIG", "TAMPER PWR", "TAMPER
     OPTION" and "PANIC SWITCH" (the Tag 105 Rev 21 schematic prints), and a
-    "TILT SWITCH" on Tag 102.
+    "TILT SWITCH" on Tag 102 (TAG-PNP: SW2 in the Tag 102 Rev 17 and Rev 20
+    files).
 - **Temperature.**
   - The tag reports when asked, when a reading crosses the upper or lower
     limit, or on a period (P06 §4.2.3, the four numbered triggers).
@@ -460,7 +472,7 @@ TRX-SCH). No record gives its units or uses it for location.
   Copy of BOM for Reader 103.csv`; `bom-files/reader/medium-reader/old/MedRDR103081006Rev4.xls`).
   Neither is in R6NET or RDR-2012.
 - **No WLAN part is in any Reader record.** The datasheet's "optional WLAN"
-  is the website's claim.
+  is the website's claim (`activewaveinc/docroot/products_datasht_standardreader.php`).
 - **The host side is a Windows library.** Its functions include `rfOpen`
   (serial), `rfOpenSocket`, `rfScanNetwork` and `rfScanIP` (API-2013;
   `rfOpenSocket` is in API-2007 too). Release 27 renamed the DLL
@@ -528,11 +540,13 @@ ActiveWave's own markings instead of part numbers in R6NET: "AWI501C",
 - **Power:** a bridge rectifier ("BRIDGE 100V 0.5A"), a CS51414 buck
   regulator, and NCP1117 (5 V) and NCP1086 (3.3 V) linear regulators
   (R6NET; RDR-2012). No record states the input voltage or current. The
-  website's "12 V DC 1.5 A" is its claim.
+  website's "12 V DC 1.5 A" is its claim ("12Vdc, 1.5A",
+  `activewaveinc/docroot/products_datasht_standardreader.php`).
 
 ### The Transceiver (TRX-101, Rev 17–19)
 
-The board the BOM folder's readme was unsure about ("we're not 100% sure
+The board the BOM folder's readme (`activewave-2018:bom-files/readme.md`)
+was unsure about ("we're not 100% sure
 what this is"). It is the Reader's radio: three radio chains, two SMA
 antenna jacks and a 10-pin connector. The parts are read from TRX-PNP. How
 they chain is INFERRED from the parts themselves, and from TRX-SCH where its
@@ -713,7 +727,14 @@ in, 916/927/868 MHz out, temperature) belong to the PIC tag family.
 | CRC coverage | from `0x7E` (P06, and the test vectors); excluding a "preamble zero byte" (P08) | — |
 | The Field Generator page's description | the page body: "transmits wake up commands to tags at 433 MHz" | its meta description: "a continuous 13.56 MHz field … passive tag" (`activewaveinc/docroot/products_datasht_standardfieldgen.php`) |
 
-The website's range, area and battery figures are its claims. No record at
+The website's cells for the reply bands and the Reader's host links are read
+from `activewaveinc/docroot/products_datasht_standardreader.php` ("916 MHz,
+927 MHz, or 868 MHz"; RS-232, Ethernet and "WLAN (optional)"), and its tag
+memory from `products_datasht_compacttag.php` ("0 - 256 Kbits", "0 - 128Kbit
+memory sizes") and `products_datasht_cardtag.php`.
+
+The website's range, area and battery figures are its claims (its
+`products_datasht_*.php` pages under `activewaveinc/docroot/`). No record at
 the tag states a read range in metres, a floor area or a battery life.
 
 ## What no record states
@@ -727,7 +748,9 @@ not from the original:
 - the output power at either frequency, and any FCC ID or certification
   (the onboarding spec also found no Part 15 statement on the website);
 - the Reader's supply voltage and current;
-- what a tag's "LF RX DATA" programming line and its TLE4913 part are for;
+- what a tag's "LF RX DATA" programming line (on the Tag 101 Rev 21 and
+  Tag 105 Rev 20–21 schematic sheets under `protel-files/tags/`) and its
+  TLE4913 part (U7 in TAG-PNP) are for;
 - the wake signal's form (a carrier, a tone or a preamble);
 - the 2012 sealTag's UHF label: its part, protocol and reader.
 

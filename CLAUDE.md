@@ -9,11 +9,13 @@ This repo lives nested inside the `fields-ghaffari-labs` hub checkout, so every 
 TigeRFID: the ActiveWave active-RFID system that Touraj Ghaffari's company
 built from 2001, which his sons open-sourced under Apache-2.0 in 2017–2018
 in honor of his love of spreading knowledge (the dedication in
-`readme.md`). It is being rebuilt from the ground up: a design study decides
-a new system against three acceptance scenarios, then a first build — one
-Reader, one Field Generator and three tags across two zones — that a
-complete beginner can follow on Windows, macOS or Linux with free tools
-only. The plan is `docs/project-plan.md`. Adopted into the FGL fleet
+`readme.md`). It is being rebuilt from the ground up: a design study decided
+a new system against three acceptance scenarios (plan Initiative 2, closed
+2026-10-31; the rebuild's design spec is
+`docs/superpowers/specs/2026-10-30-rebuild-design.md`), and a first build —
+one Reader, one Field Generator and three tags across two zones — follows,
+for a complete beginner on Windows, macOS or Linux with free tools only. The
+plan is `docs/project-plan.md`. Adopted into the FGL fleet
 2026-10-26 (hub spec `2026-10-26-tigerfid-onboarding-design`); the first
 public repo the fleet holds.
 

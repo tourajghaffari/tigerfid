@@ -72,6 +72,12 @@ now answers only a request that accepts a compressed reply (friction F14).
 - **The read before any part is bought:** both grant pages, in a browser.
   It decides the label's ID and confirms that the chosen PHY is on the
   grant.
+- **Read 2026-10-30 by the decision sitting** (dated correction, 2026-10-31,
+  Epic 2.1's close): both grants are single modular approvals of the
+  frequency-hopping class, and no public test report shows the 300 kbit/s
+  PHY; the label's ID waits on TI's written answer (gate G1). The record is
+  the rebuild spec's § 5.2 (`docs/superpowers/specs/2026-10-30-rebuild-design.md`,
+  tigerfid #83).
 
 **Refused, so no part is named from them:**
 - FTDI's driver page and Microchip's product page, both HTTP 403 to a plain
