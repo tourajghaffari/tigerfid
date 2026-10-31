@@ -1,0 +1,67 @@
+{
+  "epic": "7.2",
+  "planRef": "docs/project-plan.md",
+  "stories": [
+    "7.2.1",
+    "7.2.2",
+    "7.2.3",
+    "7.2.4"
+  ],
+  "checks": [
+    {
+      "id": "lint",
+      "run": "node scripts/close-lint.mjs",
+      "expect": {
+        "exit": 0
+      }
+    },
+    {
+      "id": "throughput-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/7.2.1';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 7.2.1: the roll call's method and readings against [3] and [12]. Born RED on 2026-10-30: docs/evidence/7.2.1/ is absent."
+    },
+    {
+      "id": "eu-shared-channel-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/7.2.2';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 7.2.2: the test of two EU Readers sharing a channel against [21]. Born RED on 2026-10-30: docs/evidence/7.2.2/ is absent."
+    },
+    {
+      "id": "hall-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/7.2.3';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 7.2.3: the crowded hall's range test and the second Reader's acknowledgement path. Born RED on 2026-10-30: docs/evidence/7.2.3/ is absent."
+    },
+    {
+      "id": "throughput-by-omid",
+      "prose": "Story 7.2.1: confirm docs/evidence/7.2.1/README.md names each committed file, what it shows, the date it was taken and the instrument, and that the roll call is measured at 1,000 tags against [3] and at the ward's 100 against [12], under the module grant G1 settled; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "eu-shared-channel-by-omid",
+      "prose": "Story 7.2.2: confirm docs/evidence/7.2.2/README.md names each committed file, what it shows, the date it was taken and the instrument, and that two Readers sharing an EU channel are tested, the verdict (at once or in turns) is recorded against [21], and the study records which plan holds; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "hall-by-omid",
+      "prose": "Story 7.2.3: confirm docs/evidence/7.2.3/README.md names each committed file, what it shows, the date it was taken and the instrument, and that a badge is read in a crowded hall against [2], and the acknowledgement path of a reply only the second Reader hears is measured against [9]; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "beyond-five-conditions",
+      "prose": "Story 7.2.4 (the rebuild spec's sections 5.2 and 7): confirm the 20 cm RF-exposure condition, the co-location condition (with whether a passive NFC coil counts as any other antenna) and Part 15 Subpart B for the Reader are each read at its version with its URL and date, with what it asks of a site's build; that what this repo may build beyond five devices is recorded with Omid's word; and that devices made for customers stay outside it (decision 9b). Auto-fail: a condition cited from memory.",
+      "requires": "omid"
+    },
+    {
+      "id": "initiative-7-final",
+      "prose": "Initiative 7 Done-when (derivation note: this epic is CURRENTLY the last live epic of the initiative; if at close time other epics of this initiative are live, or filed since, record that this check moved with the derivation instead of adjudicating it here): adjudicate the clauses one by one: Epic 7.1 is archived with close evidence and milestone 1 accepted by Omid (cite its archive entry and docs/build/milestone-1.md), and Epic 7.2 is archived with close evidence by this close. Cite the archive entry and live evidence per clause. Verdict vocabulary: PASS / FAIL / UNCERTAIN (UNCERTAIN escalates per the second-adjudicator rule). Reason as long as needed, then discard reasoning and record the verdict with its observations."
+    }
+  ]
+}

@@ -402,6 +402,13 @@ record states):
   browser: the grant pages of both IDs, ZAT-1312PSIP-2 and ZAT-1312PSIP-3,
   before the rebuild spec names an FCC ID or any part is bought (plan Story
   2.1.7).
+  - **Read 2026-10-30 by the decision sitting** (dated correction, 2026-10-31,
+    Epic 2.1's close): both grants are single modular approvals of the
+    frequency-hopping class, so the design's hop is required, and no public
+    test report shows the 300 kbit/s PHY. TI is asked which grant covers it,
+    and its written answer gates every board (gate G1). The record is the
+    rebuild spec's § 5.2 (`docs/superpowers/specs/2026-10-30-rebuild-design.md`,
+    tigerfid #83).
 
 **For a beginner's hands:** the module is a 0.5 mm-pitch package (PSIP p9)
 with a reflow profile (PSIP p65). INFERRED: it is not hand-soldered. Its

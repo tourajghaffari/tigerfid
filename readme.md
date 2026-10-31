@@ -23,13 +23,13 @@ The [presentations](https://github.com/tourajghaffari/tigerfid/tree/activewave-2
 
 We are rebuilding the system from the ground up, so that a complete beginner can build it with free tools on Windows, macOS or Linux. The first build is one Reader, one Field Generator and three tags (a sealTag, a compactTag and a cardTag) across two zones.
 
-A design study comes first. It decides the new system against three scenarios:
+A design study came first. It decided the new system against three scenarios:
 
 * a conference, where the software shows each attendee on a floorplan;
 * a nursery, where each baby's tag carries a temperature sensor, so staff can find each baby and read the sensor;
 * a warehouse that counts 100,000 items in minutes.
 
-The work is planned in the open in [docs/project-plan.md](docs/project-plan.md).
+Its decisions are in [the rebuild's design spec](docs/superpowers/specs/2026-10-30-rebuild-design.md). The build is planned in the open in [docs/project-plan.md](docs/project-plan.md).
 
 ### The original
 

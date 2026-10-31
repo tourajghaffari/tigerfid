@@ -1,0 +1,86 @@
+{
+  "epic": "5.1",
+  "planRef": "docs/project-plan.md",
+  "stories": [
+    "5.1.1",
+    "5.1.2",
+    "5.1.3",
+    "5.1.4",
+    "5.1.5",
+    "5.1.6",
+    "5.1.7"
+  ],
+  "checks": [
+    {
+      "id": "lint",
+      "run": "node scripts/close-lint.mjs",
+      "expect": {
+        "exit": 0
+      }
+    },
+    {
+      "id": "suite",
+      "run": "npm test",
+      "expect": {
+        "exit": 0
+      },
+      "timeoutSec": 600
+    },
+    {
+      "id": "event-schema-fields",
+      "run": "node -e \"const f=require('fs');const p=require('path');const want=['payload','reader','rssi_dbm','seq','tag','time','v','via'].join();const hit=f.existsSync('software')&&f.readdirSync('software',{recursive:true}).filter((n)=>String(n).endsWith('.schema.json')).some((n)=>{const j=JSON.parse(f.readFileSync(p.join('software',String(n)),'utf8'));return Object.keys(j.properties||{}).sort().join()===want});process.exit(hit?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 5.1.1 (the rebuild spec's section 5.6): a .schema.json file under software/ whose properties are exactly the eight event fields. Born RED on 2026-10-30: software/ is absent."
+    },
+    {
+      "id": "host-tests",
+      "run": "node -e \"const f=require('fs');const p=require('path');process.exit(f.existsSync('software')&&f.readdirSync('software',{recursive:true}).some((n)=>/^test_.*[.]py/.test(p.basename(String(n))))?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 5.1.2: the host carries Python tests under software/. Born RED on 2026-10-30: software/ is absent."
+    },
+    {
+      "id": "host-platforms-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/5.1.7';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 5.1.7: the host's run on Windows, macOS and Linux, each with a Reader on its USB port. Born RED on 2026-10-30: docs/evidence/5.1.7/ is absent."
+    },
+    {
+      "id": "event-schema-exact",
+      "prose": "Story 5.1.1: confirm the published schema names exactly v, tag, reader, via, rssi_dbm, time (UTC, from the Reader's frame clock), seq and payload, as docs/study/software-stack.md states them, and that a host test validates sample events against it."
+    },
+    {
+      "id": "host-core-rules",
+      "prose": "Story 5.1.2 (the rebuild spec's section 5.6): confirm the host runs on Python 3's standard library with its page served and nothing fetched from the internet; that it listens on the owner's machine only, answers only requests addressed to it by that name, takes a token on every change, makes its own secrets on first run and keeps one data file backed up through SQLite's backup interface; that raw check-ins are kept 7 days by default and the history until the owner deletes it, the setting on screen beside the disk use; that each rule is pinned by a host test CI's test job runs (docs/ci-contract.md names the command); that pyserial's route (copied with its trail, or installed by pip) is recorded with its reason; and that Python's and SQLite's licences are cited at their version and date."
+    },
+    {
+      "id": "reader-adapter-several",
+      "prose": "Story 5.1.3 (decision 11 and 3a): confirm the adapter turns the Reader's binary frames into schema events, takes events from several Readers, keeps one copy of each reply by the tag's seq and sets each Reader's clock, each pinned by host tests on recorded frames from two Readers."
+    },
+    {
+      "id": "floorplan-links-order",
+      "prose": "Story 5.1.4: confirm the floorplan draws each zone's neighbour links, that host tests pin the listen set the Reader names and the block's order the host computes from them (a set one run), and that the page shows a tag's zone live from recorded events."
+    },
+    {
+      "id": "alarms-raised-acknowledged",
+      "prose": "Story 5.1.5: confirm the host raises tamper, temperature, missed check-in and pairing, with dwell, left-a-zone, inputs, low battery and a Reader offline, each set on screen and acknowledged by a named user, and that host tests raise each from recorded events."
+    },
+    {
+      "id": "host-no-medical-claim",
+      "prose": "Spec C8, the host software and its page: confirm no page, message or alarm text calls the system a medical device or a monitor of vital signs; a temperature alarm reads as a tag's reading crossing a limit someone set."
+    },
+    {
+      "id": "pairing-qr",
+      "prose": "Story 5.1.6: confirm pairing by two scans works in a host test with both a typed number and a decoded QR code, and that the decoder's licence is on the allowlist with its trail, or the decoder is installed beside the host, the route recorded."
+    },
+    {
+      "id": "host-three-platforms",
+      "prose": "Story 5.1.7 (spec D5; an environment-dependent arm: Windows, macOS and Linux): confirm the host ran on each of the three platforms with a Reader on its USB port, each run recorded with the operating system, the date and the versions printed, and that docs/study/software-stack.md marks each platform MEASURED. Auto-fail: a platform claimed with no run recorded."
+    }
+  ]
+}

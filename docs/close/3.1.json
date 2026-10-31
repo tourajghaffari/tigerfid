@@ -1,0 +1,201 @@
+{
+  "epic": "3.1",
+  "planRef": "docs/project-plan.md",
+  "stories": [
+    "3.1.1",
+    "3.1.2",
+    "3.1.3",
+    "3.1.4",
+    "3.1.5",
+    "3.1.6",
+    "3.1.7",
+    "3.1.8",
+    "3.1.9",
+    "3.1.10",
+    "3.1.11",
+    "3.1.12"
+  ],
+  "checks": [
+    {
+      "id": "lint",
+      "run": "node scripts/close-lint.mjs",
+      "expect": {
+        "exit": 0
+      }
+    },
+    {
+      "id": "bench-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.1';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.1: the bench photo, the receiver's first capture of the development board in 902-928 MHz and the re-read prices. Born RED on 2026-10-30: docs/evidence/3.1.1/ is absent."
+    },
+    {
+      "id": "gate-g1-recorded",
+      "run": "node -e \"const f=require('fs');const p='docs/build/gates.md';process.exit(f.existsSync(p)&&/[*][*]G1:[*][*] (CLEARED|RETURNED TO OMID) [(][0-9]{4}-[0-9]{2}-[0-9]{2}[)]/.test(f.readFileSync(p,'utf8'))?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.2 (the rebuild spec's section 8, gate G1): TI's written answer naming the FCC ID whose grant covers Wi-SUN Mode #5 at 300 kbit/s, or the gate returned to Omid. Born RED on 2026-10-30: docs/build/gates.md is absent."
+    },
+    {
+      "id": "gate-g2-recorded",
+      "run": "node -e \"const f=require('fs');const p='docs/build/gates.md';process.exit(f.existsSync(p)&&/[*][*]G2:[*][*] (CLEARED|RETURNED TO OMID) [(][0-9]{4}-[0-9]{2}-[0-9]{2}[)]/.test(f.readFileSync(p,'utf8'))?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.2 (the rebuild spec's section 8, gate G2): TI's trace-reference-design instructions for the -3 grant read. Born RED on 2026-10-30: docs/build/gates.md is absent."
+    },
+    {
+      "id": "gate-g3-recorded",
+      "run": "node -e \"const f=require('fs');const p='docs/build/gates.md';process.exit(f.existsSync(p)&&/[*][*]G3:[*][*] (CLEARED|RETURNED TO OMID) [(][0-9]{4}-[0-9]{2}-[0-9]{2}[)]/.test(f.readFileSync(p,'utf8'))?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.3 (the rebuild spec's section 8, gate G3): section 15.23's count for never-powered spare boards read. Born RED on 2026-10-30: docs/build/gates.md is absent."
+    },
+    {
+      "id": "gate-g4-recorded",
+      "run": "node -e \"const f=require('fs');const p='docs/build/gates.md';process.exit(f.existsSync(p)&&/[*][*]G4:[*][*] (CLEARED|RETURNED TO OMID) [(][0-9]{4}-[0-9]{2}-[0-9]{2}[)]/.test(f.readFileSync(p,'utf8'))?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.9 (the rebuild spec's section 8, gate G4): the JLCPCB quote for the drawn boards, the module's sourcing there, the five unread prices and every price read again. Born RED on 2026-10-30: docs/build/gates.md is absent."
+    },
+    {
+      "id": "kicad-projects",
+      "run": "node -e \"const f=require('fs');const p=require('path');process.exit(f.existsSync('hardware')&&f.readdirSync('hardware',{recursive:true}).some((n)=>String(n).endsWith('.kicad_pro'))?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Stories 3.1.5-3.1.7 (spec D4): the boards are KiCad projects under hardware/. Born RED on 2026-10-30: hardware/ is absent."
+    },
+    {
+      "id": "reader-board-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.5';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.5: the Reader board's electrical and design rule reports and a render. Born RED on 2026-10-30: docs/evidence/3.1.5/ is absent."
+    },
+    {
+      "id": "field-generator-board-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.6';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.6: the Field Generator board's rule reports and a render. Born RED on 2026-10-30: docs/evidence/3.1.6/ is absent."
+    },
+    {
+      "id": "tag-core-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.7';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.7: the tag core's and its CR2450 variant's rule reports and renders. Born RED on 2026-10-30: docs/evidence/3.1.7/ is absent."
+    },
+    {
+      "id": "enclosures-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.8';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.8: a photo or render of each enclosure and the seal's band, loop and coil place. Born RED on 2026-10-30: docs/evidence/3.1.8/ is absent."
+    },
+    {
+      "id": "order-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.9';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.9: the order's public-safe record. Born RED on 2026-10-30: docs/evidence/3.1.9/ is absent."
+    },
+    {
+      "id": "bring-up-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.10';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.10: each board's first power-up current, receiver capture and antenna match before and after tuning. Born RED on 2026-10-30: docs/evidence/3.1.10/ is absent."
+    },
+    {
+      "id": "currents-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.11';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.11: the tags' current traces on the LP-XDS110ET. Born RED on 2026-10-30: docs/evidence/3.1.11/ is absent."
+    },
+    {
+      "id": "card-variant-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/3.1.12';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 3.1.12: the range test's verdict for the small core, and the card-sized variant's rule reports and range reading if it was drawn. Born RED on 2026-10-30: docs/evidence/3.1.12/ is absent."
+    },
+    {
+      "id": "bench-by-omids-hand",
+      "prose": "Story 3.1.1: confirm docs/evidence/3.1.1/README.md names each committed file, what it shows, the date it was taken and the instrument, and that the bench works as the story asks: every price paid was read again on its seller's page and dated in docs/study/tiered-cost.md, the receiver's choice is recorded with its reason, the receiver shows the development board transmitting in 902-928 MHz, the development board's FCC status is read, and the stencil, the paste against the module's reflow profile and how a tag's board meets the VNA are recorded for Story 6.1.3; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "gates-g1-g2-sourced",
+      "prose": "Story 3.1.2 (decisions 2 and 12; the rebuild spec's sections 5.2 and 8): confirm docs/build/gates.md links TI's question and every reply; that G1 is CLEARED only on TI's written word, from a TI employee, naming the FCC ID whose grant covers Mode #5 at 300 kbit/s, with the exhibit TI names read, or is RETURNED TO OMID with his ruling between the section 5.2 fallbacks recorded first-hand; and that G2 records TI's trace-reference-design instructions read and, if they bind a board to TI's geometry, an ASK-OMID row filed before any board is published. Auto-fail: G1 cleared on a reading of the grant pages alone. Omid's verdict, on the closer's evidence.",
+      "requires": "omid"
+    },
+    {
+      "id": "gate-g3-sourced",
+      "prose": "Story 3.1.3 (decision 8b; the rebuild spec's section 6.2 and gate G3): confirm docs/build/gates.md cites section 15.23, and any FCC guidance read, at the version read with its URL and date; states whether never-powered spare boards count toward the five; and names the order route it sets (assembled with the module, or the Reader and Field Generator boards without it). Auto-fail: a rule cited from memory, with no version read."
+    },
+    {
+      "id": "parts-from-datasheets",
+      "prose": "Story 3.1.4 (the rebuild spec's sections 9 and 10): confirm the USB bridge (CDC class, no driver on Windows, macOS or Linux, its baud limit read), the chip antenna's land pattern from Johanson's datasheet, and every part docs/study/tiered-cost.md marked representative (the regulator, the relays and their driver, the connectors, the passives, the cells' holders, the enclosures, the seal's band and loop) are each named with its maker's datasheet and a dated price; that each datasheet is pinned under the corpus's sources/ where its licence allows or cited by URL and date where it does not; and that every representative mark each choice replaces is refreshed in the studies."
+    },
+    {
+      "id": "reader-board-by-omid",
+      "prose": "Story 3.1.5: confirm docs/evidence/3.1.5/README.md names each committed file, what it shows, the date it was taken and the instrument, and that the Reader's KiCad 10 project carries the parts of the rebuild spec's section 5.4 (the module at 17 dBm, the W5017 on SMA, the CDC bridge, the 3.3 V regulator, two relays, two supervised inputs, the 10-pin debug header) and an unfitted network-link footprint clear of SWRA797 section 3.1's RF rules, with its electrical and design rule checks clean and nothing copied from TI's reference designs; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "field-generator-board-by-omid",
+      "prose": "Story 3.1.6: confirm docs/evidence/3.1.6/README.md names each committed file, what it shows, the date it was taken and the instrument, and that the Field Generator's KiCad 10 project carries the module and whip, the USB wall supply's 5 V through a 3.3 V regulator and no host link, with its rule checks clean; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "tag-core-by-omid",
+      "prose": "Story 3.1.7: confirm docs/evidence/3.1.7/README.md names each committed file, what it shows, the date it was taken and the instrument, and that one schematic gives the fob-sized four-layer core (the module at 12.0 dBm, the chip antenna on its land pattern, the CR2032 and its buffer capacitor in a tool-opened compartment, debug pads within 25 mm of an edge) with its fitting options (the TMP117, the tamper loop on a wake pin, the badge's buttons, the unfitted NFC footprint at the board's edge) and the CR2450 item variant, each with its rule checks clean; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "enclosures-by-omid",
+      "prose": "Story 3.1.8: confirm docs/evidence/3.1.8/README.md names each committed file, what it shows, the date it was taken and the instrument, and that each tag style's enclosure is named with its maker's drawing and a dated price, and the seal's band, its loop to the core's wake pin and the coil's place off the core are drawn; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "order-by-omid",
+      "prose": "Story 3.1.9: confirm docs/evidence/3.1.9/README.md names each committed file, what it shows, the date it was taken and the instrument, and that docs/study/tiered-cost.md carries the JLCPCB quote for the drawn boards and every price read again with its date, the five prices written not read now read or still named in their tier's Lacks, the totals summed again, the order following G3's route, and Energizer cells bought; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "bring-up-by-omid",
+      "prose": "Story 3.1.10: confirm docs/evidence/3.1.10/README.md names each committed file, what it shows, the date it was taken and the instrument, and that every board was powered with its current read, its transmission seen on the receiver in 902-928 MHz, and its antenna match read on the NanoVNA-H4 before and after tuning, while the spare boards stayed unpowered; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "currents-by-omid",
+      "prose": "Story 3.1.11: confirm docs/evidence/3.1.11/README.md names each committed file, what it shows, the date it was taken and the instrument, and that the 0.3 ms set-up, the 1.0 ms beacon and the 0.4 ms slot are measured, each tag style's current is read at its listen interval, the 12 dBm boost question is answered, every battery figure in docs/study/parts-and-toolchains.md is re-priced from the measurements, and decision 6's rule ran in its order for [9], [18] and [27] with no requirement number lowered; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "card-variant-by-omid",
+      "prose": "Story 3.1.12: confirm docs/evidence/3.1.12/README.md names each committed file, what it shows, the date it was taken and the instrument, and that the range test of Story 7.1.1 is cited for the small core against [2]; if the badge was short, the card-sized variant is drawn from the core's schematic and measured against [2], and if it was not, the story records that and draws nothing; that every figure it reports is MEASURED with its date and written into the studies where it replaces an ASSUMED or INFERRED one; and that nothing in it shows a face, an address, a hostname or a screen beyond the measurement (CLAUDE.md, Writing in public). Omid's verdict, on the closer's evidence. Auto-fail: a file the README does not name, or a figure with no date.",
+      "requires": "omid"
+    },
+    {
+      "id": "initiative-3-final",
+      "prose": "Initiative 3 Done-when (derivation note: this epic is CURRENTLY the last live epic of the initiative; if at close time other epics of this initiative are live, or filed since, record that this check moved with the derivation instead of adjudicating it here): adjudicate the clauses one by one: the Reader, the Field Generator and the tag core with its CR2450 item variant are drawn in KiCad 10, built and measured (3.1.5-3.1.11), with Omid's evidence committed; and Epic 3.1 is archived with close evidence. Cite the archive entry and live evidence per clause. Verdict vocabulary: PASS / FAIL / UNCERTAIN (UNCERTAIN escalates per the second-adjudicator rule). Reason as long as needed, then discard reasoning and record the verdict with its observations."
+    }
+  ]
+}
