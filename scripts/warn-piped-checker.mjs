@@ -983,12 +983,17 @@ function dollarQAfterPipe(command) {
   // opening `#` begins a comment; the text is read NEUTRALIZED, so a quoted value (`y="a b"`)
   // stays one word; and an append (`y+=1`) or a subscript (`arr[0]=1`) is an assignment.
   // Story 249.1.12 — a REDIRECTION glued to the `)` (the Hub Sprint 73 review's finding 3): the glued word skipped
-  // above may be a `>`-family operator standing alone (`)> FILE`, `)>> FILE`, `)2> FILE`, `)&> FILE`), and then its
-  // target is the next word, never a command word. A glued `<` keeps the skip of its first word alone (a named limit:
-  // bash 5.3.15 prints `exit=0` after `x=$(true | false)< /dev/null`, so reading the target there would warn falsely).
+  // above may be a redirection operator standing alone (`)> FILE`, `)>> FILE`, `)2> FILE`, and `)&> FILE`, which the
+  // `&>>?` → `>` rewrite before the split has already made `)> FILE`), and then its target is the next word, never a
+  // command word. Story 250.1.9 (Hub Sprint 75 leg 7; Omid's item 4, every host): a glued `<` (`)< FILE`) joins them on
+  // every host. Every Mac shell measured — zsh 5.9, bash 3.2.57, sh, dash, ksh 93u+ — prints the pipeline's exit
+  // (`exit=1`) after `x=$(true | false)< /dev/null`, and `)</dev/null`, `) < /dev/null` and `) </dev/null` already
+  // warned on every host; bash 5.3.15 on the Windows box prints `exit=0` (RELAYED), where `$?` proves nothing about the
+  // pipeline either, so the advice holds there too. The dead `&>>?` alternative is dropped (the rewrite above makes it
+  // unreachable, and the split at `&` would cut it besides).
   const frames = [];
   const ASSIGNMENT = /^[A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]*\])?\+?=/;
-  const GLUED_REDIRECT = /^(?:\d*>>?|&>>?)$/;
+  const GLUED_REDIRECT = /^\d*(?:>>?|<)$/;
   const BODY_OPENERS = new Set(['do', 'then', 'else', '{', '!']);
   const hasCommandWord = (s) => {
     const ws = s.split(/\s+/).filter(Boolean);

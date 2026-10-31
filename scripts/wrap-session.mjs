@@ -69,6 +69,10 @@
 //   a compose that would land no block of yours — only a trim — refuses, nothing pushed;
 //   and your presence marker is tombstoned only once the wrap branch is pushed (or the
 //   notes read already current), so a refused wrap leaves it LIVE for the re-run.
+//   Story 250.1.12: a local block below the new note that origin no longer holds is looked up in
+//   origin's notes history through the sha the compose read; one an earlier commit carries with the
+//   same heading and text landed and was only trimmed (one line names it and its commit, never a
+//   refusal); one no commit carries still refuses, by name.
 //   Story 212.1.1: --tombstone-only renames this session's presence marker to its
 //   session-done/* tombstone and does nothing else (no note, no heartbeat, no fetch, no
 //   sweep, no PR) — for a session whose block already rides main by another PR; honours
@@ -1977,10 +1981,45 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
       amend,
     });
 
+  // Story 250.1.12 (Hub Sprint 75 leg 6): origin keeps KEEP blocks, so a local block that LANDED on origin and was
+  // only trimmed there by a later wrap read exactly like one that never landed — a wrap racing another box's wrap
+  // refused, and the seat landed by hand (three seats, the last 2026-10-31). A stranded block is looked up in
+  // origin's notes history through the sha the compose read (never the moving ref): `git log -S HEADING` lists
+  // every commit where the heading's count changed — its landing AND its trim, and any commit that merely quotes
+  // the heading — so each hit's notes are read, and the first commit whose notes carry a block with the same
+  // heading AND the same text (line endings and trailing space normalized, as the diverged rule reads them) is its
+  // landing. Named limits, each refusing in the safe direction: a shallow clone's history stops at its boundary,
+  // a block landed by a merge commit is not seen (`-S` reads no merge diff), and an amend on origin changes the text.
+  const landedCommitOf = (sha, heading) => {
+    const block = sessions.find((s) => headingKey(s) === heading);
+    if (!block) return null;
+    const want = eolNormalized(block).trimEnd();
+    let hits;
+    try {
+      hits = execFileSync('git', ['log', '-S', heading, '--format=%H', '--reverse', sha, '--', notesRel], { cwd: repoRoot, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })
+        .split('\n')
+        .filter(Boolean);
+    } catch {
+      return null; // the history unread: refuse, as before
+    }
+    for (const commit of hits) {
+      let text;
+      try {
+        // maxBuffer (hub Story 97.1.4): the family's 64 MiB cap on a content read.
+        text = execFileSync('git', ['show', `${commit}:${notesRel}`], { cwd: repoRoot, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+      } catch {
+        continue;
+      }
+      if (splitNotes(text).sessions.some((s) => headingKey(s) === heading && eolNormalized(s).trimEnd() === want)) return commit;
+    }
+    return null;
+  };
+  const landedNamed = new Set(); // each landed-and-trimmed block named once across both reads
+
   // The compose's refusals, run on EVERY compose (Story 148.1.1: the re-compose
   // re-runs them against the moved origin). A block missing from the local file
   // refuses only at the first read; one that arrived after it is kept (below).
-  const refuseUnsafeCompose = ({ newCount, missingFromLocal, stranded, diverged }, { firstRead }) => {
+  const refuseUnsafeCompose = ({ newCount, missingFromLocal, stranded, diverged }, { firstRead, sha }) => {
     // The pre-fetch guard above catches a DRAFT on top; a DRAFT further down can
     // still be NEW vs origin (e.g. [real note, stale draft, …]) and would ride to
     // main inside the composed note. Check every new block (10.2.3 item 6).
@@ -2018,12 +2057,22 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
 
     // A local-only block BELOW the new-block prefix would be silently dropped by the
     // compose (it builds from origin's blocks) — absent from what lands on origin/main.
-    // Refuse loudly — the wrap only prepends new TOP block(s) to origin's current notes.
-    if (stranded.length) {
+    // Story 250.1.12: one that LANDED and was only trimmed since is named and not refused
+    // (the compose omits it, as origin's trim did); every other one refuses loudly — the
+    // wrap only prepends new TOP block(s) to origin's current notes.
+    const neverCarried = stranded.filter((h) => {
+      const commit = landedCommitOf(sha, h);
+      if (commit && !landedNamed.has(h)) {
+        landedNamed.add(h);
+        console.log(`wrap: ${h} landed on origin at ${commit.slice(0, 12)} and was trimmed from origin's notes since — not stranded; the compose omits it, as the trim did`);
+      }
+      return !commit;
+    });
+    if (neverCarried.length) {
       console.error(
-        `Refusing to wrap: ${stranded.length} local session block(s) below your new note are NOT\n` +
-          `on origin/main — the wrap would silently drop them from ${notesRel}:\n` +
-          stranded.map((h) => `  ${h}`).join('\n') +
+        `Refusing to wrap: ${neverCarried.length} local session block(s) below your new note are NOT on origin/main, and no commit on origin/main's notes history carries them (read through ${String(sha).slice(0, 12)}) —\n` +
+          `the wrap would silently drop them from ${notesRel}:\n` +
+          neverCarried.map((h) => `  ${h}`).join('\n') +
           '\nYour file is untouched. The wrap only prepends new top block(s) to origin\'s current\n' +
           'notes: remove the stranded block(s), or land them via a normal docs PR instead.'
       );
@@ -2050,7 +2099,7 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
 
   let read = readOriginNotes();
   let composed = composeAgainst(read.text);
-  refuseUnsafeCompose(composed, { firstRead: true });
+  refuseUnsafeCompose(composed, { firstRead: true, sha: read.sha });
 
   // 24.3.2: hub mode runs the fleet heartbeat and stamps its summary into the
   // note being landed — but only when a NEW top block is landing (newCount>0):
@@ -2078,7 +2127,7 @@ function wrap({ message, dryRun, merge, amend, marker = null, carrySiblings = fa
     const again = readOriginNotes();
     if (again.sha !== read.sha) {
       const recomposed = composeAgainst(again.text);
-      refuseUnsafeCompose(recomposed, { firstRead: false });
+      refuseUnsafeCompose(recomposed, { firstRead: false, sha: again.sha });
       for (const s of recomposed.missingFromLocal) {
         console.log(`wrap: origin moved during the wrap — kept ${headingKey(s)}`);
       }
