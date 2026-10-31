@@ -310,7 +310,8 @@ function dropSubstitutions(text) {
 // double-quoted escape may be a backslash-newline (Story 248.1.20: `.` never
 // matched the newline, so `"a \` + newline + ` $B "` stayed an open quote and
 // its `$B` read as a `for` item — one quoted item to the shell).
-// Story 249.1.11: the spans are read by replaceQuotedSpans' one pass, never by the pattern
+// Story 249.1.11 (and, for the modifier and equals readers, Story 250.1.10, comments in the same pass):
+// the spans are read by replaceQuotedSpans' one pass, never by the pattern
 // `'[^']*'|"(?:[^"\\]|\\[\s\S])*"` — at every `"` it re-scanned to the text's end when no quote
 // closed, so an escaped quote across continuations (`echo "` then `\`, a newline and `\"`,
 // repeated) read in time quadratic in its length (160 KB: 1638 ms).
@@ -324,7 +325,12 @@ const COMMENT_RE = /(^|\s)#[^\n]*/g;
 // A quote no partner closes is left as written, as the pattern left it; and once one quote kind is
 // unclosed no later quote of that kind can close either (every later `"` was escaped in the failed
 // scan, whose reading from there is the later quote's own), so the tail is never read twice.
-function replaceQuotedSpans(text, fn) {
+// Story 250.1.10: with `comment`, a `#` at the text's start or after whitespace (outside every span, never
+// escaped) opens a comment to the line's end, replaced by comment(text) in the SAME pass — so a `#` inside a
+// span is never a comment and a comment's quote never opens a span (a comment pass run after the quote pass
+// would blank `#b $x:h` inside `echo "a #b $x:h"`, and a quote pass run first would pair `don't` with a later
+// quote). The modifier and equals neutralizers read their spans and comments through it.
+function replaceQuotedSpans(text, fn, comment = null) {
   let out = '';
   let i = 0;
   let singleOpen = false;
@@ -334,6 +340,13 @@ function replaceQuotedSpans(text, fn) {
     if (ch === '\\') {
       out += text.slice(i, i + 2);
       i += 2;
+      continue;
+    }
+    if (comment && ch === '#' && (i === 0 || /\s/.test(text[i - 1]))) {
+      const e = text.indexOf('\n', i);
+      const end = e === -1 ? text.length : e;
+      out += comment(text.slice(i, end));
+      i = end;
       continue;
     }
     if (ch === "'" && !singleOpen) {
@@ -796,10 +809,14 @@ const MODIFIER_GLOSS = {
 // a double-quoted span, an unquoted-delimiter heredoc body, `$(…)` and
 // backtick bodies. Spans and comments are read in ONE left-to-right pass so a
 // `#` inside a kept double-quoted span is never a comment and a `'` inside a
-// comment never opens a span. A heredoc scan resumes AFTER a kept body (its
-// text is data to the scan for further `<<`), and stops at the end when a
-// body has no terminator — each character read once (the P25 bound). Returns
-// null when the command leaves zsh (`emulate sh|bash|ksh`: modifiers off).
+// comment never opens a span — since Story 250.1.10 that pass is
+// replaceQuotedSpans' (with its comment reader), linear, where the pattern it
+// replaced re-scanned an unclosed escaped-quote run to its end at every quote
+// and threw RangeError on a 12,000,000-character closed quote. A heredoc scan
+// resumes AFTER a kept body (its text is data to the scan for further `<<`),
+// and stops at the end when a body has no terminator — each character read
+// once (the P25 bound). Returns null when the command leaves zsh (`emulate
+// sh|bash|ksh`: modifiers off).
 function neutralizeForModifiers(command) {
   let text = String(command);
   const heredoc = /<<-?\s*(?:(["'])(\w+)\1|(\\)?(\w+))/g;
@@ -822,7 +839,11 @@ function neutralizeForModifiers(command) {
       heredoc.lastIndex = bodyEnd;
     }
   }
-  text = text.replace(/'[^']*'|"(?:[^"\\]|\\.)*"|(?:^|(?<=\s))#[^\n]*/g, (s) => (s[0] === '"' ? s : ' '));
+  // Story 250.1.10: the spans and comments in replaceQuotedSpans' one linear pass, never the pattern
+  // `'[^']*'|"(?:[^"\\]|\\.)*"|(?:^|(?<=\s))#[^\n]*` — quadratic on an unclosed escaped-quote run (40,000 parts:
+  // 2.3 s) and a RangeError on a 12,000,000-character closed quote, the hook then failing open. A double-quoted span
+  // is kept (modifiers apply inside double quotes); a single-quoted span and a comment become a space.
+  text = replaceQuotedSpans(text, (s) => (s[0] === '"' ? s : ' '), () => ' ');
   if (EMULATE_RE.test(text)) return null;
   return text;
 }
@@ -901,7 +922,9 @@ function blankSpans(text, open, close) {
 // no filename expansion there), single- and double-quoted spans, comments,
 // `${…}`, `[[ … ]]`, and `(( … ))` / `$(( … ))`. LIVE: `$(…)` and backticks
 // (zsh runs them with EQUALS on). Kept segments are joined once, so many
-// terminated heredocs stay linear. Returns null when EQUALS is off.
+// terminated heredocs stay linear; the spans and comments are read in
+// replaceQuotedSpans' one linear pass (Story 250.1.10). Returns null when
+// EQUALS is off.
 function neutralizeForEquals(command) {
   const text0 = String(command);
   const heredoc = /<<-?\s*(?:(["'])(\w+)\1|\\?(\w+))/g;
@@ -923,7 +946,9 @@ function neutralizeForEquals(command) {
     heredoc.lastIndex = bodyEnd;
   }
   parts.push(text0.slice(keepFrom));
-  let text = parts.join('').replace(/'[^']*'|"(?:[^"\\]|\\.)*"|(?:^|(?<=\s))#[^\n]*/g, ' ');
+  // Story 250.1.10: every span and comment becomes a space in replaceQuotedSpans' one linear pass (see the
+  // modifier neutralizer: the pattern this replaced was quadratic and threw on a long closed quote).
+  let text = replaceQuotedSpans(parts.join(''), () => ' ', () => ' ');
   if (EQUALS_OFF_RE.test(text)) return null;
   text = blankSpans(text, '${', '}');
   text = blankSpans(text, '[[', ']]');

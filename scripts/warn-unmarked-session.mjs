@@ -272,7 +272,7 @@ if (mine.length > 0) {
 // `fleet-view.mjs --start` kept contiguous and fleet-view's own USAGE spelling.
 emit(`unmarked:${repoKey}`,
   `unmarked-session guard: no presence marker for ${path.basename(repo)} (warn only)`,
-  `This session never ran the start ritual here. Run: node scripts/fleet-view.mjs --start "INTENT" --role ROLE --task-id ID (site sessions: node ../../scripts/fleet-view.mjs --start "INTENT" --role ROLE --task-id ID) so concurrent sessions can see this work — ROLE is one of executor, reviewer, closer, proposer, coordinator, free; ID is the background-task path id (start any background command and read the id in its task-output path).`);
+  `This session never ran the start ritual here. Run: node scripts/fleet-view.mjs --start "INTENT" --role ROLE --task-id ID (site sessions: node ../../scripts/fleet-view.mjs --start "INTENT" --role ROLE --task-id ID) so concurrent sessions can see this work — ROLE is one of executor, reviewer, closer, proposer, coordinator, free; ID is the background-task path id (start any background command and read the uuid segment of its task-output path, never the short task id).`);
 
 // Story 128.1.8 (register class stdin-readfilesync-eagain-on-nonblocking-pipe):
 // stdin through the async iterator, never readFileSync(0) — a 1.1 MB payload on a
