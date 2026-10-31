@@ -1,0 +1,51 @@
+{
+  "epic": "6.1",
+  "planRef": "docs/project-plan.md",
+  "stories": [
+    "6.1.1",
+    "6.1.2",
+    "6.1.3",
+    "6.1.4"
+  ],
+  "checks": [
+    {
+      "id": "lint",
+      "run": "node scripts/close-lint.mjs",
+      "expect": {
+        "exit": 0
+      }
+    },
+    {
+      "id": "guides-index",
+      "file": "guides/README.md",
+      "expect": {
+        "exists": true
+      },
+      "note": "Story 6.1.1: the guides' index. Born RED on 2026-10-30: guides/ is absent."
+    },
+    {
+      "id": "guides-both-regions",
+      "prose": "Story 6.1.1 (decision 9a; the rebuild spec's sections 6.3 and 7): confirm the guides give a US path and an EU path, each with its tiered shopping list (D7) priced with dates from docs/study/tiered-cost.md, the EU's from its section The EU build; that they state TI's evaluation terms for the debugger and the development board, the US builder's five-device allowance under section 15.23, and that in the EU the builder carries compliance with no home-built allowance and no module grant; and that the legal statements are marked as the project's reading, not legal advice."
+    },
+    {
+      "id": "guides-no-medical-claim",
+      "prose": "Spec C8, every page under guides/: confirm none calls the system a medical device or a monitor of vital signs; the nursery scenario is framed as finding each tag and reading its temperature sensor, and the TMP117's accuracy is quoted only as the part's datasheet property."
+    },
+    {
+      "id": "install-steps-three-platforms",
+      "prose": "Story 6.1.2 (spec D5; an environment-dependent arm: Windows, macOS and Linux): confirm every install step (the toolchains, the SDK fetch, the host) is marked with the platforms it was run on, all three for every step, each run recorded with the operating system, the date and the versions printed. Auto-fail: a step marked for a platform no session ran it on."
+    },
+    {
+      "id": "bench-build-guides",
+      "prose": "Story 6.1.3: confirm the bench and build guides cover every tier's route for each device, written from the records of Stories 3.1.1, 3.1.9 and 3.1.10, and that each step that needed an advanced tool in Omid's build is named."
+    },
+    {
+      "id": "firmware-host-guides",
+      "prose": "Story 6.1.4: confirm the guides take a beginner from flashing the three images to a tag shown on the floorplan, and that the setup walk checks every neighbour link the floorplan draws."
+    },
+    {
+      "id": "initiative-6-final",
+      "prose": "Initiative 6 Done-when (derivation note: this epic is CURRENTLY the last live epic of the initiative; if at close time other epics of this initiative are live, or filed since, record that this check moved with the derivation instead of adjudicating it here): adjudicate the clauses one by one: the guides take a beginner from the bench to milestone 1's demonstration in both regions (6.1.1-6.1.4); and Epic 6.1 is archived with close evidence. Cite the archive entry and live evidence per clause. Verdict vocabulary: PASS / FAIL / UNCERTAIN (UNCERTAIN escalates per the second-adjudicator rule). Reason as long as needed, then discard reasoning and record the verdict with its observations."
+    }
+  ]
+}

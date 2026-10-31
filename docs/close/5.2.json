@@ -1,0 +1,45 @@
+{
+  "epic": "5.2",
+  "planRef": "docs/project-plan.md",
+  "stories": [
+    "5.2.1",
+    "5.2.2"
+  ],
+  "checks": [
+    {
+      "id": "lint",
+      "run": "node scripts/close-lint.mjs",
+      "expect": {
+        "exit": 0
+      }
+    },
+    {
+      "id": "suite",
+      "run": "npm test",
+      "expect": {
+        "exit": 0
+      },
+      "timeoutSec": 600
+    },
+    {
+      "id": "lan-https-evidence",
+      "run": "node -e \"const f=require('fs');const d='docs/evidence/5.2.1';process.exit(f.existsSync(d+'/README.md')&&f.readdirSync(d).length>1?0:1)\"",
+      "expect": {
+        "exit": 0
+      },
+      "note": "Story 5.2.1: the host served over HTTPS with accounts, run from two machines of a site's network. Born RED on 2026-10-30: docs/evidence/5.2.1/ is absent."
+    },
+    {
+      "id": "lan-https-accounts",
+      "prose": "Story 5.2.1: confirm the host serves HTTPS on a site's network with user accounts, each action carrying its user's name, pinned by host tests, and that docs/evidence/5.2.1/ records a run from two machines of the network with nothing that names a machine or an address."
+    },
+    {
+      "id": "share-links-phone-scan",
+      "prose": "Story 5.2.2: confirm share links are view-only, expire and show only what they name, pinned by host tests, and that a phone pairs two codes on the site's network with no vendor's relay."
+    },
+    {
+      "id": "initiative-5-final",
+      "prose": "Initiative 5 Done-when (derivation note: this epic is CURRENTLY the last live epic of the initiative; if at close time other epics of this initiative are live, or filed since, record that this check moved with the derivation instead of adjudicating it here): adjudicate the clauses one by one: Epic 5.1 is archived with close evidence (cite its archive entry), and Epic 5.2 is archived with close evidence by this close. Cite the archive entry and live evidence per clause. Verdict vocabulary: PASS / FAIL / UNCERTAIN (UNCERTAIN escalates per the second-adjudicator rule). Reason as long as needed, then discard reasoning and record the verdict with its observations."
+    }
+  ]
+}
